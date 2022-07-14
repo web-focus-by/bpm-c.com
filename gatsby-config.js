@@ -5,9 +5,18 @@ module.exports = {
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
+  pathPrefix: "/bpm-cloud-new",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "WPGraphQL",
+        fieldName: "wpgraphql",
+        url: "https://wp-bpm-cloud-webfocus.by/graphql",
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
