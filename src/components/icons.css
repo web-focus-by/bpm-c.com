@@ -1,0 +1,17 @@
+/* .icon{
+
+} */
+
+.logo{
+    display: inline-block;
+    background: url(../images/logo.svg);
+    width: 142px;
+    height: 46px;
+}
+
+.arrow_black{
+    display: inline-block;
+    background: url(../images/arrow_black.svg) no-repeat;
+    width: 19px;
+    height: 9px;
+}

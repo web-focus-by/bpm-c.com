@@ -1,0 +1,125 @@
+body{
+    font-family: 'Acrom';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #5C5C5C;
+}
+
+.container{
+    margin: 0px auto;
+    padding: 0px 220px;
+}
+
+.header{
+    border-bottom: 2px solid #F0EFF1;
+    position: sticky;
+    top: 0;
+    /* background: #FFFFFF;
+    opacity: 0.6;
+    filter: blur(200px); */
+}
+
+.header .header__nav{
+    padding: 24px 0px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .header__nav .header_nav_list ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.header .header__nav .header_nav_list ul li{
+    display: inline-block;
+}
+
+.header .header__nav .header_nav_list  ul li a{
+    text-decoration: none;
+    margin-right: 60px;
+    color: #1A1B1F;
+}  
+
+.header .header__nav .header_nav_list  ul li a:hover{
+    color: #935CFF;
+}  
+
+.header .header__nav .header_nav_list  ul li:last-child a{
+    margin-right: 0px;
+} 
+
+.hero{
+    margin-top: 188px;
+}
+
+.hero .hero__title{
+    line-height: 100%;
+    max-width: 60%;
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.hero .hero__subtitle{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 110%;
+    color: #5C5C5C;
+    max-width: 45%;
+    margin-bottom: 48px;
+}
+
+.hero .hero__butn .button{
+    padding: 22px 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #1A1B1F;
+}
+
+.hero .hero__butn .button span{
+    margin-left: 14px;
+}
+
+.it_company{
+    margin-top: 219px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.it_company .it_company__title{
+    max-width: 20%;
+}
+
+.it_company .it_company__info{
+    max-width: 50%;
+}
+
+.portfolio{
+    margin-top: 255px;
+}
+
+.portfolio .portfolio__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 56px;
+}
+
+.portfolio .portfolio__title .portfolio_butn_block a{
+    font-size: 16px;
+    line-height: 100%;
+    text-decoration-line: underline;
+    color: #1A1B1F;
+}
+
+.portfolio .portfolio__products{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+
+
+

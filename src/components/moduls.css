@@ -1,0 +1,28 @@
+.button{
+    border: 1px solid #1A1B1F;
+    border-radius: 80px;  
+    background: #fff; 
+}
+
+.title_44{
+    font-size: 44.1104px;
+    line-height: 115%;
+}
+
+.title_62{
+    font-size: 62px;
+    line-height: 105%;
+}
+
+.view_all a{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #1A1B1F;   
+}
+
+.view_all a:hover{
+    color: #935CFF;
+    text-decoration: underline;
+}
+
