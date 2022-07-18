@@ -129,7 +129,7 @@ body{
     border-radius: 100%;
     -webkit-animation: header_circle 20s linear infinite, header_circleleft 20s linear infinite alternate;
     animation: header_circle 20s linear infinite, header_circleleft 20s linear infinite alternate;
-    z-index: -2;
+    z-index: -1;
 }
 
 @-webkit-keyframes header_circle {
