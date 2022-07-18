@@ -1,8 +1,9 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import "./main.css"
-import "./icons.css"
+import "../components/styles/main.css"
+import "../components/styles/icons.css"
+import "../components/styles/mixins.css"
 
 const Header = ({ siteTitle }) => (
   <header className="header">

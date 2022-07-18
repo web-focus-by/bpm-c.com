@@ -14,7 +14,11 @@ import Hero from "./hero"
 import Header from "./header"
 import ITCompany from "./it_company"
 import Portfolio from "./portfolio"
-import "./layout.css"
+import Form from "./form"
+import Services from "./services"
+import Technologies from "./technologies"
+import BPMCloud from "./bpm_cloud"
+import "../components/styles/layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -33,6 +37,10 @@ const Layout = ({ children }) => {
       <Hero></Hero>
       <ITCompany></ITCompany>
       <Portfolio></Portfolio>
+      <Form></Form>
+      <Services></Services>
+      <Technologies></Technologies>
+      <BPMCloud></BPMCloud>
     </>
   )
 }
