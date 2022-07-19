@@ -558,6 +558,10 @@ body {
   text-decoration: none;
   color: #1A1B1F;
 }
+.footer div:nth-child(1) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
 .footer__contacts ul li a {
   font-weight: 500;
   margin-right: 64px;

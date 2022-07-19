@@ -641,6 +641,12 @@ body {
                 }
             }
         }
+        div{
+            &:nth-child(1){
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+        } 
         &__contacts{
             ul{
                 li{
