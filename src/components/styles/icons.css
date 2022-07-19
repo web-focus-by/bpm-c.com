@@ -211,3 +211,53 @@
   height: 23px;
   background: url(../../images/star.svg) no-repeat;
 }
+
+.insta {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url(../../images/insta.svg) no-repeat;
+}
+.insta:hover {
+  background: url(../../images/insta_hover.svg) no-repeat;
+}
+
+.facebook {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url(../../images/facebook.svg) no-repeat;
+}
+.facebook:hover {
+  background: url(../../images/facebook_hover.svg) no-repeat;
+}
+
+.vk {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url(../../images/vk.svg) no-repeat;
+}
+.vk:hover {
+  background: url(../../images/vk_hover.svg) no-repeat;
+}
+
+.link {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url(../../images/link.svg) no-repeat;
+}
+.link:hover {
+  background: url(../../images/link_hover.svg) no-repeat;
+}
+
+.behance {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url(../../images/behance.svg) no-repeat;
+}
+.behance:hover {
+  background: url(../../images/behance_hover.svg) no-repeat;
+}

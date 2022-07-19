@@ -478,3 +478,108 @@ body {
   line-height: 115%;
   margin-bottom: 30px;
 }
+
+.leaders_choice__block_title {
+  color: #5C5C5C;
+  margin-bottom: 16px;
+}
+.leaders_choice__block {
+  color: #5C5C5C;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 60px;
+}
+.leaders_choice__block .leaders_choice_block_list ul {
+  margin: 0px;
+  padding: 0px;
+}
+.leaders_choice__block .leaders_choice_block_list ul li {
+  list-style: none;
+  margin-bottom: 14px;
+}
+.leaders_choice__block .leaders_choice_block_list ul li:last-child {
+  margin-bottom: 0px;
+}
+.leaders_choice__block .leaders_choice_block_list ul li::before {
+  display: inline-block;
+  content: url("../../images/list_line.svg");
+  position: relative;
+  bottom: 5px;
+  padding-right: 8px;
+}
+
+.leaders_choice_tagline {
+  margin: 320px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.leaders_choice_tagline__block {
+  display: flex;
+  margin-bottom: 56px;
+}
+.leaders_choice_tagline__block .leaders_choice_tagline_block_title {
+  font-weight: 500;
+  font-size: 62px;
+  line-height: 105%;
+  color: #1A1B1F;
+}
+.leaders_choice_tagline__block .leaders_choice_tagline_block_gif img {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: -20px;
+}
+.leaders_choice_tagline__block .leaders_choice_tagline_block_gif img:first-child {
+  margin-left: 26px;
+}
+.leaders_choice_tagline__butn button {
+  padding: 22px 40px;
+}
+.leaders_choice_tagline__butn button span {
+  margin-left: 14px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-columns: repeat(3, 1fr);
+}
+.footer ul {
+  margin: 0px;
+  padding: 0px;
+}
+.footer ul li {
+  display: inline-block;
+}
+.footer ul li a {
+  text-decoration: none;
+  color: #1A1B1F;
+}
+.footer__contacts ul li a {
+  font-weight: 500;
+  margin-right: 64px;
+}
+.footer__contacts ul li:last-child a {
+  margin-right: 0px;
+}
+.footer__menu ul li a {
+  margin-right: 60px;
+}
+.footer__menu ul li a:hover {
+  color: #935CFF;
+}
+.footer__menu ul li:last-child a {
+  margin-right: 0px;
+}
+.footer__copyright {
+  color: #B3B3B3;
+}
+.footer__social_net ul li a {
+  margin-right: 20px;
+}
+.footer__social_net ul li:last-child a {
+  margin-right: 0px;
+}
