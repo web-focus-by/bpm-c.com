@@ -318,7 +318,7 @@ body {
     }
         .projects_process_list_item{
             position: relative;
-            width: 215px;
+            width: fit-content;
             height: 51px;
             background: #1A1B1F;
             border-radius: 80px;
@@ -339,6 +339,10 @@ body {
                 top: 100%;
                 left: 100%;
                 position: absolute;
+            }
+            .test{
+                display: inherit;
+                padding: 0px 50px;
             }
     
         }
@@ -628,8 +632,9 @@ body {
 
     .footer{
         display: grid;
-        grid-template-columns: 0.5fr 1fr 0.5fr;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 0.4fr 2fr 0.6fr;
+        border-top: 1px solid #5C5C5C;
+        padding-top: 68px;
         ul{
             margin: 0px;
             padding: 0px;
@@ -652,8 +657,12 @@ body {
                 grid-row-start: 1;
                 grid-row-end: 3;
             }
+            &:nth-child(4){
+                grid-column-start: 2;
+            }
         } 
         &__contacts{
+            text-align: center;
             ul{
                 li{
                     a{
@@ -667,6 +676,8 @@ body {
             }
         }
         &__menu{
+            text-align: center;
+            padding: 20px 0px 40px 0px;
             ul{
                 li{
                     a{
@@ -682,6 +693,7 @@ body {
             }
         }
         &__copyright{
+            text-align: center;
             color: #B3B3B3;
         }
         &__social_net{

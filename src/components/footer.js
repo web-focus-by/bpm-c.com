@@ -11,7 +11,7 @@ import gifVlada from "../images/vlada.png"
 
 const Footer = ({ siteTitle }) => (
   <div className="container">
-    <div className="footer">
+    <div className="footer margin_bottom_60">
       <div className="footer__logo">
         <span className="logo"></span>
       </div>
