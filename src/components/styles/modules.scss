@@ -90,3 +90,10 @@
 .margin_bottom_240{
     margin-bottom: 240px;
 }
+
+.view_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: 500;
+}

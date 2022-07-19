@@ -17,8 +17,8 @@ const Portfolio = ({ siteTitle }) => (
 
   <div className="container">
     <div className="portfolio margin_bottom_240">
-      <div className="portfolio__title">
-        <div className="portfolio_title_block title_62">Portfolio</div>
+      <div className="view_title">
+        <div className="title_62">Portfolio</div>
         <div className="view_all"><a href="#">View all</a></div>
       </div>
       <div className="portfolio__products">
