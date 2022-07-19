@@ -81,6 +81,7 @@ body {
 }
 .it_company__info {
   max-width: 50%;
+  color: #5C5C5C;
 }
 
 .portfolio {
@@ -153,10 +154,12 @@ body {
 .form__block .form_block_text .form_block_gif img:not(:first-child) {
   margin-left: -10px;
 }
-.form__block .form_block_email {
+.form__block .form_block_email a {
   font-weight: 500;
   font-size: 24px;
   line-height: 100%;
+  text-decoration: none;
+  color: #FFFFFF;
 }
 .form__block p {
   margin: 0px;
@@ -297,10 +300,6 @@ body {
   left: 100%;
   position: absolute;
 }
-.projects_process .projects_process_list_item .test {
-  display: inherit;
-  padding: 0px 50px;
-}
 
 .blog__products {
   display: flex;
@@ -433,12 +432,13 @@ body {
   padding: 0px;
 }
 .company_description__info ul li {
+  display: flex;
   list-style: none;
   margin-bottom: 14px;
   color: #5C5C5C;
 }
 .company_description__info ul li::before {
-  display: inline-block;
+  display: block;
   content: url("../../images/list_line.svg");
   position: relative;
   bottom: 5px;
@@ -464,9 +464,10 @@ body {
 .service_package__info_list .service_package_info_list_block ul li {
   list-style: none;
   margin-top: 14px;
+  display: flex;
 }
 .service_package__info_list .service_package_info_list_block ul li::before {
-  display: inline-block;
+  display: block;
   content: url("../../images/white_line.svg");
   position: relative;
   bottom: 5px;
@@ -500,6 +501,7 @@ body {
   padding: 0px;
 }
 .leaders_choice__block .leaders_choice_block_list ul li {
+  display: flex;
   list-style: none;
   margin-bottom: 14px;
 }
@@ -507,7 +509,7 @@ body {
   margin-bottom: 0px;
 }
 .leaders_choice__block .leaders_choice_block_list ul li::before {
-  display: inline-block;
+  display: block;
   content: url("../../images/list_line.svg");
   position: relative;
   bottom: 5px;

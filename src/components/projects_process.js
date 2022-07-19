@@ -17,11 +17,9 @@ const ProjectsProcess = ({ siteTitle }) => (
         run them in parallel to help speed up the launch of the product.
       </div>
       <div className="projects_process__list">
-        <div className="projects_process_list_item">
-          <div className="test">
-            <p>analytics</p>
-            <span className="puzzle"></span>
-          </div>
+        <div className="projects_process_list_item padding_50">
+          <p>analytics</p>
+          <span className="puzzle"></span>
           <div className="projects_process_list_item">
             <p>graphics</p>
             <span className="pen"></span>
