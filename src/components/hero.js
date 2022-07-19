@@ -13,6 +13,9 @@ const Hero = ({ siteTitle }) => (
       <div className="hero__subtitle">We know all about art of creating effective websites, using both classic techniques and the most innovative world-class approaches.</div>
       <div className="hero__butn"><button className="button_white">View work<span className="arrow_black"></span></button></div>
     </div>
+    <div className="header_circle"></div>
+    <div className="header_circle-2"></div>
+    <div className="header_circle-3"></div>
   </div>
 )
 
