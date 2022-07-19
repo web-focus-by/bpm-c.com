@@ -162,3 +162,52 @@
   height: 80px;
   background-size: contain;
 }
+
+.puzzle {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url(../../images/puzzle.svg) no-repeat;
+}
+
+.pen {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url(../../images/pen.svg) no-repeat;
+}
+
+.dye {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url(../../images/dye.svg) no-repeat;
+}
+
+.front {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url(../../images/front.svg) no-repeat;
+}
+
+.back {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url(../../images/back.svg) no-repeat;
+}
+
+.testing {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url(../../images/testing.svg) no-repeat;
+}
+
+.star {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url(../../images/star.svg) no-repeat;
+}
