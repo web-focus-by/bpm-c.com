@@ -26,20 +26,20 @@ const Form = ({ siteTitle }) => (
    <div className="form_block_email">info@bpm-c.com</div>
    </div>
    <div className="form__block">
-   <div class="form_block_wrapper">
+   <div className="form_block_wrapper">
       <form id="search-form" action="#" method="POST">
-        <div class="form_line-wrapper">
-          <input id="name" type="text" id="text" autocomplete="off" name="user_name" class="form_name input-yellow "  required />
+        <div className="form_line-wrapper">
+          <input id="name" type="text" autoComplete="off" name="user_name" className="form_name input-yellow "  required />
           <label>Name*</label>
         </div>
                                 
-          <div class="form_line-wrapper">
-            <input type="tel" id="tel" autocomplete="off" name="user_phone" class="form-phone input-phone form_phone input-yellow" required />
+          <div className="form_line-wrapper">
+            <input type="tel" id="tel" autoComplete="off" name="user_phone" className="form-phone input-phone form_phone input-yellow" required />
               <label>Phone*</label>
           </div>
 
-          <div class="form_line-wrapper">
-            <input type="text" id="mail" autocomplete="off" name="user_mail" class="form-mail input-mail form_mail input-yellow" required />
+          <div className="form_line-wrapper">
+            <input type="text" id="mail" autoComplete="off" name="user_mail" className="form-mail input-mail form_mail input-yellow" required />
             <label>E-mail</label>
            </div>
 
