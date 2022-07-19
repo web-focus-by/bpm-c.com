@@ -605,6 +605,10 @@ body {
   text-align: center;
   color: #B3B3B3;
 }
+.footer__social_net {
+  display: flex;
+  justify-content: end;
+}
 .footer__social_net ul li a {
   margin-right: 20px;
 }
