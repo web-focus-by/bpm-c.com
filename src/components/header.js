@@ -10,15 +10,27 @@ const Header = ({ siteTitle }) => (
     <div className="container">
       <div className="header__nav">
         <div>
-          <a href="#"><span className="logo"></span></a>
+          <a href="#">
+            <span className="logo"></span>
+          </a>
         </div>
         <div className="header_nav_list">
           <ul>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Contact</a></li>
+            <li>
+              <a href="#">Portfolio</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
           </ul>
         </div>
       </div>

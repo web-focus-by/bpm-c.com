@@ -15,7 +15,7 @@ body {
     border-bottom: 2px solid #F0EFF1;
     position: sticky;
     top: 0;
-
+    background-color: rgb(255 255 255 / 60%);
     &__nav {
         padding: 24px 0px 20px 0px;
         display: flex;
@@ -50,6 +50,46 @@ body {
         }
     }
 }
+
+.phone_butn{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 60px;
+    position: sticky;
+    top: 60%;
+    .phone{
+        background: #9C7CF1 url(../../images/phone_butn.svg) no-repeat;
+        background-position: 50%;
+        border-radius: 50%;
+        width: 160px;
+        height: 160px;
+        -webkit-animation: 15s linear 0s normal none infinite running rot;
+        position: relative;
+
+        @keyframes rot {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+          @-webkit-keyframes rot {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+    }
+    span{
+        position: absolute;
+        top: 30%;
+        right: 6%;
+    }
+}
+
 
 .hero {
     margin-top: 188px;
@@ -143,11 +183,12 @@ body {
 }
 
 .form {
-    background: #1A1B1F;
+    background: #1A1B1F url(../../images/form_gradient.svg) no-repeat;
     border-radius: 28.4583px;
     padding: 70px 88px 70px 70px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-position: 10% 70px;
     &__block{
         color: #FFFFFF;
         .form_block_title{
@@ -287,9 +328,12 @@ body {
             }
             &:hover{
                 transform: translateY(-18px);
-                background: #1A1B1F;
+                background: #1A1B1F url(../../images/gradient_services.svg) no-repeat;
+                background-position: 70% 100%;
+
                 a{
                     color: #FFFFFF;
+                    padding-bottom: 30%;
                 }
             }
         }
@@ -516,6 +560,8 @@ body {
     }
 
     .service_package{
+        background: url(../../images/gradient_package.svg) no-repeat;
+        background-position: 71% 30%;
         &__title{
             color: #fff !important; 
         }

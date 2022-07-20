@@ -261,3 +261,10 @@
 .behance:hover {
   background: url(../../images/behance_hover.svg) no-repeat;
 }
+
+.phone_icon {
+  display: inline-block;
+  width: 53px;
+  height: 53px;
+  background: url(../../images/phone_icon.svg) no-repeat;
+}

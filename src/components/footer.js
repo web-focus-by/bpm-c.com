@@ -13,7 +13,9 @@ const Footer = ({ siteTitle }) => (
   <div className="container">
     <div className="footer margin_bottom_60">
       <div className="footer__logo">
-        <span className="logo"></span>
+        <a href="#">
+          <span className="logo"></span>
+        </a>
       </div>
       <div className="footer__contacts">
         <ul>

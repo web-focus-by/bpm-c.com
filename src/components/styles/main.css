@@ -16,6 +16,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .header__nav {
   padding: 24px 0px 20px 0px;
@@ -40,6 +41,45 @@ body {
 }
 .header__nav .header_nav_list ul li a:hover {
   color: #935CFF;
+}
+
+.phone_butn {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 60px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 60%;
+}
+.phone_butn .phone {
+  background: #9C7CF1 url(../../images/phone_butn.svg) no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  -webkit-animation: 15s linear 0s normal none infinite running rot;
+  position: relative;
+}
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.phone_butn span {
+  position: absolute;
+  top: 30%;
+  right: 6%;
 }
 
 .hero {
@@ -115,11 +155,12 @@ body {
 }
 
 .form {
-  background: #1A1B1F;
+  background: #1A1B1F url(../../images/form_gradient.svg) no-repeat;
   border-radius: 28.4583px;
   padding: 70px 88px 70px 70px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-position: 10% 70px;
 }
 .form__block {
   color: #FFFFFF;
@@ -245,10 +286,12 @@ body {
 }
 .services__list .services_list_item:hover {
   transform: translateY(-18px);
-  background: #1A1B1F;
+  background: #1A1B1F url(../../images/gradient_services.svg) no-repeat;
+  background-position: 70% 100%;
 }
 .services__list .services_list_item:hover a {
   color: #FFFFFF;
+  padding-bottom: 30%;
 }
 
 .technologies__list {
@@ -446,6 +489,8 @@ body {
 }
 
 .service_package {
+  background: url(../../images/gradient_package.svg) no-repeat;
+  background-position: 71% 30%;
   color: #fff;
 }
 .service_package__title {
