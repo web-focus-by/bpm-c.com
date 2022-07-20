@@ -29,14 +29,13 @@
   .portfolio .portfolio_products_block_title {
     font-size: 22px;
   }
+  .header_nav_list ul li a {
+    font-size: 13px;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1366px) {
   .container {
     padding-left: calc(40px + 117 * (100vw - 1024px) / 342);
     padding-right: calc(40px + 117 * (100vw - 1024px) / 342);
-  }
-  .header_nav_list ul li a {
-    margin-right: calc(60px + -18 * (100vw - 1024px) / 342) !important;
-    font-size: calc(13px + 5 * (100vw - 1024px) / 342);
   }
 }

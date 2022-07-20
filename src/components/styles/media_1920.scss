@@ -41,11 +41,13 @@
         ul{
             li{
                 a{
-                    margin-right: calc(42px + (60 - 42) * ( (100vw - 1366px) / ( 1920 - 1366) )) !important;
+                    margin-right: calc(42px + (60 - 42) * ( (100vw - 1366px) / (1920 - 1366) )) !important;
+                    font-size: calc(13px + (18 - 13) * ( (100vw - 1366px) / (1920 - 1366) )); 
                 }
             }
         }
     }
+
     .portfolio{
         .portfolio_products_block_title{
             font-size: calc(22px + (30 - 22) * ( (100vw - 1366px) / ( 1920 - 1366) )); 

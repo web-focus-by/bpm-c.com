@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+  .header_nav_list {
+    display: none;
+  }
+  .title_80 {
+    max-width: 560px;
+  }
+}
+@media (min-width: 375px) and (max-width: 768px) {
+  .title_80 {
+    font-size: calc(48px + 20 * (100vw - 375px) / 393);
+    max-width: 645px;
+  }
+}

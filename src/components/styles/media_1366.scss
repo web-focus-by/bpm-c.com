@@ -49,6 +49,16 @@
             font-size: 22px;
         }
     }
+
+    .header_nav_list{
+        ul{
+            li{
+                a{
+                    font-size: 13px; 
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1366px) {
@@ -57,15 +67,5 @@
         padding-right: calc(40px + (157 - 40) * ( (100vw - 1024px) / (1366 - 1024) ));
     }
 
-    .header_nav_list{
-        ul{
-            li{
-                a{
-                    margin-right: calc(60px + (42 - 60) * ( (100vw - 1024px) / (1366 - 1024) )) !important;
-                    font-size: calc(13px + (18 - 13) * ( (100vw - 1024px) / (1366 - 1024) )); 
-                }
-            }
-        }
-    }
 }
 

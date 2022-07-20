@@ -3,3 +3,9 @@
     padding: 0px 40px;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .title_80 {
+    font-size: calc(68px + -11 * (100vw - 768px) / 256);
+    max-width: 645px;
+  }
+}

@@ -25,6 +25,7 @@
   }
   .header_nav_list ul li a {
     margin-right: calc(42px + 18 * (100vw - 1366px) / 554) !important;
+    font-size: calc(13px + 5 * (100vw - 1366px) / 554);
   }
   .portfolio .portfolio_products_block_title {
     font-size: calc(22px + 8 * (100vw - 1366px) / 554);
