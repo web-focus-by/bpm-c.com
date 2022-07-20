@@ -8,6 +8,11 @@ import "../components/styles/mixins.css"
 import gifUriy from "../images/uriy.gif"
 import gifKanu from "../images/kanu.gif"
 import gifVlada from "../images/vlada.png"
+import "../components/styles/media_1920.css"
+import "../components/styles/media_1366.css"
+import "../components/styles/media_1024.css"
+import "../components/styles/media_768.css"
+import "../components/styles/media_375.css"
 
 const Form = ({ siteTitle }) => (
   <div className="container">

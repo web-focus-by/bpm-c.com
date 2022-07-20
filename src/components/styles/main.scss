@@ -398,6 +398,11 @@ body {
         display: flex;
         justify-content: space-between;
         .blog_products_block{
+            .blog_products_block_pic{
+                img{
+                    width: 100%;
+                }
+            }
             .blog_products_block_list{
                 margin: 27px 0px 24px 0px;
                 display: flex;

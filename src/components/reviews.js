@@ -9,6 +9,11 @@ import imgVr from "../images/vr.svg"
 import imgPointer from "../images/pointer.svg"
 import imgScreen from "../images/screen.svg"
 import imgHand from "../images/hand.svg"
+import "../components/styles/media_1920.css"
+import "../components/styles/media_1366.css"
+import "../components/styles/media_1024.css"
+import "../components/styles/media_768.css"
+import "../components/styles/media_375.css"
 
 const Reviews = ({ siteTitle }) => (
   <div className="container">

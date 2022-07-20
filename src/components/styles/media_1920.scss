@@ -1,0 +1,7 @@
+
+
+@media (min-width: 1366px) and (max-width: 1920px) {
+    .title_80{
+        font-size: calc(57px + (80 - 57) * ( (100vw - 1920px) / ( 1920 - 1366) ));
+    }
+}
