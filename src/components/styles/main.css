@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'Acrom';
+	font-family: 'Acrom-Regular';
 	src: url('/public/fonts/Acrom-Regular.eot') format('eot');
 	src: local('Acrom Regular'), local('Acrom-Regular'),
 		url('/public/fonts/Acrom-Regular.eot?#iefix') format('embedded-opentype'),
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-	font-family: 'Acrom';
+	font-family: 'Acrom-Bold';
 	src: url('/public/fonts/Acrom-Bold.eot') format('eot');
 	src: local('Acrom Bold'), local('Acrom-Bold'),
 		url('/public/fonts/Acrom-Bold.eot?#iefix') format('embedded-opentype'),
@@ -21,7 +21,7 @@
 }
 
 @font-face {
-	font-family: 'Acrom';
+	font-family: 'Acrom-Thin';
 	src: url('/public/fonts/Acrom-Thin.eot') format('eot');
 	src: local('Acrom Thin'), local('Acrom-Thin'),
 		url('/public/fonts/Acrom-Thin.eot?#iefix') format('embedded-opentype'),
@@ -32,7 +32,7 @@
 }
 
 @font-face {
-	font-family: 'Acrom';
+	font-family: 'Acrom-Light';
 	src: url('/public/fonts/Acrom-Light.eot') format('eot');
 	src: local('Acrom Light'), local('Acrom-Light'),
 		url('/public/fonts/Acrom-Light.eot?#iefix') format('embedded-opentype'),
@@ -43,7 +43,7 @@
 }
 
 @font-face {
-	font-family: 'Acrom';
+	font-family: 'Acrom-ExtraBold';
 	src: url('/public/fonts/Acrom-ExtraBold.eot') format('eot');
 	src: local('Acrom ExtraBold'), local('Acrom-ExtraBold'),
 		url('/public/fonts/Acrom-ExtraBold.eot?#iefix') format('embedded-opentype'),
@@ -54,7 +54,7 @@
 }
 
 @font-face {
-	font-family: 'Acrom';
+	font-family: 'Acrom-Medium';
 	src: url('/public/fonts/Acrom-Medium.eot') format('eot');
 	src: local('Acrom Medium'), local('Acrom-Medium'),
 		url('/public/fonts/Acrom-Medium.eot?#iefix') format('embedded-opentype'),
@@ -668,7 +668,7 @@ body {
     left: 0%;
   }
   100% {
-    left: 100%;
+    left: 85%;
   }
 }
 
@@ -677,7 +677,7 @@ body {
     left: 0%;
   }
   100% {
-    left: 100%;
+    left: 85%;
   }
 }
 
@@ -737,7 +737,7 @@ body {
     right: 0%;
   }
   100% {
-    right: 100%;
+    right: 85%;
   }
 }
 
@@ -746,6 +746,6 @@ body {
     right: 0%;
   }
   100% {
-    right: 100%;
+    right: 85%;
   }
 }
