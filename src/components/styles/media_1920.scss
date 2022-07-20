@@ -1,7 +1,56 @@
+@media (max-width: 1920px) {
+
+}
+
 
 
 @media (min-width: 1366px) and (max-width: 1920px) {
-    .title_80{
-        font-size: calc(57px + (80 - 57) * ( (100vw - 1920px) / ( 1920 - 1366) ));
+
+    .container {
+        padding-left: calc(157px + (220 - 157) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        padding-right: calc(157px + (220 - 157) * ( (100vw - 1366px) / ( 1920 - 1366) ));
     }
+
+    .title_80{
+        font-size: calc(57px + (80 - 57) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .title_62{
+        font-size: calc(44px + (62 - 44) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        margin-bottom: calc(40px + (56 - 40) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .font_18{
+        font-size: calc(13px + (18 - 13) * ( (100vw - 1366px) / ( 1920 - 1366) )); 
+    }
+
+    .hero{
+        margin-top: calc(134px + (188 - 134) * ( (100vw - 1366px) / ( 1920 - 1366) )); 
+        &__subtitle{
+            font-size: calc(14px + (20 - 14) * ( (100vw - 1366px) / ( 1920 - 1366) )); 
+        }
+        &__butn{
+            .button_white{
+                font-size: calc(11px + (16 - 11) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                padding: calc(16px + (22 - 16) * ( (100vw - 1366px) / ( 1920 - 1366) )) calc(29px + (40 - 29) * ( (100vw - 1366px) / ( 1920 - 1366) )); 
+            }
+        }
+    }
+    
+    .header_nav_list{
+        ul{
+            li{
+                a{
+                    margin-right: calc(42px + (60 - 42) * ( (100vw - 1366px) / ( 1920 - 1366) )) !important;
+                }
+            }
+        }
+    }
+    .portfolio{
+        .portfolio_products_block_title{
+            font-size: calc(22px + (30 - 22) * ( (100vw - 1366px) / ( 1920 - 1366) )); 
+        }
+    }
+
+
 }

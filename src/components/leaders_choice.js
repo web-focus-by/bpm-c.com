@@ -26,13 +26,13 @@ const LeadersChoice = ({ siteTitle }) => (
       <div className="leaders_choice__block">
         <div className="leaders_choice_block_list">
           <ul>
-            <li>
+            <li className="font_18">
               We are extremely interested in our partners’ business growth.
             </li>
-            <li>
+            <li className="font_18">
               Leaders with many years of experience in Belarus and abroad.
             </li>
-            <li>
+            <li className="font_18">
               Team of web studio specialists is highly certified. Many of us
               started working abroad.
             </li>
@@ -40,10 +40,14 @@ const LeadersChoice = ({ siteTitle }) => (
         </div>
         <div className="leaders_choice_block_list">
           <ul>
-            <li>We achieve results and, like clockwork, achieve our goals.</li>
-            <li>Managers keep in touch with clients at any moment.</li>
-            <li>Full circle digital agency.</li>
-            <li>Reconciled and balanced pricing policy.</li>
+            <li className="font_18">
+              We achieve results and, like clockwork, achieve our goals.
+            </li>
+            <li className="font_18">
+              Managers keep in touch with clients at any moment.
+            </li>
+            <li className="font_18">Full circle digital agency.</li>
+            <li className="font_18">Reconciled and balanced pricing policy.</li>
           </ul>
         </div>
       </div>

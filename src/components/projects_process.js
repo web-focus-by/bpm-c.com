@@ -17,31 +17,31 @@ const ProjectsProcess = ({ siteTitle }) => (
       <div className="projects_process__title title_62">
         Process of projects
       </div>
-      <div className="projects_process__subtitle">
+      <div className="projects_process__subtitle font_18">
         We divide development into stages according to the end result. We can
         run them in parallel to help speed up the launch of the product.
       </div>
       <div className="projects_process__list">
         <div className="projects_process_list_item padding_50">
-          <p>analytics</p>
+          <p className="font_18">analytics</p>
           <span className="puzzle"></span>
           <div className="projects_process_list_item">
-            <p>graphics</p>
+            <p className="font_18">graphics</p>
             <span className="pen"></span>
             <div className="projects_process_list_item">
-              <p>design</p>
+              <p className="font_18">design</p>
               <span className="dye"></span>
               <div className="projects_process_list_item">
-                <p>front-end</p>
+                <p className="font_18">front-end</p>
                 <span className="front"></span>
                 <div className="projects_process_list_item">
-                  <p>back-end</p>
+                  <p className="font_18">back-end</p>
                   <span className="back "></span>
                   <div className="projects_process_list_item">
-                    <p>testing</p>
+                    <p className="font_18">testing</p>
                     <span className="testing"></span>
                     <div className="projects_process_list_item">
-                      <p>launch</p>
+                      <p className="font_18">launch</p>
                       <span className="star"></span>
                     </div>
                   </div>

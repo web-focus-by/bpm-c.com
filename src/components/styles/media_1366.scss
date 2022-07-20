@@ -1,3 +1,71 @@
 @media (max-width: 1366px) {
-    
+
+.margin_bottom_240{
+    margin-bottom: 170px;
 }
+    
+     .hero{
+        &__title{
+            margin-bottom: 14px;
+            &__subtitle{
+                margin-bottom: 34px;
+            }
+        }
+
+     }
+    
+     .view_all{
+        a{
+            font-size:  11px;
+        }
+    }
+
+    .it_company{
+        margin-top: 110px;
+    }
+
+    .hash{
+        &__list{
+           .hash_list_block{
+            margin-right: 14px !important;
+           } 
+        }
+    }
+
+    .title_80{
+        font-size: 57px;
+    }
+
+    .font_18{
+        font-size: 13px;
+    }
+
+    .title_62{
+        font-size: 44px;
+    }
+
+    .portfolio{
+        .portfolio_products_block_title{
+            font-size: 22px;
+        }
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .container {
+        padding-left: calc(40px + (157 - 40) * ( (100vw - 1024px) / (1366 - 1024) ));
+        padding-right: calc(40px + (157 - 40) * ( (100vw - 1024px) / (1366 - 1024) ));
+    }
+
+    .header_nav_list{
+        ul{
+            li{
+                a{
+                    margin-right: calc(60px + (42 - 60) * ( (100vw - 1024px) / (1366 - 1024) )) !important;
+                    font-size: calc(13px + (18 - 13) * ( (100vw - 1024px) / (1366 - 1024) )); 
+                }
+            }
+        }
+    }
+}
+

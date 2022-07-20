@@ -21,28 +21,28 @@ const CompanyDescription = ({ siteTitle }) => (
         </div>
         <div className="company_description__info">
           <ul>
-            <li>
+            <li className="font_18">
               Stable «BPM CLOUD» digital marketing agency team doesn’t give
               empty promises, always strives to do what is assumed and is
               responsible for the work fruits.
             </li>
-            <li>
+            <li className="font_18">
               We do not do useless and scattered work, but we get guaranteed
               results.
             </li>
-            <li>
+            <li className="font_18">
               «BPM CLOUD» continually develops current skills and knowledge.
             </li>
-            <li>
+            <li className="font_18">
               Priority for our online marketing agency is transparent and
               mutually beneficial cooperation with each partner, client, and
               team.
             </li>
-            <li>
+            <li className="font_18">
               «BPM CLOUD» operates in open and transparent manner, without
               failing promises or negligence.
             </li>
-            <li>
+            <li className="font_18">
               Each team member takes proactive attitude towards clients. Each
               specialist continually offers the latest opportunities to grow
               your business.
