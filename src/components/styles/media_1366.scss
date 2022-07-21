@@ -267,6 +267,34 @@
                 }
             }
         }
+
+        .projects_process{
+            &__subtitle{
+                margin-bottom: 41px;
+            }
+            &__list{
+                height: 256px;
+            }
+                .projects_process_list_item{
+                    height: 36px;
+                    border-radius: 57px;
+                    p{
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            .padding_50{
+                padding: 0px 33px;
+            }
+
+            .projects_process{
+                    .projects_process_list_item{
+                        .projects_process_list_item{
+                            left: 145.5px;
+                        }
+                    }
+                }
         
 }
 
@@ -289,5 +317,12 @@
         }
     }
 
+    .projects_process{
+        .projects_process_list_item{
+            .projects_process_list_item{
+                left: calc(127.5px + (145.5 - 127.5) * ( (100vw - 1024px) / (  1366 - 1024) ));
+            }
+        }
+    }
 }
 

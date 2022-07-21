@@ -195,6 +195,25 @@
   .bpm_cloud__info .bpm_cloud_block .bpm_cloud_block_text {
     font-size: 13px;
   }
+  .projects_process__subtitle {
+    margin-bottom: 41px;
+  }
+  .projects_process__list {
+    height: 256px;
+  }
+  .projects_process .projects_process_list_item {
+    height: 36px;
+    border-radius: 57px;
+  }
+  .projects_process .projects_process_list_item p {
+    margin-right: 5px;
+  }
+  .padding_50 {
+    padding: 0px 33px;
+  }
+  .projects_process .projects_process_list_item .projects_process_list_item {
+    left: 145.5px;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1366px) {
   .container {
@@ -209,5 +228,8 @@
   }
   .form__block .form_block_info {
     max-width: calc(320px + 40 * (100vw - 1024px) / 342);
+  }
+  .projects_process .projects_process_list_item .projects_process_list_item {
+    left: calc(127.5px + 18 * (100vw - 1024px) / 342);
   }
 }
