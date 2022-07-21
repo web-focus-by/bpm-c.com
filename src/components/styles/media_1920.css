@@ -13,6 +13,9 @@
   .font_18 {
     font-size: calc(13px + 5 * (100vw - 1366px) / 554);
   }
+  .margin_bottom_240 {
+    margin-bottom: calc(170px + 70 * (100vw - 1366px) / 554);
+  }
   .hero {
     margin-top: calc(134px + 54 * (100vw - 1366px) / 554);
   }
@@ -27,7 +30,13 @@
     margin-right: calc(42px + 18 * (100vw - 1366px) / 554) !important;
     font-size: calc(13px + 5 * (100vw - 1366px) / 554);
   }
-  .portfolio .portfolio_products_block_title {
+  .portfolio__products .portfolio_products_block .portfolio_products_block_title {
     font-size: calc(22px + 8 * (100vw - 1366px) / 554);
+  }
+  .portfolio__products .portfolio_products_block .portfolio_products_block_pic {
+    margin-bottom: calc(17px + 7 * (100vw - 1366px) / 554);
+  }
+  .portfolio__products .portfolio_products_block .portfolio_products_block_list {
+    margin-bottom: calc(17px + 7 * (100vw - 1366px) / 554);
   }
 }

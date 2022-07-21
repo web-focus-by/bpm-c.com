@@ -1,17 +1,15 @@
 @media (max-width: 1366px) {
-
-.margin_bottom_240{
-    margin-bottom: 170px;
-}
     
      .hero{
         &__title{
             margin-bottom: 14px;
-            &__subtitle{
-                margin-bottom: 34px;
-            }
         }
+        &__subtitle{
+            font-size: 14px;
+            margin-bottom: 34px;
+            max-width: 460px;
 
+        }
      }
     
      .view_all{
@@ -28,6 +26,15 @@
         &__list{
            .hash_list_block{
             margin-right: 14px !important;
+            &:hover a{
+                padding: 6px 10px;
+            }
+            a{
+                padding: 6px 10px;
+                &:hover{
+                    padding: 6px 10px;
+                }
+            }
            } 
         }
     }
@@ -59,6 +66,10 @@
             }
         }
     }
+
+    .hero{
+        margin-top: 134px;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1366px) {
@@ -66,6 +77,10 @@
         padding-left: calc(40px + (157 - 40) * ( (100vw - 1024px) / (1366 - 1024) ));
         padding-right: calc(40px + (157 - 40) * ( (100vw - 1024px) / (1366 - 1024) ));
     }
+
+    .margin_bottom_240{
+        margin-bottom: calc(120px + (170 - 120) * ( (100vw - 1024px) / ( 1366 - 1024) ));
+       }
 
 }
 

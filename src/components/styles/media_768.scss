@@ -6,6 +6,41 @@
     .title_80{
         max-width: 560px;
     } 
+
+    .hero{
+        &__subtitle{
+            font-size: 16px;
+            margin-bottom: 34px;
+        }
+     }
+     
+     .portfolio{
+        &__products{
+            .portfolio_products_block{
+                .hash{
+                    ul{
+                        li{
+                            &:last-child{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .portfolio_products_block_pic{
+                    margin-bottom: 16px;
+                    img{
+                        // height: 280px;
+                        object-fit: cover;
+                        border-radius: 20%;
+                    }
+                }
+                .portfolio_products_block_list{
+                    margin-bottom: 16px;
+                }
+            }
+        }
+     }
+    
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
@@ -13,4 +48,72 @@
         font-size: calc(48px + (68 - 48) * ( (100vw - 375px) / ( 768 - 375) ));
         max-width: 645px;
     } 
+
+    .container {
+        padding-left: calc(16px + (40 - 16) * ( (100vw - 375px) / (768 - 375) ));
+        padding-right: calc(16px + (40 - 16) * ( (100vw - 375px) / (768 - 375) ));
+    }
+
+    .hero{
+        margin-top: calc(48px + (160 - 48) * ( (100vw - 375px) / ( 768 - 375) )); 
+    }
+
+    .title_62{
+        margin-bottom: calc(24px + (36 - 24) * ( (100vw - 375px) / ( 768 - 375) ));
+    }
+
+    .margin_bottom_240{
+        margin-bottom: calc(80px + (100 - 80) * ( (100vw - 375px) / ( 768 - 375) ));
+       }
+
+       .portfolio{
+        &__products{
+            .portfolio_products_block{
+
+                .portfolio_products_block_pic{
+                    img{
+                        // height: 280px;
+                        height: calc(150px + (280 - 150) * ( (100vw - 375px) / ( 768 - 375) ));
+                    }
+                }
+            }
+        }
+     }
 }
+
+@media (max-width: 600px) {
+    .it_company{
+        flex-direction: column;
+        margin-top: 0px;
+        &__title{
+            max-width: none;
+            margin-bottom: 24px;
+        }
+        &__info{
+            max-width: none;
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 530px) {
+    .portfolio{
+        &__products{
+            .portfolio_products_block{
+                .hash{
+                    ul{
+                        li{
+                            &:nth-child(3){
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .portfolio_products_block_title {
+                    font-size: 20px;
+                }
+            }
+        }
+     }
+}
+

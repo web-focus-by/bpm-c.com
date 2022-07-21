@@ -2,10 +2,33 @@
   .container {
     padding: 0px 40px;
   }
+  .hash__list .hash_list_block a {
+    font-size: 10px;
+  }
+  .portfolio__products {
+    grid-column-gap: 2%;
+    grid-row-gap: 30px;
+  }
+  .portfolio__products .portfolio_products_block .portfolio_products_block_pic {
+    margin-bottom: 17px;
+  }
+  .portfolio__products .portfolio_products_block .portfolio_products_block_list {
+    margin-bottom: 17px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .title_80 {
     font-size: calc(68px + -11 * (100vw - 768px) / 256);
     max-width: 645px;
+  }
+  .hero {
+    margin-top: calc(160px + -26 * (100vw - 768px) / 256);
+  }
+  .title_62 {
+    font-size: calc(46px + -2 * (100vw - 768px) / 256);
+    margin-bottom: calc(36px + 4 * (100vw - 768px) / 256);
+  }
+  .margin_bottom_240 {
+    margin-bottom: calc(100px + 20 * (100vw - 768px) / 256);
   }
 }

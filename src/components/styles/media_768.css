@@ -5,10 +5,66 @@
   .title_80 {
     max-width: 560px;
   }
+  .hero__subtitle {
+    font-size: 16px;
+    margin-bottom: 34px;
+  }
+  .portfolio__products .portfolio_products_block .hash ul li:last-child {
+    display: none;
+  }
+  .portfolio__products .portfolio_products_block .portfolio_products_block_pic {
+    margin-bottom: 16px;
+  }
+  .portfolio__products .portfolio_products_block .portfolio_products_block_pic img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 20%;
+  }
+  .portfolio__products .portfolio_products_block .portfolio_products_block_list {
+    margin-bottom: 16px;
+  }
 }
 @media (min-width: 375px) and (max-width: 768px) {
   .title_80 {
     font-size: calc(48px + 20 * (100vw - 375px) / 393);
     max-width: 645px;
+  }
+  .container {
+    padding-left: calc(16px + 24 * (100vw - 375px) / 393);
+    padding-right: calc(16px + 24 * (100vw - 375px) / 393);
+  }
+  .hero {
+    margin-top: calc(48px + 112 * (100vw - 375px) / 393);
+  }
+  .title_62 {
+    margin-bottom: calc(24px + 12 * (100vw - 375px) / 393);
+  }
+  .margin_bottom_240 {
+    margin-bottom: calc(80px + 20 * (100vw - 375px) / 393);
+  }
+  .portfolio__products .portfolio_products_block .portfolio_products_block_pic img {
+    height: calc(150px + 130 * (100vw - 375px) / 393);
+  }
+}
+@media (max-width: 600px) {
+  .it_company {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .it_company__title {
+    max-width: none;
+    margin-bottom: 24px;
+  }
+  .it_company__info {
+    max-width: none;
+    font-size: 15px;
+  }
+}
+@media (max-width: 530px) {
+  .portfolio__products .portfolio_products_block .hash ul li:nth-child(3) {
+    display: none;
+  }
+  .portfolio__products .portfolio_products_block .portfolio_products_block_title {
+    font-size: 20px;
   }
 }

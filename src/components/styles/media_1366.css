@@ -1,12 +1,11 @@
 @media (max-width: 1366px) {
-  .margin_bottom_240 {
-    margin-bottom: 170px;
-  }
   .hero__title {
     margin-bottom: 14px;
   }
-  .hero__title__subtitle {
+  .hero__subtitle {
+    font-size: 14px;
     margin-bottom: 34px;
+    max-width: 460px;
   }
   .view_all a {
     font-size: 11px;
@@ -16,6 +15,15 @@
   }
   .hash__list .hash_list_block {
     margin-right: 14px !important;
+  }
+  .hash__list .hash_list_block:hover a {
+    padding: 6px 10px;
+  }
+  .hash__list .hash_list_block a {
+    padding: 6px 10px;
+  }
+  .hash__list .hash_list_block a:hover {
+    padding: 6px 10px;
   }
   .title_80 {
     font-size: 57px;
@@ -32,10 +40,16 @@
   .header_nav_list ul li a {
     font-size: 13px;
   }
+  .hero {
+    margin-top: 134px;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1366px) {
   .container {
     padding-left: calc(40px + 117 * (100vw - 1024px) / 342);
     padding-right: calc(40px + 117 * (100vw - 1024px) / 342);
+  }
+  .margin_bottom_240 {
+    margin-bottom: calc(120px + 50 * (100vw - 1024px) / 342);
   }
 }
