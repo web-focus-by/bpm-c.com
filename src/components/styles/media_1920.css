@@ -110,4 +110,98 @@
   .button_black:hover .arrow_white {
     background: url(../../images/arrow_black.svg) no-repeat;
   }
+  .services__list {
+    grid-column-gap: calc(19px + 7 * (100vw - 1366px) / 554);
+    grid-row-gap: calc(43px + 17 * (100vw - 1366px) / 554);
+  }
+  .services__list .services_list_item {
+    border-radius: calc(18px + 7 * (100vw - 1366px) / 554);
+    height: calc(149px + 61 * (100vw - 1366px) / 554);
+  }
+  .services__list .services_list_item a {
+    font-size: calc(14px + 6 * (100vw - 1366px) / 554);
+  }
+  .react {
+    width: calc(61px + 25 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .java {
+    width: calc(84px + 34 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .python {
+    width: calc(53px + 22 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .php {
+    width: calc(110px + 45 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .golang {
+    width: calc(105px + 21 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .c_plus {
+    width: calc(49px + 20 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .node {
+    width: calc(88px + 35 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .js {
+    width: calc(48px + 19 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .ts {
+    width: calc(49px + 20 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .vue {
+    width: calc(56px + 22 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .net {
+    width: calc(54px + 22 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .symfony {
+    width: calc(53px + 22 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .laravel {
+    width: calc(51px + 20 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .yii {
+    width: calc(52px + 21 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .next {
+    width: calc(83px + 34 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .gatsby {
+    width: calc(74px + -21 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .kotlin {
+    width: calc(48px + 20 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .swift {
+    width: calc(48px + 20 * (100vw - 1366px) / 554);
+    height: calc(58px + 22 * (100vw - 1366px) / 554);
+  }
+  .technologies__list {
+    grid-row-gap: calc(25px + 9 * (100vw - 1366px) / 554);
+  }
+  .bpm_cloud__info .bpm_cloud_block .bpm_cloud_block_title {
+    font-size: calc(21px + 9 * (100vw - 1366px) / 554);
+    max-width: 75%;
+    margin-bottom: calc(20px + 10 * (100vw - 1366px) / 554);
+  }
+  .bpm_cloud__info .bpm_cloud_block .bpm_cloud_block_text {
+    font-size: calc(13px + 5 * (100vw - 1366px) / 554);
+  }
 }

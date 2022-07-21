@@ -145,4 +145,132 @@
         }
     }
 
+    .services{
+        &__list{
+            grid-column-gap: calc(19px + (26 - 19) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+            grid-row-gap: calc(43px + (60 - 43) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+            .services_list_item{
+                border-radius:  calc(18px + (25 - 18) * ( (100vw - 1366px) / ( 1920 - 1366) ));  
+                height: calc(149px + (210 - 149) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                a{
+                    font-size: calc(14px + (20 - 14) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                }
+            }
+        }
+    }
+
+    ////icons
+
+    .react{
+        width: calc(61px + (86 - 61) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));  
+    }
+
+    .java{
+        width: calc(84px + (118 - 84) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .python{
+        width: calc(53px + (75 - 53) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .php{
+        width: calc(110px + (155 - 110) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .golang{
+        width: calc(105px + (105 - 84) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .c_plus{
+        width: calc(49px + (69 - 49) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .node{
+        width: calc(88px + (123 - 88) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .js{
+        width: calc(48px + (67 - 48) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .ts{
+        width: calc(49px + (69 - 49) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .vue{
+        width: calc(56px + (78 - 56) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .net{
+        width: calc(54px + (76 - 54) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .symfony{
+        width: calc(53px + (75 - 53) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .laravel{
+        width: calc(51px + (71 - 51) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .yii{
+        width: calc(52px + (73 - 52) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .next{
+        width: calc(83px + (117 - 83) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .gatsby{
+        width: calc(74px + (53 - 74) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .kotlin{
+        width: calc(48px + (68 - 48) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .swift{
+        width: calc(48px + (68 - 48) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        height: calc(58px + (80 - 58) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
+
+    .technologies{
+        &__list{
+            grid-row-gap: calc(25px + (34 - 25) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        }
+    }
+
+    .bpm_cloud{
+        &__info{
+            .bpm_cloud_block{
+                .bpm_cloud_block_title{
+                    font-size: calc(21px + (30 - 21) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                    max-width: 75%;
+                    margin-bottom: calc(20px + (30 - 20) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                }
+                .bpm_cloud_block_text{
+                    font-size: calc(13px + (18 - 13) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                }
+            }
+        }
+    }
+    
+
 }

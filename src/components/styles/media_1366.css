@@ -102,6 +102,99 @@
   .button_black:hover .arrow_white {
     background: url(../../images/arrow_black.svg) no-repeat;
   }
+  .services__list {
+    grid-column-gap: 19px;
+    grid-row-gap: 43px;
+  }
+  .services__list .services_list_item {
+    border-radius: 18px;
+    height: 149px;
+  }
+  .services__list .services_list_item a {
+    font-size: 14px;
+  }
+  .react {
+    width: 61px;
+    height: 58px;
+  }
+  .java {
+    width: 84px;
+    height: 58px;
+  }
+  .python {
+    width: 53px;
+    height: 58px;
+  }
+  .php {
+    width: 110px;
+    height: 58px;
+  }
+  .golang {
+    width: 105px;
+    height: 58px;
+  }
+  .c_plus {
+    width: 49px;
+    height: 58px;
+  }
+  .node {
+    width: 88px;
+    height: 58px;
+  }
+  .js {
+    width: 48px;
+    height: 58px;
+  }
+  .ts {
+    width: 49px;
+    height: 58px;
+  }
+  .vue {
+    width: 56px;
+    height: 58px;
+  }
+  .net {
+    width: 54px;
+    height: 58px;
+  }
+  .symfony {
+    width: 53px;
+    height: 58px;
+  }
+  .laravel {
+    width: 51px;
+    height: 58px;
+  }
+  .yii {
+    width: 52px;
+    height: 58px;
+  }
+  .next {
+    width: 83px;
+    height: 58px;
+  }
+  .gatsby {
+    width: 74px;
+    height: 58px;
+  }
+  .kotlin {
+    width: 48px;
+    height: 58px;
+  }
+  .swift {
+    width: 48px;
+    height: 58px;
+  }
+  .technologies__list {
+    grid-row-gap: 25px;
+  }
+  .bpm_cloud__info .bpm_cloud_block .bpm_cloud_block_title {
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
+  .bpm_cloud__info .bpm_cloud_block .bpm_cloud_block_text {
+    font-size: 13px;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1366px) {
   .container {

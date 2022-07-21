@@ -20,7 +20,7 @@ const BPMCloud = ({ siteTitle }) => (
           <div className="bpm_cloud_block_title">
             Comprehensive approach to internet marketing
           </div>
-          <div className="bpm_cloud_block_text font_18">
+          <div className="bpm_cloud_block_text">
             Our online marketing agency has comprehensive approach to Internet
             marketing, so representatives of service sector, trade,
             construction, real estate managers and large players in other
@@ -33,7 +33,7 @@ const BPMCloud = ({ siteTitle }) => (
           <div className="bpm_cloud_block_title">
             Dynamically developing digital marketing firm
           </div>
-          <div className="bpm_cloud_block_text font_18">
+          <div className="bpm_cloud_block_text">
             The Belarusian digital space is very multifaceted. We have provided
             impressive number of vectors for making efforts. With advancement of
             technology, «BPM CLOUD» has improved turnkey experience for you,

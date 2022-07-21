@@ -37,6 +37,16 @@
             }
         }
     }
+
+    .bpm_cloud{
+        &__info{
+            .bpm_cloud_block{
+                .bpm_cloud_block_title{
+                    max-width: 95%;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -65,6 +75,16 @@
                     p{
                         max-width: calc(250px + (178 - 250) * ( (100vw - 768px) / ( 1024 - 768) ));
                     }
+                }
+            }
+        }
+    }
+
+    .technologies{
+        &__list{
+            .technologies_list_item{
+                p{
+                    font-size: calc(16px + (13 - 16) * ( (100vw - 768px) / ( 1024 - 768) ));
                 }
             }
         }
@@ -130,6 +150,13 @@
     .button_black {
         border-radius: 80px;
         font-size: 16px;  
+        }
+
+        .technologies{
+            &__list{
+                grid-row-gap :40px;
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
     }
 

@@ -18,75 +18,78 @@ const Technologies = ({ siteTitle }) => (
       <div className="technologies__list">
         <div className="technologies_list_item">
           <span className="react"></span>
-          <p>React.js and React Native</p>
+          <p className="font_18">
+            React.js and
+            <br /> React Native
+          </p>
         </div>
         <div className="technologies_list_item">
           <span className="java"></span>
-          <p>Java</p>
+          <p className="font_18">Java</p>
         </div>
         <div className="technologies_list_item">
           <span className="python"></span>
-          <p>Python</p>
+          <p className="font_18">Python</p>
         </div>
         <div className="technologies_list_item">
           <span className="php"></span>
-          <p> PHP</p>
+          <p className="font_18"> PHP</p>
         </div>
         <div className="technologies_list_item">
           <span className="golang"></span>
-          <p>Golang</p>
+          <p className="font_18">Golang</p>
         </div>
         <div className="technologies_list_item">
           <span className="c_plus"></span>
-          <p>C++</p>
+          <p className="font_18">C++</p>
         </div>
         <div className="technologies_list_item">
           <span className="node"></span>
-          <p>Node.js</p>
+          <p className="font_18">Node.js</p>
         </div>
         <div className="technologies_list_item">
           <span className="js"></span>
-          <p>JavaScript</p>
+          <p className="font_18">JavaScript</p>
         </div>
         <div className="technologies_list_item">
           <span className="ts"></span>
-          <p>TypeScript</p>
+          <p className="font_18">TypeScript</p>
         </div>
         <div className="technologies_list_item">
           <span className="vue"></span>
-          <p>Vue.js </p>
+          <p className="font_18">Vue.js </p>
         </div>
         <div className="technologies_list_item">
           <span className="net"></span>
-          <p>.NET</p>
+          <p className="font_18">.NET</p>
         </div>
         <div className="technologies_list_item">
           <span className="symfony"></span>
-          <p>Symfony</p>
+          <p className="font_18">Symfony</p>
         </div>
         <div className="technologies_list_item">
           <span className="laravel"></span>
-          <p>Laravel</p>
+          <p className="font_18">Laravel</p>
         </div>
         <div className="technologies_list_item">
           <span className="yii"></span>
-          <p>Yii</p>
+          <p className="font_18">Yii</p>
         </div>
         <div className="technologies_list_item">
           <span className="next"></span>
-          <p>Next.js</p>
+          <p className="font_18">Next.js</p>
         </div>
         <div className="technologies_list_item">
           <span className="gatsby"></span>
-          <p>Gatsby.js</p>
+          <p className="font_18">Gatsby.js</p>
         </div>
         <div className="technologies_list_item">
           <span className="kotlin"></span>
-          <p>Kotlin</p>
+          <p className="font_18">Kotlin</p>
         </div>
         <div className="technologies_list_item">
           <span className="swift"></span>
-          <p>Swift</p>
+          <p className="font_18">Swift</p>
         </div>
       </div>
     </div>

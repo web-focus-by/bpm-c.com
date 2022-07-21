@@ -141,6 +141,133 @@
             }
         }
     }
+
+    .services{
+        &__list{
+            grid-column-gap: 19px;
+            grid-row-gap: 43px;
+            .services_list_item{
+                border-radius: 18px;  
+                height: 149px;
+                a{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+        ////icons
+
+        .react{
+            width: 61px;
+            height: 58px;  
+        }
+    
+        .java{
+            width: 84px;
+            height: 58px;
+        }
+    
+        .python{
+            width: 53px;
+            height: 58px;
+        }
+    
+        .php{
+            width: 110px;
+            height: 58px;
+        }
+    
+        .golang{
+            width: 105px;
+            height: 58px;
+        }
+    
+        .c_plus{
+            width: 49px;
+            height: 58px;
+        }
+    
+        .node{
+            width: 88px;
+            height: 58px;
+        }
+    
+        .js{
+            width: 48px;
+            height: 58px;
+        }
+    
+        .ts{
+            width: 49px;
+            height: 58px;
+        }
+    
+        .vue{
+            width: 56px;
+            height: 58px;
+        }
+    
+        .net{
+            width: 54px;
+            height: 58px;
+        }
+    
+        .symfony{
+            width: 53px;
+            height: 58px;
+        }
+    
+        .laravel{
+            width: 51px;
+            height: 58px;
+        }
+    
+        .yii{
+            width: 52px;
+            height: 58px;
+        }
+    
+        .next{
+            width: 83px;
+            height: 58px;
+        }
+    
+        .gatsby{
+            width: 74px;
+            height: 58px;
+        }
+    
+        .kotlin{
+            width: 48px;
+            height: 58px;
+        }
+    
+        .swift{
+            width: 48px;
+            height: 58px;
+        }
+
+        .technologies{
+            &__list{
+                grid-row-gap :25px;
+            }
+        }
+
+        .bpm_cloud{
+            &__info{
+                .bpm_cloud_block{
+                    .bpm_cloud_block_title{
+                        font-size: 21px;
+                        margin-bottom: 20px;
+                    }
+                    .bpm_cloud_block_text{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        
 }
 
 @media (min-width: 1024px) and (max-width: 1366px) {

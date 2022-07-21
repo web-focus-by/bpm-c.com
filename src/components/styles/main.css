@@ -296,7 +296,9 @@ body {
 }
 .technologies__list .technologies_list_item {
   text-align: center;
-  max-width: 60%;
+}
+.technologies__list .technologies_list_item p {
+  margin: 0px;
 }
 
 .projects_process__subtitle {

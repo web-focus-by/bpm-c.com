@@ -75,6 +75,42 @@
             }
         }
      }
+
+     .services{
+        &__list{
+            grid-template-columns: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 12px;
+            .services_list_item{
+                height: 120px;
+                border-radius:  20px; 
+                &:hover a{
+                    padding-bottom: 0px;
+                }
+                a{
+                    font-size: 18px;
+                   
+                }
+                &:hover{
+                    transform: translateY(calc(-2px + (-7 + 2) * ( (100vw - 320px) / ( 375 - 320) )));
+                }
+            }
+        }
+    }
+
+    .bpm_cloud{
+        &__info{
+            .bpm_cloud_block{
+                .bpm_cloud_block_title{
+                    margin-bottom: 12px;
+                    font-size: 20px;
+                }
+                .bpm_cloud_block_text{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 340px) {
