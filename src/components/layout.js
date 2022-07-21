@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Hero></Hero>
-      <PhoneButn></PhoneButn>
+      {/* <PhoneButn></PhoneButn> */}
       <ITCompany></ITCompany>
       <Portfolio></Portfolio>
       <Form></Form>

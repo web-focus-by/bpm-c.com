@@ -70,6 +70,77 @@
     .hero{
         margin-top: 134px;
     }
+
+    .form {
+        padding: 71px 89px 71px 70px;
+        &__block{
+            .form_block_info{
+                font-size: 12px;
+                margin: 25px 0px 23px 0px;
+                max-width: 360px;
+            }
+            .form_block_email{
+                a{
+                    font-size: 21px;
+                }
+            }
+           .form_block_text {
+            font-size: 11px;
+            .form_block_gif{
+                img{
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+            }
+            .form_block_wrapper {
+                form{
+                    .form_block_send{
+                        margin-top: 43px; 
+                        .button_black{
+                            padding: 16px 29px;
+                            span{
+                                margin-left: 10px;
+                            }
+                        }
+                        p{
+                            font-size: 10px;
+                            max-width: 178px;
+                        }
+                    }
+                    input{
+                        font-size: 11px;
+                    }
+                    .form_line-wrapper{
+                        font-size: 11px;
+                        &:first-child{
+                            margin-bottom: 30px;
+                        }
+                        &:nth-child(2){
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .button_black {
+        border: 1px solid #fff;
+        border-radius: 57px;
+        background: #1A1B1F;
+        font-weight: 500;
+        font-size: 11px;  
+        line-height: 100%;
+        color: #fff;
+        &:hover{
+            background: #fff; 
+            color: #1A1B1F;
+            .arrow_white{
+                background: url(../../images/arrow_black.svg) no-repeat;
+            }
+        }
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1366px) {
@@ -81,6 +152,15 @@
     .margin_bottom_240{
         margin-bottom: calc(120px + (170 - 120) * ( (100vw - 1024px) / ( 1366 - 1024) ));
        }
+
+       .form {
+        padding: 71px calc(62px + (89 - 62) * ( (100vw - 1024px) / ( 1366 - 1024) )) 71px calc(40px + (70 - 40) * ( (100vw - 1024px) / ( 1366 - 1024) ));
+        &__block{
+            .form_block_info{
+                max-width: calc(320px + (360 - 320) * ( (100vw - 1024px) / (  1366 - 1024) ));
+            }
+        }
+    }
 
 }
 

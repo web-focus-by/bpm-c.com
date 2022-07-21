@@ -28,6 +28,15 @@
             }
         }
     }
+
+    .form {
+        padding: 71px 62px 71px 40px;
+        &__block{
+            .form_block_info{
+                max-width: 320px;
+            }
+        }
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -48,5 +57,79 @@
     .margin_bottom_240{
         margin-bottom: calc(100px + (120 - 100) * ( (100vw - 768px) / ( 1024 - 768) ));
        }
-}                    
+
+       .form{
+        .form_block_wrapper{
+            form{
+                .form_block_send{
+                    p{
+                        max-width: calc(250px + (178 - 250) * ( (100vw - 768px) / ( 1024 - 768) ));
+                    }
+                }
+            }
+        }
+    }
+
+}  
+
+@media (max-width: 900px) {
+    .form{
+        padding: 80px;
+        grid-template-columns: 1fr;  
+        &__block{
+            .form_block_info{
+                max-width: none;
+                font-size: 16px;
+            }
+            .form_block_text{
+                font-size: 16px;
+                .form_block_gif{
+                    img{
+                        width: 50px;
+                        height: 50px;
+                    }
+                } 
+            }
+            .form_block_email {
+                margin-bottom: 46px;
+            a{
+                font-size: 30px;
+            }
+            }
+        }
+        .form_block_wrapper{
+            form{
+                .form_block_send{
+                    margin-top: 60px; 
+                    .button_black{
+                        padding: 22px 40px;
+                        span{
+                            margin-left: 14px;
+                        }
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+                .form_line-wrapper{
+                    font-size: 16px; 
+                    &:first-child{
+                        margin-bottom: 78px;
+                    }
+                    &:nth-child(2){
+                        margin-bottom: 78px;
+                    }
+                }
+                input{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .button_black {
+        border-radius: 80px;
+        font-size: 16px;  
+        }
+    }
 

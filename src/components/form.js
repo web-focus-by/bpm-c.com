@@ -18,7 +18,7 @@ const Form = ({ siteTitle }) => (
   <div className="container">
     <div className="form margin_bottom_240">
       <div className="form__block">
-        <div className="form_block_title">Get in touch</div>
+        <div className="form_block_title title_62">Get in touch</div>
         <div className="form_block_info">
           Is there any point in delaying starting our cooperation, if leading
           experts are already with our digital marketing agency? Let’s get

@@ -68,5 +68,81 @@
         }
     }
 
+    .form {
+        border-radius: calc(29px + (40 - 29) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        padding: calc(71px + (100 - 71) * ( (100vw - 1366px) / ( 1920 - 1366) )) calc(89px + (125 - 89) * ( (100vw - 1366px) / ( 1920 - 1366) )) calc(71px + (100 - 71) * ( (100vw - 1366px) / ( 1920 - 1366) )) calc(70px + (98 - 70) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        &__block{
+            color: #FFFFFF; 
+            .form_block_title{
+                color: #FFFFFF;
+                margin-bottom: 0px;
+            }
+            .form_block_info{
+                font-size: calc(12px + (18 - 12) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                margin: calc(25px + (36 - 25) * ( (100vw - 1366px) / ( 1920 - 1366) )) 0px calc(23px + (31 - 23) * ( (100vw - 1366px) / ( 1920 - 1366) )) 0px;
+                max-width: calc(360px + (507 - 360) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+            }
+            .form_block_text{
+                font-size: calc(12px + (18 - 12) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                .form_block_gif{
+                    margin-left: 9px;
+                    img{
+                        width: calc(36px + (50 - 36) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                        height: calc(36px + (50 - 36) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                        &:not(:first-child){
+                            margin-left: -10px;
+                        }
+                    }
+                    
+                }
+            }
+        .form_block_wrapper {
+            form{
+                padding-top: 40px;
+                .form_line-wrapper {
+                    font-size: calc(11px + (16 - 11) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                    position: relative;
+                    &:first-child{
+                        margin-bottom: calc(30px + (78 - 30) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                    }
+                    &:nth-child(2){
+                        margin-bottom: calc(30px + (78 - 30) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                    }
+                }
+                input:focus ~ label, input:valid ~ label    {
+                    top: calc(-20px + (-40 + 20) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                  }
+
+                  input{
+                    font-size: calc(11px + (16 - 11) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                }
+                .form_block_send{
+                    margin-top: calc(43px + (60 - 43) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                    p{
+                        font-size: calc(10px + (14 - 10) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                        max-width: calc(178px + (250 - 178) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                    }
+                }
+            }
+        }
+        }
+    }
+    
+    .button_black {
+        border: 1px solid #fff;
+        border-radius: calc(57px + (80 - 57) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        background: #1A1B1F;
+        font-weight: 500;
+        font-size: calc(11px + (16 - 11) * ( (100vw - 1366px) / ( 1920 - 1366) ));  
+        line-height: 100%;
+        color: #fff;
+        &:hover{
+            background: #fff; 
+            color: #1A1B1F;
+            .arrow_white{
+                background: url(../../images/arrow_black.svg) no-repeat;
+            }
+        }
+    }
 
 }

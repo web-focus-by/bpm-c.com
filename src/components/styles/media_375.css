@@ -40,6 +40,18 @@
   .hash__list .hash_list_block:hover a {
     padding: 8px 14px;
   }
+  .form {
+    padding: 80px 16px;
+  }
+  .form__block .form_block_title {
+    font-size: 42px;
+  }
+  .form__block .form_block_info {
+    font-size: 15px;
+  }
+  .form__block .form_block_text {
+    font-size: 15px;
+  }
 }
 @media (max-width: 340px) {
   .portfolio__products .portfolio_products_block .hash ul li:nth-child(3) {

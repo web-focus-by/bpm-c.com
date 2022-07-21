@@ -23,6 +23,16 @@
   .portfolio__products .portfolio_products_block .portfolio_products_block_list {
     margin-bottom: 16px;
   }
+  .form__block .form_block_text {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .form__block .form_block_text .form_block_gif {
+    margin: 12px 0px 16px 0px;
+  }
+  .form .form_block_wrapper form .form_block_send p {
+    max-width: 215px;
+  }
 }
 @media (min-width: 375px) and (max-width: 768px) {
   .title_80 {
@@ -45,6 +55,9 @@
   .portfolio__products .portfolio_products_block .portfolio_products_block_pic img {
     height: calc(150px + 130 * (100vw - 375px) / 393);
   }
+  .form {
+    padding: 80px calc(16px + 64 * (100vw - 375px) / 393);
+  }
 }
 @media (max-width: 600px) {
   .it_company {
@@ -58,6 +71,14 @@
   .it_company__info {
     max-width: none;
     font-size: 15px;
+  }
+  .form .form_block_wrapper form .form_block_send {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form .form_block_wrapper form .form_block_send p {
+    max-width: none;
+    margin-top: 25px;
   }
 }
 @media (max-width: 530px) {
