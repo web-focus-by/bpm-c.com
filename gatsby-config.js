@@ -10,14 +10,14 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
-    /*{
+    {
       resolve: "gatsby-source-graphql",
       options: {
         typeName: "WPGraphQL",
         fieldName: "wpgraphql",
         url: "https://wp.bpm-c.com/graphql",
       },
-    },*/
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
