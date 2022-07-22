@@ -1,3 +1,69 @@
+@font-face {
+	font-family: 'Acrom-Regular';
+	src: url('/public/fonts/Acrom-Regular.eot') format('eot');
+	src: local('Acrom Regular'), local('Acrom-Regular'),
+		url('/public/fonts/Acrom-Regular.eot?#iefix') format('embedded-opentype'),
+		url('/public/fonts/Acrom-Regular.woff') format('woff'),
+		url('/public/fonts/Acrom-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Acrom-Bold';
+	src: url('/public/fonts/Acrom-Bold.eot') format('eot');
+	src: local('Acrom Bold'), local('Acrom-Bold'),
+		url('/public/fonts/Acrom-Bold.eot?#iefix') format('embedded-opentype'),
+		url('/public/fonts/Acrom-Bold.woff') format('woff'),
+		url('/public/fonts/Acrom-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Acrom-Thin';
+	src: url('/public/fonts/Acrom-Thin.eot') format('eot');
+	src: local('Acrom Thin'), local('Acrom-Thin'),
+		url('/public/fonts/Acrom-Thin.eot?#iefix') format('embedded-opentype'),
+		url('/public/fonts/Acrom-Thin.woff') format('woff'),
+		url('/public/fonts/Acrom-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Acrom-Light';
+	src: url('/public/fonts/Acrom-Light.eot') format('eot');
+	src: local('Acrom Light'), local('Acrom-Light'),
+		url('/public/fonts/Acrom-Light.eot?#iefix') format('embedded-opentype'),
+		url('/public/fonts/Acrom-Light.woff') format('woff'),
+		url('/public/fonts/Acrom-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Acrom-ExtraBold';
+	src: url('/public/fonts/Acrom-ExtraBold.eot') format('eot');
+	src: local('Acrom ExtraBold'), local('Acrom-ExtraBold'),
+		url('/public/fonts/Acrom-ExtraBold.eot?#iefix') format('embedded-opentype'),
+		url('/public/fonts/Acrom-ExtraBold.woff') format('woff'),
+		url('/public/fonts/Acrom-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Acrom-Medium';
+	src: url('/public/fonts/Acrom-Medium.eot') format('eot');
+	src: local('Acrom Medium'), local('Acrom-Medium'),
+		url('/public/fonts/Acrom-Medium.eot?#iefix') format('embedded-opentype'),
+		url('/public/fonts/Acrom-Medium.woff') format('woff'),
+		url('/public/fonts/Acrom-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
 .button_white {
   border: 1px solid #1A1B1F;
   border-radius: 80px;
