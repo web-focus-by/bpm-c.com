@@ -10,7 +10,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
-    /*{
+    {
       resolve: "gatsby-source-wordpress",
       options: {
         url: process.env.WPGRAPHQL_URL || `https://wp.bpm-c.com/graphql`, //  https://um2020.by/graphql https://wp-server-bpm-cloud.webfocus.by/graphql
@@ -25,7 +25,7 @@ module.exports = {
         fieldName: "wpgraphql",
         url: "https://wp.bpm-c.com/graphql",
       },*/
-    //},
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
