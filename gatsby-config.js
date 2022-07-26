@@ -11,12 +11,20 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
     {
-      resolve: "gatsby-source-graphql",
+      resolve: "gatsby-source-wordpress",
+      options: {
+        url: process.env.WPGRAPHQL_URL || `https://wp.bpm-c.com/graphql`, //  https://um2020.by/graphql https://wp-server-bpm-cloud.webfocus.by/graphql
+      },
+      schema: {
+        requestConcurrency: 5, // currently set to 15
+        previewRequestConcurrency: 2, // currently set to 5
+      },
+      /*resolve: "gatsby-source-graphql",
       options: {
         typeName: "WPGraphQL",
         fieldName: "wpgraphql",
         url: "https://wp.bpm-c.com/graphql",
-      },
+      },*/
     },
     {
       resolve: `gatsby-source-filesystem`,
