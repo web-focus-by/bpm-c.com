@@ -1,4 +1,7 @@
 @media (max-width: 1366px) {
+  .margin_bottom_60 {
+    margin-bottom: 57px;
+  }
   .hero__title {
     margin-bottom: 14px;
   }
@@ -385,6 +388,9 @@
   }
 }
 @media (min-width: 1024px) and (max-width: 1366px) {
+  .margin_bottom_60 {
+    margin-bottom: calc(40px + 17 * (100vw - 1024px) / 342);
+  }
   .container {
     padding-left: calc(40px + 117 * (100vw - 1024px) / 342);
     padding-right: calc(40px + 117 * (100vw - 1024px) / 342);

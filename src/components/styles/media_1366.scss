@@ -1,4 +1,8 @@
 @media (max-width: 1366px) {
+
+    .margin_bottom_60{
+        margin-bottom: 57px;
+    }
     
      .hero{
         &__title{
@@ -542,6 +546,10 @@
 
 
 @media (min-width: 1024px) and (max-width: 1366px) {
+    .margin_bottom_60{
+        margin-bottom: calc(40px + (57 - 40) * ( (100vw - 1024px) / (1366 - 1024) ));
+    }
+
     .container {
         padding-left: calc(40px + (157 - 40) * ( (100vw - 1024px) / (1366 - 1024) ));
         padding-right: calc(40px + (157 - 40) * ( (100vw - 1024px) / (1366 - 1024) ));

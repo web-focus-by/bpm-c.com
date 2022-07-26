@@ -52,8 +52,14 @@
   .footer {
     grid-template-columns: 0.7fr 1.4fr 0.9fr;
   }
+  .margin_bottom_60 {
+    margin-bottom: 40px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+  .margin_bottom_60 {
+    margin-bottom: calc(60px + -20 * (100vw - 768px) / 256);
+  }
   .title_80 {
     font-size: calc(68px + -11 * (100vw - 768px) / 256);
     max-width: 645px;

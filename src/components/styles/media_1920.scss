@@ -5,6 +5,9 @@
 
 
 @media (min-width: 1366px) and (max-width: 1920px) {
+    .margin_bottom_60{
+        margin-bottom: calc(57px + (60 - 57) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+    }
 
     .container {
         padding-left: calc(157px + (220 - 157) * ( (100vw - 1366px) / ( 1920 - 1366) ));
