@@ -212,6 +212,53 @@
 
         }
     }
+
+    .leaders_choice{
+        &__block_title{
+            margin-bottom: 14px;
+        }
+        &__block{
+            grid-template-columns:1fr;
+            grid-column-gap: 0px;
+            .leaders_choice_block_list{
+                ul{
+                    li{
+                        margin-bottom: 14px;
+                    }
+                    .font_18{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .leaders_choice_tagline{
+        margin: 184px 0px 207px 0px;
+        &__block{
+            .leaders_choice_tagline_block_title{
+                font-size: 46px;
+            }
+            .leaders_choice_tagline_block_gif{
+                img{
+                    width: 64px;
+                    height: 64px;
+                    margin-left: -20px;
+                    &:first-child{
+                        margin-left: 26px;
+                    }
+                }
+            }
+        }
+        &__butn{
+            button{
+                padding: 22px 40px;
+                span{
+                   margin-left: 14px; 
+                }
+            }
+        }
+    }
     
 }
 
@@ -370,6 +417,74 @@
             }
         }
 
+        .leaders_choice{
+            &__block_title{
+                margin-bottom: calc(12px + (14 - 12 ) * ( (100vw - 375px) / ( 768 - 375) ));
+            }
+            &__block{
+                .leaders_choice_block_list{
+                    ul{
+                        li{
+                            margin-bottom: calc(12px + (14 - 12 ) * ( (100vw - 375px) / ( 768 - 375) ));
+                        }
+                        .font_18{
+                            font-size: calc(15px + (16 - 15 ) * ( (100vw - 375px) / ( 768 - 375) ));
+                        }
+                    }
+                }
+            }
+        }
+
+        .leaders_choice_tagline{
+            margin: calc(80px + (184 - 80 ) * ( (100vw - 375px) / ( 768 - 375) )) 0px calc(84px + (207 - 84 ) * ( (100vw - 375px) / ( 768 - 375) )) 0px;
+            &__block{
+                .leaders_choice_tagline_block_title{
+                    font-size: calc(42px + (46 - 42 ) * ( (100vw - 630px) / ( 768 - 630) ));
+                    letter-spacing: -0.1px;
+                }
+                .leaders_choice_tagline_block_gif{
+                    img{
+                        width: calc(48px + (64 - 48 ) * ( (100vw - 375px) / ( 768 - 375) ));
+                        height: calc(48px + (64 - 48 ) * ( (100vw - 375px) / ( 768 - 375) ));
+                        margin-left: calc(-10px + (-20 + 10  ) * ( (100vw - 375px) / ( 768 - 375) ));
+                        &:first-child{
+                            margin-left: calc(0px + (26 + 0  ) * ( (100vw - 375px) / ( 768 - 375) ));
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer{
+            &__contacts{
+                ul{
+                    li{
+                        a{
+                            margin-right: 30px;
+                        }
+                    }
+                }
+            }
+            &__menu{
+                ul{
+                    li{
+                        a{
+                            margin-right: 22px;
+                        }
+                    }
+                }
+            }
+            &__social_net{
+                ul{
+                    li{
+                        a{
+                          margin-right: 10px;  
+                        }
+                    }
+                }
+            }
+        }
+
 }
 
 @media (max-width: 600px) {
@@ -396,6 +511,23 @@
                         margin-top: 25px;
                     }
                 }
+            }
+        }
+    }
+
+    .leaders_choice_tagline{
+        &__block{
+            flex-direction: column;
+            align-items: center;
+            .leaders_choice_tagline_block_gif{
+                img{
+                    &:first-child{
+                        margin-left: 0px;
+                    }
+                }
+            }
+            .leaders_choice_tagline_block_title{
+                margin-bottom: 12px;
             }
         }
     }

@@ -62,8 +62,8 @@
     margin-left: 9px;
   }
   .form__block .form_block_text .form_block_gif img {
-    width: calc(36px + 14 * (100vw - 1366px) / 554);
-    height: calc(36px + 14 * (100vw - 1366px) / 554);
+    width: calc(25px + 11 * (100vw - 1366px) / 554 + 14 * (100vw - 1366px) / 554);
+    height: calc(25px + 11 * (100vw - 1366px) / 554 + 14 * (100vw - 1366px) / 554);
   }
   .form__block .form_block_text .form_block_gif img:not(:first-child) {
     margin-left: -10px;
@@ -211,7 +211,7 @@
     height: calc(256px + 104 * (100vw - 1366px) / 554);
   }
   .projects_process .projects_process_list_item {
-    height: calc(36px + 15 * (100vw - 1366px) / 554);
+    height: calc(25px + 11 * (100vw - 1366px) / 554 + 15 * (100vw - 1366px) / 554);
     border-radius: calc(57px + 23 * (100vw - 1366px) / 554);
   }
   .projects_process .projects_process_list_item p {
@@ -304,5 +304,89 @@
   }
   .leaders_choice__block .leaders_choice_block_list ul li {
     margin-bottom: calc(10px + 4 * (100vw - 1366px) / 554);
+  }
+  .leaders_choice_tagline {
+    margin: calc(230px + 90 * (100vw - 1366px) / 554) 0px;
+  }
+  .leaders_choice_tagline__block {
+    margin-bottom: calc(40px + 16 * (100vw - 1366px) / 554);
+  }
+  .leaders_choice_tagline__block .leaders_choice_tagline_block_title {
+    font-size: calc(44px + 18 * (100vw - 1366px) / 554);
+  }
+  .leaders_choice_tagline__block .leaders_choice_tagline_block_gif img {
+    width: calc(52px + 22 * (100vw - 1366px) / 554);
+    height: calc(52px + 22 * (100vw - 1366px) / 554);
+    margin-left: calc(-10px + -10 * (100vw - 1366px) / 554);
+  }
+  .leaders_choice_tagline__block .leaders_choice_tagline_block_gif img:first-child {
+    margin-left: calc(20px + 46 * (100vw - 1366px) / 554);
+  }
+  .leaders_choice_tagline__butn button {
+    padding: calc(16px + 6 * (100vw - 1366px) / 554) calc(29px + 11 * (100vw - 1366px) / 554);
+  }
+  .leaders_choice_tagline__butn button span {
+    margin-left: calc(9px + 23 * (100vw - 1366px) / 554);
+  }
+  .footer {
+    padding-top: calc(48px + 20 * (100vw - 1366px) / 554);
+    font-size: calc(13px + 5 * (100vw - 1366px) / 554);
+  }
+  .footer__logo a .logo {
+    width: calc(100px + 42 * (100vw - 1366px) / 554);
+    height: calc(32px + 14 * (100vw - 1366px) / 554);
+    background-size: cover;
+  }
+  .footer__contacts ul li a {
+    margin-right: calc(45px + 19 * (100vw - 1366px) / 554);
+  }
+  .footer__menu {
+    padding: calc(16px + 4 * (100vw - 1366px) / 554) 0px calc(31px + 9 * (100vw - 1366px) / 554) 0px;
+  }
+  .footer__menu ul li a {
+    margin-right: calc(43px + 17 * (100vw - 1366px) / 554);
+  }
+  .footer__social_net ul li a {
+    margin-right: calc(14px + 6 * (100vw - 1366px) / 554);
+  }
+  .insta {
+    width: calc(25px + 11 * (100vw - 1366px) / 554);
+    height: calc(25px + 11 * (100vw - 1366px) / 554);
+    background-size: cover;
+  }
+  .insta:hover {
+    background-size: cover;
+  }
+  .facebook {
+    width: calc(25px + 11 * (100vw - 1366px) / 554);
+    height: calc(25px + 11 * (100vw - 1366px) / 554);
+    background-size: cover;
+  }
+  .facebook:hover {
+    background-size: cover;
+  }
+  .vk {
+    width: calc(25px + 11 * (100vw - 1366px) / 554);
+    height: calc(25px + 11 * (100vw - 1366px) / 554);
+    background-size: cover;
+  }
+  .vk:hover {
+    background-size: cover;
+  }
+  .link {
+    width: calc(25px + 11 * (100vw - 1366px) / 554);
+    height: calc(25px + 11 * (100vw - 1366px) / 554);
+    background-size: cover;
+  }
+  .link:hover {
+    background-size: cover;
+  }
+  .behance {
+    width: calc(25px + 11 * (100vw - 1366px) / 554);
+    height: calc(25px + 11 * (100vw - 1366px) / 554);
+    background-size: cover;
+  }
+  .behance:hover {
+    background-size: cover;
   }
 }

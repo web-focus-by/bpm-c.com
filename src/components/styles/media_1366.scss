@@ -420,6 +420,123 @@
                     }
                 }
             }
+
+            .leaders_choice_tagline{
+                margin: 230px 0px ;
+                &__block{
+                    margin-bottom: 40px;
+                    .leaders_choice_tagline_block_title{
+                        font-size: 44px;
+                    }
+                    .leaders_choice_tagline_block_gif{
+                        img{
+                            width: 52px;
+                            height: 52px;
+                            margin-left: -10px;
+                            &:first-child{
+                                margin-left: 20px;
+                            }
+                        }
+                        
+                    }
+                }
+                &__butn{
+                    button{
+                        padding: 16px 29px;
+                        span{
+                           margin-left: 9px; 
+                        }
+                    }
+                }
+                
+            }
+
+            .footer{
+                padding-top: 48px;
+                font-size: 13px;
+                &__logo{
+                    a{
+                        .logo{
+                            width: 100px;
+                            height: 32px;
+                            background-size: cover;
+                        }
+                    }
+                }
+                &__contacts{
+                    ul{
+                        li{
+                            a{
+                                margin-right: 45px;
+                            }
+                        }
+                    }
+                }
+                &__menu{
+                    padding: 16px 0px 31px 0px;
+                    ul{
+                        li{
+                            a{
+                                margin-right: 43px;
+                            }
+                        }
+                    }
+                }
+                &__social_net{ 
+                    ul{
+                        li{
+                            a{
+                              margin-right: 14px;  
+                            } 
+                        }
+                    }
+                }
+            }
+
+            .insta{
+                width: 25px;
+                height: 25px;
+                background-size: cover;
+                &:hover{
+                background-size: cover;
+                }
+            }
+        
+            .facebook{
+                width: 25px;
+                height: 25px;
+                background-size: cover;
+                &:hover{
+                    background-size: cover;
+                }
+            }
+        
+            .vk{
+                width: 25px;
+                height: 25px;
+                background-size: cover;
+                &:hover{
+                    background-size: cover;
+                }
+            }
+        
+            .link{
+                width: 25px;
+                height: 25px;
+                background-size: cover;
+                &:hover{
+                    background-size: cover; 
+                }
+            }
+        
+            .behance{
+                width: 25px;
+                height: 25px;
+                background-size: cover;
+                &:hover{
+                    background-size: cover; 
+                }
+            }
         
         }
 
@@ -488,6 +605,16 @@
             grid-column-gap: calc(20px + (55 - 20) * ( (100vw - 1024px) / (  1366 - 1024) ));
             grid-row-gap: calc(30px + (37 - 30) * ( (100vw - 1024px) / (  1366 - 1024) ));
         }
+    }
+
+    .leaders_choice{
+        &__block{
+            grid-column-gap: calc(20px + (41  - 20 ) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        }
+    }
+
+    .leaders_choice_tagline{
+        margin: calc(178px + (230 - 178  ) * ( (100vw - 1366px) / ( 1920 - 1366) )) 0px ;
     }
 
 }

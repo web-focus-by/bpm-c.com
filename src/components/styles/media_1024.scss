@@ -86,6 +86,20 @@
     }
 }
 
+.leaders_choice{
+    &__block{
+        grid-column-gap: 20px ;
+    }
+}
+
+.leaders_choice_tagline{
+    margin: 178px 0px;
+}
+
+.footer{
+    grid-template-columns: 0.7fr 1.4fr 0.9fr;
+}
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -159,7 +173,64 @@
 
         .blog{
             &__products{
-                column-gap: calc(10px + (17 - 10) * ( (100vw - 1024px) / (  1366 - 1024) ));
+                column-gap: calc(10px + (17 - 10) * ( (100vw - 768px) / ( 1024 - 768) ));
+            }
+        }
+
+        .leaders_choice_tagline{
+            margin: calc(184px + (178 - 184 ) * ( (100vw - 768px) / ( 1024 - 768) )) 0px calc(207px + (178 - 207 ) * ( (100vw - 768px) / ( 1024 - 768) )) 0px;
+            &__block{
+                .leaders_choice_tagline_block_title{
+                    font-size: calc(46px + (44 - 46 ) * ( (100vw - 768px) / ( 1024 - 768) ));
+                }
+                .leaders_choice_tagline_block_gif{
+                    img{
+                        width: calc(64px + (52 - 64 ) * ( (100vw - 768px) / ( 1024 - 768) ));
+                        height: calc(64px + (52 - 64 ) * ( (100vw - 768px) / ( 1024 - 768) ));
+                        margin-left: calc(-20px + (-10 + 20  ) * ( (100vw - 768px) / ( 1024 - 768) ));
+                        &:first-child{
+                            margin-left: calc(26px + (20 + 26  ) * ( (100vw - 768px) / ( 1024 - 768) ));
+                        }
+                    }
+                }
+            }
+            &__butn{
+                button{
+                    padding: calc(22px + (16 - 22 ) * ( (100vw - 768px) / ( 1024 - 768) )) calc(40px + (29 - 40 ) * ( (100vw - 768px) / ( 1024 - 768) ));
+                    span{
+                       margin-left: calc(14px + (9 + 14  ) * ( (100vw - 768px) / ( 1024 - 768) )); 
+                    }
+                }
+            }
+        }
+
+        .footer{
+            &__contacts{
+                ul{
+                    li{
+                        a{
+                            margin-right: calc(30px + (45 - 30 ) * ( (100vw - 768px) / ( 1024 - 768) ));
+                        }
+                    }
+                }
+            }
+            &__menu{
+                ul{
+                    li{
+                        a{
+                            margin-right: calc(22px + (43 - 22 ) * ( (100vw - 768px) / ( 1024 - 768) ));
+                        }
+                    }
+                }
+            }
+            &__social_net{
+                ul{
+                    li{
+                        a{
+                          margin-right: calc(10px + (14 - 10 ) * ( (100vw - 768px) / ( 1024 - 768) ));  
+                        }
+                    }
+                }
             }
         }
 

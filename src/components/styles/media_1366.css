@@ -299,6 +299,90 @@
   .leaders_choice__block .leaders_choice_block_list ul li {
     margin-bottom: 10px;
   }
+  .leaders_choice_tagline {
+    margin: 230px 0px;
+  }
+  .leaders_choice_tagline__block {
+    margin-bottom: 40px;
+  }
+  .leaders_choice_tagline__block .leaders_choice_tagline_block_title {
+    font-size: 44px;
+  }
+  .leaders_choice_tagline__block .leaders_choice_tagline_block_gif img {
+    width: 52px;
+    height: 52px;
+    margin-left: -10px;
+  }
+  .leaders_choice_tagline__block .leaders_choice_tagline_block_gif img:first-child {
+    margin-left: 20px;
+  }
+  .leaders_choice_tagline__butn button {
+    padding: 16px 29px;
+  }
+  .leaders_choice_tagline__butn button span {
+    margin-left: 9px;
+  }
+  .footer {
+    padding-top: 48px;
+    font-size: 13px;
+  }
+  .footer__logo a .logo {
+    width: 100px;
+    height: 32px;
+    background-size: cover;
+  }
+  .footer__contacts ul li a {
+    margin-right: 45px;
+  }
+  .footer__menu {
+    padding: 16px 0px 31px 0px;
+  }
+  .footer__menu ul li a {
+    margin-right: 43px;
+  }
+  .footer__social_net ul li a {
+    margin-right: 14px;
+  }
+  .insta {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+  }
+  .insta:hover {
+    background-size: cover;
+  }
+  .facebook {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+  }
+  .facebook:hover {
+    background-size: cover;
+  }
+  .vk {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+  }
+  .vk:hover {
+    background-size: cover;
+  }
+  .link {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+  }
+  .link:hover {
+    background-size: cover;
+  }
+  .behance {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+  }
+  .behance:hover {
+    background-size: cover;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1366px) {
   .container {
@@ -335,5 +419,11 @@
   .service_package__info {
     grid-column-gap: calc(20px + 35 * (100vw - 1024px) / 342);
     grid-row-gap: calc(30px + 7 * (100vw - 1024px) / 342);
+  }
+  .leaders_choice__block {
+    grid-column-gap: calc(20px + 21 * (100vw - 1366px) / 554);
+  }
+  .leaders_choice_tagline {
+    margin: calc(178px + 52 * (100vw - 1366px) / 554) 0px;
   }
 }
