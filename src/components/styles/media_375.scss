@@ -111,6 +111,48 @@
             }
         }
     }
+
+    .projects_process{
+        &__subtitle{
+            margin-bottom: 24px;
+        }
+
+            .projects_process_list_item{
+                height: 51px;
+                width: 100%;
+                justify-content: normal;
+                p{
+                    padding-left: 50px;
+                }
+
+                    .projects_process_list_item{
+                        left: 0px;
+                        p{
+
+                        }
+                    }
+
+            }
+        }
+
+        .padding_50{
+            padding: 0px;
+        } 
+
+        .black_bg{
+            border-radius: 30px;
+            padding: 80px 0px;
+            .advantages{
+                &__subtitle{
+                    margin-bottom: 24px;
+                    max-width: none;
+                }
+                &__info{
+                    grid-template-columns: 1fr;
+                    grid-column-gap: 0px;
+                }
+            }
+        }
 }
 
 @media (max-width: 340px) {

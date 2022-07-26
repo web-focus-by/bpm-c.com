@@ -47,6 +47,45 @@
             }
         }
     }
+
+    .projects_process{
+        .projects_process_list_item{
+            .projects_process_list_item{
+                left:127.5px;
+            }
+        }
+    }
+
+    .reviews{
+        &__info{
+            .reviews_info_block{
+                .reviews_info_block_text{
+                    font-size: 11px;
+                }
+                .reviews_info_block_name{
+                    font-size: 11px;
+                }
+            }
+
+        }
+}
+
+.company_description{
+    .title_62{
+        font-size: 42px;
+    }
+}
+
+.service_package{
+    &__info_list{
+        grid-column-gap: 20px;
+    }
+    &__info{
+        grid-column-gap: 20px;
+        grid-row-gap: 30px;
+    }
+}
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -89,6 +128,40 @@
             }
         }
     }
+
+    .projects_process{
+        &__subtitle{
+            margin-bottom: calc(37px + (41 - 37) * ( (100vw - 768px) / ( 1024 - 768) ));
+            max-width: calc(800px + (424 - 800) * ( (100vw - 768px) / ( 1024 - 768) ));
+        }
+        &__list{
+            height: calc(360px + (256 - 360) * ( (100vw - 768px) / ( 1024 - 768) ));
+        }
+            .projects_process_list_item{
+                height: calc(51px + (36 - 51) * ( (100vw - 768px) / ( 1024 - 768) ));
+                border-radius: calc(80px + (57 - 80) * ( (100vw - 768px) / ( 1024 - 768) ));
+                    p{
+                        margin-right: calc(8px + (5 - 8) * ( (100vw - 768px) / ( 1024 - 768) ));
+                        font-size: calc(18px + (13 - 18) * ( (100vw - 768px) / ( 1024 - 768) ));
+                    }
+                    .projects_process_list_item{
+                        left: calc(78.5px + (127.5 - 78.5) * ( (100vw - 768px) / ( 1024 - 768) ));
+                        margin-top: calc(12px + (0 - 12) * ( (100vw - 768px) / ( 1024 - 768) ));
+                       
+                    }
+
+            }
+        }
+
+        .padding_50{
+            padding: 0px calc(50px + (33 - 50) * ( (100vw - 768px) / ( 1024 - 768) ));
+        }
+
+        .blog{
+            &__products{
+                column-gap: calc(10px + (17 - 10) * ( (100vw - 1024px) / (  1366 - 1024) ));
+            }
+        }
 
 }  
 

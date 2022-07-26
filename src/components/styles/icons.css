@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
 	font-family: 'Acrom-Regular';
 	src: url('/public/fonts/Acrom-Regular.eot') format('eot');
 	src: local('Acrom Regular'), local('Acrom-Regular'),
@@ -62,7 +62,7 @@
 		url('/public/fonts/Acrom-Medium.ttf') format('truetype');
 	font-weight: 500;
 	font-style: normal;
-}
+} */
 
 .logo {
   display: inline-block;

@@ -26,7 +26,7 @@ const Reviews = ({ siteTitle }) => (
       </div>
       <div className="reviews__info">
         <div className="reviews_info_block">
-          <div className="reviews_info_block_text font_18">
+          <div className="reviews_info_block_text">
             Is there any point in delaying starting our cooperation, if leading
             experts are already with our digital marketing agency? Let’s get
             acquainted and jointly go towards necessary goals in goods and
@@ -41,7 +41,7 @@ const Reviews = ({ siteTitle }) => (
           </div>
         </div>
         <div className="reviews_info_block">
-          <div className="reviews_info_block_text font_18">
+          <div className="reviews_info_block_text">
             Is there any point in delaying starting our cooperation, if leading
             experts are already with our digital marketing agency? Let’s get
             acquainted and jointly go towards necessary goals in goods and
@@ -56,7 +56,7 @@ const Reviews = ({ siteTitle }) => (
           </div>
         </div>
         <div className="reviews_info_block">
-          <div className="reviews_info_block_text font_18">
+          <div className="reviews_info_block_text">
             Is there any point in delaying starting our cooperation, if leading
             experts are already with our digital marketing agency? Let’s get
             acquainted and jointly go towards necessary goals in goods and
@@ -71,7 +71,7 @@ const Reviews = ({ siteTitle }) => (
           </div>
         </div>
         <div className="reviews_info_block">
-          <div className="reviews_info_block_text font_18">
+          <div className="reviews_info_block_text">
             Is there any point in delaying starting our cooperation, if leading
             experts are already with our digital marketing agency? Let’s get
             acquainted and jointly go towards necessary goals in goods and

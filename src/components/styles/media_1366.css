@@ -14,7 +14,7 @@
     margin-top: 110px;
   }
   .hash__list .hash_list_block {
-    margin-right: 14px !important;
+    margin-right: 14px;
   }
   .hash__list .hash_list_block:hover a {
     padding: 6px 10px;
@@ -208,11 +208,96 @@
   .projects_process .projects_process_list_item p {
     margin-right: 5px;
   }
+  .projects_process .projects_process_list_item .projects_process_list_item {
+    left: 145.5px;
+  }
+  .projects_process .projects_process_list_item .projects_process_list_item p {
+    font-style: 13px;
+  }
   .padding_50 {
     padding: 0px 33px;
   }
-  .projects_process .projects_process_list_item .projects_process_list_item {
-    left: 145.5px;
+  .black_bg {
+    border-radius: 29px;
+    padding: 128px 0px;
+  }
+  .black_bg .advantages__subtitle {
+    margin-bottom: 54px;
+    max-width: 715px;
+  }
+  .black_bg .advantages__info {
+    grid-column-gap: 39px;
+  }
+  .blog__products {
+    -moz-column-gap: 17px;
+         column-gap: 17px;
+  }
+  .blog__products .blog_products_block .blog_products_block_title {
+    font-size: 17px;
+  }
+  .blog__products .blog_products_block .blog_products_block_list {
+    margin: 19px 0px 17px 0px;
+  }
+  .blog__products .blog_products_block .blog_products_block_list .blog_products_block_list_date {
+    font-size: 9px;
+  }
+  .blog__products .blog_products_block .blog_products_block_list .hash_list_block:first-child {
+    margin-right: 7px;
+  }
+  .blog__products .blog_products_block .hash__list .hash_list_block a {
+    padding: 6px 10px;
+    font-size: 9px;
+  }
+  .reviews__info {
+    grid-column-gap: 19px;
+  }
+  .reviews__info .reviews_info_block {
+    border-radius: 21px;
+    padding: 21px 14px;
+  }
+  .reviews__info .reviews_info_block .reviews_info_block_text {
+    font-size: 13px;
+  }
+  .reviews__info .reviews_info_block .reviews_info_block_name {
+    font-size: 13px;
+    margin: 20px 0px 7px 0px;
+  }
+  .reviews__info .reviews_info_block .reviews_info_block_date ul li {
+    font-size: 10px;
+  }
+  .company_description {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .company_description__info ul li {
+    margin-bottom: 10px;
+  }
+  .company_description__pic img {
+    border-radius: 18px;
+  }
+  .service_package__info_list {
+    grid-column-gap: 55px;
+    margin-bottom: 43px;
+  }
+  .service_package__info_list .service_package_info_list_block ul li {
+    margin-top: 10px;
+  }
+  .service_package__info {
+    grid-column-gap: 55px;
+    grid-row-gap: 37px;
+  }
+  .service_package__info .service_package_info_block__title {
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
+  .leaders_choice__block_title {
+    margin-bottom: 12px;
+  }
+  .leaders_choice__block {
+    grid-column-gap: 41px;
+  }
+  .leaders_choice__block .leaders_choice_block_list ul li {
+    margin-bottom: 10px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1366px) {
@@ -231,5 +316,24 @@
   }
   .projects_process .projects_process_list_item .projects_process_list_item {
     left: calc(127.5px + 18 * (100vw - 1024px) / 342);
+  }
+  .black_bg .advantages__info {
+    grid-column-gap: calc(20px + 19 * (100vw - 1024px) / 342);
+  }
+  .reviews__info .reviews_info_block .reviews_info_block_text {
+    font-size: calc(11px + 2 * (100vw - 1024px) / 342);
+  }
+  .reviews__info .reviews_info_block .reviews_info_block_name {
+    font-size: calc(11px + 2 * (100vw - 1024px) / 342);
+  }
+  .company_description .title_62 {
+    font-size: calc(42px + 2 * (100vw - 1024px) / 342);
+  }
+  .service_package__info_list {
+    grid-column-gap: calc(20px + 35 * (100vw - 1024px) / 342);
+  }
+  .service_package__info {
+    grid-column-gap: calc(20px + 35 * (100vw - 1024px) / 342);
+    grid-row-gap: calc(30px + 7 * (100vw - 1024px) / 342);
   }
 }

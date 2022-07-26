@@ -23,25 +23,25 @@ const ProjectsProcess = ({ siteTitle }) => (
       </div>
       <div className="projects_process__list">
         <div className="projects_process_list_item padding_50">
-          <p className="font_18">analytics</p>
+          <p>analytics</p>
           <span className="puzzle"></span>
           <div className="projects_process_list_item">
-            <p className="font_18">graphics</p>
+            <p>graphics</p>
             <span className="pen"></span>
             <div className="projects_process_list_item">
-              <p className="font_18">design</p>
+              <p>design</p>
               <span className="dye"></span>
               <div className="projects_process_list_item">
-                <p className="font_18">front-end</p>
+                <p>front-end</p>
                 <span className="front"></span>
                 <div className="projects_process_list_item">
-                  <p className="font_18">back-end</p>
+                  <p>back-end</p>
                   <span className="back "></span>
                   <div className="projects_process_list_item">
-                    <p className="font_18">testing</p>
+                    <p>testing</p>
                     <span className="testing"></span>
                     <div className="projects_process_list_item">
-                      <p className="font_18">launch</p>
+                      <p>launch</p>
                       <span className="star"></span>
                     </div>
                   </div>
