@@ -87,16 +87,16 @@ const Reviews = ({siteTitle, data}) => {
             slidesPerView={"auto"}
             onSlideChange={() => console.log("slide change")}
             onSwiper={swiper => console.log(swiper)}
-            // breakpoints={{
-            //   1920: {
-            //     width: 1920,
-            //     slidesPerView: 4,
-            //   },
-            //   1366: {
-            //     width: 1366,
-            //     slidesPerView: 3,
-            //   },
-            // }}
+            breakpoints={{
+               1920: {
+                 width: 1920,
+                 slidesPerView: 4,
+               },
+               1366: {
+                 width: 1366,
+                 slidesPerView: 3,
+               },
+            }}
           >
           {result}
           </Swiper>
