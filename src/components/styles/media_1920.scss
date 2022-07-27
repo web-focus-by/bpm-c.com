@@ -353,7 +353,7 @@
                     grid-column-gap: calc(19px + (26 - 19 ) * ( (100vw - 1366px) / ( 1920 - 1366) ));
                     .reviews_info_block{
                         border-radius: calc(21px + (30 - 21 ) * ( (100vw - 1366px) / ( 1920 - 1366) ));
-                        padding: calc(21px + (30 - 21 ) * ( (100vw - 1366px) / ( 1920 - 1366) )) calc(14px + (20 - 14 ) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                        padding: calc(21px + (30 - 21 ) * ( (100vw - 1366px) / ( 1920 - 1366) )) calc(14px + (20 - 14 ) * ( (100vw - 1366px) / ( 1920 - 1366) )) calc(25px + (35 - 25 ) * ( (100vw - 1366px) / ( 1920 - 1366) )) calc(14px + (20 - 14 ) * ( (100vw - 1366px) / ( 1920 - 1366) ));
                         .reviews_info_block_text{
                             font-size: calc(13px + (18 - 13 ) * ( (100vw - 1366px) / ( 1920 - 1366) ));
                         }
@@ -550,7 +550,7 @@
                 &__info{
                     .swiper{
                         .swiper-slide{
-                            width: calc(250px + (350 - 250 ) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                            width: calc(244px + (350 - 244 ) * ( (100vw - 1366px) / ( 1920 - 1366) ));
                         }
                     }
                 }

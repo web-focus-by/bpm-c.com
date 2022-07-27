@@ -266,7 +266,7 @@
   }
   .reviews__info .reviews_info_block {
     border-radius: calc(21px + 9 * (100vw - 1366px) / 554);
-    padding: calc(21px + 9 * (100vw - 1366px) / 554) calc(14px + 6 * (100vw - 1366px) / 554);
+    padding: calc(21px + 9 * (100vw - 1366px) / 554) calc(14px + 6 * (100vw - 1366px) / 554) calc(25px + 10 * (100vw - 1366px) / 554) calc(14px + 6 * (100vw - 1366px) / 554);
   }
   .reviews__info .reviews_info_block .reviews_info_block_text {
     font-size: calc(13px + 5 * (100vw - 1366px) / 554);
@@ -397,6 +397,6 @@
     background-size: cover;
   }
   .reviews__info .swiper .swiper-slide {
-    width: calc(250px + 100 * (100vw - 1366px) / 554);
+    width: calc(244px + 106 * (100vw - 1366px) / 554);
   }
 }

@@ -108,7 +108,7 @@
     &__info{
         .swiper{
             .swiper-slide{
-                width: 220px;
+                width: 217px;
             }
         }
     }
@@ -259,11 +259,33 @@
             }
         }
 
+        .reviews{
+            &__info{
+                .reviews_info_block{
+                    padding: calc(24px + (21 - 24  ) * ( (100vw - 768px) / ( 1024 - 768) )) calc(20px + (14 - 20  ) * ( (100vw - 768px) / ( 1024 - 768) )) calc(34px + (25 - 34  ) * ( (100vw - 768px) / ( 1024 - 768) )) calc(20px + (14 - 20  ) * ( (100vw - 768px) / ( 1024 - 768) )); 
+                    .reviews_info_block_text{
+                        font-size: calc(16px + (11 - 16  ) * ( (100vw - 768px) / ( 1024 - 768) ));
+                    }
+                    .reviews_info_block_name{
+                        font-size: calc(16px + (11 - 16  ) * ( (100vw - 768px) / ( 1024 - 768) ));
+                    }
+                    .reviews_info_block_date{
+                        ul{
+                            li{
+                                font-size: calc(14px + (10 - 14  ) * ( (100vw - 768px) / ( 1024 - 768) ));
+                            }
+                        }
+                    }
+                }
+    
+            }
+    }
+
         .reviews {
             &__info{
                 .swiper{
                     .swiper-slide{
-                        width: calc(334px + (220 - 334  ) * ( (100vw - 768px) / ( 1024 - 768) ));
+                        width: calc(326px + (217 - 326  ) * ( (100vw - 768px) / ( 1024 - 768) ));
                     }
                 }
             }

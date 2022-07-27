@@ -287,13 +287,13 @@
   }
   .reviews__info .reviews_info_block {
     border-radius: 21px;
-    padding: 21px 14px;
+    padding: 21px 14px 25px 14px;
   }
   .reviews__info .reviews_info_block .reviews_info_block_text {
     font-size: 13px;
   }
   .reviews__info .reviews_info_block .reviews_info_block_name {
-    font-size: 13px;
+    font-size: 11px;
     margin: 20px 0px 7px 0px;
   }
   .reviews__info .reviews_info_block .reviews_info_block_date ul li {
@@ -418,7 +418,7 @@
     background-size: cover;
   }
   .reviews__info .swiper .swiper-slide {
-    width: 250px;
+    width: 244px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1366px) {
@@ -447,9 +447,6 @@
   .reviews__info .reviews_info_block .reviews_info_block_text {
     font-size: calc(11px + 2 * (100vw - 1024px) / 342);
   }
-  .reviews__info .reviews_info_block .reviews_info_block_name {
-    font-size: calc(11px + 2 * (100vw - 1024px) / 342);
-  }
   .company_description .title_62 {
     font-size: calc(42px + 2 * (100vw - 1024px) / 342);
   }
@@ -467,6 +464,6 @@
     margin: calc(178px + 52 * (100vw - 1024px) / 342) 0px;
   }
   .reviews__info .swiper .swiper-slide {
-    width: calc(220px + 30 * (100vw - 1024px) / 342);
+    width: calc(217px + 27 * (100vw - 1024px) / 342);
   }
 }

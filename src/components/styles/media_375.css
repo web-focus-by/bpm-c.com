@@ -10,6 +10,7 @@
   }
   .title_62 {
     font-size: 42px;
+    margin-bottom: 24px;
   }
   .margin_bottom_240 {
     margin-bottom: 80px;
@@ -155,9 +156,20 @@
   .leaders_choice_tagline__block .leaders_choice_tagline_block_gif img:first-child {
     margin-left: 0px;
   }
+  .reviews__info .reviews_info_block {
+    padding: 20px 16px 24px 16px;
+  }
+  .reviews__info .swiper .swiper-slide {
+    width: 271px;
+  }
 }
 @media (max-width: 340px) {
   .portfolio__products .portfolio_products_block .hash ul li:nth-child(3) {
     display: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 375px) {
+  .reviews__info .swiper .swiper-slide {
+    width: calc(271px + 55 * (100vw - 320px) / 55);
   }
 }

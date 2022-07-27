@@ -423,6 +423,38 @@
             }
         }
     }
+
+    .reviews{
+        &__info{
+            .reviews_info_block{
+                padding: 24px 20px 34px 20px;
+                .reviews_info_block_text{
+                    font-size: 16px;
+                }
+                .reviews_info_block_name{
+                    font-size: 16px;
+                }
+                .reviews_info_block_date{
+                    ul{
+                        li{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+        }
+}
+
+    .reviews {
+        &__info{
+            .swiper{
+                .swiper-slide{
+                    width: 326px;
+                }
+            }
+        }
+    }
     
 }
 
@@ -683,6 +715,14 @@
                         width: calc(100px + (141 - 100 ) * ( (100vw - 375px) / ( 768 - 375) ));
                         height: calc(32px + (46 - 32 ) * ( (100vw - 375px) / ( 768 - 375) ));
                     }
+                }
+            }
+        }
+
+        .reviews{
+            &__info{
+                .reviews_info_block{
+                    padding: calc(20px + (24 - 20  ) * ( (100vw - 375px) / ( 768 - 375) )) calc(16px + (20 - 16  ) * ( (100vw - 375px) / ( 768 - 375) )) calc(24px + (34 - 24  ) * ( (100vw - 375px) / ( 768 - 375) )) calc(16px + (20 - 16  ) * ( (100vw - 375px) / ( 768 - 375) )); 
                 }
             }
         }

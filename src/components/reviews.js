@@ -28,16 +28,24 @@ const Reviews = ({ siteTitle }) => (
           slidesPerView={"auto"}
           onSlideChange={() => console.log("slide change")}
           onSwiper={swiper => console.log(swiper)}
-          // breakpoints={{
-          //   1920: {
-          //     width: 1920,
-          //     slidesPerView: 4,
-          //   },
-          //   1366: {
-          //     width: 1366,
-          //     slidesPerView: 3,
-          //   },
-          // }}
+          breakpoints={{
+            1920: {
+              width: 1920,
+              allowTouchMove: false,
+            },
+            1366: {
+              width: 1366,
+              allowTouchMove: false,
+            },
+            1025: {
+              width: 1025,
+              allowTouchMove: false,
+            },
+            1024: {
+              width: 1366,
+              allowTouchMove: true,
+            },
+          }}
         >
           <SwiperSlide>
             <div className="reviews_info_block">

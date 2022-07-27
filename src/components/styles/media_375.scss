@@ -13,6 +13,7 @@
 
     .title_62{
         font-size: 42px;
+        margin-bottom: 24px;
     }
 
     .margin_bottom_240{
@@ -206,6 +207,23 @@
                 }
             }
         }
+
+        .reviews{
+            &__info{
+                .reviews_info_block{
+                    padding: 20px 16px 24px 16px; 
+                }
+            }
+        }
+        .reviews {
+            &__info{
+                .swiper{
+                    .swiper-slide{
+                        width: 271px;
+                    }
+                }
+            }
+        }
 }
 
 @media (max-width: 340px) {
@@ -224,5 +242,17 @@
             }
         }
      }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+    .reviews {
+        &__info{
+            .swiper{
+                .swiper-slide{
+                    width: calc(271px + (326 - 271  ) * ( (100vw - 320px) / ( 375 - 320) ));
+                }
+            }
+        }
+    }
 }
 
