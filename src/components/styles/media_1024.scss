@@ -104,6 +104,16 @@
     margin-bottom: 40px;
 }
 
+.reviews {
+    &__info{
+        .swiper{
+            .swiper-slide{
+                width: 220px;
+            }
+        }
+    }
+}
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -244,6 +254,16 @@
                         a{
                           margin-right: calc(10px + (14 - 10 ) * ( (100vw - 768px) / ( 1024 - 768) ));  
                         }
+                    }
+                }
+            }
+        }
+
+        .reviews {
+            &__info{
+                .swiper{
+                    .swiper-slide{
+                        width: calc(334px + (220 - 334  ) * ( (100vw - 768px) / ( 1024 - 768) ));
                     }
                 }
             }

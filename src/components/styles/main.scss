@@ -771,11 +771,17 @@ body {
         }
     }
 
-    .swiper{
-        .swiper-slide{
-            width: 350px;
+    .reviews {
+        &__info{
+            .swiper{
+                .swiper-slide{
+                    width: 350px;
+                }
+            }
         }
+
     }
+
 
 
 

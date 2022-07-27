@@ -546,5 +546,14 @@
                 }
             }
         
+            .reviews {
+                &__info{
+                    .swiper{
+                        .swiper-slide{
+                            width: calc(250px + (350 - 250 ) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                        }
+                    }
+                }
+            }
         
 }

@@ -396,4 +396,7 @@
   .behance:hover {
     background-size: cover;
   }
+  .reviews__info .swiper .swiper-slide {
+    width: calc(250px + 100 * (100vw - 1366px) / 554);
+  }
 }

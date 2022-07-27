@@ -417,6 +417,9 @@
   .behance:hover {
     background-size: cover;
   }
+  .reviews__info .swiper .swiper-slide {
+    width: 250px;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1366px) {
   .margin_bottom_60 {
@@ -458,9 +461,12 @@
     grid-row-gap: calc(30px + 7 * (100vw - 1024px) / 342);
   }
   .leaders_choice__block {
-    grid-column-gap: calc(20px + 21 * (100vw - 1366px) / 554);
+    grid-column-gap: calc(20px + 21 * (100vw - 1024px) / 342);
   }
   .leaders_choice_tagline {
-    margin: calc(178px + 52 * (100vw - 1366px) / 554) 0px;
+    margin: calc(178px + 52 * (100vw - 1024px) / 342) 0px;
+  }
+  .reviews__info .swiper .swiper-slide {
+    width: calc(220px + 30 * (100vw - 1024px) / 342);
   }
 }

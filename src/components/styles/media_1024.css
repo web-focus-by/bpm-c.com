@@ -55,6 +55,9 @@
   .margin_bottom_60 {
     margin-bottom: 40px;
   }
+  .reviews__info .swiper .swiper-slide {
+    width: 220px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .margin_bottom_60 {
@@ -137,6 +140,9 @@
   }
   .footer__social_net ul li a {
     margin-right: calc(10px + 4 * (100vw - 768px) / 256);
+  }
+  .reviews__info .swiper .swiper-slide {
+    width: calc(334px + -114 * (100vw - 768px) / 256);
   }
 }
 @media (max-width: 900px) {
