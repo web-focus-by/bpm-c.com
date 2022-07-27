@@ -23,6 +23,9 @@ import Advantages from "./advantages"
 import Reviews from "./reviews"
 import CompanyDescription from "./company_description"
 import ServicePackage from "./service_package"
+import LeadersChoice from "./leaders_choice"
+import Footer from "./footer"
+import PhoneButn from "./phone_butn"
 import "../components/styles/layout.css"
 
 const Layout = ({ children }) => {
@@ -40,6 +43,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Hero></Hero>
+      {/* <PhoneButn></PhoneButn> */}
       <ITCompany></ITCompany>
       <Portfolio></Portfolio>
       <Form></Form>
@@ -52,6 +56,8 @@ const Layout = ({ children }) => {
       <Reviews></Reviews>
       <CompanyDescription></CompanyDescription>
       <ServicePackage></ServicePackage>
+      <LeadersChoice></LeadersChoice>
+      <Footer></Footer>
     </>
   )
 }

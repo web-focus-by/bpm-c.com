@@ -1,0 +1,228 @@
+@media (max-width: 375px) {
+    .margin_bottom_60{
+        margin-bottom: 20px;
+    }
+
+    .hero{
+        margin-top: 48px; 
+    }
+
+    .container {
+        padding: 0px 16px;
+    }
+
+    .title_62{
+        font-size: 42px;
+    }
+
+    .margin_bottom_240{
+        margin-bottom: 80px;
+       }
+
+       .portfolio{
+        &__products{
+            grid-template-columns: 1fr;
+            grid-row-gap: 30px;
+            .portfolio_products_block{
+                .hash{
+                    ul{
+                        li{
+                            &:nth-child(3){
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+                .portfolio_products_block_title {
+                    font-size: 24px;
+                }
+                .portfolio_products_block_pic{
+                    margin-bottom: 12px;
+                    img {
+                        height: 240px;
+                    }
+                }
+                .portfolio__products .portfolio_products_block .portfolio_products_block_list {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+     }
+
+     .hash{
+        &__list{
+
+           .hash_list_block{
+            margin-right: 10px !important;
+            a{
+                font-size: 14px;
+                padding: 8px 14px;
+            }
+            &:hover a{
+                padding: 8px 14px;
+            }
+           } 
+        }
+    }
+
+    .form{
+        padding: 80px 16px;
+        &__block{
+            .form_block_title{
+                font-size: 42px;
+            }
+            .form_block_info{
+                font-size: 15px; 
+            }
+            .form_block_text {
+                font-size: 15px;
+            }
+        }
+     }
+
+     .services{
+        &__list{
+            grid-template-columns: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 12px;
+            .services_list_item{
+                height: 120px;
+                border-radius:  20px; 
+                &:hover a{
+                    padding-bottom: 0px;
+                }
+                a{
+                    font-size: 18px;
+                   
+                }
+                &:hover{
+                    transform: translateY(calc(-2px + (-7 + 2) * ( (100vw - 320px) / ( 375 - 320) )));
+                }
+            }
+        }
+    }
+
+    .bpm_cloud{
+        &__info{
+            .bpm_cloud_block{
+                .bpm_cloud_block_title{
+                    margin-bottom: 12px;
+                    font-size: 20px;
+                }
+                .bpm_cloud_block_text{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    .projects_process{
+        &__subtitle{
+            margin-bottom: 24px;
+        }
+
+            .projects_process_list_item{
+                height: 51px;
+                width: 100%;
+                justify-content: normal;
+                p{
+                    padding-left: 50px;
+                }
+
+                    .projects_process_list_item{
+                        left: 0px;
+                        p{
+
+                        }
+                    }
+
+            }
+        }
+
+        .padding_50{
+            padding: 0px;
+        } 
+
+        .black_bg{
+            border-radius: 30px;
+            padding: 80px 0px;
+            .advantages{
+                &__subtitle{
+                    margin-bottom: 24px;
+                    max-width: none;
+                }
+                &__info{
+                    grid-template-columns: 1fr;
+                    grid-column-gap: 0px;
+                    .advantages_info_block{
+                        color: #fff;
+                        &:first-child::before{
+                            display: flex;
+                            content: url("../../images/gradient_purple1366.svg");
+                            position: relative;
+                            right: 7%;
+                        }
+                        &:nth-child(2)::before{
+                            display: flex;
+                            content: url("../../images/gradient_yellow1366.svg");
+                            position: relative;
+                            right: 7%;
+                        }
+                        &:nth-child(3)::before{
+                            display: flex;
+                            content: url("../../images/gradient_pink1366.svg");
+                            position: relative;
+                            right: 7%;
+                        }
+                        &:nth-child(4)::before{
+                            display: flex;
+                            content: url("../../images/gradient_blue1366.svg");
+                            position: relative;
+                            right: 7%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .leaders_choice_tagline{
+            margin: 80px 0px 84px 0px;
+            &__block{
+                flex-direction: column;
+                align-items: center;
+                .leaders_choice_tagline_block_title{
+                    font-size: 42px;
+                    text-align: center;
+                }
+                .leaders_choice_tagline_block_gif{
+                    img{
+                        width: 48px;
+                        height: 48px;
+                        margin-left: -10px;
+                        &:first-child{
+                            margin-left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+}
+
+@media (max-width: 340px) {
+    .portfolio{
+        &__products{
+            .portfolio_products_block{
+                .hash{
+                    ul{
+                        li{
+                            &:nth-child(3){
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+     }
+}
+

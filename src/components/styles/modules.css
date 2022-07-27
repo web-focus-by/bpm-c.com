@@ -1,3 +1,33 @@
+@font-face {
+  font-family: 'Acrom-Bold';
+  src: local('Acrom Bold'), local('Acrom-Bold'),
+      url('/public/fonts/Acrom-Bold.woff2') format('woff2'),
+      url('/public/fonts/Acrom-Bold.woff') format('woff'),
+      url('/public/fonts/Acrom-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acrom';
+  src: local('Acrom'), local('Acrom-Regular'),
+      url('/public/fonts/Acrom-Regular.woff2') format('woff2'),
+      url('/public/fonts/Acrom-Regular.woff') format('woff'),
+      url('/public/fonts/Acrom-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acrom-Medium';
+  src: local('Acrom Medium'), local('Acrom-Medium'),
+      url('/public/fonts/Acrom-Medium.woff2') format('woff2'),
+      url('/public/fonts/Acrom-Medium.woff') format('woff'),
+      url('/public/fonts/Acrom-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 .button_white {
   border: 1px solid #1A1B1F;
   border-radius: 80px;
@@ -88,4 +118,12 @@
   justify-content: space-between;
   align-items: baseline;
   font-weight: 500;
+}
+
+.margin_bottom_60 {
+  margin-bottom: 60px;
+}
+
+.padding_50 {
+  padding: 0px 50px;
 }

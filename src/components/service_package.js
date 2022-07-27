@@ -5,6 +5,11 @@ import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/modules.css"
 import "../components/styles/mixins.css"
+import "../components/styles/media_1920.css"
+import "../components/styles/media_1366.css"
+import "../components/styles/media_1024.css"
+import "../components/styles/media_768.css"
+import "../components/styles/media_375.css"
 
 const ServicePackage = ({ siteTitle }) => (
   <div className="black_bg margin_bottom_240">
@@ -15,7 +20,7 @@ const ServicePackage = ({ siteTitle }) => (
           <br /> service package
         </div>
         <div className="service_package__info_list">
-          <div className="service_package_info_list_block">
+          <div className="service_package_info_list_block font_18">
             Whatever you turn to our digital agency and from wherever in the
             world, we are ready to start cooperation in many digital promotion
             areas for your business right now, and above all, we can:
@@ -30,7 +35,7 @@ const ServicePackage = ({ siteTitle }) => (
               <li>Personalized applications’ development.</li>
             </ul>
           </div>
-          <div className="service_package_info_list_block">
+          <div className="service_package_info_list_block font_18">
             And that’s not all! Our digital marketing firm developments can turn
             your business from boring office monotonous work into real virtual
             and successful business project. Business with a human face puts
@@ -44,7 +49,7 @@ const ServicePackage = ({ siteTitle }) => (
             <div className="service_package_info_block__title">
               Website creation
             </div>
-            <div className="service_package_info_block__text">
+            <div className="service_package_info_block__text font_18">
               Website construction is just the first step in the online world.
               It’s important to organize effective product promotion on the
               worldwide network. «BPM CLOUD» delivers services to businesses in
@@ -61,7 +66,7 @@ const ServicePackage = ({ siteTitle }) => (
             <div className="service_package_info_block__title">
               PPC by «BPM CLOUD»
             </div>
-            <div className="service_package_info_block__text">
+            <div className="service_package_info_block__text font_18">
               Modern technology opens up endless possibilities. One of the
               directions is considered to be contextual website advertising,
               communities in social networks, and so on. Ad is displayed in
@@ -76,7 +81,7 @@ const ServicePackage = ({ siteTitle }) => (
             <div className="service_package_info_block__title">
               Copywriting by «BPM CLOUD»
             </div>
-            <div className="service_package_info_block__text">
+            <div className="service_package_info_block__text font_18">
               «BPM CLOUD» online marketing agency is widely known outside
               Belarus. Our employees have been representing clients’ businesses
               in favorable lights for many years. At disposal of customers are
@@ -89,7 +94,7 @@ const ServicePackage = ({ siteTitle }) => (
             <div className="service_package_info_block__title">
               Development of mobile applications
             </div>
-            <div className="service_package_info_block__text">
+            <div className="service_package_info_block__text font_18">
               Mobile applications for iOS and Android are already presented in
               every business area. One website and the social network community
               is not enough. Virtual platform by «BMP CLOUD» web studio works
