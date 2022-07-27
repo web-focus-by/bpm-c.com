@@ -278,6 +278,9 @@
   .reviews__info .reviews_info_block .reviews_info_block_date ul li {
     font-size: calc(10px + 4 * (100vw - 1366px) / 554);
   }
+  .reviews__info .swiper .swiper-slide {
+    width: calc(240px + 107 * (100vw - 1366px) / 554);
+  }
   .company_description {
     -moz-column-gap: calc(30px + 70 * (100vw - 1366px) / 554);
          column-gap: calc(30px + 70 * (100vw - 1366px) / 554);
@@ -395,8 +398,5 @@
   }
   .behance:hover {
     background-size: cover;
-  }
-  .reviews__info .swiper .swiper-slide {
-    width: calc(244px + 106 * (100vw - 1366px) / 554);
   }
 }

@@ -369,7 +369,11 @@
                             }
                         }
                     }
-        
+                    .swiper{
+                        .swiper-slide{
+                            width: calc(240px + (347 - 240 ) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                        }
+                    }
                 }
             }
 
@@ -543,16 +547,6 @@
                 background-size: cover;
                 &:hover{
                     background-size: cover; 
-                }
-            }
-        
-            .reviews {
-                &__info{
-                    .swiper{
-                        .swiper-slide{
-                            width: calc(244px + (350 - 244 ) * ( (100vw - 1366px) / ( 1920 - 1366) ));
-                        }
-                    }
                 }
             }
         

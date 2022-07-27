@@ -396,7 +396,11 @@
                                 }
                             }
                         }
-            
+                        .swiper{
+                            .swiper-slide{
+                                width: 240px;
+                            }
+                        }
                     }
             }
 
@@ -572,16 +576,6 @@
                     background-size: cover; 
                 }
             }
-
-            .reviews {
-                &__info{
-                    .swiper{
-                        .swiper-slide{
-                            width: 244px;
-                        }
-                    }
-                }
-            }
         
         }
 
@@ -633,7 +627,11 @@
                     font-size: calc(11px + (13 - 11 ) * ( (100vw - 1024px) / (  1366 - 1024) ));
                 }
             }
-
+            .swiper{
+                .swiper-slide{
+                    width: calc(213px + (240 - 213  ) * ( (100vw - 1024px) / (  1366 - 1024) ));
+                }
+            }
         }
     }
 
@@ -663,15 +661,6 @@
         margin: calc(178px + (230 - 178  ) * ( (100vw - 1024px) / (  1366 - 1024) )) 0px ;
     }
 
-    .reviews {
-        &__info{
-            .swiper{
-                .swiper-slide{
-                    width: calc(217px + (244 - 217  ) * ( (100vw - 1024px) / (  1366 - 1024) ));
-                }
-            }
-        }
-    }
 
 }
 

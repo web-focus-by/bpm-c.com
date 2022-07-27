@@ -344,9 +344,6 @@ body {
   -moz-column-gap: 25px;
        column-gap: 25px;
 }
-.blog__products .blog_products_block .blog_products_block_pic img {
-  width: 100%;
-}
 .blog__products .blog_products_block .blog_products_block_list {
   margin: 27px 0px 24px 0px;
   display: flex;
@@ -364,6 +361,9 @@ body {
 .blog__products .blog_products_block .blog_products_block_title {
   font-size: 24px;
   font-weight: 500;
+}
+.blog__products .swiper .swiper-slide {
+  width: 350px;
 }
 
 .bpm_cloud {
@@ -461,6 +461,9 @@ body {
   display: inline-block;
   font-size: 14px;
   color: #5C5C5C;
+}
+.reviews__info .swiper .swiper-slide {
+  width: 350px;
 }
 
 .company_description {
@@ -668,8 +671,4 @@ body {
 }
 .footer__social_net ul li:last-child a {
   margin-right: 0px;
-}
-
-.reviews__info .swiper .swiper-slide {
-  width: 350px;
 }

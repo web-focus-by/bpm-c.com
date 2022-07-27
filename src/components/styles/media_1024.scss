@@ -66,7 +66,11 @@
                     font-size: 11px;
                 }
             }
-
+            .swiper{
+                .swiper-slide{
+                    width: 213px;
+                }
+            }
         }
 }
 
@@ -102,16 +106,6 @@
 
 .margin_bottom_60{
     margin-bottom: 40px;
-}
-
-.reviews {
-    &__info{
-        .swiper{
-            .swiper-slide{
-                width: 217px;
-            }
-        }
-    }
 }
 
 }
@@ -285,7 +279,7 @@
             &__info{
                 .swiper{
                     .swiper-slide{
-                        width: calc(326px + (217 - 326  ) * ( (100vw - 768px) / ( 1024 - 768) ));
+                        width: calc(326px + (213 - 326  ) * ( (100vw - 768px) / ( 1024 - 768) ));
                     }
                 }
             }

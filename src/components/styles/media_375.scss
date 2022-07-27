@@ -213,10 +213,6 @@
                 .reviews_info_block{
                     padding: 20px 16px 24px 16px; 
                 }
-            }
-        }
-        .reviews {
-            &__info{
                 .swiper{
                     .swiper-slide{
                         width: 271px;
@@ -224,6 +220,7 @@
                 }
             }
         }
+
 }
 
 @media (max-width: 340px) {

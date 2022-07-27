@@ -392,7 +392,7 @@ body {
         .blog_products_block{
             .blog_products_block_pic{
                 img{
-                    width: 100%;
+                    // width: 100%;
                 }
             }
             .blog_products_block_list{
@@ -415,6 +415,11 @@ body {
             .blog_products_block_title{
                 font-size: 24px;
                 font-weight: 500;
+            }
+        }
+        .swiper{
+            .swiper-slide{
+                width: 350px;
             }
         }
     }
@@ -500,10 +505,6 @@ body {
 
     .reviews{
         &__info{
-            // display: grid;
-            // grid-template-columns: repeat(4, 1fr);
-            // grid-column-gap: 26px;
-
             .reviews_info_block{
                 background: #E1DAF4;
                 border-radius: 30px;
@@ -531,7 +532,11 @@ body {
                     }
                 }
             }
-
+            .swiper{
+                .swiper-slide{
+                    width: 350px;
+                }
+            }
         }
     }
 
@@ -772,16 +777,6 @@ body {
         }
     }
 
-    .reviews {
-        &__info{
-            .swiper{
-                .swiper-slide{
-                    width: 350px;
-                }
-            }
-        }
-
-    }
 
 
 
