@@ -77,6 +77,9 @@
   .form .form_block_wrapper form .form_block_send p {
     max-width: calc(250px + -72 * (100vw - 768px) / 256);
   }
+  .form__block .form_block_text .form_block_gif {
+    margin-left: calc(30px + 20 * (100vw - 768px) / 132);
+  }
   .technologies__list .technologies_list_item p {
     font-size: calc(16px + -3 * (100vw - 768px) / 256);
   }
@@ -140,6 +143,7 @@
   .form {
     padding: 80px;
     grid-template-columns: 1fr;
+    background-position: 150px 30px;
   }
   .form__block .form_block_info {
     max-width: none;
@@ -147,6 +151,9 @@
   }
   .form__block .form_block_text {
     font-size: 16px;
+  }
+  .form__block .form_block_text .form_block_gif {
+    margin-left: 50px;
   }
   .form__block .form_block_text .form_block_gif img {
     width: 50px;

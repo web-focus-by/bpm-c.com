@@ -46,6 +46,7 @@
      }
 
      .form{
+        background-position: 170px 120px;
         &__block{
             .form_block_text{
                 align-items: flex-start;
@@ -76,6 +77,9 @@
                 border-radius:  25px; 
                 a{
                     font-size: 20px;
+                }
+                &:hover{
+                    background-position: 50% 75px;
                 }
             }
         }
@@ -150,6 +154,33 @@
                 grid-template-columns: repeat(2, 1fr);
                 grid-column-gap: 20px;
                 grid-row-gap: 36px;
+                .advantages_info_block{
+                    color: #fff;
+                    &:first-child::before{
+                        display: flex;
+                        content: url("../../images/gradient_purple768.svg");
+                        position: relative;
+                        right: 7%;
+                    }
+                    &:nth-child(2)::before{
+                        display: flex;
+                        content: url("../../images/gradient_yellow768.svg");
+                        position: relative;
+                        right: 7%;
+                    }
+                    &:nth-child(3)::before{
+                        display: flex;
+                        content: url("../../images/gradient_pink768.svg");
+                        position: relative;
+                        right: 7%;
+                    }
+                    &:nth-child(4)::before{
+                        display: flex;
+                        content: url("../../images/gradient_blue768.svg");
+                        position: relative;
+                        right: 7%;
+                    }
+                }
             }
             &__title{
                 max-width: 600px;  
@@ -438,6 +469,7 @@
 
      .form{
         padding: 80px calc(16px + (80 - 16) * ( (100vw - 375px) / ( 768 - 375) ));
+        background-position: calc(15px + (170 + 15) * ( (100vw - 375px) / ( 768 - 375) )) 120px;
      }
 
      .services{
@@ -452,6 +484,7 @@
                 }
                 &:hover{
                     transform: translateY(calc(-7px + (-18 + 7) * ( (100vw - 375px) / ( 768 - 375) )));
+                    background-position: 50% calc(35px + (75 - 35) * ( (100vw - 375px) / ( 768 - 375) ));
                 }
             }
         }

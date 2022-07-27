@@ -48,6 +48,7 @@
   }
   .form {
     padding: 71px 89px 71px 70px;
+    background-position: 0px 30px;
   }
   .form__block .form_block_info {
     font-size: 12px;
@@ -115,6 +116,9 @@
   }
   .services__list .services_list_item a {
     font-size: 14px;
+  }
+  .services__list .services_list_item:hover {
+    background-position: 95% 45px;
   }
   .react {
     width: 61px;
@@ -230,6 +234,33 @@
   }
   .black_bg .advantages__info {
     grid-column-gap: 39px;
+  }
+  .black_bg .advantages__info .advantages_info_block {
+    color: #fff;
+  }
+  .black_bg .advantages__info .advantages_info_block:first-child::before {
+    display: flex;
+    content: url("../../images/gradient_purple1366.svg");
+    position: relative;
+    right: 7%;
+  }
+  .black_bg .advantages__info .advantages_info_block:nth-child(2)::before {
+    display: flex;
+    content: url("../../images/gradient_yellow1366.svg");
+    position: relative;
+    right: 7%;
+  }
+  .black_bg .advantages__info .advantages_info_block:nth-child(3)::before {
+    display: flex;
+    content: url("../../images/gradient_pink1366.svg");
+    position: relative;
+    right: 7%;
+  }
+  .black_bg .advantages__info .advantages_info_block:nth-child(4)::before {
+    display: flex;
+    content: url("../../images/gradient_blue1366.svg");
+    position: relative;
+    right: 7%;
   }
   .blog__products {
     -moz-column-gap: 17px;

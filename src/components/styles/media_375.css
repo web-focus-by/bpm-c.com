@@ -16,7 +16,7 @@
   }
   .portfolio__products {
     grid-template-columns: 1fr;
-    grid-row-gap: 1.2%;
+    grid-row-gap: 30px;
   }
   .portfolio__products .portfolio_products_block .hash ul li:nth-child(3) {
     display: inline-block;
@@ -108,6 +108,33 @@
   .black_bg .advantages__info {
     grid-template-columns: 1fr;
     grid-column-gap: 0px;
+  }
+  .black_bg .advantages__info .advantages_info_block {
+    color: #fff;
+  }
+  .black_bg .advantages__info .advantages_info_block:first-child::before {
+    display: flex;
+    content: url("../../images/gradient_purple1366.svg");
+    position: relative;
+    right: 7%;
+  }
+  .black_bg .advantages__info .advantages_info_block:nth-child(2)::before {
+    display: flex;
+    content: url("../../images/gradient_yellow1366.svg");
+    position: relative;
+    right: 7%;
+  }
+  .black_bg .advantages__info .advantages_info_block:nth-child(3)::before {
+    display: flex;
+    content: url("../../images/gradient_pink1366.svg");
+    position: relative;
+    right: 7%;
+  }
+  .black_bg .advantages__info .advantages_info_block:nth-child(4)::before {
+    display: flex;
+    content: url("../../images/gradient_blue1366.svg");
+    position: relative;
+    right: 7%;
   }
   .leaders_choice_tagline {
     margin: 80px 0px 84px 0px;

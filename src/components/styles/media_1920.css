@@ -45,6 +45,7 @@
   .form {
     border-radius: calc(29px + 11 * (100vw - 1366px) / 554);
     padding: calc(71px + 29 * (100vw - 1366px) / 554) calc(89px + 36 * (100vw - 1366px) / 554) calc(71px + 29 * (100vw - 1366px) / 554) calc(70px + 28 * (100vw - 1366px) / 554);
+    background-position: calc(0px + 110 * (100vw - 1366px) / 554) calc(30px + 135 * (100vw - 1366px) / 554);
   }
   .form__block {
     color: #FFFFFF;
@@ -123,6 +124,9 @@
   }
   .services__list .services_list_item a {
     font-size: calc(14px + 6 * (100vw - 1366px) / 554);
+  }
+  .services__list .services_list_item:hover {
+    background-position: 70% calc(45px + 35 * (100vw - 1366px) / 554);
   }
   .react {
     width: calc(61px + 25 * (100vw - 1366px) / 554);

@@ -22,7 +22,7 @@
        .portfolio{
         &__products{
             grid-template-columns: 1fr;
-            grid-row-gap: 1.2%;
+            grid-row-gap: 30px;
             .portfolio_products_block{
                 .hash{
                     ul{
@@ -154,6 +154,33 @@
                 &__info{
                     grid-template-columns: 1fr;
                     grid-column-gap: 0px;
+                    .advantages_info_block{
+                        color: #fff;
+                        &:first-child::before{
+                            display: flex;
+                            content: url("../../images/gradient_purple1366.svg");
+                            position: relative;
+                            right: 7%;
+                        }
+                        &:nth-child(2)::before{
+                            display: flex;
+                            content: url("../../images/gradient_yellow1366.svg");
+                            position: relative;
+                            right: 7%;
+                        }
+                        &:nth-child(3)::before{
+                            display: flex;
+                            content: url("../../images/gradient_pink1366.svg");
+                            position: relative;
+                            right: 7%;
+                        }
+                        &:nth-child(4)::before{
+                            display: flex;
+                            content: url("../../images/gradient_blue1366.svg");
+                            position: relative;
+                            right: 7%;
+                        }
+                    }
                 }
             }
         }

@@ -5,10 +5,8 @@ import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/modules.css"
 import "../components/styles/mixins.css"
-import imgVr from "../images/vr.svg"
-import imgPointer from "../images/pointer.svg"
-import imgScreen from "../images/screen.svg"
-import imgHand from "../images/hand.svg"
+import { Swiper, SwiperSlide } from "swiper/react"
+import "swiper/css"
 import "../components/styles/media_1920.css"
 import "../components/styles/media_1366.css"
 import "../components/styles/media_1024.css"
@@ -25,66 +23,91 @@ const Reviews = ({ siteTitle }) => (
         </div>
       </div>
       <div className="reviews__info">
-        <div className="reviews_info_block">
-          <div className="reviews_info_block_text">
-            Is there any point in delaying starting our cooperation, if leading
-            experts are already with our digital marketing agency? Let’s get
-            acquainted and jointly go towards necessary goals in goods and
-            services digital promotion.
-          </div>
-          <div className="reviews_info_block_name">Valentina Gubareva</div>
-          <div className="reviews_info_block_date">
-            <ul>
-              <li>Creative director</li>
-              <li>12.10.2021</li>
-            </ul>
-          </div>
-        </div>
-        <div className="reviews_info_block">
-          <div className="reviews_info_block_text">
-            Is there any point in delaying starting our cooperation, if leading
-            experts are already with our digital marketing agency? Let’s get
-            acquainted and jointly go towards necessary goals in goods and
-            services digital promotion.
-          </div>
-          <div className="reviews_info_block_name">Valentina Gubareva</div>
-          <div className="reviews_info_block_date">
-            <ul>
-              <li>Creative director</li>
-              <li>12.10.2021</li>
-            </ul>
-          </div>
-        </div>
-        <div className="reviews_info_block">
-          <div className="reviews_info_block_text">
-            Is there any point in delaying starting our cooperation, if leading
-            experts are already with our digital marketing agency? Let’s get
-            acquainted and jointly go towards necessary goals in goods and
-            services digital promotion.
-          </div>
-          <div className="reviews_info_block_name">Valentina Gubareva</div>
-          <div className="reviews_info_block_date">
-            <ul>
-              <li>Creative director</li>
-              <li>12.10.2021</li>
-            </ul>
-          </div>
-        </div>
-        <div className="reviews_info_block">
-          <div className="reviews_info_block_text">
-            Is there any point in delaying starting our cooperation, if leading
-            experts are already with our digital marketing agency? Let’s get
-            acquainted and jointly go towards necessary goals in goods and
-            services digital promotion.
-          </div>
-          <div className="reviews_info_block_name">Valentina Gubareva</div>
-          <div className="reviews_info_block_date">
-            <ul>
-              <li>Creative director</li>
-              <li>12.10.2021</li>
-            </ul>
-          </div>
-        </div>
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={"auto"}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={swiper => console.log(swiper)}
+          // breakpoints={{
+          //   1920: {
+          //     width: 1920,
+          //     slidesPerView: 4,
+          //   },
+          //   1366: {
+          //     width: 1366,
+          //     slidesPerView: 3,
+          //   },
+          // }}
+        >
+          <SwiperSlide>
+            <div className="reviews_info_block">
+              <div className="reviews_info_block_text">
+                Is there any point in delaying starting our cooperation, if
+                leading experts are already with our digital marketing agency?
+                Let’s get acquainted and jointly go towards necessary goals in
+                goods and services digital promotion.
+              </div>
+              <div className="reviews_info_block_name">Valentina Gubareva</div>
+              <div className="reviews_info_block_date">
+                <ul>
+                  <li>Creative director</li>
+                  <li>12.10.2021</li>
+                </ul>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="reviews_info_block">
+              <div className="reviews_info_block_text">
+                Is there any point in delaying starting our cooperation, if
+                leading experts are already with our digital marketing agency?
+                Let’s get acquainted and jointly go towards necessary goals in
+                goods and services digital promotion.
+              </div>
+              <div className="reviews_info_block_name">Valentina Gubareva</div>
+              <div className="reviews_info_block_date">
+                <ul>
+                  <li>Creative director</li>
+                  <li>12.10.2021</li>
+                </ul>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="reviews_info_block">
+              <div className="reviews_info_block_text">
+                Is there any point in delaying starting our cooperation, if
+                leading experts are already with our digital marketing agency?
+                Let’s get acquainted and jointly go towards necessary goals in
+                goods and services digital promotion.
+              </div>
+              <div className="reviews_info_block_name">Valentina Gubareva</div>
+              <div className="reviews_info_block_date">
+                <ul>
+                  <li>Creative director</li>
+                  <li>12.10.2021</li>
+                </ul>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="reviews_info_block">
+              <div className="reviews_info_block_text">
+                Is there any point in delaying starting our cooperation, if
+                leading experts are already with our digital marketing agency?
+                Let’s get acquainted and jointly go towards necessary goals in
+                goods and services digital promotion.
+              </div>
+              <div className="reviews_info_block_name">Valentina Gubareva</div>
+              <div className="reviews_info_block_date">
+                <ul>
+                  <li>Creative director</li>
+                  <li>12.10.2021</li>
+                </ul>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   </div>

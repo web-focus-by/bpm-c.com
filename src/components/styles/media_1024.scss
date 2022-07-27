@@ -139,6 +139,13 @@
                 }
             }
         }
+        &__block{
+            .form_block_text{
+                .form_block_gif{
+                    margin-left: calc(30px + (50 - 30) * ( (100vw - 768px) / ( 900 - 768) ));
+                }
+            }
+        }
     }
 
     .technologies{
@@ -247,7 +254,8 @@
 @media (max-width: 900px) {
     .form{
         padding: 80px;
-        grid-template-columns: 1fr;  
+        grid-template-columns: 1fr; 
+        background-position: 150px 30px; 
         &__block{
             .form_block_info{
                 max-width: none;
@@ -256,6 +264,7 @@
             .form_block_text{
                 font-size: 16px;
                 .form_block_gif{
+                    margin-left: 50px;
                     img{
                         width: 50px;
                         height: 50px;

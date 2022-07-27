@@ -74,6 +74,7 @@
     .form {
         border-radius: calc(29px + (40 - 29) * ( (100vw - 1366px) / ( 1920 - 1366) ));
         padding: calc(71px + (100 - 71) * ( (100vw - 1366px) / ( 1920 - 1366) )) calc(89px + (125 - 89) * ( (100vw - 1366px) / ( 1920 - 1366) )) calc(71px + (100 - 71) * ( (100vw - 1366px) / ( 1920 - 1366) )) calc(70px + (98 - 70) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+        background-position: calc(0px + (110 - 0) * ( (100vw - 1366px) / ( 1920 - 1366) )) calc(30px + (165 - 30) * ( (100vw - 1366px) / ( 1920 - 1366) ));
         &__block{
             color: #FFFFFF; 
             .form_block_title{
@@ -157,6 +158,9 @@
                 height: calc(149px + (210 - 149) * ( (100vw - 1366px) / ( 1920 - 1366) ));
                 a{
                     font-size: calc(14px + (20 - 14) * ( (100vw - 1366px) / ( 1920 - 1366) ));
+                }
+                &:hover{
+                    background-position: 70% calc(45px + (80 - 45) * ( (100vw - 1366px) / ( 1920 - 1366) ));
                 }
             }
         }
