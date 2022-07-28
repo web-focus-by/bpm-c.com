@@ -38,6 +38,7 @@ const Header = ({ siteTitle }) => (
             </li>
           </ul>
         </div>
+        <div className="burger"></div>
       </div>
     </div>
   </header>
