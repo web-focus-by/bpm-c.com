@@ -1,7 +1,26 @@
 @media (max-width: 1366px) {
 
+    .burger{
+        display: none;
+    }
+
     .margin_bottom_60{
         margin-bottom: 57px;
+    }
+
+    .phone_butn{
+        padding-right: 42px;
+        .phone{
+            width: 114px;
+            height: 114px;
+            background-size: cover;
+        }
+        span{
+            width: 38px;
+            height: 38px;
+            background-size: cover;
+            right: 78px;
+        }
     }
     
      .hero{
@@ -61,11 +80,20 @@
         }
     }
 
-    .header_nav_list{
-        ul{
-            li{
-                a{
-                    font-size: 13px; 
+    .header{
+        &__nav{
+            .logo{
+                width: 100px;
+                height: 32px;
+                background-size: cover;
+            }
+            .header_nav_list{
+                ul{
+                    li{
+                        a{
+                            font-size: 13px; 
+                        }
+                    }
                 }
             }
         }
@@ -589,6 +617,7 @@
     .margin_bottom_240{
         margin-bottom: calc(120px + (170 - 120) * ( (100vw - 1024px) / ( 1366 - 1024) ));
        }
+
 
        .form {
         padding: 71px calc(62px + (89 - 62) * ( (100vw - 1024px) / ( 1366 - 1024) )) 71px calc(40px + (70 - 40) * ( (100vw - 1024px) / ( 1366 - 1024) ));

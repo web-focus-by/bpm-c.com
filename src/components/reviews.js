@@ -14,53 +14,55 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const Reviews = ({siteTitle, data}) => {
+const Reviews = ({ siteTitle, data }) => {
   //const [dataText] = useState(data);
   const dataText = [
     {
       id: "slide_1",
-      description: "Is there any point in delaying starting our cooperation, if "+
-      "leading experts are already with our digital marketing agency? "+
-      "Let’s get acquainted and jointly go towards necessary goals in "+
-      "goods and services digital promotion.",
+      description:
+        "Is there any point in delaying starting our cooperation, if " +
+        "leading experts are already with our digital marketing agency? " +
+        "Let’s get acquainted and jointly go towards necessary goals in " +
+        "goods and services digital promotion.",
       signature: "Valentina Gubareva",
-      date: "12.10.2021"
+      date: "12.10.2021",
     },
     {
       id: "slide_2",
-      description: "Is there any point in delaying starting our cooperation, if "+
-      "leading experts are already with our digital marketing agency? "+
-      "Let’s get acquainted and jointly go towards necessary goals in "+
-      "goods and services digital promotion.",
+      description:
+        "Is there any point in delaying starting our cooperation, if " +
+        "leading experts are already with our digital marketing agency? " +
+        "Let’s get acquainted and jointly go towards necessary goals in " +
+        "goods and services digital promotion.",
       signature: "Maria Ivanova",
-      date: "12.10.2021"
+      date: "12.10.2021",
     },
     {
       id: "slide_3",
-      description: "Is there any point in delaying starting our cooperation, if "+
-      "leading experts are already with our digital marketing agency? "+
-      "Let’s get acquainted and jointly go towards necessary goals in "+
-      "goods and services digital promotion.",
+      description:
+        "Is there any point in delaying starting our cooperation, if " +
+        "leading experts are already with our digital marketing agency? " +
+        "Let’s get acquainted and jointly go towards necessary goals in " +
+        "goods and services digital promotion.",
       signature: "Ekaterina Gubareva",
-      date: "12.10.2021"
+      date: "12.10.2021",
     },
     {
       id: "slide_4",
-      description: "Is there any point in delaying starting our cooperation, if "+
-      "leading experts are already with our digital marketing agency? "+
-      "Let’s get acquainted and jointly go towards necessary goals in "+
-      "goods and services digital promotion.",
+      description:
+        "Is there any point in delaying starting our cooperation, if " +
+        "leading experts are already with our digital marketing agency? " +
+        "Let’s get acquainted and jointly go towards necessary goals in " +
+        "goods and services digital promotion.",
       signature: "Valentina Gubarevich",
-      date: "12.10.2021"
-    }
-  ];
-  const result = dataText.map((obj) => {
+      date: "12.10.2021",
+    },
+  ]
+  const result = dataText.map(obj => {
     return (
       <SwiperSlide>
         <div className="reviews_info_block">
-          <div className="reviews_info_block_text">
-            {obj.description}
-          </div>
+          <div className="reviews_info_block_text">{obj.description}</div>
           <div className="reviews_info_block_name">{obj.signature}</div>
           <div className="reviews_info_block_date">
             <ul>
@@ -71,7 +73,7 @@ const Reviews = ({siteTitle, data}) => {
         </div>
       </SwiperSlide>
     )
-  });
+  })
   return (
     <div className="container">
       <div className="reviews margin_bottom_240">
@@ -88,24 +90,31 @@ const Reviews = ({siteTitle, data}) => {
             onSlideChange={() => console.log("slide change")}
             onSwiper={swiper => console.log(swiper)}
             breakpoints={{
-               1920: {
-                 width: 1920,
-                 slidesPerView: 4,
-               },
-               1366: {
-                 width: 1366,
-                 slidesPerView: 3,
-               },
+              1920: {
+                width: 1920,
+                allowTouchMove: false,
+              },
+              1366: {
+                width: 1366,
+                allowTouchMove: false,
+              },
+              1025: {
+                width: 1025,
+                allowTouchMove: false,
+              },
+              1024: {
+                width: 1366,
+                allowTouchMove: true,
+              },
             }}
           >
-          {result}
+            {result}
           </Swiper>
         </div>
       </div>
     </div>
-  );
-
-};
+  )
+}
 
 Reviews.propTypes = {
   siteTitle: PropTypes.string,
