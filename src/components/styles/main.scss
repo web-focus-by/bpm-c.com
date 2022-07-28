@@ -49,6 +49,35 @@ body {
     }
 }
 
+.burger{
+    width: 36px;
+    height: 2px;
+    background: #1A1B1F;
+    border-radius: 20%;
+    position: relative;
+    top: -3px;
+    &:after{
+      display: inline-block;  
+      content: "";
+      width: 36px;
+      height: 2px;
+      background: #1A1B1F;
+      border-radius: 20%;
+      position: relative;
+      top: -51px;
+    }
+    &:before{
+        display: inline-block;  
+        content: "";
+        width: 36px;
+        height: 2px;
+        background: #1A1B1F;
+        border-radius: 20%;
+        position: relative;
+        top: -5px;
+      }
+}
+
 .phone_butn{
     display: flex;
     justify-content: flex-end;
@@ -87,6 +116,66 @@ body {
         right: 6%;
     }
 }
+
+.modal{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(26, 27, 31, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // transform: scale(0);
+    &__content{
+        background: #1A1B1F;
+        border-radius: 40px;
+        .form{
+            grid-template-columns: 605px 455px;
+            padding: 40px 40px 100px 80px;
+            &__block{
+                .form_block_text{
+                    font-size: 16px;
+                    .form_block_gif{
+                        margin-left: 30px;
+                    }
+                }
+                .form_block_modal_button{
+                    width: 34px;
+                    height: 2px;
+                    background: #FFFFFF;
+                    border-radius: 100px;
+                    transform: rotate(45deg);
+                    margin-top: 12px;
+                    &::after{
+                        content: "";
+                        display: inline-block;
+                        width: 34px;
+                        height: 2px;
+                        background: #FFFFFF;
+                        border-radius: 100px;
+                        transform: rotate(90deg);
+                        position: relative;
+                        top: -15px;
+                    }
+                }
+                &:first-child{
+                    margin-top: 40px;
+                }
+                &:last-child{
+                    display: flex;
+                    justify-content: end;
+                }
+            }
+        }
+    }
+    // .active{
+    //     transform: scale(1);
+    // }
+}
+
+
 
 
 .hero {
@@ -777,10 +866,8 @@ body {
         }
     }
 
-
-
-
-
-
-
-           
+    .swiper{
+        .swiper-slide{
+            width: 347px;
+        }
+    }        

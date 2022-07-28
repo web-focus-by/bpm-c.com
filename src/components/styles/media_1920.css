@@ -1,3 +1,8 @@
+@media (max-width: 1920px) {
+  .burger {
+    display: none;
+  }
+}
 @media (min-width: 1366px) and (max-width: 1920px) {
   .margin_bottom_60 {
     margin-bottom: calc(57px + 3 * (100vw - 1366px) / 554);
@@ -29,9 +34,27 @@
     font-size: calc(11px + 5 * (100vw - 1366px) / 554);
     padding: calc(16px + 6 * (100vw - 1366px) / 554) calc(29px + 11 * (100vw - 1366px) / 554);
   }
-  .header_nav_list ul li a {
-    margin-right: calc(42px + 18 * (100vw - 1366px) / 554) !important;
+  .header__nav .logo {
+    width: calc(100px + 42 * (100vw - 1366px) / 554);
+    height: calc(32px + 14 * (100vw - 1366px) / 554);
+    background-size: cover;
+  }
+  .header__nav .header_nav_list ul li a {
+    margin-right: calc(42px + 18 * (100vw - 1366px) / 554);
     font-size: calc(13px + 5 * (100vw - 1366px) / 554);
+  }
+  .phone_butn {
+    padding-right: calc(42px + 18 * (100vw - 1366px) / 554);
+  }
+  .phone_butn .phone {
+    width: calc(114px + 46 * (100vw - 1366px) / 554);
+    height: calc(114px + 46 * (100vw - 1366px) / 554);
+    background-size: cover;
+  }
+  .phone_butn span {
+    width: calc(38px + 15 * (100vw - 1366px) / 554);
+    height: calc(38px + 15 * (100vw - 1366px) / 554);
+    background-size: cover;
   }
   .portfolio__products .portfolio_products_block .portfolio_products_block_title {
     font-size: calc(22px + 8 * (100vw - 1366px) / 554);
@@ -398,5 +421,14 @@
   }
   .behance:hover {
     background-size: cover;
+  }
+}
+@media (min-width: 768px) and (max-width: 1920px) {
+  .modal__content {
+    border-radius: calc(30px + 10 * (100vw - 768px) / 1152);
+  }
+  .modal__content .form {
+    padding: calc(30px + 10 * (100vw - 768px) / 1152) calc(30px + 10 * (100vw - 768px) / 1152) calc(60px + 40 * (100vw - 768px) / 1152) calc(60px + 20 * (100vw - 768px) / 1152);
+    grid-template-columns: calc(575px + 30 * (100vw - 768px) / 1152) calc(35px + 420 * (100vw - 768px) / 1152);
   }
 }

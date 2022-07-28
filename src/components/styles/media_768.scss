@@ -3,9 +3,39 @@
         margin-bottom: 60px;
     }
 
-    .header_nav_list{
-        display: none;
+    .header{
+        &__nav{
+            .logo{
+                width: 110px;
+                height: 36px;
+                background-size: cover;
+            }
+            .header_nav_list{
+                display: none;
+            }
+        }
     }
+
+    .phone_butn{
+        padding-right: 40px;
+        .phone{
+            width: 140px;
+            height: 140px;
+            background-size: cover;
+        }
+        span{
+            width: 47px;
+            height: 47px;
+            right: 85px;
+            background-size: cover;
+        }
+    }
+
+    .burger{
+        display: inline-block;
+    }
+
+
 
     .title_80{
         max-width: 560px;
@@ -465,6 +495,13 @@
     .container {
         padding-left: calc(16px + (40 - 16) * ( (100vw - 375px) / (768 - 375) ));
         padding-right: calc(16px + (40 - 16) * ( (100vw - 375px) / (768 - 375) ));
+    }
+
+    .phone_butn{
+        padding-right: calc(16px + (40 - 16) * ( (100vw - 375px) / (768 - 375) ));
+        span{
+            right: calc(63px + (85 - 63) * ( (100vw - 375px) / (768 - 375) ));
+        }
     }
 
     .hero{
