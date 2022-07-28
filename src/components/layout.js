@@ -40,14 +40,14 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const [modalActive, setModalActive] = React.useState(true)
+  const [modalActive, setModalActive] = React.useState(false)
 
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Hero></Hero>
-      <PhoneButn></PhoneButn>
-      <Modal active={modalActive} setActive={setModalActive}></Modal>
+      <PhoneButn setActive={setModalActive}></PhoneButn>
+      <Modal active={modalActive}></Modal>
       <ITCompany></ITCompany>
       <Portfolio></Portfolio>
       <Form></Form>

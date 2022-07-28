@@ -10,12 +10,19 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const PhoneButn = ({ siteTitle }) => (
-  <div className="phone_butn">
-    <div className="phone"></div>
-    <span className="phone_icon"></span>
-  </div>
-)
+const PhoneButn = ({ setActive }) => {
+  return (
+    <div className="phone_butn">
+      <div className="phone"></div>
+      <span
+        className="phone_icon"
+        onClick={() => {
+          setActive(true)
+        }}
+      ></span>
+    </div>
+  )
+}
 
 PhoneButn.propTypes = {
   siteTitle: PropTypes.string,

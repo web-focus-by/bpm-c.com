@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { useState } from "react"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/mixins.css"
@@ -14,7 +15,7 @@ import gifKanu from "../images/kanu.gif"
 import gifVlada from "../images/vlada.png"
 
 const Modal = ({ active, setActive }) => (
-  <div className="modal" onClick={setActive(false)}>
+  <div className="modal">
     <div
       className={active ? "modal active" : "modal"}
       onClick={() => setActive(false)}

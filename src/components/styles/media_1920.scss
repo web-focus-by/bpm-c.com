@@ -586,8 +586,5 @@
                 grid-template-columns: calc(575px + (605 - 575) * ( (100vw - 768px) / ( 1920 - 768) )) calc(35px + (455 - 35) * ( (100vw - 768px) / ( 1920 - 768) ));
             }
         }
-        // .active{
-        //     transform: scale(1);
-        // }
     }
 }

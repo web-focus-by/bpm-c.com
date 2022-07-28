@@ -221,6 +221,27 @@
             }
         }
 
+        
+        .modal{
+            &__content{
+                border-radius: 0px;
+                .form{
+                    padding: 18px 18px 105px 16px;
+                    grid-template-columns: 330px 5px;
+                    &__block{
+                        .form_block_text{
+                            flex-direction: column;
+                            align-items: flex-start;
+                            .form_block_gif{
+                                display: none;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
 }
 
 @media (max-width: 340px) {
@@ -248,6 +269,23 @@
                 .swiper-slide{
                     width: calc(271px + (326 - 271  ) * ( (100vw - 320px) / ( 375 - 320) ));
                 }
+            }
+        }
+    }
+    .modal{
+        &__content{
+            .form{
+                grid-template-columns:  calc(265px + (330 - 265) * ( (100vw - 320px) / ( 375 - 320) )) 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .modal{
+        &__content{
+            .form{
+                grid-template-columns: 265px 5px;
             }
         }
     }
