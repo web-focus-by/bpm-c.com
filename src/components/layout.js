@@ -26,7 +26,9 @@ import ServicePackage from "./service_package"
 import LeadersChoice from "./leaders_choice"
 import Footer from "./footer"
 import PhoneButn from "./phone_butn"
+import Modal from "./modal"
 import "../components/styles/layout.css"
+import { useState, useRef, useEffect } from "react"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -38,12 +40,19 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  const [isOpen, setModalActive] = useState(false);
+  const toggleModalActive = () => {
+    setModalActive(!isOpen);
+  }
 
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Hero></Hero>
-      {/* <PhoneButn></PhoneButn> */}
+      <PhoneButn onClick={toggleModalActive}></PhoneButn>
+      {isOpen? <Modal
+        onClickClose={toggleModalActive}
+      ></Modal> : null}
       <ITCompany></ITCompany>
       <Portfolio></Portfolio>
       <Form></Form>

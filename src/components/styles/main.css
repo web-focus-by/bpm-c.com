@@ -40,6 +40,35 @@ body {
   color: #935CFF;
 }
 
+.burger {
+  width: 36px;
+  height: 2px;
+  background: #1A1B1F;
+  border-radius: 20%;
+  position: relative;
+  top: -3px;
+}
+.burger:after {
+  display: inline-block;
+  content: "";
+  width: 36px;
+  height: 2px;
+  background: #1A1B1F;
+  border-radius: 20%;
+  position: relative;
+  top: -51px;
+}
+.burger:before {
+  display: inline-block;
+  content: "";
+  width: 36px;
+  height: 2px;
+  background: #1A1B1F;
+  border-radius: 20%;
+  position: relative;
+  top: -5px;
+}
+
 .phone_butn {
   display: flex;
   justify-content: flex-end;
@@ -47,6 +76,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 60%;
+  z-index: 3;
 }
 .phone_butn .phone {
   background: #9C7CF1 url(../../images/phone_butn.svg) no-repeat;
@@ -77,6 +107,73 @@ body {
   position: absolute;
   top: 30%;
   right: 6%;
+}
+
+.modal {
+  height: auto;
+  width: auto;
+  background-color: rgba(26, 27, 31, 0.2);
+  position: fixed;
+  top: 10vh;
+  left: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  z-index: 2;
+}
+.modal__content {
+  background: #1A1B1F;
+  border-radius: 40px;
+}
+.modal__content .form {
+  grid-template-columns: 605px 455px;
+  padding: 40px 40px 100px 80px;
+}
+.modal__content .form__block .form_block_text {
+  font-size: 16px;
+}
+.modal__content .form__block .form_block_text .form_block_gif {
+  margin-left: 30px;
+}
+.modal__content .form__block .form_block_modal_button {
+  width: 34px;
+  height: 2px;
+  background: #FFFFFF;
+  border-radius: 100px;
+  transform: rotate(45deg);
+  margin-top: 12px;
+}
+.modal__content .form__block .form_block_modal_button::after {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  height: 2px;
+  background: #FFFFFF;
+  border-radius: 100px;
+  transform: rotate(90deg);
+  position: relative;
+  top: -15px;
+}
+.form_block_modal_button:hover{
+  cursor: pointer;
+}
+.modal__content .form__block:first-child {
+  margin-top: 40px;
+}
+.modal__content .form__block:last-child {
+  display: flex;
+  justify-content: end;
+}
+.out_modal_space{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero {
@@ -670,7 +767,7 @@ body {
 }
 
 .swiper .swiper-slide {
-  width: 350px;
+  width: 347px;
 }
 
 .header_circle {
