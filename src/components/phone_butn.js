@@ -11,9 +11,8 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const PhoneButn = ({onClick}) => (
-  <div className="phone_butn"
-    onClick={onClick}>
-    <div className="phone"></div>
+  <div className="phone_butn">
+    <div className="phone" onClick={onClick}></div>
     <span className="phone_icon"></span>
   </div>
 )
