@@ -59,7 +59,7 @@ function Service () {
 
     const result = dataText.map((obj) => {
       return (
-        <div className="services_list_item">
+        <div key={obj.id} className="services_list_item">
           <a href={obj.link}>{obj.name}</a>
         </div>
       )
