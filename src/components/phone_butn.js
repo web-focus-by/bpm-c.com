@@ -10,8 +10,9 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const PhoneButn = ({ siteTitle }) => (
-  <div className="phone_butn">
+const PhoneButn = ({onClick}) => (
+  <div className="phone_butn"
+    onClick={onClick}>
     <div className="phone"></div>
     <span className="phone_icon"></span>
   </div>

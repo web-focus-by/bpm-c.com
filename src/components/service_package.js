@@ -11,7 +11,8 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const ServicePackage = ({ siteTitle }) => (
+const ServicePackage = ({ siteTitle }) => {
+  return (
   <div className="black_bg margin_bottom_240">
     <div className="container">
       <div className="service_package">
@@ -111,7 +112,8 @@ const ServicePackage = ({ siteTitle }) => (
       </div>
     </div>
   </div>
-)
+  );
+}
 
 ServicePackage.propTypes = {
   siteTitle: PropTypes.string,
