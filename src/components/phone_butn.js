@@ -13,7 +13,7 @@ import "../components/styles/media_375.css"
 const PhoneButn = ({onClick}) => (
   <div className="phone_butn">
     <div className="phone" onClick={onClick}></div>
-    <span className="phone_icon"></span>
+    <span className="phone_icon" onClick={onClick}></span>
   </div>
 )
 
