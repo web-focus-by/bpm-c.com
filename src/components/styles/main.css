@@ -770,6 +770,17 @@ body {
   width: 347px;
 }
 
+.header_circle {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle at 280px 280px, #EF92BC, #fff);
+  border-radius: 100%;
+  -webkit-animation: header_circle 20s linear infinite, header_circleleft 20s linear infinite alternate;
+  animation: header_circle 20s linear infinite, header_circleleft 20s linear infinite alternate;
+  z-index: -1;
+}
+
 @-webkit-keyframes header_circle {
   0% {
     bottom: 50%;
