@@ -110,16 +110,15 @@ body {
 }
 
 .modal {
-  height: auto;
-  width: auto;
+  height: 100vh;
+  width: 100vw;
   background-color: rgba(26, 27, 31, 0.2);
   position: fixed;
-  top: 10vh;
-  left: 18%;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 40px;
   z-index: 2;
 }
 .modal__content {
@@ -164,16 +163,6 @@ body {
 .modal__content .form__block:last-child {
   display: flex;
   justify-content: end;
-}
-.out_modal_space{
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero {
