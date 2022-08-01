@@ -15,18 +15,21 @@ import gifKanu from "../images/kanu.gif"
 import gifVlada from "../images/vlada.png"
 
 const Modal = ({onClickClose}) => {
-  const ref = useRef();
+  //const ref = useRef();
+  const refOutside = useRef();
+  const refInside = useRef();
   const clickOut = (e) => {
-    if (ref.current && !ref.current.contains(e.target)) {
-      onClickClose();
-    }
+    if (refOutside && refInside && refOutside.current && refInside.current
+      && refOutside.current.contains(e.target)
+      && !refInside.current.contains(e.target)) {
+          onClickClose()
+        }
   }
  
   return(
     <React.Fragment>
-    <div className="out_modal_space" onClick={clickOut}></div>
-    <div className="modal">
-      <div className="modal__content" ref={ref}>
+    <div className="modal" onClick={clickOut} ref={refOutside}>
+      <div className="modal__content" ref={refInside}>
         <div className="form">
           <div className="form__block">
             <div className="form_block_title title_62">Get in touch</div>
