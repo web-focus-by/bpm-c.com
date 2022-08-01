@@ -171,6 +171,10 @@ body {
   margin-bottom: 20px;
   color: #1A1B1F;
 }
+.hero__title:after {
+  content: url("../../images/yellow_hand.svg");
+  margin-left: 10px;
+}
 .hero__subtitle {
   font-weight: 400;
   font-size: 20px;
@@ -194,9 +198,13 @@ body {
   margin-top: 219px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .it_company__title {
   max-width: 20%;
+}
+.it_company .title_62 {
+  margin-bottom: 0px;
 }
 .it_company__info {
   max-width: 50%;

@@ -38,10 +38,15 @@
 
 
     .title_80{
-        max-width: 560px;
+        max-width: 540px;
     } 
 
     .hero{
+        &__title {
+            &:after{
+                content: "";
+            }
+        }
         &__subtitle{
             font-size: 16px;
             margin-bottom: 34px;
@@ -505,7 +510,7 @@
 
     .title_80{
         font-size: calc(48px + (68 - 48) * ( (100vw - 375px) / ( 768 - 375) ));
-        max-width: 645px;
+        max-width: calc(395px + (540 - 395) * ( (100vw - 530px) / ( 768 - 530) ));
     } 
 
     .container {
@@ -978,6 +983,9 @@
         &__copyright{
             font-size: 16px;
         }
+    }
+    .title_80 {
+        max-width: 310px;
     }
 
 }

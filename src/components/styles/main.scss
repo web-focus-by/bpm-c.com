@@ -188,6 +188,10 @@ body {
         font-size: 80px;
         margin-bottom: 20px;
         color: #1A1B1F;
+        &:after{
+            content: url("../../images/yellow_hand.svg");
+            margin-left: 10px;
+        }
     }
 
     &__subtitle {
@@ -218,9 +222,14 @@ body {
     margin-top: 219px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     &__title {
         max-width: 20%;
+    }
+    .title_62{
+        margin-bottom: 0px;
+
     }
 
     &__info {

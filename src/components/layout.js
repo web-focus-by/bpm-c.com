@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Hero></Hero>
       <PhoneButn setActive={setModalActive}></PhoneButn>
-      <Modal active={modalActive}></Modal>
+      {/* <Modal active={modalActive}></Modal> */}
       <ITCompany></ITCompany>
       <Portfolio></Portfolio>
       <Form></Form>

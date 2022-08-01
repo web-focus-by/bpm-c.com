@@ -28,7 +28,10 @@
     display: inline-block;
   }
   .title_80 {
-    max-width: 560px;
+    max-width: 540px;
+  }
+  .hero__title:after {
+    content: "";
   }
   .hero__subtitle {
     font-size: 16px;
@@ -387,7 +390,7 @@
   }
   .title_80 {
     font-size: calc(48px + 20 * (100vw - 375px) / 393);
-    max-width: 645px;
+    max-width: calc(395px + 145 * (100vw - 530px) / 238);
   }
   .container {
     padding-left: calc(16px + 24 * (100vw - 375px) / 393);
@@ -701,6 +704,9 @@
   }
   .footer__copyright {
     font-size: 16px;
+  }
+  .title_80 {
+    max-width: 310px;
   }
 }
 @media (min-width: 320px) and (max-width: 530px) {
