@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Acrom-medium";
+  src: local("Acrom Medium"), local("Acrom-Medium"), url("/public/fonts/Acrom-Medium.woff2") format("woff2"), url("/public/fonts/Acrom-Bold.woff") format("woff"), url("/public/fonts/Acrom-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Acrom-bold";
+  src: local("Acrom Bold"), local("Acrom-Bold"), url("/public/fonts/Acrom-Bold.woff2") format("woff2"), url("/public/fonts/Acrom-Bold.woff") format("woff"), url("/public/fonts/Acrom-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Acrom-regular";
+  src: local("Acrom"), local("Acrom-Regular"), url("/public/fonts/Acrom-Regular.woff2") format("woff2"), url("/public/fonts/Acrom-Regular.woff") format("woff"), url("/public/fonts/Acrom-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "Acrom", sans-serif;
   line-height: 150%;
@@ -71,16 +89,20 @@ body {
 }
 
 .phone_butn {
-  display: flex;
-  justify-content: flex-end;
+  float: right;
   padding-right: 60px;
   position: -webkit-sticky;
   position: sticky;
   top: 60%;
   z-index: 2;
+  cursor: pointer;
+}
+.phone_butn:hover .phone {
+  background: url(../../images/phone_butn_active.svg) no-repeat;
+  -webkit-animation: 0s linear 0s normal none infinite running rot;
 }
 .phone_butn .phone {
-  background: #9C7CF1 url(../../images/phone_butn.svg) no-repeat;
+  background: url(../../images/phone_butn.svg) no-repeat;
   background-position: 50%;
   border-radius: 50%;
   width: 160px;
@@ -106,8 +128,8 @@ body {
 }
 .phone_butn span {
   position: absolute;
-  top: 30%;
-  right: 6%;
+  top: 32%;
+  right: 50%;
 }
 
 .modal {
@@ -189,13 +211,14 @@ body {
   font-size: 16px;
   line-height: 100%;
   color: #1A1B1F;
+  cursor: pointer;
 }
 .hero__butn .button_white span {
   margin-left: 14px;
 }
 
 .it_company {
-  margin-top: 219px;
+  margin-top: 308px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -330,6 +353,7 @@ body {
 }
 .form__block .form_block_wrapper form .form_block_send .button_black {
   padding: 22px 40px;
+  cursor: pointer;
 }
 .form__block .form_block_wrapper form .form_block_send .button_black span {
   margin-left: 14px;
@@ -381,6 +405,7 @@ body {
   grid-template-columns: repeat(6, 1fr);
   justify-content: space-between;
   grid-row-gap: 34px;
+  margin-left: -65px;
 }
 .technologies__list .technologies_list_item {
   text-align: center;

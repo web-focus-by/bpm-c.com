@@ -20,6 +20,10 @@
         margin-bottom: 80px;
        }
 
+       .it_company{
+        margin-top: 180px;
+    }
+
        .portfolio{
         &__products{
             grid-template-columns: 1fr;
@@ -221,7 +225,6 @@
             }
         }
 
-        
         .modal{
             &__content{
                 border-radius: 0px;
@@ -239,6 +242,13 @@
                         }
                     }
                 }
+            }
+        }
+
+        .technologies{
+            &__list{
+                margin-left: -29px;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 

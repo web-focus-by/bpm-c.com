@@ -13,12 +13,12 @@
         .phone{
             width: 114px;
             height: 114px;
-            background-size: cover;
+            background-size: contain !important;
         }
         span{
             width: 38px;
             height: 38px;
-            background-size: cover;
+            background-size: contain;
             right: 78px;
         }
     }
@@ -41,7 +41,7 @@
     }
 
     .it_company{
-        margin-top: 110px;
+        margin-top: 219px;
     }
 
     .hash{
@@ -286,6 +286,7 @@
         .technologies{
             &__list{
                 grid-row-gap :25px;
+                margin-left: -46px;
             }
         }
 
@@ -687,6 +688,12 @@
 
     .leaders_choice_tagline{
         margin: calc(178px + (230 - 178  ) * ( (100vw - 1024px) / (  1366 - 1024) )) 0px ;
+    }
+
+    .technologies{
+        &__list{
+            margin-left: calc(-35px + (-46 + 35) * ( (100vw - 1024px) / (  1366 - 1024) ));
+        }
     }
 
 

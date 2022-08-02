@@ -83,6 +83,9 @@
   .margin_bottom_240 {
     margin-bottom: calc(100px + 20 * (100vw - 768px) / 256);
   }
+  .it_company {
+    margin-top: calc(280px + -61 * (100vw - 768px) / 256);
+  }
   .header__nav .logo {
     width: calc(110px + -10 * (100vw - 768px) / 256);
     height: calc(36px + -4 * (100vw - 768px) / 256);
@@ -94,19 +97,22 @@
   .phone_butn .phone {
     width: calc(140px + -26 * (100vw - 768px) / 256);
     height: calc(140px + -26 * (100vw - 768px) / 256);
-    background-size: cover;
+    background-size: contain !important;
   }
   .phone_butn span {
     width: calc(47px + -9 * (100vw - 768px) / 256);
     height: calc(47px + -9 * (100vw - 768px) / 256);
     right: calc(85px + -7 * (100vw - 768px) / 256);
-    background-size: cover;
+    background-size: contain;
   }
   .form .form_block_wrapper form .form_block_send p {
     max-width: calc(250px + -72 * (100vw - 768px) / 256);
   }
   .form__block .form_block_text .form_block_gif {
     margin-left: calc(30px + 20 * (100vw - 768px) / 132);
+  }
+  .technologies__list {
+    margin-left: -35px;
   }
   .technologies__list .technologies_list_item p {
     font-size: calc(16px + -3 * (100vw - 768px) / 256);

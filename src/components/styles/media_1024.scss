@@ -24,6 +24,7 @@
         }
     }
 
+
     .portfolio{
         &__products{
             grid-column-gap: 2%;
@@ -143,6 +144,10 @@
         margin-bottom: calc(100px + (120 - 100) * ( (100vw - 768px) / ( 1024 - 768) ));
        }
 
+       .it_company{
+        margin-top: calc(280px + (219 - 280) * ( (100vw - 768px) / ( 1024 - 768) ));
+    }
+
        .header{
         &__nav{
             .logo{
@@ -158,13 +163,13 @@
         .phone{
             width: calc(140px + (114 - 140) * ( (100vw - 768px) / ( 1024 - 768) ));
             height: calc(140px + (114 - 140) * ( (100vw - 768px) / ( 1024 - 768) ));
-            background-size: cover;
+            background-size: contain !important; 
         }
         span{
             width: calc(47px + (38 - 47) * ( (100vw - 768px) / ( 1024 - 768) ));
             height: calc(47px + (38 - 47) * ( (100vw - 768px) / ( 1024 - 768) ));
             right: calc(85px + (78 - 85) * ( (100vw - 768px) / ( 1024 - 768) ));
-            background-size: cover;
+            background-size: contain;
         }
     }
     
@@ -190,6 +195,7 @@
 
     .technologies{
         &__list{
+            margin-left: -35px;
             .technologies_list_item{
                 p{
                     font-size: calc(16px + (13 - 16) * ( (100vw - 768px) / ( 1024 - 768) ));

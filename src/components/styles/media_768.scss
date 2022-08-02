@@ -16,18 +16,29 @@
         }
     }
 
+    .it_company{
+        margin-top: 280px;
+    }
+
     .phone_butn{
         padding-right: 40px;
         .phone{
             width: 140px;
             height: 140px;
-            background-size: cover;
+            background-size: contain !important;
         }
         span{
             width: 47px;
             height: 47px;
             right: 85px;
-            background-size: cover;
+            background-size: contain;
+        }
+        &:hover{
+            .phone{
+            width: 140px;
+            height: 140px;
+            background-size: contain !important;
+            }
         }
     }
 
@@ -510,7 +521,7 @@
 
     .title_80{
         font-size: calc(48px + (68 - 48) * ( (100vw - 375px) / ( 768 - 375) ));
-        max-width: calc(395px + (540 - 395) * ( (100vw - 530px) / ( 768 - 530) ));
+        max-width: calc(400px + (540 - 400) * ( (100vw - 530px) / ( 768 - 530) ));
     } 
 
     .container {
@@ -523,6 +534,10 @@
         span{
             right: calc(63px + (85 - 63) * ( (100vw - 375px) / (768 - 375) ));
         }
+    }
+
+    .it_company{
+        margin-top: calc(180px + (280 - 180) * ( (100vw - 375px) / ( 768 - 375) ));
     }
 
     .hero{
@@ -798,9 +813,13 @@
             }
         }
 
+        .technologies{
+            &__list{
+                margin-left: calc(-29px + (-35 + 29  ) * ( (100vw - 375px) / ( 768 - 375) ));
+            }
+        }
+
     }
-
-
 
 @media (max-width: 600px) {
     .it_company{
@@ -847,6 +866,14 @@
         }
     }
 
+}
+
+@media (min-width: 530px) and (max-width: 768px) {
+    .technologies{
+        &__list{
+            margin-left: calc(-3px + (-29 + 3  ) * ( (100vw - 531px) / ( 768 - 531) ));
+        }
+    }
 }
 
 @media (max-width: 530px) {
@@ -984,8 +1011,18 @@
             font-size: 16px;
         }
     }
-    .title_80 {
-        max-width: 310px;
+
+    .title_80{
+        font-size: 46px;
+        max-width: 360px;
+    } 
+
+    .technologies{
+        &__list{
+            margin-left: -3px;
+            grid-template-columns: repeat(3, 1fr);
+            margin-left: -33px;
+        }
     }
 
 }
@@ -1029,4 +1066,16 @@
             font-size: calc(15px + (16 - 15 ) * ( (100vw - 320px) / ( 530 - 320) ));
         }
     }
+
+    .title_80{
+        max-width: calc(303px + (360 - 303 ) * ( (100vw - 414px) / ( 460 - 414) ));
+    } 
+
+    .technologies{
+        &__list{
+            margin-left: calc(-8px + (-33 + 8 ) * ( (100vw - 376px) / ( 530 - 376) ));
+        }
+    }
 }
+
+

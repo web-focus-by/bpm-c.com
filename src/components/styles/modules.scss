@@ -1,7 +1,7 @@
 .button_white {
     border: 1px solid #1A1B1F;
     border-radius: 80px;
-    background: #fff;
+    background: transparent;
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
@@ -65,6 +65,7 @@
 
         .hash_list_block {
             display: inline-block;
+
             a {
                 font-weight: 400;
                 font-size: 14px;
@@ -74,6 +75,7 @@
                 border: 1px solid #1A1B1F;
                 border-radius: 80px;
                 padding: 8px 14px;
+                background: transparent;
             }
             &:hover{
                 a{

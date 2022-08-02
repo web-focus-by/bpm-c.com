@@ -11,12 +11,12 @@
   .phone_butn .phone {
     width: 114px;
     height: 114px;
-    background-size: cover;
+    background-size: contain !important;
   }
   .phone_butn span {
     width: 38px;
     height: 38px;
-    background-size: cover;
+    background-size: contain;
     right: 78px;
   }
   .hero__title {
@@ -31,7 +31,7 @@
     font-size: 11px;
   }
   .it_company {
-    margin-top: 110px;
+    margin-top: 219px;
   }
   .hash__list .hash_list_block {
     margin-right: 14px;
@@ -216,6 +216,7 @@
   }
   .technologies__list {
     grid-row-gap: 25px;
+    margin-left: -46px;
   }
   .bpm_cloud__info .bpm_cloud_block .bpm_cloud_block_title {
     font-size: 21px;
@@ -487,5 +488,8 @@
   }
   .leaders_choice_tagline {
     margin: calc(178px + 52 * (100vw - 1024px) / 342) 0px;
+  }
+  .technologies__list {
+    margin-left: calc(-35px + -11 * (100vw - 1024px) / 342);
   }
 }

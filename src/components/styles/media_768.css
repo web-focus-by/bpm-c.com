@@ -10,19 +10,27 @@
   .header__nav .header_nav_list {
     display: none;
   }
+  .it_company {
+    margin-top: 280px;
+  }
   .phone_butn {
     padding-right: 40px;
   }
   .phone_butn .phone {
     width: 140px;
     height: 140px;
-    background-size: cover;
+    background-size: contain !important;
   }
   .phone_butn span {
     width: 47px;
     height: 47px;
     right: 85px;
-    background-size: cover;
+    background-size: contain;
+  }
+  .phone_butn:hover .phone {
+    width: 140px;
+    height: 140px;
+    background-size: contain !important;
   }
   .burger {
     display: inline-block;
@@ -390,7 +398,7 @@
   }
   .title_80 {
     font-size: calc(48px + 20 * (100vw - 375px) / 393);
-    max-width: calc(395px + 145 * (100vw - 530px) / 238);
+    max-width: calc(400px + 140 * (100vw - 530px) / 238);
   }
   .container {
     padding-left: calc(16px + 24 * (100vw - 375px) / 393);
@@ -401,6 +409,9 @@
   }
   .phone_butn span {
     right: calc(63px + 22 * (100vw - 375px) / 393);
+  }
+  .it_company {
+    margin-top: calc(180px + 100 * (100vw - 375px) / 393);
   }
   .hero {
     margin-top: calc(48px + 112 * (100vw - 375px) / 393);
@@ -577,6 +588,9 @@
   .modal__content .form__block .form_block_text .form_block_gif {
     margin-left: 0px;
   }
+  .technologies__list {
+    margin-left: calc(-29px + -6 * (100vw - 375px) / 393);
+  }
 }
 @media (max-width: 600px) {
   .it_company {
@@ -608,6 +622,11 @@
   }
   .leaders_choice_tagline__block .leaders_choice_tagline_block_title {
     margin-bottom: 12px;
+  }
+}
+@media (min-width: 530px) and (max-width: 768px) {
+  .technologies__list {
+    margin-left: calc(-3px + -26 * (100vw - 531px) / 237);
   }
 }
 @media (max-width: 530px) {
@@ -706,7 +725,13 @@
     font-size: 16px;
   }
   .title_80 {
-    max-width: 310px;
+    font-size: 46px;
+    max-width: 360px;
+  }
+  .technologies__list {
+    margin-left: -3px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: -33px;
   }
 }
 @media (min-width: 320px) and (max-width: 530px) {
@@ -731,5 +756,11 @@
   }
   .footer__copyright {
     font-size: calc(15px + 1 * (100vw - 320px) / 210);
+  }
+  .title_80 {
+    max-width: calc(303px + 57 * (100vw - 414px) / 46);
+  }
+  .technologies__list {
+    margin-left: calc(-8px + -25 * (100vw - 376px) / 154);
   }
 }
