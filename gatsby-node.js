@@ -1,27 +1,21 @@
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/node-apis/
+ */
+
+// You can delete this file if you're not using it
 const path = require(`path`)
 const { slash } = require(`gatsby-core-utils`)
 
-
-
-
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-
+    // The “graphql” function allows us to run arbitrary
+  // queries against the local Gatsby GraphQL schema. Think of
+  // it like the site has a built-in database constructed
+  // from the fetched data that you can run queries against.
   const result = await graphql(`
     allWpPage {
-      edges {
-        node {
-          id
-          status
-          uri
-          template {
-            templateName
-          }
-          content
-        }
-      }
-    }
-    allWpPost {
       edges {
         node {
           id
