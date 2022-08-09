@@ -768,13 +768,12 @@ body {
   left: 1153.41px;
   top: 188px;
   /* Yellow gradient desktop */
+  border-radius: 100%;
   animation: header_circle_yellow 10s linear infinite, header_circle_yellowleft 6s linear infinite alternate;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
+  background: radial-gradient(50% 50% at 50% 50%,
   rgba(255, 215, 113, 0.8) 0%,
-  rgba(255, 215, 113, 0.464) 100%
-  );
-  filter: blur(200px);
+  rgba(255, 215, 113, 0.464) 100%);
+  filter: blur(80px);
   z-index: -1;
 }
 @keyframes header_circle_yellow {
@@ -809,6 +808,7 @@ body {
   height: 534.48px;
   left: 935.33px;
   top: 294.21px;
+  border-radius: 100%;
   animation: header_circle_pink 8s linear infinite, header_circle_pinkleft 6s linear infinite alternate;
   /* Pink gradient desktop */
   background: radial-gradient(
@@ -816,7 +816,7 @@ body {
   rgba(243, 159, 191, 0.8) 0%,
   rgba(243, 159, 191, 0.8) 100%
   );
-  filter: blur(200px);
+  filter: blur(80px);
   z-index: -1;
 }
 @keyframes header_circle_pink {
@@ -851,16 +851,15 @@ body {
   height: 534.48px;
   left: 915px;
   top: 50px;
+  border-radius: 100%;
   animation: header_circle_purple 8s linear infinite, header_circle_purpleright 6s linear infinite alternate;
   /* Purple gradient desktop */
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-   rgba(143, 114, 226, 0.6) 0%,
-   rgba(135, 130, 224, 0.6) 0%,
-   rgba(144, 139, 237, 0.6) 0.01%,
-   rgba(143, 114, 226, 0.48) 100%
-   );
-  filter: blur(200px);
+  background: radial-gradient(50% 50% at 50% 50%,
+  rgba(143, 114, 226, 0.6) 0%,
+  rgba(135, 130, 224, 0.6) 0%,
+  rgba(144, 139, 237, 0.6) 0.01%,
+  rgba(143, 114, 226, 0.48) 100%);
+  filter: blur(80px);
   z-index: -1;
 }
 @keyframes header_circle_purple {
