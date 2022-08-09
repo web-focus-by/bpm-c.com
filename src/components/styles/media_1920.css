@@ -108,7 +108,8 @@
   .form__block .form_block_wrapper form .form_line-wrapper:nth-child(2) {
     margin-bottom: calc(30px + 48 * (100vw - 1366px) / 554);
   }
-  .form__block .form_block_wrapper form input:focus ~ label, .form__block .form_block_wrapper form input:valid ~ label {
+  .form__block .form_block_wrapper form input:focus ~ label,
+.form__block .form_block_wrapper form input:valid ~ label {
     top: calc(-20px + -20 * (100vw - 1366px) / 554);
   }
   .form__block .form_block_wrapper form input {
@@ -428,4 +429,4 @@
     padding: calc(30px + 10 * (100vw - 768px) / 1152) calc(30px + 10 * (100vw - 768px) / 1152) calc(60px + 40 * (100vw - 768px) / 1152) calc(60px + 20 * (100vw - 768px) / 1152);
     grid-template-columns: calc(575px + 30 * (100vw - 768px) / 1152) calc(35px + 420 * (100vw - 768px) / 1152);
   }
-}
+}/*# sourceMappingURL=media_1920.css.map */

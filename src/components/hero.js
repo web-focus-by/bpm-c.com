@@ -16,7 +16,7 @@ const Hero = ({ siteTitle, data }) => {
     <div className="container">
       <div className="hero">
         <div className="hero__title title_80">
-          «BPM CLOUD» an IT company that clearly knows
+          «BPM CLOUD» an IT company that clearly knows<span className="yellow_hand"></span>
         </div>
         <div className="hero__subtitle">
           We know all about art of creating effective websites, using both classic
@@ -28,9 +28,9 @@ const Hero = ({ siteTitle, data }) => {
           </button>
         </div>
       </div>
-      <div className="header_circle_yellow"></div>
+      {/* <div className="header_circle_yellow"></div>
       <div className="header_circle_pink"></div>
-      <div className="header_circle_purple"></div>
+      <div className="header_circle_purple"></div> */}
     </div>
   );
 }

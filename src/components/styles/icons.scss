@@ -1,26 +1,33 @@
-
-.logo{
+.logo {
     display: inline-block;
     background: url(../../images/logo.svg);
     width: 142px;
     height: 46px;
 }
 
-.arrow_black{
+.yellow_hand {
+    display: inline-block;
+    background: url(../../images/yellow_hand.svg) no-repeat;
+    width: 47px;
+    height: 47px;
+    margin-left: 10px;
+}
+
+.arrow_black {
     display: inline-block;
     background: url(../../images/arrow_black.svg) no-repeat;
     width: 19px;
     height: 9px;
 }
 
-.arrow_white{
+.arrow_white {
     display: inline-block;
     background: url(../../images/arrow_white.svg) no-repeat;
     width: 19px;
     height: 9px;
 }
 
-.react{
+.react {
     display: inline-block;
     background: url(../../images/react.svg) no-repeat;
     width: 86px;
@@ -28,7 +35,7 @@
     background-size: contain;
 }
 
-.java{
+.java {
     display: inline-block;
     background: url(../../images/java.svg) no-repeat;
     width: 118px;
@@ -36,7 +43,7 @@
     background-size: contain;
 }
 
-.python{
+.python {
     display: inline-block;
     background: url(../../images/python.svg) no-repeat;
     width: 75px;
@@ -44,7 +51,7 @@
     background-size: contain;
 }
 
-.php{
+.php {
     display: inline-block;
     background: url(../../images/php.svg) no-repeat;
     width: 155px;
@@ -52,7 +59,7 @@
     background-size: contain;
 }
 
-.golang{
+.golang {
     display: inline-block;
     background: url(../../images/golang.svg) no-repeat;
     width: 148px;
@@ -60,7 +67,7 @@
     background-size: contain;
 }
 
-.c_plus{
+.c_plus {
     display: inline-block;
     background: url(../../images/c++.svg) no-repeat;
     width: 69px;
@@ -68,7 +75,7 @@
     background-size: contain;
 }
 
-.node{
+.node {
     display: inline-block;
     background: url(../../images/node.svg) no-repeat;
     width: 123px;
@@ -76,7 +83,7 @@
     background-size: contain;
 }
 
-.js{
+.js {
     display: inline-block;
     background: url(../../images/js.svg) no-repeat;
     width: 67px;
@@ -84,7 +91,7 @@
     background-size: contain;
 }
 
-.ts{
+.ts {
     display: inline-block;
     background: url(../../images/ts.svg) no-repeat;
     width: 69px;
@@ -92,7 +99,7 @@
     background-size: contain;
 }
 
-.vue{
+.vue {
     display: inline-block;
     background: url(../../images/vue.svg) no-repeat;
     width: 78px;
@@ -100,7 +107,7 @@
     background-size: contain;
 }
 
-.net{
+.net {
     display: inline-block;
     background: url(../../images/net.svg) no-repeat;
     width: 76px;
@@ -108,7 +115,7 @@
     background-size: contain;
 }
 
-.symfony{
+.symfony {
     display: inline-block;
     background: url(../../images/symfony.svg) no-repeat;
     width: 75px;
@@ -116,7 +123,7 @@
     background-size: contain;
 }
 
-.laravel{
+.laravel {
     display: inline-block;
     background: url(../../images/laravel.svg) no-repeat;
     width: 71px;
@@ -124,7 +131,7 @@
     background-size: contain;
 }
 
-.yii{
+.yii {
     display: inline-block;
     background: url(../../images/yii.svg) no-repeat;
     width: 73px;
@@ -132,7 +139,7 @@
     background-size: contain;
 }
 
-.next{
+.next {
     display: inline-block;
     background: url(../../images/next.svg) no-repeat;
     width: 117px;
@@ -140,7 +147,7 @@
     background-size: contain;
 }
 
-.gatsby{
+.gatsby {
     display: inline-block;
     background: url(../../images/gatsby.svg) no-repeat;
     width: 74px;
@@ -148,7 +155,7 @@
     background-size: contain;
 }
 
-.kotlin{
+.kotlin {
     display: inline-block;
     background: url(../../images/kotlin.svg) no-repeat;
     width: 68px;
@@ -156,7 +163,7 @@
     background-size: contain;
 }
 
-.swift{
+.swift {
     display: inline-block;
     background: url(../../images/swift.svg) no-repeat;
     width: 68px;
@@ -164,111 +171,113 @@
     background-size: contain;
 }
 
-    .puzzle{
-        display: inline-block;
-        width: 23px;
-        height: 23px;
-        background: url(../../images/puzzle.svg) no-repeat;
+.puzzle {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url(../../images/puzzle.svg) no-repeat;
+}
+
+.pen {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url(../../images/pen.svg) no-repeat;
+}
+
+.dye {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url(../../images/dye.svg) no-repeat;
+}
+
+.front {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url(../../images/front.svg) no-repeat;
+}
+
+.back {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url(../../images/back.svg) no-repeat;
+}
+
+.testing {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url(../../images/testing.svg) no-repeat;
+}
+
+.star {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url(../../images/star.svg) no-repeat;
+}
+
+.insta {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url(../../images/insta.svg) no-repeat;
+
+    &:hover {
+        background: url(../../images/insta_hover.svg) no-repeat;
     }
-    
-    .pen{
-        display: inline-block;
-        width: 23px;
-        height: 23px;
-        background: url(../../images/pen.svg) no-repeat;
+}
+
+.facebook {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url(../../images/facebook.svg) no-repeat;
+
+    &:hover {
+        background: url(../../images/facebook_hover.svg) no-repeat;
     }
+}
 
-    .dye{
-        display: inline-block;
-        width: 23px;
-        height: 23px;
-        background: url(../../images/dye.svg) no-repeat;
+.vk {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url(../../images/vk.svg) no-repeat;
+
+    &:hover {
+        background: url(../../images/vk_hover.svg) no-repeat;
     }
+}
 
-    .front{
-        display: inline-block;
-        width: 23px;
-        height: 23px;
-        background: url(../../images/front.svg) no-repeat;
+.link {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url(../../images/link.svg) no-repeat;
+
+    &:hover {
+        background: url(../../images/link_hover.svg) no-repeat;
     }
+}
 
-    .back{
-        display: inline-block;
-        width: 23px;
-        height: 23px;
-        background: url(../../images/back.svg) no-repeat;
+.behance {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url(../../images/behance.svg) no-repeat;
+
+    &:hover {
+        background: url(../../images/behance_hover.svg) no-repeat;
     }
+}
 
-    .testing{
-        display: inline-block;
-        width: 23px;
-        height: 23px;
-        background: url(../../images/testing.svg) no-repeat;
-    }
-
-    .star{
-        display: inline-block;
-        width: 23px;
-        height: 23px;
-        background: url(../../images/star.svg) no-repeat;
-    }
-
-    .insta{
-        display: inline-block;
-        width: 36px;
-        height: 36px;
-        background: url(../../images/insta.svg) no-repeat; 
-        &:hover{
-            background: url(../../images/insta_hover.svg) no-repeat; 
-        }
-    }
-
-    .facebook{
-        display: inline-block;
-        width: 36px;
-        height: 36px;
-        background: url(../../images/facebook.svg) no-repeat; 
-        &:hover{
-            background: url(../../images/facebook_hover.svg) no-repeat; 
-        }
-    }
-
-    .vk{
-        display: inline-block;
-        width: 36px;
-        height: 36px;
-        background: url(../../images/vk.svg) no-repeat; 
-        &:hover{
-            background: url(../../images/vk_hover.svg) no-repeat; 
-        }
-    }
-
-    .link{
-        display: inline-block;
-        width: 36px;
-        height: 36px;
-        background: url(../../images/link.svg) no-repeat; 
-        &:hover{
-            background: url(../../images/link_hover.svg) no-repeat; 
-        }
-    }
-
-    .behance{
-        display: inline-block;
-        width: 36px;
-        height: 36px;
-        background: url(../../images/behance.svg) no-repeat; 
-        &:hover{
-            background: url(../../images/behance_hover.svg) no-repeat; 
-        }
-    }
-
-    .phone_icon{
-        display: inline-block;
-        width: 53px;
-        height: 53px;
-        background: url(../../images/phone_icon.svg) no-repeat;
-    }
-
-
-
+.phone_icon {
+    display: inline-block;
+    width: 53px;
+    height: 53px;
+    background: url(../../images/phone_icon.svg) no-repeat;
+}

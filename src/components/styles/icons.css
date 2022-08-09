@@ -5,6 +5,14 @@
   height: 46px;
 }
 
+.yellow_hand {
+  display: inline-block;
+  background: url(../../images/yellow_hand.svg) no-repeat;
+  width: 47px;
+  height: 47px;
+  margin-left: 10px;
+}
+
 .arrow_black {
   display: inline-block;
   background: url(../../images/arrow_black.svg) no-repeat;
@@ -267,4 +275,4 @@
   width: 53px;
   height: 53px;
   background: url(../../images/phone_icon.svg) no-repeat;
-}
+}/*# sourceMappingURL=icons.css.map */
