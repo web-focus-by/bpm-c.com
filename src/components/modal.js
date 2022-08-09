@@ -2,7 +2,6 @@ import * as React from "react"
 import { useRef, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { useState } from "react"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/mixins.css"
@@ -14,16 +13,6 @@ import "../components/styles/media_375.css"
 import gifUriy from "../images/uriy.gif"
 import gifKanu from "../images/kanu.gif"
 import gifVlada from "../images/vlada.png"
-
-<<<<<<< HEAD
-const Modal = ({ active, setActive }) => (
-  <div className="modal">
-    <div
-      className={active ? "modal active" : "modal"}
-      onClick={() => setActive(false)}
-    >
-      <div className="modal__content" onClick={e => e.stopPropagation()}>
-=======
 const Modal = ({onClickClose}) => {
   //const ref = useRef();
   const refOutside = useRef();
@@ -35,12 +24,10 @@ const Modal = ({onClickClose}) => {
           onClickClose()
         }
   }
- 
   return(
     <React.Fragment>
     <div className="modal" onClick={clickOut} ref={refOutside}>
       <div className="modal__content" ref={refInside}>
->>>>>>> 8f2cb5d0448c5b08625348627e08873b5a7c10bb
         <div className="form">
           <div className="form__block">
             <div className="form_block_title title_62">Get in touch</div>
@@ -106,13 +93,10 @@ const Modal = ({onClickClose}) => {
     </div>
     </React.Fragment>
 )}
-
 Modal.propTypes = {
   siteTitle: PropTypes.string,
 }
-
 Modal.defaultProps = {
   siteTitle: ``,
 }
-
 export default Modal
