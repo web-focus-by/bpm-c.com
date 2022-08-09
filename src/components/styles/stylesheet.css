@@ -22,44 +22,44 @@
 
 @font-face {
   font-family: 'Acrom';
-  src: url('../../../Acrom-Light.eot');
+  src: url('../../../fonts/Acrom-Light.eot');
   src: local('Acrom Light'), local('Acrom-Light'),
-	url('../../../Acrom-Light.eot?#iefix') format('embedded-opentype'),
-	url('../../../Acrom-Light.woff') format('woff'),
-    url('../../../Acrom-Light.ttf') format('truetype');
+	url('../../../fonts/Acrom-Light.eot?#iefix') format('embedded-opentype'),
+	url('../../../fonts/Acrom-Light.woff') format('woff'),
+    url('../../../fonts/Acrom-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
 font-family: 'Acrom';
-  src: url('../../../Acrom-Thin.eot');
+  src: url('../../../fonts/Acrom-Thin.eot');
   src: local('Acrom Thin'), local('Acrom-Thin'),
-    url('../../../Acrom-Thin.eot?#iefix') format('embedded-opentype'),
-    url('../../../Acrom-Thin.woff') format('woff'),
-    url('../../../Acrom-Thin.ttf') format('truetype');
+    url('../../../fonts/Acrom-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../../../fonts/Acrom-Thin.woff') format('woff'),
+    url('../../../fonts/Acrom-Thin.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Acrom';
-  src: url('../../../Acrom-Bold.eot');
+  src: url('../../../fonts/Acrom-Bold.eot');
   src: local('Acrom Bold'), local('Acrom-Bold'),
-    url('../../../Acrom-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../../../Acrom-Bold.woff') format('woff'),
-    url('../../../Acrom-Bold.ttf') format('truetype');
+    url('../../../fonts/Acrom-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../../../fonts/Acrom-Bold.woff') format('woff'),
+    url('../../../fonts/Acrom-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Acrom';
-  src: url('../../../Acrom-Regular.eot');
+  src: url('../../../fonts/Acrom-Regular.eot');
   src: local('Acrom Regular'), local('Acrom-Regular'),
-    url('../../../Acrom-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../../../Acrom-Regular.woff') format('woff'),
-    url('../../../Acrom-Regular.ttf') format('truetype');
+    url('../../../fonts/Acrom-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../../../fonts/Acrom-Regular.woff') format('woff'),
+    url('../../../fonts/Acrom-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
