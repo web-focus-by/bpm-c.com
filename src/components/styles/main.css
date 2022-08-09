@@ -1,8 +1,25 @@
-@import url("./stylesheet.css");
-
+@font-face {
+  font-family: "Acrom-medium";
+  src: local("Acrom Medium"), local("Acrom-Medium"), url("/public/fonts/Acrom-Medium.woff2") format("woff2"), url("/public/fonts/Acrom-Bold.woff") format("woff"), url("/public/fonts/Acrom-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Acrom-bold";
+  src: local("Acrom Bold"), local("Acrom-Bold"), url("/public/fonts/Acrom-Bold.woff2") format("woff2"), url("/public/fonts/Acrom-Bold.woff") format("woff"), url("/public/fonts/Acrom-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Acrom-regular";
+  src: local("Acrom"), local("Acrom-Regular"), url("/public/fonts/Acrom-Regular.woff2") format("woff2"), url("/public/fonts/Acrom-Regular.woff") format("woff"), url("/public/fonts/Acrom-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "Acrom", sans-serif;
   line-height: 150%;
+  margin-top: 0px;
 }
 
 .container {
@@ -81,11 +98,9 @@ body {
   z-index: 2;
   cursor: pointer;
 }
-
 .phone_butn:hover .phone {
   background: url(../../images/phone_butn_active.svg) no-repeat;
   -webkit-animation: 0s linear 0s normal none infinite running rot;
-  z-index: 3;
 }
 .phone_butn .phone {
   background: url(../../images/phone_butn.svg) no-repeat;
@@ -96,7 +111,6 @@ body {
   -webkit-animation: 15s linear 0s normal none infinite running rot;
   position: relative;
 }
-
 @keyframes rot {
   0% {
     transform: rotate(0deg);
@@ -129,7 +143,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
 }
 .modal__content {
   background: #1A1B1F;
@@ -163,9 +176,6 @@ body {
   transform: rotate(90deg);
   position: relative;
   top: -15px;
-}
-.form_block_modal_button:hover{
-  cursor: pointer;
 }
 .modal__content .form__block:first-child {
   margin-top: 40px;
@@ -780,132 +790,4 @@ body {
 
 .swiper .swiper-slide {
   width: 347px;
-}
-
-.header_circle_yellow {
-  position: absolute;
-  width: 534.48px;
-  height: 534.48px;
-  left: 1153.41px;
-  top: 188px;
-  /* Yellow gradient desktop */
-  animation: header_circle_yellow 10s linear infinite, header_circle_yellowleft 6s linear infinite alternate;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-  rgba(255, 215, 113, 0.8) 0%,
-  rgba(255, 215, 113, 0.464) 100%
-  );
-  filter: blur(200px);
-  z-index: -1;
-}
-@keyframes header_circle_yellow {
-  0% {
-    bottom: 50%;
-    left: 60%;
-  }
-  50% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    bottom: 10px;
-    width: 534.48px;
-    height: 534.48px;
-  }
-  100% {
-    bottom: 50%;
-    left: 60%;
-  }
-}
-@keyframes header_circle_yellowleft {
-  0% {
-    left: 20%;
-  }
-  100% {
-    left: 60%;
-  }
-}
-
-.header_circle_pink {
-  position: absolute;
-  width: 534.48px;
-  height: 534.48px;
-  left: 935.33px;
-  top: 294.21px;
-  animation: header_circle_pink 8s linear infinite, header_circle_pinkleft 6s linear infinite alternate;
-  /* Pink gradient desktop */
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-  rgba(243, 159, 191, 0.8) 0%,
-  rgba(243, 159, 191, 0.8) 100%
-  );
-  filter: blur(200px);
-  z-index: -1;
-}
-@keyframes header_circle_pink {
-  0% {
-    top: 60%;
-    left: 20%;
-  }
-  50% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    top: 10px;
-    width: 534.48px;
-    height: 534.48px;
-  }
-  100% {
-    top: 60%;
-    left: 20%;
-  }
-}
-@keyframes header_circle_pinkleft {
-  0% {
-    left: 20%;
-  }
-  100% {
-    left: 60%;
-  }
-}
-
-.header_circle_purple {
-  position: absolute;
-  width: 534.48px;
-  height: 534.48px;
-  left: 915px;
-  top: 50px;
-  animation: header_circle_purple 8s linear infinite, header_circle_purpleright 6s linear infinite alternate;
-  /* Purple gradient desktop */
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-   rgba(143, 114, 226, 0.6) 0%,
-   rgba(135, 130, 224, 0.6) 0%,
-   rgba(144, 139, 237, 0.6) 0.01%,
-   rgba(143, 114, 226, 0.48) 100%
-   );
-  filter: blur(200px);
-  z-index: -1;
-}
-@keyframes header_circle_purple {
-  0% {
-    bottom: 80%;
-    right: 50%;
-  }
-  50% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    bottom: 10px;
-    width: 534.48px;
-    height: 534.48px;
-  }
-  100% {
-    bottom: 80%;
-    right: 50%;
-  }
-}
-@keyframes header_circle_purpleright {
-  0% {
-    right: 10%;
-  }
-  100% {
-    right: 50%;
-  }
 }
