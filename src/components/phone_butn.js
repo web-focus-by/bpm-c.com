@@ -10,6 +10,7 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
+<<<<<<< HEAD
 const PhoneButn = ({ setActive }) => {
   return (
     <div className="phone_butn">
@@ -23,6 +24,14 @@ const PhoneButn = ({ setActive }) => {
     </div>
   )
 }
+=======
+const PhoneButn = ({onClick}) => (
+  <div className="phone_butn">
+    <div className="phone" onClick={onClick}></div>
+    <span className="phone_icon" onClick={onClick}></span>
+  </div>
+)
+>>>>>>> 8f2cb5d0448c5b08625348627e08873b5a7c10bb
 
 PhoneButn.propTypes = {
   siteTitle: PropTypes.string,

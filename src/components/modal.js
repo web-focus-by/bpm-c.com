@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useRef, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { useState } from "react"
@@ -14,6 +15,7 @@ import gifUriy from "../images/uriy.gif"
 import gifKanu from "../images/kanu.gif"
 import gifVlada from "../images/vlada.png"
 
+<<<<<<< HEAD
 const Modal = ({ active, setActive }) => (
   <div className="modal">
     <div
@@ -21,6 +23,24 @@ const Modal = ({ active, setActive }) => (
       onClick={() => setActive(false)}
     >
       <div className="modal__content" onClick={e => e.stopPropagation()}>
+=======
+const Modal = ({onClickClose}) => {
+  //const ref = useRef();
+  const refOutside = useRef();
+  const refInside = useRef();
+  const clickOut = (e) => {
+    if (refOutside && refInside && refOutside.current && refInside.current
+      && refOutside.current.contains(e.target)
+      && !refInside.current.contains(e.target)) {
+          onClickClose()
+        }
+  }
+ 
+  return(
+    <React.Fragment>
+    <div className="modal" onClick={clickOut} ref={refOutside}>
+      <div className="modal__content" ref={refInside}>
+>>>>>>> 8f2cb5d0448c5b08625348627e08873b5a7c10bb
         <div className="form">
           <div className="form__block">
             <div className="form_block_title title_62">Get in touch</div>
@@ -41,11 +61,9 @@ const Modal = ({ active, setActive }) => (
                     autoComplete="off"
                     name="user_name"
                     className="form_name input-yellow "
-                    required
-                  />
+                    required />
                   <label>Name*</label>
                 </div>
-
                 <div className="form_line-wrapper">
                   <input
                     type="tel"
@@ -53,11 +71,9 @@ const Modal = ({ active, setActive }) => (
                     autoComplete="off"
                     name="user_phone"
                     className="form-phone input-phone form_phone input-yellow"
-                    required
-                  />
+                    required />
                   <label>Phone*</label>
                 </div>
-
                 <div className="form_line-wrapper">
                   <input
                     type="text"
@@ -65,11 +81,9 @@ const Modal = ({ active, setActive }) => (
                     autoComplete="off"
                     name="user_mail"
                     className="form-mail input-mail form_mail input-yellow"
-                    required
-                  />
+                    required />
                   <label>E-mail</label>
                 </div>
-
                 <div className="form_block_send">
                   <div>
                     <button className="button_black">
@@ -85,13 +99,13 @@ const Modal = ({ active, setActive }) => (
             </div>
           </div>
           <div className="form__block">
-            <div className="form_block_modal_button"></div>
+            <div className="form_block_modal_button" onClick={onClickClose}></div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-)
+    </React.Fragment>
+)}
 
 Modal.propTypes = {
   siteTitle: PropTypes.string,

@@ -28,6 +28,7 @@ import Footer from "./footer"
 import PhoneButn from "./phone_butn"
 import Modal from "./modal"
 import "../components/styles/layout.css"
+import { useState, useRef, useEffect } from "react"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -39,15 +40,29 @@ const Layout = ({ children }) => {
       }
     }
   `)
+<<<<<<< HEAD
 
   const [modalActive, setModalActive] = React.useState(false)
+=======
+  const [isOpen, setModalActive] = useState(false);
+  const toggleModalActive = () => {
+    setModalActive(!isOpen);
+  }
+>>>>>>> 8f2cb5d0448c5b08625348627e08873b5a7c10bb
 
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Hero></Hero>
+<<<<<<< HEAD
       <PhoneButn setActive={setModalActive}></PhoneButn>
       {/* <Modal active={modalActive}></Modal> */}
+=======
+      <PhoneButn onClick={toggleModalActive}></PhoneButn>
+      {isOpen? <Modal
+        onClickClose={toggleModalActive}
+      ></Modal> : null}
+>>>>>>> 8f2cb5d0448c5b08625348627e08873b5a7c10bb
       <ITCompany></ITCompany>
       <Portfolio></Portfolio>
       <Form></Form>

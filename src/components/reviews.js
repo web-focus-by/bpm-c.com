@@ -58,9 +58,9 @@ const Reviews = ({ siteTitle, data }) => {
       date: "12.10.2021",
     },
   ]
-  const result = dataText.map(obj => {
+  const result = dataText.map((obj) => {
     return (
-      <SwiperSlide>
+      <SwiperSlide key={obj.id}>
         <div className="reviews_info_block">
           <div className="reviews_info_block_text">{obj.description}</div>
           <div className="reviews_info_block_name">{obj.signature}</div>
