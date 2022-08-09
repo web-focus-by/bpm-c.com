@@ -85,6 +85,7 @@ body {
     padding-right: 60px;
     position: sticky;
     top: 60%;
+    z-index: 3;
     .phone{
         background: #9C7CF1 url(../../images/phone_butn.svg) no-repeat;
         background-position: 50%;
@@ -93,6 +94,9 @@ body {
         height: 160px;
         -webkit-animation: 15s linear 0s normal none infinite running rot;
         position: relative;
+        &:hover{
+            cursor: pointer;
+        }
 
         @keyframes rot {
             0% {
@@ -115,6 +119,9 @@ body {
         position: absolute;
         top: 30%;
         right: 6%;
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 
@@ -128,6 +135,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 2;
     // transform: scale(0);
     &__content{
         background: #1A1B1F;
@@ -149,6 +157,9 @@ body {
                     border-radius: 100px;
                     transform: rotate(45deg);
                     margin-top: 12px;
+                    &:hover{
+                        cursor: pointer;
+                    }
                     &::after{
                         content: "";
                         display: inline-block;
