@@ -5,7 +5,7 @@
  */
 
 // You can delete this file if you're not using it
-const path = require(`path`)
+/*const path = require(`path`)
 const { slash } = require(`gatsby-core-utils`)
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -64,30 +64,30 @@ exports.createPages = async ({ graphql, actions }) => {
     /*Gatsby uses Redux to manage its internal state.
     Plugins and sites can use functions like "createPage"
     to interact with Gatsby.*/
-    let template
+    /*let template
     switch (edge.node.id) {
       default:
         template = pageTemplate
     }
-    createPage({
+    createPage({*/
       /*Each page is required to have a `path` as well
       as a template component. The `context` is
       optional but is often necessary so the template
       can query data specific to each page.*/
-      path: edge.node.uri,
+      /*path: edge.node.uri,
       component: slash(template),
       context: {
         id: edge.node.id,
       },
     })
-  });
+  });*/
 
   /*We want to create a detailed page for each post node.
   The path field stems from the original WordPress link
   and we use it for the slug to preserve url structure.
   The Post ID is prefixed with 'POST_'*/
 
-  const postTemplate = path.resolve(`./src/templates/post-template/post.js`);
+  /*const postTemplate = path.resolve(`./src/templates/post-template/post.js`);
   allWpPost.edges.forEach(edge => {
     createPage({
       path: edge.node.uri,
@@ -120,6 +120,17 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
   
+  createPage({
+    path: "/using-dsg",
+    component: require.resolve("./src/templates/using-dsg.js"),
+    context: {},
+    defer: true,
+  })
+}*/
+
+
+exports.createPages = async ({ actions }) => {
+  const { createPage } = actions
   createPage({
     path: "/using-dsg",
     component: require.resolve("./src/templates/using-dsg.js"),
