@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Digital agency "BPM-Cloud": website development and promotion`,
+    description: `Full cycle digital agency offers development, design, maintenance and promotion of websites 🏆 We will raise the site to the TOP of search results`,
+    author: `@bpm-cloud.by`,
+    siteUrl: `https://main--wp-bpm-c.netlify.app/`,
   },
   pathPrefix: "/bpm-cloud-new",
   plugins: [
