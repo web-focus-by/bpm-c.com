@@ -52,7 +52,11 @@
   .phone_butn .phone {
     width: calc(114px + 46 * (100vw - 1366px) / 554);
     height: calc(114px + 46 * (100vw - 1366px) / 554);
-    background-size: cover;
+    background-size: contain;
+  }
+  .phone_butn .phone:hover {
+    width: calc(114px + 46 * (100vw - 1366px) / 554);
+    height: calc(114px + 46 * (100vw - 1366px) / 554);
   }
   .phone_butn span {
     width: calc(38px + 15 * (100vw - 1366px) / 554);
@@ -152,9 +156,6 @@
   .services__list .services_list_item a {
     font-size: calc(14px + 6 * (100vw - 1366px) / 554);
   }
-  .services__list .services_list_item:hover {
-    background-position: 70% calc(45px + 35 * (100vw - 1366px) / 554);
-  }
   .react {
     width: calc(61px + 25 * (100vw - 1366px) / 554);
     height: calc(58px + 22 * (100vw - 1366px) / 554);
@@ -229,6 +230,7 @@
   }
   .technologies__list {
     grid-row-gap: calc(25px + 9 * (100vw - 1366px) / 554);
+    margin-left: calc(-47px + -17 * (100vw - 1366px) / 554);
   }
   .bpm_cloud__info .bpm_cloud_block .bpm_cloud_block_title {
     font-size: calc(21px + 9 * (100vw - 1366px) / 554);

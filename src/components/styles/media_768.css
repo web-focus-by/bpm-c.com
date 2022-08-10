@@ -21,6 +21,11 @@
     height: 140px;
     background-size: cover;
   }
+  .phone_butn .phone:hover {
+    width: 140px;
+    height: 140px;
+    background-size: contain;
+  }
   .phone_butn span {
     width: 47px;
     height: 47px;
@@ -64,6 +69,9 @@
   .form .form_block_wrapper form .form_block_send p {
     max-width: 215px;
   }
+  .modal__content .form {
+    grid-template-columns: 575px 35px;
+  }
   .services__list {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
@@ -77,7 +85,12 @@
     font-size: 20px;
   }
   .services__list .services_list_item:hover {
-    background-position: 50% 75px;
+    background: url(../../images/test_768.svg) no-repeat;
+    background-size: contain;
+    background-position-x: 100%;
+  }
+  .technologies__list {
+    margin-left: -30px;
   }
   .technologies__list .technologies_list_item p {
     font-size: 16px;
@@ -364,6 +377,13 @@
   }
 }
 @media (min-width: 375px) and (max-width: 768px) {
+  .modal__content {
+    border-radius: calc(0px + 30 * (100vw - 375px) / 393);
+  }
+  .modal__content .form {
+    padding: calc(18px + 12 * (100vw - 375px) / 393) calc(18px + 12 * (100vw - 375px) / 393) calc(100px + -40 * (100vw - 375px) / 393) calc(16px + 44 * (100vw - 375px) / 393);
+    grid-template-columns: calc(340px + 235 * (100vw - 375px) / 393) calc(0px + 35 * (100vw - 375px) / 393);
+  }
   .it_company {
     margin-top: calc(180px + 100 * (100vw - 375px) / 393);
   }
@@ -400,6 +420,9 @@
     padding: 80px calc(16px + 64 * (100vw - 375px) / 393);
     background-position: calc(15px + 185 * (100vw - 375px) / 393) 120px;
   }
+  .technologies__list {
+    margin-left: calc(0px + -30 * (100vw - 530px) / 238);
+  }
   .services__list {
     grid-column-gap: calc(10px + 10 * (100vw - 375px) / 393);
     grid-row-gap: calc(10px + 10 * (100vw - 375px) / 393);
@@ -413,7 +436,6 @@
   }
   .services__list .services_list_item:hover {
     transform: translateY(calc(-7px + -11 * (100vw - 375px) / 393));
-    background-position: 50% calc(35px + 40 * (100vw - 375px) / 393);
   }
   .bpm_cloud__info .bpm_cloud_block .bpm_cloud_block_title {
     margin-bottom: calc(12px + 4 * (100vw - 375px) / 393);

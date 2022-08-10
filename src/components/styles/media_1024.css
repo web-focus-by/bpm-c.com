@@ -27,6 +27,9 @@
   .form__block .form_block_info {
     max-width: 320px;
   }
+  .technologies__list {
+    margin-left: -33px;
+  }
   .bpm_cloud__info .bpm_cloud_block .bpm_cloud_block_title {
     max-width: 95%;
   }
@@ -45,6 +48,11 @@
   }
   .company_description .title_62 {
     font-size: 42px;
+  }
+  .services__list .services_list_item:hover {
+    background: url(../../images/test_1024.svg) no-repeat;
+    background-size: cover;
+    background-position-x: 100%;
   }
   .service_package__info_list {
     grid-column-gap: 20px;
@@ -100,6 +108,11 @@
     height: calc(140px + -26 * (100vw - 768px) / 256);
     background-size: cover;
   }
+  .phone_butn .phone:hover {
+    width: calc(140px + -26 * (100vw - 768px) / 256);
+    height: calc(140px + -26 * (100vw - 768px) / 256);
+    background-size: cover;
+  }
   .phone_butn span {
     width: calc(47px + -9 * (100vw - 768px) / 256);
     height: calc(47px + -9 * (100vw - 768px) / 256);
@@ -111,6 +124,9 @@
   }
   .form__block .form_block_text .form_block_gif {
     margin-left: calc(30px + 20 * (100vw - 768px) / 132);
+  }
+  .technologies__list {
+    margin-left: calc(-33px + -14 * (100vw - 768px) / 132);
   }
   .technologies__list .technologies_list_item p {
     font-size: calc(16px + -3 * (100vw - 768px) / 256);

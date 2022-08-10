@@ -1,4 +1,5 @@
 @media (max-width: 768px) {
+
     .it_company {
         margin-top: 280px;
     }
@@ -28,6 +29,12 @@
             width: 140px;
             height: 140px;
             background-size: cover;
+
+            &:hover {
+                width: 140px;
+                height: 140px;
+                background-size: contain;
+            }
         }
 
         span {
@@ -110,6 +117,15 @@
         }
     }
 
+    .modal {
+        &__content {
+            .form {
+                grid-template-columns: 575px 35px;
+            }
+        }
+    }
+
+
     .services {
         &__list {
             grid-template-columns: 1fr 1fr;
@@ -125,7 +141,10 @@
                 }
 
                 &:hover {
-                    background-position: 50% 75px;
+                    // background-position: 50% 75px;
+                    background: url(../../images/test_768.svg) no-repeat;
+                    background-size: contain;
+                    background-position-x: 100%;
                 }
             }
         }
@@ -133,6 +152,8 @@
 
     .technologies {
         &__list {
+            margin-left: -30px;
+
             .technologies_list_item {
                 p {
                     font-size: 16px;
@@ -540,6 +561,17 @@
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
+    .modal {
+        &__content {
+            border-radius: calc(0px + (30 - 0) * ((100vw - 375px) / (768 - 375)));
+
+            .form {
+                padding: calc(18px + (30 - 18) * ((100vw - 375px) / (768 - 375))) calc(18px + (30 - 18) * ((100vw - 375px) / (768 - 375))) calc(100px + (60 - 100) * ((100vw - 375px) / (768 - 375))) calc(16px + (60 - 16) * ((100vw - 375px) / (768 - 375)));
+                grid-template-columns: calc(340px + (575 - 340) * ((100vw - 375px) / (768 - 375))) calc(0px + (35 - 0) * ((100vw - 375px) / (768 - 375)));
+            }
+        }
+    }
+
     .it_company {
         margin-top: calc(180px + (280 - 180) * ((100vw - 375px) / (768 - 375)));
     }
@@ -597,6 +629,12 @@
         background-position: calc(15px + (170 + 15) * ((100vw - 375px) / (768 - 375))) 120px;
     }
 
+    .technologies {
+        &__list {
+            margin-left: calc(0px + (-30 - 0) * ((100vw - 530px) / (768 - 530)));
+        }
+    }
+
     .services {
         &__list {
             grid-column-gap: calc(10px + (20 - 10) * ((100vw - 375px) / (768 - 375)));
@@ -612,7 +650,7 @@
 
                 &:hover {
                     transform: translateY(calc(-7px + (-18 + 7) * ((100vw - 375px) / (768 - 375))));
-                    background-position: 50% calc(35px + (75 - 35) * ((100vw - 375px) / (768 - 375)));
+                    // background-position: 50% calc(35px + (75 - 35) * ((100vw - 375px) / (768 - 375)));
                 }
             }
         }
@@ -862,8 +900,6 @@
 
 
 }
-
-
 
 @media (max-width: 600px) {
     .it_company {

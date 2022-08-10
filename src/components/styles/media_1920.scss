@@ -79,7 +79,12 @@
         .phone {
             width: calc(114px + (160 - 114) * ((100vw - 1366px) / (1920 - 1366)));
             height: calc(114px + (160 - 114) * ((100vw - 1366px) / (1920 - 1366)));
-            background-size: cover;
+            background-size: contain;
+
+            &:hover {
+                width: calc(114px + (160 - 114) * ((100vw - 1366px) / (1920 - 1366)));
+                height: calc(114px + (160 - 114) * ((100vw - 1366px) / (1920 - 1366)));
+            }
         }
 
         span {
@@ -217,7 +222,7 @@
                 }
 
                 &:hover {
-                    background-position: 70% calc(45px + (80 - 45) * ((100vw - 1366px) / (1920 - 1366)));
+                    // background-position: 70% calc(45px + (80 - 45) * ((100vw - 1366px) / (1920 - 1366)));
                 }
             }
         }
@@ -318,6 +323,7 @@
     .technologies {
         &__list {
             grid-row-gap: calc(25px + (34 - 25) * ((100vw - 1366px) / (1920 - 1366)));
+            margin-left: calc(-47px + (-64 + 47) * ((100vw - 1366px) / (1920 - 1366)));
         }
     }
 
@@ -661,9 +667,5 @@
                 grid-template-columns: calc(575px + (605 - 575) * ((100vw - 768px) / (1920 - 768))) calc(35px + (455 - 35) * ((100vw - 768px) / (1920 - 768)));
             }
         }
-
-        // .active{
-        //     transform: scale(1);
-        // }
     }
 }

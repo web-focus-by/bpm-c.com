@@ -13,6 +13,11 @@
     height: 114px;
     background-size: cover;
   }
+  .phone_butn .phone:hover {
+    width: 114px;
+    height: 114px;
+    background-size: cover;
+  }
   .phone_butn span {
     width: 38px;
     height: 38px;
@@ -140,7 +145,9 @@
     font-size: 14px;
   }
   .services__list .services_list_item:hover {
-    background-position: 95% 45px;
+    background: url(../../images/test_1366.svg) no-repeat;
+    background-size: cover;
+    background-position-x: 100%;
   }
   .react {
     width: 61px;
@@ -216,6 +223,7 @@
   }
   .technologies__list {
     grid-row-gap: 25px;
+    margin-left: -47px;
   }
   .bpm_cloud__info .bpm_cloud_block .bpm_cloud_block_title {
     font-size: 21px;
@@ -461,6 +469,9 @@
   }
   .form__block .form_block_info {
     max-width: calc(320px + 40 * (100vw - 1024px) / 342);
+  }
+  .technologies__list {
+    margin-left: calc(-37px + -10 * (100vw - 1024px) / 342);
   }
   .projects_process .projects_process_list_item .projects_process_list_item {
     left: calc(130.5px + 18 * (100vw - 1024px) / 342);

@@ -15,6 +15,12 @@
             width: 114px;
             height: 114px;
             background-size: cover;
+
+            &:hover {
+                width: 114px;
+                height: 114px;
+                background-size: cover;
+            }
         }
 
         span {
@@ -210,7 +216,10 @@
                 }
 
                 &:hover {
-                    background-position: 95% 45px;
+                    // background-position: 95% 45px;
+                    background: url(../../images/test_1366.svg) no-repeat;
+                    background-size: cover;
+                    background-position-x: 100%;
                 }
             }
         }
@@ -311,6 +320,7 @@
     .technologies {
         &__list {
             grid-row-gap: 25px;
+            margin-left: -47px;
         }
     }
 
@@ -700,6 +710,12 @@
             .form_block_info {
                 max-width: calc(320px + (360 - 320) * ((100vw - 1024px) / (1366 - 1024)));
             }
+        }
+    }
+
+    .technologies {
+        &__list {
+            margin-left: calc(-37px + (-47 + 37) * ((100vw - 1024px) / (1366 - 1024)));
         }
     }
 

@@ -2,7 +2,7 @@
 body {
   font-family: "Acrom", sans-serif;
   line-height: 150%;
-  margin-top: 0px;
+  margin: 0px;
   font-family: "Acrom";
 }
 
@@ -83,7 +83,7 @@ body {
   z-index: 3;
 }
 .phone_butn .phone {
-  background: #9C7CF1 url(../../images/phone_butn.svg) no-repeat;
+  background: #9C7CF1 url(../../images/phone_butn_text.svg) no-repeat;
   background-position: 50%;
   border-radius: 50%;
   width: 160px;
@@ -93,6 +93,13 @@ body {
 }
 .phone_butn .phone:hover {
   cursor: pointer;
+  background: #935CFF url(../../images/phone_butn_text.svg) no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  position: relative;
+  background-size: contain;
 }
 @keyframes rot {
   0% {
@@ -120,7 +127,7 @@ body {
 }
 
 .modal {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   background-color: rgba(26, 27, 31, 0.2);
   position: fixed;
@@ -129,7 +136,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 3;
 }
 .modal__content {
   background: #1A1B1F;
@@ -381,8 +388,9 @@ body {
 }
 .services__list .services_list_item:hover {
   transform: translateY(-18px);
-  background: #1A1B1F url(../../images/gradient_services.svg) no-repeat;
-  background-position: 70% 80px;
+  background: url(../../images/test.png) no-repeat;
+  background-size: cover;
+  background-position-x: 100%;
 }
 .services__list .services_list_item:hover a {
   color: #FFFFFF;
@@ -394,6 +402,7 @@ body {
   grid-template-columns: repeat(6, 1fr);
   justify-content: space-between;
   grid-row-gap: 34px;
+  margin-left: -64px;
 }
 .technologies__list .technologies_list_item {
   text-align: center;

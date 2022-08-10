@@ -1,4 +1,15 @@
 @media (max-width: 375px) {
+    .modal {
+        &__content {
+            border-radius: 0px;
+
+            .form {
+                padding: 18px 18px 100px 16px;
+                grid-template-columns: 340px 0px;
+            }
+        }
+    }
+
     .it_company {
         margin-top: 180px;
     }
@@ -82,6 +93,7 @@
         &__block {
             .form_block_title {
                 font-size: 42px;
+                margin-bottom: 40px;
             }
 
             .form_block_info {
@@ -90,7 +102,18 @@
 
             .form_block_text {
                 font-size: 15px;
+                display: none;
+
+                .form_block_gif {
+                    display: none;
+                }
             }
+        }
+    }
+
+    .technologies {
+        &__list {
+            margin-left: 0px;
         }
     }
 
@@ -115,6 +138,9 @@
 
                 &:hover {
                     transform: translateY(calc(-2px + (-7 + 2) * ((100vw - 320px) / (375 - 320))));
+                    background: url(../../images/test_375.svg) no-repeat;
+                    background-size: cover;
+                    background-position-x: 100%;
                 }
             }
         }
@@ -254,6 +280,26 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+    .modal {
+        &__content {
+            .form {
+                grid-template-columns: calc(290px + (340 - 290) * ((100vw - 375px) / (768 - 320))) 0px;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .modal {
+        &__content {
+            .form {
+                grid-template-columns: 290px 0px;
             }
         }
     }

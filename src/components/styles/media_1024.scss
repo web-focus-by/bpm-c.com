@@ -51,6 +51,12 @@
         }
     }
 
+    .technologies {
+        &__list {
+            margin-left: -33px;
+        }
+    }
+
     .bpm_cloud {
         &__info {
             .bpm_cloud_block {
@@ -92,6 +98,20 @@
     .company_description {
         .title_62 {
             font-size: 42px;
+        }
+    }
+
+    .services {
+        &__list {
+
+            .services_list_item {
+                &:hover {
+                    // background-position: 95% 45px;
+                    background: url(../../images/test_1024.svg) no-repeat;
+                    background-size: cover;
+                    background-position-x: 100%;
+                }
+            }
         }
     }
 
@@ -170,6 +190,12 @@
             width: calc(140px + (114 - 140) * ((100vw - 768px) / (1024 - 768)));
             height: calc(140px + (114 - 140) * ((100vw - 768px) / (1024 - 768)));
             background-size: cover;
+
+            &:hover {
+                width: calc(140px + (114 - 140) * ((100vw - 768px) / (1024 - 768)));
+                height: calc(140px + (114 - 140) * ((100vw - 768px) / (1024 - 768)));
+                background-size: cover;
+            }
         }
 
         span {
@@ -203,6 +229,8 @@
 
     .technologies {
         &__list {
+            margin-left: calc(-33px + (-47 + 33) * ((100vw - 768px) / (900 - 768)));
+
             .technologies_list_item {
                 p {
                     font-size: calc(16px + (13 - 16) * ((100vw - 768px) / (1024 - 768)));
