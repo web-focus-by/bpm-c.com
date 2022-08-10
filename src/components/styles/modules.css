@@ -1,7 +1,7 @@
 .button_white {
   border: 1px solid #1A1B1F;
   border-radius: 80px;
-  background: #fff;
+  background: transparent;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;

@@ -4,6 +4,9 @@
   }
 }
 @media (min-width: 1366px) and (max-width: 1920px) {
+  .it_company {
+    margin-top: calc(220px + 88 * (100vw - 1366px) / 554);
+  }
   .margin_bottom_60 {
     margin-bottom: calc(57px + 3 * (100vw - 1366px) / 554);
   }
@@ -242,12 +245,16 @@
     height: calc(256px + 104 * (100vw - 1366px) / 554);
   }
   .projects_process .projects_process_list_item {
-    height: calc(25px + 11 * (100vw - 1366px) / 554 + 15 * (100vw - 1366px) / 554);
+    height: calc(36px + 15 * (100vw - 1366px) / 554);
     border-radius: calc(57px + 23 * (100vw - 1366px) / 554);
   }
   .projects_process .projects_process_list_item p {
     margin-right: calc(5px + 3 * (100vw - 1366px) / 554);
     font-size: calc(13px + 5 * (100vw - 1366px) / 554);
+  }
+  .projects_process .projects_process_list_item .projects_process_list_item {
+    padding: 0px calc(36px + 14 * (100vw - 1366px) / 554);
+    left: calc(148.5px + 63 * (100vw - 1366px) / 554);
   }
   .padding_50 {
     padding: 0px calc(33px + 17 * (100vw - 1366px) / 554);

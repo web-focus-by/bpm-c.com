@@ -1,4 +1,7 @@
 @media (max-width: 375px) {
+  .it_company {
+    margin-top: 180px;
+  }
   .margin_bottom_60 {
     margin-bottom: 20px;
   }
@@ -83,6 +86,9 @@
   .projects_process__subtitle {
     margin-bottom: 24px;
   }
+  .projects_process__list {
+    background-image: none;
+  }
   .projects_process .projects_process_list_item {
     height: 51px;
     width: 100%;
@@ -93,6 +99,7 @@
   }
   .projects_process .projects_process_list_item .projects_process_list_item {
     left: 0px;
+    padding: 0px;
   }
   .padding_50 {
     padding: 0px;

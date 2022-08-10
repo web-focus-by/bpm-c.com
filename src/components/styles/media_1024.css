@@ -30,6 +30,10 @@
   .bpm_cloud__info .bpm_cloud_block .bpm_cloud_block_title {
     max-width: 95%;
   }
+  .projects_process__list {
+    background-image: url(../../images/lines_1024.svg);
+    background-size: contain;
+  }
   .projects_process .projects_process_list_item .projects_process_list_item {
     left: 127.5px;
   }
@@ -63,6 +67,9 @@
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+  .it_company {
+    margin-top: calc(280px + -60 * (100vw - 768px) / 256);
+  }
   .margin_bottom_60 {
     margin-bottom: calc(60px + -20 * (100vw - 768px) / 256);
   }
@@ -113,7 +120,7 @@
     max-width: calc(800px + -376 * (100vw - 768px) / 256);
   }
   .projects_process__list {
-    height: calc(360px + -104 * (100vw - 768px) / 256);
+    height: calc(430px + -174 * (100vw - 768px) / 256);
   }
   .projects_process .projects_process_list_item {
     height: calc(51px + -15 * (100vw - 768px) / 256);
@@ -124,8 +131,12 @@
     font-size: calc(18px + -5 * (100vw - 768px) / 256);
   }
   .projects_process .projects_process_list_item .projects_process_list_item {
-    left: calc(78.5px + 49 * (100vw - 768px) / 256);
+    left: calc(79.5px + 51 * (100vw - 768px) / 256);
     margin-top: calc(12px + -12 * (100vw - 768px) / 256);
+    padding: 0px calc(50px + -14 * (100vw - 768px) / 256);
+  }
+  .projects_process .projects_process_list_item .projects_process_list_item p {
+    font-size: calc(18px + -5 * (100vw - 768px) / 256);
   }
   .padding_50 {
     padding: 0px calc(50px + -17 * (100vw - 768px) / 256);

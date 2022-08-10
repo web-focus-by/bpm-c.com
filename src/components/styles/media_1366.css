@@ -31,7 +31,7 @@
     font-size: 11px;
   }
   .it_company {
-    margin-top: 110px;
+    margin-top: 220px;
   }
   .hash__list .hash_list_block {
     margin-right: 14px;
@@ -229,6 +229,8 @@
   }
   .projects_process__list {
     height: 256px;
+    background-image: url(../../images/lines_1366.svg);
+    background-size: contain;
   }
   .projects_process .projects_process_list_item {
     height: 36px;
@@ -236,12 +238,15 @@
   }
   .projects_process .projects_process_list_item p {
     margin-right: 5px;
+    font-size: 13px;
   }
   .projects_process .projects_process_list_item .projects_process_list_item {
-    left: 145.5px;
+    left: 148.5px;
+    padding: 0px 36px;
+    left: 130.5px;
   }
   .projects_process .projects_process_list_item .projects_process_list_item p {
-    font-style: 13px;
+    font-size: 13px;
   }
   .padding_50 {
     padding: 0px 33px;
@@ -458,7 +463,7 @@
     max-width: calc(320px + 40 * (100vw - 1024px) / 342);
   }
   .projects_process .projects_process_list_item .projects_process_list_item {
-    left: calc(127.5px + 18 * (100vw - 1024px) / 342);
+    left: calc(130.5px + 18 * (100vw - 1024px) / 342);
   }
   .black_bg .advantages__info {
     grid-column-gap: calc(20px + 19 * (100vw - 1024px) / 342);
