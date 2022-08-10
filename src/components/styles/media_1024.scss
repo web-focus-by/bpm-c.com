@@ -347,6 +347,21 @@
 
 }
 
+@media (max-width: 940px) {
+    .header {
+        &__nav {
+
+            .header_nav_list {
+                display: none;
+            }
+        }
+    }
+
+    .burger {
+        display: inline-block;
+    }
+}
+
 @media (max-width: 900px) {
     .form {
         padding: 80px;

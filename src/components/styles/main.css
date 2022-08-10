@@ -74,6 +74,53 @@ body {
   top: -5px;
 }
 
+.dropdown_services {
+  display: flex;
+  position: absolute;
+  left: 16.5%;
+  background: red;
+}
+.dropdown_services__title {
+  font-family: "Acrom";
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 115%;
+  color: #FFFFFF;
+  background: #9C7CF1;
+  padding: 60px 170px 0px 60px;
+  border-radius: 20px 0px 0px 20px;
+}
+.dropdown_services__info {
+  background: #fff;
+  padding: 60px 219px 125px 100px;
+  border-radius: 0px 20px 20px 0px;
+}
+.dropdown_services__info ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 86px;
+  margin: 0px;
+  padding: 0px;
+}
+.dropdown_services__info ul li {
+  margin-bottom: 16px;
+}
+.dropdown_services__info ul li:last-child {
+  margin-bottom: none;
+}
+.dropdown_services__info ul li a {
+  font-family: "Acrom";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #1A1B1F;
+  text-decoration: none;
+}
+.dropdown_services__info ul li a:hover {
+  color: #9C7CF1;
+}
+
 .phone_butn {
   float: right;
   padding-right: 60px;
@@ -978,4 +1025,4 @@ body {
   100% {
     right: 50%;
   }
-}/*# sourceMappingURL=main.css.map */
+}

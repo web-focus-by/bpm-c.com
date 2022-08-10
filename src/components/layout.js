@@ -27,6 +27,7 @@ import LeadersChoice from "./leaders_choice"
 import Footer from "./footer"
 import PhoneButn from "./phone_butn"
 import Modal from "./modal"
+import DropdownServices from "./dropdown_services"
 import "../components/styles/layout.css"
 import { useState, useRef, useEffect } from "react"
 
@@ -51,6 +52,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <DropdownServices></DropdownServices>
       <Hero></Hero>
       <PhoneButn onClick={toggleModalActive}></PhoneButn>
       {isOpen? <Modal

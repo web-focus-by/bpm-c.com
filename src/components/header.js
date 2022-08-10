@@ -28,13 +28,16 @@ const Header = ({ siteTitle }) => (
               <a href="#">Services</a>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <a href="#">Technologies</a>
+            </li>
+            <li>
+              <a href="#">Solutions</a>
+            </li>
+            <li>
+              <a href="#">Industries</a>
             </li>
             <li>
               <a href="#">About us</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
             </li>
           </ul>
         </div>

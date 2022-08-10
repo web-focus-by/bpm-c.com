@@ -191,6 +191,14 @@
     margin-right: calc(10px + 4 * (100vw - 768px) / 256);
   }
 }
+@media (max-width: 940px) {
+  .header__nav .header_nav_list {
+    display: none;
+  }
+  .burger {
+    display: inline-block;
+  }
+}
 @media (max-width: 900px) {
   .form {
     padding: 80px;
@@ -249,4 +257,4 @@
     grid-row-gap: 40px;
     grid-template-columns: repeat(4, 1fr);
   }
-}/*# sourceMappingURL=media_1024.css.map */
+}

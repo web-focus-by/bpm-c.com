@@ -69,6 +69,7 @@
   }
   .header__nav .header_nav_list ul li a {
     font-size: 13px;
+    margin-right: 42px;
   }
   .hero {
     margin-top: 134px;
@@ -501,4 +502,4 @@
   .leaders_choice_tagline {
     margin: calc(178px + 52 * (100vw - 1366px) / 554) 0px;
   }
-}/*# sourceMappingURL=media_1366.css.map */
+}

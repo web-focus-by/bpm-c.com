@@ -438,4 +438,4 @@
     padding: calc(30px + 10 * (100vw - 768px) / 1152) calc(30px + 10 * (100vw - 768px) / 1152) calc(60px + 40 * (100vw - 768px) / 1152) calc(60px + 20 * (100vw - 768px) / 1152);
     grid-template-columns: calc(575px + 30 * (100vw - 768px) / 1152) calc(35px + 420 * (100vw - 768px) / 1152);
   }
-}/*# sourceMappingURL=media_1920.css.map */
+}

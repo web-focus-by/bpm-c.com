@@ -10,9 +10,6 @@
     height: 36px;
     background-size: cover;
   }
-  .header__nav .header_nav_list {
-    display: none;
-  }
   .phone_butn {
     padding-right: 40px;
   }
@@ -31,9 +28,6 @@
     height: 47px;
     right: 85px;
     background-size: cover;
-  }
-  .burger {
-    display: inline-block;
   }
   .title_80 {
     max-width: 560px;
@@ -728,4 +722,4 @@
   .footer__copyright {
     font-size: calc(15px + 1 * (100vw - 320px) / 210);
   }
-}/*# sourceMappingURL=media_768.css.map */
+}
