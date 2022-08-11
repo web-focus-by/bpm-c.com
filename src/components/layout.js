@@ -27,6 +27,7 @@ import LeadersChoice from "./leaders_choice"
 import Footer from "./footer"
 import PhoneButn from "./phone_butn"
 import Modal from "./modal"
+import ThanksModal from "./thanks_modal"
 import DropdownServices from "./dropdown_services"
 import "../components/styles/layout.css"
 import { useState, useRef, useEffect } from "react"
@@ -58,6 +59,7 @@ const Layout = ({ children }) => {
       {isOpen? <Modal
         onClickClose={toggleModalActive}
       ></Modal> : null}
+      <ThanksModal></ThanksModal>
       <ITCompany></ITCompany>
       <Portfolio></Portfolio>
       <Form></Form>

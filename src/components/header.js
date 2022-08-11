@@ -10,7 +10,12 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle }) => {
+  const activeButn = React.useState()
+
+ 
+  return(
+
   <header className="header">
     <div className="container">
       <div className="header__nav">
@@ -25,7 +30,7 @@ const Header = ({ siteTitle }) => (
               <a href="#">Portfolio</a>
             </li>
             <li>
-              <a href="#">Services</a>
+              <a href="#" onClick={activeButn}>Services</a>
             </li>
             <li>
               <a href="#">Technologies</a>
@@ -45,7 +50,7 @@ const Header = ({ siteTitle }) => (
       </div>
     </div>
   </header>
-)
+)}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

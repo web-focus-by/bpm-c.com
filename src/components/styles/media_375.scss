@@ -111,6 +111,51 @@
         }
     }
 
+    .thanks_modal{
+        .thanks_modal_content{
+            .form{ 
+                grid-template-columns: 341px 0px;
+                padding: 18px 18px 209px 16px; 
+                background: url(../../images/purple_ball.svg) 130% 48% no-repeat, url(../../images/yellow_ball.svg) 75% 100% no-repeat;
+                background-size: 70%;
+                &__block{
+                    &:first-child{
+                        margin-top: 60px;
+                    }
+                    .form_block_text{
+                        display: inline-block;
+                        p{
+                            font-size: 15px;
+                        }
+                        .form_block_gif{
+                            margin-left: 0px;
+                        }
+                        .form_block_gif{
+                            display: inline-block;
+                        }
+                    }
+                   
+                    .form_block_title{
+                        font-size: 42px;
+                    }
+                    .form_block_modal_button{
+                        width: 31px;
+                        &::after{
+                            width: 31px;
+                        }
+                    }
+                }
+                .form_block_wrapper{
+                    form{
+                        .form_block_send{
+                            margin-top: 20px; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .technologies {
         &__list {
             margin-left: 0px;
@@ -293,6 +338,22 @@
             }
         }
     }
+
+    .thanks_modal{
+        .thanks_modal_content{
+            .form{ 
+                grid-template-columns: calc(286px + (341 - 286) * ((100vw - 375px) / (768 - 375))) 0px;
+                background: url(../../images/purple_ball.svg) 130% 48% no-repeat, url(../../images/yellow_ball.svg) 75% 100% no-repeat;
+                background-size: 70%;
+                &__block{
+                    .form_block_title{
+                        font-size: calc(40px + (42 - 40) * ((100vw - 375px) / (768 - 375)));
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 @media (max-width: 320px) {
@@ -300,6 +361,21 @@
         &__content {
             .form {
                 grid-template-columns: 290px 0px;
+            }
+        }
+    }
+
+    .thanks_modal{
+        .thanks_modal_content{
+            .form{ 
+                grid-template-columns: 286px 0px;
+                background: url(../../images/purple_ball.svg) 130% 48% no-repeat, url(../../images/yellow_ball.svg) 75% 100% no-repeat;
+                background-size: 70%;
+                &__block{
+                    .form_block_title{
+                        font-size: 40px;
+                    }
+                }
             }
         }
     }
