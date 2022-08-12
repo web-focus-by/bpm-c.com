@@ -6,9 +6,9 @@
  */
 
 import * as React from "react"
+import { useState, useEffect, useRef } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Hero from "./hero"
 import Header from "./header"
 import ITCompany from "./it_company"
@@ -31,7 +31,6 @@ import Modal from "./modal"
 import ThanksModal from "./thanks_modal"
 import DropdownServices from "./dropdown_services"
 import "../components/styles/layout.css"
-import { useState, useRef, useEffect } from "react"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -46,15 +45,37 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  const refMenu = useRef();
+  const [isToggle, setToggle] = useState(false, setToggle);
   const [isOpen, setModalActive] = useState(false);
   const toggleModalActive = () => {
     setModalActive(!isOpen);
   }
 
+  const clickOut = (e) => {
+    if (isToggle && refMenu && refMenu.current && !refMenu.current.contains(e.target))
+      {
+        closeMenu();
+      }
+  }
+  useEffect(() => {
+    document.addEventListener("click", clickOut, true);
+    return () => {
+      document.removeEventListener("click", clickOut, true);
+    };
+  });
+
+  const openMenu = () => {
+    setToggle(true);
+  }
+  const closeMenu = () => {
+    setToggle(false);
+  }
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <DropdownServices></DropdownServices>
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} turnOnMenu={openMenu} turnOffMenu={closeMenu} isToggle = {isToggle} />
+      <div ref={refMenu}><DropdownServices isToggle = {isToggle} turnOffMenu={closeMenu} /></div>
       <Hero></Hero>
       <PhoneButn onClick={toggleModalActive}></PhoneButn>
       {isOpen? <Modal

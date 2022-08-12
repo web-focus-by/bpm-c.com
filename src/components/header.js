@@ -10,47 +10,47 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const Header = ({ siteTitle }) => {
-  const activeButn = React.useState()
-
- 
-  return(
-
-  <header className="header">
-    <div className="container">
-      <div className="header__nav">
-        <div>
-          <a href="#">
-            <span className="logo"></span>
-          </a>
+const Header = ({ siteTitle, turnOnMenu, turnOffMenu, isToggle }) => {
+  const activeMenu = () => {
+    !isToggle ? turnOnMenu() : turnOffMenu();
+  }
+    return (
+      <header className="header">
+        <div className="container">
+          <div className="header__nav">
+            <div>
+              <a href="#">
+                <span className="logo"></span>
+              </a>
+            </div>
+            <div className="header_nav_list" >
+              <ul>
+                <li key="idPortfolioMenu" onClick={ activeMenu }>
+                  <a href="#">Portfolio</a>
+                </li>
+                <li key="idServicesMenu" onClick={ activeMenu }>
+                  <a href="#">Services</a>
+                </li>
+                <li key="idTechnologiesMenu" onClick={ activeMenu }>
+                  <a href="#">Technologies</a>
+                </li>
+                <li key="idSolutionsMenu" onClick={ activeMenu }>
+                  <a href="#">Solutions</a>
+                </li>
+                <li key="idIndustriesMenu" onClick={ activeMenu }>
+                  <a href="#">Industries</a>
+                </li>
+                <li key="idAboutMenu" onClick={ activeMenu }>
+                  <a href="#">About us</a>
+                </li>
+              </ul>
+            </div>
+            <div className="burger"></div>
+          </div>
         </div>
-        <div className="header_nav_list">
-          <ul>
-            <li>
-              <a href="#">Portfolio</a>
-            </li>
-            <li>
-              <a href="#" onClick={activeButn}>Services</a>
-            </li>
-            <li>
-              <a href="#">Technologies</a>
-            </li>
-            <li>
-              <a href="#">Solutions</a>
-            </li>
-            <li>
-              <a href="#">Industries</a>
-            </li>
-            <li>
-              <a href="#">About us</a>
-            </li>
-          </ul>
-        </div>
-        <div className="burger"></div>
-      </div>
-    </div>
-  </header>
-)}
+      </header>
+    )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
