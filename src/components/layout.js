@@ -14,6 +14,7 @@ import Header from "./header"
 import ITCompany from "./it_company"
 import Portfolio from "./portfolio"
 import Form from "./form"
+import ThanksForm from "./thanks_form"
 import Services from "./services"
 import Technologies from "./technologies"
 import BPMCloud from "./bpm_cloud"
@@ -74,7 +75,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} turnOnMenu={openMenu} turnOffMenu={closeMenu} isToggle = {isToggle} />
-      <div ref={refMenu}><DropdownServices isToggle = {isToggle} turnOffMenu={closeMenu} /></div>
+      <div className="dropdown_services_sticky" ref={refMenu}><DropdownServices isToggle = {isToggle} turnOffMenu={closeMenu} /></div>
       <Hero></Hero>
       <PhoneButn onClick={toggleModalActive}></PhoneButn>
       {isOpen? <Modal
@@ -84,6 +85,7 @@ const Layout = ({ children }) => {
       <ITCompany></ITCompany>
       <Portfolio></Portfolio>
       <Form></Form>
+      <ThanksForm></ThanksForm>
       <Services></Services>
       <Technologies></Technologies>
       <BPMCloud></BPMCloud>

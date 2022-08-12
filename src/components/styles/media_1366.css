@@ -30,6 +30,7 @@
   }
   .phone_butn {
     padding-right: 42px;
+    top: 522px;
   }
   .phone_butn .phone {
     width: 114px;
@@ -103,14 +104,20 @@
   }
   .form__block .form_block_info {
     font-size: 12px;
-    margin: 25px 0px 23px 0px;
+    margin: 27px 0px 15px 0px;
     max-width: 360px;
   }
   .form__block .form_block_email a {
-    font-size: 21px;
+    font-size: 17px;
   }
   .form__block .form_block_text {
-    font-size: 11px;
+    margin-bottom: -7px;
+  }
+  .form__block .form_block_text p {
+    font-size: 12px;
+  }
+  .form__block .form_block_text .form_block_gif {
+    margin-left: 8px;
   }
   .form__block .form_block_text .form_block_gif img {
     width: 36px;
@@ -141,6 +148,10 @@
   .form__block .form_block_wrapper form .form_line-wrapper:nth-child(2) {
     margin-bottom: 30px;
   }
+  .form__block .form_block_wrapper form .form_line-wrapper input:focus ~ label,
+.form__block .form_block_wrapper form .form_line-wrapper input:valid ~ label {
+    top: -20px;
+  }
   .thanks_modal .thanks_modal_content .form {
     grid-template-columns: 525px 230px;
     padding: 28px 28px 218px 56px;
@@ -158,6 +169,12 @@
   }
   .thanks_modal .thanks_modal_content .form__block .form_block_modal_button::after {
     width: 24px;
+  }
+  .thanks_form {
+    padding: 86px 89px 87px 70px !important;
+  }
+  .thanks_form .thanks_form_block .form_block_title {
+    margin-bottom: 25px;
   }
   .button_black {
     border: 1px solid #fff;
@@ -523,6 +540,9 @@
   }
   .form__block .form_block_info {
     max-width: calc(320px + 40 * (100vw - 1024px) / 342);
+  }
+  .form__block .form_block_text .form_block_gif {
+    margin-left: calc(22px + -14 * (100vw - 1024px) / 342);
   }
   .thanks_modal .thanks_modal_content .form {
     grid-template-columns: calc(470px + 55 * (100vw - 1024px) / 342) calc(171px + 59 * (100vw - 1024px) / 342);
