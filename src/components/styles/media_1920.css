@@ -109,10 +109,10 @@
   }
   .form__block .form_block_info {
     font-size: calc(12px + 6 * (100vw - 1366px) / 554);
-    margin: calc(25px + 11 * (100vw - 1366px) / 554) 0px calc(23px + 8 * (100vw - 1366px) / 554) 0px;
+    margin: calc(27px + 11 * (100vw - 1366px) / 554) 0px 15px 0px;
     max-width: calc(360px + 147 * (100vw - 1366px) / 554);
   }
-  .form__block .form_block_text {
+  .form__block .form_block_text p {
     font-size: calc(12px + 6 * (100vw - 1366px) / 554);
   }
   .form__block .form_block_text .form_block_gif {
@@ -125,21 +125,18 @@
   .form__block .form_block_text .form_block_gif img:not(:first-child) {
     margin-left: -10px;
   }
-  .form__block .form_block_wrapper form {
-    padding-top: 40px;
-  }
   .form__block .form_block_wrapper form .form_line-wrapper {
     font-size: calc(11px + 5 * (100vw - 1366px) / 554);
     position: relative;
   }
   .form__block .form_block_wrapper form .form_line-wrapper:first-child {
-    margin-bottom: calc(30px + 48 * (100vw - 1366px) / 554);
+    margin-bottom: calc(30px + 28 * (100vw - 1366px) / 554);
   }
   .form__block .form_block_wrapper form .form_line-wrapper:nth-child(2) {
-    margin-bottom: calc(30px + 48 * (100vw - 1366px) / 554);
+    margin-bottom: calc(30px + 28 * (100vw - 1366px) / 554);
   }
-  .form__block .form_block_wrapper form input:focus ~ label,
-.form__block .form_block_wrapper form input:valid ~ label {
+  .form__block .form_block_wrapper form .form_line-wrapper input:focus ~ label,
+.form__block .form_block_wrapper form .form_line-wrapper input:valid ~ label {
     top: calc(-20px + -20 * (100vw - 1366px) / 554);
   }
   .form__block .form_block_wrapper form input {
@@ -151,6 +148,9 @@
   .form__block .form_block_wrapper form .form_block_send p {
     font-size: calc(10px + 4 * (100vw - 1366px) / 554);
     max-width: calc(178px + 72 * (100vw - 1366px) / 554);
+  }
+  .form__block .form_block_email a {
+    font-size: calc(24px + -7 * (100vw - 1366px) / 554);
   }
   .thanks_modal .thanks_modal_content .form {
     grid-template-columns: calc(525px + 110 * (100vw - 1366px) / 554) calc(230px + 195 * (100vw - 1366px) / 554);
@@ -177,6 +177,7 @@
   .thanks_modal .thanks_modal_content .form__block .form_block_modal_button::after {
     width: calc(24px + 10 * (100vw - 1366px) / 554);
   }
+
   .button_black {
     border: 1px solid #fff;
     border-radius: calc(57px + 23 * (100vw - 1366px) / 554);

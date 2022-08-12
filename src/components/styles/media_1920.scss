@@ -102,7 +102,7 @@
 
     .phone_butn {
         padding-right: calc(42px + (60 - 42) * ((100vw - 1366px) / (1920 - 1366)));
-
+        top: calc(522px + (734 - 522) * ((100vw - 1366px) / (1920 - 1366)));
         .phone {
             width: calc(114px + (160 - 114) * ((100vw - 1366px) / (1920 - 1366)));
             height: calc(114px + (160 - 114) * ((100vw - 1366px) / (1920 - 1366)));
@@ -155,15 +155,16 @@
 
             .form_block_info {
                 font-size: calc(12px + (18 - 12) * ((100vw - 1366px) / (1920 - 1366)));
-                margin: calc(25px + (36 - 25) * ((100vw - 1366px) / (1920 - 1366))) 0px calc(23px + (31 - 23) * ((100vw - 1366px) / (1920 - 1366))) 0px;
+                margin: calc(27px + (38 - 27) * ((100vw - 1366px) / (1920 - 1366))) 0px 15px 0px;
                 max-width: calc(360px + (507 - 360) * ((100vw - 1366px) / (1920 - 1366)));
             }
 
             .form_block_text {
-                font-size: calc(12px + (18 - 12) * ((100vw - 1366px) / (1920 - 1366)));
-
+                p{
+                    font-size: calc(12px + (18 - 12) * ((100vw - 1366px) / (1920 - 1366)));
+                }
                 .form_block_gif {
-                    margin-left: 9px;
+                    margin-left: calc(px + (30 - 9) * ((100vw - 1366px) / (1920 - 1366)));
 
                     img {
                         width: calc(calc(25px + (36 - 25) * ((100vw - 1366px) / (1920 - 1366))) + (50 - 36) * ((100vw - 1366px) / (1920 - 1366)));
@@ -179,24 +180,24 @@
 
             .form_block_wrapper {
                 form {
-                    padding-top: 40px;
 
                     .form_line-wrapper {
                         font-size: calc(11px + (16 - 11) * ((100vw - 1366px) / (1920 - 1366)));
                         position: relative;
 
                         &:first-child {
-                            margin-bottom: calc(30px + (78 - 30) * ((100vw - 1366px) / (1920 - 1366)));
+                            margin-bottom: calc(30px + (58 - 30) * ((100vw - 1366px) / (1920 - 1366)));
                         }
 
                         &:nth-child(2) {
-                            margin-bottom: calc(30px + (78 - 30) * ((100vw - 1366px) / (1920 - 1366)));
+                            margin-bottom: calc(30px + (58 - 30) * ((100vw - 1366px) / (1920 - 1366)));
                         }
-                    }
-
+                        
                     input:focus~label,
                     input:valid~label {
                         top: calc(-20px + (-40 + 20) * ((100vw - 1366px) / (1920 - 1366)));
+                    }
+
                     }
 
                     input {
@@ -211,6 +212,12 @@
                             max-width: calc(178px + (250 - 178) * ((100vw - 1366px) / (1920 - 1366)));
                         }
                     }
+                }
+            }
+            
+            .form_block_email{
+                a{
+                    font-size: calc(24px + (17 - 24) * ((100vw - 1366px) / (1920 - 1366)));
                 }
             }
         }
@@ -230,7 +237,7 @@
                         }
                         
                         .form_block_gif{
-                            margin-left: calc(11px + (16 - 11) * ((100vw - 1366px) / (1920 - 1366)));
+                            margin-left: calc(8px + (12 - 8 ) * ((100vw - 1366px) / (1920 - 1366)));
                             img {
                                 width: calc(calc(25px + (36 - 25) * ((100vw - 1366px) / (1920 - 1366))) + (50 - 36) * ((100vw - 1366px) / (1920 - 1366)));
                                 height: calc(calc(25px + (36 - 25) * ((100vw - 1366px) / (1920 - 1366))) + (50 - 36) * ((100vw - 1366px) / (1920 - 1366)));
@@ -247,6 +254,15 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .thanks_form{
+        padding: calc(86px + (100 - 86) * ((100vw - 1366px) / (1920 - 1366))) calc(89px + (125 - 89) * ((100vw - 1366px) / (1920 - 1366))) calc(87px + (129 - 87) * ((100vw - 1366px) / (1920 - 1366))) calc(70px + (90 - 70) * ((100vw - 1366px) / (1920 - 1366))) !important;
+        .thanks_form_block{
+            .form_block_title{
+                margin-bottom: calc(25px + (36 - 25) * ((100vw - 1366px) / (1920 - 1366)));;
             }
         }
     }

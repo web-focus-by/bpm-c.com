@@ -78,6 +78,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 100px;
+  display: none;
 }
 .dropdown_services_sticky .dropdown_services {
   display: flex;
@@ -128,7 +129,7 @@ body {
   padding-right: 60px;
   position: -webkit-sticky;
   position: sticky;
-  top: 60%;
+  top: 734px;
   z-index: 3;
 }
 .phone_butn .phone {
@@ -199,7 +200,7 @@ body {
   font-size: 16px;
 }
 .modal__content .form__block .form_block_text .form_block_gif {
-  margin-left: 30px;
+  margin-left: 12px;
 }
 .modal__content .form__block .form_block_modal_button {
   width: 34px;
@@ -325,7 +326,7 @@ body {
   border-radius: 40px;
   padding: 100px 125px 100px 98px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.03fr 0.97fr;
   background-position: 110px 165px;
 }
 .form__block {
@@ -339,7 +340,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
-  margin: 36px 0px 31px 0px;
+  margin: 38px 0px 15px 0px;
   max-width: 507px;
 }
 .form__block .form_block_text {
@@ -353,7 +354,7 @@ body {
   display: none;
 }
 .form__block .form_block_text p {
-  font-size: 16px;
+  font-size: 18px;
 }
 .form__block .form_block_text .form_block_gif {
   margin-left: 9px;
@@ -388,7 +389,7 @@ body {
   margin-bottom: 78px;
 }
 .form__block .form_block_wrapper form .form_line-wrapper:nth-child(2) {
-  margin-bottom: 78px;
+  margin-bottom: 58px;
 }
 .form__block .form_block_wrapper form .form_line-wrapper input {
   color: #fff;
@@ -433,6 +434,17 @@ body {
   font-size: 14px;
   line-height: 100%;
   margin: 0px;
+}
+
+.thanks_form {
+  display: none;
+  padding: 100px 125px 129px 90px !important;
+}
+.thanks_form .thanks_form_block .form_block_wrapper form {
+  padding-top: 0px;
+}
+.thanks_form .thanks_form_block .form_block_title {
+  margin-bottom: 36px;
 }
 
 .services__list {

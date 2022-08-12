@@ -37,7 +37,7 @@
 
     .phone_butn {
         padding-right: 42px;
-
+        top: 522px;
         .phone {
             width: 114px;
             height: 114px;
@@ -151,20 +151,23 @@
         &__block {
             .form_block_info {
                 font-size: 12px;
-                margin: 25px 0px 23px 0px;
+                margin: 27px 0px 15px 0px;
                 max-width: 360px;
             }
 
             .form_block_email {
                 a {
-                    font-size: 21px;
+                    font-size: 17px;
                 }
             }
 
             .form_block_text {
-                font-size: 11px;
-
+                p{
+                    font-size: 12px;
+                }
+                margin-bottom: -7px;
                 .form_block_gif {
+                    margin-left: 8px;
                     img {
                         width: 36px;
                         height: 36px;
@@ -205,7 +208,12 @@
                         &:nth-child(2) {
                             margin-bottom: 30px;
                         }
+                        input:focus~label,
+                        input:valid~label {
+                            top: -20px;
+                        }
                     }
+                    
                 }
             }
         }
@@ -234,6 +242,15 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .thanks_form{
+        padding: 86px 89px 87px 70px !important;
+        .thanks_form_block{
+            .form_block_title{
+                margin-bottom: 25px;
             }
         }
     }
@@ -777,6 +794,11 @@
         &__block {
             .form_block_info {
                 max-width: calc(320px + (360 - 320) * ((100vw - 1024px) / (1366 - 1024)));
+            }
+            .form_block_text {
+                .form_block_gif {
+                    margin-left: calc(22px + (8 - 22) * ((100vw - 1024px) / (1366 - 1024)));
+                }
             }
         }
     }

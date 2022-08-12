@@ -64,6 +64,11 @@
             .form_block_info {
                 max-width: 320px;
             }
+            .form_block_text {
+                .form_block_gif {
+                    margin-left: 22px ;
+                }
+            }
         }
     }
 
@@ -246,11 +251,12 @@
 
 
     .form {
+        grid-template-columns: 1.2fr 0.8fr;
         .form_block_wrapper {
             form {
                 .form_block_send {
                     p {
-                        max-width: calc(250px + (178 - 250) * ((100vw - 768px) / (1024 - 768)));
+                        max-width: calc(140px + (178 - 140) * ((100vw - 901px) / (1024 - 901)));
                     }
                 }
             }
@@ -259,7 +265,7 @@
         &__block {
             .form_block_text {
                 .form_block_gif {
-                    margin-left: calc(30px + (50 - 30) * ((100vw - 768px) / (900 - 768)));
+                    margin-left: calc(30px + (22 - 30 ) * ((100vw - 768px) / (900 - 768)));
                 }
             }
         }
@@ -299,6 +305,15 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .thanks_form{
+        padding: calc(80px + (86 - 80) * ((100vw - 768px) / (1024 - 768))) calc(80px + (89 - 80) * ((100vw - 768px) / (1024 - 768))) calc(491px + (87 - 491) * ((100vw - 768px) / (1024 - 768))) calc(80px + (70 - 80) * ((100vw - 768px) / (1024 - 768))) !important;
+        .thanks_form_block{
+            .form_block_title{
+                margin-bottom: calc(49px + (25 - 49) * ((100vw - 768px) / (1024 - 768)));
             }
         }
     }
@@ -452,6 +467,9 @@
 
             .form_block_text {
                 font-size: 16px;
+                p{
+                    font-size: 16px;
+                }
 
                 .form_block_gif {
                     margin-left: 50px;
@@ -476,6 +494,9 @@
             form {
                 .form_block_send {
                     margin-top: 60px;
+                    p {
+                        max-width: 250px;
+                    }
 
                     .button_black {
                         padding: 22px 40px;
@@ -499,6 +520,11 @@
 
                     &:nth-child(2) {
                         margin-bottom: 78px;
+                    }
+
+                    input:focus~label,
+                    input:valid~label {
+                        top: -40px;
                     }
                 }
 
@@ -533,6 +559,15 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .thanks_form{
+        
+        .thanks_form_block{
+            .form_block_title{
+                margin-bottom: 49px;
             }
         }
     }

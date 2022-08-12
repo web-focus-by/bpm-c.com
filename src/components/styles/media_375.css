@@ -103,6 +103,18 @@
   .thanks_modal .thanks_modal_content .form .form_block_wrapper form .form_block_send {
     margin-top: 20px;
   }
+  .thanks_form {
+    padding: 80px 16px 545px 16px !important;
+  }
+  .thanks_form .thanks_form_block .form_block_title {
+    margin-bottom: 24px;
+  }
+  .thanks_form .thanks_form_block .form_block_text {
+    display: inline-block;
+  }
+  .thanks_form .thanks_form_block .form_block_text .form_block_gif {
+    display: inline-block;
+  }
   .technologies__list {
     margin-left: 0px;
   }
