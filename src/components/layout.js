@@ -6,7 +6,7 @@
  */
 
 import * as React from "react"
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useCallback } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Hero from "./hero"
@@ -46,34 +46,43 @@ const Layout = ({ children }) => {
     }
   `)
   const refMenu = useRef();
-  const [isToggle, setToggle] = useState(false, setToggle);
-  const openMenu = () => {
-    setToggle(true);
-  }
-  const closeMenu = () => {
-    setToggle(false);
-  }
+  const [isToggle, setToggle] = useState(false);
+
+  const closeOpenMenu = useCallback(
+    () => {
+      setToggle(!isToggle);
+      return isToggle;
+    }, []);
+
+  const closeMenu = useCallback(
+    () => {
+      setToggle(false);
+    },[]);
+
   const [isOpen, setModalActive] = useState(false);
   const toggleModalActive = () => {
     setModalActive(!isOpen);
   }
 
   const clickOut = (e) => {
-    if (isToggle && refMenu && refMenu.current && !refMenu.current.contains(e.target))
-      {
-        closeMenu();
-      }
+    if (refMenu && refMenu.current && !refMenu.current.contains(e.target))
+    {
+      closeMenu();
+    }
   }
-  useEffect(() => {
-    document.addEventListener("click", clickOut, true);
-    return () => {
-      document.removeEventListener("click", clickOut, true);
-    };
-  });
+
+  useEffect(
+    () => {
+      document.addEventListener("click", clickOut);
+      return () => {
+        document.removeEventListener("click", clickOut);
+      };
+    }, []
+  );
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} turnOnMenu={openMenu} turnOffMenu={closeMenu} isToggle = {isToggle} />
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} turnOnMenu={closeOpenMenu} />
       <div className="dropdown_services_sticky" ref={refMenu}><DropdownServices isToggle = {isToggle} turnOffMenu={closeMenu} /></div>
       <Hero></Hero>
       <PhoneButn onClick={toggleModalActive}></PhoneButn>
