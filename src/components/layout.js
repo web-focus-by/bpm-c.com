@@ -47,6 +47,12 @@ const Layout = ({ children }) => {
   `)
   const refMenu = useRef();
   const [isToggle, setToggle] = useState(false, setToggle);
+  const openMenu = () => {
+    setToggle(true);
+  }
+  const closeMenu = () => {
+    setToggle(false);
+  }
   const [isOpen, setModalActive] = useState(false);
   const toggleModalActive = () => {
     setModalActive(!isOpen);
@@ -64,13 +70,6 @@ const Layout = ({ children }) => {
       document.removeEventListener("click", clickOut, true);
     };
   });
-
-  const openMenu = () => {
-    setToggle(true);
-  }
-  const closeMenu = () => {
-    setToggle(false);
-  }
 
   return (
     <>
