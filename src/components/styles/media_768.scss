@@ -115,6 +115,55 @@
         }
     }
 
+    .thanks_modal{
+        .thanks_modal_content{
+            .form{ 
+                grid-template-columns: 510px 100px;
+                padding: 30px 30px 230px 60px; 
+                background: url(../../images/purple_ball.svg) 103% 15% no-repeat, url(../../images/yellow_ball.svg) 66% 105% no-repeat;
+                background-size: 38%;
+                &__block{
+                    .form_block_text{
+                        b{
+                            display: none;
+                        }
+                        i{
+                            display: inline-block;
+                            font-style: normal;
+                        }
+                        p{
+                            font-size: 16px;
+                        }
+                        .form_block_gif{
+                            margin-left: 0px;
+                            img{
+                                width: 50px;
+                                height: 50px;
+                            }
+                        }
+                    }
+                   
+                    .form_block_title{
+                        font-size: 46px;
+                    }
+                    .form_block_modal_button{
+                        width: 33px;
+                        &::after{
+                            width: 33px;
+                        }
+                    }
+                }
+                .form_block_wrapper{
+                    form{
+                        .form_block_send{
+                            margin-top: 56px; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 
     .services {
         &__list {
@@ -617,6 +666,51 @@
     .form {
         padding: 80px calc(16px + (80 - 16) * ((100vw - 375px) / (768 - 375)));
         background-position: calc(15px + (170 + 15) * ((100vw - 375px) / (768 - 375))) 120px;
+    }
+
+    .thanks_modal{
+        .thanks_modal_content{
+            .form{ 
+                grid-template-columns: calc(341px + (550 - 341) * ((100vw - 375px) / (768 - 375))) calc(0px + (50 - 0) * ((100vw - 375px) / (768 - 375)));
+                padding: calc(18px + (30 - 18) * ((100vw - 375px) / (768 - 375))) calc(18px + (30 - 18) * ((100vw - 375px) / (768 - 375))) calc(209px + (230 - 209) * ((100vw - 375px) / (768 - 375))) calc(16px + (60 - 16) * ((100vw - 375px) / (768 - 375))); 
+                background: url(../../images/purple_ball.svg) 103% 15% no-repeat, url(../../images/yellow_ball.svg) 66% 105% no-repeat;
+                background-size: 38%;
+                &__block{
+                    &:first-child{
+                        margin-top: calc(60px + (40 - 60) * ((100vw - 375px) / (768 - 375)));
+                    }
+                    .form_block_text{
+                        display: inline-block;
+                        p{
+                            font-size: calc(15px + (16 - 15) * ((100vw - 375px) / (768 - 375)));
+                        }
+                        .form_block_gif{
+                            margin-left: 0px;
+                        }
+                        .form_block_gif{
+                            display: inline-block;
+                        }
+                    }
+                   
+                    .form_block_title{
+                        font-size: calc(42px + (46 - 42) * ((100vw - 375px) / (768 - 375)));
+                    }
+                    .form_block_modal_button{
+                        width: calc(31px + (33 - 31) * ((100vw - 375px) / (768 - 375)));
+                        &::after{
+                            width: calc(31px + (33 - 31) * ((100vw - 375px) / (768 - 375)));
+                        }
+                    }
+                }
+                .form_block_wrapper{
+                    form{
+                        .form_block_send{
+                            margin-top: calc(20px + (56 - 20) * ((100vw - 375px) / (768 - 375))); 
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .technologies {

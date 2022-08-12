@@ -66,6 +66,41 @@
   .modal__content .form {
     grid-template-columns: 575px 35px;
   }
+  .thanks_modal .thanks_modal_content .form {
+    grid-template-columns: 510px 100px;
+    padding: 30px 30px 230px 60px;
+    background: url(../../images/purple_ball.svg) 103% 15% no-repeat, url(../../images/yellow_ball.svg) 66% 105% no-repeat;
+    background-size: 38%;
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_text b {
+    display: none;
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_text i {
+    display: inline-block;
+    font-style: normal;
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_text p {
+    font-size: 16px;
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_text .form_block_gif {
+    margin-left: 0px;
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_text .form_block_gif img {
+    width: 50px;
+    height: 50px;
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_title {
+    font-size: 46px;
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_modal_button {
+    width: 33px;
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_modal_button::after {
+    width: 33px;
+  }
+  .thanks_modal .thanks_modal_content .form .form_block_wrapper form .form_block_send {
+    margin-top: 56px;
+  }
   .services__list {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
@@ -413,6 +448,39 @@
   .form {
     padding: 80px calc(16px + 64 * (100vw - 375px) / 393);
     background-position: calc(15px + 185 * (100vw - 375px) / 393) 120px;
+  }
+  .thanks_modal .thanks_modal_content .form {
+    grid-template-columns: calc(341px + 209 * (100vw - 375px) / 393) calc(0px + 50 * (100vw - 375px) / 393);
+    padding: calc(18px + 12 * (100vw - 375px) / 393) calc(18px + 12 * (100vw - 375px) / 393) calc(209px + 21 * (100vw - 375px) / 393) calc(16px + 44 * (100vw - 375px) / 393);
+    background: url(../../images/purple_ball.svg) 103% 15% no-repeat, url(../../images/yellow_ball.svg) 66% 105% no-repeat;
+    background-size: 38%;
+  }
+  .thanks_modal .thanks_modal_content .form__block:first-child {
+    margin-top: calc(60px + -20 * (100vw - 375px) / 393);
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_text {
+    display: inline-block;
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_text p {
+    font-size: calc(15px + 1 * (100vw - 375px) / 393);
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_text .form_block_gif {
+    margin-left: 0px;
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_text .form_block_gif {
+    display: inline-block;
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_title {
+    font-size: calc(42px + 4 * (100vw - 375px) / 393);
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_modal_button {
+    width: calc(31px + 2 * (100vw - 375px) / 393);
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_modal_button::after {
+    width: calc(31px + 2 * (100vw - 375px) / 393);
+  }
+  .thanks_modal .thanks_modal_content .form .form_block_wrapper form .form_block_send {
+    margin-top: calc(20px + 36 * (100vw - 375px) / 393);
   }
   .technologies__list {
     margin-left: calc(0px + -30 * (100vw - 530px) / 238);
