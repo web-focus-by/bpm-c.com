@@ -6,14 +6,15 @@
  */
 
 import * as React from "react"
+import { useState, useEffect, useRef } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Hero from "./hero"
 import Header from "./header"
 import ITCompany from "./it_company"
 import Portfolio from "./portfolio"
 import Form from "./form"
+import ThanksForm from "./thanks_form"
 import Services from "./services"
 import Technologies from "./technologies"
 import BPMCloud from "./bpm_cloud"
@@ -27,8 +28,9 @@ import LeadersChoice from "./leaders_choice"
 import Footer from "./footer"
 import PhoneButn from "./phone_butn"
 import Modal from "./modal"
+import ThanksModal from "./thanks_modal"
+import DropdownServices from "./dropdown_services"
 import "../components/styles/layout.css"
-import { useState, useRef, useEffect } from "react"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -43,22 +45,47 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  const refMenu = useRef();
+  const [isToggle, setToggle] = useState(false, setToggle);
   const [isOpen, setModalActive] = useState(false);
   const toggleModalActive = () => {
     setModalActive(!isOpen);
   }
 
+  const clickOut = (e) => {
+    if (isToggle && refMenu && refMenu.current && !refMenu.current.contains(e.target))
+      {
+        closeMenu();
+      }
+  }
+  useEffect(() => {
+    document.addEventListener("click", clickOut, true);
+    return () => {
+      document.removeEventListener("click", clickOut, true);
+    };
+  });
+
+  const openMenu = () => {
+    setToggle(true);
+  }
+  const closeMenu = () => {
+    setToggle(false);
+  }
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} turnOnMenu={openMenu} turnOffMenu={closeMenu} isToggle = {isToggle} />
+      <div className="dropdown_services_sticky" ref={refMenu}><DropdownServices isToggle = {isToggle} turnOffMenu={closeMenu} /></div>
       <Hero></Hero>
       <PhoneButn onClick={toggleModalActive}></PhoneButn>
       {isOpen? <Modal
         onClickClose={toggleModalActive}
       ></Modal> : null}
+      <ThanksModal></ThanksModal>
       <ITCompany></ITCompany>
       <Portfolio></Portfolio>
       <Form></Form>
+      <ThanksForm></ThanksForm>
       <Services></Services>
       <Technologies></Technologies>
       <BPMCloud></BPMCloud>
