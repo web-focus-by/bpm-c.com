@@ -29,13 +29,15 @@ const DropdownServices = ({ isToggle, turnOffMenu }) => {
   })
   if (isToggle) {
   return (
-    <div className="dropdown_services" >
+    <div className="dropdown_services_sticky">
+      <div className="dropdown_services">
         <div className="dropdown_services__title">Services</div>
         <div className="dropdown_services__info">
-            <ul>
-                {resultData}
-            </ul>
+          <ul>
+            {resultData}
+          </ul>
         </div>
+      </div>
     </div>
     )
   }
