@@ -12,7 +12,7 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 import gifUriy from "../images/uriy.gif"
 import gifKanu from "../images/kanu.gif"
-import gifVlada from "../images/vlada.png"
+import gifVlada from "../images/vlada.gif"
 
 const Modal = ({onClickClose}) => {
   //const ref = useRef();

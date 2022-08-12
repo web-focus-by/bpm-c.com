@@ -4,6 +4,29 @@
   }
 }
 @media (min-width: 1366px) and (max-width: 1920px) {
+  .dropdown_services_sticky {
+    top: calc(85px + 15 * (100vw - 1366px) / 554);
+  }
+  .dropdown_services_sticky .dropdown_services {
+    left: 16.5%;
+  }
+  .dropdown_services_sticky .dropdown_services__title {
+    font-size: calc(21px + 9 * (100vw - 1366px) / 554);
+    padding: calc(44px + 16 * (100vw - 1366px) / 554) calc(120px + 50 * (100vw - 1366px) / 554) 0px calc(40px + 20 * (100vw - 1366px) / 554);
+  }
+  .dropdown_services_sticky .dropdown_services__info {
+    background: #fff;
+    padding: calc(40px + 20 * (100vw - 1366px) / 554) calc(156px + 63 * (100vw - 1366px) / 554) calc(83px + 42 * (100vw - 1366px) / 554) calc(72px + 28 * (100vw - 1366px) / 554);
+  }
+  .dropdown_services_sticky .dropdown_services__info ul {
+    grid-column-gap: calc(39px + 18 * (100vw - 1366px) / 554);
+  }
+  .dropdown_services_sticky .dropdown_services__info ul li:not(:last-child) {
+    margin-bottom: calc(7px + 9 * (100vw - 1366px) / 554);
+  }
+  .dropdown_services_sticky .dropdown_services__info ul li a {
+    font-size: calc(13px + 5 * (100vw - 1366px) / 554);
+  }
   .it_company {
     margin-top: calc(220px + 88 * (100vw - 1366px) / 554);
   }
@@ -52,7 +75,11 @@
   .phone_butn .phone {
     width: calc(114px + 46 * (100vw - 1366px) / 554);
     height: calc(114px + 46 * (100vw - 1366px) / 554);
-    background-size: cover;
+    background-size: contain;
+  }
+  .phone_butn .phone:hover {
+    width: calc(114px + 46 * (100vw - 1366px) / 554);
+    height: calc(114px + 46 * (100vw - 1366px) / 554);
   }
   .phone_butn span {
     width: calc(38px + 15 * (100vw - 1366px) / 554);
@@ -125,6 +152,31 @@
     font-size: calc(10px + 4 * (100vw - 1366px) / 554);
     max-width: calc(178px + 72 * (100vw - 1366px) / 554);
   }
+  .thanks_modal .thanks_modal_content .form {
+    grid-template-columns: calc(525px + 110 * (100vw - 1366px) / 554) calc(230px + 195 * (100vw - 1366px) / 554);
+    padding: calc(28px + 12 * (100vw - 1366px) / 554) calc(28px + 12 * (100vw - 1366px) / 554) calc(218px + 112 * (100vw - 1366px) / 554) calc(56px + 24 * (100vw - 1366px) / 554);
+    background: url(../../images/purple_ball.svg) 90% 15% no-repeat, url(../../images/yellow_ball.svg) 50% 105% no-repeat;
+    background-size: 35%;
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_text p {
+    font-size: calc(11px + 5 * (100vw - 1366px) / 554);
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_text .form_block_gif {
+    margin-left: calc(11px + 5 * (100vw - 1366px) / 554);
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_text .form_block_gif img {
+    width: calc(25px + 11 * (100vw - 1366px) / 554 + 14 * (100vw - 1366px) / 554);
+    height: calc(25px + 11 * (100vw - 1366px) / 554 + 14 * (100vw - 1366px) / 554);
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_text .form_block_gif img:not(:first-child) {
+    margin-left: -10px;
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_modal_button {
+    width: calc(24px + 10 * (100vw - 1366px) / 554);
+  }
+  .thanks_modal .thanks_modal_content .form__block .form_block_modal_button::after {
+    width: calc(24px + 10 * (100vw - 1366px) / 554);
+  }
   .button_black {
     border: 1px solid #fff;
     border-radius: calc(57px + 23 * (100vw - 1366px) / 554);
@@ -151,9 +203,6 @@
   }
   .services__list .services_list_item a {
     font-size: calc(14px + 6 * (100vw - 1366px) / 554);
-  }
-  .services__list .services_list_item:hover {
-    background-position: 70% calc(45px + 35 * (100vw - 1366px) / 554);
   }
   .react {
     width: calc(61px + 25 * (100vw - 1366px) / 554);
@@ -229,6 +278,7 @@
   }
   .technologies__list {
     grid-row-gap: calc(25px + 9 * (100vw - 1366px) / 554);
+    margin-left: calc(-47px + -17 * (100vw - 1366px) / 554);
   }
   .bpm_cloud__info .bpm_cloud_block .bpm_cloud_block_title {
     font-size: calc(21px + 9 * (100vw - 1366px) / 554);
@@ -436,4 +486,4 @@
     padding: calc(30px + 10 * (100vw - 768px) / 1152) calc(30px + 10 * (100vw - 768px) / 1152) calc(60px + 40 * (100vw - 768px) / 1152) calc(60px + 20 * (100vw - 768px) / 1152);
     grid-template-columns: calc(575px + 30 * (100vw - 768px) / 1152) calc(35px + 420 * (100vw - 768px) / 1152);
   }
-}/*# sourceMappingURL=media_1920.css.map */
+}
