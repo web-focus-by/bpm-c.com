@@ -78,13 +78,11 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 100px;
-  display: none;
 }
 .dropdown_services_sticky .dropdown_services {
   display: flex;
   position: absolute;
   left: 16.5%;
-  background: red;
 }
 .dropdown_services_sticky .dropdown_services__title {
   font-family: "Acrom";

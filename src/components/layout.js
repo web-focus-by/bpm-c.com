@@ -75,7 +75,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} turnOnMenu={openMenu} turnOffMenu={closeMenu} isToggle = {isToggle} />
-      <div ref={refMenu}><DropdownServices isToggle = {isToggle} turnOffMenu={closeMenu} /></div>
+      <div className="dropdown_services_sticky" ref={refMenu}><DropdownServices isToggle = {isToggle} turnOffMenu={closeMenu} /></div>
       <Hero></Hero>
       <PhoneButn onClick={toggleModalActive}></PhoneButn>
       {isOpen? <Modal

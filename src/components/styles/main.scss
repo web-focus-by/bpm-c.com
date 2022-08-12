@@ -89,12 +89,10 @@ body {
 .dropdown_services_sticky{
     position: sticky;
     top: 100px;
-    display: none;
     .dropdown_services{
         display: flex;
         position: absolute;
         left: 16.5%;
-        background: red;
         &__title{
             font-family: 'Acrom';
             font-weight: 500;
