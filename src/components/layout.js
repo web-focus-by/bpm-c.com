@@ -48,16 +48,13 @@ const Layout = ({ children }) => {
   const refMenu = useRef();
   const [isToggle, setToggle] = useState(false);
 
-  const closeOpenMenu = useCallback(
-    () => {
-      setToggle(!isToggle);
-      return isToggle;
-    }, []);
+  const closeOpenMenu = () => {
+    setToggle(!isToggle);
+  }
 
-  const closeMenu = useCallback(
-    () => {
-      setToggle(false);
-    },[]);
+  const closeMenu = () => {
+    setToggle(false);
+  }
 
   const [isOpen, setModalActive] = useState(false);
   const toggleModalActive = () => {
@@ -73,22 +70,20 @@ const Layout = ({ children }) => {
 
   useEffect(
     () => {
-      document.addEventListener("click", clickOut);
+      document.addEventListener("click", clickOut, true);
       return () => {
-        document.removeEventListener("click", clickOut);
+        document.removeEventListener("click", clickOut, true);
       };
-    }, []
+    }, [isToggle]
   );
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} turnOnMenu={closeOpenMenu} />
-      <div className="dropdown_services_sticky" ref={refMenu}><DropdownServices isToggle = {isToggle} turnOffMenu={closeMenu} /></div>
+      <div className="header" ref={refMenu}><Header siteTitle={data.site.siteMetadata?.title || `Title`} turnOnMenu={closeOpenMenu} />
+      <div className="dropdown_services_sticky"><DropdownServices isToggle = {isToggle} turnOffMenu={closeMenu} /></div></div>
       <Hero></Hero>
       <PhoneButn onClick={toggleModalActive}></PhoneButn>
-      {isOpen? <Modal
-        onClickClose={toggleModalActive}
-      ></Modal> : null}
+      {isOpen? <Modal onClickClose={toggleModalActive}></Modal> : null}
       <ThanksModal></ThanksModal>
       <ITCompany></ITCompany>
       <Portfolio></Portfolio>

@@ -30,22 +30,22 @@ const Header = ({ siteTitle, turnOnMenu }) => {
             <div className="header_nav_list" ref={refHeader} >
               <ul>
                 <li key="idPortfolioMenu" onClick={ activeMenu }>
-                  <a href="#">Portfolio</a>
+                  <a>Portfolio</a>
                 </li>
                 <li key="idServicesMenu" onClick={ activeMenu }>
-                  <a href="#">Services</a>
+                  <a>Services</a>
                 </li>
                 <li key="idTechnologiesMenu" onClick={ activeMenu }>
-                  <a href="#">Technologies</a>
+                  <a>Technologies</a>
                 </li>
                 <li key="idSolutionsMenu" onClick={ activeMenu }>
-                  <a href="#">Solutions</a>
+                  <a>Solutions</a>
                 </li>
                 <li key="idIndustriesMenu" onClick={ activeMenu }>
-                  <a href="#">Industries</a>
+                  <a>Industries</a>
                 </li>
                 <li key="idAboutMenu" onClick={ activeMenu }>
-                  <a href="#">About us</a>
+                  <a>About us</a>
                 </li>
               </ul>
             </div>
