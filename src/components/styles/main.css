@@ -43,6 +43,7 @@ body {
 }
 .header__nav .header_nav_list ul li a:hover {
   color: #935CFF;
+  cursor: pointer;
 }
 
 .burger {
