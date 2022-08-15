@@ -19,7 +19,7 @@ const DropdownServices = ({ isToggle, turnOffMenu }) => {
     "Desktop App Development","PPC Advertasing","UX/UI Services","SMM","Testing and QA",
     "Landing page development","Web application design","Marketplace development","UI/UX mobile app design"
   ]
-  const [isOpenPoint, setOpenPoint] = useState(false, setOpenPoint);
+  const [isOpenPoint, setOpenPoint] = useState(false);
   const closeMenu = () =>{
     setOpenPoint(!isOpenPoint);
     turnOffMenu();
