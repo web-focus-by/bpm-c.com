@@ -920,7 +920,7 @@ body {
 }
 @-webkit-keyframes header_circle_yellowleft {
   0% {
-    left: 20%;
+    left: 10%;
   }
   100% {
     left: 60%;
@@ -928,7 +928,7 @@ body {
 }
 @keyframes header_circle_yellowleft {
   0% {
-    left: 20%;
+    left: 10%;
   }
   100% {
     left: 60%;
@@ -952,7 +952,7 @@ body {
 @-webkit-keyframes header_circle_pink {
   0% {
     top: 60%;
-    left: 20%;
+    left: 60%;
   }
   50% {
     transform: rotate(360deg);
@@ -962,14 +962,14 @@ body {
   }
   100% {
     top: 60%;
-    left: 20%;
+    left: 60%;
   }
 }
 
 @keyframes header_circle_pink {
   0% {
     top: 60%;
-    left: 20%;
+    left: 60%;
   }
   50% {
     transform: rotate(360deg);
@@ -979,12 +979,12 @@ body {
   }
   100% {
     top: 60%;
-    left: 20%;
+    left: 60%;
   }
 }
 @-webkit-keyframes header_circle_pinkleft {
   0% {
-    left: 20%;
+    left: 10%;
   }
   100% {
     left: 60%;
@@ -992,7 +992,7 @@ body {
 }
 @keyframes header_circle_pinkleft {
   0% {
-    left: 20%;
+    left: 10%;
   }
   100% {
     left: 60%;
@@ -1005,8 +1005,8 @@ body {
   left: 915px;
   top: 50px;
   border-radius: 100%;
-  -webkit-animation: header_circle_purple 8s linear infinite, header_circle_purpleright 6s linear infinite alternate;
-          animation: header_circle_purple 8s linear infinite, header_circle_purpleright 6s linear infinite alternate;
+  -webkit-animation: header_circle_purple 8s linear infinite, header_circle_purpleleft 6s linear infinite alternate;
+          animation: header_circle_purple 8s linear infinite, header_circle_purpleleft 6s linear infinite alternate;
   /* Purple gradient desktop */
   background: radial-gradient(50% 50% at 50% 50%, rgba(143, 114, 226, 0.6) 0%, rgba(135, 130, 224, 0.6) 0%, rgba(144, 139, 237, 0.6) 0.01%, rgba(143, 114, 226, 0.48) 100%);
   filter: blur(80px);
@@ -1016,7 +1016,7 @@ body {
 @-webkit-keyframes header_circle_purple {
   0% {
     bottom: 80%;
-    right: 50%;
+    left: 60%;
   }
   50% {
     transform: rotate(360deg);
@@ -1026,14 +1026,14 @@ body {
   }
   100% {
     bottom: 80%;
-    right: 50%;
+    left: 60%;
   }
 }
 
 @keyframes header_circle_purple {
   0% {
     bottom: 80%;
-    right: 50%;
+    left: 60%;
   }
   50% {
     transform: rotate(360deg);
@@ -1043,22 +1043,22 @@ body {
   }
   100% {
     bottom: 80%;
-    right: 50%;
+    left: 60%;
   }
 }
-@-webkit-keyframes header_circle_purpleright {
+@-webkit-keyframes header_circle_purpleleft {
   0% {
-    right: 10%;
+    left: 10%;
   }
   100% {
-    right: 50%;
+    left: 60%;
   }
 }
-@keyframes header_circle_purpleright {
+@keyframes header_circle_purpleleft {
   0% {
-    right: 10%;
+    left: 10%;
   }
   100% {
-    right: 50%;
+    left: 60%;
   }
-}
+}/*# sourceMappingURL=main.css.map */
