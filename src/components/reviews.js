@@ -16,7 +16,7 @@ import "../components/styles/media_375.css"
 
 const Reviews = ({ siteTitle, data }) => {
   //const [dataText] = useState(data);
-  const dataText = [
+  const dataText = [ // temporary data
     {
       id: "slide_1",
       description:
@@ -92,15 +92,15 @@ const Reviews = ({ siteTitle, data }) => {
             breakpoints={{
               1920: {
                 width: 1920,
-                allowTouchMove: false,
+                allowTouchMove: true,
               },
               1366: {
                 width: 1366,
-                allowTouchMove: false,
+                allowTouchMove: true,
               },
               1025: {
                 width: 1025,
-                allowTouchMove: false,
+                allowTouchMove: true,
               },
               1024: {
                 width: 1366,
