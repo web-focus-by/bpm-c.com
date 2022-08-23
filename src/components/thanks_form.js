@@ -22,9 +22,9 @@ const ThanksForm = ({ siteTitle }) => (
         <div className="form_block_text">
           <p>Write to us, Yuri, Kanu or Vlada will contact you</p>
           <div className="form_block_gif">
-            <img src={gifUriy} />
-            <img src={gifKanu} />
-            <img src={gifVlada} />
+            <img src={ gifUriy } />
+            <img src={ gifKanu } />
+            <img src={ gifVlada } />
           </div>
         </div>
         <div className="form_block_wrapper">

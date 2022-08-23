@@ -25,7 +25,7 @@ const DropdownServices = ({ isToggle, turnOffMenu }) => {
     turnOffMenu();
   }
   const resultData = data.map((value, index) => {
-    return <li key={index} onClick={ closeMenu }><a href="#">{value}</a></li>
+    return <li key={ index } onClick={ closeMenu }><a href="#">{value}</a></li>
   })
   if (isToggle) {
   return (
@@ -34,7 +34,7 @@ const DropdownServices = ({ isToggle, turnOffMenu }) => {
         <div className="dropdown_services__title">Services</div>
         <div className="dropdown_services__info">
           <ul>
-            {resultData}
+            { resultData }
           </ul>
         </div>
       </div>

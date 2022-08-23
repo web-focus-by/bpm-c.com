@@ -28,7 +28,7 @@ const Portfolio = ({ siteTitle }) => (
       <div className="portfolio__products">
         <div className="portfolio_products_block">
           <div className="portfolio_products_block_pic">
-            <img src={imgLaptop} />
+            <img src={ imgLaptop } />
           </div>
           <div className="portfolio_products_block_list hash">
             <ul className="hash__list">
@@ -50,7 +50,7 @@ const Portfolio = ({ siteTitle }) => (
         </div>
         <div className="portfolio_products_block">
           <div className="portfolio_products_block_pic">
-            <img src={imgView} />
+            <img src={ imgView } />
           </div>
           <div className="portfolio_products_block_list hash">
             <ul className="hash__list">
@@ -72,7 +72,7 @@ const Portfolio = ({ siteTitle }) => (
         </div>
         <div className="portfolio_products_block">
           <div className="portfolio_products_block_pic">
-            <img src={imgCadr} />
+            <img src={ imgCadr } />
           </div>
           <div className="portfolio_products_block_list hash">
             <ul className="hash__list">
@@ -94,7 +94,7 @@ const Portfolio = ({ siteTitle }) => (
         </div>
         <div className="portfolio_products_block">
           <div className="portfolio_products_block_pic">
-            <img src={imgPlane} />
+            <img src={ imgPlane } />
           </div>
           <div className="portfolio_products_block_list hash">
             <ul className="hash__list">
@@ -116,7 +116,7 @@ const Portfolio = ({ siteTitle }) => (
         </div>
         <div className="portfolio_products_block">
           <div className="portfolio_products_block_pic">
-            <img src={imgChisto} />
+            <img src={ imgChisto } />
           </div>
           <div className="portfolio_products_block_list hash">
             <ul className="hash__list">
@@ -138,7 +138,7 @@ const Portfolio = ({ siteTitle }) => (
         </div>
         <div className="portfolio_products_block">
           <div className="portfolio_products_block_pic">
-            <img src={imgLaptop} />
+            <img src={ imgLaptop } />
           </div>
           <div className="portfolio_products_block_list hash">
             <ul className="hash__list">
