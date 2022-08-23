@@ -27,7 +27,7 @@ const Header = ({ siteTitle, turnOnMenu }) => {
                 <span className="logo"></span>
               </a>
             </div>
-            <div className="header_nav_list" ref={refHeader} >
+            <div className="header_nav_list" ref={ refHeader } >
               <ul>
                 <li key="idPortfolioMenu" onClick={ activeMenu }>
                   <a>Portfolio</a>

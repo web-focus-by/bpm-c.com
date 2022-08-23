@@ -28,17 +28,17 @@ const Modal = ({onClickClose}) => {
  
   return(
     <React.Fragment>
-    <div className="modal" onClick={clickOut} ref={refOutside}>
-      <div className="modal__content" ref={refInside}>
+    <div className="modal" onClick={ clickOut } ref={ refOutside }>
+      <div className="modal__content" ref={ refInside }>
         <div className="form">
           <div className="form__block">
             <div className="form_block_title title_62">Get in touch</div>
             <div className="form_block_text">
               <p>Write to us, Yuri, Kanu or Vlada will contact you</p>
               <div className="form_block_gif">
-                <img src={gifUriy} />
-                <img src={gifKanu} />
-                <img src={gifVlada} />
+                <img src={ gifUriy } />
+                <img src={ gifKanu } />
+                <img src={ gifVlada } />
               </div>
             </div>
             <div className="form_block_wrapper">
