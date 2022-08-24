@@ -216,6 +216,18 @@
         margin-bottom: calc(100px + (120 - 100) * ((100vw - 768px) / (1024 - 768)));
     }
 
+    .margin_240_black {
+        margin-bottom: calc(100px + (120 - 100) * ((100vw - 768px) / (1024 - 768)));
+        margin-left: 40px;
+        margin-right: 40px;
+        transition: transform 2s;
+
+        &__change {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
     .header {
         &__nav {
             .logo {

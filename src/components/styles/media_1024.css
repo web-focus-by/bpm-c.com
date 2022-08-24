@@ -125,6 +125,16 @@
   .margin_bottom_240 {
     margin-bottom: calc(100px + 20 * (100vw - 768px) / 256);
   }
+  .margin_240_black {
+    margin-bottom: calc(100px + 20 * (100vw - 768px) / 256);
+    margin-left: 40px;
+    margin-right: 40px;
+    transition: transform 2s;
+  }
+  .margin_240_black__change {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .header__nav .logo {
     width: calc(110px + -10 * (100vw - 768px) / 256);
     height: calc(36px + -4 * (100vw - 768px) / 256);
@@ -334,4 +344,4 @@
   .thanks_form .thanks_form_block .form_block_title {
     margin-bottom: 49px;
   }
-}
+}/*# sourceMappingURL=media_1024.css.map */

@@ -787,6 +787,17 @@
     .margin_bottom_240 {
         margin-bottom: calc(120px + (170 - 120) * ((100vw - 1024px) / (1366 - 1024)));
     }
+    .margin_240_black {
+        margin-bottom: calc(120px + (170 - 120) * ((100vw - 1024px) / (1366 - 1024)));
+        margin-left: calc(40px + (157 - 40) * ((100vw - 1024px) / (1366 - 1024)));
+        margin-right: calc(40px + (157 - 40) * ((100vw - 1024px) / (1366 - 1024)));
+        transition: transform 2s;
+
+        &__change {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
 
     .form {
         padding: 71px calc(62px + (89 - 62) * ((100vw - 1024px) / (1366 - 1024))) 71px calc(40px + (70 - 40) * ((100vw - 1024px) / (1366 - 1024)));

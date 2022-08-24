@@ -34,6 +34,18 @@
         margin-bottom: 80px;
     }
 
+    .margin_240_black {
+        margin-bottom: 80px;
+        margin-left: 16px;
+        margin-right: 16px;
+        transition: transform 2s;
+
+        &__change {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
     .portfolio {
         &__products {
             grid-template-columns: 1fr;

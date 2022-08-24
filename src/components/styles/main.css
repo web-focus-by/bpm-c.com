@@ -694,6 +694,11 @@ body {
   background-position: 71% 30%;
   color: #fff;
 }
+.service_package__backgroundColor {
+  background: #1A1B1F;
+  border-radius: 40px;
+  padding: 180px 33px;
+}
 .service_package__title {
   color: #fff !important;
 }

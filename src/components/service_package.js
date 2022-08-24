@@ -13,9 +13,9 @@ import "../components/styles/media_375.css"
 
 const ServicePackage = ({ siteTitle }) => {
   return (
-  <div className="black_bg margin_bottom_240">
+  <div className="margin_bottom_240">
     <div className="container">
-      <div className="service_package">
+      <div className="service_package__backgroundColor service_package">
         <div className="service_package__title title_62">
           Web studio «BPM CLOUD»
           <br /> service package

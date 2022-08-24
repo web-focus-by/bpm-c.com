@@ -856,6 +856,12 @@ body {
     background: url(../../images/gradient_package.svg) no-repeat;
     background-position: 71% 30%;
 
+    &__backgroundColor{
+        background: #1A1B1F;
+        border-radius: 40px;
+        padding: 180px 33px;
+    }
+
     &__title {
         color: #fff !important;
     }

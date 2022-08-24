@@ -535,6 +535,16 @@
   .margin_bottom_240 {
     margin-bottom: calc(120px + 50 * (100vw - 1024px) / 342);
   }
+  .margin_240_black {
+    margin-bottom: calc(120px + 50 * (100vw - 1024px) / 342);
+    margin-left: calc(40px + 117 * (100vw - 1024px) / 342);
+    margin-right: calc(40px + 117 * (100vw - 1024px) / 342);
+    transition: transform 2s;
+  }
+  .margin_240_black__change {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .form {
     padding: 71px calc(62px + 27 * (100vw - 1024px) / 342) 71px calc(40px + 30 * (100vw - 1024px) / 342);
   }
@@ -594,4 +604,4 @@
   .leaders_choice_tagline {
     margin: calc(178px + 52 * (100vw - 1024px) / 342) 0px;
   }
-}
+}/*# sourceMappingURL=media_1366.css.map */

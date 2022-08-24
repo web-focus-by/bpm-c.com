@@ -653,6 +653,18 @@
         margin-bottom: calc(80px + (100 - 80) * ((100vw - 375px) / (768 - 375)));
     }
 
+    .margin_240_black {
+        margin-bottom: calc(80px + (100 - 80) * ((100vw - 375px) / (768 - 375)));
+        margin-left: calc(16px + (40 - 16) * ((100vw - 375px) / (768 - 375)));
+        margin-right: calc(16px + (40 - 16) * ((100vw - 375px) / (768 - 375)));
+        transition: transform 2s;
+
+        &__change {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
     .portfolio {
         &__products {
             .portfolio_products_block {
