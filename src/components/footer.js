@@ -22,10 +22,13 @@ const Footer = ({ siteTitle }) => (
       <div className="footer__contacts">
         <ul>
           <li>
-            <a href="#">info@bpm-c.com</a>
+            <a>hello@bpm-c.com</a>
           </li>
           <li>
-            <a href="#">+ 375 29 715 05 86</a>
+            <a>USA + 1 929 547 9159</a>
+          </li>
+          <li>
+            <a>Canada + 1 647 493 9093</a>
           </li>
         </ul>
       </div>
