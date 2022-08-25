@@ -694,6 +694,11 @@ body {
   background-position: 71% 30%;
   color: #fff;
 }
+.service_package__backgroundColor {
+  background: #1A1B1F;
+  border-radius: 40px;
+  padding: 180px 33px;
+}
 .service_package__title {
   color: #fff !important;
 }
@@ -767,6 +772,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .leaders_choice_tagline__block {
   display: flex;
@@ -796,6 +802,190 @@ body {
 }
 .leaders_choice_tagline__butn button span {
   margin-left: 14px;
+}
+.leaders_choice_tagline .footer_circle_yellow {
+  position: absolute;
+  width: 534.48px;
+  height: 534.48px;
+  left: 1153.41px;
+  top: 0px;
+  border-radius: 100%;
+  -webkit-animation: footer_circle_yellow 10s linear infinite, footer_circle_yellowleft 6s linear infinite alternate;
+          animation: footer_circle_yellow 10s linear infinite, footer_circle_yellowleft 6s linear infinite alternate;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 215, 113, 0.8) 0%, rgba(255, 215, 113, 0.464) 100%);
+  filter: blur(80px);
+  z-index: -1;
+}
+@-webkit-keyframes footer_circle_yellow {
+  0% {
+    bottom: 50%;
+    left: 60%;
+  }
+  50% {
+    transform: rotate(360deg);
+    bottom: 10px;
+    width: 534.48px;
+    height: 534.48px;
+  }
+  100% {
+    bottom: 50%;
+    left: 60%;
+  }
+}
+@keyframes footer_circle_yellow {
+  0% {
+    bottom: 50%;
+    left: 60%;
+  }
+  50% {
+    transform: rotate(360deg);
+    bottom: 10px;
+    width: 534.48px;
+    height: 534.48px;
+  }
+  100% {
+    bottom: 50%;
+    left: 60%;
+  }
+}
+@-webkit-keyframes footer_circle_yellowleft {
+  0% {
+    left: 10%;
+  }
+  100% {
+    left: 60%;
+  }
+}
+@keyframes footer_circle_yellowleft {
+  0% {
+    left: 10%;
+  }
+  100% {
+    left: 60%;
+  }
+}
+.leaders_choice_tagline .footer_circle_pink {
+  position: absolute;
+  width: 534.48px;
+  height: 534.48px;
+  left: 935.33px;
+  top: 0px;
+  border-radius: 100%;
+  -webkit-animation: footer_circle_pink 8s linear infinite, footer_circle_pinkleft 6s linear infinite alternate;
+          animation: footer_circle_pink 8s linear infinite, footer_circle_pinkleft 6s linear infinite alternate;
+  /* Pink gradient desktop */
+  background: radial-gradient(50% 50% at 50% 50%, rgba(243, 159, 191, 0.8) 0%, rgba(243, 159, 191, 0.8) 100%);
+  filter: blur(80px);
+  z-index: -1;
+}
+@-webkit-keyframes footer_circle_pink {
+  0% {
+    top: 60%;
+    left: 60%;
+  }
+  50% {
+    transform: rotate(360deg);
+    top: 0px;
+    width: 534.48px;
+    height: 534.48px;
+  }
+  100% {
+    top: 60%;
+    left: 60%;
+  }
+}
+@keyframes footer_circle_pink {
+  0% {
+    top: 60%;
+    left: 60%;
+  }
+  50% {
+    transform: rotate(360deg);
+    top: 0px;
+    width: 534.48px;
+    height: 534.48px;
+  }
+  100% {
+    top: 60%;
+    left: 60%;
+  }
+}
+@-webkit-keyframes footer_circle_pinkleft {
+  0% {
+    left: 10%;
+  }
+  100% {
+    left: 60%;
+  }
+}
+@keyframes footer_circle_pinkleft {
+  0% {
+    left: 10%;
+  }
+  100% {
+    left: 60%;
+  }
+}
+.leaders_choice_tagline .footer_circle_purple {
+  position: absolute;
+  width: 534.48px;
+  height: 534.48px;
+  left: 915px;
+  top: 0px;
+  border-radius: 100%;
+  -webkit-animation: footer_circle_purple 8s linear infinite, footer_circle_purpleleft 6s linear infinite alternate;
+          animation: footer_circle_purple 8s linear infinite, footer_circle_purpleleft 6s linear infinite alternate;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(143, 114, 226, 0.6) 0%, rgba(135, 130, 224, 0.6) 0%, rgba(144, 139, 237, 0.6) 0.01%, rgba(143, 114, 226, 0.48) 100%);
+  filter: blur(80px);
+  z-index: -1;
+}
+@-webkit-keyframes footer_circle_purple {
+  0% {
+    bottom: 80%;
+    left: 60%;
+  }
+  50% {
+    transform: rotate(360deg);
+    bottom: 10px;
+    width: 534.48px;
+    height: 534.48px;
+  }
+  100% {
+    bottom: 80%;
+    left: 60%;
+  }
+}
+@keyframes footer_circle_purple {
+  0% {
+    bottom: 80%;
+    left: 60%;
+  }
+  50% {
+    transform: rotate(360deg);
+    bottom: 10px;
+    width: 534.48px;
+    height: 534.48px;
+  }
+  100% {
+    bottom: 80%;
+    left: 60%;
+  }
+}
+@-webkit-keyframes footer_circle_purpleleft {
+  0% {
+    left: 10%;
+  }
+  100% {
+    left: 60%;
+  }
+}
+@keyframes footer_circle_purpleleft {
+  0% {
+    left: 10%;
+  }
+  100% {
+    left: 60%;
+  }
 }
 
 .footer {
