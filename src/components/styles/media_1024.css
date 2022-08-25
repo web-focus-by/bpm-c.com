@@ -129,11 +129,7 @@
     margin-bottom: calc(100px + 20 * (100vw - 768px) / 256);
     margin-left: 40px;
     margin-right: 40px;
-    transition: transform 2s;
-  }
-  .margin_240_black__change {
-    margin-left: 0px;
-    margin-right: 0px;
+    transition: margin-right 1s, margin-left 1s;
   }
   .header__nav .logo {
     width: calc(110px + -10 * (100vw - 768px) / 256);

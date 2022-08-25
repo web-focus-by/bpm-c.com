@@ -38,12 +38,7 @@
         margin-bottom: 80px;
         margin-left: 16px;
         margin-right: 16px;
-        transition: transform 2s;
-
-        &__change {
-            margin-left: 0px;
-            margin-right: 0px;
-        }
+        transition:  margin-right 1s, margin-left 1s;
     }
 
     .portfolio {

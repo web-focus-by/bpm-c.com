@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useRef, useEffect, useState } from "react"
+import { useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 //import { Link } from "gatsby"
 import "../components/styles/main.css"
@@ -14,33 +14,41 @@ import "../components/styles/media_375.css"
 
 const Advantages = ({ siteTitle }) => {
   const advantages = useRef();
-  let isChangeSize = false;
+  const element = '';
+  const cssObj = '';
+  const cssObjMarginLeft = '';
+  const cssObjMarginRight = '';
   const resizeBlock = () => {
-    const lastKnownPositionBlock = advantages.current.offsetTop - advantages.current.offsetHeight;
+    //console.log(advantages);
+    const lastKnownPositionBlock = advantages.current ?
+      advantages.current.offsetTop - advantages.current.offsetHeight :
+      0;
     let lastKnownScrollPosition = window.scrollY;
     let difference = lastKnownScrollPosition - lastKnownPositionBlock;
     if (difference > 250 && difference < 1000) {
-      isChangeSize = true;
-      //advantages.current.className = 'black_bg margin_240_black' + ' margin_240_black__change';
-    } else {
-      isChangeSize = false;
-     // advantages.current.className = 'black_bg margin_240_black'
+      document.getElementById("margin_240_black").style.setProperty('margin-left', '0px');
+      document.getElementById("margin_240_black").style.setProperty('margin-right', '0px');
     }
-    console.log(advantages);
-    console.log('Our diff ' + difference);
+    else {
+      document.getElementById("margin_240_black").style.setProperty('margin-left', cssObjMarginLeft);
+      document.getElementById("margin_240_black").style.setProperty('margin-right', cssObjMarginRight);
+    }
   }
 
   useEffect(
     () => {
       document.addEventListener("scroll", resizeBlock, true);
       return () => {
+        element = document.getElementById("margin_240_black");
+        cssObj = window.getComputedStyle(element);
+        cssObjMarginLeft = cssObj.getPropertyValue("margin-left");
+        cssObjMarginRight = cssObj.getPropertyValue("margin-right");
         document.removeEventListener("scroll", resizeBlock, true);
       };
     }, []
   );
-  //style={ { isChangeSize } ? { "margin-left": "0px", "margin-right": "0px" } : null }
   return (
-    <div ref={ advantages } className="black_bg margin_240_black" >
+    <div ref={ advantages } id="margin_240_black" className="margin_240_black black_bg">
       <div className="container">
         <div className="advantages">
           <div className="advantages__title title_62">
@@ -74,8 +82,6 @@ const Advantages = ({ siteTitle }) => {
       </div>
     </div>
     )
-
-
   }
 
 Advantages.propTypes = {

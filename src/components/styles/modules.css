@@ -87,7 +87,7 @@
   margin-bottom: 240px;
   margin-left: 220px;
   margin-right: 220px;
-  transition: transform 2s;
+  transition: margin-right 1s, margin-left 1s;
 }
 
 .view_title {

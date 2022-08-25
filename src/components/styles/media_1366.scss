@@ -791,12 +791,7 @@
         margin-bottom: calc(120px + (170 - 120) * ((100vw - 1024px) / (1366 - 1024)));
         margin-left: calc(40px + (157 - 40) * ((100vw - 1024px) / (1366 - 1024)));
         margin-right: calc(40px + (157 - 40) * ((100vw - 1024px) / (1366 - 1024)));
-        transition: transform 2s;
-
-        &__change {
-            margin-left: 0px;
-            margin-right: 0px;
-        }
+        transition:  margin-right 1s, margin-left 1s;
     }
 
     .form {

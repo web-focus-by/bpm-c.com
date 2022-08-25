@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import "../components/styles/main.css"
@@ -12,10 +13,43 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const ServicePackage = ({ siteTitle }) => {
+  const servicePackage = useRef();
+  const element = '';
+  const cssObj = '';
+  const cssObjMarginLeft = '';
+  const cssObjMarginRight = '';
+  const resizeBlock = () => {
+    const lastKnownPositionBlock = servicePackage.current ?
+    servicePackage.current.offsetTop - servicePackage.current.offsetHeight :
+      0;
+    let lastKnownScrollPosition = window.scrollY;
+    let difference = lastKnownScrollPosition - lastKnownPositionBlock;
+    if (difference > 900 && difference < 2500) {
+      document.getElementById("margin_240_black_second").style.setProperty('margin-left', '0px');
+      document.getElementById("margin_240_black_second").style.setProperty('margin-right', '0px');
+    }
+    else {
+      document.getElementById("margin_240_black_second").style.setProperty('margin-left', cssObjMarginLeft);
+      document.getElementById("margin_240_black_second").style.setProperty('margin-right', cssObjMarginRight);
+    }
+  }
+
+  useEffect(
+    () => {
+      document.addEventListener("scroll", resizeBlock, true);
+      return () => {
+        element = document.getElementById("margin_240_black");
+        cssObj = window.getComputedStyle(element);
+        cssObjMarginLeft = cssObj.getPropertyValue("margin-left");
+        cssObjMarginRight = cssObj.getPropertyValue("margin-right");
+        document.removeEventListener("scroll", resizeBlock, true);
+      };
+    }, []
+  );
   return (
-  <div className="margin_bottom_240">
+  <div ref={ servicePackage } id="margin_240_black_second" className="black_bg margin_240_black">
     <div className="container">
-      <div className="service_package__backgroundColor service_package">
+      <div className="service_package">
         <div className="service_package__title title_62">
           Web studio «BPM CLOUD»
           <br /> service package
