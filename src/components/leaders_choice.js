@@ -23,7 +23,7 @@ const LeadersChoice = ({ siteTitle }) => {
           «BPM CLOUD» is chosen by leaders
         </div>
         <div className="leaders_choice__block_title">
-          Why do Belarus and foreign partners choose us?
+          Why do partners choose us?
         </div>
         <div className="leaders_choice__block">
           <div className="leaders_choice_block_list">
@@ -32,11 +32,10 @@ const LeadersChoice = ({ siteTitle }) => {
                 We are extremely interested in our partners’ business growth.
               </li>
               <li className="font_18">
-                Leaders with many years of experience in Belarus and abroad.
+                Leaders with many years of experience.
               </li>
               <li className="font_18">
-                Team of web studio specialists is highly certified. Many of us
-                started working abroad.
+                Team of web studio specialists is highly certified. Many of us started working abroad.
               </li>
             </ul>
           </div>
