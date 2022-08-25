@@ -737,6 +737,10 @@ body {
   margin-bottom: 30px;
 }
 
+.leaders {
+  position: relative;
+}
+
 .leaders_choice__block_title {
   color: #5C5C5C;
   margin-bottom: 16px;
@@ -772,7 +776,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
 }
 .leaders_choice_tagline__block {
   display: flex;

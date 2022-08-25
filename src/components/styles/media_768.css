@@ -585,6 +585,9 @@
   .service_package__info .service_package_info_block .font_18 {
     font-size: calc(15px + 1 * (100vw - 375px) / 393);
   }
+  .leaders {
+    position: relative;
+  }
   .leaders_choice__block_title {
     margin-bottom: calc(12px + 2 * (100vw - 375px) / 393);
   }
@@ -596,7 +599,6 @@
   }
   .leaders_choice_tagline {
     margin: calc(80px + 104 * (100vw - 375px) / 393) 0px calc(84px + 123 * (100vw - 375px) / 393) 0px;
-    position: relative;
   }
   .leaders_choice_tagline__block .leaders_choice_tagline_block_title {
     font-size: calc(42px + 4 * (100vw - 375px) / 393);

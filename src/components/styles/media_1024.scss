@@ -379,9 +379,12 @@
         }
     }
 
+    .leaders {
+        position: relative
+    }
+
     .leaders_choice_tagline {
         margin: calc(184px + (178 - 184) * ((100vw - 768px) / (1024 - 768))) 0px calc(207px + (178 - 207) * ((100vw - 768px) / (1024 - 768))) 0px;
-        position: relative;
 
         &__block {
             .leaders_choice_tagline_block_title {
