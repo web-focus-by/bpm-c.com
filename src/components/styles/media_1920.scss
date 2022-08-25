@@ -64,6 +64,13 @@
         margin-bottom: calc(170px + (240 - 170) * ((100vw - 1366px) / (1920 - 1366)));
     }
 
+    .margin_240_black {
+        margin-bottom: calc(170px + (240 - 170) * ((100vw - 1366px) / (1920 - 1366)));
+        margin-left: calc(157px + (220 - 157) * ((100vw - 1366px) / (1920 - 1366)));
+        margin-right: calc(157px + (220 - 157) * ((100vw - 1366px) / (1920 - 1366)));
+        transition:  margin-right 1s, margin-left 1s;
+    }
+
     .hero {
         margin-top: calc(134px + (188 - 134) * ((100vw - 1366px) / (1920 - 1366)));
 

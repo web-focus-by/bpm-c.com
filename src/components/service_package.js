@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import "../components/styles/main.css"
@@ -12,8 +13,45 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const ServicePackage = ({ siteTitle }) => {
+  const servicePackage = useRef();
+  const element = '';
+  const cssObj = '';
+  const cssObjMarginLeft = '';
+  const cssObjMarginRight = '';
+  const resizeBlockSecond = () => {
+    const lastKnownPositionBlock = servicePackage.current ?
+    servicePackage.current.offsetTop - servicePackage.current.offsetHeight :
+      0;
+    let lastKnownScrollPosition = window.scrollY;
+    let difference = lastKnownScrollPosition - lastKnownPositionBlock;
+    if (document && document.getElementById("margin_240_black_second")) {
+      if (difference > 750 && difference < 3500) {
+        document.getElementById("margin_240_black_second").style.setProperty('margin-left', '0px');
+        document.getElementById("margin_240_black_second").style.setProperty('margin-right', '0px');
+      }
+      else {
+        document.getElementById("margin_240_black_second").style.setProperty('margin-left', cssObjMarginLeft);
+        document.getElementById("margin_240_black_second").style.setProperty('margin-right', cssObjMarginRight);
+      }
+    }
+  }
+
+  useEffect(
+    () => {
+      document.addEventListener("scroll", resizeBlockSecond, true);
+      return () => {
+        if (document && document.getElementById("margin_240_black")) {
+          element = document.getElementById("margin_240_black");
+          cssObj = window.getComputedStyle(element);
+          cssObjMarginLeft = cssObj.getPropertyValue("margin-left");
+          cssObjMarginRight = cssObj.getPropertyValue("margin-right");
+        }
+        document.removeEventListener("scroll", resizeBlockSecond, true);
+      };
+    }, []
+  );
   return (
-  <div className="black_bg margin_bottom_240">
+  <div ref={ servicePackage } id="margin_240_black_second" className="black_bg margin_240_black">
     <div className="container">
       <div className="service_package">
         <div className="service_package__title title_62">
