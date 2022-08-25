@@ -25,13 +25,15 @@ const Advantages = ({ siteTitle }) => {
       0;
     let lastKnownScrollPosition = window.scrollY;
     let difference = lastKnownScrollPosition - lastKnownPositionBlock;
-    if (difference > 250 && difference < 1000) {
-      document.getElementById("margin_240_black").style.setProperty('margin-left', '0px');
-      document.getElementById("margin_240_black").style.setProperty('margin-right', '0px');
-    }
-    else {
-      document.getElementById("margin_240_black").style.setProperty('margin-left', cssObjMarginLeft);
-      document.getElementById("margin_240_black").style.setProperty('margin-right', cssObjMarginRight);
+    if (document && document.getElementById("margin_240_black")) {
+      if (difference > 250 && difference < 1000) {
+        document.getElementById("margin_240_black").style.setProperty('margin-left', '0px');
+        document.getElementById("margin_240_black").style.setProperty('margin-right', '0px');
+      }
+      else {
+        document.getElementById("margin_240_black").style.setProperty('margin-left', cssObjMarginLeft);
+        document.getElementById("margin_240_black").style.setProperty('margin-right', cssObjMarginRight);
+      }
     }
   }
 
@@ -39,16 +41,18 @@ const Advantages = ({ siteTitle }) => {
     () => {
       document.addEventListener("scroll", resizeBlock, true);
       return () => {
-        element = document.getElementById("margin_240_black");
-        cssObj = window.getComputedStyle(element);
-        cssObjMarginLeft = cssObj.getPropertyValue("margin-left");
-        cssObjMarginRight = cssObj.getPropertyValue("margin-right");
+        if (document && document.getElementById("margin_240_black")) {
+          element = document.getElementById("margin_240_black");
+          cssObj = window.getComputedStyle(element);
+          cssObjMarginLeft = cssObj.getPropertyValue("margin-left");
+          cssObjMarginRight = cssObj.getPropertyValue("margin-right");
+        }
         document.removeEventListener("scroll", resizeBlock, true);
       };
     }, []
   );
   return (
-    <div ref={ advantages } id="margin_240_black" className="margin_240_black black_bg">
+    <div ref={ advantages } id="margin_240_black" className="black_bg margin_240_black">
       <div className="container">
         <div className="advantages">
           <div className="advantages__title title_62">

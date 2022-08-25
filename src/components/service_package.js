@@ -18,31 +18,35 @@ const ServicePackage = ({ siteTitle }) => {
   const cssObj = '';
   const cssObjMarginLeft = '';
   const cssObjMarginRight = '';
-  const resizeBlock = () => {
+  const resizeBlockSecond = () => {
     const lastKnownPositionBlock = servicePackage.current ?
     servicePackage.current.offsetTop - servicePackage.current.offsetHeight :
       0;
     let lastKnownScrollPosition = window.scrollY;
     let difference = lastKnownScrollPosition - lastKnownPositionBlock;
-    if (difference > 900 && difference < 2500) {
-      document.getElementById("margin_240_black_second").style.setProperty('margin-left', '0px');
-      document.getElementById("margin_240_black_second").style.setProperty('margin-right', '0px');
-    }
-    else {
-      document.getElementById("margin_240_black_second").style.setProperty('margin-left', cssObjMarginLeft);
-      document.getElementById("margin_240_black_second").style.setProperty('margin-right', cssObjMarginRight);
+    if (document && document.getElementById("margin_240_black_second")) {
+      if (difference > 750 && difference < 3500) {
+        document.getElementById("margin_240_black_second").style.setProperty('margin-left', '0px');
+        document.getElementById("margin_240_black_second").style.setProperty('margin-right', '0px');
+      }
+      else {
+        document.getElementById("margin_240_black_second").style.setProperty('margin-left', cssObjMarginLeft);
+        document.getElementById("margin_240_black_second").style.setProperty('margin-right', cssObjMarginRight);
+      }
     }
   }
 
   useEffect(
     () => {
-      document.addEventListener("scroll", resizeBlock, true);
+      document.addEventListener("scroll", resizeBlockSecond, true);
       return () => {
-        element = document.getElementById("margin_240_black");
-        cssObj = window.getComputedStyle(element);
-        cssObjMarginLeft = cssObj.getPropertyValue("margin-left");
-        cssObjMarginRight = cssObj.getPropertyValue("margin-right");
-        document.removeEventListener("scroll", resizeBlock, true);
+        if (document && document.getElementById("margin_240_black")) {
+          element = document.getElementById("margin_240_black");
+          cssObj = window.getComputedStyle(element);
+          cssObjMarginLeft = cssObj.getPropertyValue("margin-left");
+          cssObjMarginRight = cssObj.getPropertyValue("margin-right");
+        }
+        document.removeEventListener("scroll", resizeBlockSecond, true);
       };
     }, []
   );
