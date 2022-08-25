@@ -900,9 +900,12 @@
         }
     }
 
+    .leaders {
+        position: relative
+    }
+
     .leaders_choice_tagline {
         margin: calc(178px + (230 - 178) * ((100vw - 1024px) / (1366 - 1024))) 0px;
-        position: relative;
 
         .footer_circle_yellow {
             position: absolute;
