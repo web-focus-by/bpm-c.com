@@ -597,9 +597,11 @@
   .leaders_choice__block {
     grid-column-gap: calc(20px + 21 * (100vw - 1024px) / 342);
   }
+  .leaders {
+    position: relative;
+  }
   .leaders_choice_tagline {
     margin: calc(178px + 52 * (100vw - 1024px) / 342) 0px;
-    position: relative;
   }
   .leaders_choice_tagline .footer_circle_yellow {
     position: absolute;
