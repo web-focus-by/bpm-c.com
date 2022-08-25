@@ -121,12 +121,11 @@ const ServicePackage = ({ siteTitle }) => {
               Copywriting by «BPM CLOUD»
             </div>
             <div className="service_package_info_block__text font_18">
-              «BPM CLOUD» online marketing agency is widely known outside
-              Belarus. Our employees have been representing clients’ businesses
-              in favorable lights for many years. At disposal of customers are
-              qualified authors who have dozens of projects behind them,
-              experience of working abroad and unquenchable desire to prove the
-              words’ power in action.
+              «BPM CLOUD» is widely known online marketing agency. 
+              Our employees have been representing clients’ businesses in favorable 
+              lights for many years. At disposal of customers are qualified authors who 
+              have dozens of projects behind them, experience of working abroad and 
+              unquenchable desire to prove the words’ power in action.
             </div>
           </div>
           <div className="service_package_info_block">
