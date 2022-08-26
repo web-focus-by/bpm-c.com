@@ -3,10 +3,26 @@ module.exports = {
     title: `Digital agency "BPM-Cloud": website development and promotion`,
     description: `Full cycle digital agency offers development, design, maintenance and promotion of websites 🏆 We will raise the site to the TOP of search results`,
     author: `@bpm-cloud.by`,
-    siteUrl: `https://main--wp-bpm-c.netlify.app/`,
+    siteUrl: `https://bpm-c.com/`,
   },
   pathPrefix: "/bpm-cloud-new",
   plugins: [
+    {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        // defaultCrumb: optional To create a default crumb
+        // see Click Tracking default crumb example below
+        defaultCrumb: {
+          location: {
+            pathname: "/",
+          },
+          crumbLabel: "Main page",
+          crumbSeparator: " / ",
+        }
+        // usePathPrefix: optional, if you are using pathPrefix above
+
+      }
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,

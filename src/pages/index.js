@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
+import WebsiteDesign from "./websiteDesign"
 import Seo from "../components/seo"
 import * as styles from "../components/styles/index.module.css"
 
@@ -70,6 +71,7 @@ const moreLinks = [
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
+  <>
   <Layout>
     <Seo title="Home" />
     <div className={styles.textCenter}>
@@ -82,9 +84,6 @@ const IndexPage = () => (
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
-      <h1>
-        Helo world <b>I'm Gatsby!</b>
-      </h1>
       <p className={styles.intro}>
         <b>Example pages:</b>{" "}
         {samplePageLinks.map((link, i) => (
@@ -117,6 +116,7 @@ const IndexPage = () => (
       </React.Fragment>
     ))}
   </Layout>
+  </>
 )
 
 export default IndexPage

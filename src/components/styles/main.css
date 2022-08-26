@@ -776,6 +776,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .leaders_choice_tagline__block {
   display: flex;

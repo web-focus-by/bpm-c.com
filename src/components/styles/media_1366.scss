@@ -81,6 +81,10 @@
         margin-top: 220px;
     }
 
+    .web-site-reason {
+        margin-top: 220px;
+    }
+
     .hash {
         &__list {
             .hash_list_block {
@@ -579,6 +583,24 @@
         }
     }
 
+    .requires_design {
+        column-gap: 30px;
+
+        &__info {
+            ul {
+                li {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &__pic {
+            img {
+                border-radius: 18px;
+            }
+        }
+    }
+
     .service_package {
         &__info_list {
             grid-column-gap: 55px;
@@ -601,6 +623,24 @@
                 &__title {
                     font-size: 21px;
                     margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .result_web_design_choice {
+        &__block_title {
+            margin-bottom: 12px;
+        }
+
+        &__block {
+            grid-column-gap: 41px;
+
+            .result_web_design_choice_block_list {
+                ul {
+                    li {
+                        margin-bottom: 10px;
+                    }
                 }
             }
         }
@@ -878,6 +918,12 @@
     }
 
     .company_description {
+        .title_62 {
+            font-size: calc(42px + (44 - 42) * ((100vw - 1024px) / (1366 - 1024)));
+        }
+    }
+
+    .requires_design {
         .title_62 {
             font-size: calc(42px + (44 - 42) * ((100vw - 1024px) / (1366 - 1024)));
         }
