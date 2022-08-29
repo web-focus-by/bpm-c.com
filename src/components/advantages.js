@@ -22,7 +22,7 @@ const Advantages = ({ siteTitle }) => {
     //console.log(advantages);
     const lastKnownPositionBlock = advantages.current ?
       advantages.current.offsetTop - advantages.current.offsetHeight :0;
-    let lastKnownScrollPosition = window.scrollY;
+    let lastKnownScrollPosition = window?window.scrollY:0;
     let difference = lastKnownScrollPosition - lastKnownPositionBlock;
     if (document && document.getElementById("margin_240_black")) {
       if (difference > 250 && difference < 1000) {
@@ -42,7 +42,7 @@ const Advantages = ({ siteTitle }) => {
       return () => {
         if (document && document.getElementById("margin_240_black")) {
           element = document.getElementById("margin_240_black");
-          cssObj = window.getComputedStyle(element);
+          cssObj = window ? window.getComputedStyle(element) : null;  
           cssObjMarginLeft = cssObj.getPropertyValue("margin-left");
           cssObjMarginRight = cssObj.getPropertyValue("margin-right");
         }
