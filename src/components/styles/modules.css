@@ -14,6 +14,11 @@
   background: url(../../images/arrow_white.svg) no-repeat;
 }
 
+.breadcrumb-container {
+  margin-top: 15px;
+  margin-left: 0px;
+}
+
 .button_black {
   border: 1px solid #fff;
   border-radius: 80px;

@@ -449,6 +449,10 @@
   }
 }
 @media (min-width: 375px) and (max-width: 768px) {
+  .breadcrumb-container {
+    margin-top: 15px;
+    margin-left: 0px;
+  }
   .modal__content {
     border-radius: calc(0px + 30 * (100vw - 375px) / 393);
   }

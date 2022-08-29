@@ -13,7 +13,8 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const DropdownServices = ({ isToggle, turnOffMenu }) => {
-  const baseUrl =  window.location.href;
+  const url =  new URL(window.location.href);
+  const baseUrl = url.origin + "/";
   const data = [
     { name: "IT Outsourcing", routeLink: baseUrl + "websiteDesign/" }, { name: "ASO Mobile App Optimisation", routeLink: baseUrl + "websiteDesign/" },
     { name: "IT Outstaffing", routeLink: baseUrl + "websiteDesign/" }, { name: "GameDev", routeLink: baseUrl + "websiteDesign/" },

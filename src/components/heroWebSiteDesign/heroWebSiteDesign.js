@@ -1,7 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
-
 import { Link } from "gatsby"
 import "../../components/styles/main.css"
 import "../../components/styles/icons.css"
@@ -12,25 +11,28 @@ import "../../components/styles/media_1366.css"
 import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
+import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
-
-const HeroWebSiteDesign = ({ siteTitle, data }) => {
+const HeroWebSiteDesign = ({ location, crumbLabel }) => {
   const url = new URL(window.location.href);
   const partsURL = [ url.host, url.pathname ];
   const  pathName = (partsURL && partsURL[partsURL.length - 1]) ? partsURL[partsURL.length - 1].substr(0, partsURL[1].length - 1).trim().split('/') : [];
   const names = pathName.filter((val) => {
     return val.length > 0;
   });
-  console.log(names);
+
+  const isPartiallyActive = ({ isPartiallyCurrent, isCurrent }) => {
+    return isPartiallyCurrent && isCurrent
+      ? { className: 'breadcrumb__link breadcrumb__link__active' }
+      : {}
+  }
 
   return (
     <div className="container">
       <div className="breadcrumb-container">
-        <div className="breadcrumb">
-          
-        </div>
+        <Breadcrumb location={ location } crumbSeparator="/" crumbLabel={ crumbLabel } getProps={isPartiallyActive} />
       </div>
-      <div className="hero ">
+      <div className="hero margin_bottom_240">
         <div className="hero__title title_80">
             Website design<span className="yellow_hand"></span>
         </div>

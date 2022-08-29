@@ -14,10 +14,10 @@ import "../../components/styles/media_375.css"
 
 const WebDesignCreationVision = ({ siteTitle }) => {
   const creationVision = useRef();
-  const element = '';
-  const cssObj = '';
-  const cssObjMarginLeft = '';
-  const cssObjMarginRight = '';
+  let element = '';
+  let cssObj = '';
+  let cssObjMarginLeft = '';
+  let cssObjMarginRight = '';
   const resizeBlockSecond = () => {
     const lastKnownPositionBlock = creationVision.current ?
     creationVision.current.offsetTop - creationVision.current.offsetHeight :

@@ -1256,4 +1256,8 @@ body {
   100% {
     left: 60%;
   }
+}
+.breadcrumb-container {
+  margin-top: 15px;
+  margin-left: 220px;
 }/*# sourceMappingURL=main.css.map */

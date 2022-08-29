@@ -111,6 +111,10 @@
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+  .breadcrumb-container {
+    margin-top: 15px;
+    margin-left: 0px;
+  }
   .it_company {
     margin-top: calc(280px + -60 * (100vw - 768px) / 256);
   }

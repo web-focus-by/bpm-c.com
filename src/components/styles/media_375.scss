@@ -1,4 +1,8 @@
 @media (max-width: 375px) {
+    .breadcrumb-container {
+        margin-top: 15px;
+        margin-left: 0px;
+    }
     .modal {
         &__content {
             border-radius: 0px;

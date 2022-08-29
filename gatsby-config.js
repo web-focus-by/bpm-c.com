@@ -5,22 +5,18 @@ module.exports = {
     author: `@bpm-cloud.by`,
     siteUrl: `https://bpm-c.com/`,
   },
-  pathPrefix: "/bpm-cloud-new",
+  pathPrefix: "/",
   plugins: [
     {
       resolve: `gatsby-plugin-breadcrumb`,
       options: {
-        // defaultCrumb: optional To create a default crumb
-        // see Click Tracking default crumb example below
         defaultCrumb: {
           location: {
             pathname: "/",
           },
           crumbLabel: "Main page",
           crumbSeparator: " / ",
-        }
-        // usePathPrefix: optional, if you are using pathPrefix above
-
+        },
       }
     },
     `gatsby-plugin-react-helmet`,
