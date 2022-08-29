@@ -14,7 +14,7 @@ import "../../components/styles/media_375.css"
 const HeaderWebSiteDesign = ({ siteTitle, turnOnMenu, location }) => {
   const refHeader = useRef();
   let url = '';
-  if (window) {
+  if (typeof window !== 'undefined') {
     url = new URL(window.location.href);
   } else {
     url = new URL(location.href);

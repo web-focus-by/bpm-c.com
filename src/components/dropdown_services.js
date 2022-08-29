@@ -14,7 +14,7 @@ import "../components/styles/media_375.css"
 
 const DropdownServices = ({ isToggle, turnOffMenu, location }) => {
   let url = '';
-  if (window) {
+  if (typeof window !== 'undefined') {
     url =  new URL(window.location.href);
   } else {
     url =  new URL(location.href);
