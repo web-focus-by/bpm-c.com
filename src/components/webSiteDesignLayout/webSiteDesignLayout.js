@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import HeroWebSiteDesign from "../../components/heroWebSiteDesign/heroWebSiteDesign";
-import HeaderWebSiteDesign from "../headerWebSiteDesign/headerWebSiteDesign";
+import HeaderWebSiteDesign from "../../components/headerWebSiteDesign/headerWebSiteDesign";
 import PortfolioWebSiteDesign from "../../components/portfolioWebSiteDesign/portfolioWebSiteDesign"
 import WebSiteDesignReason from "../../components/webSiteDesignReason/webSiteDesignReason"
 import GoalsDesign from "../../components/goalsDesign/goalsDesign"
