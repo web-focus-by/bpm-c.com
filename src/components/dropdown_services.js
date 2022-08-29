@@ -17,7 +17,9 @@ const DropdownServices = ({ isToggle, turnOffMenu, location }) => {
   if (typeof window !== 'undefined') {
     url =  new URL(window.location.href);
   } else {
-    url =  new URL(location.href);
+    if (location && location.href) {
+      url =  new URL(location.href); 
+    }
   }
   
   const baseUrl = url.origin + "/";

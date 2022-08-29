@@ -18,7 +18,9 @@ const HeroWebSiteDesign = ({ location, crumbLabel }) => {
   if (typeof window !== 'undefined') {
     url = new URL(window.location.href);
   } else {
-    url = new URL(location.href);
+    if (location && location.href) {
+      url = new URL(location.href);
+    }
   }
   
   const partsURL = [ url.host, url.pathname ];

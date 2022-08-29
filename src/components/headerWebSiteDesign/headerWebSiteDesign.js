@@ -17,7 +17,9 @@ const HeaderWebSiteDesign = ({ siteTitle, turnOnMenu, location }) => {
   if (typeof window !== 'undefined') {
     url = new URL(window.location.href);
   } else {
-    url = new URL(location.href);
+    if (location && location.href) {
+      url = new URL(location.href);
+    }
   }
   
   const homeUrl = url.origin;

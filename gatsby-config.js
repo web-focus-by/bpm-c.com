@@ -9,15 +9,6 @@ module.exports = {
   plugins: [
     {
       resolve: `gatsby-plugin-breadcrumb`,
-      options: {
-        defaultCrumb: {
-          location: {
-            pathname: "/",
-          },
-          crumbLabel: "Main page",
-          crumbSeparator: " / ",
-        },
-      }
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
