@@ -13,11 +13,19 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const DropdownServices = ({ isToggle, turnOffMenu }) => {
+  const url =  new URL(window.location.href);
+  const baseUrl = url.origin + "/";
   const data = [
-    "IT Outsourcing","ASO Mobile App Optimisation","IT Outstaffing","GameDev","IT Consulting",
-    "Web Development Services","Web App Development","Website modification","Mobile App Development","Digital marketing",
-    "Desktop App Development","PPC Advertasing","UX/UI Services","SMM","Testing and QA",
-    "Landing page development","Web application design","Marketplace development","UI/UX mobile app design"
+    { name: "IT Outsourcing", routeLink: baseUrl + "websiteDesign/" }, { name: "ASO Mobile App Optimisation", routeLink: baseUrl + "websiteDesign/" },
+    { name: "IT Outstaffing", routeLink: baseUrl + "websiteDesign/" }, { name: "GameDev", routeLink: baseUrl + "websiteDesign/" },
+    { name: "IT Consulting", routeLink: baseUrl + "websiteDesign/" }, { name: "Web Development Services", routeLink: baseUrl + "websiteDesign/" },
+    { name: "Web App Development", routeLink: baseUrl + "websiteDesign/" }, { name: "Website modification", routeLink: baseUrl + "websiteDesign/" },
+    { name: "Mobile App Development", routeLink: baseUrl + "websiteDesign/" }, { name: "Digital marketing", routeLink: baseUrl + "websiteDesign/" },
+    { name: "Desktop App Development", routeLink: baseUrl + "websiteDesign/" }, { name: "PPC Advertasing", routeLink: baseUrl + "websiteDesign/" },
+    { name: "UX/UI Services", routeLink: baseUrl + "websiteDesign/" }, { name: "SMM", routeLink: baseUrl + "websiteDesign/" },
+    { name: "Testing and QA", routeLink: baseUrl + "websiteDesign/" }, { name: "Landing page development", routeLink: baseUrl + "websiteDesign/" },
+    { name: "Web application design", routeLink: baseUrl + "websiteDesign/" },{ name: "Marketplace development", routeLink: baseUrl + "websiteDesign/" },
+    { name: "UI/UX mobile app design", routeLink: baseUrl + "websiteDesign/"}
   ]
   const [isOpenPoint, setOpenPoint] = useState(false);
   const closeMenu = () =>{
@@ -25,7 +33,7 @@ const DropdownServices = ({ isToggle, turnOffMenu }) => {
     turnOffMenu();
   }
   const resultData = data.map((value, index) => {
-    return <li key={ index } onClick={ closeMenu }><a href="#">{value}</a></li>
+    return <li key={ index } onClick={ closeMenu }><a href={ value.routeLink }>{ value.name }</a></li>
   })
   if (isToggle) {
   return (

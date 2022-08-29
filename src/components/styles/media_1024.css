@@ -79,6 +79,9 @@
   .company_description .title_62 {
     font-size: 42px;
   }
+  .requires_design .title_62 {
+    font-size: 42px;
+  }
   .services__list .services_list_item:hover {
     background: url(../../images/test_1024.svg) no-repeat;
     background-size: cover;
@@ -97,6 +100,9 @@
   .leaders_choice_tagline {
     margin: 178px 0px;
   }
+  .result_web_design_choice__block {
+    grid-column-gap: 20px;
+  }
   .footer {
     grid-template-columns: 0.7fr 1.4fr 0.9fr;
   }
@@ -105,7 +111,14 @@
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+  .breadcrumb-container {
+    margin-top: 15px;
+    margin-left: 0px;
+  }
   .it_company {
+    margin-top: calc(280px + -60 * (100vw - 768px) / 256);
+  }
+  .web-site-reason {
     margin-top: calc(280px + -60 * (100vw - 768px) / 256);
   }
   .margin_bottom_60 {

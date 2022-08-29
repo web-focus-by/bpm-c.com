@@ -32,15 +32,12 @@ import ThanksModal from "./thanks_modal"
 import DropdownServices from "./dropdown_services"
 import "../components/styles/layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location, crumbLabel }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
-          author
-          description
-          siteUrl
         }
       }
     }
@@ -81,7 +78,7 @@ const Layout = ({ children }) => {
     <>
       <div className="header" ref={ refMenu }><Header siteTitle={ data.site.siteMetadata?.title || `Title` } turnOnMenu={ closeOpenMenu } />
       <DropdownServices isToggle = { isToggle } turnOffMenu={ closeMenu } /></div>
-      <Hero></Hero>
+      <Hero location={ location } crumbLabel={ crumbLabel }></Hero>
       <PhoneButn onClick={ toggleModalActive }></PhoneButn>
       { isOpen ? <Modal onClickClose={ toggleModalActive }></Modal> : null}
       <ThanksModal></ThanksModal>
