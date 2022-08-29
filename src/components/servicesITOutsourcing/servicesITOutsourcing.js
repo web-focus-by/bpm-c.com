@@ -46,7 +46,7 @@ const ServicesITOutsourcing = ({ siteTitle }) => {
 
   return (
     <div className="container">
-      <div className="service_oitsourcing margin_bottom_240">    
+      <div className="service_oitsourcing margin_bottom_240">
         <div className="service_oitsourcing_choice">
           <div className="service_oitsourcing_choice__title title_62">
             Services in IT Outsourcing

@@ -16,7 +16,7 @@ import "./resWebDesign.css"
 const ResWebDesign = ({ siteTitle }) => {
   return (
     <div className="container">
-      <div className="result_web_design margin_bottom_240">    
+      <div className="result_web_design margin_bottom_240">
         <div className="result_web_design_choice">
           <div className="result_web_design_choice__title title_62">
             Result of web design at «BPM Cloud»
