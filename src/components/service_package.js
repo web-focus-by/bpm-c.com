@@ -22,7 +22,7 @@ const ServicePackage = ({ siteTitle }) => {
     const lastKnownPositionBlock = servicePackage.current ?
     servicePackage.current.offsetTop - servicePackage.current.offsetHeight :
       0;
-    let lastKnownScrollPosition = window.scrollY;
+    let lastKnownScrollPosition = window ? window.scrollY : 0;
     let difference = lastKnownScrollPosition - lastKnownPositionBlock;
     if (document && document.getElementById("margin_240_black_second")) {
       if (difference > 750 && difference < 3500) {
@@ -42,7 +42,7 @@ const ServicePackage = ({ siteTitle }) => {
       return () => {
         if (document && document.getElementById("margin_240_black")) {
           element = document.getElementById("margin_240_black");
-          cssObj = window.getComputedStyle(element);
+          cssObj = window ? window.getComputedStyle(element) : null;
           cssObjMarginLeft = cssObj.getPropertyValue("margin-left");
           cssObjMarginRight = cssObj.getPropertyValue("margin-right");
         }
