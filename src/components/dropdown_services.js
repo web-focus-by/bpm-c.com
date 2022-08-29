@@ -12,8 +12,14 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const DropdownServices = ({ isToggle, turnOffMenu }) => {
-  const url =  new URL(window.location.href);
+const DropdownServices = ({ isToggle, turnOffMenu, location }) => {
+  let url = '';
+  if (window) {
+    url =  new URL(window.location.href);
+  } else {
+    url =  new URL(location.href);
+  }
+  
   const baseUrl = url.origin + "/";
   const data = [
     { name: "IT Outsourcing", routeLink: baseUrl + "websiteDesign/" }, { name: "ASO Mobile App Optimisation", routeLink: baseUrl + "websiteDesign/" },

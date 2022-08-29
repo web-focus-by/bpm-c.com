@@ -11,9 +11,15 @@ import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
-const HeaderWebSiteDesign = ({ siteTitle, turnOnMenu }) => {
+const HeaderWebSiteDesign = ({ siteTitle, turnOnMenu, location }) => {
   const refHeader = useRef();
-  const url = new URL(window.location.href);
+  let url = '';
+  if (window) {
+    url = new URL(window.location.href);
+  } else {
+    url = new URL(location.href);
+  }
+  
   const homeUrl = url.origin;
   const [isActive, setActive] = useState(false);
   const activeMenu = () => {

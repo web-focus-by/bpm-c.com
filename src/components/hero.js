@@ -14,7 +14,12 @@ import "../components/styles/media_375.css"
 import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
 const Hero = ({ siteTitle, data, location, crumbLabel }) => {
-  const url = new URL(window.location.href);
+  let url = '';
+  if (window) {
+    url = new URL(window.location.href);
+  } else {
+    url = new URL(location.href)
+  }
 
   const isPartiallyActive = ({ isPartiallyCurrent, isCurrent }) => {
     return isPartiallyCurrent && isCurrent

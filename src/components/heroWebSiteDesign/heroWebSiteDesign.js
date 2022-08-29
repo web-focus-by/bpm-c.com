@@ -14,7 +14,13 @@ import "../../components/styles/media_375.css"
 import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
 const HeroWebSiteDesign = ({ location, crumbLabel }) => {
-  const url = new URL(window.location.href);
+  let url = '';
+  if (window) {
+    url = new URL(window.location.href);
+  } else {
+    url = new URL(location.href);
+  }
+  
   const partsURL = [ url.host, url.pathname ];
   const  pathName = (partsURL && partsURL[partsURL.length - 1]) ? partsURL[partsURL.length - 1].substr(0, partsURL[1].length - 1).trim().split('/') : [];
   const names = pathName.filter((val) => {
