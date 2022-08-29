@@ -144,6 +144,12 @@
         }
     }
 
+    .requires_design {
+        .title_62 {
+            font-size: 42px;
+        }
+    }
+
     .services {
         &__list {
 
@@ -179,6 +185,12 @@
         margin: 178px 0px;
     }
 
+    .result_web_design_choice {
+        &__block {
+            grid-column-gap: 20px;
+        }
+    }
+
     .footer {
         grid-template-columns: 0.7fr 1.4fr 0.9fr;
     }
@@ -190,7 +202,15 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    .breadcrumb-container {
+        margin-top: 15px;
+        margin-left: 0px;
+    }
     .it_company {
+        margin-top: calc(280px + (220 - 280) * ((100vw - 768px) / (1024 - 768)));
+    }
+
+    .web-site-reason {
         margin-top: calc(280px + (220 - 280) * ((100vw - 768px) / (1024 - 768)));
     }
 

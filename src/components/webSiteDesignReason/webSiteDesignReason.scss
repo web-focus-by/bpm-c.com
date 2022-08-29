@@ -1,0 +1,30 @@
+.web-site-reason {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+        max-width: 45%;
+        margin-top: 15px;
+        margin-bottom: 0px !important;
+    }
+
+    &__info {
+        max-width: 50%;
+        color: #5C5C5C;
+        margin-bottom: 0px !important;
+        line-height: 27px;
+        
+        ul {
+            list-style-type: none;
+            li {
+                &::before {
+                    content: url("../../images/list_line.svg");
+                    position: relative;
+                    bottom: 5px;
+                    padding-right: 8px;
+                }
+            }
+        }
+    }
+}

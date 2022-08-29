@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/modules.css"
@@ -10,10 +11,22 @@ import "../components/styles/media_1366.css"
 import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
+import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
-const Hero = ({ siteTitle, data }) => {
+const Hero = ({ siteTitle, data, location, crumbLabel }) => {
+  const url = new URL(window.location.href);
+
+  const isPartiallyActive = ({ isPartiallyCurrent, isCurrent }) => {
+    return isPartiallyCurrent && isCurrent
+      ? { className: 'breadcrumb__link breadcrumb__link__active' }
+      : {}
+  }
+
   return (
     <div className="container">
+      <div className="breadcrumb-container">
+        <Breadcrumb location={ location } crumbSeparator="/" crumbLabel={ crumbLabel }  getProps={isPartiallyActive} />
+      </div>
       <div className="hero">
         <div className="hero__title title_80">
           «BPM CLOUD» an IT company that clearly knows<span className="yellow_hand"></span>
