@@ -15,10 +15,12 @@ import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
 const Hero = ({ siteTitle, data, location, crumbLabel }) => {
   let url = '';
-  if (window) {
+  if (typeof window !== 'undefined') {
     url = new URL(window.location.href);
   } else {
-    url = new URL(location.href)
+    if (location &&  location.href) {
+      url = new URL(location.href);
+    }
   }
 
   const isPartiallyActive = ({ isPartiallyCurrent, isCurrent }) => {

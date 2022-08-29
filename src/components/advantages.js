@@ -22,7 +22,10 @@ const Advantages = ({ siteTitle }) => {
     //console.log(advantages);
     const lastKnownPositionBlock = advantages.current ?
       advantages.current.offsetTop - advantages.current.offsetHeight :0;
-    let lastKnownScrollPosition = window?window.scrollY:0;
+      let lastKnownScrollPosition = 0
+      if (typeof window !== 'undefined') {
+        lastKnownScrollPosition = window.scrollY;
+      }
     let difference = lastKnownScrollPosition - lastKnownPositionBlock;
     if (document && document.getElementById("margin_240_black")) {
       if (difference > 250 && difference < 1000) {
@@ -42,7 +45,9 @@ const Advantages = ({ siteTitle }) => {
       return () => {
         if (document && document.getElementById("margin_240_black")) {
           element = document.getElementById("margin_240_black");
-          cssObj = window ? window.getComputedStyle(element) : null;  
+          if (typeof window !== 'undefined') {
+            cssObj = window.getComputedStyle(element);
+          } else { cssObj = null };
           cssObjMarginLeft = cssObj.getPropertyValue("margin-left");
           cssObjMarginRight = cssObj.getPropertyValue("margin-right");
         }
