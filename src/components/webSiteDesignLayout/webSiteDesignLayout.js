@@ -56,8 +56,8 @@ const WebSiteDesignLayout = ({ location, crumbLabel}) => {
 
     return (
         <>
-            <div className="header" ref={ refMenu }><HeaderWebSiteDesign siteTitle={ `Title` } turnOnMenu={ closeOpenMenu } />
-            <DropdownServices isToggle = { isToggle } turnOffMenu={ closeMenu } /></div>
+            <div className="header" ref={ refMenu }><HeaderWebSiteDesign siteTitle={ `Title` } turnOnMenu={ closeOpenMenu } location={ location } />
+            <DropdownServices isToggle = { isToggle } turnOffMenu={ closeMenu } location = { location }/></div>
             <HeroWebSiteDesign location={ location } crumbLabel={ crumbLabel }></HeroWebSiteDesign>
             <ServicesITOutsourcing></ServicesITOutsourcing>
             <PhoneButn onClick={ toggleModalActive }></PhoneButn>
