@@ -55,7 +55,7 @@ const Layout = ({ children }) => {
       return () => {
         document.removeEventListener("click", clickOut, true);
       };
-    }, [isToggle]
+    }, []
   );
 
   return (
