@@ -6,33 +6,17 @@
  */
 
 import * as React from "react"
-import { useState, useEffect, useRef, useCallback } from "react"
+import { useState, useEffect, useRef } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Hero from "./hero"
 import Header from "./header"
-import ITCompany from "./it_company"
-import Portfolio from "./portfolio"
-import Form from "./form"
-import ThanksForm from "./thanks_form"
-import Services from "./services"
-import Technologies from "./technologies"
-import BPMCloud from "./bpm_cloud"
-import ProjectsProcess from "./projects_process"
-import Blog from "./blog"
-import Advantages from "./advantages"
-import Reviews from "./reviews"
-import CompanyDescription from "./company_description"
-import ServicePackage from "./service_package"
-import LeadersChoice from "./leaders_choice"
 import Footer from "./footer"
 import PhoneButn from "./phone_butn"
 import Modal from "./modal"
-import ThanksModal from "./thanks_modal"
 import DropdownServices from "./dropdown_services"
 import "../components/styles/layout.css"
 
-const Layout = ({ children, location, crumbLabel }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -78,24 +62,9 @@ const Layout = ({ children, location, crumbLabel }) => {
     <>
       <div className="header" ref={ refMenu }><Header siteTitle={ data.site.siteMetadata?.title || `Title` } turnOnMenu={ closeOpenMenu } />
       <DropdownServices isToggle = { isToggle } turnOffMenu={ closeMenu } /></div>
-      <Hero location={ location } crumbLabel={ crumbLabel }></Hero>
       <PhoneButn onClick={ toggleModalActive }></PhoneButn>
       { isOpen ? <Modal onClickClose={ toggleModalActive }></Modal> : null}
-      <ThanksModal></ThanksModal>
-      <ITCompany></ITCompany>
-      <Portfolio></Portfolio>
-      <Form></Form>
-      <ThanksForm></ThanksForm>
-      <Services></Services>
-      <Technologies></Technologies>
-      <BPMCloud></BPMCloud>
-      <ProjectsProcess></ProjectsProcess>
-      <Blog></Blog>
-      <Advantages></Advantages>
-      <Reviews></Reviews>
-      <CompanyDescription></CompanyDescription>
-      <ServicePackage></ServicePackage>
-      <LeadersChoice></LeadersChoice>
+      { children }
       <Footer></Footer>
     </>
   )

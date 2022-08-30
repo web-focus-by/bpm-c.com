@@ -18,7 +18,7 @@ const DropdownServices = ({ isToggle, turnOffMenu, location }) => {
     url =  new URL(window.location.href);
   } else {
     if (location && location.href) {
-      url =  new URL(location.href); 
+      url =  new URL(location.href);
     }
   }
   
@@ -41,7 +41,7 @@ const DropdownServices = ({ isToggle, turnOffMenu, location }) => {
     turnOffMenu();
   }
   const resultData = data.map((value, index) => {
-    return <li key={ index } onClick={ closeMenu }><a href={ value.routeLink }>{ value.name }</a></li>
+    return <li key={ index } onClick={ closeMenu }><Link to={ value.routeLink }>{ value.name }</Link></li>
   })
   if (isToggle) {
   return (

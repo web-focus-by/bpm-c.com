@@ -13,7 +13,8 @@ import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 import "./requiresWebsiteDesign.css"
 
-const RequiresWebsiteDesign = ({ siteTitle }) => (
+const RequiresWebsiteDesign = ({ siteTitle }) => {
+  return (
   <div className="container">
     <div className="circle_container">
     <div className="requires_design margin_bottom_240">
@@ -51,7 +52,8 @@ const RequiresWebsiteDesign = ({ siteTitle }) => (
     </div>
     </div>
   </div>
-)
+  )
+}
 
 RequiresWebsiteDesign.propTypes = {
   siteTitle: PropTypes.string,
