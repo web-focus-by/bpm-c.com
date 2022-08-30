@@ -1,42 +1,43 @@
 import * as React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Seo from "../components/seo"
-import * as styles from "../components/styles/index.module.css"
-
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
+import Hero from "../components/hero"
+import ITCompany from "../components/it_company"
+import Portfolio from "../components/portfolio"
+import Form from "../components/form"
+import ThanksForm from "../components/thanks_form"
+import Services from "../components/services"
+import Technologies from "../components/technologies"
+import BPMCloud from "../components/bpm_cloud"
+import ProjectsProcess from "../components/projects_process"
+import Blog from "../components/blog"
+import Advantages from "../components/advantages"
+import Reviews from "../components/reviews"
+import CompanyDescription from "../components/company_description"
+import ServicePackage from "../components/service_package"
+import LeadersChoice from "../components/leaders_choice"
+import ThanksModal from "../components/thanks_modal"
 
 const IndexPage = ({ location }) => {
   return (
     <>
-    <Layout location={ location } crumbLabel="Main page" >
-      <Seo title="Home" />
-      <div className={styles.textCenter}>
-        <p className={styles.intro}>
-          <b>Example pages:</b>{" "}
-          {samplePageLinks.map((link, i) => (
-            <React.Fragment key={link.url}>
-              <Link to={link.url}>{link.text}</Link>
-              {i !== samplePageLinks.length - 1 && <> · </>}
-            </React.Fragment>
-          ))}
-          <br />
-          Edit <code>src/pages/index.js</code> to update this page.
-        </p>
-      </div>
-    </Layout>
+      <Layout>
+        <Hero location={ location } crumbLabel="Main page"></Hero>
+        <ThanksModal></ThanksModal>
+        <ITCompany></ITCompany>
+        <Portfolio></Portfolio>
+        <Form></Form>
+        <ThanksForm></ThanksForm>
+        <Services></Services>
+        <Technologies></Technologies>
+        <BPMCloud></BPMCloud>
+        <ProjectsProcess></ProjectsProcess>
+        <Blog></Blog>
+        <Advantages></Advantages>
+        <Reviews></Reviews>
+        <CompanyDescription></CompanyDescription>
+        <ServicePackage></ServicePackage>
+        <LeadersChoice></LeadersChoice>
+      </Layout>
     </>
   )
 }
