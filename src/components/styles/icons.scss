@@ -13,6 +13,14 @@
     margin-left: 10px;
 }
 
+.puzzle {
+    display: inline-block;
+    background: url(../../images/puzzle.svg) no-repeat;
+    width: 47px;
+    height: 47px;
+    margin-left: 10px;
+}
+
 .arrow_black {
     display: inline-block;
     background: url(../../images/arrow_black.svg) no-repeat;
@@ -171,13 +179,6 @@
     background-size: contain;
 }
 
-.puzzle {
-    display: inline-block;
-    width: 23px;
-    height: 23px;
-    background: url(../../images/puzzle.svg) no-repeat;
-}
-
 .pen {
     display: inline-block;
     width: 23px;
@@ -215,8 +216,9 @@
 
 .star {
     display: inline-block;
-    width: 23px;
-    height: 23px;
+    width: 47px;
+    height: 47px;
+    margin-left: 10px;
     background: url(../../images/star.svg) no-repeat;
 }
 

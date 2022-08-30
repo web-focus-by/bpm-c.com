@@ -11,8 +11,18 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const Header = ({ siteTitle, turnOnMenu }) => {
+const Header = ({ siteTitle, turnOnMenu, location }) => {
   const refHeader = useRef();
+  let url = '';
+  if (typeof window !== 'undefined') {
+    url = new URL(window.location.href);
+  } else {
+    if (location && location.href) {
+      url = new URL(location.href);
+    }
+  }
+  
+  const homeUrl = url.origin;
   const [isActive, setActive] = useState(false);
   const activeMenu = () => {
     setActive(!isActive);
@@ -23,9 +33,9 @@ const Header = ({ siteTitle, turnOnMenu }) => {
         <div className="container">
           <div className="header__nav">
             <div>
-              <a href="#">
+              <Link to={ homeUrl }>
                 <span className="logo"></span>
-              </a>
+              </Link>
             </div>
             <div className="header_nav_list" ref={ refHeader } >
               <ul>
