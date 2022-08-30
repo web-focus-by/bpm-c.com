@@ -5,6 +5,14 @@
     height: 46px;
 }
 
+.logo-bpm {
+    display: inline-block;
+    background: url(../../images/logo-bpm.svg);
+    width: 74px;
+    height: 80px;
+    background-size: contain;
+}
+
 .yellow_hand {
     display: inline-block;
     background: url(../../images/yellow_hand.svg) no-repeat;
