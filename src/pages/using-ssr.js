@@ -4,9 +4,9 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const UsingSSR = ({ location, serverData }) => {
+const UsingSSR = ({ serverData }) => {
   return (
-    <Layout location={ location } crumbLabel="Main page">
+    <Layout>
       <Seo title="Using SSR" />
       <h1>
         This page is <b>rendered server-side</b>
