@@ -5,7 +5,7 @@ import ITCompany from "../components/it_company"
 import Portfolio from "../components/portfolio"
 import Form from "../components/form"
 import ThanksForm from "../components/thanks_form"
-import Services from "../components/services"
+import ServicesItem from "../components/servicesItem"
 import Technologies from "../components/technologies"
 import BPMCloud from "../components/bpm_cloud"
 import ProjectsProcess from "../components/projects_process"
@@ -27,7 +27,7 @@ const IndexPage = ({ location }) => {
         <Portfolio></Portfolio>
         <Form></Form>
         <ThanksForm></ThanksForm>
-        <Services></Services>
+        <ServicesItem></ServicesItem>
         <Technologies></Technologies>
         <BPMCloud></BPMCloud>
         <ProjectsProcess></ProjectsProcess>

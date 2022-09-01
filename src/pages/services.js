@@ -13,10 +13,10 @@ import SiteDesignByBpmCloud from "../components/siteDesignByBpmCloud/siteDesignB
 import BuyWebSite from "../components/buyWebSite/buyWebSite"
 import Form from "../components/form"
 import Blog from "../components/blog"
-import Services from "../components/services"
+import ServicesItem from "../components/servicesItem"
 import Reviews from "../components/reviews"
 
-const WebsiteDesign = ({ location }) => {
+const Services = ({ location }) => {
   return (
     <>
       <Layout>
@@ -27,7 +27,7 @@ const WebsiteDesign = ({ location }) => {
         <GoalsDesign></GoalsDesign>
         <Form></Form>
         <RequiresWebsiteDesign></RequiresWebsiteDesign>
-        <Services></Services>
+        <ServicesItem></ServicesItem>
         <ResWebDesign></ResWebDesign>
         <Blog></Blog>
         <WebDesignCreationVision></WebDesignCreationVision>
@@ -40,4 +40,4 @@ const WebsiteDesign = ({ location }) => {
   );
 };
 
-export default WebsiteDesign
+export default Services
