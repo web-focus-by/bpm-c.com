@@ -24,13 +24,37 @@ const Layout = ({ children }) => {
           title
         }
       }
+      wpMenu {
+        menuItems {
+          nodes {
+            id
+            path
+            locations
+            label
+            uri
+          }
+        }
+      }
     }
-  `)
+  `);
+
+  const [selectedItem, setItem] = useState();
+  const allItems = data.wpMenu && data.wpMenu.menuItems &&  data.wpMenu.menuItems.nodes ? data.wpMenu.menuItems.nodes : null;
+  const mainItems = allItems.reduce(
+    (result, value) => {
+      if (value.path.slice(1, -1).split("/").length === 1) {
+        result.push({ path: value.path, label: value.label });
+      }
+      return result;
+    },[]
+  );
+   
   const refMenu = useRef();
   const [isToggle, setToggle] = useState(false);
 
-  const closeOpenMenu = () => {
+  const closeOpenMenu = (e) => {
     setToggle(!isToggle);
+    setItem(e);
   }
 
   const closeMenu = () => {
@@ -60,8 +84,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className="header" ref={ refMenu }><Header siteTitle={ data.site.siteMetadata?.title || `Title` } turnOnMenu={ closeOpenMenu } />
-      <DropdownServices isToggle = { isToggle } turnOffMenu={ closeMenu } /></div>
+      <div className="header" ref={ refMenu }>
+        <Header siteTitle={ data.site.siteMetadata?.title || `Title` } turnOnMenu={ closeOpenMenu } mainItems={ mainItems } />
+        <DropdownServices isToggle = { isToggle } turnOffMenu={ closeMenu } selectedItem={ selectedItem } allItems={ allItems } />
+      </div>
       <PhoneButn onClick={ toggleModalActive }></PhoneButn>
       { isOpen ? <Modal onClickClose={ toggleModalActive }></Modal> : null}
       { children }

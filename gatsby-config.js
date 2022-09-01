@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Digital agency "BPM-Cloud": website development and promotion`,
+    title: `BPM Cloud`,
     description: `Full cycle digital agency offers development, design, maintenance and promotion of websites 🏆 We will raise the site to the TOP of search results`,
     author: `@bpm-cloud.by`,
     siteUrl: `https://bpm-c.com/`,
