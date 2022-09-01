@@ -12,29 +12,36 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const DropdownServices = ({ isToggle, turnOffMenu, location }) => {
+const DropdownServices = ({ isToggle, turnOffMenu, selectedItem, allItems }) => {
+  
   let url = '';
   if (typeof window !== 'undefined') {
     url =  new URL(window.location.href);
-  } else {
-    if (location && location.href) {
-      url =  new URL(location.href);
-    }
   }
-  
-  const baseUrl = url.origin + "/";
-  const data = [
-    { name: "IT Outsourcing", routeLink: baseUrl + "websiteDesign/" }, { name: "ASO Mobile App Optimisation", routeLink: baseUrl + "websiteDesign/" },
-    { name: "IT Outstaffing", routeLink: baseUrl + "websiteDesign/" }, { name: "GameDev", routeLink: baseUrl + "websiteDesign/" },
-    { name: "IT Consulting", routeLink: baseUrl + "websiteDesign/" }, { name: "Web Development Services", routeLink: baseUrl + "websiteDesign/" },
-    { name: "Web App Development", routeLink: baseUrl + "websiteDesign/" }, { name: "Website modification", routeLink: baseUrl + "websiteDesign/" },
-    { name: "Mobile App Development", routeLink: baseUrl + "websiteDesign/" }, { name: "Digital marketing", routeLink: baseUrl + "websiteDesign/" },
-    { name: "Desktop App Development", routeLink: baseUrl + "websiteDesign/" }, { name: "PPC Advertasing", routeLink: baseUrl + "websiteDesign/" },
-    { name: "UX/UI Services", routeLink: baseUrl + "websiteDesign/" }, { name: "SMM", routeLink: baseUrl + "websiteDesign/" },
-    { name: "Testing and QA", routeLink: baseUrl + "websiteDesign/" }, { name: "Landing page development", routeLink: baseUrl + "websiteDesign/" },
-    { name: "Web application design", routeLink: baseUrl + "websiteDesign/" },{ name: "Marketplace development", routeLink: baseUrl + "websiteDesign/" },
-    { name: "UI/UX mobile app design", routeLink: baseUrl + "websiteDesign/"}
-  ]
+
+  const selectedItemPath = allItems.filter(value => {
+    if (value.path.slice(1, -1).split("/").length === 1 && value.label === selectedItem) {
+      return value.path;
+    }
+  })[0];
+
+  const result = allItems.reduce((res, value) => {
+    if (selectedItemPath && selectedItemPath.path.slice(1, -1)
+      && value.path.slice(1, -1).split("/")[0] === selectedItemPath.path.slice(1, -1).toString().toLowerCase()) {
+      res.push({ path: value.path, label: value.label });
+    }
+    return res;
+  },[]);
+
+  const baseUrl = url.origin;
+  const websiteServices = result[0] && result[0].path ? baseUrl + result[0].path : baseUrl;
+  const data = result.reduce((resValue, value) => {
+    if (value.path.slice(1, -1).split("/").length > 1) {
+      resValue.push({ name: value.label, routeLink: baseUrl + value.path })
+    }
+    return resValue
+  },[]);
+
   const [isOpenPoint, setOpenPoint] = useState(false);
   const closeMenu = () =>{
     setOpenPoint(!isOpenPoint);
@@ -44,17 +51,17 @@ const DropdownServices = ({ isToggle, turnOffMenu, location }) => {
     return <li key={ index } onClick={ closeMenu }><Link to={ value.routeLink }>{ value.name }</Link></li>
   })
   if (isToggle) {
-  return (
-    <div className="dropdown_services_sticky">
-      <div className="dropdown_services">
-        <div className="dropdown_services__title">Services</div>
-        <div className="dropdown_services__info">
-          <ul>
-            { resultData }
-          </ul>
+    return (
+      <div className="dropdown_services_sticky">
+        <div className="dropdown_services">
+          <div className="dropdown_services__title"><Link to={ websiteServices }>{ result[0].label }</Link></div>
+          <div className="dropdown_services__info">
+            <ul>
+              { result.length>1 ?resultData : (<li onClick={ closeMenu }><Link to={ websiteServices }>Here You may see our work</Link></li>) }
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
     )
   }
 }
