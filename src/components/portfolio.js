@@ -13,7 +13,10 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const Portfolio = ({ posts }) => {
-  const url = window ? new URL(window.location.href) : '';
+  let url = '';
+  if (typeof window !== 'undefined') {
+    url =  new URL(window.location.href);
+  }
   const items = posts.map((post, index) => {
     if (index <= 5) {
       let tags = [];

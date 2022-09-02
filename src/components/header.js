@@ -11,14 +11,14 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const Header = ({ siteTitle, turnOnMenu, mainItems }) => {
+const Header = ({ turnOnMenu, mainItems }) => {
   const refHeader = useRef();
   let url = '';
   if (typeof window !== 'undefined') {
     url = new URL(window.location.href);
   }
 
-  const homeUrl = url.origin;
+  const homeUrl = url ? url.origin:'';
   const activeMenu = (e) => {
     turnOnMenu(e.target.innerText);
   }
@@ -35,7 +35,6 @@ const Header = ({ siteTitle, turnOnMenu, mainItems }) => {
     }
     
   });
-  console.log(siteTitle + ' is already loaded!')
 
   return (
     <header className="header">
