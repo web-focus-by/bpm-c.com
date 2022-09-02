@@ -30,7 +30,7 @@ const Hero = ({ location, crumbLabel }) => {
 
   return (
     <div className="container">
-      {url.pathname.length === 1 ?
+      {url && url.pathname && url.pathname.length === 1 ?
         <div className="breadcrumb-container" style={{visibility: "hidden"}}>
           <Breadcrumb location={ location } crumbSeparator="/" crumbLabel={ crumbLabel }  getProps={isPartiallyActive} />
         </div> :
