@@ -1,0 +1,33 @@
+.margin_bottom_for_portfolio_240 {
+    margin-bottom: 480px;
+}
+
+@media (max-width: 375px) {
+    .margin_bottom_for_portfolio_240 {
+        margin-bottom: 80px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+    .margin_bottom_for_portfolio_240 {
+        margin-bottom: calc(80px + (100 - 80) * ((100vw - 375px) / (768 - 375)));
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .margin_bottom_for_portfolio_240 {
+        margin-bottom: calc(100px + (120 - 100) * ((100vw - 768px) / (1024 - 768)));
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .margin_bottom_for_portfolio_240 {
+        margin-bottom: calc(410px + (170 - 120) * ((100vw - 1024px) / (1366 - 1024)));
+    }
+}
+
+@media (min-width: 1366px) and (max-width: 1920px) {
+    .margin_bottom_for_portfolio_240 {
+        margin-bottom: calc(480px + (240 - 170) * ((100vw - 1366px) / (1920 - 1366)));
+    }
+}

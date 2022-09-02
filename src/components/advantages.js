@@ -19,7 +19,6 @@ const Advantages = ({ siteTitle }) => {
   let cssObjMarginLeft = '';
   let cssObjMarginRight = '';
   const resizeBlock = () => {
-    //console.log(advantages);
     const lastKnownPositionBlock = advantages.current ?
       advantages.current.offsetTop - advantages.current.offsetHeight :0;
       let lastKnownScrollPosition = 0
