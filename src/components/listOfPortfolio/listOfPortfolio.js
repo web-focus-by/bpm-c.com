@@ -14,7 +14,7 @@ import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
 const ListOfPortfolio = ({ posts }) => {
-  const url = new URL(window.location.href);
+  const url = window ? new URL(window.location.href) : '';
   const items = posts.map((post, index) => {
     let tags = [];
     if (post && post.node.tags) {
