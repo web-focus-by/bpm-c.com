@@ -17,7 +17,7 @@ import Blog from "../../components/blog"
 import ServicesItem from "../../components/servicesItem"
 import Reviews from "../../components/reviews"
 
-const ServicesITOutsourcing = ({ location }) => {
+const Servicesitoutsourcing = ({ location }) => {
   const getData = useStaticQuery(graphql`
     query siteGetAllDataQuery {
       allWpPost {
@@ -67,4 +67,4 @@ const ServicesITOutsourcing = ({ location }) => {
   );
 };
 
-export default ServicesITOutsourcing
+export default Servicesitoutsourcing
