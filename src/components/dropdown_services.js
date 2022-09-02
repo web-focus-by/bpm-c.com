@@ -13,7 +13,6 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const DropdownServices = ({ isToggle, turnOffMenu, selectedItem, allItems }) => {
-  
   let url = '';
   if (typeof window !== 'undefined') {
     url =  new URL(window.location.href);
@@ -34,7 +33,6 @@ const DropdownServices = ({ isToggle, turnOffMenu, selectedItem, allItems }) => 
   },[]);
 
   const baseUrl = url.origin;
-  const websiteServices = result[0] && result[0].path ? baseUrl + result[0].path : baseUrl;
   const data = result.reduce((resValue, value) => {
     if (value.path.slice(1, -1).split("/").length > 1) {
       resValue.push({ name: value.label, routeLink: baseUrl + value.path })
@@ -54,10 +52,10 @@ const DropdownServices = ({ isToggle, turnOffMenu, selectedItem, allItems }) => 
     return (
       <div className="dropdown_services_sticky">
         <div className="dropdown_services">
-          <div className="dropdown_services__title"><Link to={ websiteServices }>{ result[0].label }</Link></div>
+          <div className="dropdown_services__title"><a>{ result[0].label }</a></div>
           <div className="dropdown_services__info">
             <ul>
-              { result.length>1 ?resultData : (<li onClick={ closeMenu }><Link to={ websiteServices }>Here You may see our work</Link></li>) }
+              { resultData }
             </ul>
           </div>
         </div>

@@ -11,7 +11,7 @@ import "../../components/styles/media_1366.css"
 import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
-import "./servicesITOutsourcing.css"
+import "./serviceITOutsourcing.css"
 
 
 const ServicesITOutsourcing = () => {
@@ -33,7 +33,7 @@ const ServicesITOutsourcing = () => {
     { key: 'DevelopmentOutsourcingSymfony', name: 'Development Outsourcing on Symfony', link: '#' },
     { key: 'Development Outsourcing on Angular.js', name: 'Development Outsourcing on Angular.js', link: '#' },
     { key: 'OutsourcingManualTesting', name: 'Outsourcing manual testing', link: '#' },
-    { key: 'OutsourcingAutomatedTesting', name: 'Outsourcing automated testing', link: '#' }
+    { key: 'OutsourcingAutomatedTesting', name: 'Outsourcing  automated testing', link: '#' }
   ];
 
   const result = data.map((value, index) => {
@@ -52,10 +52,10 @@ const ServicesITOutsourcing = () => {
             Services in IT Outsourcing
           </div>
         </div>
-      <div className="items_tagline__butn">
-        { result }
+        <div className="items_tagline__butn">
+          { result }
+        </div>
       </div>
-    </div>
     </div>
   )
 }

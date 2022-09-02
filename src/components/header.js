@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useRef, useState } from "react"
+import { useRef } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import "../components/styles/main.css"
@@ -24,9 +24,16 @@ const Header = ({ siteTitle, turnOnMenu, mainItems }) => {
   }
 
   const menuItems = mainItems.map((item, index) => {
-    return (
-      <li key={ index } onClick={ activeMenu } ><a>{ item.label }</a></li>
-    )
+    if (index === 0) {
+      return (
+        <li key={ index }><Link to={ homeUrl + item.path }>{ item.label }</Link></li>
+      )
+    } else {
+      return (
+        <li key={ index } onClick={ activeMenu } ><a>{ item.label }</a></li>
+      )
+    }
+    
   });
   console.log(siteTitle + ' is already loaded!')
 

@@ -276,6 +276,21 @@ body {
 .hero__butn .button_white span {
   margin-left: 14px;
 }
+.hero__butn__butntag .button_item_tag {
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #1A1B1F;
+  font-family: "Acrom";
+  margin: 0.4rem;
+}
+.hero__butn__butntag .button_item_tag :hover {
+  cursor: pointer;
+}
+.hero__butn__butntag .button_item_tag span {
+  margin-left: 14px;
+}
 
 .it_company {
   margin-top: 308px;

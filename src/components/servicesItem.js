@@ -1,20 +1,20 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import Service from "../components/services/service.js"
+import Service from "../components/services/service"
 
-const Services = ({ siteTitle }) => {
+const ServicesItem = ({ siteTitle }) => {
   return (
     <Service></Service>
   );
 }
 
-Services.propTypes = {
+ServicesItem.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Services.defaultProps = {
+ServicesItem.defaultProps = {
   siteTitle: ``,
 }
 
-export default Services
+export default ServicesItem

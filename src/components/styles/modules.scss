@@ -16,6 +16,23 @@
     }
 }
 
+.button_item_tag {
+    border: 1px solid #1A1B1F;
+    padding: 10px 20px;
+    border-radius: 80px;
+    background: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    margin: 0.4rem;
+
+    &:hover {
+        background: #1A1B1F;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+}
+
 .breadcrumb-container {
     margin-top: 15px;
     margin-left: 0px;
@@ -114,6 +131,25 @@
     justify-content: space-between;
     align-items: baseline;
     font-weight: 500;
+}
+
+.resume-portfolio{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 166px;
+    margin-bottom: 60px;
+    .resume-portfolio-text {
+        width: 260px;
+        height: 68px;
+        left: 220px;
+        top: 598px;
+        color: #1A1B1F;
+        font-family: 'Acrom';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 115%;
+    }
 }
 
 .margin_bottom_60 {
