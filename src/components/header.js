@@ -24,9 +24,16 @@ const Header = ({ siteTitle, turnOnMenu, mainItems }) => {
   }
 
   const menuItems = mainItems.map((item, index) => {
-    return (
-      <li key={ index } onClick={ activeMenu } ><a>{ item.label }</a></li>
-    )
+    if (index === 0) {
+      return (
+        <li key={ index }><Link to={ homeUrl + item.path }>{ item.label }</Link></li>
+      )
+    } else {
+      return (
+        <li key={ index } onClick={ activeMenu } ><a>{ item.label }</a></li>
+      )
+    }
+    
   });
   console.log(siteTitle + ' is already loaded!')
 

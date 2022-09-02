@@ -11,7 +11,7 @@ import "../../components/styles/media_1366.css"
 import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
-import "./servicesITOutsourcing.css"
+import "./serviceITOutsourcing.css"
 
 
 const ServicesITOutsourcing = () => {

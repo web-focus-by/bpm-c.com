@@ -1,6 +1,5 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
@@ -13,7 +12,7 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
-const Hero = ({ siteTitle, data, location, crumbLabel }) => {
+const Hero = ({ location, crumbLabel }) => {
   let url = '';
   if (typeof window !== 'undefined') {
     url = new URL(window.location.href);
@@ -31,9 +30,13 @@ const Hero = ({ siteTitle, data, location, crumbLabel }) => {
 
   return (
     <div className="container">
-      <div className="breadcrumb-container">
-        <Breadcrumb location={ location } crumbSeparator="/" crumbLabel={ crumbLabel }  getProps={isPartiallyActive} />
-      </div>
+      {url.pathname.length === 1 ?
+        <div className="breadcrumb-container" style={{visibility: "hidden"}}>
+          <Breadcrumb location={ location } crumbSeparator="/" crumbLabel={ crumbLabel }  getProps={isPartiallyActive} />
+        </div> :
+        <div className="breadcrumb-container" style={{visibility: "visible"}}>
+          <Breadcrumb location={ location } crumbSeparator="/" crumbLabel={ crumbLabel }  getProps={isPartiallyActive} />
+        </div>}
       <div className="hero">
         <div className="hero__title title_80">
           «BPM CLOUD» an IT company that clearly knows<span className="yellow_hand"></span>

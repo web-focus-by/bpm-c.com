@@ -3,9 +3,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import HeroPortfolio from "../components/heroPortfolio/heroPortfolio"
 import ListOfPortfolio from "../components/listOfPortfolio/listOfPortfolio"
-import LeadersChoice from "../components/leaders_choice"
+import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
 
-const Portfolio = ({ location }) => {
+const Portfolios = ({ location }) => {
   const PostsAndTags = useStaticQuery(graphql`
     query SiteTagQuery {
       allWpTag {
@@ -22,17 +22,20 @@ const Portfolio = ({ location }) => {
         edges {
           node {
             id
-            slug
+            title
             link
             content
-            date
-            title
             tags {
               nodes {
                 slug
               }
             }
-            status
+            featuredImage {
+              node {
+                id
+                mediaItemUrl
+              }
+            }
           }
         }
       }
@@ -45,11 +48,11 @@ const Portfolio = ({ location }) => {
     <>
       <Layout>
         <HeroPortfolio location={ location } crumbLabel="Portfolio" tags={ allTags }></HeroPortfolio>
-        <ListOfPortfolio post={ allPosts }></ListOfPortfolio>
-        <LeadersChoice></LeadersChoice>
+        <ListOfPortfolio posts={ allPosts } ></ListOfPortfolio>
+        <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
     </>
   );
 };
 
-export default Portfolio
+export default Portfolios
