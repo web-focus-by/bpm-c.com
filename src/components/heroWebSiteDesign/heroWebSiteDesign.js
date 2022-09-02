@@ -27,7 +27,6 @@ const HeroWebSiteDesign = ({ location, crumbLabel }) => {
       ? { className: 'breadcrumb__link breadcrumb__link__active' }
       : {}
   }
-  console.log(location);
 
   return (
     <div className="container">
