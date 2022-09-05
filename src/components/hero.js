@@ -32,7 +32,7 @@ const Hero = ({ location, crumbLabel }) => {
     <div className="container">
       <div className="breadcrumb-container" style={{visibility: "hidden"}}>
         <Breadcrumb location={ location } crumbSeparator="/" crumbLabel={ crumbLabel }  getProps={isPartiallyActive} />
-      </div> :
+      </div>
       <div className="hero">
         <div className="hero__title title_80">
           «BPM CLOUD» an IT company that clearly knows<span className="yellow_hand"></span>
