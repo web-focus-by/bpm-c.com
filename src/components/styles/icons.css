@@ -28,6 +28,14 @@
   margin-left: 10px;
 }
 
+.smallpuzzle {
+  display: inline-block;
+  background: url(../../images/smallpuzzle.svg) no-repeat;
+  width: 23px;
+  height: 23px;
+  margin-left: 10px;
+}
+
 .arrow_black {
   display: inline-block;
   background: url(../../images/arrow_black.svg) no-repeat;
@@ -227,6 +235,14 @@
   height: 47px;
   margin-left: 10px;
   background: url(../../images/star.svg) no-repeat;
+}
+
+.smallstar {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  margin-left: 10px;
+  background: url(../../images/smallstar.svg) no-repeat;
 }
 
 .insta {
