@@ -23,7 +23,7 @@ const PortfolioWebSiteDesign = ({ posts }) => {
         tags = post.node.tags.nodes.map((tag, i) => {
           let valueTag = '#' + tag.slug;
           return (
-            <li className="hash_list_block">
+            <li key={ post.node.id.toString() + valueTag.toString() } className="hash_list_block">
               <Link to={ url.href + tag.slug + "/" }>{ valueTag }</Link>
             </li>
           )
