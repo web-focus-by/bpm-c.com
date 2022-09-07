@@ -18,21 +18,12 @@ const ServicesITOutsourcing = ({ title, themes }) => {
   if (typeof window !== 'undefined') {
     baseUrl =  new URL(window.location.href).origin;
   }
-  const data = themes.reduce((res, val) => {
-    let item = {
-      key: val.id,
-      name: val.label,
-      link: baseUrl + val.path,
-      parentId: val.parentId
-    }
-    return [...res, item]
-  },[]);
 
-  const result = data.map((value, index) => {
+  const result = themes.map((value, index) => {
     return (
-      <Link to={ value.link }>
-        <button key = { index + value.key } className="button_white_item">
-          { value.name }
+      <Link to={ baseUrl + value.uri }>
+        <button key = { index + value.id } className="button_white_item">
+          { value.title }
         </button>
       </Link>
     )

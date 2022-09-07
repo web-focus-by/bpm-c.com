@@ -41,13 +41,19 @@ const Digitalmarketing = ({ location }) => {
           }
         }
       }
-      wpMenu {
-        menuItems {
-          nodes {
+      wpPage(slug: {eq: "digitalmarketing"}) {
+        id
+        uri
+        title
+        content
+      }
+      allWpPage(filter: {wpParent: {node: {slug: {eq: "digitalmarketing"}}}}) {
+        edges {
+          node {
             id
-            label
-            path
-            parentId
+            title
+            uri
+            content
           }
         }
       }
@@ -57,19 +63,17 @@ const Digitalmarketing = ({ location }) => {
   if (typeof window !== 'undefined') {
     url =  new URL(window.location.href).pathname.slice(1,-1).split("/")[1];
   }
-  const items = getData ? getData.wpMenu.menuItems.nodes: [];
+  const items = getData ? getData.allWpPage.edges : [];
   const themes = items.reduce((res, val) => {
-    let item = val.path.slice(1,-1).split("/");
-    if( item.length === 3 && item[1] === url) {
-      return [...res, val]
-    }
-    return res
+    let item = { id: val.node.id, title: val.node.title, uri: val.node.uri };
+    return [...res, item]
   },[])
+  const contentPage = getData ? getData.wpPage : {};
   const posts = getData ? getData.allWpPost.edges : [];
   return (
     <>
       <Layout>
-        <HeroWebSiteDesign location={ location } crumbLabel="Digital marketing"></HeroWebSiteDesign>
+        <HeroWebSiteDesign content={ contentPage } location={ location } crumbLabel="Digital marketing"></HeroWebSiteDesign>
         <ServiceITOutsourcing title={ "Digital marketing" } themes={ themes }></ServiceITOutsourcing>
         <WebSiteDesignReason></WebSiteDesignReason>
         <PortfolioWebSiteDesign posts={ posts }></PortfolioWebSiteDesign>
