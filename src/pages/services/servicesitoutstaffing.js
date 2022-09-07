@@ -41,14 +41,36 @@ const Servicesitoutstaffing = ({ location }) => {
           }
         }
       }
+      wpMenu {
+        menuItems {
+          nodes {
+            id
+            label
+            path
+            parentId
+          }
+        }
+      }
     }`
   );
+  let url = '';
+  if (typeof window !== 'undefined') {
+    url =  new URL(window.location.href).pathname.slice(1,-1).split("/")[1];
+  }
+  const items = getData ? getData.wpMenu.menuItems.nodes: [];
+  const themes = items.reduce((res, val) => {
+    let item = val.path.slice(1,-1).split("/");
+    if( item.length === 3 && item[1] === url) {
+      return [...res, val]
+    }
+    return res
+  },[])
   const posts = getData ? getData.allWpPost.edges : [];
   return (
     <>
       <Layout>
         <HeroWebSiteDesign location={ location } crumbLabel="IT Outstaffing"></HeroWebSiteDesign>
-        <ServiceITOutsourcing></ServiceITOutsourcing>
+        <ServiceITOutsourcing title={ "IT Outstaffing" } themes={ themes }></ServiceITOutsourcing>
         <WebSiteDesignReason></WebSiteDesignReason>
         <PortfolioWebSiteDesign posts={ posts }></PortfolioWebSiteDesign>
         <GoalsDesign></GoalsDesign>

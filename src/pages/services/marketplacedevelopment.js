@@ -17,50 +17,9 @@ import Blog from "../../components/blog"
 import ServicesItem from "../../components/servicesItem"
 import Reviews from "../../components/reviews"
 
-/*query siteGetAllDataQuery {
-  posts {
-    edges {
-      node {
-        id
-        title
-        link
-        content
-        tags {
-          nodes {
-            slug
-          }
-        }
-        featuredImage {
-          node {
-            id
-            mediaItemUrl
-          }
-        }
-      }
-    }
-  }
-  menus {
-    edges {
-      node {
-        menuItems(first: 500) {
-          edges {
-            node {
-              id
-              path
-              label
-              parentId
-              menuItemId
-            }
-          }
-        }
-      }
-    }
-  }
-}*/
-
-const Servicesitoutsourcing = ({ location }) => {
+const Marketplacedevelopment = ({ location }) => {
   const getData = useStaticQuery(graphql`
-    query siteGetAllDataQuery {
+    query siteGetMarketplacedevelopmentDataQuery {
       allWpPost {
         edges {
           node {
@@ -99,7 +58,6 @@ const Servicesitoutsourcing = ({ location }) => {
     url =  new URL(window.location.href).pathname.slice(1,-1).split("/")[1];
   }
   const items = getData ? getData.wpMenu.menuItems.nodes: [];
-  const posts = getData ? getData.allWpPost.edges : [];
   const themes = items.reduce((res, val) => {
     let item = val.path.slice(1,-1).split("/");
     if( item.length === 3 && item[1] === url) {
@@ -107,12 +65,12 @@ const Servicesitoutsourcing = ({ location }) => {
     }
     return res
   },[])
-  
+  const posts = getData ? getData.allWpPost.edges : [];
   return (
     <>
       <Layout>
-        <HeroWebSiteDesign location={ location } crumbLabel="IT Outsourcing"></HeroWebSiteDesign>
-        <ServiceITOutsourcing title={ "IT Outsourcing" } themes={ themes }></ServiceITOutsourcing>
+        <HeroWebSiteDesign location={ location } crumbLabel="Marketplace development"></HeroWebSiteDesign>
+        <ServiceITOutsourcing title={ "Marketplace development" } themes={ themes }></ServiceITOutsourcing>
         <WebSiteDesignReason></WebSiteDesignReason>
         <PortfolioWebSiteDesign posts={ posts }></PortfolioWebSiteDesign>
         <GoalsDesign></GoalsDesign>
@@ -131,4 +89,4 @@ const Servicesitoutsourcing = ({ location }) => {
   );
 };
 
-export default Servicesitoutsourcing
+export default Marketplacedevelopment
