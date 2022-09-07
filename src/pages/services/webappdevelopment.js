@@ -41,14 +41,40 @@ const Webappdevelopment = ({ location }) => {
           }
         }
       }
+      wpPage(slug: {eq: "webappdevelopment"}) {
+        id
+        uri
+        title
+        content
+      }
+      allWpPage(filter: {wpParent: {node: {slug: {eq: "webappdevelopment"}}}}) {
+        edges {
+          node {
+            id
+            title
+            uri
+            content
+          }
+        }
+      }
     }`
   );
+  let url = '';
+  if (typeof window !== 'undefined') {
+    url =  new URL(window.location.href).pathname.slice(1,-1).split("/")[1];
+  }
+  const items = getData ? getData.allWpPage.edges : [];
+  const themes = items.reduce((res, val) => {
+    let item = { id: val.node.id, title: val.node.title, uri: val.node.uri };
+    return [...res, item]
+  },[])
+  const contentPage = getData ? getData.wpPage : {};
   const posts = getData ? getData.allWpPost.edges : [];
   return (
     <>
       <Layout>
-        <HeroWebSiteDesign location={ location } crumbLabel="Web application development"></HeroWebSiteDesign>
-        <ServiceITOutsourcing></ServiceITOutsourcing>
+        <HeroWebSiteDesign content={ contentPage } location={ location } crumbLabel="Web application development"></HeroWebSiteDesign>
+        <ServiceITOutsourcing title={ "Web application development" } themes={ themes }></ServiceITOutsourcing>
         <WebSiteDesignReason></WebSiteDesignReason>
         <PortfolioWebSiteDesign posts={ posts }></PortfolioWebSiteDesign>
         <GoalsDesign></GoalsDesign>

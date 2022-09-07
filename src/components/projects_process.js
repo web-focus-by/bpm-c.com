@@ -24,7 +24,7 @@ const ProjectsProcess = ({ siteTitle }) => (
       <div className="projects_process__list">
         <div className="projects_process_list_item padding_50">
           <p>analytics</p>
-          <span className="puzzle"></span>
+          <span className="smallpuzzle"></span>
           <div className="projects_process_list_item padding_167">
             <p>graphics</p>
             <span className="pen"></span>
@@ -42,7 +42,7 @@ const ProjectsProcess = ({ siteTitle }) => (
                     <span className="testing"></span>
                     <div className="projects_process_list_item padding_184">
                       <p>launch</p>
-                      <span className="star"></span>
+                      <span className="smallstar"></span>
                     </div>
                   </div>
                 </div>

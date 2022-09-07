@@ -17,9 +17,9 @@ import Blog from "../../components/blog"
 import ServicesItem from "../../components/servicesItem"
 import Reviews from "../../components/reviews"
 
-const Webapplicationdesign = ({ location }) => {
+const Ppcadvertasing = ({ location }) => {
   const getData = useStaticQuery(graphql`
-    query siteGetWebapplicationdesigntDataQuery {
+    query siteGetPpcadvertasingDataQuery {
       allWpPost {
         edges {
           node {
@@ -41,13 +41,13 @@ const Webapplicationdesign = ({ location }) => {
           }
         }
       }
-      wpPage(slug: {eq: "webapplicationdesign"}) {
+      wpPage(slug: {eq: "ppcadvertasing"}) {
         id
         uri
         title
         content
       }
-      allWpPage(filter: {wpParent: {node: {slug: {eq: "webapplicationdesign"}}}}) {
+      allWpPage(filter: {wpParent: {node: {slug: {eq: "ppcadvertasing"}}}}) {
         edges {
           node {
             id
@@ -73,8 +73,8 @@ const Webapplicationdesign = ({ location }) => {
   return (
     <>
       <Layout>
-        <HeroWebSiteDesign content={ contentPage } location={ location } crumbLabel="Web application design"></HeroWebSiteDesign>
-        <ServiceITOutsourcing title={ "Web application design" } themes={ themes }></ServiceITOutsourcing>
+        <HeroWebSiteDesign content={ contentPage } location={ location } crumbLabel="PPC advertasing"></HeroWebSiteDesign>
+        <ServiceITOutsourcing title={ "PPC advertasing" } themes={ themes }></ServiceITOutsourcing>
         <WebSiteDesignReason></WebSiteDesignReason>
         <PortfolioWebSiteDesign posts={ posts }></PortfolioWebSiteDesign>
         <GoalsDesign></GoalsDesign>
@@ -93,4 +93,4 @@ const Webapplicationdesign = ({ location }) => {
   );
 };
 
-export default Webapplicationdesign
+export default Ppcadvertasing

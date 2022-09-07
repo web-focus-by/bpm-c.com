@@ -29,9 +29,8 @@ const Layout = ({ children }) => {
           nodes {
             id
             path
-            locations
             label
-            uri
+            parentId
           }
         }
       }
@@ -40,7 +39,14 @@ const Layout = ({ children }) => {
 
   const [selectedItem, setItem] = useState();
   const allItems = data.wpMenu && data.wpMenu.menuItems &&  data.wpMenu.menuItems.nodes ? data.wpMenu.menuItems.nodes : null;
-  const mainItems = allItems.reduce(
+  const allItemsForMenu = allItems.reduce((res,val)=>{
+    let item = val.path.slice(1,-1).split("/");
+    if( item.length < 3) {
+      return [...res, val]
+    }
+    return res
+  },[]);
+  const mainItems = allItemsForMenu.reduce(
     (result, value) => {
       if (value.path.slice(1, -1).split("/").length === 1) {
         result.push({ path: value.path, label: value.label });
@@ -86,7 +92,7 @@ const Layout = ({ children }) => {
     <>
       <div className="header" ref={ refMenu }>
         <Header siteTitle={ data.site.siteMetadata?.title || `Title` } turnOnMenu={ closeOpenMenu } mainItems={ mainItems } />
-        <DropdownServices isToggle = { isToggle } turnOffMenu={ closeMenu } selectedItem={ selectedItem } allItems={ allItems } />
+        <DropdownServices isToggle = { isToggle } turnOffMenu={ closeMenu } selectedItem={ selectedItem } allItems={ allItemsForMenu } />
       </div>
       <PhoneButn onClick={ toggleModalActive }></PhoneButn>
       { isOpen ? <Modal onClickClose={ toggleModalActive }></Modal> : null}

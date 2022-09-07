@@ -17,9 +17,50 @@ import Blog from "../../components/blog"
 import ServicesItem from "../../components/servicesItem"
 import Reviews from "../../components/reviews"
 
+/*query siteGetAllDataQuery {
+  posts {
+    edges {
+      node {
+        id
+        title
+        link
+        content
+        tags {
+          nodes {
+            slug
+          }
+        }
+        featuredImage {
+          node {
+            id
+            mediaItemUrl
+          }
+        }
+      }
+    }
+  }
+  menus {
+    edges {
+      node {
+        menuItems(first: 500) {
+          edges {
+            node {
+              id
+              path
+              label
+              parentId
+              menuItemId
+            }
+          }
+        }
+      }
+    }
+  }
+}*/
+
 const Servicesitoutsourcing = ({ location }) => {
   const getData = useStaticQuery(graphql`
-    query siteGetAllDataQuery {
+    query siteGetServicesitoutsourcingDataQuery {
       allWpPost {
         edges {
           node {
@@ -41,14 +82,41 @@ const Servicesitoutsourcing = ({ location }) => {
           }
         }
       }
-    }`
-  );
+      wpPage(slug: {eq: "servicesitoutsourcing"}) {
+        id
+        uri
+        title
+        content
+      }
+      allWpPage(filter: {wpParent: {node: {slug: {eq: "servicesitoutsourcing"}}}}) {
+        edges {
+          node {
+            id
+            title
+            uri
+            content
+          }
+        }
+      }
+    }
+  `);
+  let url = '';
+  if (typeof window !== 'undefined') {
+    url =  new URL(window.location.href).pathname.slice(1,-1).split("/")[1];
+  }
+  const contentPage = getData ? getData.wpPage : {};
   const posts = getData ? getData.allWpPost.edges : [];
+  const items = getData ? getData.allWpPage.edges : [];
+  const themes = items.reduce((res, val) => {
+    let item = { id: val.node.id, title: val.node.title, uri: val.node.uri };
+    return [...res, item]
+  },[])
+  
   return (
     <>
       <Layout>
-        <HeroWebSiteDesign location={ location } crumbLabel="IT Outsourcing"></HeroWebSiteDesign>
-        <ServiceITOutsourcing></ServiceITOutsourcing>
+        <HeroWebSiteDesign content={ contentPage } location={ location } crumbLabel="IT Outsourcing"></HeroWebSiteDesign>
+        <ServiceITOutsourcing title={ "IT Outsourcing" } themes={ themes }></ServiceITOutsourcing>
         <WebSiteDesignReason></WebSiteDesignReason>
         <PortfolioWebSiteDesign posts={ posts }></PortfolioWebSiteDesign>
         <GoalsDesign></GoalsDesign>
