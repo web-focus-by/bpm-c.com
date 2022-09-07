@@ -17,47 +17,6 @@ import Blog from "../../components/blog"
 import ServicesItem from "../../components/servicesItem"
 import Reviews from "../../components/reviews"
 
-/*query siteGetAllDataQuery {
-  posts {
-    edges {
-      node {
-        id
-        title
-        link
-        content
-        tags {
-          nodes {
-            slug
-          }
-        }
-        featuredImage {
-          node {
-            id
-            mediaItemUrl
-          }
-        }
-      }
-    }
-  }
-  menus {
-    edges {
-      node {
-        menuItems(first: 500) {
-          edges {
-            node {
-              id
-              path
-              label
-              parentId
-              menuItemId
-            }
-          }
-        }
-      }
-    }
-  }
-}*/
-
 const Servicesitoutsourcing = ({ location }) => {
   const getData = useStaticQuery(graphql`
     query siteGetServicesitoutsourcingDataQuery {

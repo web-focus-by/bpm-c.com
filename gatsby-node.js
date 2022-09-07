@@ -8,21 +8,18 @@
 const path = require(`path`)
 const { slash } = require(`gatsby-core-utils`)
 
-exports.createPages = async ({ graphql, actions }) => {
+
+exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
-    allWpPage {
+  {
+    allWpPage(filter: {wpParent: {node: {slug: {eq: "servicesitoutsourcing"}}}}) {
       edges {
         node {
           id
-          slug
           title
-          status
-          template {
-            templateName
-          }
-          nodeType
-          link
+          uri
           content
+          slug
         }
       }
     }
@@ -46,19 +43,30 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `)
+  }`)
   if (data.errors) {
     throw new Error(data.errors);
   }
-  const { allWpPage, allWpPost, allWpCategory, allWpTag } = data.data;
-  const { createPage } = actions;
+  /*result.data.allWpPage.edges.forEach((item) => {
+    const slug = item.node.slug
+    actions.createPage({
+      path: slug,
+      component: require.resolve(`./src/templates/servicestemplatepage.js`),
+      context: { slug: slug },
+    })
+  })*/
+
   createPage({
     path: "/using-dsg",
     component: require.resolve("./src/templates/using-dsg.js"),
     context: {},
     defer: true,
   })
+
 }
+
+  //const { allWpPage, allWpPost, allWpCategory, allWpTag } = data.data;
+
   // Create Page pages.
   //const pageTemplate = path.resolve(`./src/templates/page-template/page.js`);
   //const developPage = path.resolve(`./src/templates/categoryPage/developPage/developPage.js`);
@@ -119,21 +127,4 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
   
-  createPage({
-    path: "/using-dsg",
-    component: require.resolve("./src/templates/using-dsg.js"),
-    context: {},
-    defer: true,
-  })
 }*/
-
-
-exports.createPages = async ({ actions }) => {
-  const { createPage } = actions
-  createPage({
-    path: "/using-dsg",
-    component: require.resolve("./src/templates/using-dsg.js"),
-    context: {},
-    defer: true,
-  })
-}
