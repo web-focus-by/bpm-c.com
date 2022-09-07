@@ -108,7 +108,7 @@ const Servicesitoutsourcing = ({ location }) => {
   const posts = getData ? getData.allWpPost.edges : [];
   const items = getData ? getData.allWpPage.edges : [];
   const themes = items.reduce((res, val) => {
-    let item = { id: val.node.id, title: val.node.title, uri: val.node.uri };
+    let item = { id: val.node.id, title: val.node.title, uri: val.node.uri, content: val.content, content: val.content };
     return [...res, item]
   },[])
   
