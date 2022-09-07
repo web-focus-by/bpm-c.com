@@ -10,7 +10,7 @@ const { slash } = require(`gatsby-core-utils`)
 
 
 exports.createPages = async function ({ actions, graphql }) {
-  const { data } = await graphql(`
+  const result = await graphql(`
   {
     allWpPage(filter: {wpParent: {node: {slug: {eq: "servicesitoutsourcing"}}}}) {
       edges {
@@ -44,19 +44,28 @@ exports.createPages = async function ({ actions, graphql }) {
       }
     }
   }`)
-  if (data.errors) {
+  if (result.errors) {
     throw new Error(data.errors);
   }
-  /*result.data.allWpPage.edges.forEach((item) => {
-    const slug = item.node.slug
+  const { allWpPage, allWpPost, allWpCategory, allWpTag } = result.data
+  const pageTemplate = path.resolve(`./src/templates/servicestemplatepage.js`)
+  allWpPage.edges.forEach(item => {
+    let template
+    switch (item.node.id) {
+      default:
+        template = pageTemplate
+    }
     actions.createPage({
-      path: slug,
-      component: require.resolve(`./src/templates/servicestemplatepage.js`),
-      context: { slug: slug },
+      path: item.node.uri,
+      component: slash(template),
+      context: { 
+        id: item.node.id,
+        slug: item.node.slug 
+      },
     })
-  })*/
+  })
 
-  createPage({
+  actions.createPage({
     path: "/using-dsg",
     component: require.resolve("./src/templates/using-dsg.js"),
     context: {},
@@ -64,8 +73,6 @@ exports.createPages = async function ({ actions, graphql }) {
   })
 
 }
-
-  //const { allWpPage, allWpPost, allWpCategory, allWpTag } = data.data;
 
   // Create Page pages.
   //const pageTemplate = path.resolve(`./src/templates/page-template/page.js`);
