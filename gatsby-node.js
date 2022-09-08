@@ -6,11 +6,13 @@
 
 // You can delete this file if you're not using it
 const path = require(`path`)
-const { slash } = require(`gatsby-core-utils`)
+const { slash } = require(`gatsby-core-utils`);
+const { captureRejectionSymbol } = require("events");
 
 exports.createPages = async function ({ actions, graphql }) {
   const result = await graphql(`
-  {allWpPage {
+  {
+    allWpPage {
       edges {
         node {
           id
@@ -47,6 +49,8 @@ exports.createPages = async function ({ actions, graphql }) {
   }
   const { allWpPage, allWpPost, allWpCategory, allWpTag } = result.data
   const pageTemplate = path.resolve(`./src/templates/servicestemplatepage.js`)
+  const tagsTemplate = path.resolve(`./src/templates/tagsPage.js`)
+  const categoryTemplate = path.resolve(`./src/template/categoryPage.js`)
   allWpPage.edges.forEach(item => {
     let template
     switch (item.node.id) {
@@ -66,7 +70,31 @@ exports.createPages = async function ({ actions, graphql }) {
     })
   })
 
-  //allWpPost
+  allWpTag.edges.forEach(tag => {
+    actions.createPage({
+      path: tag.node.uri,
+      component: slash(tagsTemplate),
+      context: {
+        id: tag.node.id,
+        name: tag.node.name,
+        description: tag.node.description,
+        uri: tag.node.uri
+      }
+    })
+  })
+
+  allWpCategory.edges.forEach(category => {
+    actions.createPage({
+      path: category.node.uri,
+      component: slash(categoryTemplate),
+      context: {
+        id: category.node.id,
+        name: category.node.name,
+        description: category.node.description,
+        uri: category.node.uri
+      }
+    })
+  })
 
   actions.createPage({
     path: "/using-dsg",
