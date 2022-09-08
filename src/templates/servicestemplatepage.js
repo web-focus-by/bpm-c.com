@@ -50,7 +50,6 @@ const Servicestemplatepage = ({pageContext, location, data}) => {
       <BuyWebSite></BuyWebSite>
       <SiteDesignByBpmCloud></SiteDesignByBpmCloud>
       <Seo title={ pageContext.title } />
-      <Link to="/">Go back to the homepage</Link>
     </Layout>
   )
 }
