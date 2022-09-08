@@ -8,11 +8,9 @@
 const path = require(`path`)
 const { slash } = require(`gatsby-core-utils`)
 
-
 exports.createPages = async function ({ actions, graphql }) {
   const result = await graphql(`
-  {
-    allWpPage(filter: {wpParent: {node: {slug: {eq: "servicesitoutsourcing"}}}}) {
+  {allWpPage {
       edges {
         node {
           id
@@ -58,12 +56,17 @@ exports.createPages = async function ({ actions, graphql }) {
     actions.createPage({
       path: item.node.uri,
       component: slash(template),
-      context: { 
+      context: {
         id: item.node.id,
-        slug: item.node.slug 
+        title: item.node.title,
+        content: item.node.content,
+        uri: item.node.uri,
+        slug: item.node.slug
       },
     })
   })
+
+  //allWpPost
 
   actions.createPage({
     path: "/using-dsg",
@@ -71,67 +74,4 @@ exports.createPages = async function ({ actions, graphql }) {
     context: {},
     defer: true,
   })
-
 }
-
-  // Create Page pages.
-  //const pageTemplate = path.resolve(`./src/templates/page-template/page.js`);
-  //const developPage = path.resolve(`./src/templates/categoryPage/developPage/developPage.js`);
-  //allWpPage.edges.forEach(edge => {
-    /*Gatsby uses Redux to manage its internal state.
-    Plugins and sites can use functions like "createPage"
-    to interact with Gatsby.*/
-    /*let template
-    switch (edge.node.id) {
-      default:
-        template = pageTemplate
-    }
-    createPage({*/
-
-      /*path: edge.node.uri,
-      component: slash(template),
-      context: {
-        id: edge.node.id,
-      },
-    })
-  });*/
-
-  /*We want to create a detailed page for each post node.
-  The path field stems from the original WordPress link
-  and we use it for the slug to preserve url structure.
-  The Post ID is prefixed with 'POST_'*/
-
-  /*const postTemplate = path.resolve(`./src/templates/post-template/post.js`);
-  allWpPost.edges.forEach(edge => {
-    createPage({
-      path: edge.node.uri,
-      component: slash(postTemplate),
-      context: {
-        id: edge.node.id,
-      },
-    })
-  });
-
-  const categoryTemplate = path.resolve(`./src/templates/post-category-template/category.js`);
-  allWpCategory.edges.forEach(edge => {
-    createPage({
-      path: edge.node.uri,
-      component: slash(categoryTemplate),
-      context: {
-        id: edge.node.id,
-      },
-    })
-  })
-
-  const tagTemplate = path.resolve(`./src/templates/post-category-template/tagTemplate.js`);
-  allWpTag.edges.forEach(edge => {
-    createPage({
-      path: edge.node.uri,
-      component: slash(tagTemplate),
-      context: {
-        id: edge.node.id,
-      },
-    })
-  })
-  
-}*/
