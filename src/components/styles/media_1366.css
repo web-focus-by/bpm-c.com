@@ -1,4 +1,10 @@
 @media (max-width: 1366px) {
+  .not-found {
+    display: inline-block;
+    width: 475.97px;
+    height: 169.33px;
+    background: url(../../images/notFound1366.svg) no-repeat;
+  }
   .dropdown_services_sticky {
     top: 85px;
   }
