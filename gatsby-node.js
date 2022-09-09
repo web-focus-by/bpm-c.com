@@ -23,16 +23,6 @@ exports.createPages = async function ({ actions, graphql }) {
         }
       }
     }
-    allWpCategory {
-      edges {
-        node {
-          id
-          name
-          description
-          uri
-        }
-      }
-    }
     allWpTag {
       edges {
         node {
@@ -59,8 +49,7 @@ exports.createPages = async function ({ actions, graphql }) {
   const { allWpPage, allWpPost, allWpCategory, allWpTag } = result.data
   const pageTemplate = path.resolve(`./src/templates/servicestemplatepage.js`)
   const tagsTemplate = path.resolve(`./src/templates/tagsPage.js`)
-  const categoryTemplate = path.resolve(`./src/template/categoryPage.js`)
-  const postTemplate = path.resolve(`./src/template/postPage.js`)
+  //const postTemplate = path.resolve(`./src/template/postPage.js`)
   allWpPage.edges.forEach(item => {
     let template
     switch (item.node.id) {
@@ -93,20 +82,7 @@ exports.createPages = async function ({ actions, graphql }) {
     })
   })
 
-  allWpCategory.edges.forEach(category => {
-    actions.createPage({
-      path: category.node.uri,
-      component: slash(categoryTemplate),
-      context: {
-        id: category.node.id,
-        name: category.node.name,
-        description: category.node.description,
-        uri: category.node.uri
-      }
-    })
-  })
-
-  allWpPost.edges.forEach(post => {
+  /*allWpPost.edges.forEach(post => {
     actions.createPage({
       path: post.node.uri,
       component: slash(postTemplate),
@@ -115,7 +91,7 @@ exports.createPages = async function ({ actions, graphql }) {
         uri: post.node.uri
       }
     })
-  })
+  })*/
 
   actions.createPage({
     path: "/using-dsg",
