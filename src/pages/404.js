@@ -18,7 +18,7 @@ const NotFoundPage = () => {
     <Layout>
       <Seo title="404: Page does not exist" />
       <div className="container">
-        <div className="hero margin_bottom_240">\
+        <div className="hero margin_bottom_240">
           <div className="notFoundPage">
             <div className="not-found"></div>
           </div>
