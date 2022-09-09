@@ -43,6 +43,15 @@ exports.createPages = async function ({ actions, graphql }) {
         }
       }
     }
+    allWpPost {
+      edges {
+        node {
+          id
+          title
+          link
+        }
+      }
+    }
   }`)
   if (result.errors) {
     throw new Error(data.errors);
