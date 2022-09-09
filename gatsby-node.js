@@ -51,6 +51,7 @@ exports.createPages = async function ({ actions, graphql }) {
   const pageTemplate = path.resolve(`./src/templates/servicestemplatepage.js`)
   const tagsTemplate = path.resolve(`./src/templates/tagsPage.js`)
   const categoryTemplate = path.resolve(`./src/template/categoryPage.js`)
+  const postTemplate = path.resolve(`./src/template/postPage.js`)
   allWpPage.edges.forEach(item => {
     let template
     switch (item.node.id) {
@@ -92,6 +93,17 @@ exports.createPages = async function ({ actions, graphql }) {
         name: category.node.name,
         description: category.node.description,
         uri: category.node.uri
+      }
+    })
+  })
+
+  allWpPost.edges.forEach(post => {
+    actions.createPage({
+      path: post.node.uri,
+      component: slash(postTemplate),
+      context: {
+        id: post.node.id,
+        uri: post.node.uri
       }
     })
   })
