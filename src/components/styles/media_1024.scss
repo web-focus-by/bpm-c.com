@@ -206,6 +206,12 @@
         margin-top: 15px;
         margin-left: 0px;
     }
+    .not-found {
+        display: inline-block;
+        width: 669px;
+        height: 238px;
+        background: url(../../images/notFound.svg) no-repeat;
+    }
     .it_company {
         margin-top: calc(280px + (220 - 280) * ((100vw - 768px) / (1024 - 768)));
     }

@@ -1,10 +1,4 @@
 @media (max-width: 1366px) {
-  .not-found {
-    display: inline-block;
-    width: 475.97px;
-    height: 169.33px;
-    background: url(../../images/notFound1366.svg) no-repeat;
-  }
   .dropdown_services_sticky {
     top: 85px;
   }
@@ -544,6 +538,12 @@
   .breadcrumb-container {
     margin-top: 15px;
     margin-left: 0px;
+  }
+  .not-found {
+    display: inline-block;
+    width: 669px;
+    height: 238px;
+    background: url(../../images/notFound.svg) no-repeat;
   }
   .dropdown_services_sticky .dropdown_services {
     left: 12.5%;

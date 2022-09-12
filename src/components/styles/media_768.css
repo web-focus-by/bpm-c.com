@@ -451,7 +451,7 @@
 @media (min-width: 375px) and (max-width: 768px) {
   .not-found {
     display: inline-block;
-    width: 562.18px;
+    width: 562px;
     height: 200px;
     background: url(../../images/notFound768.svg) no-repeat;
   }
