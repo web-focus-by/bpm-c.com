@@ -662,6 +662,13 @@
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
+    .not-found {
+        display: inline-block;
+        width: 562px;
+        height: 200px;
+        background: url(../../images/notFound768.svg) no-repeat;
+    }
+
     .breadcrumb-container {
         margin-top: 15px;
         margin-left: 0px;
