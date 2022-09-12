@@ -15,7 +15,7 @@ import "../../components/styles/media_375.css"
 import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
 const HeroPortfolio = ({ location, crumbLabel, tags, selectedTag }) => {
-  const [longList, setLongList] = useState(false);
+  const [longList, setLongList] = useState(false)
   let url = '';
   if (typeof window !== 'undefined') {
     url = new URL(window.location.href);
@@ -35,7 +35,7 @@ const HeroPortfolio = ({ location, crumbLabel, tags, selectedTag }) => {
       if (index < 6) {
         return (
           <Link to={ tag.node.uri }>
-            <button key = { index } className="button_item_tag">
+            <button key = { index } className={ tag.node.uri === selectedTag ? "button_item_tag__active" : "button_item_tag" }>
               { tag.node.name }
             </button>
           </Link>
@@ -44,7 +44,7 @@ const HeroPortfolio = ({ location, crumbLabel, tags, selectedTag }) => {
     } else {
       return (
         <Link to={ tag.node.uri }>
-          <button key = { index } className="button_item_tag">
+          <button key = { index } className={ tag.node.uri === selectedTag ? "button_item_tag__active" : "button_item_tag" }>
             { tag.node.name }
           </button>
         </Link>
