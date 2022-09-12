@@ -11,16 +11,6 @@ const Servicestemplatepage = ({pageContext, location, data}) => {
   if (typeof window !== 'undefined') {
     url =  new URL(window.location.href).pathname.slice(1,-1).split("/")[1];
   }
-  console.log(pageContext);
-  console.log(data);
-
-  /*const contentPage = data ? data.wpPage : {};
-  const posts = data ? data.allWpPost.edges : [];
-  const items = data ? data.allWpPage.edges : [];
-  const themes = items.reduce((res, val) => {
-    let item = { id: val.node.id, title: val.node.title, uri: val.node.uri, content: val.content };
-    return [...res, item]
-  },[])*/
   
   return (
     <Layout>
@@ -58,13 +48,13 @@ export const query = graphql`
       }
     }
     allWpTag {
-        edges {
-          node {
-            id
-            name
-            description
-            uri
-          }
+      edges {
+        node {
+          id
+          name
+          description
+          uri
         }
       }
+    }
   }`
