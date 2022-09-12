@@ -1,4 +1,11 @@
 @media (max-width: 375px) {
+    .not-found {
+        display: inline-block;
+        width: 320px;
+        height: 113.84px;
+        background: url(../../images/notFound375.svg) no-repeat;
+    }
+
     .breadcrumb-container {
         margin-top: 15px;
         margin-left: 0px;

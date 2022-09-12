@@ -6,11 +6,13 @@
 
 // You can delete this file if you're not using it
 const path = require(`path`)
-const { slash } = require(`gatsby-core-utils`)
+const { slash } = require(`gatsby-core-utils`);
+const { captureRejectionSymbol } = require("events");
 
 exports.createPages = async function ({ actions, graphql }) {
   const result = await graphql(`
-  {allWpPage {
+  {
+    allWpPage {
       edges {
         node {
           id
@@ -18,16 +20,6 @@ exports.createPages = async function ({ actions, graphql }) {
           uri
           content
           slug
-        }
-      }
-    }
-    allWpCategory {
-      edges {
-        node {
-          id
-          name
-          description
-          uri
         }
       }
     }
@@ -41,12 +33,23 @@ exports.createPages = async function ({ actions, graphql }) {
         }
       }
     }
+    allWpPost {
+      edges {
+        node {
+          id
+          title
+          link
+        }
+      }
+    }
   }`)
   if (result.errors) {
     throw new Error(data.errors);
   }
   const { allWpPage, allWpPost, allWpCategory, allWpTag } = result.data
   const pageTemplate = path.resolve(`./src/templates/servicestemplatepage.js`)
+  const tagsTemplate = path.resolve(`./src/templates/tagsPage.js`)
+  //const postTemplate = path.resolve(`./src/template/postPage.js`)
   allWpPage.edges.forEach(item => {
     let template
     switch (item.node.id) {
@@ -66,7 +69,29 @@ exports.createPages = async function ({ actions, graphql }) {
     })
   })
 
-  //allWpPost
+  allWpTag.edges.forEach(tag => {
+    actions.createPage({
+      path: tag.node.uri,
+      component: slash(tagsTemplate),
+      context: {
+        id: tag.node.id,
+        name: tag.node.name,
+        description: tag.node.description,
+        uri: tag.node.uri
+      }
+    })
+  })
+
+  /*allWpPost.edges.forEach(post => {
+    actions.createPage({
+      path: post.node.uri,
+      component: slash(postTemplate),
+      context: {
+        id: post.node.id,
+        uri: post.node.uri
+      }
+    })
+  })*/
 
   actions.createPage({
     path: "/using-dsg",
