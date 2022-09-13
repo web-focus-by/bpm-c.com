@@ -25,7 +25,7 @@ const Portfolio = ({ posts }) => {
           let valueTag = '#' + tag.slug;
           return (
             <li key={ post.node.id.toString() + valueTag.toString() } className="hash_list_block">
-              <Link to={ url.href + tag.slug + "/" }>{ valueTag }</Link>
+              <Link to={ url.origin + "/tag/" + tag.slug + "/"  }>{ valueTag }</Link>
             </li>
           )
         })

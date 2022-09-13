@@ -48,7 +48,7 @@ const Portfolios = ({ location }) => {
     <>
       <Layout>
         <HeroPortfolio location={ location } crumbLabel="Portfolio" tags={ allTags } selectedTag={ null }></HeroPortfolio>
-        <ListOfPortfolio posts={ allPosts } ></ListOfPortfolio>
+        <ListOfPortfolio posts={ allPosts }></ListOfPortfolio>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
     </>
