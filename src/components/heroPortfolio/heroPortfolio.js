@@ -1,5 +1,6 @@
 import * as React from "react"
-import { useState } from "react"
+import { Link } from "gatsby"
+import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import "../../components/styles/main.css"
@@ -13,7 +14,8 @@ import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
-const HeroPortfolio = ({ location, crumbLabel, tags }) => {
+const HeroPortfolio = ({ location, crumbLabel, tags, selectedTag }) => {
+  const [longList, setLongList] = useState(false)
   let url = '';
   if (typeof window !== 'undefined') {
     url = new URL(window.location.href);
@@ -22,7 +24,6 @@ const HeroPortfolio = ({ location, crumbLabel, tags }) => {
       url = new URL(location.href);
     }
   }
-  const [longList, setLongList] = useState(false);
 
   const isPartiallyActive = ({ isPartiallyCurrent, isCurrent }) => {
     return isPartiallyCurrent && isCurrent
@@ -33,19 +34,36 @@ const HeroPortfolio = ({ location, crumbLabel, tags }) => {
     if (!longList) {
       if (index < 6) {
         return (
-          <button key = { index } className="button_item_tag">
-            { tag.node.name }
-          </button>
+          <Link to={ tag.node.uri }>
+            <button key = { index } className={ tag.node.uri === selectedTag ? "button_item_tag__active" : "button_item_tag" }>
+              { tag.node.name }
+            </button>
+          </Link>
         )
       }
     } else {
       return (
-        <button key = { index } className="button_item_tag">
-          { tag.node.name }
-        </button>
+        <Link to={ tag.node.uri }>
+          <button key = { index } className={ tag.node.uri === selectedTag ? "button_item_tag__active" : "button_item_tag" }>
+            { tag.node.name }
+          </button>
+        </Link>
       )
     }
   })
+
+  useEffect(
+    () => {
+      if (document && document.getElementsByClassName("button_item_tag__active") && selectedTag) {
+        setLongList(true)
+      }
+      return () => {
+        if (document && document.getElementsByClassName("button_item_tag__active") && selectedTag) {
+          setLongList(true)
+        }
+      };
+    }, []
+  );
 
   return (
     <div className="container">
@@ -58,7 +76,7 @@ const HeroPortfolio = ({ location, crumbLabel, tags }) => {
         </div>
         <div className="hero__butntag">
             { result }
-            <button onClick={()=>{ setLongList(!longList) }} className="button_item_tag">
+            <button onClick={ ()=>{ setLongList(!longList) }} className="button_item_tag">
               { longList ? 'Close' : 'See more' }
             </button>
         </div>

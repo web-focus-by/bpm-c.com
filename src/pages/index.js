@@ -59,7 +59,7 @@ const IndexPage = ({ location }) => {
         <Technologies></Technologies>
         <BPMCloud></BPMCloud>
         <ProjectsProcess></ProjectsProcess>
-        <Blog></Blog>
+        <Blog posts={ allPosts }></Blog>
         <Advantages></Advantages>
         <Reviews></Reviews>
         <CompanyDescription></CompanyDescription>
