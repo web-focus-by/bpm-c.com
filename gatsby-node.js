@@ -30,6 +30,17 @@ exports.createPages = async function ({ actions, graphql }) {
           name
           description
           uri
+          slug
+        }
+      }
+    }
+    allWpCategory {
+      edges {
+        node {
+          id
+          name
+          description
+          uri
         }
       }
     }
@@ -38,7 +49,19 @@ exports.createPages = async function ({ actions, graphql }) {
         node {
           id
           title
-          link
+          uri
+          content
+          tags {
+            nodes {
+              slug
+            }
+          }
+          featuredImage {
+            node {
+              id
+              mediaItemUrl
+            }
+          }
         }
       }
     }
@@ -49,7 +72,8 @@ exports.createPages = async function ({ actions, graphql }) {
   const { allWpPage, allWpPost, allWpCategory, allWpTag } = result.data
   const pageTemplate = path.resolve(`./src/templates/servicestemplatepage.js`)
   const tagsTemplate = path.resolve(`./src/templates/tagsPage.js`)
-  //const postTemplate = path.resolve(`./src/template/postPage.js`)
+  const postTemplate = path.resolve(`./src/templates/postsPage.js`)
+  const categoryTemplate = path.resolve(`./src/templates/categoryTemplate.js`)
   allWpPage.edges.forEach(item => {
     let template
     switch (item.node.id) {
@@ -77,21 +101,36 @@ exports.createPages = async function ({ actions, graphql }) {
         id: tag.node.id,
         name: tag.node.name,
         description: tag.node.description,
-        uri: tag.node.uri
+        uri: tag.node.uri,
+        slug: tag.node.slug
       }
     })
   })
 
-  /*allWpPost.edges.forEach(post => {
+  allWpPost.edges.forEach(post => {
     actions.createPage({
       path: post.node.uri,
       component: slash(postTemplate),
       context: {
         id: post.node.id,
-        uri: post.node.uri
+        title: post.node.title,
+        uri: post.node.uri,
+        content: post.node.content,
+        tags: post.node.tags,
+        featuredImage: post.node.featuredImage
       }
     })
-  })*/
+  })
+
+  allWpCategory.edges.forEach(edge => {
+    createPage({
+      path: edge.node.uri,
+      component: slash(categoryTemplate),
+      context: {
+        id: edge.node.id,
+      },
+    })
+  })
 
   actions.createPage({
     path: "/using-dsg",

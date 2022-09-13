@@ -2,49 +2,22 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import WebSiteDesignReason from "../components/webSiteDesignReason/webSiteDesignReason"
-import GoalsDesign from "../components/goalsDesign/goalsDesign"
-import RequiresWebsiteDesign from "../components/requiresWebsiteDesign/requiresWebsiteDesign"
-import ResWebDesign from "../components/resWebDesign/resWebDesign"
-import ResultsOfWebDesign from "../components/resultsOfWebDesign/resultsOfWebDesign"
-import WebDesignCreationVision from "../components/webDesignCreationVision/webDesignCreationVision"
-
-import SiteDesignByBpmCloud from "../components/siteDesignByBpmCloud/siteDesignByBpmCloud"
-import BuyWebSite from "../components/buyWebSite/buyWebSite"
-import Form from "../components/form"
-import Blog from "../components/blog"
-import ServicesItem from "../components/servicesItem"
-import Reviews from "../components/reviews"
+import HeroPortfolio from "../components/heroPortfolio/heroPortfolio"
+import ListOfPortfolio from "../components/listOfPortfolio/listOfPortfolio"
+import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
 
 const Servicestemplatepage = ({pageContext, location, data}) => {
   let url = '';
   if (typeof window !== 'undefined') {
     url =  new URL(window.location.href).pathname.slice(1,-1).split("/")[1];
   }
-  /*const contentPage = data ? data.wpPage : {};
-  const posts = data ? data.allWpPost.edges : [];
-  const items = data ? data.allWpPage.edges : [];
-  const themes = items.reduce((res, val) => {
-    let item = { id: val.node.id, title: val.node.title, uri: val.node.uri, content: val.content };
-    return [...res, item]
-  },[])*/
   
   return (
     <Layout>
-
-      <WebSiteDesignReason></WebSiteDesignReason>
-      <GoalsDesign></GoalsDesign>
-      <Form></Form>
-      <RequiresWebsiteDesign></RequiresWebsiteDesign>
-      <ServicesItem></ServicesItem>
-      <ResWebDesign></ResWebDesign>
-      <Blog></Blog>
-      <WebDesignCreationVision></WebDesignCreationVision>
-      <ResultsOfWebDesign></ResultsOfWebDesign>
-      <Reviews></Reviews>
-      <BuyWebSite></BuyWebSite>
-      <SiteDesignByBpmCloud></SiteDesignByBpmCloud>
-      <Seo title={ pageContext.title } />
+      <HeroPortfolio location={ location } crumbLabel="Portfolio" tags={data.allWpTag.edges} selectedTag={ pageContext.uri }></HeroPortfolio>
+      <ListOfPortfolio posts={ data.allWpPost.edges }></ListOfPortfolio>
+      <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
+      <Seo title={ pageContext.name } />
     </Layout>
   )
 }
@@ -52,41 +25,36 @@ const Servicestemplatepage = ({pageContext, location, data}) => {
 export default Servicestemplatepage
 
 export const query = graphql`
-    query siteGetPostsDataTagsQuery ($slug: String) {
-      allWpPost {
-        edges {
-          node {
-            id
-            title
-            link
-            content
-            tags {
-              nodes {
-                slug
-              }
+  query siteGetPostsDataTagsQuery ($slug: String) {
+    allWpPost(filter: {tags: {nodes: {elemMatch: {slug: {eq: $slug}}}}}) {
+      edges {
+        node {
+          id
+          title
+          link
+          content
+          tags {
+            nodes {
+              slug
             }
-            featuredImage {
-              node {
-                id
-                mediaItemUrl
-              }
+          }
+          featuredImage {
+            node {
+              id
+              mediaItemUrl
             }
           }
         }
       }
-      wpPage(slug: {eq: $slug}) {
-        id
-        uri
-        title
-        content
-      }
-      allWpPage(filter: {wpParent: {node: {slug: {eq: $slug}}}}) {
-        edges {
-          node {
-            id
-            title
-            uri
-          }
+    }
+    allWpTag {
+      edges {
+        node {
+          id
+          name
+          description
+          uri
         }
       }
-    }`
+    }
+  }`
