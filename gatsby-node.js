@@ -41,6 +41,7 @@ exports.createPages = async function ({ actions, graphql }) {
           name
           description
           uri
+          slug
         }
       }
     }
@@ -123,11 +124,15 @@ exports.createPages = async function ({ actions, graphql }) {
   })
 
   allWpCategory.edges.forEach(edge => {
-    createPage({
+    actions.createPage({
       path: edge.node.uri,
       component: slash(categoryTemplate),
       context: {
         id: edge.node.id,
+        name: edge.node.name,
+        description: edge.node.description,
+        uri: edge.node.uri,
+        slug: edge.node.slug
       },
     })
   })

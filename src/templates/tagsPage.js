@@ -6,7 +6,7 @@ import HeroPortfolio from "../components/heroPortfolio/heroPortfolio"
 import ListOfPortfolio from "../components/listOfPortfolio/listOfPortfolio"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
 
-const Servicestemplatepage = ({pageContext, location, data}) => {
+const TagsPage = ({pageContext, location, data}) => {
   let url = '';
   if (typeof window !== 'undefined') {
     url =  new URL(window.location.href).pathname.slice(1,-1).split("/")[1];
@@ -22,10 +22,10 @@ const Servicestemplatepage = ({pageContext, location, data}) => {
   )
 }
 
-export default Servicestemplatepage
+export default TagsPage
 
 export const query = graphql`
-  query siteGetPostsDataTagsQuery ($slug: String) {
+  query siteGetTagsDataTagsQuery ($slug: String) {
     allWpPost(filter: {tags: {nodes: {elemMatch: {slug: {eq: $slug}}}}}) {
       edges {
         node {

@@ -17,6 +17,7 @@ const Portfolio = ({ posts }) => {
   if (typeof window !== 'undefined') {
     url =  new URL(window.location.href);
   }
+  console.log(posts)
   const items = posts.map((post, index) => {
     if (index <= 5) {
       let tags = [];
@@ -33,7 +34,9 @@ const Portfolio = ({ posts }) => {
       return (
         <div className="portfolio_products_block">
           <div className="portfolio_products_block_pic">
-            <img src={ post.node.featuredImage.node.mediaItemUrl } />
+            <Link to={ post.node.link }>
+              <img src={ post.node.featuredImage.node.mediaItemUrl } />
+            </Link>
           </div>
           <div className="portfolio_products_block_list hash">
             <ul className="hash__list">

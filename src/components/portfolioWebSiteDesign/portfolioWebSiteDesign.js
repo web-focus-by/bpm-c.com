@@ -24,7 +24,7 @@ const PortfolioWebSiteDesign = ({ posts }) => {
           let valueTag = '#' + tag.slug;
           return (
             <li key={ post.node.id.toString() + valueTag.toString() } className="hash_list_block">
-              <Link to={ url.href + tag.slug + "/" }>{ valueTag }</Link>
+              <Link to={ "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
             </li>
           )
         })
@@ -32,7 +32,9 @@ const PortfolioWebSiteDesign = ({ posts }) => {
       return (
         <div className="portfolio_products_block">
           <div className="portfolio_products_block_pic">
-            <img src={ post.node.featuredImage.node.mediaItemUrl } />
+            <Link to={ post.node.link }>
+              <img src={ post.node.featuredImage.node.mediaItemUrl } />
+            </Link>
           </div>
           <div className="portfolio_products_block_list hash">
             <ul className="hash__list">
