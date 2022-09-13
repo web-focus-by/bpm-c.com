@@ -1,6 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import "../../components/styles/main.css"
