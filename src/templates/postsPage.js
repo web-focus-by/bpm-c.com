@@ -1,32 +1,19 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import HeroPortfolio from "../components/heroPortfolio/heroPortfolio"
+import HeroPost from "../components/heroPost/heroPost"
 import ContentPost from "../components/contentPost/contentPost"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
 
-const PostsPage = ({ location, pageContext }) => {
-  const tags = useStaticQuery(graphql`
-    query getTagQuery {
-      allWpTag {
-        edges {
-          node {
-            id
-            name
-            description
-            uri
-          }
-        }
-      }
-    }
-  `);
-  const allTags = tags ? tags.allWpTag.edges : [];
+const PostsPage = ({ location, pageContext, data }) => {
+  console.log(pageContext);
+  const allTags = data ? data.allWpTag.edges : [];
 
   return (
     <>
       <Layout>
-        <HeroPortfolio location={ location } crumbLabel="Portfolio" tags={ allTags }></HeroPortfolio>
-        <ContentPost posts={ pageContext } ></ContentPost>
+        <HeroPost location={ location } crumbLabel="Portfolio" title={ pageContext.title }></HeroPost>
+        <ContentPost content={ pageContext } ></ContentPost>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
     </>
@@ -34,3 +21,29 @@ const PostsPage = ({ location, pageContext }) => {
 };
 
 export default PostsPage
+
+export const query = graphql`
+  query siteGetPostsDataTagsQuery {
+    allWpCategory {
+      edges {
+        node {
+          id
+          name
+          description
+          uri
+          slug
+        }
+      }
+    }
+    allWpTag {
+      edges {
+        node {
+          id
+          name
+          description
+          uri
+          slug
+        }
+      }
+    }
+  }`

@@ -25,7 +25,7 @@ const TagsPage = ({pageContext, location, data}) => {
 export default TagsPage
 
 export const query = graphql`
-  query siteGetPostsDataTagsQuery ($slug: String) {
+  query siteGetTagsDataTagsQuery ($slug: String) {
     allWpPost(filter: {tags: {nodes: {elemMatch: {slug: {eq: $slug}}}}}) {
       edges {
         node {
