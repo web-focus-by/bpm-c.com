@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import HeroPost from "../components/heroPost/heroPost"
+import HeroPost from "../components/heroPosts/heroPost"
 import ContentPost from "../components/contentPost/contentPost"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
 
