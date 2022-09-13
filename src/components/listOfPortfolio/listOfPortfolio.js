@@ -18,6 +18,7 @@ const ListOfPortfolio = ({ posts }) => {
   if (typeof window !== 'undefined') {
     url =  new URL(window.location.href);
   }
+  
   const items = posts.map((post, index) => {
     let tags = [];
     if (post && post.node.tags) {
@@ -25,7 +26,7 @@ const ListOfPortfolio = ({ posts }) => {
         let valueTag = '#' + tag.slug;
         return (
           <li key={ post.node.id.toString() + valueTag.toString() } className="hash_list_block">
-            <Link to={ url.href + tag.slug + "/" }>{ valueTag }</Link>
+            <Link to={ url.origin + "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
           </li>
         )
       })

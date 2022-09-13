@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import "../../components/styles/main.css"
@@ -51,6 +51,19 @@ const HeroPortfolio = ({ location, crumbLabel, tags, selectedTag }) => {
       )
     }
   })
+
+  useEffect(
+    () => {
+      if (document && document.getElementsByClassName("button_item_tag__active") && selectedTag) {
+        setLongList(true)
+      }
+      return () => {
+        if (document && document.getElementsByClassName("button_item_tag__active") && selectedTag) {
+          setLongList(true)
+        }
+      };
+    }, []
+  );
 
   return (
     <div className="container">
