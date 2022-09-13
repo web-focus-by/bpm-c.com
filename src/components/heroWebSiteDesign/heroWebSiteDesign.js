@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import "../../components/styles/main.css"
@@ -39,9 +40,11 @@ const HeroWebSiteDesign = ({ content, location, crumbLabel }) => {
         </div>
         <div className="hero__subtitle">{ content.content }</div>
         <div className="hero__butn">
-          <button className="button_white">
-            View work<span className="arrow_black"></span>
-          </button>
+          <Link to={ "/portfolios/" }>
+            <button className="button_white">
+              View work<span className="arrow_black"></span>
+            </button>
+          </Link>
         </div>
       </div>
       <div className="header_circle_yellow"></div>
