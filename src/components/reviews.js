@@ -79,7 +79,7 @@ const Reviews = ({ siteTitle, data }) => {
         <div className="view_title">
           <div className="title_62">Reviews</div>
           <div className="view_all">
-            <a href="#">View all</a>
+            <Link to="#">View all</Link>
           </div>
         </div>
         <div className="reviews__info">

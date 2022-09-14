@@ -11,7 +11,7 @@ import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
-const PortfolioWebSiteDesign = ({ posts }) => {
+const PortfolioWebSiteDesign = ({ posts, titlePage }) => {
   let url = '';
   if (typeof window !== 'undefined') {
     url =  new URL(window.location.href);
@@ -51,7 +51,7 @@ const PortfolioWebSiteDesign = ({ posts }) => {
     <div className="container">
       <div className="portfolio margin_bottom_240">
         <div className="view_title">
-          <div className="title_62">Portfolio</div>
+          <div className="title_62">{ titlePage }</div>
           <div className="view_all">
             <Link to={ url.origin + "/portfolios/"}>View all</Link>
           </div>

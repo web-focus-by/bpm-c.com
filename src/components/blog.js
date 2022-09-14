@@ -13,7 +13,7 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const Blog = () => {
+const Blog = ({ titlePage }) => {
   const data = useStaticQuery(graphql`
     query siteGetNewsQuery {
       allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["news", "articles"]}}}}}) {
@@ -56,11 +56,13 @@ const Blog = () => {
       return res;
     },[])
     const result = results.map((val, i)=>{
-      return (
-        <li key={ i } className="hash_list_block">
-          <Link to={"/tag/"+val+"/"}>{ val }</Link>
-        </li>
-      )
+      if (i < 2) {
+        return (
+          <li key={ i } className="hash_list_block">
+            <Link to={"/tag/"+val+"/"}>{ val }</Link>
+          </li>
+        )
+      }
     })
     return result;
     
@@ -90,7 +92,7 @@ const Blog = () => {
   <div className="container">
     <div className="blog margin_bottom_240">
       <div className="view_title">
-        <div className="title_62">Blog</div>
+        <div className="title_62">{ titlePage }</div>
         <div className="view_all">
           <Link to={"/news/"}>
             View all
