@@ -25,7 +25,6 @@ const Blog = () => {
             date
             tags {
               nodes {
-                id
                 slug
               }
             }
@@ -51,13 +50,20 @@ const Blog = () => {
   }
   const allNews = data ? data.allWpPost.edges : [];
   const tags = (item) => {
-    item.node.tags.nodes.map((tag, i) => {
+    const results = item.node.tags.nodes.reduce((res, tag) => {
+      let val = tag.slug
+      res.push(val);
+      return res;
+    },[])
+    const result = results.map((val, i)=>{
       return (
-        <li key={ tag.id } className="hash_list_block">
-          <Link to={"/tag/"+tag.slug+"/"}>{ tag }</Link>
+        <li key={ i } className="hash_list_block">
+          <Link to={"/tag/"+val+"/"}>{ val }</Link>
         </li>
       )
     })
+    return result;
+    
   }
   const result = allNews.map((item, index) => {
     return (
