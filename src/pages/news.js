@@ -7,7 +7,7 @@ import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios
 
 const Portfolios = ({ location }) => {
   const PostsAndTags = useStaticQuery(graphql`
-    query SiteTagQuery {
+    query SiteNewsQuery {
       allWpTag {
         edges {
           node {
@@ -18,15 +18,16 @@ const Portfolios = ({ location }) => {
           }
         }
       }
-      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "cases"}}}}})  {
+      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["news", "articles"]}}}}}) {
         edges {
           node {
             id
             title
             link
-            content
+            date
             tags {
               nodes {
+                id
                 slug
               }
             }
@@ -34,6 +35,12 @@ const Portfolios = ({ location }) => {
               node {
                 id
                 mediaItemUrl
+              }
+            }
+            categories {
+              nodes {
+                id
+                slug
               }
             }
           }

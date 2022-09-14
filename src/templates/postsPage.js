@@ -6,14 +6,11 @@ import ContentPost from "../components/contentPost/contentPost"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
 
 const PostsPage = ({ location, pageContext, data }) => {
-  console.log(pageContext);
-  const allTags = data ? data.allWpTag.edges : [];
-
   return (
     <>
       <Layout>
         <HeroPost location={ location } crumbLabel="Portfolio" title={ pageContext.title }></HeroPost>
-        <ContentPost content={ pageContext } ></ContentPost>
+        <ContentPost content={ pageContext }></ContentPost>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
     </>
