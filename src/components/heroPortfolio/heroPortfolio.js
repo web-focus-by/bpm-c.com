@@ -14,7 +14,7 @@ import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
-const HeroPortfolio = ({ location, crumbLabel, tags, selectedTag }) => {
+const HeroPortfolio = ({ location, crumbLabel, tags, selectedTag, title }) => {
   const [longList, setLongList] = useState(false)
   let url = '';
   if (typeof window !== 'undefined') {
@@ -72,7 +72,7 @@ const HeroPortfolio = ({ location, crumbLabel, tags, selectedTag }) => {
       </div>
       <div className="hero">
         <div className="hero__title title_80">
-            Portfolio<span className="puzzle"></span>
+            { title }<span className="puzzle"></span>
         </div>
         <div className="hero__butntag">
             { result }
