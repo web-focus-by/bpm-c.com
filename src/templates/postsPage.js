@@ -9,7 +9,7 @@ const PostsPage = ({ location, pageContext, data }) => {
   return (
     <>
       <Layout>
-        <HeroPost location={ location } crumbLabel="Portfolio" title={ pageContext.title }></HeroPost>
+        <HeroPost location={ location } crumbLabel="Post" title={ pageContext.title }></HeroPost>
         <ContentPost content={ pageContext }></ContentPost>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>

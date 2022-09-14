@@ -14,7 +14,7 @@ const TagsPage = ({pageContext, location, data}) => {
   
   return (
     <Layout>
-      <HeroPortfolio location={ location } crumbLabel="Portfolio" tags={data.allWpTag.edges} selectedTag={ pageContext.uri }></HeroPortfolio>
+      <HeroPortfolio location={ location } crumbLabel="Posts by the tag" tags={data.allWpTag.edges} selectedTag={ pageContext.uri } title="Posts by the tag"></HeroPortfolio>
       <ListOfPortfolio posts={ data.allWpPost.edges }></ListOfPortfolio>
       <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       <Seo title={ pageContext.name } />
