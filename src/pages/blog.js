@@ -1,11 +1,11 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
-import HeroPortfolio from "../components/heroPortfolio/heroPortfolio"
-import ListOfPortfolio from "../components/listOfPortfolio/listOfPortfolio"
+import HeroNews from "../components/heroNews/heroNews"
+import ListOfNews from "../components/listOfNews/listOfNews"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
 
-const Portfolios = ({ location }) => {
+const Blog = ({ location }) => {
   const PostsAndTags = useStaticQuery(graphql`
     query SiteNewsQuery {
       allWpTag {
@@ -54,12 +54,12 @@ const Portfolios = ({ location }) => {
   return (
     <>
       <Layout>
-        <HeroPortfolio location={ location } crumbLabel="Blog" tags={ allTags } selectedTag={ null } title="Blog" ></HeroPortfolio>
-        <ListOfPortfolio posts={ allPosts }></ListOfPortfolio>
+        <HeroNews location={ location } crumbLabel="Blog"  title="Blog" ></HeroNews>
+        <ListOfNews posts={ allPosts } tags={ allTags }></ListOfNews>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
     </>
   );
 };
 
-export default Portfolios
+export default Blog
