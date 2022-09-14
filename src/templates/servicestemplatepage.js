@@ -57,7 +57,7 @@ export default Servicestemplatepage
 
 export const query = graphql`
     query siteGetPostsDataQuery ($slug: String) {
-      allWpPost {
+      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "cases"}}}}}) {
         edges {
           node {
             id

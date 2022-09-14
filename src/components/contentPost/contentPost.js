@@ -28,12 +28,12 @@ const ContentPost = ({ content }) => {
   
   return (
     <div className="container">
+      <img src={ content.featuredImage.node.mediaItemUrl }></img>
       <div className="portfolio margin_bottom_for_portfolio_240">
         <br />
         <div className="portfolio__products">
           <div className="portfolio_products_block">
             <div className="portfolio_products_block_pic">
-              <img src={ content.featuredImage.node.mediaItemUrl }></img>
               { content.content }
             </div>
             <div className="portfolio_products_block_list hash">

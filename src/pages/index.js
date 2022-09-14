@@ -21,7 +21,7 @@ import ThanksModal from "../components/thanks_modal"
 const IndexPage = ({ location }) => {
   const postsAndTags = useStaticQuery(graphql`
     query GetPostQuery {
-      allWpPost {
+      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "cases"}}}}}) {
         edges {
           node {
             id
@@ -59,7 +59,7 @@ const IndexPage = ({ location }) => {
         <Technologies></Technologies>
         <BPMCloud></BPMCloud>
         <ProjectsProcess></ProjectsProcess>
-        <Blog posts={ allPosts }></Blog>
+        <Blog></Blog>
         <Advantages></Advantages>
         <Reviews></Reviews>
         <CompanyDescription></CompanyDescription>

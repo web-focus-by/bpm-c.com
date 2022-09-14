@@ -1,50 +1,80 @@
 import * as React from "react"
-import PropTypes from "prop-types"
 import { Swiper, SwiperSlide } from "swiper/react"
+import Moment from 'moment';
 import "swiper/css"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/modules.css"
 import "../components/styles/mixins.css"
-import imgVr from "../images/vr.svg"
-import imgPointer from "../images/pointer.svg"
-import imgScreen from "../images/screen.svg"
-import imgHand from "../images/hand.svg"
 import "../components/styles/media_1920.css"
 import "../components/styles/media_1366.css"
 import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const Blog = ({ siteTitle }) => {
-  const data = [ //temporary data
-    { title: "«BPM CLOUD»",date: new Date("12.10.2021"),tags: ['#design', '#design'],imgSrc: imgVr },
-    { title: "«BPM CLOUD»",date: new Date("12.10.2021"),tags: ['#design', '#design'],imgSrc: imgPointer },
-    { title: "«BPM CLOUD»",date: new Date("12.10.2021"),tags: ['#design', '#design'],imgSrc: imgScreen },
-    { title: "«BPM CLOUD»",date: new Date("12.10.2021"),tags: ['#design', '#design'],imgSrc: imgHand }
-  ];
-
-  const result = data.map((obj, index) => {
+const Blog = () => {
+  const data = useStaticQuery(graphql`
+    query siteGetNewsQuery {
+      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["news", "articles"]}}}}}) {
+        edges {
+          node {
+            id
+            title
+            link
+            date
+            tags {
+              nodes {
+                id
+                slug
+              }
+            }
+            featuredImage {
+              node {
+                id
+                mediaItemUrl
+              }
+            }
+            categories {
+              nodes {
+                id
+                slug
+              }
+            }
+          }
+        }
+      }
+    }`)
+  let urlPath = '';
+  if (typeof window !== 'undefined') {
+    urlPath = new URL(window.location.href).pathname;
+  }
+  const allNews = data ? data.allWpPost.edges : [];
+  const tags = (item) => {
+    item.node.tags.nodes.map((tag, i) => {
+      return (
+        <li key={ tag.id } className="hash_list_block">
+          <Link to={"/tag/"+tag.slug+"/"}>{ tag }</Link>
+        </li>
+      )
+    })
+  }
+  const result = allNews.map((item, index) => {
     return (
-      <SwiperSlide key={ index }>
+      <SwiperSlide key={ item.node.id }>
         <div className="blog_products_block">
-          <div className="blog_products_block_pic">
-            <img src={ obj.imgSrc } />
-          </div>
+          <Link to={ item.node.link }>
+            <div className="blog_products_block_pic">
+              <img src={ item.node.featuredImage.node.mediaItemUrl } />
+            </div>
+          </Link>
           <div className="blog_products_block_list hash">
             <ul className="hash__list">
-              {obj.tags.map((tag, id) => {
-                return (
-                  <li key={ id } className="hash_list_block">
-                    <a href="#">{ tag }</a>
-                  </li>
-                )
-              })}
+              { tags(item) }
             </ul>
-            <div className="blog_products_block_list_date">{ data.date }</div>
+            <div className="blog_products_block_list_date">{ Moment(item.node.date).format('DD-MM-YYYY') }</div>
           </div>
-          <div className="blog_products_block_title">{ data.title }</div>
+          <div className="blog_products_block_title">{ item.node.title }</div>
         </div>
       </SwiperSlide>
     );
@@ -56,7 +86,9 @@ const Blog = ({ siteTitle }) => {
       <div className="view_title">
         <div className="title_62">Blog</div>
         <div className="view_all">
-          <a href="#">View all</a>
+          <Link to={"/news/"}>
+            View all
+          </Link>
         </div>
       </div>
       <div className="blog__products">
@@ -92,12 +124,4 @@ const Blog = ({ siteTitle }) => {
   )
 }
 
-Blog.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Blog.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Blog
+export default Blog;
