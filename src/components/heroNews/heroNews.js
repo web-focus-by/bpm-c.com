@@ -33,7 +33,7 @@ const HeroNews = ({ location, crumbLabel, title }) => {
       <div className="breadcrumb-container">
         <Breadcrumb location={ location } crumbSeparator="/" crumbLabel={ crumbLabel } getProps={ isPartiallyActive } />
       </div>
-      <div className="hero margin_bottom_240">
+      <div className="hero margin_bottom_60">
         <div className="hero__title title_80">
             { title }<span className="newspaper"></span>
         </div>
