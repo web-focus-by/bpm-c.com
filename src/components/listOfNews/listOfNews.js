@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import Moment from 'moment';
 import "../../components/styles/main.css"
 import "../../components/styles/modules.css"
 import "../../components/styles/icons.css"
@@ -23,7 +24,7 @@ const ListOfNews = ({ posts }) => {
     if (post && post.node.tags) {
       tags = post.node.tags.nodes.map((tag, i) => {
         let valueTag = '#' + tag.slug;
-        if (i <=2 ) {
+        if (i < 2 ) {
           return (
             <li key={ post.node.id.toString() + valueTag.toString() } className="hash_list_block">
               <Link to={ url.origin + "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
@@ -33,27 +34,39 @@ const ListOfNews = ({ posts }) => {
       })
     }
     return (
-      <div className="portfolio_products_block">
-        <div className="portfolio_products_block_pic">
+      <div className="blogs_products_block">
+        <div className="blogs_products_block_pic">
           <Link to={ post.node.link }>
             <img src={ post.node.featuredImage.node.mediaItemUrl } />
           </Link>
         </div>
-        <div className="portfolio_products_block_list hash">
-          <ul className="hash__list">
-            { tags }
-          </ul>
+        <div className="blogs_products_block_list hash">
+          <div className="blogs_products_block_list_tags">
+            <ul className="hash__list">
+              { tags }
+            </ul>
+          </div>
+          <div className="blogs_products_block_list_date">
+            { Moment(post.node.link).format('DD-MM-YYYY') }
+          </div>
         </div>
-        <div className="portfolio_products_block_title" >{ post.node.title }</div>
+        <div className="blogs_products_block_title" >{ post.node.title }</div>
       </div>
     )
   })
   
   return (
     <div className="container">
-      <div className="portfolio margin_bottom_for_portfolio_240">
-        <div className="portfolio__products">
+      <div className="blogs margin_bottom_240">
+        <div className="blogs__products">
           { items }
+        </div>
+        <div className="blogs__topics">
+          <div className="blogs_products_block">
+            <div className="blogs_topics_block_list">
+              Topics
+            </div>
+          </div>
         </div>
       </div>
     </div>

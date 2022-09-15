@@ -158,6 +158,24 @@
         }
     }
 
+    .blogs {
+        &__products {
+            .blogs_products_block {
+                .blogs_products_block_title {
+                    font-size: calc(22px + (30 - 22) * ((100vw - 1366px) / (1920 - 1366)));
+                }
+
+                .blogs_products_block_pic {
+                    margin-bottom: calc(17px + (24 - 17) * ((100vw - 1366px) / (1920 - 1366)));
+                }
+
+                .blogs_products_block_list {
+                    margin-bottom: calc(17px + (24 - 17) * ((100vw - 1366px) / (1920 - 1366)));
+                }
+            }
+        }
+    }
+
     .form {
         border-radius: calc(29px + (40 - 29) * ((100vw - 1366px) / (1920 - 1366)));
         padding: calc(71px + (100 - 71) * ((100vw - 1366px) / (1920 - 1366))) calc(89px + (125 - 89) * ((100vw - 1366px) / (1920 - 1366))) calc(71px + (100 - 71) * ((100vw - 1366px) / (1920 - 1366))) calc(70px + (98 - 70) * ((100vw - 1366px) / (1920 - 1366)));

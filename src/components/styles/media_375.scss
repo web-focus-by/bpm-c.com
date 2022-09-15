@@ -91,6 +91,66 @@
         }
     }
 
+    .blogs {
+        display: flex;
+        flex-direction: column-reverse;
+        &__products {
+            width: 100%;
+            .blogs_products_block {
+                width: 100%;
+                .hash {
+                    ul {
+                        li {
+                            &:nth-child(3) {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+                .blogs_products_block_title {
+                    margin-top: 12px;
+                    margin-bottom: 12px;
+                    font-size: 24px;
+                    color: #1A1B1F;
+                    font-family: 'Acrom';
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 100%;
+                }
+                .blogs_products_block_pic {
+                    margin-bottom: 12px;
+                    img {
+                        width: 98%;
+                        height: 240px;
+                    }
+                }
+                .blogs__products .blogs_products_block .blogs_products_block_list {
+                    margin-bottom: 12px;
+                    display: flex;
+                    .blogs_products_block_list_date{
+                        width: 30%;
+                    }
+                    .blogs_products_block_list_tags {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+        &__topics { 
+            width: 100%;
+            .blogs_topics_block {
+                .blogs_topics_block_list {
+                    margin-bottom: 24px;
+                    ul {
+                        li {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .hash {
         &__list {
 
@@ -353,6 +413,21 @@
     .portfolio {
         &__products {
             .portfolio_products_block {
+                .hash {
+                    ul {
+                        li {
+                            &:nth-child(3) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .blogs {
+        &__products {
+            .blogs_products_block {
                 .hash {
                     ul {
                         li {

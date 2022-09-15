@@ -53,6 +53,49 @@
   .portfolio__products .portfolio_products_block .portfolio_products_block_list {
     margin-bottom: 16px;
   }
+  .blogs {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .blogs__products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    width: 100%;
+  }
+  .blogs__products .blogs_products_block {
+    width: 45%;
+  }
+  .blogs__products .blogs_products_block .hash ul li:last-child {
+    display: none;
+  }
+  .blogs__products .blogs_products_block .blogs_products_block_pic {
+    margin-bottom: 16px;
+  }
+  .blogs__products .blogs_products_block .blogs_products_block_pic img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 5%;
+  }
+  .blogs__products .blogs_products_block .blogs_products_block_list {
+    display: flex;
+    margin-bottom: 16px;
+  }
+  .blogs__products .blogs_products_block .blogs_products_block_list .blogs_products_block_list_date {
+    width: 30%;
+  }
+  .blogs__products .blogs_products_block .blogs_products_block_list .blogs_products_block_list_tags {
+    width: 70%;
+  }
+  .blogs__topics {
+    width: 100%;
+  }
+  .blogs__topics .blogs_topics_block .blogs_topics_block_list {
+    margin-bottom: 24px;
+  }
+  .blogs__topics .blogs_topics_block .blogs_topics_block_list ul li {
+    margin-right: 20px;
+  }
   .form {
     background-position: 170px 120px;
   }
@@ -505,6 +548,9 @@
     transition: margin-right 1s, margin-left 1s;
   }
   .portfolio__products .portfolio_products_block .portfolio_products_block_pic img {
+    height: calc(150px + 130 * (100vw - 375px) / 393);
+  }
+  .blogs__products .blogs_products_block .blogs_products_block_pic img {
     height: calc(150px + 130 * (100vw - 375px) / 393);
   }
   .form {
@@ -968,6 +1014,12 @@
     display: none;
   }
   .portfolio__products .portfolio_products_block .portfolio_products_block_title {
+    font-size: 20px;
+  }
+  .blogs__products .blogs_products_block .hash ul li:nth-child(3) {
+    display: none;
+  }
+  .blogs__products .blogs_products_block .blogs_products_block_title {
     font-size: 20px;
   }
   .technologies__list {

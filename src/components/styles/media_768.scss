@@ -85,6 +85,63 @@
         }
     }
 
+    .blogs {
+        display: flex;
+        flex-direction: column-reverse;
+        &__products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2%;
+            width: 100%;
+            .blogs_products_block {
+                width: 45%;
+                .hash {
+                    ul {
+                        li {
+                            &:last-child {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .blogs_products_block_pic {
+                    margin-bottom: 16px;
+
+                    img {
+                        // height: 280px;
+                        object-fit: cover;
+                        border-radius: 5%;
+                    }
+                }
+
+                .blogs_products_block_list {
+                    display: flex;
+                    margin-bottom: 16px;
+                    .blogs_products_block_list_date{
+                        width: 30%;
+                    }
+                    .blogs_products_block_list_tags {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+        &__topics { 
+            width: 100%;
+            .blogs_topics_block {
+                .blogs_topics_block_list {
+                    margin-bottom: 24px;
+                    ul {
+                        li {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .form {
         background-position: 170px 120px;
 
@@ -747,6 +804,19 @@
         }
     }
 
+    .blogs {
+        &__products {
+            .blogs_products_block {
+                .blogs_products_block_pic {
+                    img {
+                        // height: 280px;
+                        height: calc(150px + (280 - 150) * ((100vw - 375px) / (768 - 375)));
+                    }
+                }
+            }
+        }
+    }
+
     .form {
         padding: 80px calc(16px + (80 - 16) * ((100vw - 375px) / (768 - 375)));
         background-position: calc(15px + (170 + 15) * ((100vw - 375px) / (768 - 375))) 120px;
@@ -1355,6 +1425,26 @@
                 }
 
                 .portfolio_products_block_title {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .blogs {
+        &__products {
+            .blogs_products_block {
+                .hash {
+                    ul {
+                        li {
+                            &:nth-child(3) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .blogs_products_block_title {
                     font-size: 20px;
                 }
             }
