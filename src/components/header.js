@@ -24,7 +24,7 @@ const Header = ({ turnOnMenu, mainItems }) => {
   }
 
   const menuItems = mainItems.map((item, index) => {
-    if (index === 0) {
+    if (index === 0 || index === 6) {
       return (
         <li key={ index }><Link to={ homeUrl + item.path }>{ item.label }</Link></li>
       )
