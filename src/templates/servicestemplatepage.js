@@ -36,13 +36,13 @@ const Servicestemplatepage = ({pageContext, location, data}) => {
       <HeroWebSiteDesign content={ contentPage } location={ location } crumbLabel={ pageContext.title }></HeroWebSiteDesign>
       <ServiceITOutsourcing title={ pageContext.title } themes={ themes }></ServiceITOutsourcing>
       <WebSiteDesignReason></WebSiteDesignReason>
-      <PortfolioWebSiteDesign posts={ posts }></PortfolioWebSiteDesign>
+      <PortfolioWebSiteDesign posts={ posts } titlePage={"Portfolio"}></PortfolioWebSiteDesign>
       <GoalsDesign></GoalsDesign>
       <Form></Form>
       <RequiresWebsiteDesign></RequiresWebsiteDesign>
       <ServicesItem></ServicesItem>
       <ResWebDesign></ResWebDesign>
-      <Blog></Blog>
+      <Blog titlePage="Blog"></Blog>
       <WebDesignCreationVision></WebDesignCreationVision>
       <ResultsOfWebDesign></ResultsOfWebDesign>
       <Reviews></Reviews>

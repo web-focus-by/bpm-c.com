@@ -16,7 +16,6 @@ const Portfolio = ({ posts }) => {
   if (typeof window !== 'undefined') {
     url =  new URL(window.location.href);
   }
-  console.log(posts)
   const items = posts.map((post, index) => {
     if (index <= 5) {
       let tags = [];
