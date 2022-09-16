@@ -417,7 +417,6 @@ body {
             margin-bottom: 20px;
             .blogs_products_block_pic {
                 margin-bottom: 24px;
-
                 img {
                     width: 100%;
                     margin-bottom: 0px;
@@ -448,18 +447,31 @@ body {
             font-weight: 500;
         }
     }
-    &__topics { 
+    &__topics {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2%;
         width: 33%;
         .blogs_topics_block {
             .blogs_topics_block_list {
-                margin-bottom: 24px;
-
-                ul {
-                    li {
-                        margin-right: 20px;
-                    }
+                display: flex;
+                flex-direction: column;
+                .blogs_topics_block_list_topics {
+                    width: 100%;
+                    margin-bottom: 60px;
+                }
+                .blogs_topics_block_list_category {
+                    margin-bottom: 60px;
+                    width: 100%;
                 }
             }
+        }
+        .blogs_topics_block_title {
+            color: #1A1B1F;
+            font-size: 30px;
+            line-height: 115%;
+            font-weight: 500;
+            margin-bottom: 1%;
         }
     }
 }

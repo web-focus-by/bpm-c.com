@@ -376,13 +376,29 @@ body {
   font-weight: 500;
 }
 .blogs__topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
   width: 33%;
 }
 .blogs__topics .blogs_topics_block .blogs_topics_block_list {
-  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
 }
-.blogs__topics .blogs_topics_block .blogs_topics_block_list ul li {
-  margin-right: 20px;
+.blogs__topics .blogs_topics_block .blogs_topics_block_list .blogs_topics_block_list_topics {
+  width: 100%;
+  margin-bottom: 60px;
+}
+.blogs__topics .blogs_topics_block .blogs_topics_block_list .blogs_topics_block_list_category {
+  margin-bottom: 60px;
+  width: 100%;
+}
+.blogs__topics .blogs_topics_block_title {
+  color: #1A1B1F;
+  font-size: 30px;
+  line-height: 115%;
+  font-weight: 500;
+  margin-bottom: 1%;
 }
 
 .form {

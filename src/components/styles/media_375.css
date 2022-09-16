@@ -92,24 +92,39 @@
     width: 98%;
     height: 240px;
   }
-  .blogs__products .blogs_products_block .blogs__products .blogs_products_block .blogs_products_block_list {
+  .blogs__products .blogs_products_block .blogs_products_block_list {
     margin-bottom: 12px;
     display: flex;
   }
-  .blogs__products .blogs_products_block .blogs__products .blogs_products_block .blogs_products_block_list .blogs_products_block_list_date {
+  .blogs__products .blogs_products_block .blogs_products_block_list .blogs_products_block_list_date {
     width: 30%;
   }
-  .blogs__products .blogs_products_block .blogs__products .blogs_products_block .blogs_products_block_list .blogs_products_block_list_tags {
+  .blogs__products .blogs_products_block .blogs_products_block_list .blogs_products_block_list_tags {
     width: 70%;
   }
   .blogs__topics {
     width: 100%;
   }
   .blogs__topics .blogs_topics_block .blogs_topics_block_list {
-    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column-reverse;
   }
-  .blogs__topics .blogs_topics_block .blogs_topics_block_list ul li {
+  .blogs__topics .blogs_topics_block .blogs_topics_block_list .blogs_topics_block_list_topics {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .blogs__topics .blogs_topics_block .blogs_topics_block_list .blogs_topics_block_list_topics ul li {
     margin-right: 20px;
+  }
+  .blogs__topics .blogs_topics_block .blogs_topics_block_list .blogs_topics_block_list_category {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .blogs__topics .blogs_topics_block .blogs_topics_block_list .blogs_topics_block_list_category ul li {
+    margin-right: 20px;
+  }
+  .blogs__topics .blogs_topics_block .blogs_topics_block_title {
+    font-size: 24px;
   }
   .hash__list .hash_list_block {
     margin-right: 10px !important;
@@ -298,7 +313,7 @@
   .portfolio__products .portfolio_products_block .hash ul li:nth-child(3) {
     display: none;
   }
-  .blogs__products .blogs_products_block .hash ul li:nth-child(3) {
+  .blogs__products .blogs_products_block .hash ul li:nth-child(2) {
     display: none;
   }
 }

@@ -124,10 +124,10 @@
                         height: 240px;
                     }
                 }
-                .blogs__products .blogs_products_block .blogs_products_block_list {
+                .blogs_products_block_list {
                     margin-bottom: 12px;
                     display: flex;
-                    .blogs_products_block_list_date{
+                    .blogs_products_block_list_date {
                         width: 30%;
                     }
                     .blogs_products_block_list_tags {
@@ -140,12 +140,29 @@
             width: 100%;
             .blogs_topics_block {
                 .blogs_topics_block_list {
-                    margin-bottom: 24px;
-                    ul {
-                        li {
-                            margin-right: 20px;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    .blogs_topics_block_list_topics {
+                        width: 100%;
+                        margin-bottom: 30px;
+                        ul {
+                            li {
+                                margin-right: 20px;
+                            }
                         }
                     }
+                    .blogs_topics_block_list_category {
+                        width: 100%;
+                        margin-bottom: 30px;
+                        ul {
+                            li {
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+                }
+                .blogs_topics_block_title {
+                    font-size: 24px;
                 }
             }
         }
@@ -431,7 +448,7 @@
                 .hash {
                     ul {
                         li {
-                            &:nth-child(3) {
+                            &:nth-child(2) {
                                 display: none;
                             }
                         }
