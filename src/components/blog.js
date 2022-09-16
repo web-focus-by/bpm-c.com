@@ -94,7 +94,7 @@ const Blog = ({ titlePage }) => {
       <div className="view_title">
         <div className="title_62">{ titlePage }</div>
         <div className="view_all">
-          <Link to={"/news/"}>
+          <Link to={"/blog/"}>
             View all
           </Link>
         </div>

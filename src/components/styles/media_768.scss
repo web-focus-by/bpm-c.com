@@ -747,6 +747,69 @@
         }
     }
 
+    .blogs {
+        display: flex;
+        flex-direction: column-reverse;
+        &__products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2%;
+            width: 100%;
+            .blogs_products_block {
+                width: 45%;
+                .hash {
+                    ul {
+                        li {
+                            &:last-child {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .blogs_products_block_pic {
+                    margin-bottom: 16px;
+
+                    img {
+                        // height: 280px;
+                        object-fit: cover;
+                        border-radius: 5%;
+                    }
+                }
+
+                .blogs_products_block_list {
+                    display: flex;
+                    margin-bottom: 16px;
+                    .blogs_products_block_list_date{
+                        width: 30%;
+                    }
+                    .blogs_products_block_list_tags {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+        &__topics {
+            width: 100%;
+            .blogs_topics_block {
+                .blogs_topics_block_list {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 1%;
+                    .blogs_topics_block_list_topics {
+                        width: 46%;
+                        margin-bottom: 40px;
+                    }
+                    .blogs_topics_block_list_category {
+                        width: 46%;
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+
     .form {
         padding: 80px calc(16px + (80 - 16) * ((100vw - 375px) / (768 - 375)));
         background-position: calc(15px + (170 + 15) * ((100vw - 375px) / (768 - 375))) 120px;
@@ -1358,6 +1421,34 @@
                     font-size: 20px;
                 }
             }
+        }
+    }
+
+    .blogs {
+        &__products {
+            .blogs_products_block {
+                .hash {
+                    ul {
+                        li {
+                            &:nth-child(2) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .blogs_products_block_title {
+                    font-size: 20px;
+                }
+            }
+        }
+        &__topics{
+            .blogs_topics_block {
+                .blogs_topics_block_title {
+                    font-size: 20px;
+                }
+            }
+            
         }
     }
 

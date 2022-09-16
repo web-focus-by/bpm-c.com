@@ -62,6 +62,70 @@
   .portfolio__products .portfolio_products_block .portfolio__products .portfolio_products_block .portfolio_products_block_list {
     margin-bottom: 12px;
   }
+  .blogs {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .blogs__products {
+    width: 100%;
+  }
+  .blogs__products .blogs_products_block {
+    width: 100%;
+  }
+  .blogs__products .blogs_products_block .hash ul li:nth-child(3) {
+    display: inline-block;
+  }
+  .blogs__products .blogs_products_block .blogs_products_block_title {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 24px;
+    color: #1A1B1F;
+    font-family: "Acrom";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+  }
+  .blogs__products .blogs_products_block .blogs_products_block_pic {
+    margin-bottom: 12px;
+  }
+  .blogs__products .blogs_products_block .blogs_products_block_pic img {
+    width: 98%;
+    height: 240px;
+  }
+  .blogs__products .blogs_products_block .blogs_products_block_list {
+    margin-bottom: 12px;
+    display: flex;
+  }
+  .blogs__products .blogs_products_block .blogs_products_block_list .blogs_products_block_list_date {
+    width: 30%;
+  }
+  .blogs__products .blogs_products_block .blogs_products_block_list .blogs_products_block_list_tags {
+    width: 70%;
+  }
+  .blogs__topics {
+    width: 100%;
+  }
+  .blogs__topics .blogs_topics_block .blogs_topics_block_list {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .blogs__topics .blogs_topics_block .blogs_topics_block_list .blogs_topics_block_list_topics {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .blogs__topics .blogs_topics_block .blogs_topics_block_list .blogs_topics_block_list_topics ul li {
+    margin-right: 20px;
+  }
+  .blogs__topics .blogs_topics_block .blogs_topics_block_list .blogs_topics_block_list_category {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .blogs__topics .blogs_topics_block .blogs_topics_block_list .blogs_topics_block_list_category ul li {
+    margin-right: 20px;
+  }
+  .blogs__topics .blogs_topics_block .blogs_topics_block_title {
+    font-size: 24px;
+  }
   .hash__list .hash_list_block {
     margin-right: 10px !important;
   }
@@ -247,6 +311,9 @@
 }
 @media (max-width: 340px) {
   .portfolio__products .portfolio_products_block .hash ul li:nth-child(3) {
+    display: none;
+  }
+  .blogs__products .blogs_products_block .hash ul li:nth-child(2) {
     display: none;
   }
 }

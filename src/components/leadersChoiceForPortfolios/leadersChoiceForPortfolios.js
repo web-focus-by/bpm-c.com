@@ -14,7 +14,7 @@ import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
-const LeadersChoiceForPortfolios = ({ siteTitle }) => {
+const LeadersChoiceForPortfolios = () => {
   return (
     <div className="container">
       <div className="leaders">  

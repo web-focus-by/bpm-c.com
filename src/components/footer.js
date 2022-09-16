@@ -35,19 +35,19 @@ const Footer = ({ siteTitle }) => (
       <div className="footer__menu">
         <ul>
           <li>
-            <a href="#">Portfolio</a>
+            <a><Link to={"/portfolio/"}>Portfolio</Link></a>
           </li>
           <li>
-            <a href="#">Services</a>
+            <a><Link to={"/services/servicesitoutsourcing/"}>Services</Link></a>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <a><Link to={"/blog/"}>Blog</Link></a>
           </li>
           <li>
-            <a href="#">About us</a>
+            <a><Link to={"/about-us/informationaboutcompany/"}>About us</Link></a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a><Link to={"/contact/"}>Contact</Link></a>
           </li>
         </ul>
       </div>
