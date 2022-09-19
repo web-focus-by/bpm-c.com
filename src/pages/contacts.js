@@ -1,12 +1,21 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import Hero from "../components/hero"
 
 const Contacts = ({ location }) => {
+  let url = '';
+  if (typeof window !== 'undefined') {
+    url = new URL(window.location.href);
+  } else {
+    if (location && location.href) {
+      url = new URL(location.href);
+    }
+  }
   return (
     <>
       <Layout>
-        
+        <div className="container">
+
+        </div>
       </Layout>
     </>
   )
