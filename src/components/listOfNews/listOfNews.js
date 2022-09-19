@@ -20,13 +20,65 @@ const ListOfNews = ({ posts }) => {
     url =  new URL(window.location.href);
   }
   const [selectedPosts, setSelectedPosts] = useState(posts);
+  const [selectedTag, setSelectedTag] = useState("allTag");
+  const [selectedCategory, setSelectedCategory] = useState("allCategory");
 
   const filterByTag = (item) => {
-    return console.log(item.toLowerCase())
+    if (item === "allTag") {
+      if (selectedCategory === "allCategory") {
+        setSelectedPosts(posts);
+      } else {
+        const temporaryArr = posts.reduce((next, val)=>{
+          if (val.node.categories.nodes.findIndex((val)=>{ return val.slug===selectedCategory;} ) !== -1) {
+            next.push(val);
+          }
+          return next;
+        },[])
+        setSelectedPosts(temporaryArr);
+      }
+    } else {
+      const newArr = selectedPosts.reduce((newArray, currentValue) => {
+        if (currentValue.node.tags.nodes.findIndex((val)=>{ return val.slug===item;} ) !== -1) {
+          newArray.push(currentValue);
+        }
+        return newArray;
+      },[]);
+      setSelectedPosts(newArr);
+    }
+    if(document && document.getElementById(item)){
+      document.getElementById(item).className = "button_item_tag__active"
+      document.getElementById(selectedTag).className = "button_item_tag"
+    }
+    setSelectedTag(item);
   }
 
   const filterByCategory = (item) => {
-    return console.log(item.toLowerCase())
+    if (item === "allCategory") {
+      if (selectedTag === "allTag") {
+        setSelectedPosts(posts);
+      } else {
+        const temporaryArr = posts.reduce((next, val)=>{
+          if (val.node.tags.nodes.findIndex((val)=>{ return val.slug===selectedTag;} ) !== -1) {
+            next.push(val);
+          }
+          return next;
+        },[])
+        setSelectedPosts(temporaryArr);
+      }
+    } else {
+      const newArr = selectedPosts.reduce((newArray, currentValue) => {
+        if (currentValue.node.categories.nodes.findIndex((val)=>{ return val.slug===item;} ) !== -1) {
+          newArray.push(currentValue);
+        }
+        return newArray;
+      },[]);
+      setSelectedPosts(newArr);
+    }
+    if(document && document.getElementById(item)){
+      document.getElementById(item).className = "button_item_tag__active"
+      document.getElementById(selectedCategory).className = "button_item_tag"
+    }
+    setSelectedCategory(item);
   }
 
   const topics = posts.reduce((allTopics, post) => {
@@ -39,7 +91,7 @@ const ListOfNews = ({ posts }) => {
   const unicTopics = [...new Set(topics.reduce((next,prev)=>next.concat(prev),[]))];
   const tags = unicTopics.map((tag, index) => {
     return (
-      <button id={ tag } key={ tag } className="button_item_tag" onClick={ () =>{filterByTag(tag)} }>{ tag }</button>
+      <button id={ tag } key={ tag } className="button_item_tag" onClick={ () =>{ filterByTag(tag) } }>{ tag }</button>
     )
   });
 
@@ -53,7 +105,7 @@ const ListOfNews = ({ posts }) => {
   const unicCategories = [...new Set(categories.reduce((next,prev)=>next.concat(prev),[]))];
   const category = unicCategories.map((val, i)=>{
     return (
-      <button id={ val } key={ val } className="button_item_tag" onClick={ ()=>{filterByCategory(val)} }>{ val }</button>
+      <button id={ val } key={ val } className="button_item_tag" onClick={ ()=>{ filterByCategory(val) } }>{ val }</button>
     )
   })
 
@@ -64,7 +116,7 @@ const ListOfNews = ({ posts }) => {
         let valueTag = '#' + tag.slug;
         if (i < 2 ) {
           return (
-            <li key={ post.node.id.toString() + valueTag.toString() } className="hash_list_block">
+            <li key={ i.toString() + valueTag.toString() } className="hash_list_block">
               <Link to={ url.origin + "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
             </li>
           )
@@ -88,7 +140,7 @@ const ListOfNews = ({ posts }) => {
             { Moment(post.node.link).format('DD-MM-YYYY') }
           </div>
         </div>
-        <div className="blogs_products_block_title" >{ post.node.title }</div>
+        <Link to={ post.node.link }><div className="blogs_products_block_title" ><a>{ post.node.title }</a></div></Link>
       </div>
     )
   })
@@ -106,14 +158,14 @@ const ListOfNews = ({ posts }) => {
                 <div className="blogs_topics_block_title">
                   Blog
                 </div>
-                <button id={ "All" } key={ "All" } className="button_item_tag" onClick={ () => { filterByTag("All") } }>{ "All" }</button>
+                <button id={ "allCategory" } key={ "allCategory" } className={ selectedCategory === "allCategory" ? "button_item_tag__active" : "button_item_tag"}  onClick={ () => { filterByCategory("allCategory") } }>{ "All" }</button>
                  { category } 
               </div>
               <div className="blogs_topics_block_list_topics">
                 <div className="blogs_topics_block_title">
                   Topics
                 </div>
-                <button id={ "All" } key={ "All" } className="button_item_tag" onClick={ () => { filterByTag("All") } }>{ "All" }</button>
+                <button id={ "allTag" } key={ "allTag" } className={ selectedTag === "allTag" ? "button_item_tag__active" : "button_item_tag"} onClick={ () => { filterByTag("allTag") } }>{ "All" }</button>
                  { tags } 
               </div>
             </div>
