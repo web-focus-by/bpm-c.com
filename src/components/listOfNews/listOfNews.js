@@ -29,7 +29,7 @@ const ListOfNews = ({ posts }) => {
         setSelectedPosts(posts);
       } else {
         const temporaryArr = posts.reduce((next, val)=>{
-          if (val.node.categories.nodes.findIndex((val)=>{ return val.slug===selectedCategory;} ) !== -1) {
+          if (val.node.categories.nodes.findIndex((val)=>{ return val.slug===selectedCategory} ) !== -1) {
             next.push(val);
           }
           return next;
@@ -37,13 +37,29 @@ const ListOfNews = ({ posts }) => {
         setSelectedPosts(temporaryArr);
       }
     } else {
-      const newArr = selectedPosts.reduce((newArray, currentValue) => {
-        if (currentValue.node.tags.nodes.findIndex((val)=>{ return val.slug===item;} ) !== -1) {
-          newArray.push(currentValue);
-        }
-        return newArray;
-      },[]);
-      setSelectedPosts(newArr);
+      if (selectedCategory === "allCategory") {
+        const newArr = posts.reduce((newArray, currentValue) => {
+          if (currentValue.node.tags.nodes.findIndex((val)=>{ return val.slug===item} ) !== -1) {
+            newArray.push(currentValue);
+          }
+          return newArray;
+        },[]);
+        setSelectedPosts(newArr);
+      } else {
+        const temporaryArr = posts.reduce((next, val)=>{
+          if (val.node.categories.nodes.findIndex((val)=>{ return val.slug===selectedCategory} ) !== -1) {
+            next.push(val);
+          }
+          return next;
+        },[])
+        const newArr = temporaryArr.reduce((newArray, currentValue) => {
+          if (currentValue.node.tags.nodes.findIndex((val)=>{ return val.slug===item} ) !== -1) {
+            newArray.push(currentValue);
+          }
+          return newArray;
+        },[]);
+        setSelectedPosts(newArr);
+      }
     }
     if(document && document.getElementById(item)){
       document.getElementById(item).className = "button_item_tag__active"
@@ -58,7 +74,7 @@ const ListOfNews = ({ posts }) => {
         setSelectedPosts(posts);
       } else {
         const temporaryArr = posts.reduce((next, val)=>{
-          if (val.node.tags.nodes.findIndex((val)=>{ return val.slug===selectedTag;} ) !== -1) {
+          if (val.node.tags.nodes.findIndex((val)=>{ return val.slug===selectedTag } ) !== -1) {
             next.push(val);
           }
           return next;
@@ -66,13 +82,29 @@ const ListOfNews = ({ posts }) => {
         setSelectedPosts(temporaryArr);
       }
     } else {
-      const newArr = selectedPosts.reduce((newArray, currentValue) => {
-        if (currentValue.node.categories.nodes.findIndex((val)=>{ return val.slug===item;} ) !== -1) {
-          newArray.push(currentValue);
-        }
-        return newArray;
-      },[]);
-      setSelectedPosts(newArr);
+      if (selectedTag === "allTag") {
+        const newArr = posts.reduce((newArray, currentValue) => {
+          if (currentValue.node.categories.nodes.findIndex((val)=>{ return val.slug===item } ) !== -1) {
+            newArray.push(currentValue);
+          }
+          return newArray;
+        },[]);
+        setSelectedPosts(newArr);
+      } else {
+        const temporaryArr = posts.reduce((next, val)=>{
+          if (val.node.tags.nodes.findIndex((val)=>{ return val.slug===selectedTag } ) !== -1) {
+            next.push(val);
+          }
+          return next;
+        },[])
+        const newArr = temporaryArr.reduce((newArray, currentValue) => {
+          if (currentValue.node.categories.nodes.findIndex((val)=>{ return val.slug===item } ) !== -1) {
+            newArray.push(currentValue);
+          }
+          return newArray;
+        },[]);
+        setSelectedPosts(newArr);
+      } 
     }
     if(document && document.getElementById(item)){
       document.getElementById(item).className = "button_item_tag__active"
