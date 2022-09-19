@@ -27,7 +27,6 @@ const Blog = ({ location }) => {
             date
             tags {
               nodes {
-                id
                 slug
               }
             }
@@ -39,7 +38,6 @@ const Blog = ({ location }) => {
             }
             categories {
               nodes {
-                id
                 slug
               }
             }
