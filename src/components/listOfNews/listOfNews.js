@@ -24,93 +24,97 @@ const ListOfNews = ({ posts }) => {
   const [selectedCategory, setSelectedCategory] = useState("allCategory");
 
   const filterByTag = (item) => {
-    if (item === "allTag") {
-      if (selectedCategory === "allCategory") {
-        setSelectedPosts(posts);
+    if (item !== selectedTag) {
+      if (item === "allTag") {
+        if (selectedCategory === "allCategory") {
+          setSelectedPosts(posts);
+        } else {
+          const temporaryArr = posts.reduce((next, val)=>{
+            if (val.node.categories.nodes.findIndex((val)=>{ return val.slug===selectedCategory} ) !== -1) {
+              next.push(val);
+            }
+            return next;
+          },[])
+          setSelectedPosts(temporaryArr);
+        }
       } else {
-        const temporaryArr = posts.reduce((next, val)=>{
-          if (val.node.categories.nodes.findIndex((val)=>{ return val.slug===selectedCategory} ) !== -1) {
-            next.push(val);
-          }
-          return next;
-        },[])
-        setSelectedPosts(temporaryArr);
+        if (selectedCategory === "allCategory") {
+          const newArr = posts.reduce((newArray, currentValue) => {
+            if (currentValue.node.tags.nodes.findIndex((val)=>{ return val.slug===item} ) !== -1) {
+              newArray.push(currentValue);
+            }
+            return newArray;
+          },[]);
+          setSelectedPosts(newArr);
+        } else {
+          const temporaryArr = posts.reduce((next, val)=>{
+            if (val.node.categories.nodes.findIndex((val)=>{ return val.slug===selectedCategory} ) !== -1) {
+              next.push(val);
+            }
+            return next;
+          },[])
+          const newArr = temporaryArr.reduce((newArray, currentValue) => {
+            if (currentValue.node.tags.nodes.findIndex((val)=>{ return val.slug===item} ) !== -1) {
+              newArray.push(currentValue);
+            }
+            return newArray;
+          },[]);
+          setSelectedPosts(newArr);
+        }
       }
-    } else {
-      if (selectedCategory === "allCategory") {
-        const newArr = posts.reduce((newArray, currentValue) => {
-          if (currentValue.node.tags.nodes.findIndex((val)=>{ return val.slug===item} ) !== -1) {
-            newArray.push(currentValue);
-          }
-          return newArray;
-        },[]);
-        setSelectedPosts(newArr);
-      } else {
-        const temporaryArr = posts.reduce((next, val)=>{
-          if (val.node.categories.nodes.findIndex((val)=>{ return val.slug===selectedCategory} ) !== -1) {
-            next.push(val);
-          }
-          return next;
-        },[])
-        const newArr = temporaryArr.reduce((newArray, currentValue) => {
-          if (currentValue.node.tags.nodes.findIndex((val)=>{ return val.slug===item} ) !== -1) {
-            newArray.push(currentValue);
-          }
-          return newArray;
-        },[]);
-        setSelectedPosts(newArr);
+      if(document && document.getElementById(item)){
+        document.getElementById(item).className = "button_item_tag__active"
+        document.getElementById(selectedTag).className = "button_item_tag"
       }
+      setSelectedTag(item);
     }
-    if(document && document.getElementById(item)){
-      document.getElementById(item).className = "button_item_tag__active"
-      document.getElementById(selectedTag).className = "button_item_tag"
-    }
-    setSelectedTag(item);
   }
 
   const filterByCategory = (item) => {
-    if (item === "allCategory") {
-      if (selectedTag === "allTag") {
-        setSelectedPosts(posts);
+    if (item !== selectedCategory) {
+      if (item === "allCategory") {
+        if (selectedTag === "allTag") {
+          setSelectedPosts(posts);
+        } else {
+          const temporaryArr = posts.reduce((next, val)=>{
+            if (val.node.tags.nodes.findIndex((val)=>{ return val.slug===selectedTag } ) !== -1) {
+              next.push(val);
+            }
+            return next;
+          },[])
+          setSelectedPosts(temporaryArr);
+        }
       } else {
-        const temporaryArr = posts.reduce((next, val)=>{
-          if (val.node.tags.nodes.findIndex((val)=>{ return val.slug===selectedTag } ) !== -1) {
-            next.push(val);
-          }
-          return next;
-        },[])
-        setSelectedPosts(temporaryArr);
+        if (selectedTag === "allTag") {
+          const newArr = posts.reduce((newArray, currentValue) => {
+            if (currentValue.node.categories.nodes.findIndex((val)=>{ return val.slug===item } ) !== -1) {
+              newArray.push(currentValue);
+            }
+            return newArray;
+          },[]);
+          setSelectedPosts(newArr);
+        } else {
+          const temporaryArr = posts.reduce((next, val)=>{
+            if (val.node.tags.nodes.findIndex((val)=>{ return val.slug===selectedTag } ) !== -1) {
+              next.push(val);
+            }
+            return next;
+          },[])
+          const newArr = temporaryArr.reduce((newArray, currentValue) => {
+            if (currentValue.node.categories.nodes.findIndex((val)=>{ return val.slug===item } ) !== -1) {
+              newArray.push(currentValue);
+            }
+            return newArray;
+          },[]);
+          setSelectedPosts(newArr);
+        } 
       }
-    } else {
-      if (selectedTag === "allTag") {
-        const newArr = posts.reduce((newArray, currentValue) => {
-          if (currentValue.node.categories.nodes.findIndex((val)=>{ return val.slug===item } ) !== -1) {
-            newArray.push(currentValue);
-          }
-          return newArray;
-        },[]);
-        setSelectedPosts(newArr);
-      } else {
-        const temporaryArr = posts.reduce((next, val)=>{
-          if (val.node.tags.nodes.findIndex((val)=>{ return val.slug===selectedTag } ) !== -1) {
-            next.push(val);
-          }
-          return next;
-        },[])
-        const newArr = temporaryArr.reduce((newArray, currentValue) => {
-          if (currentValue.node.categories.nodes.findIndex((val)=>{ return val.slug===item } ) !== -1) {
-            newArray.push(currentValue);
-          }
-          return newArray;
-        },[]);
-        setSelectedPosts(newArr);
-      } 
+      if(document && document.getElementById(item)){
+        document.getElementById(item).className = "button_item_tag__active"
+        document.getElementById(selectedCategory).className = "button_item_tag"
+      }
+      setSelectedCategory(item);
     }
-    if(document && document.getElementById(item)){
-      document.getElementById(item).className = "button_item_tag__active"
-      document.getElementById(selectedCategory).className = "button_item_tag"
-    }
-    setSelectedCategory(item);
   }
 
   const topics = posts.reduce((allTopics, post) => {
