@@ -335,6 +335,65 @@ body {
   font-weight: 500;
 }
 
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+.contacts__contact {
+  width: 38%;
+}
+.contacts__contact .contacts_table {
+  display: flex;
+  gap: 5%;
+  justify-content: space-between;
+}
+.contacts__contact .contacts_table .contacts_label {
+  width: 35%;
+  font-family: "Acrom";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #1A1B1F;
+}
+.contacts__contact .contacts_table .contacts_label ul {
+  padding: 0px;
+  margin: 0px;
+}
+.contacts__contact .contacts_table .contacts_label ul li {
+  display: flex;
+  list-style: none;
+  margin-bottom: 80px;
+}
+.contacts__contact .contacts_table .contacts_value {
+  width: 60%;
+  font-family: "Acrom";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  color: #1A1B1F;
+}
+.contacts__contact .contacts_table .contacts_value ul {
+  padding: 0px;
+  margin: 0px;
+}
+.contacts__contact .contacts_table .contacts_value ul li {
+  display: flex;
+  list-style: none;
+  margin-bottom: 60px;
+  margin-right: 10px;
+}
+.contacts__contact_form {
+  width: 60%;
+}
+.contacts__contact_form .contacts_type_form {
+  display: flex;
+  justify-content: space-between;
+}
+
 .blogs {
   display: flex;
   justify-content: space-between;
