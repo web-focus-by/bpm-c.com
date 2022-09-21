@@ -3,10 +3,10 @@ import GoogleMapReact from "google-map-react"
 
 const defaultProps = {
   center: {
-    lat: 40.72,
-    lng: -73.99,
+    lat: 53.92,
+    lng: 27.59,
   },
-  zoom: 14,
+  zoom: 15,
 }
 
 const AnyReactComponent = ({ text }) => <div>{ text }</div>
@@ -19,9 +19,9 @@ const GoogleMap = () => (
       defaultZoom={ defaultProps.zoom }
     >
       <AnyReactComponent
-        lat={40.71671206494995}
-        lng={-73.99896718930891}
-        text={'New York, NY'}
+        lat={53.9221908384047}
+        lng={27.59860115102201}
+        text={'Independence Avenue, 77, office 53'}
       />
     </GoogleMapReact>
   </div>
