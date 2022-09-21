@@ -1,7 +1,9 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { useState } from "react"
+import { Link, graphql } from "gatsby"
 import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 import Layout from "../components/layout"
+import GoogleMap from "../components/googleMap/googleMap"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/modules.css"
@@ -12,9 +14,8 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
-import Footer from "../components/footer"
 
-const Contacts = ({ location }) => {
+const Contacts = ({ location, data }) => {
   let url = '';
   if (typeof window !== 'undefined') {
     url = new URL(window.location.href);
@@ -32,12 +33,10 @@ const Contacts = ({ location }) => {
 
   const socialMedia = socialMaediaLinks.map((val, index)=>{
     return (
-      <li key={ index }>
-        <a>
-          <Link to={ val.link }>
-            <span className={ val.name }></span>
-          </Link>
-        </a>
+      <li key={ index.toString() }>
+        <Link to={ val.link }>
+          <span className={ val.name }></span>
+        </Link>
       </li>
     )
   });
@@ -46,8 +45,13 @@ const Contacts = ({ location }) => {
     console.log(item);
   }
 
+  const submitForm = () => {
+    return;
+  }
+
   return (
     <>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAxxYoKa8lhMgXSMyUxFxcLUfPsjkb17c&callback=initMap"></script>
       <Layout>
         <div className="container">
           <div className="hero">
@@ -60,46 +64,46 @@ const Contacts = ({ location }) => {
           <div className="header_circle_purple"></div>
         </div>
         <div className="container">
-          <div className="contacts margin_bottom_240">
+          <div className="contacts margin_bottom_60">
             <div className="contacts__contact">
               <div className="contacts_table">
                 <div className="contacts_label">
                   <ul>
-                    <li>Phone</li>
-                    <li>E-mail</li>
-                    <li>Address</li>
-                    <li>Social media</li>
+                    <li key="phone">Phone</li>
+                    <li key="e-mail">E-mail</li>
+                    <li key="address">Address</li>
+                    <li key="socialMedia">Social media</li>
                   </ul>
                 </div>
                 <div className="contacts_value">
                   <ul>
-                    <li>+ 375 29 715 05 86</li>
-                    <li>info@bpmcloud.com</li>
-                    <li>Independence Avenue, 77, office 53</li>
-                    <li>{ socialMedia }</li>
+                    <li key="phoneNumber">+ 375 29 715 05 86</li>
+                    <li key="mail">info@bpmcloud.com</li>
+                    <li key="addressValue">Independence Avenue, 77, office 53</li>
+                    <li key="socialMediaLinks">{ socialMedia }</li>
                   </ul>
                 </div>
               </div>
             </div>
             
-            <div className="contacts__contacts_form margin_bottom_240">
+            <div className="contacts__contacts_form">
               <div className="contact_form">
                 <div className="contact_form__block">
                   <div className="contact_form_block_buttons_title">
                   Services interested in:
                   </div>
                   <div className="contact_form_block_buttons">
-                    <button id="development" onClick={ ()=>{ addItem('development') } } className="button_item_tag">+ Development</button>
-                    <button id="design" onClick={ ()=>{ addItem('design') } } className="button_item_tag">+ Design</button>
-                    <button id="seo" onClick={ ()=>{ addItem('seo') } } className="button_item_tag">+ SEO</button>
-                    <button id="ppc" onClick={ ()=>{ addItem('ppc') } } className="button_item_tag">+ PPC</button>
-                    <button id="copywriting" onClick={ ()=>{ addItem('copywriting') } } className="button_item_tag">+ Copywriting</button>
+                    <button id="development" key="development" onClick={ ()=>{ addItem('development') } } className="button_item_tag">+ Development</button>
+                    <button id="design" key="design" onClick={ ()=>{ addItem('design') } } className="button_item_tag">+ Design</button>
+                    <button id="seo" key="seo" onClick={ ()=>{ addItem('seo') } } className="button_item_tag">+ SEO</button>
+                    <button id="ppc" key="ppc" onClick={ ()=>{ addItem('ppc') } } className="button_item_tag">+ PPC</button>
+                    <button id="copywriting" key="copywriting" onClick={ ()=>{ addItem('copywriting') } } className="button_item_tag">+ Copywriting</button>
                   </div>
                   <div className="contact_form_block_wrapper">
                     <form id="search-contact_form" action="#" method="POST">
                       <div className="contact_form_line-wrapper">
                         <input
-                          id="name" 
+                          id="name"
                           type="text"
                           autoComplete="off"
                           name="user_name"
@@ -134,7 +138,7 @@ const Contacts = ({ location }) => {
                       </div>
                       <div className="contact_form_block_send">
                         <div>
-                          <button className="button_white">
+                          <button className="button_white" onClick={ submitForm }>
                             Send<span className="arrow_black"></span>
                           </button>
                         </div>
@@ -149,6 +153,9 @@ const Contacts = ({ location }) => {
               </div>
             </div>
           </div>
+          <div className="map_of_location margin_bottom_240">
+            <GoogleMap />
+          </div>
         </div>
       </Layout>
     </>
@@ -156,3 +163,15 @@ const Contacts = ({ location }) => {
 }
 
 export default Contacts
+
+export const map = graphql`
+  query StaticMapQuery {
+    staticMap {
+      mapUrl
+      center
+      childFile {
+        publicURL
+      }
+    }
+  }
+`
