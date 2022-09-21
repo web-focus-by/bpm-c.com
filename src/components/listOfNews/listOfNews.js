@@ -19,6 +19,7 @@ const ListOfNews = ({ posts }) => {
   if (typeof window !== 'undefined') {
     url =  new URL(window.location.href);
   }
+  const notInfo = "Nothing found for your request...";
   const [selectedPosts, setSelectedPosts] = useState(posts);
   const [selectedTag, setSelectedTag] = useState("allTag");
   const [selectedCategory, setSelectedCategory] = useState("allCategory");
@@ -185,7 +186,7 @@ const ListOfNews = ({ posts }) => {
     <div className="container">
       <div className="blogs margin_bottom_240">
         <div className="blogs__products">
-          { items }
+          { items && items.length ? items : notInfo }
         </div>
         <div className="blogs__topics">
           <div className="blogs_topics_block">
