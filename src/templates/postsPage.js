@@ -9,8 +9,8 @@ const PostsPage = ({ location, pageContext, data }) => {
   return (
     <>
       <Layout>
-        <HeroPost location={ location } crumbLabel="Post" title={ pageContext.title }></HeroPost>
-        <ContentPost content={ pageContext }></ContentPost>
+        <HeroPost location={ location } crumbLabel="Post" photo={ pageContext.featuredImage.node.mediaItemUrl } info={ pageContext }></HeroPost>
+        <ContentPost content={ pageContext } data={ data } ></ContentPost>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
     </>

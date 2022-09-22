@@ -293,6 +293,95 @@ body {
     }
 }
 
+.photo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
+    width: 80%;    
+    .photo_block {
+        display: block;
+        width: 100%;
+        height: 360px;
+        border-radius: 25px;
+    }
+    .photo_description {
+        margin-top: 35px;
+        width: 100%;
+        display: flex;
+        .photo_tags {
+            width: 60%;
+            ul {
+                li {
+                    margin-right: 20px;
+                }
+            }
+        }
+        .photo_duration {
+            font-family: 'Acrom';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            width: 25%;
+        }
+        .photo_date {
+            width: 15%;
+        }
+    }
+}
+
+.post_title {
+    margin-top: 72px;
+    &__title {
+        line-height: 100%;
+        max-width: 65%;
+        font-size: 80px;
+        margin-bottom: 20px;
+        color: #1A1B1F;
+        font-weight: 500;
+    }
+}
+
+.content_post {
+    width: 80%;
+    background: #E1DAF4;
+    border-radius: 25px;
+    margin-bottom: 60px;
+    &__block {
+        padding-top: 40px;
+        padding-bottom: 48px;
+        .content_title{
+            margin-left: 40px;
+            padding-bottom: 8px;
+            font-family: 'Acrom';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 115%;
+            color: #1A1B1F;
+        }
+        .content_item {
+            margin-left: 40px;
+            padding-top: 24px;
+            font-family: 'Acrom';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 110%;
+            color: #1A1B1F;
+            :hover {
+                cursor: pointer;
+                color: #935CFF;
+            }
+        }
+    }
+    
+}
+
+.content_text {
+    width: 80%;
+}
+
 .hero {
     margin-top: 188px;
 

@@ -73,6 +73,10 @@
     font-size: calc(11px + 5 * (100vw - 1366px) / 554);
     padding: calc(16px + 6 * (100vw - 1366px) / 554) calc(29px + 11 * (100vw - 1366px) / 554);
   }
+  .hero__butntag .button_item_tag__active {
+    font-size: calc(11px + 5 * (100vw - 1366px) / 554);
+    padding: calc(16px + 6 * (100vw - 1366px) / 554) calc(29px + 11 * (100vw - 1366px) / 554);
+  }
   .header__nav .logo {
     width: calc(100px + 42 * (100vw - 1366px) / 554);
     height: calc(32px + 14 * (100vw - 1366px) / 554);
@@ -106,13 +110,25 @@
   .portfolio__products .portfolio_products_block .portfolio_products_block_pic {
     margin-bottom: calc(17px + 7 * (100vw - 1366px) / 554);
   }
-  .portfolio__products .portfolio_products_block .blog_products_block_pic {
-    margin-bottom: calc(17px + 7 * (100vw - 1366px) / 554);
-  }
   .portfolio__products .portfolio_products_block .portfolio_products_block_list {
     margin-bottom: calc(17px + 7 * (100vw - 1366px) / 554);
   }
-  .portfolio__products .portfolio_products_block .blog_products_block_list {
+  .blogs__products .blogs_products_block .blogs_products_block_title {
+    font-size: calc(22px + 8 * (100vw - 1366px) / 554);
+  }
+  .blogs__products .blogs_products_block .blogs_products_block_pic {
+    margin-bottom: calc(17px + 7 * (100vw - 1366px) / 554);
+  }
+  .blogs__products .blogs_products_block .blogs_products_block_list {
+    margin-bottom: calc(17px + 7 * (100vw - 1366px) / 554);
+  }
+  .blogs__topics .blogs_topics_block .blogs_topics_block_title {
+    font-size: calc(22px + 8 * (100vw - 1366px) / 554);
+  }
+  .blogs__topics .blogs_topics_block .blogs_topics_block_pic {
+    margin-bottom: calc(17px + 7 * (100vw - 1366px) / 554);
+  }
+  .blogs__topics .blogs_topics_block .blogs_topics_block_list {
     margin-bottom: calc(17px + 7 * (100vw - 1366px) / 554);
   }
   .form {
@@ -136,7 +152,7 @@
     font-size: calc(12px + 6 * (100vw - 1366px) / 554);
   }
   .form__block .form_block_text .form_block_gif {
-    margin-left: calc(8px + 21 * (100vw - 1366px) / 554);
+    margin-left: calc(12px + 21 * (100vw - 1366px) / 554);
   }
   .form__block .form_block_text .form_block_gif img {
     width: calc(25px + 11 * (100vw - 1366px) / 554 + 14 * (100vw - 1366px) / 554);

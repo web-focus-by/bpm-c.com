@@ -1,5 +1,4 @@
 import * as React from "react"
-import { useState } from "react"
 import { Link, graphql } from "gatsby"
 import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 import Layout from "../components/layout"
@@ -54,6 +53,9 @@ const Contacts = ({ location, data }) => {
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAxxYoKa8lhMgXSMyUxFxcLUfPsjkb17c&callback=initMap"></script>
       <Layout>
         <div className="container">
+          <div className="breadcrumb-container">
+            <Breadcrumb location={ location } crumbSeparator="/" crumbLabel="Contacts" />
+          </div>
           <div className="hero">
             <div className="hero__title title_62">
               Contacts<span className="phone_icon"></span>

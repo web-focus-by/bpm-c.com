@@ -12,7 +12,7 @@ import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
-const ContentPost = ({ content }) => {
+const ContentPost = ({ content, data }) => {
   let url = '';
   if (typeof window !== 'undefined') {
     url =  new URL(window.location.href);
@@ -28,21 +28,32 @@ const ContentPost = ({ content }) => {
   
   return (
     <div className="container">
-      <img src={ content.featuredImage.node.mediaItemUrl }></img>
-      <div className="portfolio margin_bottom_for_portfolio_240">
-        <br />
-        <div className="portfolio__products">
-          <div className="portfolio_products_block">
-            <div className="portfolio_products_block_pic">
-              { content.content }
-            </div>
-            <div className="portfolio_products_block_list hash">
-              <ul className="hash__list">
-                { items }
-              </ul>
-            </div>
+      <div className="post_title">
+        <div className="post_title__title title_62">
+          { content.title }
+        </div>
+      </div>
+      <div className="content_post">
+        <div className="content_post__block">
+          <div className="content_title">
+            Content
+          </div>
+          <div className="content_item">
+            Content
+          </div>
+          <div className="content_item">
+            Content
+          </div>
+          <div className="content_item">
+            Content
+          </div>
+          <div className="content_item">
+            Content
           </div>
         </div>
+      </div>
+      <div className="content_text margin_bottom_60">
+        { content.content }
       </div>
     </div>
   )
