@@ -12,7 +12,7 @@ import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
-const ContentPost = ({ content }) => {
+const ContentPost = ({ content, data }) => {
   let url = '';
   if (typeof window !== 'undefined') {
     url =  new URL(window.location.href);

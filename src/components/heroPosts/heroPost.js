@@ -21,7 +21,6 @@ const HeroPost = ({ location, crumbLabel, title }) => {
       url = new URL(location.href);
     }
   }
-  console.log("Post already loaded.")
   const isPartiallyActive = ({ isPartiallyCurrent, isCurrent }) => {
     return isPartiallyCurrent && isCurrent
       ? { className: 'breadcrumb__link breadcrumb__link__active' }
