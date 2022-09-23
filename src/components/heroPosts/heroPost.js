@@ -42,7 +42,7 @@ const HeroPost = ({ location, crumbLabel, photo, info}) => {
   return (
     <div className="container">
       <div className="breadcrumb-container">
-        {/*<Breadcrumbs breadcrumbs={post.seo.breadcrumbs} />*/}
+        <Breadcrumbs breadcrumbs={ location } />
       </div>
       <div className="photo">
         <div className="photo_block">
