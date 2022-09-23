@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import HeroPost from "../components/heroPosts/heroPost"
 import ContentPost from "../components/contentPost/contentPost"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
+import Blog from "../components/blog"
 
 const PostsPage = ({ location, pageContext, data }) => {
   return (
@@ -11,6 +12,7 @@ const PostsPage = ({ location, pageContext, data }) => {
       <Layout>
         <HeroPost location={ location } crumbLabel="Post" photo={ pageContext.featuredImage.node.mediaItemUrl } info={ pageContext }></HeroPost>
         <ContentPost content={ pageContext } data={ data } ></ContentPost>
+        <Blog titlePage="Other news"></Blog>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
     </>

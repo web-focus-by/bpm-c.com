@@ -279,6 +279,7 @@ body {
 }
 .photo .photo_description .photo_date {
   width: 15%;
+  text-align: end;
 }
 
 .post_title {
@@ -927,6 +928,102 @@ body {
   font-size: 18px;
   line-height: 150%;
   color: #5C5C5C;
+}
+
+.black_bg_comment {
+  background: #1A1B1F;
+  border-radius: 40px;
+  padding-top: 180px;
+  padding-bottom: 100px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.black_bg_comment .comment_block {
+  padding-bottom: -80px !important;
+}
+.black_bg_comment .comment_block__title {
+  color: #fff !important;
+  margin-left: 100px;
+  margin-top: -80px;
+}
+.black_bg_comment .comment_block__subtitle {
+  color: #fff;
+  margin-top: -40px;
+  margin-bottom: 74px;
+  margin-left: 100px;
+  max-width: 1000px;
+}
+.black_bg_comment .comment_block__social_media {
+  margin-left: 100px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+}
+.black_bg_comment .comment_block__social_media .social_media_label {
+  width: 100%;
+  font-family: "Acrom";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #fff;
+}
+.black_bg_comment .comment_block__social_media .social_media_label .margin_right_40 {
+  margin-right: 40px;
+}
+
+.other_comments {
+  width: 80%;
+  margin-top: 120px;
+  margin-bottom: 20px;
+}
+.other_comments__title {
+  color: #1A1B1F !important;
+}
+.other_comments__comments {
+  color: #1A1B1F;
+  margin-top: 77px;
+  display: flex;
+  flex-direction: column;
+}
+.other_comments__comments .comment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+.other_comments__comments .comment .comment_title {
+  display: flex;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.other_comments__comments .comment .comment_title .comment_title_left {
+  width: 50%;
+  font-family: "Acrom";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #1A1B1F;
+}
+.other_comments__comments .comment .comment_title .comment_title_right {
+  width: 50%;
+  text-align: end;
+  font-family: "Acrom";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #1A1B1F;
+}
+.other_comments__comments .comment .comment_text {
+  width: 100%;
+  color: #5C5C5C;
+  font-family: "Acrom";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
 }
 
 .black_bg {

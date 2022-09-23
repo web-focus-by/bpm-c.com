@@ -265,6 +265,13 @@
   background: url(../../images/facebook_hover.svg) no-repeat;
 }
 
+.facebook_white {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url(../../images/fb_white.svg) no-repeat;
+}
+
 .vk {
   display: inline-block;
   width: 36px;
@@ -275,6 +282,13 @@
   background: url(../../images/vk_hover.svg) no-repeat;
 }
 
+.vk_white {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url(../../images/vk_white.svg) no-repeat;
+}
+
 .link {
   display: inline-block;
   width: 36px;
@@ -283,6 +297,13 @@
 }
 .link:hover {
   background: url(../../images/link_hover.svg) no-repeat;
+}
+
+.link_white {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url(../../images/link_white.svg) no-repeat;
 }
 
 .behance {
