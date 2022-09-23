@@ -1,0 +1,21 @@
+.wrapper {
+  max-width: 430px;
+}
+.listItem {
+  
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6a7380;
+}
+.listItem:last-child {
+  color: #fa5c45;
+}
+
+@media (max-width: 1024px) {
+  .listItem {
+    font-size: 12px;
+  }
+}

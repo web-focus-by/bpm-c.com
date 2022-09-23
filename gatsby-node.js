@@ -64,6 +64,18 @@ exports.createPages = async function ({ actions, graphql }) {
               mediaItemUrl
             }
           }
+          comments {
+            nodes {
+              id
+              date
+              content
+              author {
+                node {
+                  name
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -120,6 +132,7 @@ exports.createPages = async function ({ actions, graphql }) {
         content: post.node.content,
         tags: post.node.tags,
         featuredImage: post.node.featuredImage,
+        comments: post.node.comments,
         date: post.node.date
       }
     })
