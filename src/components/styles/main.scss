@@ -293,6 +293,96 @@ body {
     }
 }
 
+.photo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
+    width: 80%;    
+    .photo_block {
+        display: block;
+        width: 100%;
+        height: 360px;
+        border-radius: 25px;
+    }
+    .photo_description {
+        margin-top: 35px;
+        width: 100%;
+        display: flex;
+        .photo_tags {
+            width: 60%;
+            ul {
+                li {
+                    margin-right: 20px;
+                }
+            }
+        }
+        .photo_duration {
+            font-family: 'Acrom';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            width: 25%;
+        }
+        .photo_date {
+            width: 15%;
+            text-align: end;
+        }
+    }
+}
+
+.post_title {
+    margin-top: 72px;
+    &__title {
+        line-height: 100%;
+        max-width: 65%;
+        font-size: 80px;
+        margin-bottom: 20px;
+        color: #1A1B1F;
+        font-weight: 500;
+    }
+}
+
+.content_post {
+    width: 80%;
+    background: #E1DAF4;
+    border-radius: 25px;
+    margin-bottom: 60px;
+    &__block {
+        padding-top: 40px;
+        padding-bottom: 48px;
+        .content_title{
+            margin-left: 40px;
+            padding-bottom: 8px;
+            font-family: 'Acrom';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 115%;
+            color: #1A1B1F;
+        }
+        .content_item {
+            margin-left: 40px;
+            padding-top: 24px;
+            font-family: 'Acrom';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 110%;
+            color: #1A1B1F;
+            :hover {
+                cursor: pointer;
+                color: #935CFF;
+            }
+        }
+    }
+    
+}
+
+.content_text {
+    width: 80%;
+}
+
 .hero {
     margin-top: 188px;
 
@@ -998,7 +1088,101 @@ body {
     }
 
 }
+.black_bg_comment {
+    background: #1A1B1F;
+    border-radius: 40px;
+    padding-top: 180px;
+    padding-bottom: 100px;
+    padding-left: 0px;
+    padding-right: 0px;
+    .comment_block {
+        padding-bottom: -80px!important;
+        &__title {
+            color: #fff !important;
+            margin-left: 100px;
+            margin-top: -80px;
+        }
+        &__subtitle {
+            color: #fff;
+            margin-top: -40px;
+            margin-bottom: 74px;
+            margin-left: 100px;
+            max-width: 1000px;
+        }
+        &__social_media {
+            margin-left: 100px;
+            margin-top: -40px;
+            display: flex;
+            justify-content: space-between;
+            gap: 5%;
+            .social_media_label {
+                width: 100%;
+                font-family: 'Acrom';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 100%;
+                color: #fff;
+                .margin_right_40 {
+                    margin-right: 40px;
+                }
+            }
+        }
+    }
+}
 
+.other_comments {
+    width: 80%;
+    margin-top: 120px;
+    margin-bottom: 20px;
+    &__title{
+        color: #1A1B1F !important;
+    }
+    &__comments {
+        color: #1A1B1F;
+        margin-top: 77px;
+        display: flex;
+        flex-direction: column;
+        .comment {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 100px;
+            .comment_title {
+                display: flex;
+                width: 100%;
+                margin-bottom: 12px;
+                .comment_title_left {
+                    width: 50%;
+                    font-family: 'Acrom';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 150%;
+                    color: #1A1B1F;
+                }
+                .comment_title_right {
+                    width: 50%;
+                    text-align: end;
+                    font-family: 'Acrom';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 150%;
+                    color: #1A1B1F;
+                }
+            }
+            .comment_text {
+                width: 100%;
+                color: #5C5C5C;
+                font-family: 'Acrom';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+            }
+        }
+    }
+}
 
 .black_bg {
     background: #1A1B1F;

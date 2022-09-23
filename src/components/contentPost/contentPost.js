@@ -12,34 +12,135 @@ import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
-const ContentPost = ({ content }) => {
+const ContentPost = ({ content, data }) => {
   let url = '';
   if (typeof window !== 'undefined') {
     url =  new URL(window.location.href);
   }
-  const items = content.tags.nodes.map((post, index) => {
-    let valueTag = '#' + post.slug;
+  const socialMaediaLinks = [
+    { link: "#", className: "facebook_white margin_right_40", name: "facebook_white" },
+    { link: "#", className: "vk_white margin_right_40", name: "vk_white" },
+    { link: "#", className: "link_white margin_right_40", name: "link_white" },
+  ];
+  const socialMedia = socialMaediaLinks.map((val, index)=>{
     return (
-      <li key={ index } className="hash_list_block">
-        <Link to={ url.origin + "/tag/" + post.slug + "/" }>{ valueTag }</Link>
-      </li>
+      <Link to={ val.link }>
+        <span className={ val.className }></span>
+      </Link>
     )
-  })
+  });
   
   return (
     <div className="container">
-      <img src={ content.featuredImage.node.mediaItemUrl }></img>
-      <div className="portfolio margin_bottom_for_portfolio_240">
-        <br />
-        <div className="portfolio__products">
-          <div className="portfolio_products_block">
-            <div className="portfolio_products_block_pic">
-              { content.content }
+      <div className="post_title">
+        <div className="post_title__title title_62">
+          { content.title }
+        </div>
+      </div>
+      <div className="content_post">
+        <div className="content_post__block">
+          <div className="content_title">
+            Content
+          </div>
+          <div className="content_item">
+            Content
+          </div>
+          <div className="content_item">
+            Content
+          </div>
+          <div className="content_item">
+            Content
+          </div>
+          <div className="content_item">
+            Content
+          </div>
+        </div>
+      </div>
+      <div className="content_text margin_bottom_60">
+        { content.content }
+      </div>
+      <div id="margin_240_black" className="black_bg_comment">
+        <div className="comment_block">
+          <div className="comment_block__title title_62">
+            Add comment
+          </div>
+          <div className="comment_block__subtitle font_18">
+            Choose a social network to leave a comment
+          </div>
+          <div className="comment_block__social_media">
+            <div className="social_media_label">
+              { socialMedia }
             </div>
-            <div className="portfolio_products_block_list hash">
-              <ul className="hash__list">
-                { items }
-              </ul>
+          </div>
+        </div>
+      </div>
+      <div className="other_comments">
+        <div className="other_comments__title title_62">
+          Other comments
+          <div className="other_comments__comments">
+            <div className="comment">
+              <div className="comment_title">
+                <div className="comment_title_left">
+                  Website
+                </div>
+                <div className="comment_title_right">
+                  21.09.2022
+                </div>
+              </div>
+              <div className="comment_text">
+                Websites with attractive designs at «BPM Cloud» guarantees effective representation 
+                on the network. It attracts new customers, quickly and easily distributes, demonstrates 
+                and publishes necessary business information. Personalized design increases prestige of 
+                company, credibility, recognition, demonstrates professionalism.
+              </div>
+            </div>
+            <div className="comment">
+              <div className="comment_title">
+                <div className="comment_title_left">
+                  Website
+                </div>
+                <div className="comment_title_right">
+                  21.09.2022
+                </div>
+              </div>
+              <div className="comment_text">
+                Websites with attractive designs at «BPM Cloud» guarantees effective representation 
+                on the network. It attracts new customers, quickly and easily distributes, demonstrates 
+                and publishes necessary business information. Personalized design increases prestige of 
+                company, credibility, recognition, demonstrates professionalism.
+              </div>
+            </div>
+            <div className="comment">
+              <div className="comment_title">
+                <div className="comment_title_left">
+                  Website
+                </div>
+                <div className="comment_title_right">
+                  21.09.2022
+                </div>
+              </div>
+              <div className="comment_text">
+                Websites with attractive designs at «BPM Cloud» guarantees effective representation 
+                on the network. It attracts new customers, quickly and easily distributes, demonstrates 
+                and publishes necessary business information. Personalized design increases prestige of 
+                company, credibility, recognition, demonstrates professionalism.
+              </div>
+            </div>
+            <div className="comment">
+              <div className="comment_title">
+                <div className="comment_title_left">
+                  Website
+                </div>
+                <div className="comment_title_right">
+                  21.09.2022
+                </div>
+              </div>
+              <div className="comment_text">
+                Websites with attractive designs at «BPM Cloud» guarantees effective representation 
+                on the network. It attracts new customers, quickly and easily distributes, demonstrates 
+                and publishes necessary business information. Personalized design increases prestige of 
+                company, credibility, recognition, demonstrates professionalism.
+              </div>
             </div>
           </div>
         </div>

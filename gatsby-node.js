@@ -52,6 +52,7 @@ exports.createPages = async function ({ actions, graphql }) {
           title
           uri
           content
+          date
           tags {
             nodes {
               slug
@@ -118,7 +119,8 @@ exports.createPages = async function ({ actions, graphql }) {
         uri: post.node.uri,
         content: post.node.content,
         tags: post.node.tags,
-        featuredImage: post.node.featuredImage
+        featuredImage: post.node.featuredImage,
+        date: post.node.date
       }
     })
   })
