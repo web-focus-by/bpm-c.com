@@ -11,7 +11,7 @@ const PostsPage = ({ location, pageContext, data }) => {
     <>
       <Layout>
         <HeroPost location={ location } crumbLabel="Post" photo={ pageContext.featuredImage.node.mediaItemUrl } info={ pageContext }></HeroPost>
-        <ContentPost content={ pageContext } data={ data } ></ContentPost>
+        <ContentPost content={ pageContext } data={ data }></ContentPost>
         <Blog titlePage="Other news"></Blog>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>

@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import Moment from 'moment';
 import "../../components/styles/main.css"
 import "../../components/styles/modules.css"
 import "../../components/styles/icons.css"
@@ -29,6 +30,30 @@ const ContentPost = ({ content, data }) => {
       </Link>
     )
   });
+
+  const comments = (content.comments && content.comments.nodes && (content.comments.nodes.length > 0)) ?
+  content.comments.nodes.map((comment, index) => {
+    return (
+      <div key={ comment.id } className="comment">
+        <div key={ index } className="comment_title">
+          <div className="comment_title_left">
+            { comment.author.node.name }
+          </div>
+          <div className="comment_title_right">
+            { Moment(comment.date).format("DD.MM.YYYY") }
+          </div>
+        </div>
+        <div className="comment_text">
+          { comment.content }
+        </div>
+      </div>
+    )
+  }) :
+  (<div className="comment">
+    <div className="comment_text">
+      { "No comments for this article..." }
+    </div>
+  </div>);
   
   return (
     <div className="container">
@@ -78,58 +103,11 @@ const ContentPost = ({ content, data }) => {
         <div className="other_comments__title title_62">
           Other comments
           <div className="other_comments__comments">
+            { comments }
             <div className="comment">
               <div className="comment_title">
                 <div className="comment_title_left">
-                  Website
-                </div>
-                <div className="comment_title_right">
-                  21.09.2022
-                </div>
-              </div>
-              <div className="comment_text">
-                Websites with attractive designs at «BPM Cloud» guarantees effective representation 
-                on the network. It attracts new customers, quickly and easily distributes, demonstrates 
-                and publishes necessary business information. Personalized design increases prestige of 
-                company, credibility, recognition, demonstrates professionalism.
-              </div>
-            </div>
-            <div className="comment">
-              <div className="comment_title">
-                <div className="comment_title_left">
-                  Website
-                </div>
-                <div className="comment_title_right">
-                  21.09.2022
-                </div>
-              </div>
-              <div className="comment_text">
-                Websites with attractive designs at «BPM Cloud» guarantees effective representation 
-                on the network. It attracts new customers, quickly and easily distributes, demonstrates 
-                and publishes necessary business information. Personalized design increases prestige of 
-                company, credibility, recognition, demonstrates professionalism.
-              </div>
-            </div>
-            <div className="comment">
-              <div className="comment_title">
-                <div className="comment_title_left">
-                  Website
-                </div>
-                <div className="comment_title_right">
-                  21.09.2022
-                </div>
-              </div>
-              <div className="comment_text">
-                Websites with attractive designs at «BPM Cloud» guarantees effective representation 
-                on the network. It attracts new customers, quickly and easily distributes, demonstrates 
-                and publishes necessary business information. Personalized design increases prestige of 
-                company, credibility, recognition, demonstrates professionalism.
-              </div>
-            </div>
-            <div className="comment">
-              <div className="comment_title">
-                <div className="comment_title_left">
-                  Website
+                  How will look comment
                 </div>
                 <div className="comment_title_right">
                   21.09.2022

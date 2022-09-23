@@ -2,7 +2,7 @@ import * as React from "react"
 import { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Moment from 'moment';
 import "../../components/styles/main.css"
 import "../../components/styles/icons.css"
@@ -26,11 +26,6 @@ const HeroPost = ({ location, crumbLabel, photo, info}) => {
       url = new URL(location.href);
     }
   }
-  const isPartiallyActive = ({ isPartiallyCurrent, isCurrent }) => {
-    return isPartiallyCurrent && isCurrent
-      ? { className: 'breadcrumb__link breadcrumb__link__active' }
-      : {}
-  }
   const items = info.tags.nodes.map((post, index) => {
     let valueTag = '#' + post.slug;
     return (
@@ -47,7 +42,7 @@ const HeroPost = ({ location, crumbLabel, photo, info}) => {
   return (
     <div className="container">
       <div className="breadcrumb-container">
-        <Breadcrumb location={ location } crumbSeparator="/" crumbLabel={ crumbLabel } getProps={ isPartiallyActive } />
+        {/*<Breadcrumbs breadcrumbs={post.seo.breadcrumbs} />*/}
       </div>
       <div className="photo">
         <div className="photo_block">
