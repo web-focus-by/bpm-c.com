@@ -49,11 +49,13 @@ const ContentPost = ({ content, data }) => {
       </div>
     )
   }) :
-  (<div className="comment">
-    <div className="comment_text">
-      { "No comments for this article..." }
+  (
+    <div className="comment">
+      <div className="comment_text">
+        { "No comments for this article..." }
+      </div>
     </div>
-  </div>);
+  );
   
   return (
     <div className="container">
