@@ -19,7 +19,7 @@ const News = ({ location }) => {
           }
         }
       }
-      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["news"]}}}}}) {
+      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["blog","news"]}}}}}) {
         edges {
           node {
             id
