@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Breadcrumbs from "../components/breadcrumbs/breadcrumbs"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/modules.css"
@@ -49,8 +50,8 @@ const Contacts = ({ location }) => {
 
   return (
     <>
-      
       <Layout>
+        <Seo title="Contacts" />
         <div className="container">
           <div className="breadcrumb-container">
             <Breadcrumbs breadcrumbs={ location } />
