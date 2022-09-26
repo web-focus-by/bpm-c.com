@@ -54,8 +54,8 @@ const News = ({ location }) => {
   return (
     <>
       <Layout>
-        <Seo title="news" />
-        <HeroNews location={ location } title="News" ></HeroNews>
+        <Seo title="blog" />
+        <HeroNews location={ location } title="Blog" ></HeroNews>
         <ListOfNews posts={ allPosts } tags={ allTags }></ListOfNews>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
