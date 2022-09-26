@@ -50,7 +50,7 @@ const Contacts = ({ location, data }) => {
 
   return (
     <>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAxxYoKa8lhMgXSMyUxFxcLUfPsjkb17c&callback=initMap"></script>
+      
       <Layout>
         <div className="container">
           <div className="breadcrumb-container">
@@ -155,9 +155,7 @@ const Contacts = ({ location, data }) => {
               </div>
             </div>
           </div>
-          <div className="map_of_location margin_bottom_240">
-            <GoogleMap />
-          </div>
+          
         </div>
       </Layout>
     </>
