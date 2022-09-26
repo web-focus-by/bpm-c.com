@@ -1,6 +1,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 import Hero from "../components/hero"
 import ITCompany from "../components/it_company"
 import Portfolio from "../components/portfolio"
@@ -49,6 +50,7 @@ const IndexPage = ({ location }) => {
   return (
     <>
       <Layout>
+        <Seo title="Index" />
         <Hero location={ location }></Hero>
         <ThanksModal></ThanksModal>
         <ITCompany></ITCompany>

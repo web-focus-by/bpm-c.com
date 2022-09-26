@@ -1,6 +1,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 import HeroPortfolio from "../components/heroPortfolio/heroPortfolio"
 import ListOfPortfolio from "../components/listOfPortfolio/listOfPortfolio"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
@@ -47,6 +48,7 @@ const Portfolios = ({ location }) => {
   return (
     <>
       <Layout>
+        <Seo title="Portfolios" />
         <HeroPortfolio location={ location } tags={ allTags } selectedTag={ null } title="Portfolio" ></HeroPortfolio>
         <ListOfPortfolio posts={ allPosts }></ListOfPortfolio>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>

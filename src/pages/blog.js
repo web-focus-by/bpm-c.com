@@ -1,6 +1,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 import HeroNews from "../components/heroNews/heroNews"
 import ListOfNews from "../components/listOfNews/listOfNews"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
@@ -53,6 +54,7 @@ const Blog = ({ location }) => {
   return (
     <>
       <Layout>
+        <Seo title="Blog" />
         <HeroNews location={ location } title="Blog" ></HeroNews>
         <ListOfNews posts={ allPosts } tags={ allTags }></ListOfNews>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
