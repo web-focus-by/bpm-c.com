@@ -6,12 +6,7 @@ import HeroPortfolio from "../components/heroPortfolio/heroPortfolio"
 import ListOfPortfolio from "../components/listOfPortfolio/listOfPortfolio"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
 
-const TagsPage = ({pageContext, location, data}) => {
-  let url = '';
-  if (typeof window !== 'undefined') {
-    url =  new URL(window.location.href).pathname.slice(1,-1).split("/")[1];
-  }
-  
+const TagsPage = ({pageContext, location, data}) => {  
   return (
     <Layout>
       <HeroPortfolio location={ location } tags={data.allWpTag.edges} selectedTag={ pageContext.uri } title="Posts by the tag"></HeroPortfolio>

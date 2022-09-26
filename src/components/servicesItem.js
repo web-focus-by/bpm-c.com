@@ -1,6 +1,5 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import Service from "../components/services/service"
 
 const ServicesItem = ({ siteTitle }) => {

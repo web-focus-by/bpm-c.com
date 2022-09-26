@@ -7,10 +7,6 @@ import ListOfPortfolio from "../components/listOfPortfolio/listOfPortfolio"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
 
 const CategoryTemplate = ({pageContext, location, data}) => {
-  let url = '';
-  if (typeof window !== 'undefined') {
-    url =  new URL(window.location.href).pathname.slice(1,-1).split("/")[1];
-  }
   
   return (
     <Layout>
