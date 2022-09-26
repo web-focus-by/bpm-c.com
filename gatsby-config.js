@@ -7,9 +7,6 @@ module.exports = {
   },
   pathPrefix: "/",
   plugins: [
-    {
-      resolve: `gatsby-plugin-breadcrumb`,
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
