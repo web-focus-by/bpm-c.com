@@ -6,9 +6,9 @@ import HeroNews from "../components/heroNews/heroNews"
 import ListOfNews from "../components/listOfNews/listOfNews"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
 
-const Blog = ({ location }) => {
+const News = ({ location }) => {
   const PostsAndTags = useStaticQuery(graphql`
-    query SiteNewsQuery {
+    query getCategoryByNewsQuery {
       allWpTag {
         edges {
           node {
@@ -19,7 +19,7 @@ const Blog = ({ location }) => {
           }
         }
       }
-      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["blog", "news"]}}}}}) {
+      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["news"]}}}}}) {
         edges {
           node {
             id
@@ -54,8 +54,8 @@ const Blog = ({ location }) => {
   return (
     <>
       <Layout>
-        <Seo title="Blog" />
-        <HeroNews location={ location } title="Blog" ></HeroNews>
+        <Seo title="news" />
+        <HeroNews location={ location } title="News" ></HeroNews>
         <ListOfNews posts={ allPosts } tags={ allTags }></ListOfNews>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
@@ -63,4 +63,4 @@ const Blog = ({ location }) => {
   );
 };
 
-export default Blog
+export default News

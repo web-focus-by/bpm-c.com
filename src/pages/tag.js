@@ -19,7 +19,7 @@ const Tag = ({ location }) => {
             }
           }
         }
-        allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["blog", "portfolios"]}}}}}) {
+        allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["blog","news","portfolios"]}}}}}) {
           edges {
             node {
               id
