@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import { Breadcrumb } from "gatsby-plugin-breadcrumb"
+import Breadcrumbs from "../components/breadcrumbs/breadcrumbs"
 import Layout from "../components/layout"
 import GoogleMap from "../components/googleMap/googleMap"
 import "../components/styles/main.css"
@@ -54,7 +54,7 @@ const Contacts = ({ location, data }) => {
       <Layout>
         <div className="container">
           <div className="breadcrumb-container">
-            <Breadcrumb location={ location } crumbSeparator="/" crumbLabel="Contacts" />
+            <Breadcrumbs breadcrumbs={ location } />
           </div>
           <div className="hero">
             <div className="hero__title title_62">

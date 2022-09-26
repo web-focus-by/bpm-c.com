@@ -33,7 +33,7 @@ const Servicestemplatepage = ({pageContext, location, data}) => {
   
   return (
     <Layout>
-      <HeroWebSiteDesign content={ contentPage } location={ location } crumbLabel={ pageContext.title }></HeroWebSiteDesign>
+      <HeroWebSiteDesign content={ contentPage } location={ location }></HeroWebSiteDesign>
       <ServiceITOutsourcing title={ pageContext.title } themes={ themes }></ServiceITOutsourcing>
       <WebSiteDesignReason></WebSiteDesignReason>
       <PortfolioWebSiteDesign posts={ posts } titlePage={"Portfolio"}></PortfolioWebSiteDesign>
@@ -57,7 +57,7 @@ export default Servicestemplatepage
 
 export const query = graphql`
     query siteGetPostsDataQuery ($slug: String) {
-      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "cases"}}}}}) {
+      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "portfolios"}}}}}) {
         edges {
           node {
             id
