@@ -14,7 +14,7 @@ const CategoryTemplate = ({pageContext, location, data}) => {
   
   return (
     <Layout>
-      <HeroPortfolio location={ location } crumbLabel="Posts by the category" tags={data.allWpTag.edges} selectedTag={ pageContext.uri } title="Posts by the category" ></HeroPortfolio>
+      <HeroPortfolio location={ location } tags={data.allWpTag.edges} selectedTag={ pageContext.uri } title="Posts by the category" ></HeroPortfolio>
       <ListOfPortfolio posts={ data.allWpPost.edges }></ListOfPortfolio>
       <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       <Seo title={ pageContext.name } />

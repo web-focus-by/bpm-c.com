@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import "../../components/styles/main.css"
 import "../../components/styles/icons.css"
 import "../../components/styles/modules.css"
@@ -14,7 +14,7 @@ import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
-const HeroPortfolio = ({ location, crumbLabel, tags, selectedTag, title }) => {
+const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
   const [longList, setLongList] = useState(false)
   let url = '';
   if (typeof window !== 'undefined') {
@@ -23,12 +23,6 @@ const HeroPortfolio = ({ location, crumbLabel, tags, selectedTag, title }) => {
     if (location && location.href) {
       url = new URL(location.href);
     }
-  }
-
-  const isPartiallyActive = ({ isPartiallyCurrent, isCurrent }) => {
-    return isPartiallyCurrent && isCurrent
-      ? { className: 'breadcrumb__link breadcrumb__link__active' }
-      : {}
   }
   const result = tags.map((tag, index) => {
     if (!longList) {
@@ -68,7 +62,7 @@ const HeroPortfolio = ({ location, crumbLabel, tags, selectedTag, title }) => {
   return (
     <div className="container">
       <div className="breadcrumb-container">
-        <Breadcrumb location={ location } crumbSeparator="/" crumbLabel={ crumbLabel } getProps={ isPartiallyActive } />
+        <Breadcrumbs breadcrumbs={ location } />
       </div>
       <div className="hero">
         <div className="hero__title title_80">

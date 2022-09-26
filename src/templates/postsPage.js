@@ -10,7 +10,7 @@ const PostsPage = ({ location, pageContext, data }) => {
   return (
     <>
       <Layout>
-        <HeroPost location={ location } crumbLabel="Post" photo={ pageContext.featuredImage.node.mediaItemUrl } info={ pageContext }></HeroPost>
+        <HeroPost location={ location } photo={ pageContext.featuredImage.node.mediaItemUrl } info={ pageContext }></HeroPost>
         <ContentPost content={ pageContext } data={ data }></ContentPost>
         <Blog titlePage="Other news"></Blog>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>

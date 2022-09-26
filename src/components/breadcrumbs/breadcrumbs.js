@@ -11,11 +11,11 @@ const Breadcrumbs = ({ breadcrumbs }) => {
   const ourPath = breadcrumbs.href.split("/").slice(1,-1).slice(1);
   if (pathname) {
     breadcrumbItems = ourPath.map((item, index) => {
-      path = (index !== 0) ? path + "/" + item : '';
-      let link = ( host === item ) ? domain : domain + path;
+      path = (index !== 0) ? path + item + "/": '';
+      let link = ( host === item ) ? domain : domain + "/" + path;
       return (
         <span key={index}>
-          <Link to={ link }>
+          <Link to={ `${link}` }>
             { item === breadcrumbs.host ? "Main page" : item }
             { index === ourPath.length - 1 ? "" : " / " }
           </Link>

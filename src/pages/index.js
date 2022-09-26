@@ -21,7 +21,7 @@ import ThanksModal from "../components/thanks_modal"
 const IndexPage = ({ location }) => {
   const postsAndTags = useStaticQuery(graphql`
     query GetPostQuery {
-      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "cases"}}}}}) {
+      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "portfolios"}}}}}) {
         edges {
           node {
             id
@@ -49,7 +49,7 @@ const IndexPage = ({ location }) => {
   return (
     <>
       <Layout>
-        <Hero location={ location } crumbLabel="Main page"></Hero>
+        <Hero location={ location }></Hero>
         <ThanksModal></ThanksModal>
         <ITCompany></ITCompany>
         <Portfolio posts={ allPosts } ></Portfolio>

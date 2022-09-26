@@ -18,7 +18,7 @@ const Portfolios = ({ location }) => {
           }
         }
       }
-      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "cases"}}}}})  {
+      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "portfolios"}}}}})  {
         edges {
           node {
             id
@@ -47,7 +47,7 @@ const Portfolios = ({ location }) => {
   return (
     <>
       <Layout>
-        <HeroPortfolio location={ location } crumbLabel="Portfolio" tags={ allTags } selectedTag={ null } title="Portfolio" ></HeroPortfolio>
+        <HeroPortfolio location={ location } tags={ allTags } selectedTag={ null } title="Portfolio" ></HeroPortfolio>
         <ListOfPortfolio posts={ allPosts }></ListOfPortfolio>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>

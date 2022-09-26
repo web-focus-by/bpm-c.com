@@ -16,7 +16,7 @@ import "../components/styles/media_375.css"
 const Blog = ({ titlePage }) => {
   const data = useStaticQuery(graphql`
     query siteGetNewsQuery {
-      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["news", "articles"]}}}}}) {
+      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["blog"]}}}}}) {
         edges {
           node {
             id

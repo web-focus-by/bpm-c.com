@@ -18,7 +18,7 @@ const Blog = ({ location }) => {
           }
         }
       }
-      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["news", "articles"]}}}}}) {
+      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["blog"]}}}}}) {
         edges {
           node {
             id
@@ -52,7 +52,7 @@ const Blog = ({ location }) => {
   return (
     <>
       <Layout>
-        <HeroNews location={ location } crumbLabel="Blog"  title="Blog" ></HeroNews>
+        <HeroNews location={ location } title="Blog" ></HeroNews>
         <ListOfNews posts={ allPosts } tags={ allTags }></ListOfNews>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
