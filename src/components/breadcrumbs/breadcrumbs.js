@@ -10,9 +10,7 @@ const Breadcrumbs = ({ breadcrumbs }) => {
   const ourPath = breadcrumbs && breadcrumbs.href ? breadcrumbs.href.split("/").slice(1,-1).slice(1) : '';
   if (pathname) {
     breadcrumbItems = ourPath ? ourPath.map((item, index) => {
-      if (item === "news") {
-        return item = "blog";
-      }
+      if (item === "news") { item = "blog"; }
       path = (index !== 0) ? path + item + "/": '';
       let link = ( host === item ) ? domain : domain + "/" + path;
       return (
