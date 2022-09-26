@@ -39,6 +39,7 @@ const Blog = ({ location }) => {
             categories {
               nodes {
                 slug
+                name
               }
             }
           }
