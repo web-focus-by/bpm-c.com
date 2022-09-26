@@ -52,13 +52,6 @@ module.exports = {
         icon: `src/images/logoBpm.svg`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `@ccalamos/gatsby-source-googlemaps-static`,
-      options: {
-        key: `AIzaSyDAxxYoKa8lhMgXSMyUxFxcLUfPsjkb17c`,
-        center: `New York, NY`,
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

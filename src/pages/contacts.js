@@ -2,7 +2,6 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Breadcrumbs from "../components/breadcrumbs/breadcrumbs"
 import Layout from "../components/layout"
-import GoogleMap from "../components/googleMap/googleMap"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/modules.css"
@@ -14,7 +13,7 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
-const Contacts = ({ location, data }) => {
+const Contacts = ({ location }) => {
   let url = '';
   if (typeof window !== 'undefined') {
     url = new URL(window.location.href);
@@ -163,15 +162,3 @@ const Contacts = ({ location, data }) => {
 }
 
 export default Contacts
-
-export const map = graphql`
-  query StaticMapQuery {
-    staticMap {
-      mapUrl
-      center
-      childFile {
-        publicURL
-      }
-    }
-  }
-`
