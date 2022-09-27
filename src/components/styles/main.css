@@ -554,7 +554,7 @@ body {
   width: 230%;
 }
 .contacts__contacts_form .contact_form__block .contact_form_block_buttons_title {
-  width: 50%;
+  width: 100%;
   font-family: "Acrom";
   font-style: normal;
   font-weight: 400;
