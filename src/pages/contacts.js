@@ -15,14 +15,6 @@ import "../components/styles/media_375.css"
 import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
 const Contacts = ({ location }) => {
-  let url = '';
-  if (typeof window !== 'undefined') {
-    url = new URL(window.location.href);
-  } else {
-    if (location && location.href) {
-      url = new URL(location.href);
-    }
-  }
   const socialMaediaLinks = [
     { link: "#", name: "insta" },
     { link: "#", name: "facebook" },

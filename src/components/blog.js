@@ -44,10 +44,6 @@ const Blog = ({ titlePage }) => {
         }
       }
     }`)
-  let urlPath = '';
-  if (typeof window !== 'undefined') {
-    urlPath = new URL(window.location.href).pathname;
-  }
   const allNews = data ? data.allWpPost.edges : [];
   const tags = (item) => {
     const results = item.node.tags.nodes.reduce((res, tag) => {
