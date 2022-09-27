@@ -12,10 +12,6 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const Portfolio = ({ posts }) => {
-  let url = '';
-  if (typeof window !== 'undefined') {
-    url =  new URL(window.location.href);
-  }
   const items = posts.map((post, index) => {
     if (index <= 5) {
       let tags = [];
@@ -24,7 +20,7 @@ const Portfolio = ({ posts }) => {
           let valueTag = '#' + tag.slug;
           return (
             <li key={ post.node.id.toString() + valueTag.toString() } className="hash_list_block">
-              <Link to={ url.origin + "/tag/" + tag.slug + "/"  }>{ valueTag }</Link>
+              <Link to={ "/tag/" + tag.slug + "/"  }>{ valueTag }</Link>
             </li>
           )
         })
@@ -53,7 +49,7 @@ const Portfolio = ({ posts }) => {
         <div className="view_title">
           <div className="title_62">Portfolio</div>
           <div className="view_all">
-            <Link to={ url.origin + "/portfolios/" }>View all</Link>
+            <Link to={ "/portfolios/" }>View all</Link>
           </div>
         </div>
         <div className="portfolio__products">
