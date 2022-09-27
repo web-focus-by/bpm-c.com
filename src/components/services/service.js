@@ -10,7 +10,7 @@ import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
-const Service = () => {
+const Service = ({ title }) => {
   const data = useStaticQuery(graphql`
     query getServicesDataQuery {
       allWpPage(filter: {wpParent: {node: {slug: {eq: "services"}}}}, limit: 8) {
@@ -35,7 +35,7 @@ const Service = () => {
   return (
     <div className="container">
       <div className="services margin_bottom_240">
-        <div className="services__title title_62">Services</div>
+        <div className="services__title title_62">{ title }</div>
           <div className="services__list">
           { result }
         </div>

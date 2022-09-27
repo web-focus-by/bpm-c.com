@@ -1,6 +1,5 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import "../../components/styles/main.css"
 import "../../components/styles/icons.css"
 import "../../components/styles/modules.css"
@@ -24,9 +23,9 @@ const LeadersChoiceForPortfolios = () => {
               Let’s work together
             </div>
             <div className="leaders_choice_tagline_block_gif">
-              <img src={ gifUriy } />
-              <img src={ gifKanu } />
-              <img src={ gifVlada } />
+              <img src={ gifUriy } alt="Uriy"/>
+              <img src={ gifKanu } alt="Kanu"/>
+              <img src={ gifVlada } alt="Vlada"/>
             </div> 
           </div>
           <div className="leaders_choice_tagline__butn">

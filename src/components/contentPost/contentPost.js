@@ -14,10 +14,6 @@ import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
 const ContentPost = ({ content, data }) => {
-  let url = '';
-  if (typeof window !== 'undefined') {
-    url =  new URL(window.location.href);
-  }
   const socialMaediaLinks = [
     { link: "#", className: "facebook_white margin_right_40", name: "facebook_white" },
     { link: "#", className: "vk_white margin_right_40", name: "vk_white" },
@@ -26,7 +22,7 @@ const ContentPost = ({ content, data }) => {
   const socialMedia = socialMaediaLinks.map((val, index)=>{
     return (
       <Link to={ val.link }>
-        <span className={ val.className }></span>
+        <span key={ index } className={ val.className }></span>
       </Link>
     )
   });

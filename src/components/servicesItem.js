@@ -4,7 +4,7 @@ import Service from "../components/services/service"
 
 const ServicesItem = ({ siteTitle }) => {
   return (
-    <Service></Service>
+    <Service title="Services"></Service>
   );
 }
 

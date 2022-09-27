@@ -15,10 +15,6 @@ import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
 const ListOfNews = ({ posts }) => {
-  let url = '';
-  if (typeof window !== 'undefined') {
-    url =  new URL(window.location.href);
-  }
   const notInfo = "Nothing found for your request...";
   const [selectedPosts, setSelectedPosts] = useState(posts);
   const [selectedTag, setSelectedTag] = useState("allTag");
@@ -154,7 +150,7 @@ const ListOfNews = ({ posts }) => {
         if (i < 2 ) {
           return (
             <li key={ i.toString() + valueTag.toString() } className="hash_list_block">
-              <Link to={ url.origin + "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
+              <Link to={ "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
             </li>
           )
         }
@@ -164,7 +160,7 @@ const ListOfNews = ({ posts }) => {
       <div className="blogs_products_block">
         <div className="blogs_products_block_pic">
           <Link to={ post.node.link }>
-            <img src={ post.node.featuredImage.node.mediaItemUrl } />
+            <img src={ post.node.featuredImage.node.mediaItemUrl } alt="the post"/>
           </Link>
         </div>
         <div className="blogs_products_block_list hash">

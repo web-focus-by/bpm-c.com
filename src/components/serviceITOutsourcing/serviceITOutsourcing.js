@@ -13,14 +13,9 @@ import "../../components/styles/media_375.css"
 import "./serviceITOutsourcing.css"
 
 const ServicesITOutsourcing = ({ title, themes }) => {
-  let baseUrl = '';
-  if (typeof window !== 'undefined') {
-    baseUrl =  new URL(window.location.href).origin;
-  }
-
   const result = themes.map((value, index) => {
     return (
-      <Link to={ baseUrl + value.uri }>
+      <Link to={ value.uri }>
         <button key = { index + value.id } className="button_white_item">
           { value.title }
         </button>

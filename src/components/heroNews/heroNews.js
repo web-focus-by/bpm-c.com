@@ -13,15 +13,6 @@ import "../../components/styles/media_375.css"
 import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
 const HeroNews = ({ location, title }) => {
-  let url = '';
-  if (typeof window !== 'undefined') {
-    url = new URL(window.location.href);
-  } else {
-    if (location && location.href) {
-      url = new URL(location.href);
-    }
-  }
-  
   return (
     <div className="container">
       <div className="breadcrumb-container">
