@@ -1,6 +1,4 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import "../../components/styles/main.css"
 import "../../components/styles/icons.css"

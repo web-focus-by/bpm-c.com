@@ -1,6 +1,5 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/modules.css"
@@ -51,7 +50,7 @@ const CompanyDescription = ({ siteTitle }) => (
         </div>
       </div>
       <div className="company_description__pic">
-        <img src={imgLaptop_2} />
+        <img src={ imgLaptop_2 } alt="the company" />
       </div>
     </div>
   </div>

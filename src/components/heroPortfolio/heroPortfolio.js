@@ -16,14 +16,6 @@ import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
 const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
   const [longList, setLongList] = useState(false)
-  let url = '';
-  if (typeof window !== 'undefined') {
-    url = new URL(window.location.href);
-  } else {
-    if (location && location.href) {
-      url = new URL(location.href);
-    }
-  }
   const result = tags.map((tag, index) => {
     if (!longList) {
       if (index < 6) {

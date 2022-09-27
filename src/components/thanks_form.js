@@ -1,6 +1,5 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/modules.css"
@@ -22,9 +21,9 @@ const ThanksForm = ({ siteTitle }) => (
         <div className="form_block_text">
           <p>Write to us, Yuri, Kanu or Vlada will contact you</p>
           <div className="form_block_gif">
-            <img src={ gifUriy } />
-            <img src={ gifKanu } />
-            <img src={ gifVlada } />
+            <img src={ gifUriy } alt="Uriy"/>
+            <img src={ gifKanu } alt="Kanu"/>
+            <img src={ gifVlada } alt="Vlada"/>
           </div>
         </div>
         <div className="form_block_wrapper">

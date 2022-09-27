@@ -33,7 +33,7 @@ const Portfolio = ({ posts }) => {
         <div className="portfolio_products_block">
           <div className="portfolio_products_block_pic">
             <Link to={ post.node.link }>
-              <img src={ post.node.featuredImage.node.mediaItemUrl } />
+              <img src={ post.node.featuredImage.node.mediaItemUrl } alt="the post"/>
             </Link>
           </div>
           <div className="portfolio_products_block_list hash">

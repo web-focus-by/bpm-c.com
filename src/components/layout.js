@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import { useState, useEffect, useRef } from "react"
 import PropTypes from "prop-types"
@@ -37,7 +30,7 @@ const Layout = ({ children }) => {
     }
   `);
 
-  const [selectedItem, setItem] = useState();
+  const [ selectedItem, setItem ] = useState();
   const allItems = data.wpMenu && data.wpMenu.menuItems &&  data.wpMenu.menuItems.nodes ? data.wpMenu.menuItems.nodes : null;
   const allItemsForMenu = allItems.reduce((res,val)=>{
     let item = val.path.slice(1,-1).split("/");
