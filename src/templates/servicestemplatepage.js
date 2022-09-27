@@ -19,10 +19,6 @@ import ServicesItem from "../components/servicesItem"
 import Reviews from "../components/reviews"
 
 const Servicestemplatepage = ({pageContext, location, data}) => {
-  let url = '';
-  if (typeof window !== 'undefined') {
-    url =  new URL(window.location.href).pathname.slice(1,-1).split("/")[1];
-  }
   const contentPage = data ? data.wpPage : {};
   const posts = data ? data.allWpPost.edges : [];
   const items = data ? data.allWpPage.edges : [];

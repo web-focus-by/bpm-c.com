@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import "../../components/styles/main.css"
 import "../../components/styles/icons.css"
 import "../../components/styles/modules.css"
@@ -10,37 +10,38 @@ import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
-function Service () {
-    //const [dataText] = useState(data);
-    const dataText = [
-      { id: "service_dev", name: "Development", link: "#" },
-      { id: "service_design", name: "Design and Branding", link: "#" },
-      { id: "service_SEO", name: "SEO", link: "#" },
-      { id: "service_SERM", name: "SERM", link: "#" },
-      { id: "service_SMM", name: "SMM", link: "#" },
-      { id: "service_Copywriting", name: "Copywriting", link: "#" },
-      { id: "service_PPC", name: "PPC", link: "#" },
-      { id: "service_devbusiness", name: "Website development for business", link: "#" },
-    ];
-
-    const result = dataText.map((obj) => {
-      return (
-        <div key={ obj.id } className="services_list_item">
-          <a href={ obj.link }>{ obj.name }</a>
-        </div>
-      )
-    });
-
+const Service = () => {
+  const data = useStaticQuery(graphql`
+    query getServicesDataQuery {
+      allWpPage(filter: {wpParent: {node: {slug: {eq: "services"}}}}, limit: 8) {
+        edges {
+          node {
+            id
+            uri
+            title
+          }
+        }
+      }
+    }
+  `)
+  const dataItems = data ? data.allWpPage.edges : null
+  const result = dataItems ? dataItems.map((value, index) => {
     return (
-      <div className="container">
-        <div className="services margin_bottom_240">
-          <div className="services__title title_62">Services</div>
-            <div className="services__list">
-            {result}
-          </div>
+      <div id={ index } key={ value.node.id } className="services_list_item">
+        <Link to={ value.node.uri }>{ value.node.title }</Link>
+      </div>
+    )
+  }) : '';
+  return (
+    <div className="container">
+      <div className="services margin_bottom_240">
+        <div className="services__title title_62">Services</div>
+          <div className="services__list">
+          { result }
         </div>
       </div>
-    );
+    </div>
+  );
 }
 
 export default Service;
