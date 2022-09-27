@@ -13,7 +13,7 @@ import "../../components/styles/media_375.css"
 const Service = () => {
   const data = useStaticQuery(graphql`
     query getServicesDataQuery {
-      allWpPage(filter: {wpParent: {node: {slug: {eq: "services"}}}}) {
+      allWpPage(filter: {wpParent: {node: {slug: {eq: "services"}}}}, limit: 8) {
         edges {
           node {
             id
@@ -26,13 +26,11 @@ const Service = () => {
   `)
   const dataItems = data ? data.allWpPage.edges : null
   const result = dataItems ? dataItems.map((value, index) => {
-    if (index <= 7) {
-      return (
-        <div id={ index } key={ value.node.id } className="services_list_item">
-          <Link to={ value.node.uri }>{ value.node.title }</Link>
-        </div>
-      )
-    }
+    return (
+      <div id={ index } key={ value.node.id } className="services_list_item">
+        <Link to={ value.node.uri }>{ value.node.title }</Link>
+      </div>
+    )
   }) : '';
   return (
     <div className="container">
