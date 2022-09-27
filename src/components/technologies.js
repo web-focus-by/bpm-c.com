@@ -11,7 +11,7 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const Technologies = ({ siteTitle }) => (
+const Technologies = () => (
   <div className="container">
     <div className="technologies margin_bottom_240">
       <div className="technologies__title title_62">Technologies</div>
