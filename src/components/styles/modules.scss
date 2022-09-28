@@ -42,6 +42,9 @@
         background: #1A1B1F;
         color: #FFFFFF;
     }
+    &__not_visible {
+        visibility: hidden;
+    }
 }
 
 .breadcrumb-container {
