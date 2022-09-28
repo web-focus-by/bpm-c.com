@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-const Breadcrumbs = ({ breadcrumbs }) => {
+const Breadcrumbs = ({ breadcrumbs, title }) => {
   let breadcrumbItems = '';
   let path = '';
   const pathname = breadcrumbs ? breadcrumbs.pathname : '';
@@ -16,7 +16,8 @@ const Breadcrumbs = ({ breadcrumbs }) => {
       return (
         <span key={index}>
           <Link to={ `${link}` }>
-            { item === breadcrumbs.host ? "Main page" : item }
+            { item === breadcrumbs.host ? "Main page" :
+            ((filePath.length - 1) === index) ? title : item}
             { index === filePath.length - 1 ? "" : " / " }
           </Link>
         </span>

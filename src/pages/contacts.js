@@ -55,7 +55,7 @@ const Contacts = ({ location }) => {
         <Seo title="Contacts" />
         <div className="container">
           <div className="breadcrumb-container">
-            <Breadcrumbs breadcrumbs={ location }/>
+            <Breadcrumbs breadcrumbs={ location } title="Contacts"/>
           </div>
           <div className="hero">
             <div className="hero__title title_62">
