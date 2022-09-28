@@ -55,7 +55,7 @@ const Contacts = ({ location }) => {
         <Seo title="Contacts" />
         <div className="container">
           <div className="breadcrumb-container">
-            <Breadcrumbs breadcrumbs={ location } />
+            <Breadcrumbs breadcrumbs={ location } title="Contacts"/>
           </div>
           <div className="hero">
             <div className="hero__title title_62">
@@ -88,7 +88,6 @@ const Contacts = ({ location }) => {
                 </div>
               </div>
             </div>
-            
             <div className="contacts__contacts_form">
               <div className="contact_form">
                 <div className="contact_form__block">
@@ -105,7 +104,8 @@ const Contacts = ({ location }) => {
                     <button id="copywriting" key="copywriting" onClick={ ()=>{ addItem('copywriting') } } className="button_item_tag">+ Copywriting</button>
                     { interestedItems && interestedItems.length > 1 ?
                       (<button id="clear" key="clear" onClick={()=>{ clear() } } className="button_item_tag">Clear</button>) :
-                      (<button id="clear" key="clear" onClick={()=>{ clear() } } className="button_item_tag__not_visible">Clear</button>)}
+                      (<button id="clear" key="clear" onClick={()=>{ clear() } } className="button_item_tag__not_visible">Clear</button>)
+                    }
                   </div>
                   <div className="contact_form_block_wrapper">
                     <form id="search-contact_form" action="#" method="POST">

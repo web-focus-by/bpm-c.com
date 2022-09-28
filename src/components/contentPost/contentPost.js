@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Moment from 'moment';
@@ -13,7 +14,26 @@ import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
-const ContentPost = ({ content, data }) => {
+const ContentPost = ({ content }) => {
+  const [headings, setHeadings] = useState([])
+  useEffect(() => {
+    const elements = Array.from(document.querySelectorAll("h2")).map((elem) => ({
+      id: elem.id,
+      text: elem.innerText,
+    }))
+    setHeadings(elements)
+    console.log(elements);
+  }, [])
+  const executeScroll = (id) =>{
+    document.getElementById(id).scrollIntoView({behavior: 'smooth'}, true);
+  }
+  const allContents = headings.map(heading => {
+    return (
+    <div key={ heading.text } className="content_item">
+      <a onClick={ ()=>{ executeScroll(heading.id) } }>{ heading.text }</a>
+    </div>
+    )
+  })
   const socialMaediaLinks = [
     { link: "#", className: "facebook_white margin_right_40", name: "facebook_white" },
     { link: "#", className: "vk_white margin_right_40", name: "vk_white" },
@@ -26,12 +46,11 @@ const ContentPost = ({ content, data }) => {
       </Link>
     )
   });
-
   const comments = (content.comments && content.comments.nodes && (content.comments.nodes.length > 0)) ?
   content.comments.nodes.map((comment, index) => {
     return (
       <div key={ comment.id } className="comment">
-        <div key={ index } className="comment_title">
+        <div className="comment_title">
           <div className="comment_title_left">
             { comment.author.node.name }
           </div>
@@ -65,18 +84,7 @@ const ContentPost = ({ content, data }) => {
           <div className="content_title">
             Content
           </div>
-          <div className="content_item">
-            Content
-          </div>
-          <div className="content_item">
-            Content
-          </div>
-          <div className="content_item">
-            Content
-          </div>
-          <div className="content_item">
-            Content
-          </div>
+          { allContents }
         </div>
       </div>
       <div className="content_text margin_bottom_60">

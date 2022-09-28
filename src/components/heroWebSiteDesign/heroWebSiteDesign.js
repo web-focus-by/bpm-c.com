@@ -17,7 +17,7 @@ const HeroWebSiteDesign = ({ content, location }) => {
   return (
     <div className="container">
       <div className="breadcrumb-container">
-        <Breadcrumbs breadcrumbs={ location } />
+        <Breadcrumbs breadcrumbs={ location } title={content.title}/>
       </div>
       <div className="hero margin_bottom_240">
         <div className="hero__title title_80">

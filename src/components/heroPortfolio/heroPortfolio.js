@@ -54,7 +54,7 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
   return (
     <div className="container">
       <div className="breadcrumb-container">
-        <Breadcrumbs breadcrumbs={ location } />
+        <Breadcrumbs breadcrumbs={ location } title={title}/>
       </div>
       <div className="hero">
         <div className="hero__title title_80">

@@ -17,7 +17,7 @@ const Hero = ({ location }) => {
   return (
     <div className="container">
       <div className="breadcrumb-container" style={{visibility: "hidden"}}>
-        <Breadcrumbs breadcrumbs={ location } />
+        <Breadcrumbs breadcrumbs={ location } title="Main page"/>
       </div>
       <div className="hero">
         <div className="hero__title title_80">
