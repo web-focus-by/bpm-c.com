@@ -71,7 +71,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer__copyright">
-          © 2022 LLC "BPM" UNP 11111111111111
+          {/*unp*/}
         </div>
         <div className="footer__social_net">
           <ul>
