@@ -17,7 +17,7 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
         <span key={index}>
           <Link to={ `${link}` }>
             { item === breadcrumbs.host ? "Main page" :
-            ((filePath.length - 1) === index) ? title : item}
+            ((filePath.length - 1) === index) ? title : item.replace("-"," ")}
             { index === filePath.length - 1 ? "" : " / " }
           </Link>
         </span>
