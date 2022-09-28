@@ -7,9 +7,9 @@ const Breadcrumbs = ({ breadcrumbs }) => {
   const pathname = breadcrumbs ? breadcrumbs.pathname : '';
   const domain = breadcrumbs ? breadcrumbs.origin : '';
   const host = breadcrumbs ? breadcrumbs.host : '';
-  const ourPath = breadcrumbs && breadcrumbs.href ? breadcrumbs.href.split("/").slice(1,-1).slice(1) : '';
+  const filePath = breadcrumbs && breadcrumbs.href ? breadcrumbs.href.split("/").slice(1,-1).slice(1) : '';
   if (pathname) {
-    breadcrumbItems = ourPath ? ourPath.map((item, index) => {
+    breadcrumbItems = filePath ? filePath.map((item, index) => {
       if (item === "news") { item = "blog"; }
       path = (index !== 0) ? path + item + "/": '';
       let link = ( host === item ) ? domain : domain + "/" + path;
@@ -17,7 +17,7 @@ const Breadcrumbs = ({ breadcrumbs }) => {
         <span key={index}>
           <Link to={ `${link}` }>
             { item === breadcrumbs.host ? "Main page" : item }
-            { index === ourPath.length - 1 ? "" : " / " }
+            { index === filePath.length - 1 ? "" : " / " }
           </Link>
         </span>
       )
