@@ -80,7 +80,7 @@ const ContentPost = ({ content, data }) => {
         </div>
       </div>
       <div className="content_text margin_bottom_60">
-        { content.content }
+        <div dangerouslySetInnerHTML={{__html: content.content }}/>
       </div>
       <div id="margin_240_black" className="black_bg_comment">
         <div className="comment_block">

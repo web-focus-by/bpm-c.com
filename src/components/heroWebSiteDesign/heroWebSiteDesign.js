@@ -23,7 +23,9 @@ const HeroWebSiteDesign = ({ content, location }) => {
         <div className="hero__title title_80">
             { content.title }<span className="star"></span>
         </div>
-        <div className="hero__subtitle">{ content.content }</div>
+        <div className="hero__subtitle">
+          <div dangerouslySetInnerHTML={{__html: content.content }}/>
+        </div>
         <div className="hero__butn">
           <Link to={ "/portfolios/" }>
             <button className="button_white">
