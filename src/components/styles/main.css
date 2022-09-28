@@ -378,6 +378,9 @@ body {
 .hero__butn__butntag .button_item_tag span {
   margin-left: 14px;
 }
+.hero__butn__butntag .button_item_tag .not_visible {
+  visibility: hidden;
+}
 
 .it_company {
   margin-top: 308px;

@@ -41,6 +41,10 @@ const Contacts = ({ location }) => {
     return interestedItems;
   }
 
+  const clear = () => {
+    setInterestedItems(['']);
+  }
+
   const submitForm = () => {
     return;
   }
@@ -99,6 +103,9 @@ const Contacts = ({ location }) => {
                     <button id="seo" key="seo" onClick={ ()=>{ addItem('seo') } } className="button_item_tag">+ SEO</button>
                     <button id="ppc" key="ppc" onClick={ ()=>{ addItem('ppc') } } className="button_item_tag">+ PPC</button>
                     <button id="copywriting" key="copywriting" onClick={ ()=>{ addItem('copywriting') } } className="button_item_tag">+ Copywriting</button>
+                    { interestedItems && interestedItems.length > 1 ?
+                      (<button id="clear" key="clear" onClick={()=>{ clear() } } className="button_item_tag">Clear</button>) :
+                      (<button id="clear" key="clear" onClick={()=>{ clear() } } className="button_item_tag__not_visible">Clear</button>)}
                   </div>
                   <div className="contact_form_block_wrapper">
                     <form id="search-contact_form" action="#" method="POST">

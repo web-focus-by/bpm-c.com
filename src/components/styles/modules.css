@@ -40,6 +40,9 @@
   background: #1A1B1F;
   color: #FFFFFF;
 }
+.button_item_tag__not_visible {
+  visibility: hidden;
+}
 
 .breadcrumb-container {
   margin-top: 15px;
