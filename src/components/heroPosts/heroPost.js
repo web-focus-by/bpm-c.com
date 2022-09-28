@@ -18,19 +18,11 @@ import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 const HeroPost = ({ location, photo, info}) => {
   const shift = 60000;
   const [counter, setCounter] = useState(0);
-  let url = '';
-  if (typeof window !== 'undefined') {
-    url = new URL(window.location.href);
-  } else {
-    if (location && location.href) {
-      url = new URL(location.href);
-    }
-  }
   const items = info.tags.nodes.map((post, index) => {
     let valueTag = '#' + post.slug;
     return (
       <li key={ index } className="hash_list_block">
-        <Link to={ url.origin + "/tag/" + post.slug + "/" }>{ valueTag }</Link>
+        <Link to={ "/tag/" + post.slug + "/" }>{ valueTag }</Link>
       </li>
     )
   })
@@ -42,7 +34,7 @@ const HeroPost = ({ location, photo, info}) => {
   return (
     <div className="container">
       <div className="breadcrumb-container">
-        <Breadcrumbs breadcrumbs={ location } />
+        <Breadcrumbs breadcrumbs={ location } title={info.title}/>
       </div>
       <div className="photo">
         <div className="photo_block">
