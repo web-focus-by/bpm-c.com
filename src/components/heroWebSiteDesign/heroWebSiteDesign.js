@@ -21,7 +21,7 @@ const HeroWebSiteDesign = ({ content, location }) => {
       </div>
       <div className="hero margin_bottom_240">
         <div className="hero__title title_80">
-            { content.title }<span className="star"></span>
+          { content.title }<span className="star"></span>
         </div>
         <div className="hero__subtitle">
           <div dangerouslySetInnerHTML={{__html: content.content }}/>
