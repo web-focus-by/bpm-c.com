@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import "../../components/styles/main.css"
 import "../../components/styles/icons.css"
 import "../../components/styles/modules.css"
@@ -28,7 +28,7 @@ const Service = ({ title }) => {
   const result = dataItems ? dataItems.map((value, index) => {
     return (
       <div id={ index } key={ value.node.id } className="services_list_item">
-        <Link to={ value.node.uri }>{ value.node.title }</Link>
+        <a href={ value.node.uri }>{ value.node.title }</a>
       </div>
     )
   }) : '';

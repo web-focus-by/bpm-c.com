@@ -11,7 +11,7 @@ import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
-const WebDesignCreationVision = ({ siteTitle }) => {
+const WebDesignCreationVision = ({ content }) => {
   const creationVision = useRef();
   let element = '';
   let cssObj = '';
@@ -49,89 +49,127 @@ const WebDesignCreationVision = ({ siteTitle }) => {
       };
     }, []
   );
-  return (
-  <div ref={ creationVision } id="margin_240_black_second" className="black_bg margin_240_black">
-    <div className="container">
-    <div className="service_package">
-        <div className="service_package__title title_62">
-          «BPM Cloud» web design creation vision
-          <br />
-        </div>
-        <div className="service_package__info">
+
+  if (content) {
+    const title = content.title.replace(/<[^>]+>/g, '');
+    const testArr = [
+      {
+        title: "",
+        content: [],
+      },
+    ]
+    let counter = 0
+    content.content.map(elem => {
+      if (elem.includes("h4")) {
+        testArr.push({
+          title: elem,
+          content: [],
+        })
+        counter++
+      } else {
+        testArr[counter].content.push(elem)
+      }
+    })
+    testArr.map(e => {
+      e.content.join("\n")
+    })
+    const resultFirstBlock = () =>{
+      if (testArr && testArr[0] && testArr[0].content && testArr[0].content.length>0) {
+        let arrayOne = testArr[0].content.reduce((next,prev) =>{
+          return [...next,prev]
+        },[]);
+        let resArrayOne = arrayOne.map((value,index)=>{
+          if (value.includes("<p>") || value.includes("<p>")) {
+            value = value.replace("<p>",'');
+            value = value.replace("</p>",'');
+          }
+          return value;
+        })
+        return (
+          <div className="service_package__info">
+            <div className="service_package_info_block">
+              {resArrayOne && resArrayOne[0] ? (
+                <div className="service_package_info_block__text font_18" dangerouslySetInnerHTML={{__html: resArrayOne[0] }}/>
+              ) : null}
+              <br/>
+              {resArrayOne && resArrayOne[1] ? (
+                <div className="service_package_info_block__text font_18" dangerouslySetInnerHTML={{__html: resArrayOne[1] }}/>
+              ) : null}
+            </div>
+            {resArrayOne && resArrayOne[2] ? (
+              <div className="service_package_info_block">
+                <div className="service_package_info_block__text font_18"  dangerouslySetInnerHTML={{__html: resArrayOne[2] }}/>
+              </div>
+            ): null}
+          </div>
+        )
+      }
+    }
+    const resultSecondBlock = () => {
+      if (testArr && testArr[1] && testArr[1].content && testArr[1].content.length>0) {
+        let firstPartArrayCount;
+        let firstPartArr = testArr[1].content.reduce((next,prev) =>{
+          return [...next,prev]
+        },[]);
+        let secondPartArr =  testArr[1].content.reduce((next,prev) =>{
+          return [...next,prev]
+        },[]);
+        if (testArr[1].content.length - 2 > 2) {
+
+          let fractional = (testArr[1].content.length-2) % 2;
+          if (fractional > 0) {
+            firstPartArrayCount = Math.trunc((testArr[1].content.length-2) / 2) + 1;
+          } else {
+            firstPartArrayCount = (testArr[1].content.length-2) / 2;
+          }
+          firstPartArr = firstPartArr.splice((firstPartArrayCount + 1), (testArr[1].content.length - (firstPartArrayCount + 1)));
+          secondPartArr = secondPartArr.splice(0, (firstPartArrayCount + 1))
+          firstPartArr.splice(0, 0, "<ul>");
+          secondPartArr.splice(secondPartArr.length+1, 0, "</ul>");
+        }
+        return (
+          <div className="service_package__info_list">
+            <div className="service_package_info_list_block font_18" dangerouslySetInnerHTML={{__html: secondPartArr.join('') }}/>
+            { testArr[1].content.length - 2 > 2 && secondPartArr.length > 0 ? (
+              <div className="service_package_info_list_block font_18"dangerouslySetInnerHTML={{__html: firstPartArr.join('') }}/>
+            ) : null }
+          </div>
+        )
+      }
+    }
+    const resultThirdBlock =()=>{
+      if (testArr && testArr[2] && testArr[2].content && testArr[2].content.length>0) {
+        return (
+          <div className="service_package__info_list">
+            <div className="service_package_info_list_block font_18" dangerouslySetInnerHTML={{__html: testArr[2].content.join('') }}/>
+          </div>
+        )
+      }
+    }
+    return (
+      <div ref={ creationVision } id="margin_240_black_second" className="black_bg margin_240_black">
+        <div className="container">
+          <div className="service_package">
+            <div className="service_package__title title_62" dangerouslySetInnerHTML={{__html: title }} />
+            { resultFirstBlock() }
+          <br/>
           <div className="service_package_info_block">
-            <div className="service_package_info_block__text font_18">
-              Web design creation is not just a part of corporate identity, but 
-              also the first place by which potential customers judge business. 
-              It depends on design whether customers want to know more about you. 
-              «BPM Cloud» web design marketing company puts one of the main accents 
-              on website design.
-            </div>
-            <br/>
-            <div className="service_package_info_block__text font_18">
-              Website design is virtual face of brand. Image of company is formed 
-              from the site appearance, and it’s important to correctly, clearly 
-              convey to consumers the essence and goals of brand. Appearance of each 
-              of the site elements and the content are also important. «BPM Cloud» web 
-              design marketing company knows how to create websites that reflect personality 
-              to become a powerful business development tool. Websites with unique design 
-              and a full set of tools for promotion and development are available at «BPM Cloud».
-            </div>
+            { testArr[1].title ? (
+              <div className="service_package_info_block__title" dangerouslySetInnerHTML={{__html: testArr[1].title }}/>
+            ) : null }            
           </div>
+          { resultSecondBlock() }
           <div className="service_package_info_block">
-            <div className="service_package_info_block__text font_18">
-              Web design by «BPM Cloud» inspires trust and desire to use your service. 
-              Each page will become very beautiful and bright, achieving its goals. 
-              After all, our studio knows that web design development is more than nice images.
-            </div>
+            { testArr[2].title ? (
+              <div className="service_package_info_block__title" dangerouslySetInnerHTML={{__html: testArr[2].title }}/>
+            ) : null }
           </div>
-        </div>
-        <br/>
-        <div className="service_package_info_block">
-          <div className="service_package_info_block__title">
-            Professional web site designs steps
-          </div>
-        </div>
-        <div className="service_package__info_list">
-          <div className="service_package_info_list_block font_18">
-            <ul>
-              <li>Analysis of competitors allows you to identify the strengths 
-                and weaknesses in design of competitors to take into account when 
-                creating your site. This makes the site different from others and 
-                set it apart from competition.</li>
-              <li>Working with texts and their revision so that it becomes easy to read.</li>
-              <li>Development of a site prototype so that you can see location of all elements.</li>
-            </ul>
-          </div>
-          <div className="service_package_info_list_block font_18">
-            <ul>
-              <li>At the development stage of design layout, the site acquires colors, 
-                is filled with texts and images. Website design will leave the first 
-                positive impression of business, so creative web design helps us.</li>
-              <li>Layout is needed to be displayed in browsers and work, so the site becomes live.</li>
-            </ul>
-          </div>
-        </div>
-        <div className="service_package_info_block">
-          <div className="service_package_info_block__title">
-            «BPM Cloud» website modern design services
-          </div>
-        </div>
-        <div className="service_package__info_list">
-          <div className="service_package_info_list_block font_18">
-            <ul>
-              <li>Website design with combination of colors, pictures and texts, 
-                so that the client would be pleased to be on your site.</li>
-              <li>Analysis and user behavior, because our designers must understand 
-                the site target audience good enough to attract and inspire trust.</li>
-              <li>Structuring of site with information location logically and consistently.</li>
-            </ul>
-            Web design creation is more than beautiful images.
-          </div>
+          { resultThirdBlock() }
         </div>
       </div>
     </div>
-  </div>
-  );
+    );
+  }
 }
 
 WebDesignCreationVision.propTypes = {

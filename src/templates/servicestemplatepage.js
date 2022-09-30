@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { fractionContent } from "../utils/fractionContent"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import HeroWebSiteDesign from "../components/heroWebSiteDesign/heroWebSiteDesign"
@@ -26,24 +27,25 @@ const Servicestemplatepage = ({pageContext, location, data}) => {
     let item = { id: val.node.id, title: val.node.title, uri: val.node.uri, content: val.content };
     return [...res, item]
   },[])
+  const content = contentPage.content ? fractionContent(contentPage.content): null;
   
   return (
     <Layout>
-      <HeroWebSiteDesign content={ contentPage } location={ location }></HeroWebSiteDesign>
+      <HeroWebSiteDesign title={ contentPage.title } content={ content && content[0] ? content[0] : null } location={ location }></HeroWebSiteDesign>
       <ServiceITOutsourcing title={ pageContext.title } themes={ themes }></ServiceITOutsourcing>
-      <WebSiteDesignReason></WebSiteDesignReason>
+      <WebSiteDesignReason content={ content && content[1] ? content[1] : null }></WebSiteDesignReason>
       <PortfolioWebSiteDesign posts={ posts } titlePage={"Portfolio"}></PortfolioWebSiteDesign>
-      <GoalsDesign></GoalsDesign>
+      <GoalsDesign content={content && content[2] ? content[2] : null}></GoalsDesign>
       <Form></Form>
-      <RequiresWebsiteDesign></RequiresWebsiteDesign>
+      <RequiresWebsiteDesign content={content && content[3] ? content[3] : null}></RequiresWebsiteDesign>
       <ServicesItem></ServicesItem>
-      <ResWebDesign></ResWebDesign>
+      <ResWebDesign  content={content && content[4] ? content[4] : null}></ResWebDesign>
       <Blog titlePage="Blog"></Blog>
-      <WebDesignCreationVision></WebDesignCreationVision>
-      <ResultsOfWebDesign></ResultsOfWebDesign>
+      <WebDesignCreationVision content={content && content[5] ? content[5] : null}></WebDesignCreationVision>
+      <ResultsOfWebDesign content={content && content[6] ? content[6] : null}></ResultsOfWebDesign>
       <Reviews></Reviews>
-      <BuyWebSite></BuyWebSite>
-      <SiteDesignByBpmCloud></SiteDesignByBpmCloud>
+      <BuyWebSite content={content && content[7] ? content[7] : null}></BuyWebSite>
+      <SiteDesignByBpmCloud content={content && content[8] ? content[8] : null}></SiteDesignByBpmCloud>
       <Seo title={ pageContext.title } />
     </Layout>
   )
@@ -79,6 +81,8 @@ export const query = graphql`
         uri
         title
         content
+        parentId
+        slug
       }
       allWpPage(filter: {wpParent: {node: {slug: {eq: $slug}}}}) {
         edges {

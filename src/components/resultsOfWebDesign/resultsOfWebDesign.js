@@ -11,33 +11,23 @@ import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 import "./resultsOfWebDesign.css"
 
-const ResultsOfWebDesign = ({ siteTitle }) => {
-    return (
-      <div className="container">
-        <div className="result_web_design margin_bottom_240">    
-          <div className="result_web_design_choice">
-            <div className="result_web_design_choice__title title_62">
-              Results of web design
-            </div>
-            <div className="result_web_design_choice__block">
-              <div className="result_web_design_choice_block_list">
-                <ul>
-                  <li className="font_18">
-                    You see beautiful web design of personalized website for your business.
-                  </li>
-                  <li className="font_18">
-                    You hear flattering reviews from customers and partners.
-                  </li>
-                  <li className="font_18">
-                    You experience comfort and convenience of working with your site.
-                  </li>
-                </ul>
+const ResultsOfWebDesign = ({ content }) => {
+    if (content) {
+      const title = content.title.replace(/<[^>]+>/g, '');
+
+      return (
+        <div className="container">
+          <div className="result_web_design margin_bottom_240">    
+            <div className="result_web_design_choice">
+              <div className="result_web_design_choice__title title_62" dangerouslySetInnerHTML={{__html: title }} />
+              <div className="result_web_design_choice__block">
+                <div className="result_web_design_choice_block_list font_18" dangerouslySetInnerHTML={{__html: content.content.join('') }} />
               </div>
             </div>
           </div>
         </div>
-      </div>
-    )
+      )
+    }
   }
   
   ResultsOfWebDesign.propTypes = {
