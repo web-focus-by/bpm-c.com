@@ -16,33 +16,38 @@ import "../../components/styles/media_375.css"
 const ListOfPortfolio = ({ posts }) => {
   const remainder = (posts.length % 10) > 0 ? 1 : 0;
   const countOfPage = Math.trunc(posts.length/10) + remainder;
+  const testArr = [{
+    id: null,
+    content: null,
+  }]
   let counter = 0;
-  const testArr = {
-    id: 0,
-    content: [],
-  }
-  const resultArray = () => {
-    const newArr = posts.map((val, index) => {
-      let i = index+1;
-      if (Math.trunc(i/10) === 0 || (Math.trunc(i/10) === 1 && i%10 === 0)) {
-        testArr.content.push(val);
-      } else if ( Math.trunc(i/10) === 1 && i%10 > 0 && Math.trunc(i/10) < countOfPage ) {
-        counter = Math.trunc(i/10) + 1;
-        testArr.id = counter;
-        testArr.content.push(val);
-      } else if ( Math.trunc(i/10) > 1 && (Math.trunc(i/10) < countOfPage && Math.trunc(i/10) !== countOfPage - 1) ) {
-        counter = Math.trunc(i/10);
-        testArr.id = counter;
-        testArr.content.push(val);
-      } else if (Math.trunc(i/10) === countOfPage - 1 && i%10 > 0) {
-        counter = Math.trunc(i/10) + 1;
-        testArr.id = Math.trunc(i/10) + 1;
-        testArr.content.push(val);
-      }
-    })
-    return newArr;
-  }
-  console.log(resultArray())
+  posts.map((val, index) => {
+    let i = index+1;
+    if (index === 0) {
+      testArr[0].id = counter + 1;
+      testArr[0].content = val;
+    } else if (Math.trunc(i/10) === 0 || (Math.trunc(i/10) === 1 && i%10 === 0)) {
+      testArr.push(
+        {id: counter + 1, content: val}
+      )
+    } else if ( Math.trunc(i/10) === 1 && i%10 > 0 && Math.trunc(i/10) < countOfPage ) {
+      counter = Math.trunc(i/10) + 1;
+      testArr.push(
+        {id: counter, content: val}
+      )
+    } else if ( Math.trunc(i/10) > 1 && (Math.trunc(i/10) < countOfPage && Math.trunc(i/10) !== countOfPage - 1) ) {
+      counter = Math.trunc(i/10);
+      testArr.push(
+        {id: counter, content: val}
+      )
+    } else if (Math.trunc(i/10) === countOfPage - 1 && i%10 > 0) {
+      counter = Math.trunc(i/10) + 1;
+      testArr.push(
+        {id: counter, content: val}
+      )
+    }
+  })
+  console.log(testArr);
   const items = posts.map((post, index) => {
     let tags = [];
     if (post && post.node.tags) {

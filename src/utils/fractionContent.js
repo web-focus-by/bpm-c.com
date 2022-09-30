@@ -21,5 +21,4 @@ export const fractionContent = ( content ) => {
       e.content.join("\n")
     })
     return testArr
-  }
-  
+  }  
