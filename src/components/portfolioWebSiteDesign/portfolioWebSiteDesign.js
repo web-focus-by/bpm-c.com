@@ -12,10 +12,8 @@ import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
 const PortfolioWebSiteDesign = ({ posts, titlePage }) => {
-  let url = '';
-  if (typeof window !== 'undefined') {
-    url =  new URL(window.location.href);
-  }
+  const remainder = (posts.length % 10) > 0 ? 1 : 0;
+  const countOfPage = Math.trunc(posts.length/10) + remainder;
   const items = posts.map((post, index) => {
     if (index <= 5) {
       let tags = [];
@@ -57,7 +55,7 @@ const PortfolioWebSiteDesign = ({ posts, titlePage }) => {
         <div className="view_title">
           <div className="title_62">{ titlePage }</div>
           <div className="view_all">
-            <Link to={ url.origin + "/portfolios/"}>View all</Link>
+            <Link to={"/portfolios/"}>View all</Link>
           </div>
         </div>
         <div className="portfolio__products">
