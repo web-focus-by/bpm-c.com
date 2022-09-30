@@ -69,7 +69,8 @@ const Blog = ({ titlePage }) => {
         <div className="blog_products_block">
           <Link to={ item.node.link }>
             <div className="blog_products_block_pic">
-              <img src={ item.node.featuredImage.node.mediaItemUrl } alt="the post" />
+              { item.node.featuredImage && item.node.featuredImage.node.mediaItemUrl ?
+              (<img src={ item.node.featuredImage.node.mediaItemUrl } alt="the post" />) : '' }
             </div>
           </Link>
           <div className="blog_products_block_list hash">

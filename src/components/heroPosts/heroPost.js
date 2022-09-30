@@ -38,7 +38,7 @@ const HeroPost = ({ location, photo, info}) => {
       </div>
       <div className="photo">
         <div className="photo_block">
-          <img src={ photo } alt="Imagine"/>
+          { photo ? (<img src={ photo } alt="Imagine"/>) : '' }
         </div>
         <div className="photo_description">
           <div className="photo_tags">

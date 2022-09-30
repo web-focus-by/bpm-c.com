@@ -160,7 +160,10 @@ const ListOfNews = ({ posts }) => {
       <div className="blogs_products_block">
         <div className="blogs_products_block_pic">
           <Link to={ post.node.link }>
-            <img src={ post.node.featuredImage.node.mediaItemUrl } alt="the post"/>
+            {
+              post.node.featuredImage && post.node.featuredImage.node.mediaItemUrl ?
+              (<img src={ post.node.featuredImage.node.mediaItemUrl } alt="the post"/>) : ''
+            }
           </Link>
         </div>
         <div className="blogs_products_block_list hash">

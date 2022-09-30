@@ -14,7 +14,7 @@ const GoalsDesign = ({ content }) => {
   if (content) {
     const text = content.content.join('');
     const title = content.title.replace(/<[^>]+>/g, '');
-    let count1, count2, count3;
+    let count1;
     let firstArr = content.content.reduce((result,value) => {
       return [... result, value]
     },[]);
@@ -22,14 +22,11 @@ const GoalsDesign = ({ content }) => {
       return [... result, value]
     },[]);
     if ((content.content.length-2) > 2){
-      count3 = (content.content.length-2) / 2
       let fractional = (content.content.length-2) % 2
       if (fractional > 0) {
         count1 = Math.trunc((content.content.length-2) / 2) + 1;
-        count2 = content.content.length-2 - count1;
       } else {
         count1 = (content.content.length-2) / 2;
-        count2 = content.content.length-2 - count1;
       }
       firstArr = firstArr.splice((count1 + 1), (content.content.length - (count1 + 1)));
       secondArr = secondArr.splice(0, (count1 + 1))

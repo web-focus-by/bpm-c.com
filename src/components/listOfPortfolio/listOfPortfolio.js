@@ -14,18 +14,16 @@ import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
 const ListOfPortfolio = ({ posts }) => {
-  let url = '';
-  if (typeof window !== 'undefined') {
-    url =  new URL(window.location.href);
-  }
+  const remainder = (posts.length % 10) > 0 ? 1 : 0;
+  const countOfPage = Math.trunc(posts.length/10) + remainder;
   const items = posts.map((post, index) => {
     let tags = [];
     if (post && post.node.tags) {
       tags = post.node.tags.nodes.map((tag, i) => {
         let valueTag = '#' + tag.slug;
         return (
-          <li key={ post.node.id.toString() + valueTag.toString() } className="hash_list_block">
-            <Link to={ url.origin + "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
+          <li className="hash_list_block">
+            <Link to={ "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
           </li>
         )
       })
@@ -34,7 +32,11 @@ const ListOfPortfolio = ({ posts }) => {
       <div className="portfolio_products_block">
         <div className="portfolio_products_block_pic">
           <Link to={ post.node.link }>
-            <img src={ post.node.featuredImage.node.mediaItemUrl } alt="the post"/>
+            {
+              post.node.featuredImage && post.node.featuredImage.node.mediaItemUrl ? (
+                <img src={ post.node.featuredImage.node.mediaItemUrl } alt="the post"/>
+              ) : ''
+            }
           </Link>
         </div>
         <div className="portfolio_products_block_list hash">
@@ -46,7 +48,6 @@ const ListOfPortfolio = ({ posts }) => {
       </div>
     )
   })
-  
   return (
     <div className="container">
       <div className="portfolio margin_bottom_for_portfolio_240">
