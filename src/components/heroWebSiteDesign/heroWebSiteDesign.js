@@ -13,19 +13,21 @@ import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
-const HeroWebSiteDesign = ({ content, location }) => {
+const HeroWebSiteDesign = ({ title, content, location }) => {
   return (
     <div className="container">
       <div className="breadcrumb-container">
-        <Breadcrumbs breadcrumbs={ location } title={content.title}/>
+        <Breadcrumbs breadcrumbs={ location } title={ title }/>
       </div>
       <div className="hero margin_bottom_240">
         <div className="hero__title title_80">
-          { content.title }<span className="star"></span>
+          { title }<span className="star"></span>
         </div>
-        <div className="hero__subtitle">
-          <div dangerouslySetInnerHTML={{__html: content.content }}/>
-        </div>
+        { content && content.content[0] ? (
+          <div className="hero__subtitle">
+            <div dangerouslySetInnerHTML={{__html: content.content[0] }}/>
+          </div>
+        ) : null }
         <div className="hero__butn">
           <Link to={ "/portfolios/" }>
             <button className="button_white">
