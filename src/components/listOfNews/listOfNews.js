@@ -20,6 +20,17 @@ const ListOfNews = ({ posts }) => {
   const [selectedTag, setSelectedTag] = useState("allTag");
   const [selectedCategory, setSelectedCategory] = useState("allCategory");
 
+  let amount = 1;
+  let positionOfScroll, scrollHeight, bottomPage;
+  const remainder = (posts.length % 10) > 0 ? 1 : 0;
+  const countOfPage = Math.trunc(posts.length/10) + remainder;
+  const textArr = [{
+    id: null,
+    content: null,
+  }]
+
+  let counter = 0;
+
   const filterByTag = (item) => {
     if (item !== selectedTag) {
       if (item === "allTag") {
@@ -142,16 +153,6 @@ const ListOfNews = ({ posts }) => {
     )
   })
 
-  let amount = 1;
-  let positionOfScroll, scrollHeight, bottomPage;
-  const remainder = (posts.length % 10) > 0 ? 1 : 0;
-  const countOfPage = Math.trunc(posts.length/10) + remainder;
-  const textArr = [{
-    id: null,
-    content: null,
-  }]
-
-  let counter = 0;
   posts.map((val, index) => {
     let i = index + 1;
     if (index === 0) {

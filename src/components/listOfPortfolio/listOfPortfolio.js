@@ -142,7 +142,7 @@ const ListOfPortfolio = ({ posts }) => {
     <div id="content-container" className="container">
       <div className="portfolio margin_bottom_for_portfolio_240">
         <div className="portfolio__products">
-          { getItems() }
+          { getItems }
         </div>
       </div>
     </div>
