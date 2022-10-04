@@ -403,7 +403,7 @@ body {
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   grid-column-gap: 1%;
-  grid-row-gap: 2%;
+  grid-row-gap: 0.5%;
 }
 .portfolio__products .portfolio_products_block .portfolio_products_block_pic {
   margin-bottom: 24px;

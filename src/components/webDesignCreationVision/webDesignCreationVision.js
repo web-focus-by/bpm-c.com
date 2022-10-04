@@ -73,6 +73,7 @@ const WebDesignCreationVision = ({ content }) => {
     testArr.map(e => {
       e.content.join("\n")
     })
+    
     const resultFirstBlock = () =>{
       if (testArr && testArr[0] && testArr[0].content && testArr[0].content.length>0) {
         let arrayOne = testArr[0].content.reduce((next,prev) =>{
