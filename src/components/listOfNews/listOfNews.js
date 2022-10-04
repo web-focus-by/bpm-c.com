@@ -20,6 +20,17 @@ const ListOfNews = ({ posts }) => {
   const [selectedTag, setSelectedTag] = useState("allTag");
   const [selectedCategory, setSelectedCategory] = useState("allCategory");
 
+  let amount = 1;
+  let positionOfScroll, scrollHeight, bottomPage;
+  const remainder = (posts.length % 10) > 0 ? 1 : 0;
+  const countOfPage = Math.trunc(posts.length/10) + remainder;
+  const textArr = [{
+    id: null,
+    content: null,
+  }]
+
+  let counter = 0;
+
   const filterByTag = (item) => {
     if (item !== selectedTag) {
       if (item === "allTag") {
@@ -142,17 +153,7 @@ const ListOfNews = ({ posts }) => {
     )
   })
 
-  let amount = 1;
-  let positionOfScroll, scrollHeight, bottomPage;
-  const remainder = (posts.length % 10) > 0 ? 1 : 0;
-  const countOfPage = Math.trunc(posts.length/10) + remainder;
-  const textArr = [{
-    id: null,
-    content: null,
-  }]
-
-  let counter = 0;
-  posts.map((val, index) => {
+  selectedPosts.map((val, index) => {
     let i = index + 1;
     if (index === 0) {
       textArr[0].id = counter + 1;
@@ -225,10 +226,10 @@ const ListOfNews = ({ posts }) => {
   }, []);
 
   const getItems = () => {
-    const items = selectedPosts.map((post, index) => {
+    const items = listItems.map((post, index) => {
       let tags = [];
-      if (post && post.node.tags) {
-        tags = post.node.tags.nodes.map((tag, i) => {
+      if (post && post.content.node.tags) {
+        tags = post.content.node.tags.nodes.map((tag, i) => {
           let valueTag = '#' + tag.slug;
           if (i < 2 ) {
             return (
@@ -242,10 +243,10 @@ const ListOfNews = ({ posts }) => {
       return (
         <div className="blogs_products_block">
           <div className="blogs_products_block_pic">
-            <Link to={ post.node.link }>
+            <Link to={ post.content.node.link }>
               {
-                post.node.featuredImage && post.node.featuredImage.node.mediaItemUrl ?
-                (<img src={ post.node.featuredImage.node.mediaItemUrl } alt="the post"/>) : ''
+                post.content.node.featuredImage && post.content.node.featuredImage.node.mediaItemUrl ?
+                (<img src={ post.content.node.featuredImage.node.mediaItemUrl } alt="the post"/>) : ''
               }
             </Link>
           </div>
@@ -256,10 +257,10 @@ const ListOfNews = ({ posts }) => {
               </ul>
             </div>
             <div className="blogs_products_block_list_date">
-              { Moment(post.node.link).format('DD-MM-YYYY') }
+              { Moment(post.content.node.link).format('DD-MM-YYYY') }
             </div>
           </div>
-          <Link to={ post.node.link }><div className="blogs_products_block_title" ><a>{ post.node.title }</a></div></Link>
+          <Link to={ post.content.node.link }><div className="blogs_products_block_title" ><a>{ post.content.node.title }</a></div></Link>
         </div>
       )
     })
@@ -271,10 +272,10 @@ const ListOfNews = ({ posts }) => {
   }
   
   return (
-    <div className="container">
+    <div id="container" className="container">
       <div className="blogs margin_bottom_240">
         <div className="blogs__products">
-          { getItems() }
+          { getItems }
         </div>
         <div className="blogs__topics">
           <div className="blogs_topics_block">
