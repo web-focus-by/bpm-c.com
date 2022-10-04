@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Moment from 'moment';
@@ -142,50 +142,139 @@ const ListOfNews = ({ posts }) => {
     )
   })
 
-  const items = selectedPosts.map((post, index) => {
-    let tags = [];
-    if (post && post.node.tags) {
-      tags = post.node.tags.nodes.map((tag, i) => {
-        let valueTag = '#' + tag.slug;
-        if (i < 2 ) {
-          return (
-            <li key={ i.toString() + valueTag.toString() } className="hash_list_block">
-              <Link to={ "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
-            </li>
-          )
-        }
-      })
+  let amount = 1;
+  let positionOfScroll, scrollHeight, bottomPage;
+  const remainder = (posts.length % 10) > 0 ? 1 : 0;
+  const countOfPage = Math.trunc(posts.length/10) + remainder;
+  const textArr = [{
+    id: null,
+    content: null,
+  }]
+
+  let counter = 0;
+  posts.map((val, index) => {
+    let i = index + 1;
+    if (index === 0) {
+      textArr[0].id = counter + 1;
+      textArr[0].content = val;
+    } else if (Math.trunc(i/10) === 0 || (Math.trunc(i/10) === 1 && i%10 === 0)) {
+      textArr.push(
+        {id: counter + 1, content: val}
+      )
+    } else if ( Math.trunc(i/10) === 1 && i%10 > 0 && Math.trunc(i/10) < countOfPage ) {
+      counter = Math.trunc(i/10) + 1;
+      textArr.push(
+        {id: counter, content: val}
+      )
+    } else if ( Math.trunc(i/10) > 1 && i%10 === 0 && Math.trunc(i/10) < countOfPage ) {
+      counter = Math.trunc(i/10);
+      textArr.push(
+        {id: counter, content: val}
+      )
+    } else if (Math.trunc(i/10) > 1 && i%10 > 0 && Math.trunc(i/10) < countOfPage) {
+      counter = Math.trunc(i/10) + 1;
+      textArr.push(
+        {id: counter, content: val}
+      )
     }
-    return (
-      <div className="blogs_products_block">
-        <div className="blogs_products_block_pic">
-          <Link to={ post.node.link }>
-            {
-              post.node.featuredImage && post.node.featuredImage.node.mediaItemUrl ?
-              (<img src={ post.node.featuredImage.node.mediaItemUrl } alt="the post"/>) : ''
-            }
-          </Link>
-        </div>
-        <div className="blogs_products_block_list hash">
-          <div className="blogs_products_block_list_tags">
-            <ul className="hash__list">
-              { tags }
-            </ul>
-          </div>
-          <div className="blogs_products_block_list_date">
-            { Moment(post.node.link).format('DD-MM-YYYY') }
-          </div>
-        </div>
-        <Link to={ post.node.link }><div className="blogs_products_block_title" ><a>{ post.node.title }</a></div></Link>
-      </div>
-    )
   })
+
+  const firstArr = textArr.reduce((res, val)=>{
+    if (val.id === 1) {
+      return [...res, val];
+    }
+    return res;
+  },[])
+
+  const [listItems, setListItems] = useState(firstArr);
+  const getResizeBlock =(items) =>{
+    let sum=0;
+    for (let i=0; i < items.length; i++) {
+      if (document && (i+1)%2!==0 && document.getElementById(items[i].key)) {
+        sum = sum + document.getElementById(items[i].key).scrollHeight;
+      }
+    }
+    return sum;
+  }
+  const loadData = () => {
+    positionOfScroll = window && window.pageYOffset ? window.pageYOffset : null;
+    scrollHeight = document && document.getElementById("content-container") ?
+    Math.max(
+      document.body.scrollHeight, document.getElementById("content-container").scrollHeight,
+      document.body.offsetHeight, document.getElementById("content-container").offsetHeight,
+      document.body.clientHeight, document.getElementById("content-container").clientHeight
+    ) : null;
+    bottomPage = document && document.getElementById("content-container") ?
+    document.getElementById("content-container").offsetTop +  scrollHeight : null;
+    if (bottomPage - positionOfScroll <= 2200 && textArr.length > 10 ) {
+      const arr = textArr.reduce((res, val)=>{
+        if (val.id <= amount) {
+          return [...res, val];
+        }
+        return res;
+      },[])
+      if ( arr.length < textArr.length ) {
+        amount = amount + 1
+      }
+      setListItems(arr);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("scroll", loadData, true);
+  }, []);
+
+  const getItems = () => {
+    const items = selectedPosts.map((post, index) => {
+      let tags = [];
+      if (post && post.node.tags) {
+        tags = post.node.tags.nodes.map((tag, i) => {
+          let valueTag = '#' + tag.slug;
+          if (i < 2 ) {
+            return (
+              <li key={ i.toString() + valueTag.toString() } className="hash_list_block">
+                <Link to={ "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
+              </li>
+            )
+          }
+        })
+      }
+      return (
+        <div className="blogs_products_block">
+          <div className="blogs_products_block_pic">
+            <Link to={ post.node.link }>
+              {
+                post.node.featuredImage && post.node.featuredImage.node.mediaItemUrl ?
+                (<img src={ post.node.featuredImage.node.mediaItemUrl } alt="the post"/>) : ''
+              }
+            </Link>
+          </div>
+          <div className="blogs_products_block_list hash">
+            <div className="blogs_products_block_list_tags">
+              <ul className="hash__list">
+                { tags }
+              </ul>
+            </div>
+            <div className="blogs_products_block_list_date">
+              { Moment(post.node.link).format('DD-MM-YYYY') }
+            </div>
+          </div>
+          <Link to={ post.node.link }><div className="blogs_products_block_title" ><a>{ post.node.title }</a></div></Link>
+        </div>
+      )
+    })
+
+    if (document && document.getElementById("container")) {
+      document.getElementById("container").style.height = getResizeBlock(items);
+    }
+    return items && items.length ? items : notInfo;
+  }
   
   return (
     <div className="container">
       <div className="blogs margin_bottom_240">
         <div className="blogs__products">
-          { items && items.length ? items : notInfo }
+          { getItems() }
         </div>
         <div className="blogs__topics">
           <div className="blogs_topics_block">

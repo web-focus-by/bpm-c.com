@@ -12,16 +12,6 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const Portfolio = ({ posts }) => {
-  const remainder = (posts.length % 10) > 0 ? 1 : 0;
-  const countOfPage = Math.trunc(posts.length/10) + remainder;
-  const postList = posts.reduce((result, value)=>{
-    let arr = {
-      id: 0,
-      content: []
-    }
-    let counter = 0
-
-  })
   const items = posts.map((post, index) => {
     if (index <= 5) {
       let tags = [];

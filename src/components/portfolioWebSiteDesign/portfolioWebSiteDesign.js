@@ -12,8 +12,6 @@ import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
 const PortfolioWebSiteDesign = ({ posts, titlePage }) => {
-  const remainder = (posts.length % 10) > 0 ? 1 : 0;
-  const countOfPage = Math.trunc(posts.length/10) + remainder;
   const items = posts.map((post, index) => {
     if (index <= 5) {
       let tags = [];
