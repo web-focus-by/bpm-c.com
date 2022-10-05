@@ -16,7 +16,6 @@ import "../../components/styles/media_375.css"
 
 const ListOfNews = ({ posts }) => {
   const notInfo = "Nothing found for your request...";
-  const [listOfNews, setListOfNews] = useState();
   const [selectedPosts, setSelectedPosts] = useState(posts);
   const [selectedTag, setSelectedTag] = useState("allTag");
   const [selectedCategory, setSelectedCategory] = useState("allCategory");
