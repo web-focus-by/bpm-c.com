@@ -54,7 +54,7 @@ const Tag = ({ location }) => {
       <>
         <Layout>
           <Seo title="tag" />
-          <HeroPortfolio location={ location } tags={ allTags } selectedTag={ null } title="Tags" ></HeroPortfolio>
+          <HeroPortfolio location={ location } tags={ allTags } selectedTag={ null } title="Tag" ></HeroPortfolio>
           <ListOfPortfolio posts={ allPosts }></ListOfPortfolio>
           <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
         </Layout>
