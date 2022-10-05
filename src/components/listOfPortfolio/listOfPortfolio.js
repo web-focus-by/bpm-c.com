@@ -59,7 +59,8 @@ const ListOfPortfolio = ({ posts }) => {
     return res;
   },[])
 
-  const [listItems, setListItems] = useState(firstArr);
+  const [ listItems, setListItems ] = useState(firstArr);
+
   const getResizeBlock =(items) =>{
     let sum=0;
     for (let i=0; i < items.length; i++) {
@@ -69,57 +70,12 @@ const ListOfPortfolio = ({ posts }) => {
     }
     return sum;
   }
-  const getItems = () => {
-    const items = listItems.map((post, index) => {
-      let tags = [];
-      if (post && post.content && post.content.node) {
-        if (post.content.node.tags) {
-          tags = post.content.node.tags.nodes.map((tag, i) => {
-            let valueTag = '#' + tag.slug;
-            return (
-              <li className="hash_list_block">
-                <Link to={ "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
-              </li>
-            )
-          })
-        }
-        return (
-          <div id={ post.content.node.id } key={ post.content.node.id } className="portfolio_products_block">
-            <div className="portfolio_products_block_pic">
-              <Link to={ post.content.node.link }>
-                {
-                  post.content.node.featuredImage && post.content.node.featuredImage.node.mediaItemUrl ? (
-                    <img src={ post.content.node.featuredImage.node.mediaItemUrl } alt="the post"/>
-                  ) : ''
-                }
-              </Link>
-            </div>
-            <div className="portfolio_products_block_list hash">
-              <ul className="hash__list">
-                { tags }
-              </ul>
-            </div>
-            <div className="portfolio_products_block_title" >{ post.content.node.title }</div>
-          </div>
-        )
-      }
-    })
-    if (document && document.getElementById("content-container")) {
-      document.getElementById("content-container").style.height = getResizeBlock(items);
-    }
-    return items;
-  }
 
   const loadData = () => {
     positionOfScroll = window && window.pageYOffset ? window.pageYOffset : null;
-    scrollHeight = document && document.getElementById("content-container") ?
-    Math.max(
-      document.body.scrollHeight, document.getElementById("content-container").scrollHeight,
-      document.body.offsetHeight, document.getElementById("content-container").offsetHeight,
-      document.body.clientHeight, document.getElementById("content-container").clientHeight
-    ) : null;
-    bottomPage = document && document.getElementById("content-container") ?
-    document.getElementById("content-container").offsetTop +  scrollHeight : null;
+    scrollHeight = document && document.getElementById("container") ? document.getElementById("container").scrollHeight : null;
+    bottomPage = document && document.getElementById("container") ?
+    document.getElementById("container").offsetTop +  scrollHeight : null;
     if (bottomPage - positionOfScroll <= 2200 && textArr.length > 10 ) {
       const arr = textArr.reduce((res, val)=>{
         if (val.id <= amount) {
@@ -138,11 +94,50 @@ const ListOfPortfolio = ({ posts }) => {
     document.addEventListener("scroll", loadData, true);
   }, []);
 
+  const items = listItems.map((post, index) => {
+    let tags = [];
+    if (post && post.content && post.content.node) {
+      if (post.content.node.tags) {
+        tags = post.content.node.tags.nodes.map((tag, i) => {
+          let valueTag = '#' + tag.slug;
+          return (
+            <li className="hash_list_block">
+              <Link to={ "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
+            </li>
+          )
+        })
+      }
+      return (
+        <div id={ post.content.node.id } key={ post.content.node.id } className="portfolio_products_block">
+          <div className="portfolio_products_block_pic">
+            <Link to={ post.content.node.link }>
+              {
+                post.content.node.featuredImage && post.content.node.featuredImage.node.mediaItemUrl ? (
+                  <img src={ post.content.node.featuredImage.node.mediaItemUrl } alt="the post"/>
+                ) : ''
+              }
+            </Link>
+          </div>
+          <div className="portfolio_products_block_list hash">
+            <ul className="hash__list">
+              { tags }
+            </ul>
+          </div>
+          <div className="portfolio_products_block_title" >{ post.content.node.title }</div>
+        </div>
+      )
+    }
+  })
+
+  if (document && document.getElementById("container") && items && items.length > 10) {
+    document.getElementById("container").style.height = getResizeBlock(items);
+  }
+
   return (
-    <div id="content-container" className="container">
+    <div id="container" className="container">
       <div className="portfolio margin_bottom_for_portfolio_240">
         <div className="portfolio__products">
-          { getItems }
+          { items }
         </div>
       </div>
     </div>
