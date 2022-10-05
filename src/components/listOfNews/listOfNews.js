@@ -16,6 +16,7 @@ import "../../components/styles/media_375.css"
 
 const ListOfNews = ({ posts }) => {
   const notInfo = "Nothing found for your request...";
+  const [listOfNews, setListOfNews] = useState();
   const [selectedPosts, setSelectedPosts] = useState(posts);
   const [selectedTag, setSelectedTag] = useState("allTag");
   const [selectedCategory, setSelectedCategory] = useState("allCategory");
@@ -153,32 +154,35 @@ const ListOfNews = ({ posts }) => {
     )
   })
 
-  selectedPosts.map((val, index) => {
-    let i = index + 1;
-    if (index === 0) {
-      textArr[0].id = counter + 1;
-      textArr[0].content = val;
-    } else if (Math.trunc(i/10) === 0 || (Math.trunc(i/10) === 1 && i%10 === 0)) {
-      textArr.push(
-        {id: counter + 1, content: val}
-      )
-    } else if ( Math.trunc(i/10) === 1 && i%10 > 0 && Math.trunc(i/10) < countOfPage ) {
-      counter = Math.trunc(i/10) + 1;
-      textArr.push(
-        {id: counter, content: val}
-      )
-    } else if ( Math.trunc(i/10) > 1 && i%10 === 0 && Math.trunc(i/10) < countOfPage ) {
-      counter = Math.trunc(i/10);
-      textArr.push(
-        {id: counter, content: val}
-      )
-    } else if (Math.trunc(i/10) > 1 && i%10 > 0 && Math.trunc(i/10) < countOfPage) {
-      counter = Math.trunc(i/10) + 1;
-      textArr.push(
-        {id: counter, content: val}
-      )
-    }
-  })
+  const fractionOfListForLazyLoad = (values) => {
+    values.map((val, index) => {
+      let i = index + 1;
+      if (index === 0) {
+        textArr[0].id = counter + 1;
+        textArr[0].content = val;
+      } else if (Math.trunc(i/10) === 0 || (Math.trunc(i/10) === 1 && i%10 === 0)) {
+        textArr.push(
+          {id: counter + 1, content: val}
+        )
+      } else if ( Math.trunc(i/10) === 1 && i%10 > 0 && Math.trunc(i/10) < countOfPage ) {
+        counter = Math.trunc(i/10) + 1;
+        textArr.push(
+          {id: counter, content: val}
+        )
+      } else if ( Math.trunc(i/10) > 1 && i%10 === 0 && Math.trunc(i/10) < countOfPage ) {
+        counter = Math.trunc(i/10);
+        textArr.push(
+          {id: counter, content: val}
+        )
+      } else if (Math.trunc(i/10) > 1 && i%10 > 0 && Math.trunc(i/10) < countOfPage) {
+        counter = Math.trunc(i/10) + 1;
+        textArr.push(
+          {id: counter, content: val}
+        )
+      }
+    })
+    return textArr;
+  }
 
   const firstArr = textArr.reduce((res, val)=>{
     if (val.id === 1) {
@@ -207,6 +211,7 @@ const ListOfNews = ({ posts }) => {
     ) : null;
     bottomPage = document && document.getElementById("content-container") ?
     document.getElementById("content-container").offsetTop +  scrollHeight : null;
+    fractionOfListForLazyLoad(selectedPosts);
     if (bottomPage - positionOfScroll <= 2200 && textArr.length > 10 ) {
       const arr = textArr.reduce((res, val)=>{
         if (val.id <= amount) {
@@ -223,59 +228,93 @@ const ListOfNews = ({ posts }) => {
 
   useEffect(() => {
     document.addEventListener("scroll", loadData, true);
-  }, []);
 
-  const getItems = () => {
-    const items = listItems.map((post, index) => {
-      let tags = [];
-      if (post && post.content.node.tags) {
-        tags = post.content.node.tags.nodes.map((tag, i) => {
-          let valueTag = '#' + tag.slug;
-          if (i < 2 ) {
-            return (
-              <li key={ i.toString() + valueTag.toString() } className="hash_list_block">
-                <Link to={ "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
-              </li>
-            )
-          }
-        })
-      }
-      return (
-        <div className="blogs_products_block">
-          <div className="blogs_products_block_pic">
-            <Link to={ post.content.node.link }>
-              {
-                post.content.node.featuredImage && post.content.node.featuredImage.node.mediaItemUrl ?
-                (<img src={ post.content.node.featuredImage.node.mediaItemUrl } alt="the post"/>) : ''
-              }
-            </Link>
-          </div>
-          <div className="blogs_products_block_list hash">
-            <div className="blogs_products_block_list_tags">
-              <ul className="hash__list">
-                { tags }
-              </ul>
-            </div>
-            <div className="blogs_products_block_list_date">
-              { Moment(post.content.node.link).format('DD-MM-YYYY') }
-            </div>
-          </div>
-          <Link to={ post.content.node.link }><div className="blogs_products_block_title" ><a>{ post.content.node.title }</a></div></Link>
-        </div>
-      )
-    })
-
-    if (document && document.getElementById("container")) {
+    if (document && document.getElementById("container") && items && items.length > 10 ) {
       document.getElementById("container").style.height = getResizeBlock(items);
     }
-    return items && items.length ? items : notInfo;
-  }
-  
+  }, []);
+
+  const items = (selectedPosts && selectedPosts.length <= 10) ? selectedPosts.map((post, index) => {
+    let tags = [];
+    if (post && post.node.tags) {
+      tags = post.node.tags.nodes.map((tag, i) => {
+        let valueTag = '#' + tag.slug;
+        if (i < 2 ) {
+          return (
+            <li key={ i.toString() + valueTag.toString() } className="hash_list_block">
+              <Link to={ "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
+            </li>
+          )
+        }
+      })
+    }
+    return (
+      <div className="blogs_products_block">
+        <div className="blogs_products_block_pic">
+          <Link to={ post.node.link }>
+            {
+              post.node.featuredImage && post.node.featuredImage.node.mediaItemUrl ?
+              (<img src={ post.node.featuredImage.node.mediaItemUrl } alt="the post"/>) : ''
+            }
+          </Link>
+        </div>
+        <div className="blogs_products_block_list hash">
+          <div className="blogs_products_block_list_tags">
+            <ul className="hash__list">
+              { tags }
+            </ul>
+          </div>
+          <div className="blogs_products_block_list_date">
+            { Moment(post.node.link).format('DD-MM-YYYY') }
+          </div>
+        </div>
+        <Link to={ post.node.link }><div className="blogs_products_block_title" ><a>{ post.node.title }</a></div></Link>
+      </div>
+    )
+  }) : listItems.map((post, index) => {
+    let tags = [];
+    if (post && post.node.tags) {
+      tags = post.node.tags.nodes.map((tag, i) => {
+        let valueTag = '#' + tag.slug;
+        if (i < 2 ) {
+          return (
+            <li key={ i.toString() + valueTag.toString() } className="hash_list_block">
+              <Link to={ "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
+            </li>
+          )
+        }
+      })
+    }
+    return (
+      <div className="blogs_products_block">
+        <div className="blogs_products_block_pic">
+          <Link to={ post.content.node.link }>
+            {
+              post.content.node.featuredImage && post.content.node.featuredImage.node.mediaItemUrl ?
+              (<img src={ post.content.node.featuredImage.node.mediaItemUrl } alt="the post"/>) : ''
+            }
+          </Link>
+        </div>
+        <div className="blogs_products_block_list hash">
+          <div className="blogs_products_block_list_tags">
+            <ul className="hash__list">
+              { tags }
+            </ul>
+          </div>
+          <div className="blogs_products_block_list_date">
+            { Moment(post.content.node.link).format('DD-MM-YYYY') }
+          </div>
+        </div>
+        <Link to={ post.content.node.link }><div className="blogs_products_block_title" ><a>{ post.content.node.title }</a></div></Link>
+      </div>
+    )
+  })
+
   return (
     <div id="container" className="container">
       <div className="blogs margin_bottom_240">
         <div className="blogs__products">
-          { getItems }
+          { items && items.length ? items : notInfo }
         </div>
         <div className="blogs__topics">
           <div className="blogs_topics_block">
