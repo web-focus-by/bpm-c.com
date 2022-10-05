@@ -92,6 +92,10 @@ const ListOfPortfolio = ({ posts }) => {
 
   useEffect(() => {
     document.addEventListener("scroll", loadData, true);
+
+    if (document && document.getElementById("container") && items && items.length > 10) {
+      document.getElementById("container").style.height = getResizeBlock(items);
+    }
   }, []);
 
   const items = listItems.map((post, index) => {
@@ -128,10 +132,6 @@ const ListOfPortfolio = ({ posts }) => {
       )
     }
   })
-
-  if (document && document.getElementById("container") && items && items.length > 10) {
-    document.getElementById("container").style.height = getResizeBlock(items);
-  }
 
   return (
     <div id="container" className="container">
