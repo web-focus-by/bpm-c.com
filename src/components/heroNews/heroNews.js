@@ -10,7 +10,6 @@ import "../../components/styles/media_1366.css"
 import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
-import "gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css"
 
 const HeroNews = ({ location, title }) => {
   return (

@@ -23,6 +23,9 @@ const ContentPost = ({ content }) => {
     }))
     setHeadings(elements)
   }, [])
+  Array.from(document.querySelectorAll("h2")).map((value, index)=>{
+    if (!value.getAttribute('id')) {value.setAttribute('id',index + 1)}
+  })
   const executeScroll = (id) =>{
     let top = document.getElementById(id).offsetTop;
     window.scrollTo({
