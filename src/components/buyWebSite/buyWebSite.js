@@ -20,7 +20,7 @@ const BuyWebSite = ({ content }) => {
       return next
     },[])
     const textFirst = content.content[0].replace(/<[^>]+>/g, '')
-    const textSecond = content.content[1].replace(/<[^>]+>/g, '')
+    const textSecond = content && content.content[1] ? content.content[1].replace(/<[^>]+>/g, '') : null
     return (
       <div className="container">
         <div className="bpm_cloud margin_bottom_240">

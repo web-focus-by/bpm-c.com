@@ -31,7 +31,7 @@ const FooterBlock = ({ content }) => {
     },[])
     return (
       <div className="container">
-        <div className="leaders">    
+        <div className="leaders margin_bottom_240">
           <div className="leaders_choice">
             <div className="leaders_choice__title title_62" dangerouslySetInnerHTML={{__html: title }} />
             <div className="leaders_choice__block">

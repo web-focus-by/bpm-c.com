@@ -36,7 +36,7 @@ const Servicestemplatepage = ({pageContext, location, data}) => {
     if (counter > 9) {
       return [...res, val]
     }
-    counter++;
+    counter = counter + 1;
     return res;
   },[]) : null
   
@@ -58,9 +58,7 @@ const Servicestemplatepage = ({pageContext, location, data}) => {
       <BuyWebSite content={content && content[7] ? content[7] : null}></BuyWebSite>
       <SiteDesignByBpmCloud content={content && content[8] ? content[8] : null}></SiteDesignByBpmCloud>
       <FooterBlock content={content && content[9] ? content[9] : null}></FooterBlock>
-      {otherArray && otherArray.length ? otherArray.map((item,i)=>{
-        return (<Others key={i} content={item ? item : null}></Others>)
-      }) : null}
+      {otherArray && otherArray.length>0 ? (<Others content={otherArray ? otherArray : null}></Others>) : null}
       <WorkTogether></WorkTogether>
       <Seo title={ pageContext.title } />
     </Layout>
