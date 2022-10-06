@@ -32,13 +32,13 @@ const Servicestemplatepage = ({pageContext, location, data}) => {
   },[])
   const content = contentPage.content ? fractionContent(contentPage.content): null;
   let counter = 0
-  const otherArray = content.reduce((res,val)=>{
+  const otherArray = content && content.length && content.length > 9 ? content.reduce((res,val)=>{
     if (counter > 9) {
       return [...res, val]
     }
     counter++;
     return res;
-  },[])
+  },[]) : null
   
   return (
     <Layout>
