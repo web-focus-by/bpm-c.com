@@ -155,13 +155,13 @@ const WebDesignCreationVision = ({ content }) => {
             { resultFirstBlock() }
           <br/>
           <div className="service_package_info_block">
-            { testArr[1].title ? (
+            { testArr[1] && testArr[1].title ? (
               <div className="service_package_info_block__title" dangerouslySetInnerHTML={{__html: testArr[1].title }}/>
             ) : null }            
           </div>
           { resultSecondBlock() }
           <div className="service_package_info_block">
-            { testArr[2].title ? (
+            {  testArr[2] && testArr[2].title ? (
               <div className="service_package_info_block__title" dangerouslySetInnerHTML={{__html: testArr[2].title }}/>
             ) : null }
           </div>

@@ -20,7 +20,7 @@ const HeroWebSiteDesign = ({ title, content, location }) => {
       </div>
       <div className="hero margin_bottom_240">
         <div className="hero__title title_80">
-          { title }<span className="star"></span>
+          { title }
         </div>
         { content && content.content[0] ? (
           <div className="hero__subtitle">

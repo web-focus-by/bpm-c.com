@@ -932,6 +932,25 @@ body {
   line-height: 150%;
   color: #5C5C5C;
 }
+.bpm_cloud__info .bpm_cloud_block ul {
+  margin: 0px;
+  padding: 0px;
+}
+.bpm_cloud__info .bpm_cloud_block ul li {
+  display: flex;
+  list-style: none;
+  margin-bottom: 14px;
+}
+.bpm_cloud__info .bpm_cloud_block ul li:last-child {
+  margin-bottom: 0px;
+}
+.bpm_cloud__info .bpm_cloud_block ul li::before {
+  display: block;
+  content: url("../../images/list_line.svg");
+  position: relative;
+  bottom: 5px;
+  padding-right: 8px;
+}
 
 .black_bg_comment {
   background: #1A1B1F;
