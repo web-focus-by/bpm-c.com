@@ -17,15 +17,15 @@ import "../../components/styles/media_375.css"
 const ContentPost = ({ content }) => {
   const [headings, setHeadings] = useState([])
   useEffect(() => {
+    Array.from(document.querySelectorAll("h2")).map((value, index)=>{
+      if (!value.getAttribute('id')) {value.setAttribute('id',index + 1)}
+    })
     const elements = Array.from(document.querySelectorAll("h2")).map((elem, index) => ({
       id: elem.id ? elem.id : index + 1,
       text: elem.innerText,
     }))
     setHeadings(elements)
   }, [])
-  Array.from(document.querySelectorAll("h2")).map((value, index)=>{
-    if (!value.getAttribute('id')) {value.setAttribute('id',index + 1)}
-  })
   const executeScroll = (id) =>{
     let top = document.getElementById(id).offsetTop;
     window.scrollTo({
