@@ -20,6 +20,7 @@ import ServicesItem from "../components/servicesItem"
 import Reviews from "../components/reviews"
 import FooterBlock from "../components/footerBlock/footerBlock"
 import WorkTogether from "../components/workTogether/workTogether"
+import Others from "../components/others/others"
 
 const Servicestemplatepage = ({pageContext, location, data}) => {
   const contentPage = data ? data.wpPage : {};
@@ -30,6 +31,14 @@ const Servicestemplatepage = ({pageContext, location, data}) => {
     return [...res, item]
   },[])
   const content = contentPage.content ? fractionContent(contentPage.content): null;
+  let counter = 0
+  const otherArray = content.reduce((res,val)=>{
+    if (counter > 9) {
+      return [...res, val]
+    }
+    counter++;
+    return res;
+  },[])
   
   return (
     <Layout>
@@ -49,6 +58,9 @@ const Servicestemplatepage = ({pageContext, location, data}) => {
       <BuyWebSite content={content && content[7] ? content[7] : null}></BuyWebSite>
       <SiteDesignByBpmCloud content={content && content[8] ? content[8] : null}></SiteDesignByBpmCloud>
       <FooterBlock content={content && content[9] ? content[9] : null}></FooterBlock>
+      {otherArray && otherArray.length ? otherArray.map((item,i)=>{
+        return (<Others key={i} content={item ? item : null}></Others>)
+      }) : null}
       <WorkTogether></WorkTogether>
       <Seo title={ pageContext.title } />
     </Layout>
