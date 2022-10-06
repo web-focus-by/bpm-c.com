@@ -18,6 +18,8 @@ import Form from "../components/form"
 import Blog from "../components/blog"
 import ServicesItem from "../components/servicesItem"
 import Reviews from "../components/reviews"
+import FooterBlock from "../components/footerBlock/footerBlock"
+import WorkTogether from "../components/workTogether/workTogether"
 
 const Servicestemplatepage = ({pageContext, location, data}) => {
   const contentPage = data ? data.wpPage : {};
@@ -46,6 +48,8 @@ const Servicestemplatepage = ({pageContext, location, data}) => {
       <Reviews></Reviews>
       <BuyWebSite content={content && content[7] ? content[7] : null}></BuyWebSite>
       <SiteDesignByBpmCloud content={content && content[8] ? content[8] : null}></SiteDesignByBpmCloud>
+      <FooterBlock content={content && content[9] ? content[9] : null}></FooterBlock>
+      <WorkTogether></WorkTogether>
       <Seo title={ pageContext.title } />
     </Layout>
   )

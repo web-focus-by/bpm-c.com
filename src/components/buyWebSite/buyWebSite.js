@@ -13,6 +13,12 @@ import "../../components/styles/media_375.css"
 const BuyWebSite = ({ content }) => {
   if (content) {
     const title = content.title.replace(/<[^>]+>/g, '');
+    const arrayList = content.content.reduce((next, prev) => {
+      if (prev === "<ul>" || prev === "</ul>" || prev.includes("<li>") || prev.includes("</li>")) {
+        return [...next, prev];
+      }
+      return next
+    },[])
     const textFirst = content.content[0].replace(/<[^>]+>/g, '')
     const textSecond = content.content[1].replace(/<[^>]+>/g, '')
     return (
@@ -24,10 +30,19 @@ const BuyWebSite = ({ content }) => {
               <div className="bpm_cloud_block">
                 <div className="bpm_cloud_block_text" dangerouslySetInnerHTML={{__html: textFirst }}/>
               </div>
-            ) : null }
+            ) : arrayList && arrayList.length>0 && !textFirst ? (
+              <div className="bpm_cloud_block">
+                <div className="bpm_cloud_block_text" dangerouslySetInnerHTML={{__html: arrayList.join('') }}/>
+              </div>
+            ) : null
+             }
             { textSecond ? (
               <div className="bpm_cloud_block">
                 <div className="bpm_cloud_block_text" dangerouslySetInnerHTML={{__html: textSecond }}/>
+              </div>
+            ) : arrayList && arrayList.length>0 && !textSecond ? (
+              <div className="bpm_cloud_block">
+                <div className="result_web_design_choice_block_list font_18" dangerouslySetInnerHTML={{__html: arrayList.join('') }}/>
               </div>
             ) : null }
           </div>
