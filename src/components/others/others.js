@@ -12,19 +12,46 @@ import "../../components/styles/media_375.css"
 
 const Others = ({ content }) => {
   if (content) {
-    const title = content.title.replace(/<[^>]+>/g, '');
-    const text = content.content.replace(/<[^>]+>/g, '');
-    return (
-      <div className="container">
+    const items = content.map((item, i)=>{
+      let title = item.title.replace(/<[^>]+>/g, '');
+      let list = item.content.reduce((res,val)=>{
+        if ((val.includes("<ul>") || val.includes("<li>") || val.includes("</li>") || val.includes("</ul>")) &&
+        (!val.includes("<p>") || !val.includes("</p>"))) {
+          res.push(val)
+        }
+        return res;
+      },[])
+      let paragraphs = item.content.reduce((res,val)=>{
+        if (val.includes("<p>") || val.includes("</p>")) {
+          val = val.replace('<p>', '');
+          val = val.replace('</p>', '');
+          res.push(val)
+        }
+        return res;
+      },[])
+      return (
         <div className="result_web_design margin_bottom_240">
           <div className="result_web_design_choice">
             <div className="result_web_design_choice__title title_62" dangerouslySetInnerHTML={{__html: title }}>
             </div>
             <div className="result_web_design_choice__block">
-              <div className="result_web_design_choice_block_list" dangerouslySetInnerHTML={{__html: text }}/>
+              {list && list.length>0 ? (
+                <div className="result_web_design_choice_block_list" dangerouslySetInnerHTML={{__html: list.join('') }}/>
+              ) : null}
+              {paragraphs && paragraphs.length>0 ? (
+                <div className="result_web_design_choice_block_list">
+                  <div className="font_18" dangerouslySetInnerHTML={{__html: paragraphs.join('') }}/>
+                </div>
+              ) : null} 
+              
             </div>
           </div>
         </div>
+      )
+    })
+    return (
+      <div className="container">
+        { items }
       </div>
     )
   }

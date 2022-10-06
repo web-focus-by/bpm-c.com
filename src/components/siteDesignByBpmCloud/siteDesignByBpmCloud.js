@@ -30,7 +30,7 @@ const SiteDesignByBpmCloud = ({ content }) => {
       }
       return next
     },[])
-    console.log(paragraphsList)
+
     return (
       <div className="container">
         <div className="leaders margin_bottom_240">
