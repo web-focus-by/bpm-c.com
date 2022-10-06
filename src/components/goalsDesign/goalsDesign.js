@@ -12,14 +12,28 @@ import "../../components/styles/media_375.css"
 
 const GoalsDesign = ({ content }) => {
   if (content) {
+    const paragraphsList = content.content.reduce((next, prev) => {
+      if (prev.includes("<p>") || prev.includes("</p>") || prev.includes("<h4>") || prev.includes("</h4>")) {
+        prev = prev.replace("<p>", '')
+        prev = prev.replace("</p>", '')
+        return [...next, prev];
+      }
+      return next
+    },[])
     const text = content.content.join('');
     const title = content.title.replace(/<[^>]+>/g, '');
     let count1;
     let firstArr = content.content.reduce((result,value) => {
-      return [... result, value]
+      if (value.includes("<ul>") || value.includes("</ul>") || value.includes("<li>") || value.includes("</li>")) {
+        return [...result, value]
+      }
+      return result
     },[]);
     let secondArr = content.content.reduce((result,value) => {
-      return [... result, value]
+      if (value.includes("<ul>") || value.includes("</ul>") || value.includes("<li>") || value.includes("</li>")) {
+        return [...result, value]
+      }
+      return result
     },[]);
     if ((content.content.length-2) > 2){
       let fractional = (content.content.length-2) % 2
@@ -39,10 +53,25 @@ const GoalsDesign = ({ content }) => {
               <div className="leaders_choice__title title_62">
                 { title }
               </div>
-              <div className="leaders_choice__block">
-                <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: firstArr.join('') }} />
-                <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: secondArr.join('') }}/>
+              {paragraphsList && paragraphsList.length ? (
+                <div className="leaders_choice__block"><div dangerouslySetInnerHTML={{__html: paragraphsList }} />
+                {secondArr && secondArr.length>0 ? (
+                  <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: firstArr.join('') }} />
+                ) : null} 
+                {firstArr && firstArr.length>0 ? (
+                  <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: secondArr.join('') }}/>
+                ) : null}
+                </div>
+              ) : (<div className="leaders_choice__block">
+                {secondArr && secondArr.length>0 ? (
+                  <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: firstArr.join('') }} />
+                ) : null} 
+                {firstArr && firstArr.length>0 ? (
+                  <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: secondArr.join('') }}/>
+                ) : null}
               </div>
+                )
+              }
             </div>
           </div>
         </div>

@@ -14,7 +14,6 @@ import "./resultsOfWebDesign.css"
 const ResultsOfWebDesign = ({ content }) => {
     if (content) {
       const title = content.title.replace(/<[^>]+>/g, '');
-
       return (
         <div className="container">
           <div className="result_web_design margin_bottom_240">    

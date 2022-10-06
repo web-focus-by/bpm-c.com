@@ -145,6 +145,12 @@
   .bpm_cloud__info .bpm_cloud_block .bpm_cloud_block_text {
     font-size: 16px;
   }
+  .bpm_cloud__info .bpm_cloud_block ul li {
+    margin-bottom: 14px;
+  }
+  .bpm_cloud__info .bpm_cloud_block ul .font_18 {
+    font-size: 16px;
+  }
   .projects_process__subtitle {
     margin-bottom: 37px;
     max-width: none;

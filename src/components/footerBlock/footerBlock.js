@@ -13,12 +13,11 @@ import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
-const SiteDesignByBpmCloud = ({ content }) => {
+const FooterBlock = ({ content }) => {
   if (content) {
     const title = content.title.replace(/<[^>]+>/g, '');
     const arrayList = content.content.reduce((next, prev) => {
-      if ((prev === "<ul>" || prev === "</ul>" || prev.includes("<li>") || prev.includes("</li>")) &&
-      (!prev.includes("<p>") || !prev.includes("</p>"))) {
+      if (prev === "<ul>" || prev === "</ul>" || prev.includes("<li>") || prev.includes("</li>")) {
         return [...next, prev];
       }
       return next
@@ -30,10 +29,9 @@ const SiteDesignByBpmCloud = ({ content }) => {
       }
       return next
     },[])
-    console.log(paragraphsList)
     return (
       <div className="container">
-        <div className="leaders margin_bottom_240">
+        <div className="leaders">    
           <div className="leaders_choice">
             <div className="leaders_choice__title title_62" dangerouslySetInnerHTML={{__html: title }} />
             <div className="leaders_choice__block">
@@ -42,15 +40,14 @@ const SiteDesignByBpmCloud = ({ content }) => {
                   <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: arrayList.join('') }} />
                 ) : paragraphsList && Array.isArray(paragraphsList) && paragraphsList.length > 1 ? (
                   <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: paragraphsList[0] }} />
-                ) : paragraphsList && Array.isArray(paragraphsList) && paragraphsList.length === 1 ? (
+                ) : (
                   <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: paragraphsList }} />
-                ) : null
+                )
               }
               {
                 (!(arrayList && arrayList.length > 0) && paragraphsList && Array.isArray(paragraphsList) && paragraphsList.length > 1) ? (
                   <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: paragraphsList[1] }} />
-                ) : ((arrayList && arrayList.length > 0) && paragraphsList && Array.isArray(paragraphsList) && paragraphsList.length === 1) ?
-                (<div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: paragraphsList }} />) : null
+                ) : null
               }
             </div>
           </div>
@@ -60,12 +57,12 @@ const SiteDesignByBpmCloud = ({ content }) => {
     }
   }
 
-  SiteDesignByBpmCloud.propTypes = {
+  FooterBlock.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-SiteDesignByBpmCloud.defaultProps = {
+FooterBlock.defaultProps = {
   siteTitle: ``,
 }
 
-export default SiteDesignByBpmCloud
+export default FooterBlock
