@@ -12,7 +12,6 @@ import "../../components/styles/media_375.css"
 
 const GoalsDesign = ({ content }) => {
   if (content) {
-    console.log(content)
     const paragraphsList = content.content.reduce((next, prev) => {
       if (prev.includes("<p>") || prev.includes("</p>") || prev.includes("<h4>") || prev.includes("</h4>")) {
         prev = prev.replace("<p>", '')
@@ -47,9 +46,6 @@ const GoalsDesign = ({ content }) => {
       secondArr = secondArr.splice(0, (count1 + 1))
       firstArr.splice(0, 0, "<ul>");
       secondArr.splice(secondArr.length+1, 0, "</ul>");
-      console.log(paragraphsList)
-      console.log(firstArr)
-      console.log(secondArr)
       return (
         <div className="container">
           <div className="leaders margin_bottom_240">    

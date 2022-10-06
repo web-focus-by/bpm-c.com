@@ -17,7 +17,8 @@ const SiteDesignByBpmCloud = ({ content }) => {
   if (content) {
     const title = content.title.replace(/<[^>]+>/g, '');
     const arrayList = content.content.reduce((next, prev) => {
-      if (prev === "<ul>" || prev === "</ul>" || prev.includes("<li>") || prev.includes("</li>")) {
+      if ((prev === "<ul>" || prev === "</ul>" || prev.includes("<li>") || prev.includes("</li>")) &&
+      (!prev.includes("<p>") || !prev.includes("</p>"))) {
         return [...next, prev];
       }
       return next
@@ -29,6 +30,7 @@ const SiteDesignByBpmCloud = ({ content }) => {
       }
       return next
     },[])
+    console.log(paragraphsList)
     return (
       <div className="container">
         <div className="leaders margin_bottom_240">
@@ -40,14 +42,15 @@ const SiteDesignByBpmCloud = ({ content }) => {
                   <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: arrayList.join('') }} />
                 ) : paragraphsList && Array.isArray(paragraphsList) && paragraphsList.length > 1 ? (
                   <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: paragraphsList[0] }} />
-                ) : (
+                ) : paragraphsList && Array.isArray(paragraphsList) && paragraphsList.length === 1 ? (
                   <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: paragraphsList }} />
-                )
+                ) : null
               }
               {
                 (!(arrayList && arrayList.length > 0) && paragraphsList && Array.isArray(paragraphsList) && paragraphsList.length > 1) ? (
                   <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: paragraphsList[1] }} />
-                ) : null
+                ) : ((arrayList && arrayList.length > 0) && paragraphsList && Array.isArray(paragraphsList) && paragraphsList.length === 1) ?
+                (<div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: paragraphsList }} />) : null
               }
             </div>
           </div>
