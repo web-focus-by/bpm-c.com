@@ -30,6 +30,10 @@ const Layout = ({ children }) => {
     }
   `);
 
+  const firstItemForMenu = {
+    path:"/portfolios/",
+    label:"Portfolios"
+  }
   const [ selectedItem, setItem ] = useState();
   const allItems = data.wpMenu && data.wpMenu.menuItems &&  data.wpMenu.menuItems.nodes ? data.wpMenu.menuItems.nodes : null;
   const allItemsForMenu = allItems.reduce((res,val)=>{
@@ -39,8 +43,11 @@ const Layout = ({ children }) => {
     }
     return res
   },[]);
+  let counter = 0
   const mainItems = allItemsForMenu.reduce(
     (result, value) => {
+      if (counter === 0) { result.push(firstItemForMenu) }
+      counter = counter + 1;
       if (value.path.slice(1, -1).split("/").length === 1) {
         result.push({ path: value.path, label: value.label });
       }
