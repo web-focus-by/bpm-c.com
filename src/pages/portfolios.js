@@ -49,7 +49,7 @@ const Portfolios = ({ location }) => {
     <>
       <Layout>
         <Seo title="Portfolios" />
-        <HeroPortfolio location={ location } tags={ allTags } selectedTag={ null } title="Portfolio" ></HeroPortfolio>
+        <HeroPortfolio location={ location } tags={ allTags } selectedTag={ null } title="Portfolios" ></HeroPortfolio>
         <ListOfPortfolio posts={ allPosts }></ListOfPortfolio>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
