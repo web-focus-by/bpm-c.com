@@ -18,7 +18,7 @@ const Header = ({ turnOnMenu, mainItems }) => {
     url = new URL(window.location.href);
   }
 
-  const homeUrl = url ? url.origin:'';
+  const homeUrl = url ? url.origin : '';
   const activeMenu = (e) => {
     turnOnMenu(e.target.innerText);
   }
