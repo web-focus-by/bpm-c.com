@@ -86,46 +86,46 @@ const Blog = ({ titlePage }) => {
   })
 
   return(
-  <div className="container">
-    <div className="blog margin_bottom_240">
-      <div className="view_title">
-        <div className="title_62">{ titlePage }</div>
-        <div className="view_all">
-          <Link to={"/blog/"}>
-            View all
-          </Link>
+    <div className="container">
+      <div className="blog margin_bottom_240">
+        <div className="view_title">
+          <div className="title_62">{ titlePage }</div>
+          <div className="view_all">
+            <Link to={"/blog/"}>
+              View all
+            </Link>
+          </div>
+        </div>
+        <div className="blog__products">
+        <Swiper
+              spaceBetween={20}
+              slidesPerView={"auto"}
+              onSlideChange={() => console.log("slide change")}
+              onSwiper={swiper => console.log(swiper)}
+              breakpoints={{
+                1920: {
+                  width: 1920,
+                  allowTouchMove: true,
+                },
+                1366: {
+                  width: 1366,
+                  allowTouchMove: true,
+                },
+                1025: {
+                  width: 1025,
+                  allowTouchMove: true,
+                },
+                1024: {
+                  width: 1366,
+                  allowTouchMove: true,
+                },
+              }}
+            >
+              { result }
+            </Swiper>
         </div>
       </div>
-      <div className="blog__products">
-      <Swiper
-            spaceBetween={20}
-            slidesPerView={"auto"}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={swiper => console.log(swiper)}
-            breakpoints={{
-              1920: {
-                width: 1920,
-                allowTouchMove: true,
-              },
-              1366: {
-                width: 1366,
-                allowTouchMove: true,
-              },
-              1025: {
-                width: 1025,
-                allowTouchMove: true,
-              },
-              1024: {
-                width: 1366,
-                allowTouchMove: true,
-              },
-            }}
-          >
-            { result }
-          </Swiper>
-      </div>
     </div>
-  </div>
   )
 }
 

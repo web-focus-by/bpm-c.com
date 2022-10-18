@@ -12,7 +12,8 @@ import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
-const HeroWebSiteDesign = ({ title, content, location }) => {
+const HeroWebSiteDesign = ({ title, content, location, titleLogo }) => {
+  const logoTitle = titleLogo && titleLogo.length > 0 ? titleLogo : null
   return (
     <div className="container">
       <div className="breadcrumb-container">
@@ -20,7 +21,7 @@ const HeroWebSiteDesign = ({ title, content, location }) => {
       </div>
       <div className="hero margin_bottom_240">
         <div className="hero__title title_80">
-          { title }
+          { title }<span className={ logoTitle }></span>
         </div>
         { content && content.content[0] ? (
           <div className="hero__subtitle">
