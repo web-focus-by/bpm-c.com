@@ -88,6 +88,9 @@ exports.createPages = async function ({ actions, graphql }) {
   const tagsTemplate = path.resolve(`./src/templates/tagsPage.js`)
   const pageContactsTemplate = path.resolve(`./src/templates/contacts.js`)
   const pageReviewsTemplate = path.resolve(`./src/templates/reviews.js`)
+  const pageFAQTemplate = path.resolve(`./src/templates/faq.js`)
+  const pageBlogTemplate = path.resolve(`./src/templates/templateBlog.js`)
+  const informationAboutCompanyTemplate = path.resolve(`./src/templates/informationAboutCompany.js`)
   const postTemplate = path.resolve(`./src/templates/postsPage.js`)
   const categoryTemplate = path.resolve(`./src/templates/categoryTemplate.js`)
   allWpPage.edges.forEach(item => {
@@ -99,12 +102,15 @@ exports.createPages = async function ({ actions, graphql }) {
       case "cG9zdDoyNjU4":
         template = pageContactsTemplate
         break;
-      /*case "cG9zdDoxMzc0":
-        template = path.resolve(`./src/templates/blog.js`)
-      case "cG9zdDoxMzY4":
-        template = path.resolve(`./src/templates/faq.js`)
+      case "cG9zdDoxMzc0":
+        template = pageBlogTemplate
+        break;
       case "cG9zdDoxMzY1":
-        template = path.resolve(`./src/templates/informationAboutCompany.js`)*/
+        template = informationAboutCompanyTemplate
+        break;
+      case "cG9zdDoxMzY4":
+        template = pageFAQTemplate
+        break;
       default:
         template = pageTemplate
     }
