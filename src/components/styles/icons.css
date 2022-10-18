@@ -335,4 +335,11 @@
   width: 47px;
   height: 47px;
   background: url(../../images/newspaper.svg) no-repeat;
+}
+
+.notes_of_reviewes {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  background: url(../../images/notes_of_reviewes.svg) no-repeat;
 }/*# sourceMappingURL=icons.css.map */

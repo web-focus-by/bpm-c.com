@@ -86,11 +86,25 @@ exports.createPages = async function ({ actions, graphql }) {
   const { allWpPage, allWpPost, allWpCategory, allWpTag } = result.data
   const pageTemplate = path.resolve(`./src/templates/servicestemplatepage.js`)
   const tagsTemplate = path.resolve(`./src/templates/tagsPage.js`)
+  const pageContactsTemplate = path.resolve(`./src/templates/contacts.js`)
+  const pageReviewsTemplate = path.resolve(`./src/templates/reviews.js`)
   const postTemplate = path.resolve(`./src/templates/postsPage.js`)
   const categoryTemplate = path.resolve(`./src/templates/categoryTemplate.js`)
   allWpPage.edges.forEach(item => {
     let template
     switch (item.node.id) {
+      case "cG9zdDozNzAw":
+        template = pageReviewsTemplate
+        break;
+      case "cG9zdDoyNjU4":
+        template = pageContactsTemplate
+        break;
+      /*case "cG9zdDoxMzc0":
+        template = path.resolve(`./src/templates/blog.js`)
+      case "cG9zdDoxMzY4":
+        template = path.resolve(`./src/templates/faq.js`)
+      case "cG9zdDoxMzY1":
+        template = path.resolve(`./src/templates/informationAboutCompany.js`)*/
       default:
         template = pageTemplate
     }
