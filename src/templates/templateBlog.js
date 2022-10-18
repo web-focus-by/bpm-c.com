@@ -22,7 +22,7 @@ const TemplateBlog = ({ location }) => {
           </div>
           <div className="hero">
             <div className="hero__title title_62">
-              BLOG<span className="notes_of_reviewes"></span>
+              BLOG
             </div>
           </div>
           <div className="header_circle_yellow"></div>

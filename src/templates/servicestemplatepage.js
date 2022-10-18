@@ -97,6 +97,12 @@ export const query = graphql`
         content
         parentId
         slug
+        featuredImage {
+          node {
+            id
+            mediaItemUrl
+          }
+        }
       }
       allWpPage(filter: {wpParent: {node: {slug: {eq: $slug}}}}) {
         edges {

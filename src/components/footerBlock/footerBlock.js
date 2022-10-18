@@ -10,7 +10,7 @@ import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
-const FooterBlock = ({ content }) => {
+const FooterBlock = ({ content, contentImage }) => {
   if (content) {
     const title = content.title.replace(/<[^>]+>/g, '');
     const arrayList = content.content.reduce((next, prev) => {
@@ -47,6 +47,10 @@ const FooterBlock = ({ content }) => {
                 ) : null
               }
             </div>
+            { contentImage ? (
+            <div className="leaders_choice__title" style={{marginTop: '60px'}}>
+              <img src={ contentImage } alt="team" style={{width: '100%', height: '100%', borderRadius: '25px'}}/>
+            </div>) : null }
           </div>
         </div>
       </div>
