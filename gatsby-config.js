@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: process.env.WPGRAPHQL_URL || `https://wp.bpm-c.com/graphql`, //  https://um2020.by/graphql https://wp-server-bpm-cloud.webfocus.by/graphql
+        url: process.env.WPGRAPHQL_URL || `https://wp.bpm-c.com/graphql`,
       },
       schema: {
         requestConcurrency: 5, // currently set to 15
