@@ -35,6 +35,7 @@ const News = ({ location }) => {
               node {
                 id
                 mediaItemUrl
+                sizes
               }
             }
             categories {

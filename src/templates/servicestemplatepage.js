@@ -45,20 +45,20 @@ const Servicestemplatepage = ({pageContext, location, data}) => {
       <HeroWebSiteDesign title={ contentPage.title } content={ content && content[0] ? content[0] : null } location={ location }></HeroWebSiteDesign>
       <ServiceITOutsourcing title={ pageContext.title } themes={ themes }></ServiceITOutsourcing>
       <WebSiteDesignReason content={ content && content[1] ? content[1] : null }></WebSiteDesignReason>
-      <PortfolioWebSiteDesign posts={ posts } titlePage={"Portfolio"}></PortfolioWebSiteDesign>
-      <GoalsDesign content={content && content[2] ? content[2] : null}></GoalsDesign>
+      <PortfolioWebSiteDesign posts={ posts } titlePage={ "Portfolio" }></PortfolioWebSiteDesign>
+      <GoalsDesign content={ content && content[2] ? content[2] : null }></GoalsDesign>
       <Form></Form>
-      <RequiresWebsiteDesign content={content && content[3] ? content[3] : null}></RequiresWebsiteDesign>
+      <RequiresWebsiteDesign content={ content && content[3] ? content[3] : null }></RequiresWebsiteDesign>
       <ServicesItem></ServicesItem>
-      <ResWebDesign  content={content && content[4] ? content[4] : null}></ResWebDesign>
+      <ResWebDesign  content={ content && content[4] ? content[4] : null }></ResWebDesign>
       <Blog titlePage="Blog"></Blog>
-      <WebDesignCreationVision content={content && content[5] ? content[5] : null}></WebDesignCreationVision>
-      <ResultsOfWebDesign content={content && content[6] ? content[6] : null}></ResultsOfWebDesign>
+      <WebDesignCreationVision content={ content && content[5] ? content[5] : null }></WebDesignCreationVision>
+      <ResultsOfWebDesign content={ content && content[6] ? content[6] : null }></ResultsOfWebDesign>
       <Reviews></Reviews>
-      <BuyWebSite content={content && content[7] ? content[7] : null}></BuyWebSite>
-      <SiteDesignByBpmCloud content={content && content[8] ? content[8] : null}></SiteDesignByBpmCloud>
-      <FooterBlock content={content && content[9] ? content[9] : null}></FooterBlock>
-      {otherArray && otherArray.length>0 ? (<Others content={otherArray ? otherArray : null}></Others>) : null}
+      <BuyWebSite content= { content && content[7] ? content[7] : null }></BuyWebSite>
+      <SiteDesignByBpmCloud content={ content && content[8] ? content[8] : null }></SiteDesignByBpmCloud>
+      <FooterBlock content={ content && content[9] ? content[9] : null }></FooterBlock>
+      { otherArray && otherArray.length>0 ? (<Others content={ otherArray ? otherArray : null }></Others>) : null }
       <WorkTogether></WorkTogether>
       <Seo title={ pageContext.title } />
     </Layout>
@@ -85,6 +85,7 @@ export const query = graphql`
               node {
                 id
                 mediaItemUrl
+                sizes
               }
             }
           }
@@ -101,6 +102,7 @@ export const query = graphql`
           node {
             id
             mediaItemUrl
+            sizes
           }
         }
       }

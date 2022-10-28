@@ -89,19 +89,19 @@ const WebDesignCreationVision = ({ content }) => {
         return (
           <div className="service_package__info">
             <div className="service_package_info_block">
-              {resArrayOne && resArrayOne[0] ? (
+              { resArrayOne && resArrayOne[0] ? (
                 <div className="service_package_info_block__text font_18" dangerouslySetInnerHTML={{__html: resArrayOne[0] }}/>
-              ) : null}
+              ) : null }
               <br/>
-              {resArrayOne && resArrayOne[1] ? (
+              { resArrayOne && resArrayOne[1] ? (
                 <div className="service_package_info_block__text font_18" dangerouslySetInnerHTML={{__html: resArrayOne[1] }}/>
-              ) : null}
+              ) : null }
             </div>
-            {resArrayOne && resArrayOne[2] ? (
+            { resArrayOne && resArrayOne[2] ? (
               <div className="service_package_info_block">
                 <div className="service_package_info_block__text font_18"  dangerouslySetInnerHTML={{__html: resArrayOne[2] }}/>
-              </div>
-            ): null}
+              </div> 
+            ): null }
           </div>
         )
       }

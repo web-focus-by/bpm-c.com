@@ -19,14 +19,14 @@ const SiteDesignByBpmCloud = ({ content }) => {
     const arrayList = content.content.reduce((next, prev) => {
       if ((prev === "<ul>" || prev === "</ul>" || prev.includes("<li>") || prev.includes("</li>")) &&
       (!prev.includes("<p>") || !prev.includes("</p>"))) {
-        return [...next, prev];
+        return [ ...next, prev ];
       }
       return next
     },[])
     const paragraphsList = content.content.reduce((next, prev) => {
       if (prev.includes("<p>") || prev.includes("</p>")) {
         prev = prev.replace(/<[^>]+>/g, '')
-        return [...next, prev];
+        return [ ...next, prev ];
       }
       return next
     },[])

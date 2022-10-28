@@ -25,7 +25,7 @@ const InformationAboutCompany = ({ location, data }) => {
     <>
       <Layout>
         <HeroWebSiteDesign title={ contentPage.title } content={ content && content[0] ? content[0] : null } location={ location } titleLogo="about_company"></HeroWebSiteDesign>
-        <FooterBlock content={content && content[1] ? content[1] : null} contentImage = { featuredImage }></FooterBlock>
+        <FooterBlock content={ content && content[1] ? content[1] : null } contentImage = { featuredImage }></FooterBlock>
         <Form></Form>
         <WorkTogether></WorkTogether>
         <Seo title="Information about company" />
@@ -49,6 +49,7 @@ export const query = graphql`
         node {
           id
           mediaItemUrl
+          sizes
         }
       }
     }

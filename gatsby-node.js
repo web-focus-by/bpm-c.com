@@ -62,6 +62,7 @@ exports.createPages = async function ({ actions, graphql }) {
             node {
               id
               mediaItemUrl
+              sizes
             }
           }
           comments {

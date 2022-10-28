@@ -23,13 +23,13 @@ const GoalsDesign = ({ content }) => {
     const text = content.content.join('');
     const title = content.title.replace(/<[^>]+>/g, '');
     let count1;
-    let firstArr = content.content.reduce((result,value) => {
+    let firstArr = content.content.reduce((result, value) => {
       if (value.includes("<ul>") || value.includes("</ul>") || value.includes("<li>") || value.includes("</li>")) {
         return [...result, value]
       }
       return result
     },[]);
-    let secondArr = content.content.reduce((result,value) => {
+    let secondArr = content.content.reduce((result, value) => {
       if (value.includes("<ul>") || value.includes("</ul>") || value.includes("<li>") || value.includes("</li>")) {
         return [...result, value]
       }
@@ -55,20 +55,20 @@ const GoalsDesign = ({ content }) => {
               </div>
               {paragraphsList && paragraphsList.length ? (
                 <div className="leaders_choice__block"><div dangerouslySetInnerHTML={{__html: paragraphsList }} />
-                {secondArr && secondArr.length>0 ? (
+                { secondArr && secondArr.length>0 ? (
                   <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: firstArr.join('') }} />
-                ) : null} 
-                {firstArr && firstArr.length>0 ? (
+                ) : null } 
+                { firstArr && firstArr.length>0 ? (
                   <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: secondArr.join('') }}/>
-                ) : null}
+                ) : null }
                 </div>
               ) : (<div className="leaders_choice__block">
-                {secondArr && secondArr.length>0 ? (
+                { secondArr && secondArr.length>0 ? (
                   <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: firstArr.join('') }} />
-                ) : null} 
-                {firstArr && firstArr.length>0 ? (
+                ) : null } 
+                { firstArr && firstArr.length>0 ? (
                   <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: secondArr.join('') }}/>
-                ) : null}
+                ) : null }
               </div>
                 )
               }
