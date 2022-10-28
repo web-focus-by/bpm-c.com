@@ -35,6 +35,7 @@ const Blog = ({ location }) => {
               node {
                 id
                 mediaItemUrl
+                sizes
               }
             }
             categories {

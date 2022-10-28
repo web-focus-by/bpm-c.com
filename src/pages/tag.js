@@ -35,6 +35,7 @@ const Tag = ({ location }) => {
                 node {
                   id
                   mediaItemUrl
+                  sizes
                 }
               }
               categories {

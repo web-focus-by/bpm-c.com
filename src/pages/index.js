@@ -38,6 +38,7 @@ const IndexPage = ({ location }) => {
               node {
                 id
                 mediaItemUrl
+                sizes
               }
             }
           }

@@ -32,6 +32,7 @@ const Blog = ({ titlePage }) => {
               node {
                 id
                 mediaItemUrl
+                sizes
               }
             }
             categories {

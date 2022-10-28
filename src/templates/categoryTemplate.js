@@ -38,6 +38,7 @@ export const query = graphql`
             node {
               id
               mediaItemUrl
+              sizes
             }
           }
         }

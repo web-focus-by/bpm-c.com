@@ -35,6 +35,7 @@ const Portfolios = ({ location }) => {
               node {
                 id
                 mediaItemUrl
+                sizes
               }
             }
           }
