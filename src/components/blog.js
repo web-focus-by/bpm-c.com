@@ -114,7 +114,7 @@ const Blog = ({ titlePage }) => {
             </ul>
             <div className="blog_products_block_list_date">{ Moment(item.node.date).format('DD-MM-YYYY') }</div>
           </div>
-          <div className="blog_products_block_title"><Link to={ item.node.link }>{ item.node.title }</Link></div>
+          <div className="blog_products_block_title"><Link className="class_link" to={ item.node.link }>{ item.node.title }</Link></div>
         </div>
       </SwiperSlide>
     );
