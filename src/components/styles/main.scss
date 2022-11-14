@@ -1376,7 +1376,7 @@ body {
 
 .company_description {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1.1fr 0.9fr;
     column-gap: 100px;
 
     &__info {
@@ -1403,8 +1403,8 @@ body {
 
     &__pic {
         img {
-            width: 100%;
-            height: 100%;
+            width: 604px;
+            height: 553px;
             object-fit: cover;
             border-radius: 25px;
         }
@@ -1758,7 +1758,7 @@ body {
                         color: #935CFF;
                     }
 
-                    margin-right: 60px;
+                    margin-right: 30px;
                 }
 
                 &:last-child a {
