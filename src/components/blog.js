@@ -72,19 +72,17 @@ const Blog = ({ titlePage }) => {
       document.addEventListener("mouseover", (e) => {
         let currentCase = refCases && refCases.current && refCases.current.filter(refCase => refCase && refCase.contains(e.target)) ?
         refCases.current.filter(refCase => refCase && refCase.contains(e.target))[0] : null;
-        console.log(currentCase);
         if (currentCase && refCases.current.includes(currentCase)) {
-          //document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.add('portfolio_link');
-          //document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.remove('class_link');
+          document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.add('portfolio_link');
+          document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.remove('class_link');
         }
       }, true);
       document.addEventListener("mouseout", (e) => {
         let currentCase = refCases && refCases.current && refCases.current.filter(refCase => refCase && refCase.contains(e.target)) ?
         refCases.current.filter(refCase => refCase && refCase.contains(e.target))[0] : null;
         if (currentCase && refCases.current.includes(currentCase)) {
-          console.log(currentCase.id);
-          //document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.add('class_link');
-          //document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.remove('portfolio_link');
+          document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.add('class_link');
+          document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.remove('portfolio_link');
         }
       }, true);
       return () => {
@@ -92,9 +90,8 @@ const Blog = ({ titlePage }) => {
           let currentCase = refCases && refCases.current && refCases.current.filter(refCase => refCase && refCase.contains(e.target)) ?
           refCases.current.filter(refCase => refCase && refCase.contains(e.target))[0] : null;
           if (currentCase && refCases.current.includes(currentCase)) {
-            console.log(currentCase);
-            //document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.add('portfolio_link');
-            //document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.remove('class_link');
+            document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.add('portfolio_link');
+            document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.remove('class_link');
           }
         }, true);
       };
