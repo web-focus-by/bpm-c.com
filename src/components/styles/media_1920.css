@@ -37,8 +37,8 @@
     margin-bottom: calc(57px + 3 * (100vw - 1366px) / 554);
   }
   .container {
-    padding-left: calc(157px + 63 * (100vw - 1366px) / 554);
-    padding-right: calc(157px + 63 * (100vw - 1366px) / 554);
+    padding-left: calc(157px + 53 * (100vw - 1366px) / 554);
+    padding-right: calc(157px + 53 * (100vw - 1366px) / 554);
   }
   .title_80 {
     font-size: calc(57px + 23 * (100vw - 1366px) / 554);
@@ -68,6 +68,9 @@
   .hero__butn .button_white {
     font-size: calc(11px + 5 * (100vw - 1366px) / 554);
     padding: calc(16px + 6 * (100vw - 1366px) / 554) calc(29px + 11 * (100vw - 1366px) / 554);
+  }
+  .hero__butn :hover {
+    cursor: pointer;
   }
   .hero__butntag .button_item_tag {
     font-size: calc(11px + 5 * (100vw - 1366px) / 554);
@@ -150,9 +153,6 @@
   }
   .form__block .form_block_text p {
     font-size: calc(12px + 6 * (100vw - 1366px) / 554);
-  }
-  .form__block .form_block_text .form_block_gif {
-    margin-left: calc(12px + 21 * (100vw - 1366px) / 554);
   }
   .form__block .form_block_text .form_block_gif img {
     width: calc(25px + 11 * (100vw - 1366px) / 554 + 14 * (100vw - 1366px) / 554);

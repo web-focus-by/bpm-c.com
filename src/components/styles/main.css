@@ -8,7 +8,7 @@ body {
 
 .container {
   margin: 0px auto;
-  padding: 0px 220px;
+  padding: 0px 210px;
 }
 
 .header {
@@ -73,6 +73,36 @@ body {
   border-radius: 20%;
   position: relative;
   top: -5px;
+}
+
+.active_link {
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #1A1B1F;
+}
+.active_link::after {
+  content: "";
+  position: absolute;
+  transform: scaleX(0);
+  z-index: -1;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #935CFF;
+  color: #935CFF;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.active_link:hover {
+  color: #935CFF;
+}
+.active_link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .dropdown_services_sticky {
@@ -363,6 +393,9 @@ body {
 .hero__butn .button_white span {
   margin-left: 14px;
 }
+.hero__butn :hover {
+  cursor: pointer;
+}
 .hero__butn__butntag .button_item_tag {
   padding: 10px 20px;
   font-weight: 500;
@@ -405,6 +438,9 @@ body {
   grid-column-gap: 1%;
   grid-row-gap: 0.5%;
 }
+.portfolio__products .portfolio_products_block {
+  margin-bottom: 24px;
+}
 .portfolio__products .portfolio_products_block .portfolio_products_block_pic {
   margin-bottom: 24px;
 }
@@ -423,6 +459,36 @@ body {
   font-size: 30px;
   line-height: 115%;
   font-weight: 500;
+}
+
+.class_link {
+  text-decoration: none;
+  color: #1A1B1F;
+}
+
+.portfolio_link {
+  position: relative;
+  text-decoration: none;
+  color: #935CFF;
+}
+.portfolio_link::after {
+  content: "";
+  position: absolute;
+  transform: scaleX(0);
+  z-index: -1;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #935CFF;
+  color: #935CFF;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.portfolio_link:hover::after {
+  color: #935CFF;
+  transform: scaleX(0);
+  transform-origin: bottom left;
 }
 
 .blogs {
@@ -831,6 +897,7 @@ body {
 .technologies__list {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 155px);
   justify-content: space-between;
   grid-row-gap: 34px;
   margin-left: -64px;
@@ -887,7 +954,8 @@ body {
        column-gap: 25px;
 }
 .blog__products .blog_products_block .blog_products_block_pic img {
-  width: 100%;
+  width: 350px;
+  height: 340px;
 }
 .blog__products .blog_products_block .blog_products_block_list {
   margin: 27px 0px 24px 0px;
@@ -921,7 +989,7 @@ body {
 .bpm_cloud__info .bpm_cloud_block .bpm_cloud_block_title {
   font-weight: 500;
   font-size: 30px;
-  line-height: 115%;
+  line-height: 34.5px;
   color: #1A1B1F;
   max-width: 75%;
   margin-bottom: 30px;

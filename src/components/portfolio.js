@@ -1,5 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
+import { useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
@@ -12,6 +13,40 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const Portfolio = ({ posts }) => {
+  const refCases = useRef([]);
+
+  useEffect(
+    () => {
+      refCases.current = refCases.current.slice(0, posts.length);
+      document.addEventListener("mouseover", (e) => {
+        let currentCase = refCases && refCases.current && refCases.current.filter(refCase => refCase && refCase.contains(e.target)) ?
+        refCases.current.filter(refCase => refCase && refCase.contains(e.target))[0] : null;
+        if (currentCase && refCases.current.includes(currentCase)) {
+          document.getElementById(currentCase.id).getElementsByClassName('portfolio_products_block_title')[0].children[0].classList.add('portfolio_link');
+          document.getElementById(currentCase.id).getElementsByClassName('portfolio_products_block_title')[0].children[0].classList.remove('class_link');
+        }
+      }, true);
+      document.addEventListener("mouseout", (e) => {
+        let currentCase = refCases && refCases.current && refCases.current.filter(refCase => refCase && refCase.contains(e.target)) ?
+        refCases.current.filter(refCase => refCase && refCase.contains(e.target))[0] : null;
+        if (currentCase && refCases.current.includes(currentCase)) {
+          document.getElementById(currentCase.id).getElementsByClassName('portfolio_products_block_title')[0].children[0].classList.add('class_link');
+          document.getElementById(currentCase.id).getElementsByClassName('portfolio_products_block_title')[0].children[0].classList.remove('portfolio_link');
+        }
+      }, true);
+      return () => {
+        document.removeEventListener("mouseover", (e) => {
+          let currentCase = refCases && refCases.current && refCases.current.filter(refCase => refCase && refCase.contains(e.target)) ?
+          refCases.current.filter(refCase => refCase && refCase.contains(e.target))[0] : null;
+          if (currentCase && refCases.current.includes(currentCase)) {
+            document.getElementById(currentCase.id).getElementsByClassName('portfolio_products_block_title')[0].children[0].classList.add('portfolio_link');
+            document.getElementById(currentCase.id).getElementsByClassName('portfolio_products_block_title')[0].children[0].classList.remove('class_link');
+          }
+        }, true);
+      };
+    }, [posts]
+  );
+
   const items = posts.map((post, index) => {
     if (index <= 5) {
       let tags = [];
@@ -26,12 +61,12 @@ const Portfolio = ({ posts }) => {
         })
       }
       return (
-        <div className="portfolio_products_block">
+        <div id={ post.node.id } ref={ el => refCases.current[index] = el } className="portfolio_products_block">
           <div className="portfolio_products_block_pic">
             <Link to={ post.node.link }>
-              {post.node.featuredImage && post.node.featuredImage.node.mediaItemUrl ? (
+              { post.node.featuredImage && post.node.featuredImage.node.mediaItemUrl ? (
                 <img src={ post.node.featuredImage.node.mediaItemUrl } alt="the post"/>
-              ) : ''}
+              ) : '' }
             </Link>
           </div>
           <div className="portfolio_products_block_list hash">
@@ -39,7 +74,7 @@ const Portfolio = ({ posts }) => {
               { tags }
             </ul>
           </div>
-          <div className="portfolio_products_block_title">{ post.node.title }</div>
+          <div className="portfolio_products_block_title"><Link className="class_link" to={ post.node.link }>{ post.node.title }</Link></div>
         </div>
       )
     }
@@ -50,9 +85,7 @@ const Portfolio = ({ posts }) => {
       <div className="portfolio margin_bottom_240">
         <div className="view_title">
           <div className="title_62">Portfolio</div>
-          <div className="view_all">
-            <Link to={ "/portfolios/" }>View all</Link>
-          </div>
+          <Link className="active_link" to={ "/portfolios/" }>View all</Link>
         </div>
         <div className="portfolio__products">
           { items }

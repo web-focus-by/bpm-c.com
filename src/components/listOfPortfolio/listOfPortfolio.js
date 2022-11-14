@@ -127,7 +127,9 @@ const ListOfPortfolio = ({ posts }) => {
               { tags }
             </ul>
           </div>
-          <div className="portfolio_products_block_title" >{ post.content.node.title }</div>
+          <div className="portfolio_products_block_title" >
+            <Link className="portfolio_link" to={ post.content.node.link }>{ post.content.node.title }</Link>
+          </div>
         </div>
       )
     }

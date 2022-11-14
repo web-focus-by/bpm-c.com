@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useEffect, useRef } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import Moment from 'moment';
 import "swiper/css"
@@ -45,6 +46,7 @@ const Blog = ({ titlePage }) => {
         }
       }
     }`)
+  const refCases = useRef([]);
   const allNews = data ? data.allWpPost.edges : [];
   const tags = (item) => {
     const results = item.node.tags.nodes.reduce((res, tag) => {
@@ -62,12 +64,47 @@ const Blog = ({ titlePage }) => {
       }
     })
     return result;
-    
   }
+
+  useEffect(
+    () => {
+      refCases.current = refCases.current.slice(0, allNews.length);
+      document.addEventListener("mouseover", (e) => {
+        let currentCase = refCases && refCases.current && refCases.current.filter(refCase => refCase && refCase.contains(e.target)) ?
+        refCases.current.filter(refCase => refCase && refCase.contains(e.target))[0] : null;
+        console.log(currentCase);
+        if (currentCase && refCases.current.includes(currentCase)) {
+          //document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.add('portfolio_link');
+          //document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.remove('class_link');
+        }
+      }, true);
+      document.addEventListener("mouseout", (e) => {
+        let currentCase = refCases && refCases.current && refCases.current.filter(refCase => refCase && refCase.contains(e.target)) ?
+        refCases.current.filter(refCase => refCase && refCase.contains(e.target))[0] : null;
+        if (currentCase && refCases.current.includes(currentCase)) {
+          console.log(currentCase.id);
+          //document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.add('class_link');
+          //document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.remove('portfolio_link');
+        }
+      }, true);
+      return () => {
+        document.removeEventListener("mouseover", (e) => {
+          let currentCase = refCases && refCases.current && refCases.current.filter(refCase => refCase && refCase.contains(e.target)) ?
+          refCases.current.filter(refCase => refCase && refCase.contains(e.target))[0] : null;
+          if (currentCase && refCases.current.includes(currentCase)) {
+            console.log(currentCase);
+            //document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.add('portfolio_link');
+            //document.getElementById(currentCase.id).getElementsByClassName('blog_products_block_title')[0].children[0].classList.remove('class_link');
+          }
+        }, true);
+      };
+    }, [allNews]
+  );
+
   const result = allNews.map((item, index) => {
     return (
       <SwiperSlide key={ item.node.id }>
-        <div className="blog_products_block">
+        <div id={ item.node.id } className="blog_products_block" ref={ el => refCases.current[index] = el }>
           <Link to={ item.node.link }>
             <div className="blog_products_block_pic">
               { item.node.featuredImage && item.node.featuredImage.node.mediaItemUrl ?
@@ -80,7 +117,7 @@ const Blog = ({ titlePage }) => {
             </ul>
             <div className="blog_products_block_list_date">{ Moment(item.node.date).format('DD-MM-YYYY') }</div>
           </div>
-          <div className="blog_products_block_title">{ item.node.title }</div>
+          <div className="blog_products_block_title"><Link to={ item.node.link }>{ item.node.title }</Link></div>
         </div>
       </SwiperSlide>
     );
@@ -91,11 +128,7 @@ const Blog = ({ titlePage }) => {
       <div className="blog margin_bottom_240">
         <div className="view_title">
           <div className="title_62">{ titlePage }</div>
-          <div className="view_all">
-            <Link to={"/blog/"}>
-              View all
-            </Link>
-          </div>
+          <Link className="active_link" to={"/blog/"}>View all</Link>
         </div>
         <div className="blog__products">
         <Swiper

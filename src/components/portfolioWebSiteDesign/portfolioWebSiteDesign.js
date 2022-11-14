@@ -41,7 +41,9 @@ const PortfolioWebSiteDesign = ({ posts, titlePage }) => {
               { tags }
             </ul>
           </div>
-          <div className="portfolio_products_block_title">{ post.node.title }</div>
+          <div className="portfolio_products_block_title">
+            <Link className="portfolio_link" to={ post.node.link }>{ post.node.title }</Link>
+          </div>
         </div>
       )
     }
@@ -52,9 +54,7 @@ const PortfolioWebSiteDesign = ({ posts, titlePage }) => {
       <div className="portfolio margin_bottom_240">
         <div className="view_title">
           <div className="title_62">{ titlePage }</div>
-          <div className="view_all">
-            <Link to={"/portfolios/"}>View all</Link>
-          </div>
+          <div className="view_all"><Link className="active_link" to={"/portfolios/"}>View all</Link></div>
         </div>
         <div className="portfolio__products">
           { items }

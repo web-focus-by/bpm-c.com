@@ -9,7 +9,7 @@ body {
 
 .container {
     margin: 0px auto;
-    padding: 0px 220px;
+    padding: 0px 210px;
 }
 
 .header {
@@ -84,6 +84,36 @@ body {
         border-radius: 20%;
         position: relative;
         top: -5px;
+    }
+}
+
+.active_link {
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #1A1B1F;
+    &::after {
+        content: '';
+        position: absolute;
+        transform: scaleX(0);
+        z-index: -1;
+        width: 100%;
+        height: 2px;
+        bottom: -3px;
+        left: 0;
+        background-color: #935CFF;
+        color: #935CFF;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    &:hover {
+        color: #935CFF;
+        &::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
     }
 }
 
@@ -241,7 +271,7 @@ body {
                     }
 
                     &::after {
-                        content: "";
+                        content: '';
                         display: inline-block;
                         width: 34px;
                         height: 2px;
@@ -417,6 +447,9 @@ body {
                 margin-left: 14px;
             }
         }
+        :hover {
+            cursor: pointer;
+        }
     &__butntag {
         .button_item_tag {
             padding: 10px 20px;
@@ -470,7 +503,6 @@ body {
 
             .portfolio_products_block_pic {
                 margin-bottom: 24px;
-
                 img {
                     width: 100%;
                     margin-bottom: 0px;
@@ -486,6 +518,7 @@ body {
                     }
                 }
             }
+            margin-bottom: 24px;
         }
 
         .portfolio_products_block_title {
@@ -493,6 +526,38 @@ body {
             font-size: 30px;
             line-height: 115%;
             font-weight: 500;
+        }
+    }
+}
+
+.class_link {
+    text-decoration: none;
+    color: #1A1B1F;
+}
+
+.portfolio_link {
+    position: relative;
+    text-decoration: none;
+    color: #935CFF;
+    &::after {
+        content: '';
+        position: absolute;
+        transform: scaleX(0);
+        z-index: -1;
+        width: 100%;
+        height: 2px;
+        bottom: -3px;
+        left: 0;
+        background-color: #935CFF;
+        color: #935CFF;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    &:hover {
+        &::after {
+            color: #935CFF;
+            transform: scaleX(0);
+            transform-origin: bottom left;
         }
     }
 }
@@ -965,6 +1030,7 @@ body {
     &__list {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 155px);
         justify-content: space-between;
         grid-row-gap: 34px;
         margin-left: -64px;
@@ -1031,7 +1097,8 @@ body {
         .blog_products_block {
             .blog_products_block_pic {
                 img {
-                    width: 100%;
+                    width: 350px;
+                    height: 340px;
                 }
             }
 
@@ -1075,7 +1142,7 @@ body {
             .bpm_cloud_block_title {
                 font-weight: 500;
                 font-size: 30px;
-                line-height: 115%;
+                line-height: 34.5px;
                 color: #1A1B1F;
                 max-width: 75%;
                 margin-bottom: 30px;
