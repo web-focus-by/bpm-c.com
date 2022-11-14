@@ -78,9 +78,7 @@ const Reviews = ({ siteTitle, data }) => {
       <div className="reviews margin_bottom_240">
         <div className="view_title">
           <div className="title_62">Reviews</div>
-          <div className="view_all">
-            <Link to="#">View all</Link>
-          </div>
+          <Link className="active_link" to="#">View all</Link>
         </div>
         <div className="reviews__info">
           <Swiper
