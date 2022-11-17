@@ -20,7 +20,7 @@ body {
     z-index: 2;
 
     &__nav {
-        padding: 24px 0px 20px 0px;
+        padding: 24px 0px 0px 0px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -32,6 +32,11 @@ body {
 
                 li {
                     display: inline-block;
+                    padding-bottom: 24px;
+                    &:hover {
+                        border-bottom: 4px solid #935CFF;
+                        transition: 100ms;
+                    }
 
                     &:last-child {
                         a {
