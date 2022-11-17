@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useRef } from "react"
+import { useRef, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import "../components/styles/main.css"
@@ -11,12 +11,43 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const Header = ({ turnOnMenu, mainItems }) => {
+const Header = ({ siteTitle, turnOnMenu, mainItems, toggle, justTurnOnMenu, justTurnOffMenu }) => {
   const refHeader = useRef();
+  const menuItemsRef = useRef([]);
+  const [isToggle, setIsToggle] = useState(toggle);
   let url = '';
   if (typeof window !== 'undefined') {
     url = new URL(window.location.href);
   }
+  console.log(siteTitle);
+
+  useEffect(
+    () => {
+      menuItemsRef.current = menuItemsRef.current.slice(0, mainItems.length);
+      document.addEventListener("mouseover", (e) => {
+        let currentCase = menuItemsRef && menuItemsRef.current && menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target)) ?
+        menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target))[0] : null;
+        if (toggle) {
+          if (currentCase && menuItemsRef.current.includes(currentCase) && (e.target.innerText !== 'Portfolios')) {
+            justTurnOnMenu(e.target.innerText);
+            return;
+          }
+          return;
+        }
+      }, true);
+      document.addEventListener("mouseout", (e) => {
+        let currentCase = menuItemsRef && menuItemsRef.current && menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target)) ?
+        menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target))[0] : null;
+        if (toggle) {
+          if (currentCase && menuItemsRef.current.includes(currentCase) && (e.target.innerText === 'Portfolios')) {
+            justTurnOffMenu();
+            return;
+          }
+          return;
+        }
+      }, true);
+    }, [mainItems]
+  );
 
   const homeUrl = url ? url.origin : '';
   const activeMenu = (e) => {
@@ -24,13 +55,13 @@ const Header = ({ turnOnMenu, mainItems }) => {
   }
 
   const menuItems = mainItems.map((item, index) => {
-    if (index === 0 || index === 6) {
+    if (index === 0) {
       return (
-        <li key={ index }><Link to={ homeUrl + item.path }>{ item.label }</Link></li>
+        <li id = { item.id } ref={ el => menuItemsRef.current[index] = el } key={ index }><Link to={ homeUrl + item.path }>{ item.label }</Link></li>
       )
     } else {
       return (
-        <li key={ index } onClick={ activeMenu } ><a>{ item.label }</a></li>
+        <li id = { item.id } ref={ el => menuItemsRef.current[index] = el } key={ index } onClick={ activeMenu } ><a>{ item.label }</a></li>
       )
     }
     
@@ -40,7 +71,7 @@ const Header = ({ turnOnMenu, mainItems }) => {
     <header className="header">
       <div className="container">
         <div className="header__nav">
-          <div>
+          <div style={{ paddingBottom: '20px' }}>
             <Link to={ homeUrl }>
               <span className="logo"></span>
             </Link>
