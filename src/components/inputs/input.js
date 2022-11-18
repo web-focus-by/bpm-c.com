@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useRef, useEffect, useState } from "react"
+import { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 

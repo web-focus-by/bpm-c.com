@@ -29,8 +29,8 @@ const Layout = ({ children }) => {
       }
     }
   `);
-
-  const [ selectedItem, setItem ] = useState();
+  const [isClickOut, setClickOut] = useState(false);
+  const [selectedItem, setItem] = useState();
   const allItems = data.wpMenu && data.wpMenu.menuItems &&  data.wpMenu.menuItems.nodes ? data.wpMenu.menuItems.nodes : null;
   const allItemsForMenu = allItems.reduce((res, val)=>{
     let item = val.path.slice(1,-1).split("/");
@@ -52,6 +52,7 @@ const Layout = ({ children }) => {
 
   const closeOpenMenu = (e) => {
     setToggle(!isToggle);
+    if (isClickOut) { setClickOut(false); }
     setItem(e);
   }
 
@@ -70,9 +71,9 @@ const Layout = ({ children }) => {
   }
 
   const clickOut = (e) => {
-    if (refMenu && refMenu.current && !refMenu.current.contains(e.target))
-    {
+    if (refMenu && refMenu.current && !refMenu.current.contains(e.target)) {
       closeMenu();
+      setClickOut(true);
     }
   }
 
@@ -89,10 +90,9 @@ const Layout = ({ children }) => {
     <>
       <div className="header" ref={ refMenu }>
         <Header
-          siteTitle={ data.site.siteMetadata?.title || `Title` }
           turnOnMenu={ closeOpenMenu }
           mainItems={ mainItems }
-          toggle={ isToggle }
+          clickOut = { isClickOut }
           justTurnOnMenu={ onlyTurnOnMenu }
           justTurnOffMenu={ closeMenu }
         />

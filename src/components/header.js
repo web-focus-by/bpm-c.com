@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useRef, useEffect, useState } from "react"
+import { useRef, useEffect, useState, useCallback } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import "../components/styles/main.css"
@@ -11,61 +11,58 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const Header = ({ siteTitle, turnOnMenu, mainItems, toggle, justTurnOnMenu, justTurnOffMenu }) => {
+const Header = ({ turnOnMenu, mainItems, clickOut, justTurnOnMenu, justTurnOffMenu }) => {
+  const homeUrl = url ? url.origin : '';
   const refHeader = useRef();
   const menuItemsRef = useRef([]);
-  const [isToggle, setIsToggle] = useState(toggle);
+  const [isTurnOn, setIsTurnOn] = useState(clickOut);
   let url = '';
   if (typeof window !== 'undefined') {
     url = new URL(window.location.href);
   }
-  console.log(siteTitle);
+  const activeMenu = (e) => {
+    turnOnMenu(e.target.innerText);
+    setIsTurnOn(!isTurnOn);
+  }
+  const menuItems = mainItems.map((item, index) => {
+    if (index === 0) {
+      return (
+        <li id = { item.id } ref={ el => menuItemsRef.current[index] = el } key={ index } onClick={()=>{ setIsTurnOn(!isTurnOn); }}>
+          <Link to={ item.path }>{ item.label }</Link>
+        </li>
+      )
+    } else {
+      return (
+        <li id = { item.id } ref={ el => menuItemsRef.current[index] = el } key={ index } onClick={ activeMenu } >
+          <a>{ item.label }</a>
+        </li>
+      )
+    }
+  });
+  const movingMouse = useCallback((e) => {  
+    let currentCase = menuItemsRef && menuItemsRef.current && menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target)) ?
+    menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target))[0] : null;
+    if (currentCase && menuItemsRef.current.includes(currentCase)) {
+      if (e.target.innerText !== 'Portfolios') {
+        justTurnOnMenu(e.target.innerText);
+        return;
+      } else if (e.target.innerText === 'Portfolios') {
+        justTurnOffMenu();
+        return;
+      }
+    }
+   }, []);
 
   useEffect(
     () => {
       menuItemsRef.current = menuItemsRef.current.slice(0, mainItems.length);
-      document.addEventListener("mouseover", (e) => {
-        let currentCase = menuItemsRef && menuItemsRef.current && menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target)) ?
-        menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target))[0] : null;
-        if (toggle) {
-          if (currentCase && menuItemsRef.current.includes(currentCase) && (e.target.innerText !== 'Portfolios')) {
-            justTurnOnMenu(e.target.innerText);
-            return;
-          }
-          return;
-        }
-      }, true);
-      document.addEventListener("mouseout", (e) => {
-        let currentCase = menuItemsRef && menuItemsRef.current && menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target)) ?
-        menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target))[0] : null;
-        if (toggle) {
-          if (currentCase && menuItemsRef.current.includes(currentCase) && (e.target.innerText === 'Portfolios')) {
-            justTurnOffMenu();
-            return;
-          }
-          return;
-        }
-      }, true);
+      if (isTurnOn && !clickOut) {
+        document.addEventListener("mouseover", movingMouse, true);
+      } else {
+        document.removeEventListener("mouseover", movingMouse, true);
+      }
     }, [mainItems]
   );
-
-  const homeUrl = url ? url.origin : '';
-  const activeMenu = (e) => {
-    turnOnMenu(e.target.innerText);
-  }
-
-  const menuItems = mainItems.map((item, index) => {
-    if (index === 0) {
-      return (
-        <li id = { item.id } ref={ el => menuItemsRef.current[index] = el } key={ index }><Link to={ homeUrl + item.path }>{ item.label }</Link></li>
-      )
-    } else {
-      return (
-        <li id = { item.id } ref={ el => menuItemsRef.current[index] = el } key={ index } onClick={ activeMenu } ><a>{ item.label }</a></li>
-      )
-    }
-    
-  });
 
   return (
     <header className="header">

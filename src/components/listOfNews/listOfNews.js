@@ -225,13 +225,14 @@ const ListOfNews = ({ posts }) => {
     }
   };
 
-  useEffect(() => {
-    document.addEventListener("scroll", loadData, true);
-
-    if (document && document.getElementById("container") && items && items.length > 10 ) {
-      document.getElementById("container").style.height = getResizeBlock(items);
-    }
-  }, []);
+  useEffect(
+    () => {
+      document.addEventListener("scroll", loadData, true);
+      if (document && document.getElementById("container") && items && items.length > 10 ) {
+        document.getElementById("container").style.height = getResizeBlock(items);
+      }
+    }, []
+  );
 
   const items = (selectedPosts && selectedPosts.length <= 10) ? selectedPosts.map((post, index) => {
     let tags = [];
