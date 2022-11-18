@@ -56,7 +56,7 @@ const Technologies = () => (
           <span className="vue"></span>
           <p className="font_18">Vue.js</p>
         </div></Link>
-        <Link className="active_link" to="/technologies/golang/"><div className="technologies_list_item">
+        <Link className="active_link" to="/technologies/net/"><div className="technologies_list_item">
           <span className="net"></span>
           <p className="font_18">.NET</p>
         </div></Link>
