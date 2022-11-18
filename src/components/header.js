@@ -12,7 +12,6 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const Header = ({ turnOnMenu, mainItems, clickOut, justTurnOnMenu, justTurnOffMenu }) => {
-  const homeUrl = url ? url.origin : '';
   const refHeader = useRef();
   const menuItemsRef = useRef([]);
   const [isTurnOn, setIsTurnOn] = useState(clickOut);
@@ -24,11 +23,12 @@ const Header = ({ turnOnMenu, mainItems, clickOut, justTurnOnMenu, justTurnOffMe
     turnOnMenu(e.target.innerText);
     setIsTurnOn(!isTurnOn);
   }
+  const homeUrl = url ? url.origin : '';
   const menuItems = mainItems.map((item, index) => {
     if (index === 0) {
       return (
         <li id = { item.id } ref={ el => menuItemsRef.current[index] = el } key={ index } onClick={()=>{ setIsTurnOn(!isTurnOn); }}>
-          <Link to={ item.path }>{ item.label }</Link>
+          <Link to={ homeUrl + item.path }>{ item.label }</Link>
         </li>
       )
     } else {
