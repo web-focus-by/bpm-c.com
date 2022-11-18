@@ -32,6 +32,7 @@ body {
 .header__nav .header_nav_list ul li {
   display: inline-block;
   padding-bottom: 24px;
+  padding-top: -20px;
 }
 .header__nav .header_nav_list ul li:hover {
   border-bottom: 4px solid #935CFF;

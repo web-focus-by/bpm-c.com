@@ -25,10 +25,12 @@ const HeroPost = ({ location, photo, info}) => {
       </li>
     )
   })
-  useEffect(() => {
-    const timer = setInterval(() => setCounter(counter + 1), shift);
-    return () => clearInterval(timer);
-  }, [counter]);
+  useEffect(
+    () => {
+      const timer = setInterval(() => setCounter(counter + 1), shift);
+      return () => clearInterval(timer);
+    }, [counter]
+  );
 
   return (
     <div className="container">
