@@ -11,10 +11,10 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const Header = ({ turnOnMenu, mainItems, clickOut, justTurnOnMenu, justTurnOffMenu }) => {
+const Header = ({ turnOnMenu, mainItems, clickOut, isToggle, justTurnOnMenu, justTurnOffMenu }) => {
   const refHeader = useRef();
   const menuItemsRef = useRef([]);
-  const [isTurnOn, setIsTurnOn] = useState(clickOut);
+  const [isTurnOn, setIsTurnOn] = useState(false);
   let url = '';
   if (typeof window !== 'undefined') {
     url = new URL(window.location.href);
@@ -56,7 +56,7 @@ const Header = ({ turnOnMenu, mainItems, clickOut, justTurnOnMenu, justTurnOffMe
   useEffect(
     () => {
       menuItemsRef.current = menuItemsRef.current.slice(0, mainItems.length);
-      if (isTurnOn && !clickOut) {
+      if (isTurnOn && (!clickOut && !isToggle)) {
         document.addEventListener("mouseover", movingMouse, true);
       } else {
         document.removeEventListener("mouseover", movingMouse, true);

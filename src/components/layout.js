@@ -52,7 +52,6 @@ const Layout = ({ children }) => {
 
   const closeOpenMenu = (e) => {
     setToggle(!isToggle);
-    if (isClickOut) { setClickOut(false); }
     setItem(e);
   }
 
@@ -72,8 +71,8 @@ const Layout = ({ children }) => {
 
   const clickOut = (e) => {
     if (refMenu && refMenu.current && !refMenu.current.contains(e.target)) {
-      closeMenu();
       setClickOut(true);
+      closeMenu();
     }
   }
 
@@ -93,6 +92,7 @@ const Layout = ({ children }) => {
           turnOnMenu={ closeOpenMenu }
           mainItems={ mainItems }
           clickOut = { isClickOut }
+          isToggle = { isToggle }
           justTurnOnMenu={ onlyTurnOnMenu }
           justTurnOffMenu={ closeMenu }
         />
