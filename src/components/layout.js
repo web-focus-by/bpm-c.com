@@ -51,8 +51,8 @@ const Layout = ({ children }) => {
   const [isToggle, setToggle] = useState(false);
 
   const closeOpenMenu = (e) => {
+    setClickOut(false);
     setToggle(!isToggle);
-    if (isClickOut) { setClickOut(false); }
     setItem(e);
   }
 
@@ -72,8 +72,8 @@ const Layout = ({ children }) => {
 
   const clickOut = (e) => {
     if (refMenu && refMenu.current && !refMenu.current.contains(e.target)) {
-      closeMenu();
       setClickOut(true);
+      closeMenu();
     }
   }
 

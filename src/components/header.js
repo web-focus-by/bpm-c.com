@@ -14,14 +14,16 @@ import "../components/styles/media_375.css"
 const Header = ({ turnOnMenu, mainItems, clickOut, justTurnOnMenu, justTurnOffMenu }) => {
   const refHeader = useRef();
   const menuItemsRef = useRef([]);
-  const [isTurnOn, setIsTurnOn] = useState(clickOut);
+  const [isTurnOn, setIsTurnOn] = useState(false);
   let url = '';
   if (typeof window !== 'undefined') {
     url = new URL(window.location.href);
   }
   const activeMenu = (e) => {
     turnOnMenu(e.target.innerText);
-    setIsTurnOn(!isTurnOn);
+    if (!(clickOut && isTurnOn)) {
+      setIsTurnOn(!isTurnOn);
+    }
   }
   const homeUrl = url ? url.origin : '';
   const menuItems = mainItems.map((item, index) => {
