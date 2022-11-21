@@ -51,6 +51,7 @@ const Layout = ({ children }) => {
   const [isToggle, setToggle] = useState(false);
 
   const closeOpenMenu = (e) => {
+    setClickOut(false);
     setToggle(!isToggle);
     setItem(e);
   }
@@ -92,7 +93,6 @@ const Layout = ({ children }) => {
           turnOnMenu={ closeOpenMenu }
           mainItems={ mainItems }
           clickOut = { isClickOut }
-          isToggle = { isToggle }
           justTurnOnMenu={ onlyTurnOnMenu }
           justTurnOffMenu={ closeMenu }
         />

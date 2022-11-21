@@ -11,7 +11,7 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const Header = ({ turnOnMenu, mainItems, clickOut, isToggle, justTurnOnMenu, justTurnOffMenu }) => {
+const Header = ({ turnOnMenu, mainItems, clickOut, justTurnOnMenu, justTurnOffMenu }) => {
   const refHeader = useRef();
   const menuItemsRef = useRef([]);
   const [isTurnOn, setIsTurnOn] = useState(false);
@@ -21,7 +21,9 @@ const Header = ({ turnOnMenu, mainItems, clickOut, isToggle, justTurnOnMenu, jus
   }
   const activeMenu = (e) => {
     turnOnMenu(e.target.innerText);
-    setIsTurnOn(!isTurnOn);
+    if (!(clickOut && isTurnOn)) {
+      setIsTurnOn(!isTurnOn);
+    }
   }
   const homeUrl = url ? url.origin : '';
   const menuItems = mainItems.map((item, index) => {
@@ -56,7 +58,7 @@ const Header = ({ turnOnMenu, mainItems, clickOut, isToggle, justTurnOnMenu, jus
   useEffect(
     () => {
       menuItemsRef.current = menuItemsRef.current.slice(0, mainItems.length);
-      if (isTurnOn && (!clickOut && !isToggle)) {
+      if (isTurnOn && !clickOut) {
         document.addEventListener("mouseover", movingMouse, true);
       } else {
         document.removeEventListener("mouseover", movingMouse, true);
