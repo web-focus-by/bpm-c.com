@@ -111,12 +111,11 @@ const Layout = ({ children }) => {
           selectedItem={ selectedItem }
           allItems={ allItemsForMenu }
         />
-         <MenuBurger
+        <MenuBurger
             isOpenBurgerMenu = { isOpenBurgerMenu }
-            turnOffMenu={ closeMenu }
-            selectedItem={ selectedItem }
-            allItems={ allItemsForMenu }>
-         </MenuBurger>
+            mainItems={ mainItems }
+            allItems={ allItemsForMenu }
+        />
       </div>
       <PhoneButn onClick={ toggleModalActive }></PhoneButn>
       { isOpen ? <Modal onClickClose={ toggleModalActive }></Modal> : null}

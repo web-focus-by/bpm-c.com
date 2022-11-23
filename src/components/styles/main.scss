@@ -127,7 +127,7 @@ body {
     }
 }
 
-.dropdown_services_sticky{
+.dropdown_services_sticky {
     position: sticky;
     top: 100px;
     .dropdown_services{
@@ -177,6 +177,59 @@ body {
     }
 }
 
+.dropdown_burgetmenu_sticky {
+    position: sticky;
+    top: 100px;
+    .dropdown_burgetmenu {
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        left: 0.5%;
+        right: 0.5%;
+        &__title{
+            font-family: 'Acrom';
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 115%;
+            color: #FFFFFF;
+            background: #9C7CF1;
+            padding: 60px 170px 0px 60px;
+            border-radius: 20px 0px 0px 20px;
+        }
+        &__info{
+            background: #fff;
+            padding: 60px 219px 60px 100px;
+            border-radius: 0px 20px 20px 0px;
+            width: 100%;
+            ul{
+                list-style: none;
+                display: grid;
+                grid-template-columns: 2fr;
+                grid-column-gap: 57px;
+                margin: 0px;
+                padding: 0px;
+                li{
+                    &:not(:last-child){
+                        margin-bottom: 18px;
+                    }
+                    
+                    a{
+                        font-family: 'Acrom';
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 150%;
+                        color: #1A1B1F;
+                        text-decoration: none;
+                        &:hover{
+                            color: #9C7CF1;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 .phone_butn {
     float: right;
