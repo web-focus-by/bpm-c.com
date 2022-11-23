@@ -86,8 +86,14 @@
             .button_white {
                 font-size: calc(11px + (16 - 11) * ((100vw - 1366px) / (1920 - 1366)));
                 padding: calc(16px + (22 - 16) * ((100vw - 1366px) / (1920 - 1366))) calc(29px + (40 - 29) * ((100vw - 1366px) / (1920 - 1366)));
+                tansition: all .2s linear;
+                -webkit-transition: all .2s linear;
+                -moz-transition: all .2s linear;
             }
             :hover {
+                tansition: all .2s linear;
+                -webkit-transition: all .2s linear;
+                -moz-transition: all .2s linear;
                 cursor: pointer;
             }
         }
@@ -127,7 +133,7 @@
 
     .phone_butn {
         padding-right: calc(42px + (60 - 42) * ((100vw - 1366px) / (1920 - 1366)));
-        top: calc(522px + (734 - 522) * ((100vw - 1366px) / (1920 - 1366)));
+        top: 522px;
         .phone {
             width: calc(114px + (160 - 114) * ((100vw - 1366px) / (1920 - 1366)));
             height: calc(114px + (160 - 114) * ((100vw - 1366px) / (1920 - 1366)));

@@ -70,6 +70,10 @@ body {
     position: relative;
     top: -3px;
 
+    &:hover {
+        cursor:pointer;
+    }
+
     &:after {
         display: inline-block;
         content: "";
@@ -225,7 +229,7 @@ body {
 
     span {
         position: absolute;
-        top: 30%;
+        top: 33%;
         right: 51%;
 
         &:hover {
@@ -448,12 +452,20 @@ body {
             line-height: 100%;
             color: #1A1B1F;
             font-family: 'Acrom';
+            tansition: all .2s linear;
+            -webkit-transition: all .2s linear;
+            -moz-transition: all .2s linear;
 
             span {
                 margin-left: 14px;
             }
         }
         :hover {
+            color: #ffffff;
+            background: #1A1B1F;
+            tansition: all .2s linear;
+            -webkit-transition: all .2s linear;
+            -moz-transition: all .2s linear;
             cursor: pointer;
         }
     &__butntag {

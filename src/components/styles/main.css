@@ -60,6 +60,9 @@ body {
   position: relative;
   top: -3px;
 }
+.burger:hover {
+  cursor: pointer;
+}
 .burger:after {
   display: inline-block;
   content: "";
@@ -204,7 +207,7 @@ body {
 }
 .phone_butn span {
   position: absolute;
-  top: 30%;
+  top: 33%;
   right: 51%;
 }
 .phone_butn span:hover {
@@ -395,11 +398,19 @@ body {
   line-height: 100%;
   color: #1A1B1F;
   font-family: "Acrom";
+  tansition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
 }
 .hero__butn .button_white span {
   margin-left: 14px;
 }
 .hero__butn :hover {
+  color: #ffffff;
+  background: #1A1B1F;
+  tansition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
   cursor: pointer;
 }
 .hero__butn__butntag .button_item_tag {

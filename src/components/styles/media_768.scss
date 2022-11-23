@@ -74,7 +74,7 @@
                     img {
                         // height: 280px;
                         object-fit: cover;
-                        border-radius: 20%;
+                        border-radius: 10%;
                     }
                 }
 
@@ -103,7 +103,7 @@
             form {
                 .form_block_send {
                     p {
-                        max-width: 215px;
+                        max-width: 255px;
                     }
                 }
             }
@@ -905,7 +905,8 @@
                 }
 
                 &:hover {
-                    transform: translateY(calc(-7px + (-18 + 7) * ((100vw - 375px) / (768 - 375))));
+                    transform: translateY(0);
+                    //transform: translateY(calc(-7px + (-18 + 7) * ((100vw - 375px) / (768 - 375))));
                     // background-position: 50% calc(35px + (75 - 35) * ((100vw - 375px) / (768 - 375)));
                 }
             }
@@ -1535,7 +1536,7 @@
 @media (max-width: 600px) {
     .it_company {
         flex-direction: column;
-        margin-top: 0px;
+        margin-top: 240px;
 
         &__title {
             max-width: none;
@@ -1804,7 +1805,8 @@
                     }
 
                     &:nth-child(1) a {
-                        margin-right: calc(91px + (263 - 91) * ((100vw - 320px) / (530 - 320)));
+                        margin-right: 0px;
+                       //margin-right: calc(91px + (263 - 91) * ((100vw - 320px) / (530 - 320)));
                     }
 
                     &:nth-child(2) a {

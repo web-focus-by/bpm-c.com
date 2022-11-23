@@ -20,7 +20,7 @@ const Hero = ({ location }) => {
       </div>
       <div className="hero">
         <div className="hero__title title_80">
-          «BPM CLOUD» an IT company that clearly knows<span className="yellow_hand"></span>
+          «BPM CLOUD» an IT company that clearly knows<span className="yellow_hand_mini"></span>
         </div>
         <div className="hero__subtitle">
           We know all about art of creating effective websites, using both classic

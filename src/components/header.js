@@ -11,8 +11,9 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const Header = ({ turnOnMenu, mainItems, clickOut, justTurnOnMenu, justTurnOffMenu }) => {
+const Header = ({ turnOnMenu, mainItems, clickOut, justTurnOnMenu, justTurnOffMenu, openCloseMenu }) => {
   const refHeader = useRef();
+  const refHeaderBurger = useRef();
   const menuItemsRef = useRef([]);
   const [isTurnOn, setIsTurnOn] = useState(false);
   let url = '';
@@ -24,6 +25,12 @@ const Header = ({ turnOnMenu, mainItems, clickOut, justTurnOnMenu, justTurnOffMe
     if (!(clickOut && isTurnOn)) {
       setIsTurnOn(!isTurnOn);
     }
+  }
+  const activeMenuBurger = (e) => {
+    openCloseMenu(e.target.innerText);
+    /*if (!(clickOut && isTurnOn)) {
+      setIsTurnOn(!isTurnOn);
+    }*/
   }
   const homeUrl = url ? url.origin : '';
   const menuItems = mainItems.map((item, index) => {
@@ -80,7 +87,7 @@ const Header = ({ turnOnMenu, mainItems, clickOut, justTurnOnMenu, justTurnOffMe
               { menuItems }
             </ul>
           </div>
-          <div className="burger"></div>
+          <div className="burger" ref={ refHeaderBurger } onClick={ activeMenuBurger }></div>
         </div>
       </div>
     </header>

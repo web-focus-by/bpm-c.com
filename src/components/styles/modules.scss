@@ -5,10 +5,16 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
+    tansition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
 
     &:hover {
         background: #1A1B1F;
         color: #FFFFFF;
+        tansition: all .2s linear;
+        -webkit-transition: all .2s linear;
+        -moz-transition: all .2s linear;
 
         .arrow_black {
             background: url(../../images/arrow_white.svg) no-repeat;
