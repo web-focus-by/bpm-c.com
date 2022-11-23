@@ -14,7 +14,6 @@ import "../components/styles/media_375.css"
 const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems }) => {
   let url = '';
   const homeUrl = url ? url.origin : '';
-  const refHeaderBurger = useRef();
   const [activeMenuItems, setActiveMenuItems] = useState(false);
   console.log(allItems);
   const activeMenu = () => {
