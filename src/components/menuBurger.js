@@ -15,10 +15,8 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems }) => {
   let url = '';
   const homeUrl = url ? url.origin : '';
   const [activeMenuItems, setActiveMenuItems] = useState(false);
-  console.log(allItems);
   const activeMenu = () => {
     setActiveMenuItems(!activeMenuItems);
-    console.log(activeMenuItems);
   }
   const resultData = mainItems.map((item, index) => {
     if (index === 0) {
@@ -35,12 +33,23 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems }) => {
       )
     }
   });
-
-  const menuItems = (item) => {
-    if (allItems && allItems.length && activeMenuItems) {
-      console.log(item);
-    }
-  }
+  const item = [{ id: "",primaryItem:"",subsequentItems: [], },]
+  let counter = 0;
+  const itemsByMainItems = mainItems.map((value, index) => {
+    allItems.map((prevValue, i)=>{
+      if (prevValue.id === value.id && !prevValue.parentId) {
+        item.push({
+          id: value.id,
+          primaryItem: prevValue.label,
+          subsequentItems: [],
+        })
+        counter++
+      } else if (prevValue.parentId && prevValue.parentId === value.id) {
+        item[counter].subsequentItems.push(prevValue)
+      }
+    })
+    return item.slice(1);
+  }).slice(5).flat();
 
   if (isOpenBurgerMenu) {
     return (

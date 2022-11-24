@@ -1281,7 +1281,7 @@ body {
   padding-right: 8px;
 }
 .company_description__pic img {
-  width: 604px;
+  width: 100%;
   height: 553px;
   -o-object-fit: cover;
      object-fit: cover;

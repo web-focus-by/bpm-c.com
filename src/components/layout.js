@@ -65,6 +65,7 @@ const Layout = ({ children }) => {
 
   const closeMenu = () => {
     setToggle(false);
+    setIsOpenBurgerMenu(false)
   }
 
   const [isOpen, setModalActive] = useState(false);
