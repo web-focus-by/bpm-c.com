@@ -116,6 +116,7 @@ const Layout = ({ children }) => {
             isOpenBurgerMenu = { isOpenBurgerMenu }
             mainItems={ mainItems }
             allItems={ allItemsForMenu }
+            clickOut = { isClickOut }
         />
       </div>
       <PhoneButn onClick={ toggleModalActive }></PhoneButn>
