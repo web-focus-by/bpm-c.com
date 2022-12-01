@@ -13,11 +13,12 @@ import "../components/styles/media_375.css"
 
 const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
   const [activeMenuItems, setActiveMenuItems] = useState(false);
+  const [actualUsingId, setActualUsingId] = useState();
   const menuItemsRef = useRef([]);
-  const [contentMenuItems, setContentMenu] = useState();
+  const subsequentsItem = useRef([]);
   const item = [{ id: "", primaryItem:"", subsequentItems: [], },]
   let counter = 0;
-  const itemsByMainItems = mainItems.map((value, index) => {
+  const itemsByMainItems = mainItems.reduce((result, value) => {
     allItems.map((prevValue, i)=>{
       if (prevValue.id === value.id && !prevValue.parentId) {
         item.push({
@@ -27,73 +28,63 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
         })
         counter++
       } else if (prevValue.parentId && prevValue.parentId === value.id) {
-        item[counter].subsequentItems.push(prevValue)
+        item[counter].subsequentItems.push(prevValue);
       }
     })
-    return item.slice(1);
-  }).slice(5).flat();
-  
-  let getItems = [];
-  const subsequentItemsByMainItems = (e) => {
-    let currentCase = menuItemsRef && menuItemsRef.current && menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target)) ?
-    menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target))[0] : null;
-    let contentMenu = [];
-    getItems = itemsByMainItems.filter(item => item.id === e.target.id)[0] &&
-    itemsByMainItems.filter(item => item.id === e.target.id)[0].subsequentItems ?
-    itemsByMainItems.filter(item => item.id === e.target.id)[0].subsequentItems : null;
-    if (currentCase && menuItemsRef.current.includes(currentCase)) {
-      contentMenu.id = e.target.id;
-      contentMenu.body = getItems ? getItems.map((value, index) => {
-        return (
-          <li id = { value.id } key={ index }>
-            <Link to={ value.path }>{ value.label }</Link>
-          </li>
-        )
-      }) : [];
-    }
-    setContentMenu(contentMenu);
-  }
+    result = [...result, item];
+    return result;
+  }, []).slice(5).flat().slice(1);
 
-  const activeSubsequentItems = (e) => {
+  const showSubsequentItems = (e) => {
     setActiveMenuItems(!activeMenuItems);
-    if (!activeMenuItems) { subsequentItemsByMainItems(e); }
+    if (!activeMenuItems) setActualUsingId(e.target.id);
   }
 
-  const showSubsequentItems = useCallback((e) => {
-    let currentCase = menuItemsRef && menuItemsRef.current && menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target)) ?
+  const showHoverSubsequentItems = useCallback((e) => {
+    let subItem = subsequentsItem && subsequentsItem.current
+    && subsequentsItem.current.filter(subseqItem => subseqItem && subseqItem.contains(e.target)) ?
+    subsequentsItem.current.filter(subseqItem => subseqItem && subseqItem.contains(e.target))[0] : null;
+    let currentCase = menuItemsRef && menuItemsRef.current
+    && menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target)) ?
     menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target))[0] : null;
-    if (currentCase && menuItemsRef.current.includes(currentCase)) {
-      if (e.target.innerText !== 'Portfolios') {
-        setActiveMenuItems(true);
-        subsequentItemsByMainItems(e);
-        
-      } else if (e.target.innerText === 'Portfolios') {
-        setActiveMenuItems(false);
+    if ((currentCase && menuItemsRef.current.includes(currentCase)) || (subItem && subsequentsItem.current.includes(subItem))) {
+      setActiveMenuItems(true);
+      if (subItem) {
+        setActualUsingId(subItem.id);
+      } else if (currentCase) {
+        setActualUsingId(currentCase.firstChild.id);
       }
     }
   }, []);
 
-  const isShow = (item) => {
-    if (activeMenuItems && contentMenuItems.id === item.id) { 
-      return 'block';
-    } else {
-      return 'none';
-    }
+  const isShow = (itemId) => {
+    return activeMenuItems && (actualUsingId && actualUsingId === itemId);
   }
 
   const resultData = itemsByMainItems.map((item, index) => {
+    let itemId = item.id;
+    let contentMenu = item && item.subsequentItems && item.subsequentItems.length ? item.subsequentItems.map((subValue, ind) => {
+      return (
+        <li id = { subValue.id } key={ ind }> 
+          <Link to={ subValue.path }>{ subValue.label }</Link>
+        </li>
+      )
+    }) : [];
     if (index === 0) {
       return (
         <li key={ index } ref={ el => menuItemsRef.current[index] = el } onClick={ () => { setActiveMenuItems(false); } }>
-          <Link id = { item.id } to={ "/" + item.primaryItem.toLowerCase() + "/" }>{ item.primaryItem }</Link>
+          <Link id = { itemId } to={ "/" + item.primaryItem.toLowerCase() + "/" }>{ item.primaryItem }</Link>
         </li>
       )
     } else {
       return (
-        <li key={ index } ref={ el => menuItemsRef.current[index] = el } onClick={ activeSubsequentItems }>
-          <a id = { item.id }>{ item.primaryItem }</a>
-          <div className="subsequentItem" id = { item.id } style={{display: isShow(item)}}>
-            <ul>{ contentMenuItems && contentMenuItems.body ? contentMenuItems.body : null }</ul>
+        <li key={ index } ref={ el => menuItemsRef.current[index] = el } onClick={ showSubsequentItems }>
+          <a id = { itemId }>{ item.primaryItem }</a>
+          <div className="subsequentItem"
+            id = { itemId } ref={ el =>  subsequentsItem.current[index] = el }
+            style={{ display: isShow(itemId) ? 'block' : 'none' }}
+          >
+            <ul>{ contentMenu }</ul>
           </div>
         </li>
       )
@@ -103,10 +94,11 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
   useEffect(
     () => {
       menuItemsRef.current = menuItemsRef.current.slice(0, mainItems.length);
+      subsequentsItem.current = subsequentsItem.current.slice(0, mainItems.length);
       if (activeMenuItems && !clickOut) {
-        document.addEventListener("mouseover", showSubsequentItems, true);
+        document.addEventListener("mouseover", showHoverSubsequentItems, true);
       } else {
-        document.removeEventListener("mouseover", showSubsequentItems, true);
+        document.removeEventListener("mouseover", showHoverSubsequentItems, true);
       }
     }, [mainItems]
   );

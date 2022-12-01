@@ -216,7 +216,6 @@ body {
 .dropdown_burgermenu_sticky .dropdown_burgermenu__info .subsequentItem {
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
-  margin-top: 10px;
 }
 .dropdown_burgermenu_sticky .dropdown_burgermenu__info .subsequentItem ul {
   display: grid;

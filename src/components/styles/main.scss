@@ -229,8 +229,7 @@ body {
             }
             .subsequentItem {
                 transform-origin: bottom right;
-                transition: transform 0.25s ease-out;      
-                margin-top: 10px;       
+                transition: transform 0.25s ease-out;   
                 ul{
                     display: grid;
                     grid-template-columns: 1fr 1fr;
