@@ -48,14 +48,9 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
     && menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target)) ?
     menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target))[0] : null;
     if ((currentCase && menuItemsRef.current.includes(currentCase)) || (subItem && subsequentsItem.current.includes(subItem))) {
-      if (e.target.innerText !== 'Portfolios') {
-        console.log(activeMenuItems);
-        if (subItem) {
-          setActualUsingId(subItem.id);
-        } else if (currentCase) {
-          setActualUsingId(currentCase.firstChild.id);
-        }
-      } else if (e.target.innerText === 'Portfolios') {
+      if (subItem) {
+        setActualUsingId(subItem.id);
+      } else if (currentCase) {
         setActualUsingId(currentCase.firstChild.id);
       }
     }
