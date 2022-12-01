@@ -31,7 +31,8 @@ body {
 }
 .header__nav .header_nav_list ul li {
   display: inline-block;
-  padding-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid #ffffff;
   padding-top: -20px;
 }
 .header__nav .header_nav_list ul li:hover {
