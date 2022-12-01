@@ -47,12 +47,10 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
     let currentCase = menuItemsRef && menuItemsRef.current
     && menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target)) ?
     menuItemsRef.current.filter(menuItemRef => menuItemRef && menuItemRef.contains(e.target))[0] : null;
-    if ((currentCase && menuItemsRef.current.includes(currentCase)) || (subItem && subsequentsItem.current.includes(subItem))) {
-      if (subItem) {
-        setActualUsingId(subItem.id);
-      } else if (currentCase) {
-        setActualUsingId(currentCase.firstChild.id);
-      }
+    if (currentCase && menuItemsRef.current.includes(currentCase)) {
+      setActualUsingId(currentCase.firstChild.id);
+    } else if (subItem && subsequentsItem.current.includes(subItem)) {
+      setActualUsingId(subItem.id);
     }
   }, []);
 
@@ -92,14 +90,14 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
 
   useEffect(
     () => {
-      menuItemsRef.current = menuItemsRef.current.slice(0, mainItems.length);
-      subsequentsItem.current = subsequentsItem.current.slice(0, mainItems.length);
+      menuItemsRef.current = menuItemsRef.current.slice(0, itemsByMainItems.length);
+      subsequentsItem.current = subsequentsItem.current.slice(0, itemsByMainItems.length);
       if (activeMenuItems && !clickOut) {
         document.addEventListener("mouseover", showHoverSubsequentItems, true);
       } else {
         document.removeEventListener("mouseover", showHoverSubsequentItems, true);
       }
-    }, [mainItems]
+    }, [itemsByMainItems]
   );
 
   if (isOpenBurgerMenu) {
