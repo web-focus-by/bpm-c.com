@@ -68,14 +68,10 @@
   .hero__butn .button_white {
     font-size: calc(11px + 5 * (100vw - 1366px) / 554);
     padding: calc(16px + 6 * (100vw - 1366px) / 554) calc(29px + 11 * (100vw - 1366px) / 554);
-    tansition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
-    -moz-transition: all 0.2s linear;
   }
   .hero__butn :hover {
-    tansition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
-    -moz-transition: all 0.2s linear;
     cursor: pointer;
   }
   .hero__butntag .button_item_tag {

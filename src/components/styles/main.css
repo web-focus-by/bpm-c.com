@@ -470,6 +470,9 @@ body {
   max-width: 55%;
   margin-bottom: 48px;
 }
+.hero__butn .link_btn {
+  border-radius: 80px;
+}
 .hero__butn .button_white {
   padding: 22px 40px;
   font-weight: 500;
@@ -477,9 +480,7 @@ body {
   line-height: 100%;
   color: #1A1B1F;
   font-family: "Acrom";
-  tansition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
 }
 .hero__butn .button_white span {
   margin-left: 14px;
@@ -487,9 +488,7 @@ body {
 .hero__butn :hover {
   color: #ffffff;
   background: #1A1B1F;
-  tansition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
   cursor: pointer;
 }
 .hero__butn__butntag .button_item_tag {

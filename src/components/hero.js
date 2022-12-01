@@ -20,14 +20,14 @@ const Hero = ({ location }) => {
       </div>
       <div className="hero">
         <div className="hero__title title_80">
-          «BPM CLOUD» an IT company that clearly knows<span className="yellow_hand_mini"></span>
+          «BPM CLOUD» an IT company that clearly knows<span className="yellow_hand"></span>
         </div>
         <div className="hero__subtitle">
           We know all about art of creating effective websites, using both classic
           techniques and the most innovative world-class approaches.
         </div>
         <div className="hero__butn">
-          <Link to={ "/portfolios/" }>
+          <Link className="link_btn" to={ "/portfolios/" }>
             <button className="button_white">
               View work<span className="arrow_black"></span>
             </button>
