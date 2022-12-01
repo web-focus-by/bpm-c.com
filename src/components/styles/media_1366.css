@@ -54,7 +54,7 @@
   .hero__subtitle {
     font-size: 14px;
     margin-bottom: 34px;
-    max-width: 460px;
+    max-width: 560px;
   }
   .view_all a {
     font-size: 11px;
@@ -193,10 +193,16 @@
     font-size: 11px;
     line-height: 100%;
     color: #fff;
+    tansition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
   }
   .button_black:hover {
     background: #fff;
     color: #1A1B1F;
+    tansition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
   }
   .button_black:hover .arrow_white {
     background: url(../../images/arrow_black.svg) no-repeat;

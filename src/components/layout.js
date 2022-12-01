@@ -7,6 +7,7 @@ import Footer from "./footer"
 import PhoneButn from "./phone_butn"
 import Modal from "./modal"
 import DropdownServices from "./dropdown_services"
+import MenuBurger from "../components/menuBurger"
 import "../components/styles/layout.css"
 
 const Layout = ({ children }) => {
@@ -31,6 +32,7 @@ const Layout = ({ children }) => {
   `);
   const [isClickOut, setClickOut] = useState(false);
   const [selectedItem, setItem] = useState();
+  const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(false);
   const allItems = data.wpMenu && data.wpMenu.menuItems &&  data.wpMenu.menuItems.nodes ? data.wpMenu.menuItems.nodes : null;
   const allItemsForMenu = allItems.reduce((res, val)=>{
     let item = val.path.slice(1,-1).split("/");
@@ -63,6 +65,7 @@ const Layout = ({ children }) => {
 
   const closeMenu = () => {
     setToggle(false);
+    setIsOpenBurgerMenu(false)
   }
 
   const [isOpen, setModalActive] = useState(false);
@@ -75,6 +78,12 @@ const Layout = ({ children }) => {
       setClickOut(true);
       closeMenu();
     }
+  }
+
+  const openCloseMenu = (e) => {
+    setClickOut(false);
+    setIsOpenBurgerMenu(!isOpenBurgerMenu);
+    setItem(e);
   }
 
   useEffect(
@@ -95,12 +104,19 @@ const Layout = ({ children }) => {
           clickOut = { isClickOut }
           justTurnOnMenu={ onlyTurnOnMenu }
           justTurnOffMenu={ closeMenu }
+          openCloseMenu={ openCloseMenu }
         />
         <DropdownServices
           isToggle = { isToggle }
           turnOffMenu={ closeMenu }
           selectedItem={ selectedItem }
           allItems={ allItemsForMenu }
+        />
+        <MenuBurger
+            isOpenBurgerMenu = { isOpenBurgerMenu }
+            mainItems={ mainItems }
+            allItems={ allItemsForMenu }
+            clickOut = { isClickOut }
         />
       </div>
       <PhoneButn onClick={ toggleModalActive }></PhoneButn>
