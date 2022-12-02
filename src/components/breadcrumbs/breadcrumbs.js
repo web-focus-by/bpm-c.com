@@ -1,9 +1,11 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import "./breadcrumbs.css"
 
 const Breadcrumbs = ({ breadcrumbs, title }) => {
   let breadcrumbItems = '';
   let path = '';
+  const slash = '  /';
   const pathname = breadcrumbs ? breadcrumbs.pathname : '';
   const domain = breadcrumbs ? breadcrumbs.origin : '';
   const host = breadcrumbs ? breadcrumbs.host : '';
@@ -14,12 +16,11 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
       path = (index !== 0) ? path + item + "/": '';
       let link = ( host === item ) ? domain : domain + "/" + path;
       return (
-        <span key={index}>
-          <Link to={ `${link}` }>
+        <span key={index} className="span_breadcrumbs">
+          <Link className="breadcrumbs" to={ `${link}` }>
             { item === breadcrumbs.host ? "Main page" :
             ((filePath.length - 1) === index) ? title : item.replace("-"," ")}
-            { index === filePath.length - 1 ? "" : " / " }
-          </Link>
+          </Link><span className="breadcrumbs_span">{ index === filePath.length - 1 ? "" : "/" }</span>
         </span>
       )
     }) : ''
