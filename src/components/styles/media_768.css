@@ -1,4 +1,7 @@
 @media (max-width: 768px) {
+  .resume-portfolio .resume-portfolio-text {
+    font-size: 18px;
+  }
   .it_company {
     margin-top: 280px;
   }
@@ -229,7 +232,7 @@
          column-gap: 0px;
   }
   .company_description .title_62 {
-    font-size: 46px;
+    font-size: calc(42px + 4 * (100vw - 375px) / 393);
   }
   .company_description__pic img {
     width: 100%;
@@ -253,7 +256,7 @@
          column-gap: 0px;
   }
   .requires_design .title_62 {
-    font-size: 46px;
+    font-size: calc(42px + 4 * (100vw - 375px) / 393);
   }
   .requires_design__pic img {
     width: 100%;
@@ -455,6 +458,83 @@
   }
 }
 @media (min-width: 375px) and (max-width: 768px) {
+  .dropdown_burgermenu_sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+  }
+  .dropdown_burgermenu_sticky .dropdown_burgermenu {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    left: 0.5%;
+    right: 0.5%;
+  }
+  .dropdown_burgermenu_sticky .dropdown_burgermenu__title {
+    font-family: "Acrom";
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 115%;
+    color: #FFFFFF;
+    background: #9C7CF1;
+    padding: 60px 170px 0px 60px;
+    border-radius: 20px 0px 0px 20px;
+  }
+  .dropdown_burgermenu_sticky .dropdown_burgermenu__info {
+    background: #fff;
+    padding: 30px 50px 30px 20px;
+    border-radius: 0px 20px 20px 0px;
+    width: 100%;
+  }
+  .dropdown_burgermenu_sticky .dropdown_burgermenu__info ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-column-gap: 57px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .dropdown_burgermenu_sticky .dropdown_burgermenu__info ul li:not(:last-child) {
+    margin-bottom: 18px;
+  }
+  .dropdown_burgermenu_sticky .dropdown_burgermenu__info ul li a {
+    font-family: "Acrom";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #1A1B1F;
+    text-decoration: none;
+  }
+  .dropdown_burgermenu_sticky .dropdown_burgermenu__info ul li a:hover {
+    color: #9C7CF1;
+    cursor: pointer;
+  }
+  .dropdown_burgermenu_sticky .dropdown_burgermenu__info .subsequentItem {
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .dropdown_burgermenu_sticky .dropdown_burgermenu__info .subsequentItem ul {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-column-gap: 20px;
+    padding-left: 10px;
+  }
+  .dropdown_burgermenu_sticky .dropdown_burgermenu__info .subsequentItem ul li:not(:last-child) {
+    margin-bottom: 1px;
+  }
+  .dropdown_burgermenu_sticky .dropdown_burgermenu__info .subsequentItem ul li a {
+    font-family: "Acrom";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #1A1B1F;
+    text-decoration: none;
+    left: 12px;
+  }
+  .dropdown_burgermenu_sticky .dropdown_burgermenu__info .subsequentItem ul li a:hover {
+    color: #9C7CF1;
+    cursor: pointer;
+  }
   .not-found {
     display: inline-block;
     width: 562px;
