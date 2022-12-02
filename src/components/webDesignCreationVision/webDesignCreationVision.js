@@ -67,19 +67,19 @@ const WebDesignCreationVision = ({ content }) => {
         })
         counter++
       } else {
-        testArr[counter].content.push(elem)
+        testArr[counter].content.push(elem);
       }
     })
     testArr.map(e => {
-      e.content.join("\n")
+      e.content.join("\n");
     })
     
     const resultFirstBlock = () =>{
       if (testArr && testArr[0] && testArr[0].content && testArr[0].content.length>0) {
-        let arrayOne = testArr[0].content.reduce((next,prev) =>{
-          return [...next,prev]
+        let arrayOne = testArr[0].content.reduce((next, prev) => {
+          return [...next, prev]
         },[]);
-        let resArrayOne = arrayOne.map((value,index)=>{
+        let resArrayOne = arrayOne.map((value, index)=>{
           if (value.includes("<p>") || value.includes("<p>")) {
             value = value.replace("<p>",'');
             value = value.replace("</p>",'');
@@ -90,18 +90,18 @@ const WebDesignCreationVision = ({ content }) => {
           <div className="service_package__info">
             <div className="service_package_info_block">
               { resArrayOne && resArrayOne[0] ? (
-                <div className="service_package_info_block__text font_18" dangerouslySetInnerHTML={{__html: resArrayOne[0] }}/>
+                <div className="service_package_info_block__text font_18" dangerouslySetInnerHTML={{__html: resArrayOne[0] }} />
               ) : null }
               <br/>
               { resArrayOne && resArrayOne[1] ? (
-                <div className="service_package_info_block__text font_18" dangerouslySetInnerHTML={{__html: resArrayOne[1] }}/>
+                <div className="service_package_info_block__text font_18" dangerouslySetInnerHTML={{__html: resArrayOne[1] }} />
               ) : null }
             </div>
             { resArrayOne && resArrayOne[2] ? (
               <div className="service_package_info_block">
-                <div className="service_package_info_block__text font_18"  dangerouslySetInnerHTML={{__html: resArrayOne[2] }}/>
+                <div className="service_package_info_block__text font_18" dangerouslySetInnerHTML={{__html: resArrayOne[2] }} />
               </div> 
-            ): null }
+            ) : null }
           </div>
         )
       }
@@ -109,10 +109,10 @@ const WebDesignCreationVision = ({ content }) => {
     const resultSecondBlock = () => {
       if (testArr && testArr[1] && testArr[1].content && testArr[1].content.length>0) {
         let firstPartArrayCount;
-        let firstPartArr = testArr[1].content.reduce((next,prev) =>{
+        let firstPartArr = testArr[1].content.reduce((next,prev) => {
           return [...next,prev]
         },[]);
-        let secondPartArr =  testArr[1].content.reduce((next,prev) =>{
+        let secondPartArr =  testArr[1].content.reduce((next,prev) => {
           return [...next,prev]
         },[]);
         if (testArr[1].content.length - 2 > 2) {

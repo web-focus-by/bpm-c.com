@@ -526,6 +526,13 @@ body {
   line-height: 27px;
 }
 
+.margin_240_black {
+  margin-bottom: 240px;
+  margin-left: 220px;
+  margin-right: 220px;
+  transition: margin-right 1s, margin-left 1s;
+}
+
 .portfolio__products {
   display: grid;
   grid-template-columns: 1fr 1fr;

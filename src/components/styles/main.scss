@@ -590,6 +590,13 @@ body {
     }
 }
 
+.margin_240_black {
+    margin-bottom: 240px;
+    margin-left: 220px;
+    margin-right: 220px;
+    transition:  margin-right 1s, margin-left 1s;
+}
+
 .portfolio {
     &__products {
         display: grid;
