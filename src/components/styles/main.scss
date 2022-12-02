@@ -178,6 +178,25 @@ body {
     }
 }
 
+.resume-portfolio{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 166px;
+    margin-bottom: 60px;
+    .resume-portfolio-text {
+        width: 260px;
+        height: 68px;
+        left: 220px;
+        top: 598px;
+        color: #1A1B1F;
+        font-family: 'Acrom';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 115%;
+    }
+}
+
 .dropdown_burgermenu_sticky {
     position: sticky;
     top: 100px;
@@ -1580,6 +1599,14 @@ body {
 
 .leaders {
     position: relative
+}
+
+.title_62 {
+    font-weight: 500;
+    font-size: 62px;
+    line-height: 105%;
+    color: #1A1B1F;
+    margin-bottom: 56px;
 }
 
 .leaders_choice {
