@@ -22,6 +22,7 @@
   }
   .hash__list .hash_list_block a {
     font-size: 10px;
+    padding: 5.69px 10px 5.65px 10px;
   }
   .portfolio__products {
     grid-column-gap: 2%;
@@ -35,12 +36,21 @@
   }
   .form {
     padding: 71px 62px 71px 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .form__block {
+    width: 50%;
   }
   .form__block .form_block_info {
-    max-width: 320px;
+    max-width: 97%;
+    font-size: 12px;
   }
   .form__block .form_block_text .form_block_gif {
     margin-left: 22px;
+  }
+  .form__block .form_block_email {
+    font-size: 21.5px;
   }
   .thanks_modal .thanks_modal_content .form {
     grid-template-columns: 470px 171px;
@@ -111,10 +121,6 @@
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .breadcrumb-container {
-    margin-top: 15px;
-    margin-left: 0px;
-  }
   .not-found {
     display: inline-block;
     width: 669px;
@@ -626,6 +632,9 @@
   .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send .button_white span {
     margin-left: 14px;
   }
+  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send .button_white :hover {
+    cursor: pointer;
+  }
   .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send p {
     max-width: 250px;
     font-weight: 400;
@@ -683,6 +692,9 @@
   .form .form_block_wrapper form .form_block_send .button_black span {
     margin-left: 14px;
   }
+  .form .form_block_wrapper form .form_block_send .button_black :hover {
+    cursor: pointer;
+  }
   .form .form_block_wrapper form .form_block_send p {
     font-size: 14px;
   }
@@ -705,6 +717,9 @@
   .button_black {
     border-radius: 80px;
     font-size: 16px;
+  }
+  .button_black :hover {
+    cursor: pointer;
   }
   .technologies__list {
     grid-row-gap: 40px;

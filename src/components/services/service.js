@@ -27,10 +27,8 @@ const Service = ({ title }) => {
   const dataItems = data ? data.allWpPage.edges : null
   const result = dataItems ? dataItems.map((value, index) => {
     return (
-      <Link style={{textDecoration: 'none'}} to={ value.node.uri }>
-        <div id={ index } key={ value.node.id } className="services_list_item">
-          <a href={ value.node.uri }>{ value.node.title }</a>
-        </div>
+      <Link className="services_list_item" id={ index } key={ value.node.id } style={{textDecoration: 'none'}} to={ value.node.uri }>
+        { value.node.title }
       </Link>
     )
   }) : '';

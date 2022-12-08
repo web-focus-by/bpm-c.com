@@ -82,7 +82,7 @@ const Reviews = ({ siteTitle, data }) => {
         </div>
         <div className="reviews__info">
           <Swiper
-            spaceBetween={20}
+            spaceBetween={26}
             slidesPerView={"auto"}
             onSlideChange={() => console.log("slide change")}
             onSwiper={swiper => console.log(swiper)}

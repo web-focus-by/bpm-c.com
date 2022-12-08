@@ -100,7 +100,7 @@ body {
 
 .active_link {
     position: relative;
-    text-decoration: none;
+    text-decoration: underline 2px #1A1B1F;
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
@@ -121,6 +121,7 @@ body {
     }
     &:hover {
         color: #935CFF;
+        text-decoration: none;
         &::after {
             transform: scaleX(1);
             transform-origin: bottom left;
@@ -280,12 +281,13 @@ body {
 }
 
 .phone_butn {
+    //277px
     float: right;
     padding-right: 60px;
     position: sticky;
-    top: 734px;
+    margin-bottom: 277px;
+    top: 522px;
     z-index: 3;
-
     .phone {
         // background: #9C7CF1 url(../../images/phone_butn.svg) no-repeat;
         background: #9C7CF1 url(../../images/phone_butn_text.svg) no-repeat;
@@ -295,7 +297,15 @@ body {
         height: 160px;
         -webkit-animation: 15s linear 0s normal none infinite running rot;
         position: relative;
-
+        &.paused {
+            animation-play-state: paused;
+            -webkit-animation-play-state: paused;
+            background: #935CFF url(../../images/phone_butn_text.svg) no-repeat;
+            background-position: 50%;
+            border-radius: 50%;
+            position: relative;
+            background-size: contain;
+        }
         &:hover {
             cursor: pointer;
             background: #935CFF url(../../images/phone_butn_text.svg) no-repeat;
@@ -305,8 +315,9 @@ body {
             height: 160px;
             position: relative;
             background-size: contain;
+            animation-play-state: paused;
+            -webkit-animation-play-state: paused;
         }
-
         @keyframes rot {
             0% {
                 transform: rotate(0deg);
@@ -316,7 +327,6 @@ body {
                 transform: rotate(360deg);
             }
         }
-
         @-webkit-keyframes rot {
             0% {
                 transform: rotate(0deg);
@@ -327,12 +337,10 @@ body {
             }
         }
     }
-
     span {
         position: absolute;
         top: 33%;
         right: 51%;
-
         &:hover {
             cursor: pointer;
         }
@@ -548,6 +556,11 @@ body {
     &__butn {
         .link_btn {
             border-radius: 80px;
+            -webkit-transition: all .3s linear;
+            :hover {
+                -webkit-transition: all .3s linear;
+                cursor: pointer;
+            }
         }
         .button_white {
             padding: 22px 40px;
@@ -556,17 +569,16 @@ body {
             line-height: 100%;
             color: #1A1B1F;
             font-family: 'Acrom';
-            -webkit-transition: all .2s linear;
-
+            -webkit-transition: all .3s linear;
             span {
                 margin-left: 14px;
             }
-        }
-        :hover {
-            color: #ffffff;
-            background: #1A1B1F;
-            -webkit-transition: all .2s linear;
-            cursor: pointer;
+            :hover {
+                color: #ffffff;
+                background: #1A1B1F;
+                -webkit-transition: all .3s linear;
+                cursor: pointer;
+            }
         }
     &__butntag {
         .button_item_tag {
@@ -929,6 +941,9 @@ body {
                                 span {
                                     margin-left: 14px;
                                 }
+                                :hover {
+                                    cursor: pointer;
+                                }
                             }
 
                             p {
@@ -1070,16 +1085,16 @@ body {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-
                     .button_black {
                         padding: 22px 40px;
                         font-family: 'Acrom';
-
                         span {
                             margin-left: 14px;
                         }
+                        :hover {
+                            cursor: pointer;
+                        }
                     }
-
                     p {
                         max-width: 250px;
                         font-weight: 400;
@@ -1120,6 +1135,8 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
+            color:#1A1B1F;
             background: #E1DAF4;
             border-radius: 25px;
             height: 210px;
@@ -1140,6 +1157,7 @@ body {
                 background: url(../../images/test.png) no-repeat;
                 background-size: cover;
                 background-position-x: 100%;
+                color: #FFFFFF;
                 // background-position: 70% 80px;
 
                 a {
@@ -1301,6 +1319,9 @@ body {
                     }
                 }
             }
+        }
+        .bpm_cloud_block:last-child {
+            margin-right: 4%;
         }
     }
 
@@ -1502,7 +1523,7 @@ body {
 .company_description {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    column-gap: 100px;
+    column-gap: 50px;
 
     &__info {
         ul {
@@ -1692,12 +1713,30 @@ body {
                 margin-left: 14px;
             }
         }
+        .button_white {
+            padding: 22px 40px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            color: #1A1B1F;
+            font-family: 'Acrom';
+            -webkit-transition: all .3s linear;
+            span {
+                margin-left: 14px;
+            }
+            :hover {
+                color: #ffffff;
+                background: #1A1B1F;
+                -webkit-transition: all .3s linear;
+                cursor: pointer;
+            }
+        }
     }
 
     .footer_circle_yellow {
         position: absolute;
-        width: 534.48px;
-        height: 534.48px;
+        width: 249.48px;
+        height: 249.48px;
         left: 1153.41px;
         top: 0px;
         border-radius: 100%;
@@ -1711,35 +1750,35 @@ body {
     
     @keyframes footer_circle_yellow {
         0% {
-            bottom: 50%;
+            bottom: 100%;
             left: 60%;
         }
         50% {
             -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
             bottom: 10px;
-            width: 534.48px;
-            height: 534.48px;
+            width: 249.48px;
+            height: 249.48px;
         }
         100% {
             bottom: 50%;
-            left: 60%;
+            left: 10%;
         }
     }
     
     @keyframes footer_circle_yellowleft {
         0% {
-            left: 10%;
+            left: 60%;
         }
         100% {
-            left: 60%;
+            left: 10%;
         }
     }
     
     .footer_circle_pink {
         position: absolute;
-        width: 534.48px;
-        height: 534.48px;
+        width: 249.48px;
+        height: 249.48px;
         left: 935.33px;
         top: 0px;
         border-radius: 100%;
@@ -1761,8 +1800,8 @@ body {
             -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
             top: 0px;
-            width: 534.48px;
-            height: 534.48px;
+            width: 249.48px;
+            height: 249.48px;
         }
         100% {
             top: 60%;
@@ -1772,7 +1811,7 @@ body {
     
     @keyframes footer_circle_pinkleft {
         0% {
-            left: 10%;
+            left: 5;
         }
         100% {
             left: 60%;
@@ -1781,12 +1820,12 @@ body {
     
     .footer_circle_purple {
         position: absolute;
-        width: 534.48px;
-        height: 534.48px;
-        left: 915px;
+        width: 249.48px;
+        height: 249.48px;
+        left: 0px;
         top: 0px;
         border-radius: 100%;
-        animation: footer_circle_purple 8s linear infinite, footer_circle_purpleleft 6s linear infinite alternate;
+        animation: footer_circle_purple 6s linear infinite, footer_circle_purpleleft 4s linear infinite alternate;
         background: radial-gradient(50% 50% at 50% 50%,
                 rgba(143, 114, 226, 0.6) 0%,
                 rgba(135, 130, 224, 0.6) 0%,
@@ -1805,8 +1844,8 @@ body {
             -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
             bottom: 10px;
-            width: 534.48px;
-            height: 534.48px;
+            width: 249.48px;
+            height: 249.48px;
         }
         100% {
             bottom: 80%;
@@ -1816,10 +1855,10 @@ body {
     
     @keyframes footer_circle_purpleleft {
         0% {
-            left: 10%;
+            left: 60%;
         }
         100% {
-            left: 60%;
+            left: 5%;
         }
     }
 }
@@ -1890,7 +1929,6 @@ body {
                     &:hover {
                         color: #935CFF;
                     }
-
                     margin-right: 30px;
                 }
 
@@ -2068,9 +2106,4 @@ body {
     100% {
         left: 60%;
     }
-}
-
-.breadcrumb-container {
-    margin-top: 15px;
-    margin-left: 220px;
 }

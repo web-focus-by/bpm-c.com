@@ -86,10 +86,14 @@
             .button_white {
                 font-size: calc(11px + (16 - 11) * ((100vw - 1366px) / (1920 - 1366)));
                 padding: calc(16px + (22 - 16) * ((100vw - 1366px) / (1920 - 1366))) calc(29px + (40 - 29) * ((100vw - 1366px) / (1920 - 1366)));     
-                -webkit-transition: all .2s linear;
+                -webkit-transition: all .3s linear;
+                :hover{
+                    -webkit-transition: all .3s linear;
+                    cursor: pointer;
+                }
             }
             :hover { 
-                -webkit-transition: all .2s linear;
+                -webkit-transition: all .3s linear;
                 cursor: pointer;
             }
         }
@@ -134,13 +138,11 @@
             width: calc(114px + (160 - 114) * ((100vw - 1366px) / (1920 - 1366)));
             height: calc(114px + (160 - 114) * ((100vw - 1366px) / (1920 - 1366)));
             background-size: contain;
-
             &:hover {
                 width: calc(114px + (160 - 114) * ((100vw - 1366px) / (1920 - 1366)));
                 height: calc(114px + (160 - 114) * ((100vw - 1366px) / (1920 - 1366)));
             }
         }
-
         span {
             width: calc(38px + (53 - 38) * ((100vw - 1366px) / (1920 - 1366)));
             height: calc(38px + (53 - 38) * ((100vw - 1366px) / (1920 - 1366)));
@@ -277,7 +279,8 @@
             
             .form_block_email{
                 a{
-                    font-size: calc(24px + (17 - 24) * ((100vw - 1366px) / (1920 - 1366)));
+                    //font-size: calc(24px + (17 - 24) * ((100vw - 1366px) / (1920 - 1366)));
+                    font-size: 24px;
                 }
             }
         }
@@ -339,6 +342,7 @@
         &:hover {
             background: #fff;
             color: #1A1B1F;
+            cursor: pointer;
 
             .arrow_white {
                 background: url(../../images/arrow_black.svg) no-repeat;
@@ -470,12 +474,14 @@
             .bpm_cloud_block {
                 .bpm_cloud_block_title {
                     font-size: calc(21px + (30 - 21) * ((100vw - 1366px) / (1920 - 1366)));
-                    max-width: 75%;
+                    max-width: 80%;
                     margin-bottom: calc(20px + (30 - 20) * ((100vw - 1366px) / (1920 - 1366)));
                 }
 
                 .bpm_cloud_block_text {
-                    font-size: calc(13px + (18 - 13) * ((100vw - 1366px) / (1920 - 1366)));
+                    //font-size: calc(13px + (18 - 13) * ((100vw - 1366px) / (1920 - 1366)));
+                    font-size: 18px;
+                    line-height: 150%;
                 }
             }
         }
@@ -502,7 +508,7 @@
 
             .projects_process_list_item {
                 padding: 0px calc(36px + (50 - 36) * ((100vw - 1366px) / (1920 - 1366)));
-                left: calc(148.5px + (211.5 - 148.5) * ((100vw - 1366px) / (1920 - 1366)));
+                left: calc(149px + (211.5 - 148.5) * ((100vw - 1366px) / (1920 - 1366)));
             }
         }
     }
@@ -519,14 +525,16 @@
 
             .blog_products_block {
                 .blog_products_block_title {
-                    font-size: calc(17px + (24 - 17) * ((100vw - 1366px) / (1920 - 1366)));
+                    font-size: 24px;
+                    //font-size: calc(17px + (24 - 17) * ((100vw - 1366px) / (1920 - 1366)));
                 }
 
                 .blog_products_block_list {
                     margin: calc(19px + (27 - 19) * ((100vw - 1366px) / (1920 - 1366))) 0px calc(17px + (24 - 17) * ((100vw - 1366px) / (1920 - 1366))) 0px;
 
                     .blog_products_block_list_date {
-                        font-size: calc(9px + (14 - 9) * ((100vw - 1366px) / (1920 - 1366)));
+                        //font-size: calc(9px + (14 - 9) * ((100vw - 1366px) / (1920 - 1366)));
+                        font-size: 14px;
                     }
 
                     .hash_list_block {
@@ -541,7 +549,8 @@
                         .hash_list_block {
                             a {
                                 padding: calc(6px + (8 - 6) * ((100vw - 1366px) / (1920 - 1366))) calc(10px + (14 - 10) * ((100vw - 1366px) / (1920 - 1366)));
-                                font-size: calc(9px + (14 - 9) * ((100vw - 1366px) / (1920 - 1366)));
+                                //font-size: calc(9px + (14 - 9) * ((100vw - 1366px) / (1920 - 1366)));
+                                font-size: 14px;
                             }
                         }
                     }
@@ -596,7 +605,7 @@
     }
 
     .company_description {
-        column-gap: calc(30px + (100 - 30) * ((100vw - 1366px) / (1920 - 1366)));
+        column-gap: 50px;
 
         &__info {
             ul {
@@ -633,7 +642,8 @@
 
     .service_package {
         &__info_list {
-            grid-column-gap: calc(55px + (80 - 55) * ((100vw - 1366px) / (1920 - 1366)));
+            grid-column-gap: 77px;
+            //grid-column-gap: calc(55px + (80 - 55) * ((100vw - 1366px) / (1920 - 1366)));
             margin-bottom: calc(43px + (60 - 43) * ((100vw - 1366px) / (1920 - 1366)));
 
             .service_package_info_list_block {
@@ -647,7 +657,8 @@
         }
 
         &__info {
-            grid-column-gap: calc(55px + (80 - 55) * ((100vw - 1366px) / (1920 - 1366)));
+            grid-column-gap: 77px;
+            //grid-column-gap: calc(55px + (80 - 55) * ((100vw - 1366px) / (1920 - 1366)));
             grid-row-gap: calc(37px + (50 - 37) * ((100vw - 1366px) / (1920 - 1366)));
 
             .service_package_info_block {
@@ -702,7 +713,10 @@
             margin-bottom: calc(40px + (56 - 40) * ((100vw - 1366px) / (1920 - 1366)));
 
             .leaders_choice_tagline_block_title {
-                font-size: calc(44px + (62 - 44) * ((100vw - 1366px) / (1920 - 1366)));
+                font-size: 62px;
+                line-height: 105%;
+                font-weight: 500;
+                //font-size: calc(44px + (62 - 44) * ((100vw - 1366px) / (1920 - 1366)));
             }
 
             .leaders_choice_tagline_block_gif {
@@ -761,7 +775,8 @@
             ul {
                 li {
                     a {
-                        margin-right: calc(43px + (60 - 43) * ((100vw - 1366px) / (1920 - 1366)));
+                        margin-right: 30px;
+                        //margin-right: calc(43px + (60 - 43) * ((100vw - 1366px) / (1920 - 1366)));
                     }
                 }
             }

@@ -5,12 +5,13 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
-  -webkit-transition: all 0.2s linear;
+  -webkit-transition: all 0.3s linear;
 }
 .button_white:hover {
+  cursor: pointer;
   background: #1A1B1F;
   color: #FFFFFF;
-  -webkit-transition: all 0.2s linear;
+  -webkit-transition: all 0.3s linear;
 }
 .button_white:hover .arrow_black {
   background: url(../../images/arrow_white.svg) no-repeat;
@@ -46,11 +47,6 @@
   visibility: hidden;
 }
 
-.breadcrumb-container {
-  margin-top: 15px;
-  margin-left: 0px;
-}
-
 .button_black {
   border: 1px solid #fff;
   border-radius: 80px;
@@ -63,6 +59,7 @@
 .button_black:hover {
   background: #fff;
   color: #1A1B1F;
+  cursor: pointer;
 }
 .button_black:hover .arrow_white {
   background: url(../../images/arrow_black.svg) no-repeat;
@@ -93,13 +90,11 @@
 }
 .hash__list .hash_list_block a {
   font-weight: 400;
-  font-size: 14px;
   line-height: 100%;
   color: #1A1B1F;
   text-decoration: none;
   border: 1px solid #1A1B1F;
   border-radius: 80px;
-  padding: 8px 14px;
 }
 .hash__list .hash_list_block:hover a {
   color: #fff;

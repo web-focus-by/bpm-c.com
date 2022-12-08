@@ -1,6 +1,5 @@
 .span_breadcrumbs {
     margin-left: 21px;
-
     &:first-child {
         margin-left: 0px;
     }
@@ -27,7 +26,6 @@
 @media (min-width: 1024px) and (max-width: 1366px) {
     .span_breadcrumbs {
         margin-left: 18px;
-    
         &:first-child {
             margin-left: 0px;
         }

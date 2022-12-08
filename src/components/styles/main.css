@@ -87,7 +87,8 @@ body {
 
 .active_link {
   position: relative;
-  text-decoration: none;
+  -webkit-text-decoration: underline 2px #1A1B1F;
+          text-decoration: underline 2px #1A1B1F;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
@@ -109,6 +110,7 @@ body {
 }
 .active_link:hover {
   color: #935CFF;
+  text-decoration: none;
 }
 .active_link:hover::after {
   transform: scaleX(1);
@@ -265,7 +267,8 @@ body {
   padding-right: 60px;
   position: -webkit-sticky;
   position: sticky;
-  top: 734px;
+  margin-bottom: 277px;
+  top: 522px;
   z-index: 3;
 }
 .phone_butn .phone {
@@ -277,6 +280,15 @@ body {
   -webkit-animation: 15s linear 0s normal none infinite running rot;
   position: relative;
 }
+.phone_butn .phone.paused {
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  background: #935CFF url(../../images/phone_butn_text.svg) no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  position: relative;
+  background-size: contain;
+}
 .phone_butn .phone:hover {
   cursor: pointer;
   background: #935CFF url(../../images/phone_butn_text.svg) no-repeat;
@@ -286,6 +298,8 @@ body {
   height: 160px;
   position: relative;
   background-size: contain;
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
 }
 @keyframes rot {
   0% {
@@ -491,6 +505,11 @@ body {
 }
 .hero__butn .link_btn {
   border-radius: 80px;
+  -webkit-transition: all 0.3s linear;
+}
+.hero__butn .link_btn :hover {
+  -webkit-transition: all 0.3s linear;
+  cursor: pointer;
 }
 .hero__butn .button_white {
   padding: 22px 40px;
@@ -499,15 +518,15 @@ body {
   line-height: 100%;
   color: #1A1B1F;
   font-family: "Acrom";
-  -webkit-transition: all 0.2s linear;
+  -webkit-transition: all 0.3s linear;
 }
 .hero__butn .button_white span {
   margin-left: 14px;
 }
-.hero__butn :hover {
+.hero__butn .button_white :hover {
   color: #ffffff;
   background: #1A1B1F;
-  -webkit-transition: all 0.2s linear;
+  -webkit-transition: all 0.3s linear;
   cursor: pointer;
 }
 .hero__butn__butntag .button_item_tag {
@@ -840,6 +859,9 @@ body {
 .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send .button_white span {
   margin-left: 14px;
 }
+.contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send .button_white :hover {
+  cursor: pointer;
+}
 .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send p {
   max-width: 250px;
   font-weight: 400;
@@ -961,6 +983,9 @@ body {
 .form__block .form_block_wrapper form .form_block_send .button_black span {
   margin-left: 14px;
 }
+.form__block .form_block_wrapper form .form_block_send .button_black :hover {
+  cursor: pointer;
+}
 .form__block .form_block_wrapper form .form_block_send p {
   max-width: 250px;
   font-weight: 400;
@@ -990,6 +1015,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  color: #1A1B1F;
   background: #E1DAF4;
   border-radius: 25px;
   height: 210px;
@@ -1009,6 +1036,7 @@ body {
   background: url(../../images/test.png) no-repeat;
   background-size: cover;
   background-position-x: 100%;
+  color: #FFFFFF;
 }
 .services__list .services_list_item:hover a {
   color: #FFFFFF;
@@ -1139,6 +1167,9 @@ body {
   position: relative;
   bottom: 5px;
   padding-right: 8px;
+}
+.bpm_cloud__info .bpm_cloud_block:last-child {
+  margin-right: 4%;
 }
 
 .black_bg_comment {
@@ -1312,8 +1343,8 @@ body {
 .company_description {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  -moz-column-gap: 100px;
-       column-gap: 100px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
 }
 .company_description__info ul {
   margin: 0px;
@@ -1466,10 +1497,28 @@ body {
 .leaders_choice_tagline__butn button span {
   margin-left: 14px;
 }
+.leaders_choice_tagline__butn .button_white {
+  padding: 22px 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #1A1B1F;
+  font-family: "Acrom";
+  -webkit-transition: all 0.3s linear;
+}
+.leaders_choice_tagline__butn .button_white span {
+  margin-left: 14px;
+}
+.leaders_choice_tagline__butn .button_white :hover {
+  color: #ffffff;
+  background: #1A1B1F;
+  -webkit-transition: all 0.3s linear;
+  cursor: pointer;
+}
 .leaders_choice_tagline .footer_circle_yellow {
   position: absolute;
-  width: 534.48px;
-  height: 534.48px;
+  width: 249.48px;
+  height: 249.48px;
   left: 1153.41px;
   top: 0px;
   border-radius: 100%;
@@ -1481,56 +1530,56 @@ body {
 }
 @-webkit-keyframes footer_circle_yellow {
   0% {
-    bottom: 50%;
+    bottom: 100%;
     left: 60%;
   }
   50% {
     transform: rotate(360deg);
     bottom: 10px;
-    width: 534.48px;
-    height: 534.48px;
+    width: 249.48px;
+    height: 249.48px;
   }
   100% {
     bottom: 50%;
-    left: 60%;
+    left: 10%;
   }
 }
 @keyframes footer_circle_yellow {
   0% {
-    bottom: 50%;
+    bottom: 100%;
     left: 60%;
   }
   50% {
     transform: rotate(360deg);
     bottom: 10px;
-    width: 534.48px;
-    height: 534.48px;
+    width: 249.48px;
+    height: 249.48px;
   }
   100% {
     bottom: 50%;
-    left: 60%;
+    left: 10%;
   }
 }
 @-webkit-keyframes footer_circle_yellowleft {
   0% {
-    left: 10%;
+    left: 60%;
   }
   100% {
-    left: 60%;
+    left: 10%;
   }
 }
 @keyframes footer_circle_yellowleft {
   0% {
-    left: 10%;
+    left: 60%;
   }
   100% {
-    left: 60%;
+    left: 10%;
   }
 }
 .leaders_choice_tagline .footer_circle_pink {
   position: absolute;
-  width: 534.48px;
-  height: 534.48px;
+  width: 249.48px;
+  height: 249.48px;
   left: 935.33px;
   top: 0px;
   border-radius: 100%;
@@ -1549,8 +1598,8 @@ body {
   50% {
     transform: rotate(360deg);
     top: 0px;
-    width: 534.48px;
-    height: 534.48px;
+    width: 249.48px;
+    height: 249.48px;
   }
   100% {
     top: 60%;
@@ -1565,8 +1614,8 @@ body {
   50% {
     transform: rotate(360deg);
     top: 0px;
-    width: 534.48px;
-    height: 534.48px;
+    width: 249.48px;
+    height: 249.48px;
   }
   100% {
     top: 60%;
@@ -1575,7 +1624,7 @@ body {
 }
 @-webkit-keyframes footer_circle_pinkleft {
   0% {
-    left: 10%;
+    left: 5;
   }
   100% {
     left: 60%;
@@ -1583,7 +1632,7 @@ body {
 }
 @keyframes footer_circle_pinkleft {
   0% {
-    left: 10%;
+    left: 5;
   }
   100% {
     left: 60%;
@@ -1591,13 +1640,13 @@ body {
 }
 .leaders_choice_tagline .footer_circle_purple {
   position: absolute;
-  width: 534.48px;
-  height: 534.48px;
-  left: 915px;
+  width: 249.48px;
+  height: 249.48px;
+  left: 0px;
   top: 0px;
   border-radius: 100%;
-  -webkit-animation: footer_circle_purple 8s linear infinite, footer_circle_purpleleft 6s linear infinite alternate;
-          animation: footer_circle_purple 8s linear infinite, footer_circle_purpleleft 6s linear infinite alternate;
+  -webkit-animation: footer_circle_purple 6s linear infinite, footer_circle_purpleleft 4s linear infinite alternate;
+          animation: footer_circle_purple 6s linear infinite, footer_circle_purpleleft 4s linear infinite alternate;
   background: radial-gradient(50% 50% at 50% 50%, rgba(143, 114, 226, 0.6) 0%, rgba(135, 130, 224, 0.6) 0%, rgba(144, 139, 237, 0.6) 0.01%, rgba(143, 114, 226, 0.48) 100%);
   filter: blur(80px);
   z-index: -1;
@@ -1610,8 +1659,8 @@ body {
   50% {
     transform: rotate(360deg);
     bottom: 10px;
-    width: 534.48px;
-    height: 534.48px;
+    width: 249.48px;
+    height: 249.48px;
   }
   100% {
     bottom: 80%;
@@ -1626,8 +1675,8 @@ body {
   50% {
     transform: rotate(360deg);
     bottom: 10px;
-    width: 534.48px;
-    height: 534.48px;
+    width: 249.48px;
+    height: 249.48px;
   }
   100% {
     bottom: 80%;
@@ -1636,18 +1685,18 @@ body {
 }
 @-webkit-keyframes footer_circle_purpleleft {
   0% {
-    left: 10%;
+    left: 60%;
   }
   100% {
-    left: 60%;
+    left: 5%;
   }
 }
 @keyframes footer_circle_purpleleft {
   0% {
-    left: 10%;
+    left: 60%;
   }
   100% {
-    left: 60%;
+    left: 5%;
   }
 }
 
@@ -1915,8 +1964,4 @@ body {
   100% {
     left: 60%;
   }
-}
-.breadcrumb-container {
-  margin-top: 15px;
-  margin-left: 220px;
 }/*# sourceMappingURL=main.css.map */

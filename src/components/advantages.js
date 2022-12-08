@@ -61,7 +61,7 @@ const Advantages = ({ siteTitle }) => {
           <div className="advantages__title title_62">
             What our digital agency aiming for
           </div>
-          <div className="advantages__subtitle font_18">
+          <div className="advantages__subtitle font_18" style={{fontWeight: 300}}>
             «BPM CLOUD» digital marketing company achieves significant growth in
             online sales for our business partners. «BPM CLOUD» owns a set of
             technologies to attract the target audience attention. Our authors
@@ -70,18 +70,18 @@ const Advantages = ({ siteTitle }) => {
             them from ordinary consumers into true fans.
           </div>
           <div className="advantages__info">
-            <div className="advantages_info_block font_18">
+            <div className="advantages_info_block font_18" style={{fontWeight: 300}}>
               «BPM CLOUD» web studio is immersed in our client’s business. We set
               clear and achievable targets.
             </div>
-            <div className="advantages_info_block font_18">
+            <div className="advantages_info_block font_18" style={{fontWeight: 300}}>
               Each «BPM CLOUD» employee is focused on results only.
             </div>
-            <div className="advantages_info_block font_18">
+            <div className="advantages_info_block font_18" style={{fontWeight: 300}}>
               The most effective web marketing company with world technologies in
               the heart of Europe, in Belarus.
             </div>
-            <div className="advantages_info_block font_18">
+            <div className="advantages_info_block font_18" style={{fontWeight: 300}}>
               We are constantly ready to solve non-standard web promotion tasks.
             </div>
           </div>

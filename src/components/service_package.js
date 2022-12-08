@@ -58,7 +58,7 @@ const ServicePackage = ({ siteTitle }) => {
           <br /> service package
         </div>
         <div className="service_package__info_list">
-          <div className="service_package_info_list_block font_18">
+          <div className="service_package_info_list_block font_18" style={{fontWeight: 300}}>
             Whatever you turn to our digital agency and from wherever in the
             world, we are ready to start cooperation in many digital promotion
             areas for your business right now, and above all, we can:
@@ -73,7 +73,7 @@ const ServicePackage = ({ siteTitle }) => {
               <li>Personalized applications’ development.</li>
             </ul>
           </div>
-          <div className="service_package_info_list_block font_18">
+          <div className="service_package_info_list_block font_18" style={{fontWeight: 300}}>
             And that’s not all! Our digital marketing firm developments can turn
             your business from boring office monotonous work into real virtual
             and successful business project. Business with a human face puts
@@ -87,7 +87,7 @@ const ServicePackage = ({ siteTitle }) => {
             <div className="service_package_info_block__title">
               Website creation
             </div>
-            <div className="service_package_info_block__text font_18">
+            <div className="service_package_info_block__text font_18" style={{fontWeight: 300}}>
               Website construction is just the first step in the online world.
               It’s important to organize effective product promotion on the
               worldwide network. «BPM CLOUD» delivers services to businesses in
@@ -104,7 +104,7 @@ const ServicePackage = ({ siteTitle }) => {
             <div className="service_package_info_block__title">
               PPC by «BPM CLOUD»
             </div>
-            <div className="service_package_info_block__text font_18">
+            <div className="service_package_info_block__text font_18" style={{fontWeight: 300}}>
               Modern technology opens up endless possibilities. One of the
               directions is considered to be contextual website advertising,
               communities in social networks, and so on. Ad is displayed in
@@ -119,7 +119,7 @@ const ServicePackage = ({ siteTitle }) => {
             <div className="service_package_info_block__title">
               Copywriting by «BPM CLOUD»
             </div>
-            <div className="service_package_info_block__text font_18">
+            <div className="service_package_info_block__text font_18" style={{fontWeight: 300}}>
               «BPM CLOUD» is widely known online marketing agency. 
               Our employees have been representing clients’ businesses in favorable 
               lights for many years. At disposal of customers are qualified authors who 
@@ -131,7 +131,7 @@ const ServicePackage = ({ siteTitle }) => {
             <div className="service_package_info_block__title">
               Development of mobile applications
             </div>
-            <div className="service_package_info_block__text font_18">
+            <div className="service_package_info_block__text font_18" style={{fontWeight: 300}}>
               Mobile applications for iOS and Android are already presented in
               every business area. One website and the social network community
               is not enough. Virtual platform by «BMP CLOUD» web studio works

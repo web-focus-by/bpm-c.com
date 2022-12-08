@@ -14,9 +14,7 @@ import "../../components/styles/media_375.css"
 const HeroNews = ({ location, title }) => {
   return (
     <div className="container">
-      <div className="breadcrumb-container">
-        <Breadcrumbs breadcrumbs={ location } title={title}/>
-      </div>
+      <Breadcrumbs breadcrumbs={ location } title={title}/>
       <div className="hero margin_bottom_60">
         <div className="hero__title title_80">
             { title }<span className="newspaper"></span>

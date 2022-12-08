@@ -15,9 +15,7 @@ import "../components/styles/media_375.css"
 const Hero = ({ location }) => {
   return (
     <div className="container">
-      <div className="breadcrumb-container" style={{visibility: "hidden"}}>
-        <Breadcrumbs breadcrumbs={ location } title="Main page"/>
-      </div>
+      <Breadcrumbs className="display_none" breadcrumbs={ location } title="Main page"/>
       <div className="hero">
         <div className="hero__title title_80">
           «BPM CLOUD» an IT company that clearly knows<span className="yellow_hand"></span>

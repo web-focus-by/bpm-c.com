@@ -35,6 +35,7 @@
             .hash_list_block {
                 a {
                     font-size: 10px;
+                    padding: 5.69px 10px 5.65px 10px;
                 }
             }
         }
@@ -59,15 +60,22 @@
 
     .form {
         padding: 71px 62px 71px 40px;
-
+        display: flex;
+        justify-content: space-between;
         &__block {
+            width: 50%;
             .form_block_info {
-                max-width: 320px;
+                max-width: 97%;
+                font-size: 12px;
             }
             .form_block_text {
+                
                 .form_block_gif {
                     margin-left: 22px ;
                 }
+            }
+            .form_block_email {
+                font-size: 21.5px;
             }
         }
     }
@@ -202,10 +210,6 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .breadcrumb-container {
-        margin-top: 15px;
-        margin-left: 0px;
-    }
     .not-found {
         display: inline-block;
         width: 669px;
@@ -261,7 +265,6 @@
 
     .phone_butn {
         padding-right: calc(40px + (42 - 40) * ((100vw - 768px) / (1024 - 768)));
-
         .phone {
             width: calc(140px + (114 - 140) * ((100vw - 768px) / (1024 - 768)));
             height: calc(140px + (114 - 140) * ((100vw - 768px) / (1024 - 768)));
@@ -273,7 +276,6 @@
                 background-size: cover;
             }
         }
-
         span {
             width: calc(47px + (38 - 47) * ((100vw - 768px) / (1024 - 768)));
             height: calc(47px + (38 - 47) * ((100vw - 768px) / (1024 - 768)));
@@ -775,13 +777,14 @@
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
-    
                                 .button_white {
                                     padding: 22px 40px;
                                     font-family: 'Acrom';
-    
                                     span {
                                         margin-left: 14px;
+                                    }
+                                    :hover {
+                                        cursor: pointer;
                                     }
                                 }
     
@@ -869,6 +872,9 @@
                         span {
                             margin-left: 14px;
                         }
+                        :hover {
+                            cursor: pointer;
+                        }
                     }
 
                     p {
@@ -903,6 +909,9 @@
     .button_black {
         border-radius: 80px;
         font-size: 16px;
+        :hover {
+            cursor: pointer;
+        }
     }
 
     .technologies {

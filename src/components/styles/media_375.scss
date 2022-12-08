@@ -93,10 +93,6 @@
         background: url(../../images/notFound375.svg) no-repeat;
     }
 
-    .breadcrumb-container {
-        margin-top: 15px;
-        margin-left: 0px;
-    }
     .modal {
         &__content {
             border-radius: 0px;
@@ -307,9 +303,11 @@
                                 .button_white {
                                     padding: 22px 40px;
                                     font-family: 'Acrom';
-    
                                     span {
                                         margin-left: 14px;
+                                    }
+                                    :hover {
+                                        cursor: pointer;
                                     }
                                 }
     
@@ -1241,9 +1239,11 @@
                                     .button_white {
                                         padding: 22px 40px;
                                         font-family: 'Acrom';
-        
                                         span {
                                             margin-left: 14px;
+                                        }
+                                        :hover {
+                                            cursor: pointer;
                                         }
                                     }
         

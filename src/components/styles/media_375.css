@@ -84,10 +84,6 @@
     height: 113.84px;
     background: url(../../images/notFound375.svg) no-repeat;
   }
-  .breadcrumb-container {
-    margin-top: 15px;
-    margin-left: 0px;
-  }
   .modal__content {
     border-radius: 0px;
   }
@@ -281,6 +277,9 @@
   }
   .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send .button_white span {
     margin-left: 14px;
+  }
+  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send .button_white :hover {
+    cursor: pointer;
   }
   .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send p {
     max-width: 250px;
@@ -1136,6 +1135,9 @@
   }
   .leaders_choice_tagline .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send .button_white span {
     margin-left: 14px;
+  }
+  .leaders_choice_tagline .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send .button_white :hover {
+    cursor: pointer;
   }
   .leaders_choice_tagline .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send p {
     max-width: 250px;

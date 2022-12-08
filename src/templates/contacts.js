@@ -53,9 +53,7 @@ const Contacts = ({ location }) => {
       <Layout>
         <Seo title="Contacts" />
         <div className="container">
-          <div className="breadcrumb-container">
-            <Breadcrumbs breadcrumbs={ location } title="Contacts"/>
-          </div>
+          <Breadcrumbs breadcrumbs={ location } title="Contacts"/>
           <div className="hero">
             <div className="hero__title title_62">
               Contacts<span className="phone_icon"></span>
