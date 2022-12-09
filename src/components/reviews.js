@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
+import "./reviews.css"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/modules.css"
@@ -14,8 +15,9 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const Reviews = ({ siteTitle, data }) => {
-  //const [dataText] = useState(data);
-  const dataText = [ // temporary data
+  const hasWindow = typeof window !== 'undefined';
+  const widthScreen = hasWindow ? window.innerWidth : null;
+  const dataText = [
     {
       id: "slide_1",
       description:
@@ -82,7 +84,7 @@ const Reviews = ({ siteTitle, data }) => {
         </div>
         <div className="reviews__info">
           <Swiper
-            spaceBetween={26}
+            spaceBetween={widthScreen <= 1024 ? 20 :26}
             slidesPerView={"auto"}
             onSlideChange={() => console.log("slide change")}
             onSwiper={swiper => console.log(swiper)}

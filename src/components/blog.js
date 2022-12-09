@@ -15,6 +15,8 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const Blog = ({ titlePage }) => {
+  const hasWindow = typeof window !== 'undefined';
+  const widthScreen = hasWindow ? window.innerWidth : null;
   const data = useStaticQuery(graphql`
     query siteGetNewsQuery {
       allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["blog"]}}}}}) {
@@ -129,7 +131,7 @@ const Blog = ({ titlePage }) => {
         </div>
         <div className="blog__products">
         <Swiper
-              spaceBetween={25}
+              spaceBetween={widthScreen <= 1024 ? 20 :25}
               slidesPerView={"auto"}
               onSlideChange={() => console.log("slide change")}
               onSwiper={swiper => console.log(swiper)}
