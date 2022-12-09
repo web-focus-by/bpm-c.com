@@ -27,7 +27,7 @@ const Footer = () => {
   const menuFooter = footerMenuLinks.map((val, index) => {
     return (
       <li key={ index }>
-        <a><Link to={ val.link }>{ val.name }</Link></a>
+        <Link to={ val.link }>{ val.name }</Link>
       </li>
     )
   });
@@ -35,11 +35,9 @@ const Footer = () => {
   const socialMedia = socialMaediaLinks.map((val, index)=>{
     return (
       <li key={ index }>
-        <a>
-          <Link to={ val.link }>
+        <Link to={ val.link }>
             <span className={ val.name }></span>
-          </Link>
-        </a>
+        </Link>
       </li>
     )
   });

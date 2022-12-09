@@ -22,7 +22,7 @@ const LeadersChoice = ({ siteTitle }) => {
           <div className="leaders_choice__title title_62">
             «BPM CLOUD» is chosen by leaders
           </div>
-          <div className="leaders_choice__block_title">
+          <div className="leaders_choice__block font_18">
             Why do partners choose us?
           </div>
           <div className="leaders_choice__block">

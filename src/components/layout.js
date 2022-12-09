@@ -30,6 +30,7 @@ const Layout = ({ children }) => {
       }
     }
   `);
+  const phoneButn = useRef();
   const [isClickOut, setClickOut] = useState(false);
   const [selectedItem, setItem] = useState();
   const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(false);

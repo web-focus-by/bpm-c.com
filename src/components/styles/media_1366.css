@@ -66,7 +66,7 @@
     margin-top: 220px;
   }
   .hash__list .hash_list_block {
-    margin-right: 14px;
+    margin-right: 10px;
   }
   .hash__list .hash_list_block:hover a {
     padding: 6px 10px;
@@ -141,6 +141,9 @@
   .form__block .form_block_wrapper form .form_block_send .button_black span {
     margin-left: 10px;
   }
+  .form__block .form_block_wrapper form .form_block_send .button_black :hover {
+    cursor: pointer;
+  }
   .form__block .form_block_wrapper form .form_block_send p {
     font-size: 10px;
     max-width: 178px;
@@ -203,6 +206,7 @@
     tansition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
+    cursor: pointer;
   }
   .button_black:hover .arrow_white {
     background: url(../../images/arrow_black.svg) no-repeat;
@@ -389,7 +393,7 @@
   }
   .blog__products .blog_products_block .hash__list .hash_list_block a {
     padding: 6px 10px;
-    font-size: 9px;
+    font-size: 10px;
   }
   .reviews__info {
     grid-column-gap: 19px;
@@ -547,10 +551,6 @@
   }
 }
 @media (min-width: 1024px) and (max-width: 1366px) {
-  .breadcrumb-container {
-    margin-top: 15px;
-    margin-left: 0px;
-  }
   .not-found {
     display: inline-block;
     width: 669px;
@@ -837,7 +837,7 @@
     }
   }
 }
-@media (min-width: 1024px) and (max-width: 1366px) {
+@media (min-width: 1023.01px) and (max-width: 1366px) {
   .header_circle_yellow {
     position: absolute;
     width: 384.48px;

@@ -17,9 +17,7 @@ const TemplateBlog = ({ location }) => {
     <>
       <Layout>
         <div className="container">
-          <div className="breadcrumb-container">
-            <Breadcrumbs breadcrumbs={ location } title="BLOG"/>
-          </div>
+          <Breadcrumbs breadcrumbs={ location } title="BLOG"/>
           <div className="hero">
             <div className="hero__title title_62">
               BLOG

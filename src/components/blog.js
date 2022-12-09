@@ -15,6 +15,8 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const Blog = ({ titlePage }) => {
+  const hasWindow = typeof window !== 'undefined';
+  const widthScreen = hasWindow ? window.innerWidth : null;
   const data = useStaticQuery(graphql`
     query siteGetNewsQuery {
       allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["blog"]}}}}}) {
@@ -112,7 +114,7 @@ const Blog = ({ titlePage }) => {
             <ul className="hash__list">
               { tags(item) }
             </ul>
-            <div className="blog_products_block_list_date">{ Moment(item.node.date).format('DD-MM-YYYY') }</div>
+            <div className="blog_products_block_list_date">{ Moment(item.node.date).format('DD.MM.YYYY') }</div>
           </div>
           <div className="blog_products_block_title"><Link className="class_link" to={ item.node.link }>{ item.node.title }</Link></div>
         </div>
@@ -129,7 +131,7 @@ const Blog = ({ titlePage }) => {
         </div>
         <div className="blog__products">
         <Swiper
-              spaceBetween={20}
+              spaceBetween={widthScreen <= 1024 ? 20 :25}
               slidesPerView={"auto"}
               onSlideChange={() => console.log("slide change")}
               onSwiper={swiper => console.log(swiper)}

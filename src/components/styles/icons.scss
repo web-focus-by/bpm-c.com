@@ -20,6 +20,16 @@
     margin-left: 10px;
 }
 
+@media (min-width: 376px) and (max-width: 768px) {
+    .yellow_hand {
+        display: inline-block;
+        background: url(../../images/yellow_hand_40.svg) no-repeat;
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+}
+
 .yellow_hand_mini {
     display: inline-block;
     background: url(../../images/yellow_hand_mini.svg) no-repeat;
@@ -44,6 +54,96 @@
     margin-left: 10px;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .smallpuzzle {
+        display: inline-block;
+        background: url(../../images/minipuzzle.svg) no-repeat  !important;
+        width: 16px  !important;
+        height: 16px !important;
+        margin-left: 10px;
+    }
+    .pen {
+        display: inline-block;
+        width: 16px !important;
+        height: 16px !important;
+        background: url(../../images/minipen.svg) no-repeat !important;
+    }
+    .dye {
+        display: inline-block;
+        width: 16px !important;
+        height: 16px !important;
+        background: url(../../images/minidye.svg) no-repeat !important;
+    }
+    .front {
+        display: inline-block;
+        width: 16px !important;
+        height: 16px !important;
+        background: url(../../images/minifront.svg) no-repeat !important;
+    }
+    .back {
+        display: inline-block;
+        width: 16px !important;
+        height: 16px !important;
+        background: url(../../images/miniback.svg) no-repeat !important;
+    }
+    .testing {
+        display: inline-block;
+        width: 16px !important;
+        height: 16px !important;
+        background: url(../../images/minitesting.svg) no-repeat !important;
+    }
+    .smallstar {
+        display: inline-block;
+        width: 16px !important;
+        height: 16px !important;
+        margin-left: 10px;
+        background: url(../../images/ministar.svg) no-repeat !important;
+    }
+}
+.minitesting {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../../images/minitesting.svg) no-repeat;
+}
+.minifront {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../../images/minifront.svg) no-repeat;
+}
+.minipen {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../../images/minipen.svg) no-repeat;
+}
+.minipuzzle {
+    display: inline-block;
+    background: url(../../images/minipuzzle.svg) no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+}
+.minidye {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../../images/minidye.svg) no-repeat;
+}
+.miniback {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../../images/miniback.svg) no-repeat;
+}
+.ministar {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    background: url(../../images/ministar.svg) no-repeat;
+}
 
 .arrow_black {
     display: inline-block;
@@ -324,7 +424,6 @@
     width: 36px;
     height: 36px;
     background: url(../../images/behance.svg) no-repeat;
-
     &:hover {
         background: url(../../images/behance_hover.svg) no-repeat;
     }

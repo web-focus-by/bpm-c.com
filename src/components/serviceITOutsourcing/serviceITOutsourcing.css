@@ -41,12 +41,14 @@
   border-radius: 80px;
   background: #FFFFFF;
   margin: 0.4rem;
+  -webkit-transition: all 0.3s linear;
 }
 .items_tagline__butn .button_white_item span {
   margin-left: 14px;
 }
 .items_tagline__butn .button_white_item:hover {
   background: #1A1B1F;
+  -webkit-transition: all 0.3s linear;
   color: #FFFFFF;
   cursor: pointer;
 }

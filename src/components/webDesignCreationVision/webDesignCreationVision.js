@@ -90,16 +90,16 @@ const WebDesignCreationVision = ({ content }) => {
           <div className="service_package__info">
             <div className="service_package_info_block">
               { resArrayOne && resArrayOne[0] ? (
-                <div className="service_package_info_block__text font_18" dangerouslySetInnerHTML={{__html: resArrayOne[0] }} />
+                <div className="service_package_info_block__text font_18" style={{fontWeight: 300}} dangerouslySetInnerHTML={{__html: resArrayOne[0] }} />
               ) : null }
               <br/>
               { resArrayOne && resArrayOne[1] ? (
-                <div className="service_package_info_block__text font_18" dangerouslySetInnerHTML={{__html: resArrayOne[1] }} />
+                <div className="service_package_info_block__text font_18" style={{fontWeight: 300}} dangerouslySetInnerHTML={{__html: resArrayOne[1] }} />
               ) : null }
             </div>
             { resArrayOne && resArrayOne[2] ? (
               <div className="service_package_info_block">
-                <div className="service_package_info_block__text font_18" dangerouslySetInnerHTML={{__html: resArrayOne[2] }} />
+                <div className="service_package_info_block__text font_18" style={{fontWeight: 300}} dangerouslySetInnerHTML={{__html: resArrayOne[2] }} />
               </div> 
             ) : null }
           </div>
@@ -130,9 +130,9 @@ const WebDesignCreationVision = ({ content }) => {
         }
         return (
           <div className="service_package__info_list">
-            <div className="service_package_info_list_block font_18" dangerouslySetInnerHTML={{__html: secondPartArr.join('') }}/>
+            <div className="service_package_info_list_block font_18" style={{fontWeight: 300}} dangerouslySetInnerHTML={{__html: secondPartArr.join('') }}/>
             { testArr[1].content.length - 2 > 2 && secondPartArr.length > 0 ? (
-              <div className="service_package_info_list_block font_18"dangerouslySetInnerHTML={{__html: firstPartArr.join('') }}/>
+              <div className="service_package_info_list_block font_18" style={{fontWeight: 300}} dangerouslySetInnerHTML={{__html: firstPartArr.join('') }}/>
             ) : null }
           </div>
         )
@@ -142,7 +142,7 @@ const WebDesignCreationVision = ({ content }) => {
       if (testArr && testArr[2] && testArr[2].content && testArr[2].content.length>0) {
         return (
           <div className="service_package__info_list">
-            <div className="service_package_info_list_block font_18" dangerouslySetInnerHTML={{__html: testArr[2].content.join('') }}/>
+            <div className="service_package_info_list_block font_18" style={{fontWeight: 300}} dangerouslySetInnerHTML={{__html: testArr[2].content.join('') }}/>
           </div>
         )
       }

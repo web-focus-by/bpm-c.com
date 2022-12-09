@@ -10,38 +10,40 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const ProjectsProcess = ({ siteTitle }) => (
-  <div className="container">
-    <div className="projects_process margin_bottom_240">
-      <div className="projects_process__title title_62">
-        Process of projects
-      </div>
-      <div className="projects_process__subtitle font_18">
-        We divide development into stages according to the end result. We can
-        run them in parallel to help speed up the launch of the product.
-      </div>
-      <div className="projects_process__list">
-        <div className="projects_process_list_item padding_50">
-          <p>analytics</p>
-          <span className="smallpuzzle"></span>
-          <div className="projects_process_list_item padding_167">
-            <p>graphics</p>
-            <span className="pen"></span>
-            <div className="projects_process_list_item padding_185">
-              <p>design</p>
-              <span className="dye"></span>
-              <div className="projects_process_list_item padding_161">
-                <p>front-end</p>
-                <span className="front"></span>
+const ProjectsProcess = ({ siteTitle }) => {
+  return (
+    <div className="container">
+      <div className="projects_process margin_bottom_240">
+        <div className="projects_process__title title_62">
+          Process of projects
+        </div>
+        <div className="projects_process__subtitle font_18">
+          We divide development into stages according to the end result. We can
+          run them in parallel to help speed up the launch of the product.
+        </div>
+        <div className="projects_process__list">
+          <div className="projects_process_list_item padding_50">
+            <p>analytics</p>
+            <span className="smallpuzzle"></span>
+            <div className="projects_process_list_item padding_167">
+              <p>graphics</p>
+              <span className="pen"></span>
+              <div className="projects_process_list_item padding_185">
+                <p>design</p>
+                <span className="dye"></span>
                 <div className="projects_process_list_item padding_161">
-                  <p>back-end</p>
-                  <span className="back "></span>
-                  <div className="projects_process_list_item padding_185">
-                    <p>testing</p>
-                    <span className="testing"></span>
-                    <div className="projects_process_list_item padding_184">
-                      <p>launch</p>
-                      <span className="smallstar"></span>
+                  <p>front-end</p>
+                  <span className="front"></span>
+                  <div className="projects_process_list_item padding_161">
+                    <p>back-end</p>
+                    <span className="back"></span>
+                    <div className="projects_process_list_item padding_185">
+                      <p>testing</p>
+                      <span className="testing"></span>
+                      <div className="projects_process_list_item padding_184">
+                        <p>launch</p>
+                        <span className="smallstar"></span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -51,8 +53,8 @@ const ProjectsProcess = ({ siteTitle }) => (
         </div>
       </div>
     </div>
-  </div>
-)
+  )
+}
 
 ProjectsProcess.propTypes = {
   siteTitle: PropTypes.string,

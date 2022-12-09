@@ -36,9 +36,7 @@ const Faq = ({ location, data }) => {
     <>
       <Layout>
         <div className="container">
-          <div className="breadcrumb-container">
-            <Breadcrumbs breadcrumbs={ location } title="FAQ"/>
-          </div>
+          <Breadcrumbs breadcrumbs={ location } title="FAQ"/>
           <div className="hero">
             <div className="hero__title title_62">
               FAQ<span className="faq"></span>
