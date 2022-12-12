@@ -1,7 +1,6 @@
 import * as React from "react"
 import { useRef, useEffect } from "react"
 import PropTypes from "prop-types"
-//import { Link } from "gatsby"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/modules.css"
@@ -14,6 +13,8 @@ import "../components/styles/media_375.css"
 
 const Advantages = ({ siteTitle }) => {
   const advantages = useRef();
+  const hasWindow = typeof window !== 'undefined';
+  const widthScreen = hasWindow ? window.innerWidth : null;
   let element = '';
   let cssObj = '';
   let cssObjMarginLeft = '';
@@ -40,18 +41,20 @@ const Advantages = ({ siteTitle }) => {
 
   useEffect(
     () => {
-      document.addEventListener("scroll", resizeBlock, true);
-      return () => {
-        if (document && document.getElementById("margin_240_black")) {
-          element = document.getElementById("margin_240_black");
-          if (typeof window !== 'undefined') {
-            cssObj = window.getComputedStyle(element);
-          } else { cssObj = null };
-          cssObjMarginLeft = cssObj.getPropertyValue("margin-left");
-          cssObjMarginRight = cssObj.getPropertyValue("margin-right");
-        }
-        document.removeEventListener("scroll", resizeBlock, true);
-      };
+      if (widthScreen > 375) {
+        document.addEventListener("scroll", resizeBlock, true);
+        return () => {
+          if (document && document.getElementById("margin_240_black")) {
+            element = document.getElementById("margin_240_black");
+            if (typeof window !== 'undefined') {
+              cssObj = window.getComputedStyle(element);
+            } else { cssObj = null };
+            cssObjMarginLeft = cssObj.getPropertyValue("margin-left");
+            cssObjMarginRight = cssObj.getPropertyValue("margin-right");
+          }
+          document.removeEventListener("scroll", resizeBlock, true);
+        };
+      }
     }, []
   );
   return (

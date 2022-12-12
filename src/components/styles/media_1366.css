@@ -576,6 +576,10 @@
     padding-left: calc(40px + 117 * (100vw - 1024px) / 342);
     padding-right: calc(40px + 117 * (100vw - 1024px) / 342);
   }
+  .containerForm {
+    padding-left: calc(40px + 117 * (100vw - 1024px) / 342);
+    padding-right: calc(40px + 117 * (100vw - 1024px) / 342);
+  }
   .margin_bottom_240 {
     margin-bottom: calc(120px + 50 * (100vw - 1024px) / 342);
   }

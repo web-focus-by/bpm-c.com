@@ -13,7 +13,7 @@ import gifUriy from "../images/uriy.gif"
 import gifKanu from "../images/kanu.gif"
 import gifVlada from "../images/vlada.gif"
 
-const ThanksModal = ({ onClickClose }) => {
+const ThanksModal = ({ onClickClose, backPageModal }) => {
   //const ref = useRef();
   const refOutside = useRef();
   const refInside = useRef();
@@ -43,7 +43,7 @@ const ThanksModal = ({ onClickClose }) => {
             <div className="form_block_wrapper">
               <form id="search-form" action="#" method="POST">
                 <div className="form_block_send">
-                    <button className="button_black">Back to page</button>
+                  <button className="button_black" onClick={ backPageModal }>Back to page</button>
                 </div>
               </form>
             </div>

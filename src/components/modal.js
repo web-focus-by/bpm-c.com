@@ -87,7 +87,7 @@ const Modal = ({onClickClose}) => {
             </div>
           </div>
           <div className="form__block">
-            <div className="form_block_modal_button" onClick={onClickClose}></div>
+            <div className="form_block_modal_button" onClick={ onClickClose }></div>
           </div>
         </div>
       </div>

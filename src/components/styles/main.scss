@@ -11,6 +11,10 @@ body {
     margin: 0px auto;
     padding: 0px 210px;
 }
+.containerForm {
+    margin: 0px auto;
+    padding: 0px 210px;
+}
 
 .header {
     border-bottom: 2px solid #F0EFF1;
@@ -1110,8 +1114,7 @@ body {
 }
 
 .thanks_form{
-    display: none;
-    padding: 100px 125px 129px 90px !important;
+    padding: 0px;
     .thanks_form_block{
         .form_block_wrapper{
             form{
@@ -1239,9 +1242,13 @@ body {
 
         .blog_products_block {
             .blog_products_block_pic {
+                width: 350px;
+                height: 340px;
                 img {
+                    object-fit: cover;
                     width: 350px;
                     height: 340px;
+                    border-radius: 20px;
                 }
             }
 
@@ -1965,11 +1972,7 @@ body {
 .swiper {
     .swiper-slide {
         width: 347px;
-    }
-}
-.swiper-reviews {
-    .swiper-slide-reviews {
-        width: 347px;
+        height: max-content;
     }
 }
 
@@ -1981,7 +1984,7 @@ body {
     top: 188px;
     /* Yellow gradient desktop */
     border-radius: 100%;
-    animation: header_circle_yellow 10s linear infinite, header_circle_yellowleft 6s linear infinite alternate;
+    animation: header_circle_yellow 12s linear infinite, header_circle_yellowleft 12s linear infinite alternate;
     background: radial-gradient(50% 50% at 50% 50%,
             rgba(255, 215, 113, 0.8) 0%,
             rgba(255, 215, 113, 0.464) 100%);
@@ -2026,7 +2029,7 @@ body {
     left: 935.33px;
     top: 294.21px;
     border-radius: 100%;
-    animation: header_circle_pink 8s linear infinite, header_circle_pinkleft 6s linear infinite alternate;
+    animation: header_circle_pink 8s linear infinite, header_circle_pinkleft 8s linear infinite alternate;
     /* Pink gradient desktop */
     background: radial-gradient(50% 50% at 50% 50%,
             rgba(243, 159, 191, 0.8) 0%,
@@ -2072,7 +2075,7 @@ body {
     left: 915px;
     top: 50px;
     border-radius: 100%;
-    animation: header_circle_purple 8s linear infinite, header_circle_purpleleft 6s linear infinite alternate;
+    animation: header_circle_purple 6s linear infinite, header_circle_purpleleft 6s linear infinite alternate;
     /* Purple gradient desktop */
     background: radial-gradient(50% 50% at 50% 50%,
             rgba(143, 114, 226, 0.6) 0%,

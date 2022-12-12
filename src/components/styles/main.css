@@ -11,6 +11,11 @@ body {
   padding: 0px 210px;
 }
 
+.containerForm {
+  margin: 0px auto;
+  padding: 0px 210px;
+}
+
 .header {
   border-bottom: 2px solid #F0EFF1;
   position: -webkit-sticky;
@@ -995,8 +1000,7 @@ body {
 }
 
 .thanks_form {
-  display: none;
-  padding: 100px 125px 129px 90px !important;
+  padding: 0px;
 }
 .thanks_form .thanks_form_block .form_block_wrapper form {
   padding-top: 0px;
@@ -1102,9 +1106,16 @@ body {
   -moz-column-gap: 25px;
        column-gap: 25px;
 }
-.blog__products .blog_products_block .blog_products_block_pic img {
+.blog__products .blog_products_block .blog_products_block_pic {
   width: 350px;
   height: 340px;
+}
+.blog__products .blog_products_block .blog_products_block_pic img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 350px;
+  height: 340px;
+  border-radius: 20px;
 }
 .blog__products .blog_products_block .blog_products_block_list {
   margin: 27px 0px 24px 0px;
@@ -1771,10 +1782,9 @@ body {
 
 .swiper .swiper-slide {
   width: 347px;
-}
-
-.swiper-reviews .swiper-slide-reviews {
-  width: 347px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .header_circle_yellow {
@@ -1785,8 +1795,8 @@ body {
   top: 188px;
   /* Yellow gradient desktop */
   border-radius: 100%;
-  -webkit-animation: header_circle_yellow 10s linear infinite, header_circle_yellowleft 6s linear infinite alternate;
-          animation: header_circle_yellow 10s linear infinite, header_circle_yellowleft 6s linear infinite alternate;
+  -webkit-animation: header_circle_yellow 12s linear infinite, header_circle_yellowleft 12s linear infinite alternate;
+          animation: header_circle_yellow 12s linear infinite, header_circle_yellowleft 12s linear infinite alternate;
   background: radial-gradient(50% 50% at 50% 50%, rgba(255, 215, 113, 0.8) 0%, rgba(255, 215, 113, 0.464) 100%);
   filter: blur(80px);
   z-index: -1;
@@ -1848,8 +1858,8 @@ body {
   left: 935.33px;
   top: 294.21px;
   border-radius: 100%;
-  -webkit-animation: header_circle_pink 8s linear infinite, header_circle_pinkleft 6s linear infinite alternate;
-          animation: header_circle_pink 8s linear infinite, header_circle_pinkleft 6s linear infinite alternate;
+  -webkit-animation: header_circle_pink 8s linear infinite, header_circle_pinkleft 8s linear infinite alternate;
+          animation: header_circle_pink 8s linear infinite, header_circle_pinkleft 8s linear infinite alternate;
   /* Pink gradient desktop */
   background: radial-gradient(50% 50% at 50% 50%, rgba(243, 159, 191, 0.8) 0%, rgba(243, 159, 191, 0.8) 100%);
   filter: blur(80px);
@@ -1912,8 +1922,8 @@ body {
   left: 915px;
   top: 50px;
   border-radius: 100%;
-  -webkit-animation: header_circle_purple 8s linear infinite, header_circle_purpleleft 6s linear infinite alternate;
-          animation: header_circle_purple 8s linear infinite, header_circle_purpleleft 6s linear infinite alternate;
+  -webkit-animation: header_circle_purple 6s linear infinite, header_circle_purpleleft 6s linear infinite alternate;
+          animation: header_circle_purple 6s linear infinite, header_circle_purpleleft 6s linear infinite alternate;
   /* Purple gradient desktop */
   background: radial-gradient(50% 50% at 50% 50%, rgba(143, 114, 226, 0.6) 0%, rgba(135, 130, 224, 0.6) 0%, rgba(144, 139, 237, 0.6) 0.01%, rgba(143, 114, 226, 0.48) 100%);
   filter: blur(80px);

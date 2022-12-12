@@ -13,7 +13,7 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const ThanksForm = ({ siteTitle }) => {
+const ThanksForm = ({ siteTitle, backPage}) => {
   return (
     <div className="container">
       <div className="form thanks_form margin_bottom_240">
@@ -28,9 +28,9 @@ const ThanksForm = ({ siteTitle }) => {
             </div>
           </div>
           <div className="form_block_wrapper">
-            <form id="search-form" action="#" method="POST">
+            <form id="search-form" >
               <div className="form_block_send">
-                  <button className="button_black">Fill in again</button>
+                  <button className="button_black" onClick={ backPage }>Fill in again</button>
               </div>
             </form>
           </div>

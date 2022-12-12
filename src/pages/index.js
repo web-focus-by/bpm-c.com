@@ -20,6 +20,10 @@ import LeadersChoice from "../components/leaders_choice"
 import ThanksModal from "../components/thanks_modal"
 
 const IndexPage = ({ location }) => {
+  const [isShowThankModal, setIsShowThankModal] = React.useState(false);
+  const [isShowModal, setIsShowModal] = React.useState(true);
+  const [isShowThankForm, setIsShowThankForm] = React.useState(false);
+  const [isShowForm, setIsShowForm] = React.useState(true);
   const postsAndTags = useStaticQuery(graphql`
     query GetPostQuery {
       allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "portfolios"}}}}}) {
@@ -48,16 +52,30 @@ const IndexPage = ({ location }) => {
   `);
   const allPosts = postsAndTags ? postsAndTags.allWpPost.edges : [];
 
+  const backPageModal = () => {
+    setIsShowThankForm(false);
+  }
+
+  const backPage = () => {
+    setIsShowThankModal(false);
+    setIsShowForm(true);
+  }
+
+  const showThankForm = () => {
+    setIsShowThankForm(true);
+    setIsShowForm(false);
+  }
+
   return (
     <>
       <Layout>
         <Seo title="Index" />
         <Hero location={ location }></Hero>
-        <ThanksModal></ThanksModal>
+        { isShowThankModal ? <ThanksModal backPage={ backPageModal }></ThanksModal> : null }
         <ITCompany></ITCompany>
         <Portfolio posts={ allPosts } ></Portfolio>
-        <Form></Form>
-        <ThanksForm></ThanksForm>
+        { isShowForm ? <Form showThankForm={ showThankForm }></Form> : null }
+        { isShowThankForm ? <ThanksForm backPage={ backPage }></ThanksForm> : null }
         <ServicesItem></ServicesItem>
         <Technologies></Technologies>
         <BPMCloud></BPMCloud>
