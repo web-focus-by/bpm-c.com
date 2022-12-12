@@ -15,7 +15,7 @@ import "../components/styles/media_375.css"
 
 const Form = ({ siteTitle, showThankForm }) => {
   const sendForm = () => {
-    showThankForm();
+    //showThankForm();
   }
   return (
     <div className="containerForm">
