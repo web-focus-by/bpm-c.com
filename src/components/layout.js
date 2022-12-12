@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
       }
     }
   `);
-  const phoneButn = useRef();
+  const [isShowThankModal, setIsShowThankModal] = useState(false);
   const [isClickOut, setClickOut] = useState(false);
   const [selectedItem, setItem] = useState();
   const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(false);
@@ -96,6 +96,10 @@ const Layout = ({ children }) => {
     }, []
   );
 
+  const showThankFormModal = () => {
+    setIsShowThankModal(true);
+  }
+
   return (
     <>
       <div className="header" ref={ refMenu }>
@@ -121,7 +125,7 @@ const Layout = ({ children }) => {
         />
       </div>
       <PhoneButn onClick={ toggleModalActive }></PhoneButn>
-      { isOpen ? <Modal onClickClose={ toggleModalActive }></Modal> : null}
+      { isOpen ? <Modal onClickClose={ toggleModalActive } showThankFormModal = { showThankFormModal }></Modal> : null}
       { children }
       <Footer></Footer>
     </>

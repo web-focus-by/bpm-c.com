@@ -13,6 +13,8 @@ import "../../components/styles/media_375.css"
 
 const WebDesignCreationVision = ({ content }) => {
   const creationVision = useRef();
+  const hasWindow = typeof window !== 'undefined';
+  const widthScreen = hasWindow ? window.innerWidth : null;
   let element = '';
   let cssObj = '';
   let cssObjMarginLeft = '';
@@ -37,16 +39,18 @@ const WebDesignCreationVision = ({ content }) => {
 
   useEffect(
     () => {
-      document.addEventListener("scroll", resizeBlockSecond, true);
-      return () => {
-        if (document && document.getElementById("margin_240_black")) {
-          element = document.getElementById("margin_240_black");
-          cssObj = window ? window.getComputedStyle(element): null;
-          cssObjMarginLeft = cssObj.getPropertyValue("margin-left");
-          cssObjMarginRight = cssObj.getPropertyValue("margin-right");
-        }
-        document.removeEventListener("scroll", resizeBlockSecond, true);
-      };
+      if (widthScreen> 375) {
+        document.addEventListener("scroll", resizeBlockSecond, true);
+        return () => {
+          if (document && document.getElementById("margin_240_black")) {
+            element = document.getElementById("margin_240_black");
+            cssObj = window ? window.getComputedStyle(element): null;
+            cssObjMarginLeft = cssObj.getPropertyValue("margin-left");
+            cssObjMarginRight = cssObj.getPropertyValue("margin-right");
+          }
+          document.removeEventListener("scroll", resizeBlockSecond, true);
+        };
+      }
     }, []
   );
 

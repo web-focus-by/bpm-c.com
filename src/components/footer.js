@@ -12,6 +12,8 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const Footer = () => {
+  const hasWindow = typeof window !== 'undefined';
+  const widthScreen = hasWindow ? window.innerWidth : null;
   const footerMenuLinks = [
     { link: "/portfolio/", name: "Portfolio" }, { link: "/services/servicesitoutsourcing/", name: "Services" },
     { link: "/blog/", name: "Blog" }, { link: "/about-us/informationaboutcompany/", name: "About us" },
@@ -24,6 +26,8 @@ const Footer = () => {
     { link: "#", name: "behance" }
   ];
 
+  const numberUsa = widthScreen && widthScreen > 375 ? "USA + 1 929 547 9159" : "+ 1 929 547 9159";
+  const numberCanada = widthScreen && widthScreen > 375 ? "Canada + 1 647 493 9093" : "+ 1 647 493 9093";
   const menuFooter = footerMenuLinks.map((val, index) => {
     return (
       <li key={ index }>
@@ -53,13 +57,13 @@ const Footer = () => {
         <div className="footer__contacts">
           <ul>
             <li>
-              <a>hello@bpm-c.com</a>
+              <a href="mailto:hello@bpm-c.com" target="_blank">hello@bpm-c.com</a>
             </li>
             <li>
-              <a>USA + 1 929 547 9159</a>
+              <a href="tel:19295479159">{numberUsa}</a>
             </li>
             <li>
-              <a>Canada + 1 647 493 9093</a>
+              <a href="tel:16474939093">{numberCanada}</a>
             </li>
           </ul>
         </div>

@@ -51,6 +51,11 @@
         padding-right: calc(157px + (210 - 157) * ((100vw - 1366px) / (1920 - 1366)));
     }
 
+    .containerForm {
+        padding-left: calc(157px + (210 - 157) * ((100vw - 1366px) / (1920 - 1366)));
+        padding-right: calc(157px + (210 - 157) * ((100vw - 1366px) / (1920 - 1366)));
+    }
+
     .title_80 {
         font-size: calc(57px + (80 - 57) * ((100vw - 1366px) / (1920 - 1366)));
     }
@@ -150,6 +155,13 @@
         }
     }
 
+    .swiper {
+        .swiper-slide {
+            width: 350px;
+            height: max-content;
+        }
+        
+    }
 
     .portfolio {
         &__products {
@@ -549,11 +561,21 @@
                         .hash_list_block {
                             a {
                                 padding: calc(6px + (8 - 6) * ((100vw - 1366px) / (1920 - 1366))) calc(10px + (14 - 10) * ((100vw - 1366px) / (1920 - 1366)));
-                                //font-size: calc(9px + (14 - 9) * ((100vw - 1366px) / (1920 - 1366)));
-                                font-size: 14px;
+                                font-size: calc(9px + (14 - 9) * ((100vw - 1366px) / (1920 - 1366)));
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+    .hash {
+        &__list {
+            .hash_list_block {
+                a {
+                    padding: calc(6px + (8 - 6) * ((100vw - 1366px) / (1920 - 1366))) calc(10px + (14 - 10) * ((100vw - 1366px) / (1920 - 1366)));
+                    font-size: calc(9px + (14 - 9) * ((100vw - 1366px) / (1920 - 1366)));
+                    //font-size: 14px;
                 }
             }
         }

@@ -13,9 +13,12 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const Form = ({ siteTitle }) => {
+const Form = ({ siteTitle, showThankForm }) => {
+  const sendForm = () => {
+    showThankForm();
+  }
   return (
-    <div className="container">
+    <div className="containerForm">
       <div className="form margin_bottom_240">
         <div className="form__block">
           <div className="form_block_title title_62">Get in touch</div>
@@ -34,7 +37,7 @@ const Form = ({ siteTitle }) => {
             </div>
           </div>
           <div className="form_block_email">
-            <a href="#">info@bpm-c.com</a>
+            <a href="mailto:hello@bpm-c.com" target="_blank">info@bpm-c.com</a>
           </div>
         </div>
         <div className="form__block">
@@ -78,7 +81,7 @@ const Form = ({ siteTitle }) => {
 
               <div className="form_block_send">
                 <div>
-                  <button className="button_black">
+                  <button className="button_black" onClick={ sendForm }>
                     Send<span className="arrow_white"></span>
                   </button>
                 </div>

@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
-import "./reviews.css"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/modules.css"
@@ -14,7 +13,7 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const Reviews = ({ siteTitle, data }) => {
+const Reviews = ({}) => {
   const hasWindow = typeof window !== 'undefined';
   const widthScreen = hasWindow ? window.innerWidth : null;
   const dataText = [
@@ -80,7 +79,7 @@ const Reviews = ({ siteTitle, data }) => {
       <div className="reviews margin_bottom_240">
         <div className="view_title">
           <div className="title_62">Reviews</div>
-          <Link className="active_link" to="#">View all</Link>
+          <Link className="active_link" to="/about-us/reviews/">View all</Link>
         </div>
         <div className="reviews__info">
           <Swiper
@@ -102,9 +101,13 @@ const Reviews = ({ siteTitle, data }) => {
                 allowTouchMove: true,
               },
               1024: {
-                width: 1366,
+                width: 1024,
                 allowTouchMove: true,
               },
+              768: {
+                width: 768,
+                allowTouchMove: true,
+              }
             }}
           >
             {result}
