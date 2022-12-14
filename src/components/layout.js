@@ -68,7 +68,7 @@ const Layout = ({ children }) => {
 
   const closeMenu = () => {
     setToggle(false);
-    setIsOpenBurgerMenu(false)
+    setIsOpenBurgerMenu(false);
   }
 
   const [isOpen, setModalActive] = useState(false);
@@ -99,12 +99,12 @@ const Layout = ({ children }) => {
   );
 
   const showThankFormModal = () => {
-    setIsShowModal(false)
+    setIsShowModal(false);
     setIsShowThankModal(true);
   }
 
   const backPageModal = () => {
-    setIsShowModal(true)
+    setIsShowModal(true);
     setIsShowThankModal(false);
     setModalActive(true);
   }
