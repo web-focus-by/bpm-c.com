@@ -38,6 +38,13 @@ const Form = ({ siteTitle, showThankForm }) => {
   const [nameValue, setNameValue] = useState('');
   const [telephoneValue, setTelephoneValue] = useState('');
   const [emailValue, setEmailValue] = useState('');
+  const isNonEmpty = (e) => {
+    if (e.target.value.length === 0) {
+      document.getElementById(e.target.id).classList.add('input_invalid');
+    } else {
+      document.getElementById(e.target.id).classList.remove('input_invalid');
+    }
+  }
 
   if (loading) return 'Submitting...';
   if (error) return `Submission error! ${error.message}`;
@@ -74,7 +81,7 @@ const Form = ({ siteTitle, showThankForm }) => {
                   variables: {
                     name: nameValue,
                     telephone: telephoneValue,
-                    email: emailValue
+                    email: emailValue,
                   }
                 });
                 showThankForm();
@@ -88,9 +95,10 @@ const Form = ({ siteTitle, showThankForm }) => {
                   onChange={ e => {
                     setNameValue(e.target.value)
                   }}
+                  onBlur={ e => isNonEmpty(e) }
                   required
                 />
-                <label >Name*</label>
+                <label>Name*</label>
               </div>
 
               <div className="form_line-wrapper">
@@ -102,6 +110,7 @@ const Form = ({ siteTitle, showThankForm }) => {
                   onChange={ e => {
                     setTelephoneValue(e.target.value)
                   }}
+                  onBlur={ e => isNonEmpty(e) }
                   required
                 />
                 <label>Phone*</label>
@@ -116,6 +125,7 @@ const Form = ({ siteTitle, showThankForm }) => {
                   onChange={ e => {
                     setEmailValue(e.target.value)
                   }}
+                  onBlur={ e => isNonEmpty(e) }
                   required
                 />
                 <label>E-mail</label>

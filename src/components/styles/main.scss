@@ -1072,6 +1072,14 @@ body {
                         top: -25x;
                     }
 
+                    .input_invalid {
+                        border-bottom: 1px solid #e11d48;
+                        color: #e11d48;
+                    }
+                    .label_invalid {
+                        color: #e11d48;
+                    }
+
                     label {
                         position: absolute;
                         pointer-events: none;

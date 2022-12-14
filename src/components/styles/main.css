@@ -966,6 +966,13 @@ body {
 .form__block .form_block_wrapper form .form_line-wrapper input:valid ~ label {
   top: -25x;
 }
+.form__block .form_block_wrapper form .form_line-wrapper .input_invalid {
+  border-bottom: 1px solid #e11d48;
+  color: #e11d48;
+}
+.form__block .form_block_wrapper form .form_line-wrapper .label_invalid {
+  color: #e11d48;
+}
 .form__block .form_block_wrapper form .form_line-wrapper label {
   position: absolute;
   pointer-events: none;
