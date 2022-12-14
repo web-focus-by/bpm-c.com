@@ -1,5 +1,7 @@
 import * as React from "react"
+import { useState } from "react"
 import PropTypes from "prop-types"
+import { gql, useMutation } from "@apollo/client"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/modules.css"
@@ -13,10 +15,33 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
+const CONTACT_MUTATION = gql`
+  mutation CreateSubmissionMutation(
+    $name: String!
+    $telephone: String!
+    $email: String!
+  ) {
+    createSubmission(
+      input: {
+        name: $name
+        telephone: $telephone
+        email: $email
+      }
+    ) {
+      success
+      data
+    }
+  }`
+
 const Form = ({ siteTitle, showThankForm }) => {
-  const sendForm = () => {
-    //showThankForm();
-  }
+  const [createSubmission, { loading, error, data }] = useMutation(CONTACT_MUTATION);
+  const [nameValue, setNameValue] = useState('');
+  const [telephoneValue, setTelephoneValue] = useState('');
+  const [emailValue, setEmailValue] = useState('');
+
+  if (loading) return 'Submitting...';
+  if (error) return `Submission error! ${error.message}`;
+
   return (
     <div className="containerForm">
       <div className="form margin_bottom_240">
@@ -42,26 +67,41 @@ const Form = ({ siteTitle, showThankForm }) => {
         </div>
         <div className="form__block">
           <div className="form_block_wrapper">
-            <form id="search-form" action="#" method="POST">
+            <form id="search-form"
+              onSubmit={ e => {
+                e.preventDefault();
+                createSubmission({
+                  variables: {
+                    name: nameValue,
+                    telephone: telephoneValue,
+                    email: emailValue
+                  }
+                });
+                showThankForm();
+              }
+            }>
               <div className="form_line-wrapper">
-                <input
-                  id="name"
-                  type="text"
-                  autoComplete="off"
-                  name="user_name"
-                  className="form_name input-yellow "
+                <input id="name" type="text"
+                  value = { nameValue }
+                  autoComplete="off" name="name"
+                  className="form_name input-yellow"
+                  onChange={ e => {
+                    setNameValue(e.target.value)
+                  }}
                   required
                 />
-                <label>Name*</label>
+                <label >Name*</label>
               </div>
 
               <div className="form_line-wrapper">
                 <input
-                  type="tel"
-                  id="tel"
+                  value = { telephoneValue }
+                  type="text" id="tel"
                   autoComplete="off"
-                  name="user_phone"
-                  className="form-phone input-phone form_phone input-yellow"
+                  name="telephone" className="form-phone input-phone form_phone input-yellow"
+                  onChange={ e => {
+                    setTelephoneValue(e.target.value)
+                  }}
                   required
                 />
                 <label>Phone*</label>
@@ -69,11 +109,13 @@ const Form = ({ siteTitle, showThankForm }) => {
 
               <div className="form_line-wrapper">
                 <input
-                  type="text"
-                  id="mail"
-                  autoComplete="off"
-                  name="user_mail"
+                  value = { emailValue }
+                  type="text" id="mail"
+                  autoComplete="off" name="email"
                   className="form-mail input-mail form_mail input-yellow"
+                  onChange={ e => {
+                    setEmailValue(e.target.value)
+                  }}
                   required
                 />
                 <label>E-mail</label>
@@ -81,7 +123,7 @@ const Form = ({ siteTitle, showThankForm }) => {
 
               <div className="form_block_send">
                 <div>
-                  <button className="button_black" onClick={ sendForm }>
+                  <button className="button_black" type="submit">
                     Send<span className="arrow_white"></span>
                   </button>
                 </div>

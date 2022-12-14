@@ -917,14 +917,14 @@ body {
                             }
                             input:focus~label,
                             input:valid~label {
-                                top: -40px;
+                                top: -30px;
                             }
 
                             label {
                                 position: absolute;
                                 pointer-events: none;
                                 left: 5px;
-                                top: -40px;
+                                top: -30px;
                                 transition: 0.2s ease all;
                                 -moz-transition: 0.2s ease all;
                                 -webkit-transition: 0.2s ease all;
@@ -1069,7 +1069,7 @@ body {
 
                     input:focus~label,
                     input:valid~label {
-                        top: -40px;
+                        top: -25x;
                     }
 
                     label {

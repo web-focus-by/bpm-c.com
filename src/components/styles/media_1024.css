@@ -666,13 +666,13 @@
   }
   .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper input:focus ~ label,
 .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper input:valid ~ label {
-    top: -40px;
+    top: -30px;
   }
   .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper label {
     position: absolute;
     pointer-events: none;
     left: 5px;
-    top: -40px;
+    top: -30px;
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
@@ -809,7 +809,7 @@
   }
   .form .form_block_wrapper form .form_line-wrapper input:focus ~ label,
 .form .form_block_wrapper form .form_line-wrapper input:valid ~ label {
-    top: -40px;
+    top: -20px;
   }
   .form .form_block_wrapper form input {
     font-size: 16px;

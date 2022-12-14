@@ -6,6 +6,7 @@ import Header from "./header"
 import Footer from "./footer"
 import PhoneButn from "./phone_butn"
 import Modal from "./modal"
+import ThanksModal from "../components/thanks_modal"
 import DropdownServices from "./dropdown_services"
 import MenuBurger from "../components/menuBurger"
 import "../components/styles/layout.css"
@@ -31,6 +32,7 @@ const Layout = ({ children }) => {
     }
   `);
   const [isShowThankModal, setIsShowThankModal] = useState(false);
+  const [isShowModal, setIsShowModal] = useState(true);
   const [isClickOut, setClickOut] = useState(false);
   const [selectedItem, setItem] = useState();
   const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(false);
@@ -97,7 +99,14 @@ const Layout = ({ children }) => {
   );
 
   const showThankFormModal = () => {
+    setIsShowModal(false)
     setIsShowThankModal(true);
+  }
+
+  const backPageModal = () => {
+    setIsShowModal(true)
+    setIsShowThankModal(false);
+    setModalActive(true);
   }
 
   return (
@@ -125,7 +134,8 @@ const Layout = ({ children }) => {
         />
       </div>
       <PhoneButn onClick={ toggleModalActive }></PhoneButn>
-      { isOpen ? <Modal onClickClose={ toggleModalActive } showThankFormModal = { showThankFormModal }></Modal> : null}
+      { isOpen && isShowModal ? <Modal onClickClose={ toggleModalActive } showThankForm = { showThankFormModal }></Modal> : null}
+      { isShowThankModal ? <ThanksModal onClickClose={ toggleModalActive } backPageModal = { backPageModal }></ThanksModal> : null}
       { children }
       <Footer></Footer>
     </>

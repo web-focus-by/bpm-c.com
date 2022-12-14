@@ -14,7 +14,6 @@ import gifKanu from "../images/kanu.gif"
 import gifVlada from "../images/vlada.gif"
 
 const ThanksModal = ({ onClickClose, backPageModal }) => {
-  //const ref = useRef();
   const refOutside = useRef();
   const refInside = useRef();
   const clickOut = (e) => {

@@ -1,6 +1,7 @@
 import * as React from "react"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import PropTypes from "prop-types"
+import { gql, useMutation } from "@apollo/client"
 import "../components/styles/main.css"
 import "../components/styles/icons.css"
 import "../components/styles/mixins.css"
@@ -13,8 +14,29 @@ import gifUriy from "../images/uriy.gif"
 import gifKanu from "../images/kanu.gif"
 import gifVlada from "../images/vlada.gif"
 
-const Modal = ({onClickClose}) => {
-  //const ref = useRef();
+const CONTACT_MUTATION = gql`
+  mutation CreateSubmissionMutation(
+    $name: String!
+    $telephone: String!
+    $email: String!
+  ) {
+    createSubmission(
+      input: {
+        name: $name
+        telephone: $telephone
+        email: $email
+      }
+    ) {
+      success
+      data
+    }
+  }`
+
+const Modal = ({onClickClose, showThankForm}) => {
+  const [createSubmission, { loading, error, data }] = useMutation(CONTACT_MUTATION);
+  const [nameValue, setNameValue] = useState('');
+  const [telephoneValue, setTelephoneValue] = useState('');
+  const [emailValue, setEmailValue] = useState('');
   const refOutside = useRef();
   const refInside = useRef();
   const clickOut = (e) => {
@@ -24,7 +46,8 @@ const Modal = ({onClickClose}) => {
           onClickClose()
         }
   }
- 
+  if (loading) return 'Submitting...';
+  if (error) return `Submission error! ${error.message}`;
   return(
     <React.Fragment>
     <div className="modal" onClick={ clickOut } ref={ refOutside }>
@@ -41,40 +64,64 @@ const Modal = ({onClickClose}) => {
               </div>
             </div>
             <div className="form_block_wrapper">
-              <form id="search-form" action="#" method="POST">
+              <form id="search-form"
+              onSubmit={ e => {
+                e.preventDefault();
+                  createSubmission({
+                    variables: {
+                      name: nameValue,
+                      telephone: telephoneValue,
+                      email: emailValue
+                    }
+                  });
+                  showThankForm();
+                }
+              }>
                 <div className="form_line-wrapper">
                   <input
                     id="name"
+                    value = { nameValue }
                     type="text"
                     autoComplete="off"
                     name="user_name"
                     className="form_name input-yellow "
+                    onChange={ e => {
+                      setNameValue(e.target.value)
+                    }}
                     required />
                   <label>Name*</label>
                 </div>
                 <div className="form_line-wrapper">
                   <input
-                    type="tel"
+                    type="text"
+                    value = { telephoneValue }
                     id="tel"
                     autoComplete="off"
-                    name="user_phone"
+                    name="telephoneValue"
                     className="form-phone input-phone form_phone input-yellow"
+                    onChange={ e => {
+                      setTelephoneValue(e.target.value)
+                    }}
                     required />
                   <label>Phone*</label>
                 </div>
                 <div className="form_line-wrapper">
                   <input
+                    value = { emailValue }
                     type="text"
                     id="mail"
                     autoComplete="off"
-                    name="user_mail"
+                    name="email"
                     className="form-mail input-mail form_mail input-yellow"
+                    onChange={ e => {
+                      setEmailValue(e.target.value)
+                    }}
                     required />
                   <label>E-mail</label>
                 </div>
                 <div className="form_block_send">
                   <div>
-                    <button className="button_black">
+                    <button className="button_black" type="submit">
                       Send<span className="arrow_white"></span>
                     </button>
                   </div>

@@ -1246,13 +1246,13 @@
   }
   .leaders_choice_tagline .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper input:focus ~ label,
 .leaders_choice_tagline .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper input:valid ~ label {
-    top: -40px;
+    top: -30px;
   }
   .leaders_choice_tagline .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper label {
     position: absolute;
     pointer-events: none;
     left: 5px;
-    top: -40px;
+    top: -30px;
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
