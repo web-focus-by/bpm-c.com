@@ -1,6 +1,7 @@
 import * as React from "react"
 import { useState } from "react"
 import { Link } from "gatsby"
+import { gql, useMutation } from "@apollo/client"
 import Breadcrumbs from "../components/breadcrumbs/breadcrumbs"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -14,7 +15,29 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
+const CONTACT_MUTATION = gql`
+  mutation CreateSubmissionMutation(
+    $name: String!
+    $telephone: String!
+    $email: String!
+  ) {
+    createSubmission(
+      input: {
+        name: $name
+        telephone: $telephone
+        email: $email
+      }
+    ) {
+      success
+      data
+    }
+  }`
+
 const Contacts = ({ location }) => {
+  const [createSubmission, { loading, error, data }] = useMutation(CONTACT_MUTATION);
+  const [nameValue, setNameValue] = useState('');
+  const [telephoneValue, setTelephoneValue] = useState('');
+  const [emailValue, setEmailValue] = useState('');
   const [interestedItems, setInterestedItems] = useState(['']);
   const socialMaediaLinks = [
     { link: "#", name: "insta" },
@@ -42,10 +65,6 @@ const Contacts = ({ location }) => {
 
   const clear = () => {
     setInterestedItems(['']);
-  }
-
-  const submitForm = () => {
-    return;
   }
 
   return (
@@ -105,14 +124,30 @@ const Contacts = ({ location }) => {
                     }
                   </div>
                   <div className="contact_form_block_wrapper">
-                    <form id="search-contact_form" action="#" method="POST">
+                    <form id="search-contact_form"
+                      onSubmit={ e => {
+                        e.preventDefault();
+                          createSubmission({
+                            variables: {
+                              name: nameValue,
+                              telephone: telephoneValue,
+                              email: emailValue
+                            }
+                          });
+                          clear();
+                        }
+                    }>
                       <div className="contact_form_line-wrapper">
                         <input
                           id="name"
+                          value = { nameValue }
                           type="text"
                           autoComplete="off"
-                          name="user_name"
+                          name="name"
                           className="contact_form_name input-yellow "
+                          onChange={ e => {
+                            setNameValue(e.target.value)
+                          }}
                           required
                         />
                         <label>Name*</label>
@@ -120,11 +155,15 @@ const Contacts = ({ location }) => {
 
                       <div className="contact_form_line-wrapper">
                         <input
-                          type="tel"
+                          value = { telephoneValue }
+                          type="text"
                           id="tel"
                           autoComplete="off"
-                          name="user_phone"
+                          name="telephone"
                           className="contact_form-phone input-phone contact_form_phone input-yellow"
+                          onChange={ e => {
+                            setTelephoneValue(e.target.value)
+                          }}
                           required
                         />
                         <label>Phone*</label>
@@ -132,18 +171,22 @@ const Contacts = ({ location }) => {
 
                       <div className="contact_form_line-wrapper">
                         <input
+                          value = { emailValue }
                           type="text"
                           id="mail"
                           autoComplete="off"
-                          name="user_mail"
+                          name="email"
                           className="contact_form-mail input-mail contact_form_mail input-yellow"
+                          onChange={ e => {
+                            setEmailValue(e.target.value)
+                          }}
                           required
                         />
                         <label>E-mail</label>
                       </div>
                       <div className="contact_form_block_send">
                         <div>
-                          <button className="button_white" onClick={ submitForm }>
+                          <button className="button_white" type="submit">
                             Send<span className="arrow_black"></span>
                           </button>
                         </div>
