@@ -15,13 +15,13 @@ import "./serviceITOutsourcing.css"
 const ServicesITOutsourcing = ({ title, themes }) => {
   const result = themes.map((value, index) => {
     return (
-      <Link to={ value.uri }>
-        <button key = { index + value.id } className="button_white_item">
-          { value.title }
+      <Link to={value.uri}>
+        <button key={index + value.id} className="button_white_item">
+          {value.title}
         </button>
       </Link>
     )
-  });
+  })
 
   if (result && result.length > 0) {
     return (
@@ -29,12 +29,10 @@ const ServicesITOutsourcing = ({ title, themes }) => {
         <div className="service_oitsourcing margin_bottom_240">
           <div className="service_oitsourcing_choice">
             <div className="service_oitsourcing_choice__title title_62">
-              Services in&nbsp;{ title }
+              Services in&nbsp;{title}
             </div>
           </div>
-          <div className="items_tagline__butn">
-            { result }
-          </div>
+          <div className="items_tagline__butn">{result}</div>
         </div>
       </div>
     )
@@ -44,9 +42,9 @@ const ServicesITOutsourcing = ({ title, themes }) => {
 ServicesITOutsourcing.propTypes = {
   siteTitle: PropTypes.string,
 }
-  
+
 ServicesITOutsourcing.defaultProps = {
   siteTitle: ``,
 }
 
-export default ServicesITOutsourcing;
+export default ServicesITOutsourcing

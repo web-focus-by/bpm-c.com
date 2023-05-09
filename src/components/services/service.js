@@ -13,7 +13,10 @@ import "../../components/styles/media_375.css"
 const Service = ({ title }) => {
   const data = useStaticQuery(graphql`
     query getServicesDataQuery {
-      allWpPage(filter: {wpParent: {node: {slug: {eq: "services"}}}}, limit: 8) {
+      allWpPage(
+        filter: { wpParent: { node: { slug: { eq: "services" } } } }
+        limit: 8
+      ) {
         edges {
           node {
             id
@@ -25,23 +28,29 @@ const Service = ({ title }) => {
     }
   `)
   const dataItems = data ? data.allWpPage.edges : null
-  const result = dataItems ? dataItems.map((value, index) => {
-    return (
-      <Link className="services_list_item" id={ index } key={ value.node.id } style={{textDecoration: 'none'}} to={ value.node.uri }>
-        { value.node.title }
-      </Link>
-    )
-  }) : '';
+  const result = dataItems
+    ? dataItems.map((value, index) => {
+        return (
+          <Link
+            className="services_list_item"
+            id={index}
+            key={value.node.id}
+            style={{ textDecoration: "none" }}
+            to={value.node.uri}
+          >
+            {value.node.title}
+          </Link>
+        )
+      })
+    : ""
   return (
     <div className="container">
       <div className="services margin_bottom_240">
-        <div className="services__title title_62">{ title }</div>
-          <div className="services__list">
-          { result }
-        </div>
+        <div className="services__title title_62">{title}</div>
+        <div className="services__list">{result}</div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Service;
+export default Service

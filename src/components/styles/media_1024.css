@@ -34,7 +34,9 @@
   .portfolio__products .portfolio_products_block .portfolio_products_block_pic {
     margin-bottom: 17px;
   }
-  .portfolio__products .portfolio_products_block .portfolio_products_block_list {
+  .portfolio__products
+    .portfolio_products_block
+    .portfolio_products_block_list {
     margin-bottom: 17px;
   }
   .form {
@@ -58,7 +60,8 @@
   .thanks_modal .thanks_modal_content .form {
     grid-template-columns: 470px 171px;
     padding: 26px 26px 199px 53px;
-    background: url(../../images/purple_ball.svg) 103% 15% no-repeat, url(../../images/yellow_ball.svg) 66% 105% no-repeat;
+    background: url(../../images/purple_ball.svg) 103% 15% no-repeat,
+      url(../../images/yellow_ball.svg) 66% 105% no-repeat;
     background-size: 38%;
   }
   .thanks_modal .thanks_modal_content .form__block .form_block_title {
@@ -67,7 +70,10 @@
   .thanks_modal .thanks_modal_content .form__block .form_block_modal_button {
     width: 22px;
   }
-  .thanks_modal .thanks_modal_content .form__block .form_block_modal_button::after {
+  .thanks_modal
+    .thanks_modal_content
+    .form__block
+    .form_block_modal_button::after {
     width: 22px;
   }
   .technologies__list {
@@ -84,10 +90,10 @@
     left: 127.5px;
   }
   .reviews__info .reviews_info_block {
-    background: #E1DAF4;
+    background: #e1daf4;
     border-radius: 30px;
     padding: 30px 20px;
-    color: #1A1B1F;
+    color: #1a1b1f;
   }
   .reviews__info .reviews_info_block .reviews_info_block_text {
     font-size: 11px;
@@ -104,7 +110,7 @@
   .reviews__info .reviews_info_block .reviews_info_block_date ul li {
     display: inline-block;
     font-size: 14px;
-    color: #5C5C5C;
+    color: #5c5c5c;
   }
   /*.reviews {
       &__info {
@@ -136,7 +142,7 @@
     width: 342px;
     height: 398.42px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     border-radius: 17.8px;
   }
   .requires_design .title_62 {
@@ -244,9 +250,15 @@
     margin-left: calc(30px + -8 * (100vw - 768px) / 132);
   }
   .thanks_modal .thanks_modal_content .form {
-    grid-template-columns: calc(560px + -80 * (100vw - 768px) / 256) calc(50px + 225 * (100vw - 768px) / 256);
-    padding: calc(30px + -4 * (100vw - 768px) / 256) calc(30px + -4 * (100vw - 768px) / 256) calc(230px + -31 * (100vw - 768px) / 256) calc(60px + -7 * (100vw - 768px) / 256);
-    background: url(../../images/purple_ball.svg) 103% 15% no-repeat, url(../../images/yellow_ball.svg) 66% 105% no-repeat;
+    grid-template-columns: calc(560px + -80 * (100vw - 768px) / 256) calc(
+        50px + 225 * (100vw - 768px) / 256
+      );
+    padding: calc(30px + -4 * (100vw - 768px) / 256)
+      calc(30px + -4 * (100vw - 768px) / 256)
+      calc(230px + -31 * (100vw - 768px) / 256)
+      calc(60px + -7 * (100vw - 768px) / 256);
+    background: url(../../images/purple_ball.svg) 103% 15% no-repeat,
+      url(../../images/yellow_ball.svg) 66% 105% no-repeat;
     background-size: 38%;
   }
   .thanks_modal .thanks_modal_content .form__block .form_block_text p {
@@ -258,14 +270,25 @@
   .thanks_modal .thanks_modal_content .form__block .form_block_modal_button {
     width: calc(33px + -11 * (100vw - 768px) / 256);
   }
-  .thanks_modal .thanks_modal_content .form__block .form_block_modal_button::after {
+  .thanks_modal
+    .thanks_modal_content
+    .form__block
+    .form_block_modal_button::after {
     width: calc(33px + -11 * (100vw - 768px) / 256);
   }
-  .thanks_modal .thanks_modal_content .form .form_block_wrapper form .form_block_send {
+  .thanks_modal
+    .thanks_modal_content
+    .form
+    .form_block_wrapper
+    form
+    .form_block_send {
     margin-top: 56px;
   }
   .thanks_form {
-    padding: calc(80px + 6 * (100vw - 768px) / 256) calc(80px + 9 * (100vw - 768px) / 256) calc(491px + -404 * (100vw - 768px) / 256) calc(80px + -10 * (100vw - 768px) / 256) !important;
+    padding: calc(80px + 6 * (100vw - 768px) / 256)
+      calc(80px + 9 * (100vw - 768px) / 256)
+      calc(491px + -404 * (100vw - 768px) / 256)
+      calc(80px + -10 * (100vw - 768px) / 256) !important;
   }
   .thanks_form .thanks_form_block .form_block_title {
     margin-bottom: calc(49px + -24 * (100vw - 768px) / 256);
@@ -308,13 +331,14 @@
   }
   .blog__products {
     -moz-column-gap: calc(10px + 7 * (100vw - 768px) / 256);
-         column-gap: calc(10px + 7 * (100vw - 768px) / 256);
+    column-gap: calc(10px + 7 * (100vw - 768px) / 256);
   }
   .leaders {
     position: relative;
   }
   .leaders_choice_tagline {
-    margin: calc(184px + -6 * (100vw - 768px) / 256) 0px calc(207px + -29 * (100vw - 768px) / 256) 0px;
+    margin: calc(184px + -6 * (100vw - 768px) / 256) 0px
+      calc(207px + -29 * (100vw - 768px) / 256) 0px;
   }
   .leaders_choice_tagline__block .leaders_choice_tagline_block_title {
     font-size: calc(46px + -2 * (100vw - 768px) / 256);
@@ -324,11 +348,14 @@
     height: calc(64px + -12 * (100vw - 768px) / 256);
     margin-left: calc(-20px + 10 * (100vw - 768px) / 256);
   }
-  .leaders_choice_tagline__block .leaders_choice_tagline_block_gif img:first-child {
+  .leaders_choice_tagline__block
+    .leaders_choice_tagline_block_gif
+    img:first-child {
     margin-left: calc(26px + 46 * (100vw - 768px) / 256);
   }
   .leaders_choice_tagline__butn button {
-    padding: calc(22px + -6 * (100vw - 768px) / 256) calc(40px + -11 * (100vw - 768px) / 256);
+    padding: calc(22px + -6 * (100vw - 768px) / 256)
+      calc(40px + -11 * (100vw - 768px) / 256);
   }
   .leaders_choice_tagline__butn button span {
     margin-left: calc(14px + 23 * (100vw - 768px) / 256);
@@ -341,9 +368,15 @@
     top: 4px;
     /* Yellow gradient desktop */
     border-radius: 100%;
-    -webkit-animation: footer_circle_yellow 10s linear infinite, footer_circle_yellowleft 6s linear infinite alternate;
-            animation: footer_circle_yellow 10s linear infinite, footer_circle_yellowleft 6s linear infinite alternate;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 215, 113, 0.8) 0%, rgba(255, 215, 113, 0.464) 100%);
+    -webkit-animation: footer_circle_yellow 10s linear infinite,
+      footer_circle_yellowleft 6s linear infinite alternate;
+    animation: footer_circle_yellow 10s linear infinite,
+      footer_circle_yellowleft 6s linear infinite alternate;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 215, 113, 0.8) 0%,
+      rgba(255, 215, 113, 0.464) 100%
+    );
     filter: blur(80px);
     z-index: -1;
   }
@@ -402,10 +435,16 @@
     left: 115.33px;
     top: 14.21px;
     border-radius: 100%;
-    -webkit-animation: footer_circle_pink 8s linear infinite, footer_circle_pinkleft 6s linear infinite alternate;
-            animation: footer_circle_pink 8s linear infinite, footer_circle_pinkleft 6s linear infinite alternate;
+    -webkit-animation: footer_circle_pink 8s linear infinite,
+      footer_circle_pinkleft 6s linear infinite alternate;
+    animation: footer_circle_pink 8s linear infinite,
+      footer_circle_pinkleft 6s linear infinite alternate;
     /* Pink gradient desktop */
-    background: radial-gradient(50% 50% at 50% 50%, rgba(243, 159, 191, 0.8) 0%, rgba(243, 159, 191, 0.8) 100%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(243, 159, 191, 0.8) 0%,
+      rgba(243, 159, 191, 0.8) 100%
+    );
     filter: blur(80px);
     z-index: -1;
   }
@@ -464,10 +503,18 @@
     left: 105px;
     top: 24px;
     border-radius: 100%;
-    -webkit-animation: footer_circle_purple 8s linear infinite, footer_circle_purpleleft 6s linear infinite alternate;
-            animation: footer_circle_purple 8s linear infinite, footer_circle_purpleleft 6s linear infinite alternate;
+    -webkit-animation: footer_circle_purple 8s linear infinite,
+      footer_circle_purpleleft 6s linear infinite alternate;
+    animation: footer_circle_purple 8s linear infinite,
+      footer_circle_purpleleft 6s linear infinite alternate;
     /* Purple gradient desktop */
-    background: radial-gradient(50% 50% at 50% 50%, rgba(143, 114, 226, 0.6) 0%, rgba(135, 130, 224, 0.6) 0%, rgba(144, 139, 237, 0.6) 0.01%, rgba(143, 114, 226, 0.48) 100%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(143, 114, 226, 0.6) 0%,
+      rgba(135, 130, 224, 0.6) 0%,
+      rgba(144, 139, 237, 0.6) 0.01%,
+      rgba(143, 114, 226, 0.48) 100%
+    );
     filter: blur(80px);
     z-index: -1;
   }
@@ -549,7 +596,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 100%;
-    color: #1A1B1F;
+    color: #1a1b1f;
   }
   .contacts__contact .contacts_table .contacts_label ul {
     padding: 0px;
@@ -567,7 +614,7 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 100%;
-    color: #1A1B1F;
+    color: #1a1b1f;
   }
   .contacts__contact .contacts_table .contacts_value ul {
     padding: 0px;
@@ -590,17 +637,19 @@
     background-position: 110px 165px;
   }
   .contacts__contacts_form .contact_form__block {
-    color: #1A1B1F;
+    color: #1a1b1f;
     width: 160%;
   }
-  .contacts__contacts_form .contact_form__block .contact_form_block_buttons_title {
+  .contacts__contacts_form
+    .contact_form__block
+    .contact_form_block_buttons_title {
     width: 100%;
     font-family: "Acrom";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 100%;
-    color: #1A1B1F;
+    color: #1a1b1f;
   }
   .contacts__contacts_form .contact_form__block .contact_form_block_buttons {
     width: 100%;
@@ -608,7 +657,7 @@
     margin-bottom: 40px;
   }
   .contacts__contacts_form .contact_form__block .contact_form_block_title {
-    color: #1A1B1F;
+    color: #1a1b1f;
     margin-bottom: 0px;
   }
   .contacts__contacts_form .contact_form__block .contact_form_block_info {
@@ -636,39 +685,76 @@
     font-size: 24px;
     line-height: 100%;
     text-decoration: none;
-    color: #1A1B1F;
+    color: #1a1b1f;
   }
   .contacts__contacts_form .contact_form__block p {
     margin: 0px;
   }
-  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form {
+  .contacts__contacts_form
+    .contact_form__block
+    .contact_form_block_wrapper
+    form {
     padding-top: 40px;
   }
-  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper {
+  .contacts__contacts_form
+    .contact_form__block
+    .contact_form_block_wrapper
+    form
+    .contact_form_line-wrapper {
     position: relative;
   }
-  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper:first-child {
+  .contacts__contacts_form
+    .contact_form__block
+    .contact_form_block_wrapper
+    form
+    .contact_form_line-wrapper:first-child {
     margin-bottom: 78px;
   }
-  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper:nth-child(2) {
+  .contacts__contacts_form
+    .contact_form__block
+    .contact_form_block_wrapper
+    form
+    .contact_form_line-wrapper:nth-child(2) {
     margin-bottom: 58px;
   }
-  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper input {
-    color: #1A1B1F;
+  .contacts__contacts_form
+    .contact_form__block
+    .contact_form_block_wrapper
+    form
+    .contact_form_line-wrapper
+    input {
+    color: #1a1b1f;
     font-weight: 500;
     line-height: 100%;
     border: 0px;
     outline: none;
     background-color: transparent;
-    border-bottom: 1px solid #1A1B1F;
+    border-bottom: 1px solid #1a1b1f;
     width: 100%;
     padding-bottom: 10px;
   }
-  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper input:focus ~ label,
-.contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper input:valid ~ label {
+  .contacts__contacts_form
+    .contact_form__block
+    .contact_form_block_wrapper
+    form
+    .contact_form_line-wrapper
+    input:focus
+    ~ label,
+  .contacts__contacts_form
+    .contact_form__block
+    .contact_form_block_wrapper
+    form
+    .contact_form_line-wrapper
+    input:valid
+    ~ label {
     top: -30px;
   }
-  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper label {
+  .contacts__contacts_form
+    .contact_form__block
+    .contact_form_block_wrapper
+    form
+    .contact_form_line-wrapper
+    label {
     position: absolute;
     pointer-events: none;
     left: 5px;
@@ -677,23 +763,49 @@
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
   }
-  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send {
+  .contacts__contacts_form
+    .contact_form__block
+    .contact_form_block_wrapper
+    form
+    .contact_form_block_send {
     margin-top: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send .button_white {
+  .contacts__contacts_form
+    .contact_form__block
+    .contact_form_block_wrapper
+    form
+    .contact_form_block_send
+    .button_white {
     padding: 22px 40px;
     font-family: "Acrom";
   }
-  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send .button_white span {
+  .contacts__contacts_form
+    .contact_form__block
+    .contact_form_block_wrapper
+    form
+    .contact_form_block_send
+    .button_white
+    span {
     margin-left: 14px;
   }
-  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send .button_white :hover {
+  .contacts__contacts_form
+    .contact_form__block
+    .contact_form_block_wrapper
+    form
+    .contact_form_block_send
+    .button_white
+    :hover {
     cursor: pointer;
   }
-  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_block_send p {
+  .contacts__contacts_form
+    .contact_form__block
+    .contact_form_block_wrapper
+    form
+    .contact_form_block_send
+    p {
     max-width: 250px;
     font-weight: 400;
     font-size: 14px;
@@ -710,7 +822,7 @@
     display: flex;
     justify-content: space-between;
     -moz-column-gap: 25px;
-         column-gap: 25px;
+    column-gap: 25px;
   }
   .blog__products .blog_products_block .blog_products_block_pic {
     width: 220px;
@@ -718,7 +830,7 @@
   }
   .blog__products .blog_products_block .blog_products_block_pic img {
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 220px;
     height: 242px;
     border-radius: 14px;
@@ -729,10 +841,16 @@
     justify-content: space-between;
     align-items: center;
   }
-  .blog__products .blog_products_block .blog_products_block_list .hash_list_block:first-child {
+  .blog__products
+    .blog_products_block
+    .blog_products_block_list
+    .hash_list_block:first-child {
     margin-right: 10px;
   }
-  .blog__products .blog_products_block .blog_products_block_list .blog_products_block_list_date {
+  .blog__products
+    .blog_products_block
+    .blog_products_block_list
+    .blog_products_block_list_date {
     font-weight: 400;
     font-size: 8.54px;
     line-height: 130%;
@@ -808,7 +926,7 @@
     margin-bottom: 78px;
   }
   .form .form_block_wrapper form .form_line-wrapper input:focus ~ label,
-.form .form_block_wrapper form .form_line-wrapper input:valid ~ label {
+  .form .form_block_wrapper form .form_line-wrapper input:valid ~ label {
     top: -20px;
   }
   .form .form_block_wrapper form input {
@@ -825,11 +943,16 @@
     grid-row-gap: 40px;
     grid-template-columns: repeat(4, 1fr);
   }
-  .thanks_modal .thanks_modal_content .form__block .form_block_text .form_block_gif img {
+  .thanks_modal
+    .thanks_modal_content
+    .form__block
+    .form_block_text
+    .form_block_gif
+    img {
     width: 36px;
     height: 36px;
   }
   .thanks_form .thanks_form_block .form_block_title {
     margin-bottom: 49px;
   }
-}/*# sourceMappingURL=media_1024.css.map */
+} /*# sourceMappingURL=media_1024.css.map */

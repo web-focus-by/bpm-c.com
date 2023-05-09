@@ -10,9 +10,7 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const AllReviews = () => {
-  return(
-    <div className="container"></div>
-  )
+  return <div className="container"></div>
 }
 
 export default AllReviews

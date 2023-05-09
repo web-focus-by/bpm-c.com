@@ -13,23 +13,24 @@ import "./requiresWebsiteDesign.css"
 
 const RequiresWebsiteDesign = ({ content }) => {
   if (content) {
-    const title = content.title.replace(/<[^>]+>/g, '');
+    const title = content.title.replace(/<[^>]+>/g, "")
     return (
       <div className="container">
         <div className="circle_container">
-        <div className="requires_design margin_bottom_240">
-          <div className="requires_design__pic">
-            <div className="circle_purple"></div>
-            <div className="circle_yellow"></div>
-            <div className="circle_pink"></div>
-          </div>
-          <div>
-            <div className="requires_design__title title_62">
-              { title }
+          <div className="requires_design margin_bottom_240">
+            <div className="requires_design__pic">
+              <div className="circle_purple"></div>
+              <div className="circle_yellow"></div>
+              <div className="circle_pink"></div>
             </div>
-            <div className="requires_design__info font_18" dangerouslySetInnerHTML={{__html: content.content.join('') }}/>
+            <div>
+              <div className="requires_design__title title_62">{title}</div>
+              <div
+                className="requires_design__info font_18"
+                dangerouslySetInnerHTML={{ __html: content.content.join("") }}
+              />
+            </div>
           </div>
-        </div>
         </div>
       </div>
     )

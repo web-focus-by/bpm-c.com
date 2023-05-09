@@ -16,18 +16,19 @@ const HeroWebSiteDesign = ({ title, content, location, titleLogo }) => {
   const logoTitle = titleLogo && titleLogo.length > 0 ? titleLogo : null
   return (
     <div className="container">
-      <Breadcrumbs breadcrumbs={ location } title={ title }/>
+      <Breadcrumbs breadcrumbs={location} title={title} />
       <div className="hero margin_bottom_240">
         <div className="hero__title title_80">
-          { title }<span className={ logoTitle }></span>
+          {title}
+          <span className={logoTitle}></span>
         </div>
-        { content && content.content[0] ? (
+        {content && content.content[0] ? (
           <div className="hero__subtitle">
-            <div dangerouslySetInnerHTML={{__html: content.content[0] }}/>
+            <div dangerouslySetInnerHTML={{ __html: content.content[0] }} />
           </div>
-        ) : null }
+        ) : null}
         <div className="hero__butn">
-          <Link className="link_btn" to={ "/portfolios/" }>
+          <Link className="link_btn" to={"/portfolios/"}>
             <button className="button_white">
               View work<span className="arrow_black"></span>
             </button>
@@ -38,7 +39,7 @@ const HeroWebSiteDesign = ({ title, content, location, titleLogo }) => {
       <div className="header_circle_pink"></div>
       <div className="header_circle_purple"></div>
     </div>
-  );
+  )
 }
 
 HeroWebSiteDesign.propTypes = {

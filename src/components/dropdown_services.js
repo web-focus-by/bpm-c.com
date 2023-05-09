@@ -12,51 +12,67 @@ import "../components/styles/media_1024.css"
 import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
-const DropdownServices = ({ isToggle, turnOffMenu, selectedItem, allItems }) => {
-  let url = '';
-  if (typeof window !== 'undefined') {
-    url =  new URL(window.location.href);
+const DropdownServices = ({
+  isToggle,
+  turnOffMenu,
+  selectedItem,
+  allItems,
+}) => {
+  let url = ""
+  if (typeof window !== "undefined") {
+    url = new URL(window.location.href)
   }
 
   const selectedItemPath = allItems.filter(value => {
-    if (value.path.slice(1, -1).split("/").length === 1 && value.label === selectedItem) {
-      return value.path;
+    if (
+      value.path.slice(1, -1).split("/").length === 1 &&
+      value.label === selectedItem
+    ) {
+      return value.path
     }
-  })[0];
+  })[0]
 
   const result = allItems.reduce((res, value) => {
-    if (selectedItemPath && selectedItemPath.path.slice(1, -1)
-      && value.path.slice(1, -1).split("/")[0] === selectedItemPath.path.slice(1, -1).toString().toLowerCase()) {
-      res.push({ path: value.path, label: value.label });
+    if (
+      selectedItemPath &&
+      selectedItemPath.path.slice(1, -1) &&
+      value.path.slice(1, -1).split("/")[0] ===
+        selectedItemPath.path.slice(1, -1).toString().toLowerCase()
+    ) {
+      res.push({ path: value.path, label: value.label })
     }
-    return res;
-  },[]);
+    return res
+  }, [])
 
-  const baseUrl = url.origin;
+  const baseUrl = url.origin
   const data = result.reduce((resValue, value) => {
     if (value.path.slice(1, -1).split("/").length > 1) {
       resValue.push({ name: value.label, routeLink: baseUrl + value.path })
     }
     return resValue
-  },[]);
+  }, [])
 
-  const [isOpenPoint, setOpenPoint] = useState(false);
-  const closeMenu = () =>{
-    setOpenPoint(!isOpenPoint);
-    turnOffMenu();
+  const [isOpenPoint, setOpenPoint] = useState(false)
+  const closeMenu = () => {
+    setOpenPoint(!isOpenPoint)
+    turnOffMenu()
   }
   const resultData = data.map((value, index) => {
-    return <li key={ index } onClick={ closeMenu }><Link to={ value.routeLink }>{ value.name }</Link></li>
+    return (
+      <li key={index} onClick={closeMenu}>
+        <Link to={value.routeLink}>{value.name}</Link>
+      </li>
+    )
   })
   if (isToggle) {
     return (
       <div className="dropdown_services_sticky">
         <div className="dropdown_services">
-          <div className="dropdown_services__title"><a>{ result[0].label }</a></div>
+          <div className="dropdown_services__title">
+            <a>{result[0].label}</a>
+          </div>
           <div className="dropdown_services__info">
-            <ul>
-              { resultData }
-            </ul>
+            <ul>{resultData}</ul>
           </div>
         </div>
       </div>
@@ -64,7 +80,7 @@ const DropdownServices = ({ isToggle, turnOffMenu, selectedItem, allItems }) => 
   }
 }
 
-DropdownServices.propTypes = { 
+DropdownServices.propTypes = {
   siteTitle: PropTypes.string,
 }
 

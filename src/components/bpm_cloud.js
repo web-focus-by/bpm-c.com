@@ -33,14 +33,16 @@ const BPMCloud = ({ siteTitle }) => (
             Dynamically developing digital marketing firm
           </div>
           <div className="bpm_cloud_block_text">
-            Digital space is very multifaceted. We have provided impressive number 
-            of vectors for making efforts. With advancement of technology, «BPM CLOUD» 
-            has improved turnkey experience for you, rather than a disparate activity 
-            set. Our web marketing company works with all existing effective worldwide 
-            network promotion channels. We have access to secrets of the most effective 
-            combinations of steps, tools, techniques so that you attract desired category 
-            customers at a mutually beneficial price. «BPM CLOUD» never stops, but is 
-            always in innovative tools search in order to take our partners’ business to the top. 
+            Digital space is very multifaceted. We have provided impressive
+            number of vectors for making efforts. With advancement of
+            technology, «BPM CLOUD» has improved turnkey experience for you,
+            rather than a disparate activity set. Our web marketing company
+            works with all existing effective worldwide network promotion
+            channels. We have access to secrets of the most effective
+            combinations of steps, tools, techniques so that you attract desired
+            category customers at a mutually beneficial price. «BPM CLOUD» never
+            stops, but is always in innovative tools search in order to take our
+            partners’ business to the top.
           </div>
         </div>
       </div>

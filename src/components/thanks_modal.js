@@ -14,47 +14,63 @@ import gifKanu from "../images/kanu.gif"
 import gifVlada from "../images/vlada.gif"
 
 const ThanksModal = ({ onClickClose, backPageModal }) => {
-  const refOutside = useRef();
-  const refInside = useRef();
-  const clickOut = (e) => {
-    if (refOutside && refInside && refOutside.current && refInside.current
-      && refOutside.current.contains(e.target)
-      && !refInside.current.contains(e.target)) {
-          onClickClose()
-        }
+  const refOutside = useRef()
+  const refInside = useRef()
+  const clickOut = e => {
+    if (
+      refOutside &&
+      refInside &&
+      refOutside.current &&
+      refInside.current &&
+      refOutside.current.contains(e.target) &&
+      !refInside.current.contains(e.target)
+    ) {
+      onClickClose()
+    }
   }
- 
-  return(
+
+  return (
     <React.Fragment>
-    <div className="modal thanks_modal" onClick={ clickOut } ref={ refOutside }>
-      <div className="modal__content thanks_modal_content" ref={ refInside }>
-        <div className="form">
-          <div className="form__block">
-            <div className="form_block_title title_62">Thank you for the request!</div>
-            <div className="form_block_text">
-              <p><i>Write to us,</i> Yuri, Kanu or Vlada will contact you <b>as soon as possible</b></p>
-              <div className="form_block_gif">
-                <img src={ gifUriy } alt="Uriy"/>
-                <img src={ gifKanu } alt="Kanu"/>
-                <img src={ gifVlada } alt="Vlada"/>
+      <div className="modal thanks_modal" onClick={clickOut} ref={refOutside}>
+        <div className="modal__content thanks_modal_content" ref={refInside}>
+          <div className="form">
+            <div className="form__block">
+              <div className="form_block_title title_62">
+                Thank you for the request!
+              </div>
+              <div className="form_block_text">
+                <p>
+                  <i>Write to us,</i> Yuri, Kanu or Vlada will contact you{" "}
+                  <b>as soon as possible</b>
+                </p>
+                <div className="form_block_gif">
+                  <img src={gifUriy} alt="Uriy" />
+                  <img src={gifKanu} alt="Kanu" />
+                  <img src={gifVlada} alt="Vlada" />
+                </div>
+              </div>
+              <div className="form_block_wrapper">
+                <form id="search-form" action="#" method="POST">
+                  <div className="form_block_send">
+                    <button className="button_black" onClick={backPageModal}>
+                      Back to page
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
-            <div className="form_block_wrapper">
-              <form id="search-form" action="#" method="POST">
-                <div className="form_block_send">
-                  <button className="button_black" onClick={ backPageModal }>Back to page</button>
-                </div>
-              </form>
+            <div className="form__block">
+              <div
+                className="form_block_modal_button"
+                onClick={onClickClose}
+              ></div>
             </div>
-          </div>
-          <div className="form__block">
-            <div className="form_block_modal_button" onClick={ onClickClose }></div>
           </div>
         </div>
       </div>
-    </div>
     </React.Fragment>
-)}
+  )
+}
 
 ThanksModal.propTypes = {
   siteTitle: PropTypes.string,

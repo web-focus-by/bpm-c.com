@@ -21,9 +21,7 @@ const NotFoundPage = () => {
           <div className="notFoundPage">
             <div className="not-found"></div>
           </div>
-          <div className="notFoundPage">
-            Page does not exist
-          </div>
+          <div className="notFoundPage">Page does not exist</div>
         </div>
         <div className="header_circle_yellow"></div>
         <div className="header_circle_pink"></div>

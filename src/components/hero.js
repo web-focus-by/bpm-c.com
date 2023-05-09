@@ -15,17 +15,22 @@ import "../components/styles/media_375.css"
 const Hero = ({ location }) => {
   return (
     <div className="container">
-      <Breadcrumbs className="display_none" breadcrumbs={ location } title="Main page"/>
+      <Breadcrumbs
+        className="display_none"
+        breadcrumbs={location}
+        title="Main page"
+      />
       <div className="hero">
         <div className="hero__title title_80">
-          «BPM CLOUD» an IT company that clearly knows<span className="yellow_hand"></span>
+          «BPM CLOUD» an IT company that clearly knows
+          <span className="yellow_hand"></span>
         </div>
         <div className="hero__subtitle">
-          We know all about art of creating effective websites, using both classic
-          techniques and the most innovative world-class approaches.
+          We know all about art of creating effective websites, using both
+          classic techniques and the most innovative world-class approaches.
         </div>
         <div className="hero__butn">
-          <Link className="link_btn" to={ "/portfolios/" }>
+          <Link className="link_btn" to={"/portfolios/"}>
             <button className="button_white">
               View work<span className="arrow_black"></span>
             </button>
@@ -36,7 +41,7 @@ const Hero = ({ location }) => {
       <div className="header_circle_pink"></div>
       <div className="header_circle_purple"></div>
     </div>
-  );
+  )
 }
 
 Hero.propTypes = {

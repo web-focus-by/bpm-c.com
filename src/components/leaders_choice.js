@@ -14,10 +14,9 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const LeadersChoice = ({ siteTitle }) => {
-
   return (
     <div className="container">
-      <div className="leaders">    
+      <div className="leaders">
         <div className="leaders_choice">
           <div className="leaders_choice__title title_62">
             «BPM CLOUD» is chosen by leaders
@@ -35,7 +34,8 @@ const LeadersChoice = ({ siteTitle }) => {
                   Leaders with many years of experience.
                 </li>
                 <li className="font_18">
-                  Team of web studio specialists is highly certified. Many of us started working abroad.
+                  Team of web studio specialists is highly certified. Many of us
+                  started working abroad.
                 </li>
               </ul>
             </div>
@@ -48,7 +48,9 @@ const LeadersChoice = ({ siteTitle }) => {
                   Managers keep in touch with clients at any moment.
                 </li>
                 <li className="font_18">Full circle digital agency.</li>
-                <li className="font_18">Reconciled and balanced pricing policy.</li>
+                <li className="font_18">
+                  Reconciled and balanced pricing policy.
+                </li>
               </ul>
             </div>
           </div>
@@ -59,10 +61,10 @@ const LeadersChoice = ({ siteTitle }) => {
               Let’s work together
             </div>
             <div className="leaders_choice_tagline_block_gif">
-              <img src={ gifUriy } alt="Uriy"/>
-              <img src={ gifKanu } alt="Kanu"/>
-              <img src={ gifVlada } alt="Vlada"/>
-            </div> 
+              <img src={gifUriy} alt="Uriy" />
+              <img src={gifKanu} alt="Kanu" />
+              <img src={gifVlada} alt="Vlada" />
+            </div>
           </div>
           <div className="leaders_choice_tagline__butn">
             <button className="button_white">
@@ -75,8 +77,8 @@ const LeadersChoice = ({ siteTitle }) => {
         </div>
       </div>
     </div>
-    )
-  }
+  )
+}
 
 LeadersChoice.propTypes = {
   siteTitle: PropTypes.string,

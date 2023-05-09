@@ -13,31 +13,44 @@ import "./resWebDesign.css"
 
 const ResWebDesign = ({ content }) => {
   if (content) {
-    const title = content.title.replace(/<[^>]+>/g, '');
-    const list = content.content.reduce((res,val)=>{
-      if (val.includes("<ul>") || val.includes("<li>") || val.includes("</li>") || val.includes("</ul>")) {
+    const title = content.title.replace(/<[^>]+>/g, "")
+    const list = content.content.reduce((res, val) => {
+      if (
+        val.includes("<ul>") ||
+        val.includes("<li>") ||
+        val.includes("</li>") ||
+        val.includes("</ul>")
+      ) {
         res.push(val)
       }
-      return res;
-    },[])
-    const paragraphs = content.content.reduce((res,val)=>{
+      return res
+    }, [])
+    const paragraphs = content.content.reduce((res, val) => {
       if (val.includes("<p>") || val.includes("</p>")) {
-        val = val.replace('<p>', '');
-        val = val.replace('</p>', '');
+        val = val.replace("<p>", "")
+        val = val.replace("</p>", "")
         res.push(val)
       }
-      return res;
-    },[])
+      return res
+    }, [])
     return (
       <div className="container">
         <div className="result_web_design margin_bottom_240">
           <div className="result_web_design_choice">
-            <div className="result_web_design_choice__title title_62" dangerouslySetInnerHTML={{__html: title }}>
-            </div>
+            <div
+              className="result_web_design_choice__title title_62"
+              dangerouslySetInnerHTML={{ __html: title }}
+            ></div>
             <div className="result_web_design_choice__block">
-              <div className="result_web_design_choice_block_list" dangerouslySetInnerHTML={{__html: list.join('') }}/>
+              <div
+                className="result_web_design_choice_block_list"
+                dangerouslySetInnerHTML={{ __html: list.join("") }}
+              />
               <div className="result_web_design_choice_block_list">
-                <div className="font_18" dangerouslySetInnerHTML={{__html: paragraphs.join('') }}/>
+                <div
+                  className="font_18"
+                  dangerouslySetInnerHTML={{ __html: paragraphs.join("") }}
+                />
               </div>
             </div>
           </div>
@@ -50,9 +63,9 @@ const ResWebDesign = ({ content }) => {
 ResWebDesign.propTypes = {
   siteTitle: PropTypes.string,
 }
-  
+
 ResWebDesign.defaultProps = {
   siteTitle: ``,
 }
 
-export default ResWebDesign;
+export default ResWebDesign

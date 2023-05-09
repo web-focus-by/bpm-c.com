@@ -18,7 +18,7 @@ const Reviews = ({ location }) => {
     <>
       <Layout>
         <div className="container">
-          <Breadcrumbs breadcrumbs={ location } title="Reviews"/>
+          <Breadcrumbs breadcrumbs={location} title="Reviews" />
           <div className="hero">
             <div className="hero__title title_62">
               Reviews<span className="notes_of_reviewes"></span>
@@ -35,4 +35,4 @@ const Reviews = ({ location }) => {
   )
 }
 
-export default Reviews;
+export default Reviews

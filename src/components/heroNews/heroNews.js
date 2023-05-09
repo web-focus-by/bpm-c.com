@@ -14,17 +14,18 @@ import "../../components/styles/media_375.css"
 const HeroNews = ({ location, title }) => {
   return (
     <div className="container">
-      <Breadcrumbs breadcrumbs={ location } title={title}/>
+      <Breadcrumbs breadcrumbs={location} title={title} />
       <div className="hero margin_bottom_60">
         <div className="hero__title title_80">
-            { title }<span className="newspaper"></span>
+          {title}
+          <span className="newspaper"></span>
         </div>
       </div>
       <div className="header_circle_yellow"></div>
       <div className="header_circle_pink"></div>
       <div className="header_circle_purple"></div>
     </div>
-  );
+  )
 }
 
 HeroNews.propTypes = {

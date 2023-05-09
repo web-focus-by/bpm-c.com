@@ -19,7 +19,13 @@ const Blog = ({ location }) => {
           }
         }
       }
-      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["blog", "news"]}}}}}) {
+      allWpPost(
+        filter: {
+          categories: {
+            nodes: { elemMatch: { slug: { in: ["blog", "news"] } } }
+          }
+        }
+      ) {
         edges {
           node {
             id
@@ -48,20 +54,20 @@ const Blog = ({ location }) => {
         }
       }
     }
-  `);
-  const allTags = PostsAndTags ? PostsAndTags.allWpTag.edges : [];
-  const allPosts = PostsAndTags ? PostsAndTags.allWpPost.edges : [];
+  `)
+  const allTags = PostsAndTags ? PostsAndTags.allWpTag.edges : []
+  const allPosts = PostsAndTags ? PostsAndTags.allWpPost.edges : []
 
   return (
     <>
       <Layout>
         <Seo title="Blog" />
-        <HeroNews location={ location } title="Blog" ></HeroNews>
-        <ListOfNews posts={ allPosts } tags={ allTags }></ListOfNews>
+        <HeroNews location={location} title="Blog"></HeroNews>
+        <ListOfNews posts={allPosts} tags={allTags}></ListOfNews>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
     </>
-  );
-};
+  )
+}
 
 export default Blog

@@ -19,61 +19,91 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
     if (!longList) {
       if (index < 6) {
         return (
-          <Link to={ tag.node.uri }>
-            <button key = { index } className={ tag.node.uri === selectedTag ? "button_item_tag__active" : "button_item_tag" }>
-              { tag.node.name }
+          <Link to={tag.node.uri}>
+            <button
+              key={index}
+              className={
+                tag.node.uri === selectedTag
+                  ? "button_item_tag__active"
+                  : "button_item_tag"
+              }
+            >
+              {tag.node.name}
             </button>
           </Link>
         )
       }
     } else {
       return (
-        <Link to={ tag.node.uri }>
-          <button key = { index } className={ tag.node.uri === selectedTag ? "button_item_tag__active" : "button_item_tag" }>
-            { tag.node.name }
+        <Link to={tag.node.uri}>
+          <button
+            key={index}
+            className={
+              tag.node.uri === selectedTag
+                ? "button_item_tag__active"
+                : "button_item_tag"
+            }
+          >
+            {tag.node.name}
           </button>
         </Link>
       )
     }
   })
 
-  useEffect(
-    () => {
-      if (document && document.getElementsByClassName("button_item_tag__active") && selectedTag) {
+  useEffect(() => {
+    if (
+      document &&
+      document.getElementsByClassName("button_item_tag__active") &&
+      selectedTag
+    ) {
+      setLongList(true)
+    }
+    return () => {
+      if (
+        document &&
+        document.getElementsByClassName("button_item_tag__active") &&
+        selectedTag
+      ) {
         setLongList(true)
       }
-      return () => {
-        if (document && document.getElementsByClassName("button_item_tag__active") && selectedTag) {
-          setLongList(true)
-        }
-      };
-    }, []
-  );
+    }
+  }, [])
 
   return (
     <div className="container">
-      <Breadcrumbs breadcrumbs={ location } title={title}/>
+      <Breadcrumbs breadcrumbs={location} title={title} />
       <div className="hero">
         <div className="hero__title title_80">
-            { title }<span className="puzzle"></span>
+          {title}
+          <span className="puzzle"></span>
         </div>
         <div className="hero__butntag">
-            { result }
-            <button onClick={ ()=>{ setLongList(!longList) }} className="button_item_tag">
-              { longList ? 'Close' : 'See more' }
-            </button>
+          {result}
+          <button
+            onClick={() => {
+              setLongList(!longList)
+            }}
+            className="button_item_tag"
+          >
+            {longList ? "Close" : "See more"}
+          </button>
         </div>
         <div className="resume-portfolio">
           <span className="resume-portfolio-text">200+ completed projects</span>
-          <span className="resume-portfolio-text">200+ specialists in the team</span>
-          <span className="resume-portfolio-text">200% of clients come back to us</span>
+          <span className="resume-portfolio-text">
+            200+ specialists in the team
+          </span>
+          <span className="resume-portfolio-text">
+            200% of clients come back to us
+          </span>
         </div>
       </div>
       <div className="header_circle_yellow"></div>
       <div className="header_circle_pink"></div>
       <div className="header_circle_purple"></div>
     </div>
-  );
+  )
 }
 
 HeroPortfolio.propTypes = {

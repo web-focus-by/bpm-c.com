@@ -14,8 +14,8 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const Reviews = ({}) => {
-  const hasWindow = typeof window !== 'undefined';
-  const widthScreen = hasWindow ? window.innerWidth : null;
+  const hasWindow = typeof window !== "undefined"
+  const widthScreen = hasWindow ? window.innerWidth : null
   const dataText = [
     {
       id: "slide_1",
@@ -58,7 +58,7 @@ const Reviews = ({}) => {
       date: "12.10.2021",
     },
   ]
-  const result = dataText.map((obj) => {
+  const result = dataText.map(obj => {
     return (
       <SwiperSlide key={obj.id}>
         <div className="reviews_info_block">
@@ -79,11 +79,13 @@ const Reviews = ({}) => {
       <div className="reviews margin_bottom_240">
         <div className="view_title">
           <div className="title_62">Reviews</div>
-          <Link className="active_link" to="/about-us/reviews/">View all</Link>
+          <Link className="active_link" to="/about-us/reviews/">
+            View all
+          </Link>
         </div>
         <div className="reviews__info">
           <Swiper
-            spaceBetween={widthScreen <= 1024 ? 20 :26}
+            spaceBetween={widthScreen <= 1024 ? 20 : 26}
             slidesPerView={"auto"}
             onSlideChange={() => console.log("slide change")}
             onSwiper={swiper => console.log(swiper)}
@@ -107,7 +109,7 @@ const Reviews = ({}) => {
               768: {
                 width: 768,
                 allowTouchMove: true,
-              }
+              },
             }}
           >
             {result}

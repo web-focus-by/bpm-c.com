@@ -16,11 +16,11 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 100%;
-  color: #1A1B1F;
+  color: #1a1b1f;
 }
 .span_breadcrumbs .breadcrumbs:hover {
   cursor: pointer;
-  color: #935CFF;
+  color: #935cff;
 }
 
 @media (min-width: 1024px) and (max-width: 1366px) {
@@ -41,10 +41,10 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 100%;
-    color: #1A1B1F;
+    color: #1a1b1f;
   }
   .span_breadcrumbs .breadcrumbs:hover {
     cursor: pointer;
-    color: #935CFF;
+    color: #935cff;
   }
-}/*# sourceMappingURL=breadcrumbs.css.map */
+} /*# sourceMappingURL=breadcrumbs.css.map */

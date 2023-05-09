@@ -50,7 +50,7 @@ const CompanyDescription = ({ siteTitle }) => (
         </div>
       </div>
       <div className="company_description__pic">
-        <img src={ imgLaptop_2 } alt="the laptop" />
+        <img src={imgLaptop_2} alt="the laptop" />
       </div>
     </div>
   </div>

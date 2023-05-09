@@ -12,53 +12,86 @@ import "../../components/styles/media_375.css"
 
 const FooterBlock = ({ content, contentImage }) => {
   if (content) {
-    const title = content.title.replace(/<[^>]+>/g, '');
+    const title = content.title.replace(/<[^>]+>/g, "")
     const arrayList = content.content.reduce((next, prev) => {
-      if (prev === "<ul>" || prev === "</ul>" || prev.includes("<li>") || prev.includes("</li>")) {
-        return [...next, prev];
+      if (
+        prev === "<ul>" ||
+        prev === "</ul>" ||
+        prev.includes("<li>") ||
+        prev.includes("</li>")
+      ) {
+        return [...next, prev]
       }
       return next
-    },[])
+    }, [])
     const paragraphsList = content.content.reduce((next, prev) => {
       if (prev.includes("<p>") || prev.includes("</p>")) {
-        prev = prev.replace(/<[^>]+>/g, '')
-        return [...next, prev];
+        prev = prev.replace(/<[^>]+>/g, "")
+        return [...next, prev]
       }
       return next
-    },[])
+    }, [])
     return (
       <div className="container">
         <div className="leaders margin_bottom_240">
           <div className="leaders_choice">
-            <div className="leaders_choice__title title_62" dangerouslySetInnerHTML={{__html: title }} />
+            <div
+              className="leaders_choice__title title_62"
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
             <div className="leaders_choice__block">
-              {
-                arrayList && arrayList.length > 0 ? (
-                  <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: arrayList.join('') }} />
-                ) : paragraphsList && Array.isArray(paragraphsList) && paragraphsList.length > 1 ? (
-                  <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: paragraphsList[0] }} />
-                ) : (
-                  <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: paragraphsList }} />
-                )
-              }
-              {
-                (!(arrayList && arrayList.length > 0) && paragraphsList && Array.isArray(paragraphsList) && paragraphsList.length > 1) ? (
-                  <div className="leaders_choice_block_list font_18" dangerouslySetInnerHTML={{__html: paragraphsList[1] }} />
-                ) : null
-              }
+              {arrayList && arrayList.length > 0 ? (
+                <div
+                  className="leaders_choice_block_list font_18"
+                  dangerouslySetInnerHTML={{ __html: arrayList.join("") }}
+                />
+              ) : paragraphsList &&
+                Array.isArray(paragraphsList) &&
+                paragraphsList.length > 1 ? (
+                <div
+                  className="leaders_choice_block_list font_18"
+                  dangerouslySetInnerHTML={{ __html: paragraphsList[0] }}
+                />
+              ) : (
+                <div
+                  className="leaders_choice_block_list font_18"
+                  dangerouslySetInnerHTML={{ __html: paragraphsList }}
+                />
+              )}
+              {!(arrayList && arrayList.length > 0) &&
+              paragraphsList &&
+              Array.isArray(paragraphsList) &&
+              paragraphsList.length > 1 ? (
+                <div
+                  className="leaders_choice_block_list font_18"
+                  dangerouslySetInnerHTML={{ __html: paragraphsList[1] }}
+                />
+              ) : null}
             </div>
-            { contentImage ? (
-            <div className="leaders_choice__title" style={{marginTop: '60px'}}>
-              <img src={ contentImage } alt="team" style={{width: '100%', height: '100%', borderRadius: '25px'}}/>
-            </div>) : null }
+            {contentImage ? (
+              <div
+                className="leaders_choice__title"
+                style={{ marginTop: "60px" }}
+              >
+                <img
+                  src={contentImage}
+                  alt="team"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "25px",
+                  }}
+                />
+              </div>
+            ) : null}
           </div>
         </div>
       </div>
-      )
-    }
+    )
   }
+}
 
-  FooterBlock.propTypes = {
+FooterBlock.propTypes = {
   siteTitle: PropTypes.string,
 }
 

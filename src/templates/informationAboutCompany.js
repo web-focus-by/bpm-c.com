@@ -18,14 +18,27 @@ import "../components/styles/media_768.css"
 import "../components/styles/media_375.css"
 
 const InformationAboutCompany = ({ location, data }) => {
-  const contentPage = data ? data.wpPage : {};
-  const content = contentPage.content ? fractionContent(contentPage.content): null;
-  const featuredImage = contentPage.featuredImage && contentPage.featuredImage.node ? contentPage.featuredImage.node.mediaItemUrl : null;
+  const contentPage = data ? data.wpPage : {}
+  const content = contentPage.content
+    ? fractionContent(contentPage.content)
+    : null
+  const featuredImage =
+    contentPage.featuredImage && contentPage.featuredImage.node
+      ? contentPage.featuredImage.node.mediaItemUrl
+      : null
   return (
     <>
       <Layout>
-        <HeroWebSiteDesign title={ contentPage.title } content={ content && content[0] ? content[0] : null } location={ location } titleLogo="about_company"></HeroWebSiteDesign>
-        <FooterBlock content={ content && content[1] ? content[1] : null } contentImage = { featuredImage }></FooterBlock>
+        <HeroWebSiteDesign
+          title={contentPage.title}
+          content={content && content[0] ? content[0] : null}
+          location={location}
+          titleLogo="about_company"
+        ></HeroWebSiteDesign>
+        <FooterBlock
+          content={content && content[1] ? content[1] : null}
+          contentImage={featuredImage}
+        ></FooterBlock>
         <Form></Form>
         <WorkTogether></WorkTogether>
         <Seo title="Information about company" />
@@ -34,11 +47,11 @@ const InformationAboutCompany = ({ location, data }) => {
   )
 }
 
-export default InformationAboutCompany;
+export default InformationAboutCompany
 
 export const query = graphql`
-  query getInformationAboutCompanyQuery ($slug: String) {
-    wpPage(slug: {eq: $slug}) {
+  query getInformationAboutCompanyQuery($slug: String) {
+    wpPage(slug: { eq: $slug }) {
       id
       uri
       title
@@ -53,4 +66,5 @@ export const query = graphql`
         }
       }
     }
-  }`
+  }
+`

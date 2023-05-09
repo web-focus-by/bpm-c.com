@@ -17,11 +17,9 @@ const TemplateBlog = ({ location }) => {
     <>
       <Layout>
         <div className="container">
-          <Breadcrumbs breadcrumbs={ location } title="BLOG"/>
+          <Breadcrumbs breadcrumbs={location} title="BLOG" />
           <div className="hero">
-            <div className="hero__title title_62">
-              BLOG
-            </div>
+            <div className="hero__title title_62">BLOG</div>
           </div>
           <div className="header_circle_yellow"></div>
           <div className="header_circle_pink"></div>
@@ -33,4 +31,4 @@ const TemplateBlog = ({ location }) => {
   )
 }
 
-export default TemplateBlog;
+export default TemplateBlog

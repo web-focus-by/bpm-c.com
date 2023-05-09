@@ -22,32 +22,30 @@ const CONTACT_MUTATION = gql`
     $email: String!
   ) {
     createSubmission(
-      input: {
-        name: $name
-        telephone: $telephone
-        email: $email
-      }
+      input: { name: $name, telephone: $telephone, email: $email }
     ) {
       success
       data
     }
-  }`
+  }
+`
 
 const Form = ({ siteTitle, showThankForm }) => {
-  const [createSubmission, { loading, error, data }] = useMutation(CONTACT_MUTATION);
-  const [nameValue, setNameValue] = useState('');
-  const [telephoneValue, setTelephoneValue] = useState('');
-  const [emailValue, setEmailValue] = useState('');
-  const isNonEmpty = (e) => {
+  const [createSubmission, { loading, error, data }] =
+    useMutation(CONTACT_MUTATION)
+  const [nameValue, setNameValue] = useState("")
+  const [telephoneValue, setTelephoneValue] = useState("")
+  const [emailValue, setEmailValue] = useState("")
+  const isNonEmpty = e => {
     if (e.target.value.length === 0) {
-      document.getElementById(e.target.id).classList.add('input_invalid');
+      document.getElementById(e.target.id).classList.add("input_invalid")
     } else {
-      document.getElementById(e.target.id).classList.remove('input_invalid');
+      document.getElementById(e.target.id).classList.remove("input_invalid")
     }
   }
 
-  if (loading) return 'Submitting...';
-  if (error) return `Submission error! ${error.message}`;
+  if (loading) return "Submitting..."
+  if (error) return `Submission error! ${error.message}`
 
   return (
     <div className="containerForm">
@@ -63,39 +61,45 @@ const Form = ({ siteTitle, showThankForm }) => {
           <div className="form_block_text">
             <p>Write to us, Yuri, Kanu or Vlada will contact you</p>
             <div className="form_block_gif">
-              <img src={gifUriy} alt="Uriy"/>
-              <img src={gifKanu} alt="Kanu"/>
-              <img src={gifVlada} alt="Vlada"/>
+              <img src={gifUriy} alt="Uriy" />
+              <img src={gifKanu} alt="Kanu" />
+              <img src={gifVlada} alt="Vlada" />
             </div>
           </div>
           <div className="form_block_email">
-            <a href="mailto:hello@bpm-c.com" target="_blank">info@bpm-c.com</a>
+            <a href="mailto:hello@bpm-c.com" target="_blank">
+              info@bpm-c.com
+            </a>
           </div>
         </div>
         <div className="form__block">
           <div className="form_block_wrapper">
-            <form id="search-form"
-              onSubmit={ e => {
-                e.preventDefault();
+            <form
+              id="search-form"
+              onSubmit={e => {
+                e.preventDefault()
                 createSubmission({
                   variables: {
                     name: nameValue,
                     telephone: telephoneValue,
                     email: emailValue,
-                  }
-                });
-                showThankForm();
-              }
-            }>
+                  },
+                })
+                showThankForm()
+              }}
+            >
               <div className="form_line-wrapper">
-                <input id="name" type="text"
-                  value = { nameValue }
-                  autoComplete="off" name="name"
+                <input
+                  id="name"
+                  type="text"
+                  value={nameValue}
+                  autoComplete="off"
+                  name="name"
                   className="form_name input-yellow"
-                  onChange={ e => {
+                  onChange={e => {
                     setNameValue(e.target.value)
                   }}
-                  onBlur={ e => isNonEmpty(e) }
+                  onBlur={e => isNonEmpty(e)}
                   required
                 />
                 <label>Name*</label>
@@ -103,14 +107,16 @@ const Form = ({ siteTitle, showThankForm }) => {
 
               <div className="form_line-wrapper">
                 <input
-                  value = { telephoneValue }
-                  type="text" id="tel"
+                  value={telephoneValue}
+                  type="text"
+                  id="tel"
                   autoComplete="off"
-                  name="telephone" className="form-phone input-phone form_phone input-yellow"
-                  onChange={ e => {
+                  name="telephone"
+                  className="form-phone input-phone form_phone input-yellow"
+                  onChange={e => {
                     setTelephoneValue(e.target.value)
                   }}
-                  onBlur={ e => isNonEmpty(e) }
+                  onBlur={e => isNonEmpty(e)}
                   required
                 />
                 <label>Phone*</label>
@@ -118,14 +124,16 @@ const Form = ({ siteTitle, showThankForm }) => {
 
               <div className="form_line-wrapper">
                 <input
-                  value = { emailValue }
-                  type="text" id="mail"
-                  autoComplete="off" name="email"
+                  value={emailValue}
+                  type="text"
+                  id="mail"
+                  autoComplete="off"
+                  name="email"
                   className="form-mail input-mail form_mail input-yellow"
-                  onChange={ e => {
+                  onChange={e => {
                     setEmailValue(e.target.value)
                   }}
-                  onBlur={ e => isNonEmpty(e) }
+                  onBlur={e => isNonEmpty(e)}
                   required
                 />
                 <label>E-mail</label>
@@ -147,8 +155,8 @@ const Form = ({ siteTitle, showThankForm }) => {
         </div>
       </div>
     </div>
-    )
-  }
+  )
+}
 
 Form.propTypes = {
   siteTitle: PropTypes.string,

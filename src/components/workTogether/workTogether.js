@@ -23,10 +23,10 @@ const WorkTogether = ({}) => {
               Let’s work together
             </div>
             <div className="leaders_choice_tagline_block_gif">
-              <img src={ gifUriy } alt="Uriy"/>
-              <img src={ gifKanu } alt="Kanu"/>
-              <img src={ gifVlada } alt="Vlada"/>
-            </div> 
+              <img src={gifUriy} alt="Uriy" />
+              <img src={gifKanu} alt="Kanu" />
+              <img src={gifVlada} alt="Vlada" />
+            </div>
           </div>
           <div className="leaders_choice_tagline__butn">
             <button className="button_white">
@@ -42,7 +42,7 @@ const WorkTogether = ({}) => {
   )
 }
 
-  WorkTogether.propTypes = {
+WorkTogether.propTypes = {
   siteTitle: PropTypes.string,
 }
 

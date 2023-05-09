@@ -14,13 +14,16 @@ import "../../components/styles/media_375.css"
 const PortfolioWebSiteDesign = ({ posts, titlePage }) => {
   const items = posts.map((post, index) => {
     if (index <= 5) {
-      let tags = [];
+      let tags = []
       if (post && post.node.tags) {
         tags = post.node.tags.nodes.map((tag, i) => {
-          let valueTag = '#' + tag.slug;
+          let valueTag = "#" + tag.slug
           return (
-            <li key={ post.node.id.toString() + valueTag.toString() } className="hash_list_block">
-              <Link to={ "/tag/" + tag.slug + "/" }>{ valueTag }</Link>
+            <li
+              key={post.node.id.toString() + valueTag.toString()}
+              className="hash_list_block"
+            >
+              <Link to={"/tag/" + tag.slug + "/"}>{valueTag}</Link>
             </li>
           )
         })
@@ -28,21 +31,25 @@ const PortfolioWebSiteDesign = ({ posts, titlePage }) => {
       return (
         <div className="portfolio_products_block">
           <div className="portfolio_products_block_pic">
-            <Link to={ post.node.link }>
-              {
-                post.node.featuredImage && post.node.featuredImage.node.mediaItemUrl ? (
-                  <img src={ post.node.featuredImage.node.mediaItemUrl } alt="the post" />
-                ) : ''
-              }
+            <Link to={post.node.link}>
+              {post.node.featuredImage &&
+              post.node.featuredImage.node.mediaItemUrl ? (
+                <img
+                  src={post.node.featuredImage.node.mediaItemUrl}
+                  alt="the post"
+                />
+              ) : (
+                ""
+              )}
             </Link>
           </div>
           <div className="portfolio_products_block_list hash">
-            <ul className="hash__list">
-              { tags }
-            </ul>
+            <ul className="hash__list">{tags}</ul>
           </div>
           <div className="portfolio_products_block_title">
-            <Link className="portfolio_link" to={ post.node.link }>{ post.node.title }</Link>
+            <Link className="portfolio_link" to={post.node.link}>
+              {post.node.title}
+            </Link>
           </div>
         </div>
       )
@@ -53,12 +60,14 @@ const PortfolioWebSiteDesign = ({ posts, titlePage }) => {
     <div className="container">
       <div className="portfolio margin_bottom_240">
         <div className="view_title">
-          <div className="title_62">{ titlePage }</div>
-          <div className="view_all"><Link className="active_link" to={"/portfolios/"}>View all</Link></div>
+          <div className="title_62">{titlePage}</div>
+          <div className="view_all">
+            <Link className="active_link" to={"/portfolios/"}>
+              View all
+            </Link>
+          </div>
         </div>
-        <div className="portfolio__products">
-          { items }
-        </div>
+        <div className="portfolio__products">{items}</div>
       </div>
     </div>
   )

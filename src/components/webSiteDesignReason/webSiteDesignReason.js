@@ -11,20 +11,23 @@ import "../../components/styles/media_1024.css"
 import "../../components/styles/media_768.css"
 import "../../components/styles/media_375.css"
 
-const WebSiteDesignReason = ({content}) => {
-  if ( content ) {
-    const title = content.title.replace(/<[^>]+>/g, '');
-    const contentString = content.content.join('');
+const WebSiteDesignReason = ({ content }) => {
+  if (content) {
+    const title = content.title.replace(/<[^>]+>/g, "")
+    const contentString = content.content.join("")
     return (
       <div className="container">
         <div className="web-site-reason margin_bottom_240">
-          <div className="web-site-reason__title title_62">{ title }</div>
-          <div className="web-site-reason__info font_18" dangerouslySetInnerHTML={{ __html: contentString }} />
+          <div className="web-site-reason__title title_62">{title}</div>
+          <div
+            className="web-site-reason__info font_18"
+            dangerouslySetInnerHTML={{ __html: contentString }}
+          />
         </div>
       </div>
     )
   } else {
-    return;
+    return
   }
 }
 

@@ -7,60 +7,73 @@ import ListOfPortfolio from "../components/listOfPortfolio/listOfPortfolio"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
 
 const Tag = ({ location }) => {
-    const PostsAndTags = useStaticQuery(graphql`
-      query getSiteAllTagQuery {
-        allWpTag {
-          edges {
-            node {
-              id
-              name
-              description
-              uri
+  const PostsAndTags = useStaticQuery(graphql`
+    query getSiteAllTagQuery {
+      allWpTag {
+        edges {
+          node {
+            id
+            name
+            description
+            uri
+          }
+        }
+      }
+      allWpPost(
+        filter: {
+          categories: {
+            nodes: {
+              elemMatch: { slug: { in: ["blog", "news", "portfolios"] } }
             }
           }
         }
-        allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {in: ["blog","news","portfolios"]}}}}}) {
-          edges {
-            node {
-              id
-              title
-              link
-              date
-              tags {
-                nodes {
-                  slug
-                }
+      ) {
+        edges {
+          node {
+            id
+            title
+            link
+            date
+            tags {
+              nodes {
+                slug
               }
-              featuredImage {
-                node {
-                  id
-                  mediaItemUrl
-                  sizes
-                }
+            }
+            featuredImage {
+              node {
+                id
+                mediaItemUrl
+                sizes
               }
-              categories {
-                nodes {
-                  slug
-                }
+            }
+            categories {
+              nodes {
+                slug
               }
             }
           }
         }
       }
-    `);
-    const allTags = PostsAndTags ? PostsAndTags.allWpTag.edges : [];
-    const allPosts = PostsAndTags ? PostsAndTags.allWpPost.edges : [];
-  
-    return (
-      <>
-        <Layout>
-          <Seo title="tag" />
-          <HeroPortfolio location={ location } tags={ allTags } selectedTag={ null } title="Tag" ></HeroPortfolio>
-          <ListOfPortfolio posts={ allPosts }></ListOfPortfolio>
-          <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
-        </Layout>
-      </>
-    );
-  };
-  
-  export default Tag
+    }
+  `)
+  const allTags = PostsAndTags ? PostsAndTags.allWpTag.edges : []
+  const allPosts = PostsAndTags ? PostsAndTags.allWpPost.edges : []
+
+  return (
+    <>
+      <Layout>
+        <Seo title="tag" />
+        <HeroPortfolio
+          location={location}
+          tags={allTags}
+          selectedTag={null}
+          title="Tag"
+        ></HeroPortfolio>
+        <ListOfPortfolio posts={allPosts}></ListOfPortfolio>
+        <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
+      </Layout>
+    </>
+  )
+}
+
+export default Tag

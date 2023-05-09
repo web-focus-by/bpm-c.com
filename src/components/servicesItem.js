@@ -3,9 +3,7 @@ import PropTypes from "prop-types"
 import Service from "../components/services/service"
 
 const ServicesItem = ({ siteTitle }) => {
-  return (
-    <Service title="Services"></Service>
-  );
+  return <Service title="Services"></Service>
 }
 
 ServicesItem.propTypes = {

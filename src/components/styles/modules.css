@@ -1,5 +1,5 @@
 .button_white {
-  border: 1px solid #1A1B1F;
+  border: 1px solid #1a1b1f;
   border-radius: 80px;
   background: transparent;
   font-weight: 500;
@@ -9,8 +9,8 @@
 }
 .button_white:hover {
   cursor: pointer;
-  background: #1A1B1F;
-  color: #FFFFFF;
+  background: #1a1b1f;
+  color: #ffffff;
   -webkit-transition: all 0.3s linear;
 }
 .button_white:hover .arrow_black {
@@ -18,7 +18,7 @@
 }
 
 .button_item_tag {
-  border: 1px solid #1A1B1F;
+  border: 1px solid #1a1b1f;
   padding: 10px 20px;
   border-radius: 80px;
   background: transparent;
@@ -28,20 +28,20 @@
   margin: 0.4rem;
 }
 .button_item_tag:hover {
-  background: #1A1B1F;
-  color: #FFFFFF;
+  background: #1a1b1f;
+  color: #ffffff;
   cursor: pointer;
 }
 .button_item_tag__active {
-  border: 1px solid #1A1B1F;
+  border: 1px solid #1a1b1f;
   padding: 10px 20px;
   border-radius: 80px;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
   margin: 0.4rem;
-  background: #1A1B1F;
-  color: #FFFFFF;
+  background: #1a1b1f;
+  color: #ffffff;
 }
 .button_item_tag__not_visible {
   visibility: hidden;
@@ -50,7 +50,7 @@
 .button_black {
   border: 1px solid #fff;
   border-radius: 80px;
-  background: #1A1B1F;
+  background: #1a1b1f;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
@@ -58,7 +58,7 @@
 }
 .button_black:hover {
   background: #fff;
-  color: #1A1B1F;
+  color: #1a1b1f;
   cursor: pointer;
 }
 .button_black:hover .arrow_white {
@@ -74,10 +74,10 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
-  color: #1A1B1F;
+  color: #1a1b1f;
 }
 .view_all a:hover {
-  color: #935CFF;
+  color: #935cff;
   text-decoration: underline;
 }
 
@@ -91,16 +91,16 @@
 .hash__list .hash_list_block a {
   font-weight: 400;
   line-height: 100%;
-  color: #1A1B1F;
+  color: #1a1b1f;
   text-decoration: none;
-  border: 1px solid #1A1B1F;
+  border: 1px solid #1a1b1f;
   border-radius: 80px;
 }
 .hash__list .hash_list_block:hover a {
   color: #fff;
   border-radius: 80px;
   padding: 8px 14px;
-  background: #1A1B1F;
+  background: #1a1b1f;
 }
 
 .margin_bottom_240 {
@@ -130,6 +130,6 @@
   font-weight: 500;
   font-size: 36px;
   line-height: 100%;
-  color: #1A1B1F;
+  color: #1a1b1f;
   margin-top: 36px;
-}/*# sourceMappingURL=modules.css.map */
+} /*# sourceMappingURL=modules.css.map */

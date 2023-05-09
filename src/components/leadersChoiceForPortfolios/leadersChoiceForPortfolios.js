@@ -16,17 +16,17 @@ import "../../components/styles/media_375.css"
 const LeadersChoiceForPortfolios = () => {
   return (
     <div className="container">
-      <div className="leaders">  
+      <div className="leaders">
         <div className="leaders_choice_tagline">
           <div className="leaders_choice_tagline__block">
             <div className="leaders_choice_tagline_block_title">
               Let’s work together
             </div>
             <div className="leaders_choice_tagline_block_gif">
-              <img src={ gifUriy } alt="Uriy"/>
-              <img src={ gifKanu } alt="Kanu"/>
-              <img src={ gifVlada } alt="Vlada"/>
-            </div> 
+              <img src={gifUriy} alt="Uriy" />
+              <img src={gifKanu} alt="Kanu" />
+              <img src={gifVlada} alt="Vlada" />
+            </div>
           </div>
           <div className="leaders_choice_tagline__butn">
             <button className="button_white">
@@ -45,9 +45,9 @@ const LeadersChoiceForPortfolios = () => {
 LeadersChoiceForPortfolios.propTypes = {
   siteTitle: PropTypes.string,
 }
-  
+
 LeadersChoiceForPortfolios.defaultProps = {
   siteTitle: ``,
 }
-  
-  export default LeadersChoiceForPortfolios
+
+export default LeadersChoiceForPortfolios
