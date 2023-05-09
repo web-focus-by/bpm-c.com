@@ -21,7 +21,7 @@ import ThanksModal from "../components/thanks_modal"
 
 const IndexPage = ({ location }) => {
   const [isShowThankModal, setIsShowThankModal] = React.useState(false)
-  const [isShowModal, setIsShowModal] = React.useState(true)
+  // const [isShowModal, setIsShowModal] = React.useState(true)
   const [isShowThankForm, setIsShowThankForm] = React.useState(false)
   const [isShowForm, setIsShowForm] = React.useState(true)
   const postsAndTags = useStaticQuery(graphql`
@@ -36,6 +36,7 @@ const IndexPage = ({ location }) => {
             id
             title
             link
+            uri
             content
             tags {
               nodes {

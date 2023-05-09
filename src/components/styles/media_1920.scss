@@ -126,7 +126,7 @@
             .header_nav_list {
                 ul {
                     li {
-                        a {
+                        a, span {
                             margin-right: calc(42px + (60 - 42) * ((100vw - 1366px) / (1920 - 1366)));
                             font-size: calc(13px + (18 - 13) * ((100vw - 1366px) / (1920 - 1366)));
                         }

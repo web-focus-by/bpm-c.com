@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import "./breadcrumbs.css"
+import "./breadcrumbs.scss"
 
 const Breadcrumbs = ({ breadcrumbs, title }) => {
   let breadcrumbItems = ""

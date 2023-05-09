@@ -9,7 +9,7 @@ import Modal from "./modal"
 import ThanksModal from "../components/thanks_modal"
 import DropdownServices from "./dropdown_services"
 import MenuBurger from "../components/menuBurger"
-import "../components/styles/layout.css"
+import "../components/styles/layout.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

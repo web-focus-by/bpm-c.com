@@ -1,18 +1,18 @@
 import * as React from "react"
-import { useEffect, useRef } from "react"
+import { useEffect, useMemo, useRef } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import Moment from "moment"
 import "swiper/css"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import "../components/styles/main.css"
-import "../components/styles/icons.css"
-import "../components/styles/modules.css"
-import "../components/styles/mixins.css"
-import "../components/styles/media_1920.css"
-import "../components/styles/media_1366.css"
-import "../components/styles/media_1024.css"
-import "../components/styles/media_768.css"
-import "../components/styles/media_375.css"
+import { graphql, Link, useStaticQuery } from "gatsby"
+import "../components/styles/main.scss"
+import "../components/styles/icons.scss"
+import "../components/styles/modules.scss"
+import "../components/styles/mixins.scss"
+import "../components/styles/media_1920.scss"
+import "../components/styles/media_1366.scss"
+import "../components/styles/media_1024.scss"
+import "../components/styles/media_768.scss"
+import "../components/styles/media_375.scss"
 
 const Blog = ({ titlePage }) => {
   const hasWindow = typeof window !== "undefined"
@@ -30,6 +30,7 @@ const Blog = ({ titlePage }) => {
             title
             link
             date
+            uri
             tags {
               nodes {
                 slug
@@ -53,15 +54,21 @@ const Blog = ({ titlePage }) => {
       }
     }
   `)
+  const allNews = useMemo(() => {
+    if (data) {
+      return data.allWpPost.edges
+    }
+    return []
+  }, [data])
+
   const refCases = useRef([])
-  const allNews = data ? data.allWpPost.edges : []
+
   const tags = item => {
-    const results = item.node.tags.nodes.reduce((res, tag) => {
-      let val = tag.slug
-      res.push(val)
-      return res
+    const results = item.node.tags.nodes.reduce((acc, tag) => {
+      return [...acc, tag.slug]
     }, [])
-    const result = results.map((val, i) => {
+
+    return results.map((val, i) => {
       if (i < 2) {
         return (
           <li key={i} className="hash_list_block">
@@ -69,8 +76,8 @@ const Blog = ({ titlePage }) => {
           </li>
         )
       }
+      return null
     })
-    return result
   }
 
   useEffect(() => {
@@ -165,7 +172,7 @@ const Blog = ({ titlePage }) => {
           className="blog_products_block"
           ref={el => (refCases.current[index] = el)}
         >
-          <Link to={item.node.link}>
+          <Link to={item.node.uri}>
             <div className="blog_products_block_pic">
               {item.node.featuredImage &&
               item.node.featuredImage.node.mediaItemUrl ? (
@@ -185,7 +192,7 @@ const Blog = ({ titlePage }) => {
             </div>
           </div>
           <div className="blog_products_block_title">
-            <Link className="class_link" to={item.node.link}>
+            <Link className="class_link" to={item.node.uri}>
               {item.node.title}
             </Link>
           </div>
@@ -207,8 +214,8 @@ const Blog = ({ titlePage }) => {
           <Swiper
             spaceBetween={widthScreen <= 1024 ? 20 : 25}
             slidesPerView={"auto"}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={swiper => console.log(swiper)}
+            // onSlideChange={() => console.log("slide change")}
+            // onSwiper={swiper => console.log(swiper)}
             breakpoints={{
               1920: {
                 width: 1920,
