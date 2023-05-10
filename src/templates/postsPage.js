@@ -10,15 +10,23 @@ const PostsPage = ({ location, pageContext, data }) => {
   return (
     <>
       <Layout>
-        <HeroPost location={ location } photo={ pageContext.featuredImage && pageContext.featuredImage.node.mediaItemUrl ?
-          pageContext.featuredImage.node.mediaItemUrl : null} info={ pageContext }></HeroPost>
-        <ContentPost content={ pageContext }></ContentPost>
+        <HeroPost
+          location={location}
+          photo={
+            pageContext.featuredImage &&
+            pageContext.featuredImage.node.mediaItemUrl
+              ? pageContext.featuredImage.node.mediaItemUrl
+              : null
+          }
+          info={pageContext}
+        ></HeroPost>
+        <ContentPost content={pageContext}></ContentPost>
         <Blog titlePage="Other news"></Blog>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
     </>
-  );
-};
+  )
+}
 
 export default PostsPage
 
@@ -46,4 +54,5 @@ export const query = graphql`
         }
       }
     }
-  }`
+  }
+`

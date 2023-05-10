@@ -22,45 +22,85 @@ import FooterBlock from "../components/footerBlock/footerBlock"
 import WorkTogether from "../components/workTogether/workTogether"
 import Others from "../components/others/others"
 
-const Servicestemplatepage = ({pageContext, location, data}) => {
-  const contentPage = data ? data.wpPage : {};
-  const posts = data ? data.allWpPost.edges : [];
-  const items = data ? data.allWpPage.edges : [];
+const Servicestemplatepage = ({ pageContext, location, data }) => {
+  const contentPage = data ? data.wpPage : {}
+  const posts = data ? data.allWpPost.edges : []
+  const items = data ? data.allWpPage.edges : []
   const themes = items.reduce((res, val) => {
-    let item = { id: val.node.id, title: val.node.title, uri: val.node.uri, content: val.content };
-    return [...res, item]
-  },[])
-  const content = contentPage.content ? fractionContent(contentPage.content): null;
-  let counter = 0
-  const otherArray = content && content.length && content.length > 9 ? content.reduce((res,val)=>{
-    if (counter > 9) {
-      return [...res, val]
+    let item = {
+      id: val.node.id,
+      title: val.node.title,
+      uri: val.node.uri,
+      content: val.content,
     }
-    counter = counter + 1;
-    return res;
-  },[]) : null
-  
+    return [...res, item]
+  }, [])
+  const content = contentPage.content
+    ? fractionContent(contentPage.content)
+    : null
+  let counter = 0
+  const otherArray =
+    content && content.length && content.length > 9
+      ? content.reduce((res, val) => {
+          if (counter > 9) {
+            return [...res, val]
+          }
+          counter = counter + 1
+          return res
+        }, [])
+      : null
+
   return (
     <Layout>
-      <HeroWebSiteDesign title={ contentPage.title } content={ content && content[0] ? content[0] : null } location={ location }></HeroWebSiteDesign>
-      <ServiceITOutsourcing title={ pageContext.title } themes={ themes }></ServiceITOutsourcing>
-      <WebSiteDesignReason content={ content && content[1] ? content[1] : null }></WebSiteDesignReason>
-      <PortfolioWebSiteDesign posts={ posts } titlePage={ "Portfolio" }></PortfolioWebSiteDesign>
-      <GoalsDesign content={ content && content[2] ? content[2] : null }></GoalsDesign>
+      <HeroWebSiteDesign
+        title={contentPage.title}
+        content={content && content[0] ? content[0] : null}
+        location={location}
+      ></HeroWebSiteDesign>
+      <ServiceITOutsourcing
+        title={pageContext.title}
+        themes={themes}
+      ></ServiceITOutsourcing>
+      <WebSiteDesignReason
+        content={content && content[1] ? content[1] : null}
+      ></WebSiteDesignReason>
+      <PortfolioWebSiteDesign
+        posts={posts}
+        titlePage={"Portfolio"}
+      ></PortfolioWebSiteDesign>
+      <GoalsDesign
+        content={content && content[2] ? content[2] : null}
+      ></GoalsDesign>
       <Form></Form>
-      <RequiresWebsiteDesign content={ content && content[3] ? content[3] : null }></RequiresWebsiteDesign>
+      <RequiresWebsiteDesign
+        content={content && content[3] ? content[3] : null}
+      ></RequiresWebsiteDesign>
       <ServicesItem></ServicesItem>
-      <ResWebDesign  content={ content && content[4] ? content[4] : null }></ResWebDesign>
+      <ResWebDesign
+        content={content && content[4] ? content[4] : null}
+      ></ResWebDesign>
       <Blog titlePage="Blog"></Blog>
-      <WebDesignCreationVision content={ content && content[5] ? content[5] : null }></WebDesignCreationVision>
-      <ResultsOfWebDesign content={ content && content[6] ? content[6] : null }></ResultsOfWebDesign>
+      <WebDesignCreationVision
+        content={content && content[5] ? content[5] : null}
+      ></WebDesignCreationVision>
+      <ResultsOfWebDesign
+        content={content && content[6] ? content[6] : null}
+      ></ResultsOfWebDesign>
       <Reviews></Reviews>
-      <BuyWebSite content= { content && content[7] ? content[7] : null }></BuyWebSite>
-      <SiteDesignByBpmCloud content={ content && content[8] ? content[8] : null }></SiteDesignByBpmCloud>
-      <FooterBlock content={ content && content[9] ? content[9] : null }></FooterBlock>
-      { otherArray && otherArray.length>0 ? (<Others content={ otherArray ? otherArray : null }></Others>) : null }
+      <BuyWebSite
+        content={content && content[7] ? content[7] : null}
+      ></BuyWebSite>
+      <SiteDesignByBpmCloud
+        content={content && content[8] ? content[8] : null}
+      ></SiteDesignByBpmCloud>
+      <FooterBlock
+        content={content && content[9] ? content[9] : null}
+      ></FooterBlock>
+      {otherArray && otherArray.length > 0 ? (
+        <Others content={otherArray ? otherArray : null}></Others>
+      ) : null}
       <WorkTogether></WorkTogether>
-      <Seo title={ pageContext.title } />
+      <Seo title={pageContext.title} />
     </Layout>
   )
 }
@@ -68,51 +108,56 @@ const Servicestemplatepage = ({pageContext, location, data}) => {
 export default Servicestemplatepage
 
 export const query = graphql`
-    query siteGetPostsDataQuery ($slug: String) {
-      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "portfolios"}}}}}) {
-        edges {
-          node {
-            id
-            title
-            link
-            content
-            tags {
-              nodes {
-                slug
-              }
-            }
-            featuredImage {
-              node {
-                id
-                mediaItemUrl
-                sizes
-              }
+  query siteGetPostsDataQuery($slug: String) {
+    allWpPost(
+      filter: {
+        categories: { nodes: { elemMatch: { slug: { eq: "portfolios" } } } }
+      }
+    ) {
+      edges {
+        node {
+          id
+          title
+          link
+          content
+          tags {
+            nodes {
+              slug
             }
           }
-        }
-      }
-      wpPage(slug: {eq: $slug}) {
-        id
-        uri
-        title
-        content
-        parentId
-        slug
-        featuredImage {
-          node {
-            id
-            mediaItemUrl
-            sizes
+          featuredImage {
+            node {
+              id
+              mediaItemUrl
+              sizes
+            }
           }
         }
       }
-      allWpPage(filter: {wpParent: {node: {slug: {eq: $slug}}}}) {
-        edges {
-          node {
-            id
-            title
-            uri
-          }
+    }
+    wpPage(slug: { eq: $slug }) {
+      id
+      uri
+      title
+      content
+      parentId
+      slug
+      featuredImage {
+        node {
+          id
+          mediaItemUrl
+          sizes
         }
       }
-    }`
+    }
+    allWpPage(filter: { wpParent: { node: { slug: { eq: $slug } } } }) {
+      edges {
+        node {
+          id
+          title
+          uri
+        }
+      }
+    }
+  }
+`

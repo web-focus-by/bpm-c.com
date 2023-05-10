@@ -3,19 +3,19 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
-import "../components/styles/main.css"
-import "../components/styles/icons.css"
-import "../components/styles/modules.css"
-import "../components/styles/mixins.css"
-import "../components/styles/media_1920.css"
-import "../components/styles/media_1366.css"
-import "../components/styles/media_1024.css"
-import "../components/styles/media_768.css"
-import "../components/styles/media_375.css"
+import "../components/styles/main.scss"
+import "../components/styles/icons.scss"
+import "../components/styles/modules.scss"
+import "../components/styles/mixins.scss"
+import "../components/styles/media_1920.scss"
+import "../components/styles/media_1366.scss"
+import "../components/styles/media_1024.scss"
+import "../components/styles/media_768.scss"
+import "../components/styles/media_375.scss"
 
 const Reviews = ({}) => {
-  const hasWindow = typeof window !== 'undefined';
-  const widthScreen = hasWindow ? window.innerWidth : null;
+  const hasWindow = typeof window !== "undefined"
+  const widthScreen = hasWindow ? window.innerWidth : null
   const dataText = [
     {
       id: "slide_1",
@@ -58,7 +58,7 @@ const Reviews = ({}) => {
       date: "12.10.2021",
     },
   ]
-  const result = dataText.map((obj) => {
+  const result = dataText.map(obj => {
     return (
       <SwiperSlide key={obj.id}>
         <div className="reviews_info_block">
@@ -79,14 +79,16 @@ const Reviews = ({}) => {
       <div className="reviews margin_bottom_240">
         <div className="view_title">
           <div className="title_62">Reviews</div>
-          <Link className="active_link" to="/about-us/reviews/">View all</Link>
+          <Link className="active_link" to="/about-us/reviews/">
+            View all
+          </Link>
         </div>
         <div className="reviews__info">
           <Swiper
-            spaceBetween={widthScreen <= 1024 ? 20 :26}
+            spaceBetween={widthScreen <= 1024 ? 20 : 26}
             slidesPerView={"auto"}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={swiper => console.log(swiper)}
+            // onSlideChange={() => console.log("slide change")}
+            // onSwiper={swiper => console.log(swiper)}
             breakpoints={{
               1920: {
                 width: 1920,
@@ -107,7 +109,7 @@ const Reviews = ({}) => {
               768: {
                 width: 768,
                 allowTouchMove: true,
-              }
+              },
             }}
           >
             {result}

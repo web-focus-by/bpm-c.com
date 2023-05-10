@@ -6,73 +6,74 @@
 
 // You can delete this file if you're not using it
 const path = require(`path`)
-const { slash } = require(`gatsby-core-utils`);
-const { captureRejectionSymbol } = require("events");
+const { slash } = require(`gatsby-core-utils`)
+const { captureRejectionSymbol } = require("events")
 
 exports.createPages = async function ({ actions, graphql }) {
   const result = await graphql(`
-  {
-    allWpPage {
-      edges {
-        node {
-          id
-          title
-          uri
-          content
-          slug
-        }
-      }
-    }
-    allWpTag {
-      edges {
-        node {
-          id
-          name
-          description
-          uri
-          slug
-        }
-      }
-    }
-    allWpCategory {
-      edges {
-        node {
-          id
-          name
-          description
-          uri
-          slug
-        }
-      }
-    }
-    allWpPost {
-      edges {
-        node {
-          id
-          title
-          uri
-          content
-          date
-          tags {
-            nodes {
-              slug
-            }
+    {
+      allWpPage {
+        edges {
+          node {
+            id
+            title
+            uri
+            content
+            slug
           }
-          featuredImage {
-            node {
-              id
-              mediaItemUrl
-              sizes
-            }
+        }
+      }
+      allWpTag {
+        edges {
+          node {
+            id
+            name
+            description
+            uri
+            slug
           }
-          comments {
-            nodes {
-              id
-              date
-              content
-              author {
-                node {
-                  name
+        }
+      }
+      allWpCategory {
+        edges {
+          node {
+            id
+            name
+            description
+            uri
+            slug
+          }
+        }
+      }
+      allWpPost {
+        edges {
+          node {
+            id
+            title
+            uri
+            content
+            date
+            tags {
+              nodes {
+                slug
+              }
+            }
+            featuredImage {
+              node {
+                id
+                mediaItemUrl
+                sizes
+              }
+            }
+            comments {
+              nodes {
+                id
+                date
+                content
+                author {
+                  node {
+                    name
+                  }
                 }
               }
             }
@@ -80,9 +81,9 @@ exports.createPages = async function ({ actions, graphql }) {
         }
       }
     }
-  }`)
+  `)
   if (result.errors) {
-    throw new Error(data.errors);
+    throw new Error(data.errors)
   }
   const { allWpPage, allWpPost, allWpCategory, allWpTag } = result.data
   const pageTemplate = path.resolve(`./src/templates/servicestemplatepage.js`)
@@ -91,7 +92,9 @@ exports.createPages = async function ({ actions, graphql }) {
   const pageReviewsTemplate = path.resolve(`./src/templates/reviews.js`)
   const pageFAQTemplate = path.resolve(`./src/templates/faq.js`)
   const pageBlogTemplate = path.resolve(`./src/templates/templateBlog.js`)
-  const informationAboutCompanyTemplate = path.resolve(`./src/templates/informationAboutCompany.js`)
+  const informationAboutCompanyTemplate = path.resolve(
+    `./src/templates/informationAboutCompany.js`
+  )
   const postTemplate = path.resolve(`./src/templates/postsPage.js`)
   const categoryTemplate = path.resolve(`./src/templates/categoryTemplate.js`)
   allWpPage.edges.forEach(item => {
@@ -99,19 +102,19 @@ exports.createPages = async function ({ actions, graphql }) {
     switch (item.node.id) {
       case "cG9zdDozNzAw":
         template = pageReviewsTemplate
-        break;
+        break
       case "cG9zdDoyNjU4":
         template = pageContactsTemplate
-        break;
+        break
       case "cG9zdDoxMzc0":
         template = pageBlogTemplate
-        break;
+        break
       case "cG9zdDoxMzY1":
         template = informationAboutCompanyTemplate
-        break;
+        break
       case "cG9zdDoxMzY4":
         template = pageFAQTemplate
-        break;
+        break
       default:
         template = pageTemplate
     }
@@ -123,7 +126,7 @@ exports.createPages = async function ({ actions, graphql }) {
         title: item.node.title,
         content: item.node.content,
         uri: item.node.uri,
-        slug: item.node.slug
+        slug: item.node.slug,
       },
     })
   })
@@ -137,8 +140,8 @@ exports.createPages = async function ({ actions, graphql }) {
         name: tag.node.name,
         description: tag.node.description,
         uri: tag.node.uri,
-        slug: tag.node.slug
-      }
+        slug: tag.node.slug,
+      },
     })
   })
 
@@ -154,8 +157,8 @@ exports.createPages = async function ({ actions, graphql }) {
         tags: post.node.tags,
         featuredImage: post.node.featuredImage,
         comments: post.node.comments,
-        date: post.node.date
-      }
+        date: post.node.date,
+      },
     })
   })
 
@@ -168,7 +171,7 @@ exports.createPages = async function ({ actions, graphql }) {
         name: edge.node.name,
         description: edge.node.description,
         uri: edge.node.uri,
-        slug: edge.node.slug
+        slug: edge.node.slug,
       },
     })
   })

@@ -2,82 +2,151 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useEffect, useRef } from "react"
 import { Link } from "gatsby"
-import "../components/styles/main.css"
-import "../components/styles/icons.css"
-import "../components/styles/modules.css"
-import "../components/styles/mixins.css"
-import "../components/styles/media_1920.css"
-import "../components/styles/media_1366.css"
-import "../components/styles/media_1024.css"
-import "../components/styles/media_768.css"
-import "../components/styles/media_375.css"
+import "../components/styles/main.scss"
+import "../components/styles/icons.scss"
+import "../components/styles/modules.scss"
+import "../components/styles/mixins.scss"
+import "../components/styles/media_1920.scss"
+import "../components/styles/media_1366.scss"
+import "../components/styles/media_1024.scss"
+import "../components/styles/media_768.scss"
+import "../components/styles/media_375.scss"
 
 const Portfolio = ({ posts }) => {
-  const refCases = useRef([]);
+  const refCases = useRef([])
 
-  useEffect(
-    () => {
-      refCases.current = refCases.current.slice(0, posts.length);
-      document.addEventListener("mouseover", (e) => {
-        let currentCase = refCases && refCases.current && refCases.current.filter(refCase => refCase && refCase.contains(e.target)) ?
-        refCases.current.filter(refCase => refCase && refCase.contains(e.target))[0] : null;
+  useEffect(() => {
+    refCases.current = refCases.current.slice(0, posts.length)
+    document.addEventListener(
+      "mouseover",
+      e => {
+        let currentCase =
+          refCases &&
+          refCases.current &&
+          refCases.current.filter(
+            refCase => refCase && refCase.contains(e.target)
+          )
+            ? refCases.current.filter(
+                refCase => refCase && refCase.contains(e.target)
+              )[0]
+            : null
         if (currentCase && refCases.current.includes(currentCase)) {
-          document.getElementById(currentCase.id).getElementsByClassName('portfolio_products_block_title')[0].children[0].classList.add('portfolio_link');
-          document.getElementById(currentCase.id).getElementsByClassName('portfolio_products_block_title')[0].children[0].classList.remove('class_link');
+          document
+            .getElementById(currentCase.id)
+            .getElementsByClassName("portfolio_products_block_title")[0]
+            .children[0].classList.add("portfolio_link")
+          document
+            .getElementById(currentCase.id)
+            .getElementsByClassName("portfolio_products_block_title")[0]
+            .children[0].classList.remove("class_link")
         }
-      }, true);
-      document.addEventListener("mouseout", (e) => {
-        let currentCase = refCases && refCases.current && refCases.current.filter(refCase => refCase && refCase.contains(e.target)) ?
-        refCases.current.filter(refCase => refCase && refCase.contains(e.target))[0] : null;
+      },
+      true
+    )
+    document.addEventListener(
+      "mouseout",
+      e => {
+        let currentCase =
+          refCases &&
+          refCases.current &&
+          refCases.current.filter(
+            refCase => refCase && refCase.contains(e.target)
+          )
+            ? refCases.current.filter(
+                refCase => refCase && refCase.contains(e.target)
+              )[0]
+            : null
         if (currentCase && refCases.current.includes(currentCase)) {
-          document.getElementById(currentCase.id).getElementsByClassName('portfolio_products_block_title')[0].children[0].classList.add('class_link');
-          document.getElementById(currentCase.id).getElementsByClassName('portfolio_products_block_title')[0].children[0].classList.remove('portfolio_link');
+          document
+            .getElementById(currentCase.id)
+            .getElementsByClassName("portfolio_products_block_title")[0]
+            .children[0].classList.add("class_link")
+          document
+            .getElementById(currentCase.id)
+            .getElementsByClassName("portfolio_products_block_title")[0]
+            .children[0].classList.remove("portfolio_link")
         }
-      }, true);
-      return () => {
-        document.removeEventListener("mouseover", (e) => {
-          let currentCase = refCases && refCases.current && refCases.current.filter(refCase => refCase && refCase.contains(e.target)) ?
-          refCases.current.filter(refCase => refCase && refCase.contains(e.target))[0] : null;
+      },
+      true
+    )
+    return () => {
+      document.removeEventListener(
+        "mouseover",
+        e => {
+          let currentCase =
+            refCases &&
+            refCases.current &&
+            refCases.current.filter(
+              refCase => refCase && refCase.contains(e.target)
+            )
+              ? refCases.current.filter(
+                  refCase => refCase && refCase.contains(e.target)
+                )[0]
+              : null
           if (currentCase && refCases.current.includes(currentCase)) {
-            document.getElementById(currentCase.id).getElementsByClassName('portfolio_products_block_title')[0].children[0].classList.add('portfolio_link');
-            document.getElementById(currentCase.id).getElementsByClassName('portfolio_products_block_title')[0].children[0].classList.remove('class_link');
+            document
+              .getElementById(currentCase.id)
+              .getElementsByClassName("portfolio_products_block_title")[0]
+              .children[0].classList.add("portfolio_link")
+            document
+              .getElementById(currentCase.id)
+              .getElementsByClassName("portfolio_products_block_title")[0]
+              .children[0].classList.remove("class_link")
           }
-        }, true);
-      };
-    }, [posts]
-  );
+        },
+        true
+      )
+    }
+  }, [posts])
 
   const items = posts.map((post, index) => {
     if (index <= 5) {
-      let tags = [];
+      let tags = []
       if (post && post.node.tags) {
         tags = post.node.tags.nodes.map((tag, i) => {
-          let valueTag = '#' + tag.slug;
+          let valueTag = "#" + tag.slug
           return (
-            <li key={ post.node.id.toString() + valueTag.toString() } className="hash_list_block">
-              <Link to={ "/tag/" + tag.slug + "/"  }>{ valueTag }</Link>
+            <li
+              key={post.node.id.toString() + valueTag.toString()}
+              className="hash_list_block"
+            >
+              <Link to={"/tag/" + tag.slug + "/"}>{valueTag}</Link>
             </li>
           )
         })
       }
       return (
-        <div id={ post.node.id } ref={ el => refCases.current[index] = el } className="portfolio_products_block">
+        <div
+          key={"portfolio_item" + post.node.id}
+          id={post.node.id}
+          ref={el => (refCases.current[index] = el)}
+          className="portfolio_products_block"
+        >
           <div className="portfolio_products_block_pic">
-            <Link to={ post.node.link }>
-              { post.node.featuredImage && post.node.featuredImage.node.mediaItemUrl ? (
-                <img src={ post.node.featuredImage.node.mediaItemUrl } alt="the post"/>
-              ) : '' }
+            <Link to={post.node.uri}>
+              {post.node.featuredImage &&
+              post.node.featuredImage.node.mediaItemUrl ? (
+                <img
+                  src={post.node.featuredImage.node.mediaItemUrl}
+                  alt="the post"
+                />
+              ) : (
+                ""
+              )}
             </Link>
           </div>
           <div className="portfolio_products_block_list hash">
-            <ul className="hash__list">
-              { tags }
-            </ul>
+            <ul className="hash__list">{tags}</ul>
           </div>
-          <div className="portfolio_products_block_title"><Link className="class_link" to={ post.node.link }>{ post.node.title }</Link></div>
+          <div className="portfolio_products_block_title">
+            <Link className="class_link" to={post.node.uri}>
+              {post.node.title}
+            </Link>
+          </div>
         </div>
       )
     }
+    return null
   })
 
   return (
@@ -85,11 +154,11 @@ const Portfolio = ({ posts }) => {
       <div className="portfolio margin_bottom_240">
         <div className="view_title">
           <div className="title_62">Portfolio</div>
-          <Link className="active_link" to={ "/portfolios/" }>View all</Link>
+          <Link className="active_link" to={"/portfolios/"}>
+            View all
+          </Link>
         </div>
-        <div className="portfolio__products">
-          { items }
-        </div>
+        <div className="portfolio__products">{items}</div>
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-export const getSubTitleText  = (title) => {
+export const getSubTitleText = title => {
   switch (title) {
     case "Website development":
       return "Website development"

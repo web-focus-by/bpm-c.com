@@ -19,7 +19,11 @@ const Portfolios = ({ location }) => {
           }
         }
       }
-      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "portfolios"}}}}})  {
+      allWpPost(
+        filter: {
+          categories: { nodes: { elemMatch: { slug: { eq: "portfolios" } } } }
+        }
+      ) {
         edges {
           node {
             id
@@ -42,20 +46,25 @@ const Portfolios = ({ location }) => {
         }
       }
     }
-  `);
-  const allTags = PostsAndTags ? PostsAndTags.allWpTag.edges : [];
-  const allPosts = PostsAndTags ? PostsAndTags.allWpPost.edges : [];
+  `)
+  const allTags = PostsAndTags ? PostsAndTags.allWpTag.edges : []
+  const allPosts = PostsAndTags ? PostsAndTags.allWpPost.edges : []
 
   return (
     <>
       <Layout>
         <Seo title="Portfolios" />
-        <HeroPortfolio location={ location } tags={ allTags } selectedTag={ null } title="Portfolios" ></HeroPortfolio>
-        <ListOfPortfolio posts={ allPosts }></ListOfPortfolio>
+        <HeroPortfolio
+          location={location}
+          tags={allTags}
+          selectedTag={null}
+          title="Portfolios"
+        ></HeroPortfolio>
+        <ListOfPortfolio posts={allPosts}></ListOfPortfolio>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
     </>
-  );
-};
+  )
+}
 
 export default Portfolios

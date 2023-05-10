@@ -20,18 +20,23 @@ import LeadersChoice from "../components/leaders_choice"
 import ThanksModal from "../components/thanks_modal"
 
 const IndexPage = ({ location }) => {
-  const [isShowThankModal, setIsShowThankModal] = React.useState(false);
-  const [isShowModal, setIsShowModal] = React.useState(true);
-  const [isShowThankForm, setIsShowThankForm] = React.useState(false);
-  const [isShowForm, setIsShowForm] = React.useState(true);
+  const [isShowThankModal, setIsShowThankModal] = React.useState(false)
+  // const [isShowModal, setIsShowModal] = React.useState(true)
+  const [isShowThankForm, setIsShowThankForm] = React.useState(false)
+  const [isShowForm, setIsShowForm] = React.useState(true)
   const postsAndTags = useStaticQuery(graphql`
     query GetPostQuery {
-      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "portfolios"}}}}}) {
+      allWpPost(
+        filter: {
+          categories: { nodes: { elemMatch: { slug: { eq: "portfolios" } } } }
+        }
+      ) {
         edges {
           node {
             id
             title
             link
+            uri
             content
             tags {
               nodes {
@@ -49,33 +54,35 @@ const IndexPage = ({ location }) => {
         }
       }
     }
-  `);
-  const allPosts = postsAndTags ? postsAndTags.allWpPost.edges : [];
+  `)
+  const allPosts = postsAndTags ? postsAndTags.allWpPost.edges : []
 
   const backPageModal = () => {
-    setIsShowThankForm(false);
+    setIsShowThankForm(false)
   }
 
   const backPage = () => {
-    setIsShowThankModal(false);
-    setIsShowForm(true);
+    setIsShowThankModal(false)
+    setIsShowForm(true)
   }
 
   const showThankForm = () => {
-    setIsShowThankForm(true);
-    setIsShowForm(false);
+    setIsShowThankForm(true)
+    setIsShowForm(false)
   }
 
   return (
     <>
       <Layout>
         <Seo title="Index" />
-        <Hero location={ location }></Hero>
-        { isShowThankModal ? <ThanksModal backPage={ backPageModal }></ThanksModal> : null }
+        <Hero location={location}></Hero>
+        {isShowThankModal ? (
+          <ThanksModal backPage={backPageModal}></ThanksModal>
+        ) : null}
         <ITCompany></ITCompany>
-        <Portfolio posts={ allPosts } ></Portfolio>
-        { isShowForm ? <Form showThankForm={ showThankForm }></Form> : null }
-        { isShowThankForm ? <ThanksForm backPage={ backPage }></ThanksForm> : null }
+        <Portfolio posts={allPosts}></Portfolio>
+        {isShowForm ? <Form showThankForm={showThankForm}></Form> : null}
+        {isShowThankForm ? <ThanksForm backPage={backPage}></ThanksForm> : null}
         <ServicesItem></ServicesItem>
         <Technologies></Technologies>
         <BPMCloud></BPMCloud>

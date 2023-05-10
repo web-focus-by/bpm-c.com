@@ -1,27 +1,27 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import "../../components/styles/main.css"
-import "../../components/styles/icons.css"
-import "../../components/styles/modules.css"
-import "../../components/styles/mixins.css"
-import "../../components/styles/media_1920.css"
-import "../../components/styles/media_1366.css"
-import "../../components/styles/media_1024.css"
-import "../../components/styles/media_768.css"
-import "../../components/styles/media_375.css"
-import "./serviceITOutsourcing.css"
+import "../../components/styles/main.scss"
+import "../../components/styles/icons.scss"
+import "../../components/styles/modules.scss"
+import "../../components/styles/mixins.scss"
+import "../../components/styles/media_1920.scss"
+import "../../components/styles/media_1366.scss"
+import "../../components/styles/media_1024.scss"
+import "../../components/styles/media_768.scss"
+import "../../components/styles/media_375.scss"
+import "./serviceITOutsourcing.scss"
 
 const ServicesITOutsourcing = ({ title, themes }) => {
   const result = themes.map((value, index) => {
     return (
-      <Link to={ value.uri }>
-        <button key = { index + value.id } className="button_white_item">
-          { value.title }
+      <Link to={value.uri}>
+        <button key={index + value.id} className="button_white_item">
+          {value.title}
         </button>
       </Link>
     )
-  });
+  })
 
   if (result && result.length > 0) {
     return (
@@ -29,12 +29,10 @@ const ServicesITOutsourcing = ({ title, themes }) => {
         <div className="service_oitsourcing margin_bottom_240">
           <div className="service_oitsourcing_choice">
             <div className="service_oitsourcing_choice__title title_62">
-              Services in&nbsp;{ title }
+              Services in&nbsp;{title}
             </div>
           </div>
-          <div className="items_tagline__butn">
-            { result }
-          </div>
+          <div className="items_tagline__butn">{result}</div>
         </div>
       </div>
     )
@@ -44,9 +42,9 @@ const ServicesITOutsourcing = ({ title, themes }) => {
 ServicesITOutsourcing.propTypes = {
   siteTitle: PropTypes.string,
 }
-  
+
 ServicesITOutsourcing.defaultProps = {
   siteTitle: ``,
 }
 
-export default ServicesITOutsourcing;
+export default ServicesITOutsourcing

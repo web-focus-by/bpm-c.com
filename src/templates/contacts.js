@@ -5,15 +5,15 @@ import { gql, useMutation } from "@apollo/client"
 import Breadcrumbs from "../components/breadcrumbs/breadcrumbs"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import "../components/styles/main.css"
-import "../components/styles/icons.css"
-import "../components/styles/modules.css"
-import "../components/styles/mixins.css"
-import "../components/styles/media_1920.css"
-import "../components/styles/media_1366.css"
-import "../components/styles/media_1024.css"
-import "../components/styles/media_768.css"
-import "../components/styles/media_375.css"
+import "../components/styles/main.scss"
+import "../components/styles/icons.scss"
+import "../components/styles/modules.scss"
+import "../components/styles/mixins.scss"
+import "../components/styles/media_1920.scss"
+import "../components/styles/media_1366.scss"
+import "../components/styles/media_1024.scss"
+import "../components/styles/media_768.scss"
+import "../components/styles/media_375.scss"
 
 const CONTACT_MUTATION = gql`
   mutation CreateSubmissionMutation(
@@ -22,49 +22,47 @@ const CONTACT_MUTATION = gql`
     $email: String!
   ) {
     createSubmission(
-      input: {
-        name: $name
-        telephone: $telephone
-        email: $email
-      }
+      input: { name: $name, telephone: $telephone, email: $email }
     ) {
       success
       data
     }
-  }`
+  }
+`
 
 const Contacts = ({ location }) => {
-  const [createSubmission, { loading, error, data }] = useMutation(CONTACT_MUTATION);
-  const [nameValue, setNameValue] = useState('');
-  const [telephoneValue, setTelephoneValue] = useState('');
-  const [emailValue, setEmailValue] = useState('');
-  const [interestedItems, setInterestedItems] = useState(['']);
+  const [createSubmission, { loading, error, data }] =
+    useMutation(CONTACT_MUTATION)
+  const [nameValue, setNameValue] = useState("")
+  const [telephoneValue, setTelephoneValue] = useState("")
+  const [emailValue, setEmailValue] = useState("")
+  const [interestedItems, setInterestedItems] = useState([""])
   const socialMaediaLinks = [
     { link: "#", name: "insta" },
     { link: "#", name: "facebook" },
     { link: "#", name: "link" },
-    { link: "#", name: "behance" }
-  ];
+    { link: "#", name: "behance" },
+  ]
 
-  const socialMedia = socialMaediaLinks.map((val, index)=>{
+  const socialMedia = socialMaediaLinks.map((val, index) => {
     return (
-      <li key={ index.toString() }>
-        <Link to={ val.link }>
-          <span className={ val.name }></span>
+      <li key={index.toString()}>
+        <Link to={val.link}>
+          <span className={val.name}></span>
         </Link>
       </li>
     )
-  });
+  })
 
-  const addItem = (item) => {
+  const addItem = item => {
     if (interestedItems.indexOf(item) === -1) {
-      setInterestedItems([...interestedItems, item]);
+      setInterestedItems([...interestedItems, item])
     }
-    return interestedItems;
+    return interestedItems
   }
 
   const clear = () => {
-    setInterestedItems(['']);
+    setInterestedItems([""])
   }
 
   return (
@@ -72,7 +70,7 @@ const Contacts = ({ location }) => {
       <Layout>
         <Seo title="Contacts" />
         <div className="container">
-          <Breadcrumbs breadcrumbs={ location } title="Contacts"/>
+          <Breadcrumbs breadcrumbs={location} title="Contacts" />
           <div className="hero">
             <div className="hero__title title_62">
               Contacts<span className="phone_icon"></span>
@@ -98,8 +96,10 @@ const Contacts = ({ location }) => {
                   <ul>
                     <li key="phoneNumber">+ 375 29 715 05 86</li>
                     <li key="mail">info@bpmcloud.com</li>
-                    <li key="addressValue">Independence Avenue, 77, office 53</li>
-                    <li key="socialMediaLinks">{ socialMedia }</li>
+                    <li key="addressValue">
+                      Independence Avenue, 77, office 53
+                    </li>
+                    <li key="socialMediaLinks">{socialMedia}</li>
                   </ul>
                 </div>
               </div>
@@ -108,44 +108,112 @@ const Contacts = ({ location }) => {
               <div className="contact_form">
                 <div className="contact_form__block">
                   <div className="contact_form_block_buttons_title">
-                  Services interested in: <span style={{fontWeight:'bold'}}>
-                    { interestedItems && interestedItems.length > 0 ? interestedItems.slice(1).join(', ') : '' }
-                  </span>
+                    Services interested in:{" "}
+                    <span style={{ fontWeight: "bold" }}>
+                      {interestedItems && interestedItems.length > 0
+                        ? interestedItems.slice(1).join(", ")
+                        : ""}
+                    </span>
                   </div>
                   <div className="contact_form_block_buttons">
-                    <button id="development" key="development" onClick={ ()=>{ addItem('development') } } className="button_item_tag">+ Development</button>
-                    <button id="design" key="design" onClick={ ()=>{ addItem('design') } } className="button_item_tag">+ Design</button>
-                    <button id="seo" key="seo" onClick={ ()=>{ addItem('seo') } } className="button_item_tag">+ SEO</button>
-                    <button id="ppc" key="ppc" onClick={ ()=>{ addItem('ppc') } } className="button_item_tag">+ PPC</button>
-                    <button id="copywriting" key="copywriting" onClick={ ()=>{ addItem('copywriting') } } className="button_item_tag">+ Copywriting</button>
-                    { interestedItems && interestedItems.length > 1 ?
-                      (<button id="clear" key="clear" onClick={()=>{ clear() } } className="button_item_tag">Clear</button>) :
-                      (<button id="clear" key="clear" onClick={()=>{ clear() } } className="button_item_tag__not_visible">Clear</button>)
-                    }
+                    <button
+                      id="development"
+                      key="development"
+                      onClick={() => {
+                        addItem("development")
+                      }}
+                      className="button_item_tag"
+                    >
+                      + Development
+                    </button>
+                    <button
+                      id="design"
+                      key="design"
+                      onClick={() => {
+                        addItem("design")
+                      }}
+                      className="button_item_tag"
+                    >
+                      + Design
+                    </button>
+                    <button
+                      id="seo"
+                      key="seo"
+                      onClick={() => {
+                        addItem("seo")
+                      }}
+                      className="button_item_tag"
+                    >
+                      + SEO
+                    </button>
+                    <button
+                      id="ppc"
+                      key="ppc"
+                      onClick={() => {
+                        addItem("ppc")
+                      }}
+                      className="button_item_tag"
+                    >
+                      + PPC
+                    </button>
+                    <button
+                      id="copywriting"
+                      key="copywriting"
+                      onClick={() => {
+                        addItem("copywriting")
+                      }}
+                      className="button_item_tag"
+                    >
+                      + Copywriting
+                    </button>
+                    {interestedItems && interestedItems.length > 1 ? (
+                      <button
+                        id="clear"
+                        key="clear"
+                        onClick={() => {
+                          clear()
+                        }}
+                        className="button_item_tag"
+                      >
+                        Clear
+                      </button>
+                    ) : (
+                      <button
+                        id="clear"
+                        key="clear"
+                        onClick={() => {
+                          clear()
+                        }}
+                        className="button_item_tag__not_visible"
+                      >
+                        Clear
+                      </button>
+                    )}
                   </div>
                   <div className="contact_form_block_wrapper">
-                    <form id="search-contact_form"
-                      onSubmit={ e => {
-                        e.preventDefault();
-                          createSubmission({
-                            variables: {
-                              name: nameValue,
-                              telephone: telephoneValue,
-                              email: emailValue
-                            }
-                          });
-                          clear();
-                        }
-                    }>
+                    <form
+                      id="search-contact_form"
+                      onSubmit={e => {
+                        e.preventDefault()
+                        createSubmission({
+                          variables: {
+                            name: nameValue,
+                            telephone: telephoneValue,
+                            email: emailValue,
+                          },
+                        })
+                        clear()
+                      }}
+                    >
                       <div className="contact_form_line-wrapper">
                         <input
                           id="name"
-                          value = { nameValue }
+                          value={nameValue}
                           type="text"
                           autoComplete="off"
                           name="name"
                           className="contact_form_name input-yellow "
-                          onChange={ e => {
+                          onChange={e => {
                             setNameValue(e.target.value)
                           }}
                           required
@@ -155,13 +223,13 @@ const Contacts = ({ location }) => {
 
                       <div className="contact_form_line-wrapper">
                         <input
-                          value = { telephoneValue }
+                          value={telephoneValue}
                           type="text"
                           id="tel"
                           autoComplete="off"
                           name="telephone"
                           className="contact_form-phone input-phone contact_form_phone input-yellow"
-                          onChange={ e => {
+                          onChange={e => {
                             setTelephoneValue(e.target.value)
                           }}
                           required
@@ -171,13 +239,13 @@ const Contacts = ({ location }) => {
 
                       <div className="contact_form_line-wrapper">
                         <input
-                          value = { emailValue }
+                          value={emailValue}
                           type="text"
                           id="mail"
                           autoComplete="off"
                           name="email"
                           className="contact_form-mail input-mail contact_form_mail input-yellow"
-                          onChange={ e => {
+                          onChange={e => {
                             setEmailValue(e.target.value)
                           }}
                           required
@@ -191,8 +259,8 @@ const Contacts = ({ location }) => {
                           </button>
                         </div>
                         <p>
-                          By pressing the button, I agree for the processing of personal
-                          data
+                          By pressing the button, I agree for the processing of
+                          personal data
                         </p>
                       </div>
                     </form>
@@ -205,10 +273,13 @@ const Contacts = ({ location }) => {
             <iframe
               title="address of office on google map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.544970835492!2d27.596358815992996!3d53.9220613391322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf5d99239d81%3A0x9abeb6f83c6393fb!2z0L_RgC4g0J3QtdC30LDQstC40YHQuNC80L7RgdGC0LggNzcsINCc0LjQvdGB0Lo!5e0!3m2!1sru!2sby!4v1664284593785!5m2!1sru!2sby"
-              width="100%" height="480"
-              style={{border:0,borderRadius:25}} allowfullscreen=""
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+              width="100%"
+              height="480"
+              style={{ border: 0, borderRadius: 25 }}
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </Layout>

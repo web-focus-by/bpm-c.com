@@ -6,13 +6,18 @@ import HeroPortfolio from "../components/heroPortfolio/heroPortfolio"
 import ListOfPortfolio from "../components/listOfPortfolio/listOfPortfolio"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
 
-const TagsPage = ({pageContext, location, data}) => {  
+const TagsPage = ({ pageContext, location, data }) => {
   return (
     <Layout>
-      <HeroPortfolio location={ location } tags={data.allWpTag.edges} selectedTag={ pageContext.uri } title="Posts by the tag"></HeroPortfolio>
-      <ListOfPortfolio posts={ data.allWpPost.edges }></ListOfPortfolio>
+      <HeroPortfolio
+        location={location}
+        tags={data.allWpTag.edges}
+        selectedTag={pageContext.uri}
+        title="Posts by the tag"
+      ></HeroPortfolio>
+      <ListOfPortfolio posts={data.allWpPost.edges}></ListOfPortfolio>
       <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
-      <Seo title={ pageContext.name } />
+      <Seo title={pageContext.name} />
     </Layout>
   )
 }
@@ -20,8 +25,10 @@ const TagsPage = ({pageContext, location, data}) => {
 export default TagsPage
 
 export const query = graphql`
-  query siteGetTagsDataTagsQuery ($slug: String) {
-    allWpPost(filter: {tags: {nodes: {elemMatch: {slug: {eq: $slug}}}}}) {
+  query siteGetTagsDataTagsQuery($slug: String) {
+    allWpPost(
+      filter: { tags: { nodes: { elemMatch: { slug: { eq: $slug } } } } }
+    ) {
       edges {
         node {
           id
@@ -53,4 +60,5 @@ export const query = graphql`
         }
       }
     }
-  }`
+  }
+`

@@ -15,7 +15,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
   data,
   location,
 }) => (
-  <Layout location={ location }>
+  <Layout location={location}>
     <Seo title="Using TypeScript" />
     <h1>
       Gatsby supports <b>TypeScript by default</b>

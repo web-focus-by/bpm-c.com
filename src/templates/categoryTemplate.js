@@ -6,14 +6,18 @@ import HeroPortfolio from "../components/heroPortfolio/heroPortfolio"
 import ListOfPortfolio from "../components/listOfPortfolio/listOfPortfolio"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
 
-const CategoryTemplate = ({pageContext, location, data}) => {
-  
+const CategoryTemplate = ({ pageContext, location, data }) => {
   return (
     <Layout>
-      <HeroPortfolio location={ location } tags={data.allWpTag.edges} selectedTag={ pageContext.uri } title="Posts by the category" ></HeroPortfolio>
-      <ListOfPortfolio posts={ data.allWpPost.edges }></ListOfPortfolio>
+      <HeroPortfolio
+        location={location}
+        tags={data.allWpTag.edges}
+        selectedTag={pageContext.uri}
+        title="Posts by the category"
+      ></HeroPortfolio>
+      <ListOfPortfolio posts={data.allWpPost.edges}></ListOfPortfolio>
       <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
-      <Seo title={ pageContext.name } />
+      <Seo title={pageContext.name} />
     </Layout>
   )
 }
@@ -21,8 +25,10 @@ const CategoryTemplate = ({pageContext, location, data}) => {
 export default CategoryTemplate
 
 export const query = graphql`
-  query siteGetCategoryDataTagsQuery ($slug: String) {
-    allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: $slug}}}}}) {
+  query siteGetCategoryDataTagsQuery($slug: String) {
+    allWpPost(
+      filter: { categories: { nodes: { elemMatch: { slug: { eq: $slug } } } } }
+    ) {
       edges {
         node {
           id
@@ -54,4 +60,5 @@ export const query = graphql`
         }
       }
     }
-  }`
+  }
+`
