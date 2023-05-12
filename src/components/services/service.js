@@ -29,17 +29,15 @@ const Service = ({ title }) => {
   `)
   const dataItems = data ? data.allWpPage.edges : null
   const result = dataItems
-    ? dataItems.map((value, index) => {
+    ? dataItems.map(value => {
         return (
-          <Link
-            className="services_list_item"
-            id={index}
-            key={value.node.id}
-            style={{ textDecoration: "none" }}
-            to={value.node.uri}
-          >
-            {value.node.title}
-          </Link>
+          <div className="services_list_item_wrapper" key={value.node.id}>
+            <Link style={{ textDecoration: "none" }} to={value.node.uri}>
+              <div className="services_list_item">
+                <span>{value.node.title}</span>
+              </div>
+            </Link>
+          </div>
         )
       })
     : ""

@@ -5,7 +5,7 @@
       left: 16.5%;
       &__title {
         font-size: 21px;
-        padding: 44px 120px 0px 40px;
+        padding: 44px 120px 0 40px;
       }
       &__info {
         background: #fff;
@@ -156,12 +156,12 @@
 
   .form {
     padding: 71px 89px 71px 70px;
-    background-position: 0px 30px;
+    background-position: 0 30px;
 
     &__block {
       .form_block_info {
         font-size: 12px;
-        margin: 27px 0px 15px 0px;
+        margin: 27px 0 15px 0;
         max-width: 360px;
       }
 
@@ -222,7 +222,7 @@
               margin-bottom: 30px;
             }
             input:focus ~ label,
-            input:valid ~ label {
+            input[data-empty="false"] ~ label {
               top: -20px;
             }
           }
@@ -276,14 +276,14 @@
     font-size: 11px;
     line-height: 100%;
     color: #fff;
-    tansition: all 0.2s linear;
+    transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
 
     &:hover {
       background: #fff;
       color: #1a1b1f;
-      tansition: all 0.2s linear;
+      transition: all 0.2s linear;
       -webkit-transition: all 0.2s linear;
       -moz-transition: all 0.2s linear;
       cursor: pointer;
@@ -453,7 +453,7 @@
 
       .projects_process_list_item {
         left: 148.5px;
-        padding: 0px 36px;
+        padding: 0 36px;
         left: 130.5px;
 
         p {
@@ -464,12 +464,12 @@
   }
 
   .padding_50 {
-    padding: 0px 33px;
+    padding: 0 33px;
   }
 
   .black_bg {
     border-radius: 29px;
-    padding: 128px 0px;
+    padding: 128px 0;
 
     .advantages {
       &__subtitle {
@@ -525,7 +525,7 @@
         }
 
         .blog_products_block_list {
-          margin: 19px 0px 17px 0px;
+          margin: 19px 0 17px 0;
 
           .blog_products_block_list_date {
             font-size: 9px;
@@ -566,7 +566,7 @@
 
         .reviews_info_block_name {
           font-size: 13px;
-          margin: 20px 0px 7px 0px;
+          margin: 20px 0 7px 0;
         }
 
         .reviews_info_block_date {
@@ -680,7 +680,7 @@
   }
 
   .leaders_choice_tagline {
-    margin: 230px 0px;
+    margin: 230px 0;
 
     &__block {
       margin-bottom: 40px;
@@ -738,7 +738,7 @@
     }
 
     &__menu {
-      padding: 16px 0px 31px 0px;
+      padding: 16px 0 31px 0;
 
       ul {
         li {
@@ -823,7 +823,7 @@
       left: 12.5%;
       &__title {
         padding: calc(32px + (44 - 32) * ((100vw - 768px) / (1366 - 768)))
-          calc(51px + (120 - 51) * ((100vw - 768px) / (1366 - 768))) 0px
+          calc(51px + (120 - 51) * ((100vw - 768px) / (1366 - 768))) 0
           calc(22px + (40 - 22) * ((100vw - 768px) / (1366 - 768)));
       }
       &__info {
@@ -891,9 +891,9 @@
   .thanks_modal {
     .thanks_modal_content {
       .form {
-        grid-template-columns: calc(
-            470px + (525 - 470) * ((100vw - 1024px) / (1366 - 1024))
-          ) calc(171px + (230 - 171) * ((100vw - 1024px) / (1366 - 1024)));
+        grid-template-columns:
+          calc(470px + (525 - 470) * ((100vw - 1024px) / (1366 - 1024)))
+          calc(171px + (230 - 171) * ((100vw - 1024px) / (1366 - 1024)));
         padding: 26px 26px
           calc(199px + (215 - 199) * ((100vw - 1024px) / (1366 - 1024))) 53px;
         background: url(../../images/purple_ball.svg) 103% 15% no-repeat,
@@ -1010,7 +1010,7 @@
   }
 
   .leaders_choice_tagline {
-    margin: calc(178px + (230 - 178) * ((100vw - 1024px) / (1366 - 1024))) 0px;
+    margin: calc(178px + (230 - 178) * ((100vw - 1024px) / (1366 - 1024))) 0;
 
     .footer_circle_yellow {
       position: absolute;
