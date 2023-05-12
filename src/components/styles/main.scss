@@ -345,8 +345,9 @@ body {
   }
   span {
     position: absolute;
-    top: 33%;
+    top: 50%;
     right: 51%;
+    transform: translateY(-50%);
     &:hover {
       cursor: pointer;
     }
@@ -1262,6 +1263,7 @@ body {
         align-items: center;
 
         .hash_list_block {
+          cursor: pointer;
           &:first-child {
             margin-right: 10px;
           }
