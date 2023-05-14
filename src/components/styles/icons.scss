@@ -61,7 +61,6 @@
   background: url(../../images/smallpuzzle.svg) no-repeat;
   width: 23px;
   height: 23px;
-  margin-left: 10px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -70,7 +69,6 @@
     background: url(../../images/minipuzzle.svg) no-repeat !important;
     width: 16px !important;
     height: 16px !important;
-    margin-left: 10px;
   }
   .pen {
     display: inline-block;
@@ -106,7 +104,6 @@
     display: inline-block;
     width: 16px !important;
     height: 16px !important;
-    margin-left: 10px;
     background: url(../../images/ministar.svg) no-repeat !important;
   }
 }
@@ -205,7 +202,7 @@
   display: inline-block;
   background: url(../../images/golang.svg) no-repeat;
   width: 148px;
-  height: 80px;
+  height: 55px;
   background-size: contain;
 }
 
@@ -360,7 +357,6 @@
   display: inline-block;
   width: 23px;
   height: 23px;
-  margin-left: 10px;
   background: url(../../images/smallstar.svg) no-repeat;
 }
 
