@@ -11,7 +11,7 @@ import "../components/styles/media_1024.scss"
 import "../components/styles/media_768.scss"
 import "../components/styles/media_375.scss"
 
-const Advantages = ({ siteTitle }) => {
+const Advantages = ({}) => {
   const advantages = useRef()
   const hasWindow = typeof window !== "undefined"
   const widthScreen = hasWindow ? window.innerWidth : null
@@ -55,11 +55,11 @@ const Advantages = ({ siteTitle }) => {
           element = document.getElementById("margin_240_black")
           if (typeof window !== "undefined") {
             cssObj = window.getComputedStyle(element)
+            cssObjMarginLeft = cssObj.getPropertyValue("margin-left")
+            cssObjMarginRight = cssObj.getPropertyValue("margin-right")
           } else {
             cssObj = null
           }
-          cssObjMarginLeft = cssObj.getPropertyValue("margin-left")
-          cssObjMarginRight = cssObj.getPropertyValue("margin-right")
         }
         document.removeEventListener("scroll", resizeBlock, true)
       }
@@ -78,7 +78,7 @@ const Advantages = ({ siteTitle }) => {
           </div>
           <div
             className="advantages__subtitle font_18"
-            style={{ fontWeight: 300 }}
+            style={{ fontWeight: 300, lineHeight: "150%" }}
           >
             «BPM CLOUD» digital marketing company achieves significant growth in
             online sales for our business partners. «BPM CLOUD» owns a set of
@@ -88,30 +88,18 @@ const Advantages = ({ siteTitle }) => {
             transforming them from ordinary consumers into true fans.
           </div>
           <div className="advantages__info">
-            <div
-              className="advantages_info_block font_18"
-              style={{ fontWeight: 300 }}
-            >
+            <div className="advantages_info_block font_18">
               «BPM CLOUD» web studio is immersed in our client’s business. We
               set clear and achievable targets.
             </div>
-            <div
-              className="advantages_info_block font_18"
-              style={{ fontWeight: 300 }}
-            >
+            <div className="advantages_info_block font_18">
               Each «BPM CLOUD» employee is focused on results only.
             </div>
-            <div
-              className="advantages_info_block font_18"
-              style={{ fontWeight: 300 }}
-            >
+            <div className="advantages_info_block font_18">
               The most effective web marketing company with world technologies
               in the heart of Europe, in Belarus.
             </div>
-            <div
-              className="advantages_info_block font_18"
-              style={{ fontWeight: 300 }}
-            >
+            <div className="advantages_info_block font_18">
               We are constantly ready to solve non-standard web promotion tasks.
             </div>
           </div>

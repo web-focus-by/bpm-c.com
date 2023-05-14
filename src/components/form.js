@@ -1,52 +1,22 @@
 import * as React from "react"
-import { useState } from "react"
 import PropTypes from "prop-types"
-import { gql, useMutation } from "@apollo/client"
-import "../components/styles/main.scss"
-import "../components/styles/icons.scss"
-import "../components/styles/modules.scss"
-import "../components/styles/mixins.scss"
+import ContactForm from "./contactForm/ContactForm"
+
 import gifUriy from "../images/uriy.gif"
 import gifKanu from "../images/kanu.gif"
 import gifVlada from "../images/vlada.gif"
+
 import "../components/styles/media_1920.scss"
 import "../components/styles/media_1366.scss"
 import "../components/styles/media_1024.scss"
 import "../components/styles/media_768.scss"
 import "../components/styles/media_375.scss"
+import "../components/styles/main.scss"
+import "../components/styles/icons.scss"
+import "../components/styles/modules.scss"
+import "../components/styles/mixins.scss"
 
-const CONTACT_MUTATION = gql`
-  mutation CreateSubmissionMutation(
-    $name: String!
-    $telephone: String!
-    $email: String!
-  ) {
-    createSubmission(
-      input: { name: $name, telephone: $telephone, email: $email }
-    ) {
-      success
-      data
-    }
-  }
-`
-
-const Form = ({ siteTitle, showThankForm }) => {
-  const [createSubmission, { loading, error, data }] =
-    useMutation(CONTACT_MUTATION)
-  const [nameValue, setNameValue] = useState("")
-  const [telephoneValue, setTelephoneValue] = useState("")
-  const [emailValue, setEmailValue] = useState("")
-  const isNonEmpty = e => {
-    if (e.target.value.length === 0) {
-      document.getElementById(e.target.id).classList.add("input_invalid")
-    } else {
-      document.getElementById(e.target.id).classList.remove("input_invalid")
-    }
-  }
-
-  if (loading) return "Submitting..."
-  if (error) return `Submission error! ${error.message}`
-
+const Form = ({ showThankForm }) => {
   return (
     <div className="containerForm">
       <div className="form margin_bottom_240">
@@ -74,83 +44,7 @@ const Form = ({ siteTitle, showThankForm }) => {
         </div>
         <div className="form__block">
           <div className="form_block_wrapper">
-            <form
-              id="search-form"
-              onSubmit={e => {
-                e.preventDefault()
-                createSubmission({
-                  variables: {
-                    name: nameValue,
-                    telephone: telephoneValue,
-                    email: emailValue,
-                  },
-                })
-                showThankForm()
-              }}
-            >
-              <div className="form_line-wrapper">
-                <input
-                  id="name"
-                  type="text"
-                  value={nameValue}
-                  autoComplete="off"
-                  name="name"
-                  className="form_name input-yellow"
-                  onChange={e => {
-                    setNameValue(e.target.value)
-                  }}
-                  onBlur={e => isNonEmpty(e)}
-                  required
-                />
-                <label>Name*</label>
-              </div>
-
-              <div className="form_line-wrapper">
-                <input
-                  value={telephoneValue}
-                  type="text"
-                  id="tel"
-                  autoComplete="off"
-                  name="telephone"
-                  className="form-phone input-phone form_phone input-yellow"
-                  onChange={e => {
-                    setTelephoneValue(e.target.value)
-                  }}
-                  onBlur={e => isNonEmpty(e)}
-                  required
-                />
-                <label>Phone*</label>
-              </div>
-
-              <div className="form_line-wrapper">
-                <input
-                  value={emailValue}
-                  type="text"
-                  id="mail"
-                  autoComplete="off"
-                  name="email"
-                  className="form-mail input-mail form_mail input-yellow"
-                  onChange={e => {
-                    setEmailValue(e.target.value)
-                  }}
-                  onBlur={e => isNonEmpty(e)}
-                  required
-                />
-                <label>E-mail</label>
-              </div>
-
-              <div className="form_block_send">
-                <div>
-                  <button className="button_black" type="submit">
-                    Send<span className="arrow_white"></span>
-                  </button>
-                </div>
-                <p>
-                  By pressing the button, I agree for the processing of personal
-                  data
-                </p>
-              </div>
-            </form>
+            <ContactForm submitCallback={showThankForm} />
           </div>
         </div>
       </div>
