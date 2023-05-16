@@ -146,7 +146,7 @@ body {
     position: absolute;
     left: 16.5%;
     &__title {
-      font-family: "Acrom";
+      font-family: "Acrom", sans-serif;
       font-weight: 500;
       font-size: 30px;
       line-height: 115%;
@@ -172,7 +172,7 @@ body {
           }
 
           a {
-            font-family: "Acrom";
+            font-family: "Acrom", sans-serif;
             font-weight: 400;
             font-size: 18px;
             line-height: 150%;
@@ -199,7 +199,7 @@ body {
     left: 220px;
     top: 598px;
     color: #1a1b1f;
-    font-family: "Acrom";
+    font-family: "Acrom", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
@@ -217,7 +217,7 @@ body {
     left: 0.5%;
     right: 0.5%;
     &__title {
-      font-family: "Acrom";
+      font-family: "Acrom", sans-serif;
       font-weight: 500;
       font-size: 30px;
       line-height: 115%;
@@ -244,7 +244,7 @@ body {
           }
 
           a {
-            font-family: "Acrom";
+            font-family: "Acrom", sans-serif;
             font-weight: 400;
             font-size: 18px;
             line-height: 150%;
@@ -270,7 +270,7 @@ body {
               margin-bottom: 1px;
             }
             a {
-              font-family: "Acrom";
+              font-family: "Acrom", sans-serif;
               font-weight: 400;
               font-size: 14px;
               line-height: 150%;
@@ -294,13 +294,12 @@ body {
   float: right;
   padding-right: 60px;
   position: sticky;
-  margin-bottom: 277px;
+  //margin-bottom: 277px;
   top: 522px;
   z-index: 3;
   .phone {
     // background: #9C7CF1 url(../../images/phone_butn.svg) no-repeat;
-    background: #9c7cf1 url(../../images/phone_butn_text.svg) no-repeat;
-    background-position: 50%;
+    background: #9c7cf1 url(../../images/phone_butn_text.svg) no-repeat 50%;
     border-radius: 50%;
     width: 160px;
     height: 160px;
@@ -309,16 +308,14 @@ body {
     &.paused {
       animation-play-state: paused;
       -webkit-animation-play-state: paused;
-      background: #935cff url(../../images/phone_butn_text.svg) no-repeat;
-      background-position: 50%;
+      background: #935cff url(../../images/phone_butn_text.svg) no-repeat 50%;
       border-radius: 50%;
       position: relative;
       background-size: contain;
     }
     &:hover {
       cursor: pointer;
-      background: #935cff url(../../images/phone_butn_text.svg) no-repeat;
-      background-position: 50%;
+      background: #935cff url(../../images/phone_butn_text.svg) no-repeat 50%;
       border-radius: 50%;
       width: 160px;
       height: 160px;
@@ -477,7 +474,7 @@ body {
       }
     }
     .photo_duration {
-      font-family: "Acrom";
+      font-family: "Acrom", sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
@@ -514,7 +511,7 @@ body {
     .content_title {
       margin-left: 40px;
       padding-bottom: 8px;
-      font-family: "Acrom";
+      font-family: "Acrom", sans-serif;
       font-style: normal;
       font-weight: 500;
       font-size: 30px;
@@ -524,7 +521,7 @@ body {
     .content_item {
       margin-left: 40px;
       padding-top: 24px;
-      font-family: "Acrom";
+      font-family: "Acrom", sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
@@ -578,7 +575,7 @@ body {
       font-size: 16px;
       line-height: 100%;
       color: #1a1b1f;
-      font-family: "Acrom";
+      font-family: "Acrom", sans-serif;
       -webkit-transition: all 0.3s linear;
       span {
         margin-left: 14px;
@@ -597,7 +594,7 @@ body {
         font-size: 16px;
         line-height: 100%;
         color: #1a1b1f;
-        font-family: "Acrom";
+        font-family: "Acrom", sans-serif;
         margin: 0.4rem;
         :hover {
           cursor: pointer;
@@ -793,7 +790,7 @@ body {
       justify-content: space-between;
       .contacts_label {
         width: 35%;
-        font-family: "Acrom";
+        font-family: "Acrom", sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
@@ -811,7 +808,7 @@ body {
       }
       .contacts_value {
         width: 60%;
-        font-family: "Acrom";
+        font-family: "Acrom", sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 24px;
@@ -843,7 +840,7 @@ body {
         width: 230%;
         .contact_form_block_buttons_title {
           width: 100%;
-          font-family: "Acrom";
+          font-family: "Acrom", sans-serif;
           font-style: normal;
           font-weight: 400;
           font-size: 14px;
@@ -944,7 +941,7 @@ body {
 
               .button_white {
                 padding: 22px 40px;
-                font-family: "Acrom";
+                font-family: "Acrom", sans-serif;
 
                 span {
                   margin-left: 14px;
@@ -1105,7 +1102,7 @@ body {
           align-items: center;
           .button_black {
             padding: 22px 40px;
-            font-family: "Acrom";
+            font-family: "Acrom", sans-serif;
             span {
               margin-left: 14px;
             }
@@ -1383,7 +1380,7 @@ body {
       gap: 5%;
       .social_media_label {
         width: 100%;
-        font-family: "Acrom";
+        font-family: "Acrom", sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
@@ -1419,7 +1416,7 @@ body {
         margin-bottom: 12px;
         .comment_title_left {
           width: 50%;
-          font-family: "Acrom";
+          font-family: "Acrom", sans-serif;
           font-style: normal;
           font-weight: 400;
           font-size: 18px;
@@ -1429,7 +1426,7 @@ body {
         .comment_title_right {
           width: 50%;
           text-align: end;
-          font-family: "Acrom";
+          font-family: "Acrom", sans-serif;
           font-style: normal;
           font-weight: 400;
           font-size: 18px;
@@ -1440,7 +1437,7 @@ body {
       .comment_text {
         width: 100%;
         color: #5c5c5c;
-        font-family: "Acrom";
+        font-family: "Acrom", sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -1523,6 +1520,7 @@ body {
 
       .reviews_info_block_text {
         font-size: 18px;
+        line-height: 150%;
       }
 
       .reviews_info_block_name {
@@ -1609,6 +1607,9 @@ body {
     margin-bottom: 60px;
 
     .service_package_info_list_block {
+      font-weight: 300;
+      line-height: 150%;
+
       ul {
         margin: 0;
         padding: 0;
@@ -1637,6 +1638,10 @@ body {
     grid-row-gap: 50px;
 
     .service_package_info_block {
+      &__text {
+        font-weight: 300;
+        line-height: 150%;
+      }
       &__title {
         font-weight: 500;
         font-size: 30px;
@@ -1649,6 +1654,18 @@ body {
 
 .leaders {
   position: relative;
+}
+.m {
+  &-b {
+    &-16 {
+      margin-bottom: 16px;
+    }
+  }
+  &-t {
+    &-16 {
+      margin-top: 16px;
+    }
+  }
 }
 
 .title_62 {
@@ -1732,9 +1749,10 @@ body {
   }
 
   &__butn {
+    margin-right: 20px;
     button {
       padding: 22px 40px;
-      font-family: "Acrom";
+      font-family: "Acrom", sans-serif;
       font-weight: 500;
 
       span {
@@ -1747,7 +1765,7 @@ body {
       font-size: 16px;
       line-height: 100%;
       color: #1a1b1f;
-      font-family: "Acrom";
+      font-family: "Acrom", sans-serif;
       -webkit-transition: all 0.3s linear;
       span {
         margin-left: 14px;
@@ -1902,15 +1920,12 @@ body {
 
 .footer {
   display: grid;
-  grid-template-columns: 0.4fr 2fr 0.6fr;
+  grid-template-columns: 0.6fr 2fr 0.6fr;
   border-top: 1px solid #5c5c5c;
   padding-top: 68px;
   font-size: 18px;
 
   ul {
-    margin: 0;
-    padding: 0;
-
     li {
       display: inline-block;
 
@@ -1943,14 +1958,20 @@ body {
     text-align: center;
 
     ul {
+      display: flex;
+      justify-content: space-between;
+      max-width: 670px;
+      margin: 0 auto;
+      padding-inline-start: 0;
+
       li {
         a {
           font-weight: 500;
-          margin-right: 64px;
+          //margin-right: 64px;
         }
 
         &:last-child a {
-          margin-right: 0;
+          //margin-right: 0;
         }
       }
     }
@@ -1961,6 +1982,12 @@ body {
     padding: 20px 0 40px 0;
 
     ul {
+      display: flex;
+      justify-content: space-between;
+      max-width: 590px;
+      margin: 0 auto;
+      padding-inline-start: 0;
+
       li {
         a {
           &:hover {
@@ -1986,6 +2013,11 @@ body {
     justify-content: end;
 
     ul {
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      padding-inline-start: 0;
+
       li {
         a {
           margin-right: 20px;

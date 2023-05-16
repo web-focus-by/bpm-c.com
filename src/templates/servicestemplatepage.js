@@ -111,7 +111,7 @@ export const query = graphql`
   query siteGetPostsDataQuery($slug: String) {
     allWpPost(
       filter: {
-        categories: { nodes: { elemMatch: { slug: { eq: "portfolios" } } } }
+        categories: { nodes: { elemMatch: { slug: { eq: "portfolio" } } } }
       }
     ) {
       edges {

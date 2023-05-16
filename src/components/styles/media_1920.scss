@@ -57,11 +57,16 @@
 
   .container {
     padding-left: calc(
-      157px + (210 - 157) * ((100vw - 1366px) / (1920 - 1366))
+      157px + (210 - 147) * ((100vw - 1366px) / (1920 - 1366))
     );
     padding-right: calc(
-      157px + (210 - 157) * ((100vw - 1366px) / (1920 - 1366))
+      157px + (210 - 147) * ((100vw - 1366px) / (1920 - 1366))
     );
+    &.custom-r-padding {
+      padding-right: calc(
+        157px + (210 - 82) * ((100vw - 1366px) / (1920 - 1366))
+      );
+    }
   }
 
   .containerForm {
@@ -753,8 +758,8 @@
           font-size: calc(
             13px + (16 - 13) * ((100vw - 1366px) / (1920 - 1366))
           );
-          margin: calc(20px + (26 - 20) * ((100vw - 1366px) / (1920 - 1366))) 0
-            calc(7px + (10 - 7) * ((100vw - 1366px) / (1920 - 1366))) 0;
+          margin: calc(20px + (26 - 28) * ((100vw - 1366px) / (1920 - 1366))) 0
+            calc(7px + (10 - 10) * ((100vw - 1366px) / (1920 - 1366))) 0;
         }
 
         .reviews_info_block_date {
@@ -884,7 +889,7 @@
 
     &__block {
       grid-column-gap: calc(
-        41px + (60 - 41) * ((100vw - 1366px) / (1920 - 1366))
+        41px + (60 - 30) * ((100vw - 1366px) / (1920 - 1366))
       );
 
       .leaders_choice_block_list {
@@ -893,6 +898,7 @@
             margin-bottom: calc(
               10px + (14 - 10) * ((100vw - 1366px) / (1920 - 1366))
             );
+            line-height: 150%;
           }
         }
       }
@@ -904,7 +910,7 @@
 
     &__block {
       margin-bottom: calc(
-        40px + (56 - 40) * ((100vw - 1366px) / (1920 - 1366))
+        40px + (56 - 49) * ((100vw - 1366px) / (1920 - 1366))
       );
 
       .leaders_choice_tagline_block_title {
@@ -963,9 +969,9 @@
       ul {
         li {
           a {
-            margin-right: calc(
-              45px + (64 - 45) * ((100vw - 1366px) / (1920 - 1366))
-            );
+            //margin-right: calc(
+            //  45px + (64 - 45) * ((100vw - 1366px) / (1920 - 1366))
+            //);
           }
         }
       }

@@ -151,7 +151,7 @@
       left: 0.5%;
       right: 0.5%;
       &__title {
-        font-family: "Acrom";
+        font-family: "Acrom", sans-serif;
         font-weight: 500;
         font-size: 30px;
         line-height: 115%;
@@ -178,7 +178,7 @@
             }
 
             a {
-              font-family: "Acrom";
+              font-family: "Acrom", sans-serif;
               font-weight: 400;
               font-size: 18px;
               line-height: 150%;
@@ -203,7 +203,7 @@
                 margin-bottom: 1px;
               }
               a {
-                font-family: "Acrom";
+                font-family: "Acrom", sans-serif;
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 150%;
@@ -254,10 +254,9 @@
 
   .hero {
     &__title {
-      font-family: "Acrom";
+      font-family: "Acrom", sans-serif;
       font-style: normal;
       height: fit-content;
-      font-style: normal;
       font-weight: 500;
       line-height: 100%;
       max-width: 100%;
@@ -307,7 +306,7 @@
         justify-content: space-between;
         .contacts_label {
           width: 35%;
-          font-family: "Acrom";
+          font-family: "Acrom", sans-serif;
           font-style: normal;
           font-weight: 400;
           font-size: 14px;
@@ -325,7 +324,7 @@
         }
         .contacts_value {
           width: 60%;
-          font-family: "Acrom";
+          font-family: "Acrom", sans-serif;
           font-style: normal;
           font-weight: 500;
           font-size: 24px;
@@ -357,7 +356,7 @@
           width: 120%;
           .contact_form_block_buttons_title {
             width: 100%;
-            font-family: "Acrom";
+            font-family: "Acrom", sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
@@ -458,7 +457,7 @@
 
                 .button_white {
                   padding: 22px 40px;
-                  font-family: "Acrom";
+                  font-family: "Acrom", sans-serif;
                   span {
                     margin-left: 14px;
                   }
@@ -540,7 +539,7 @@
           margin-bottom: 12px;
           font-size: 24px;
           color: #1a1b1f;
-          font-family: "Acrom";
+          font-family: "Acrom", sans-serif;
           font-style: normal;
           font-weight: 500;
           line-height: 100%;
@@ -786,7 +785,7 @@
   }
 
   .title_80 {
-    font-family: "Acrom";
+    font-family: "Acrom", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 46px;
@@ -1378,7 +1377,7 @@
           justify-content: space-between;
           .contacts_label {
             width: 35%;
-            font-family: "Acrom";
+            font-family: "Acrom", sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
@@ -1396,7 +1395,7 @@
           }
           .contacts_value {
             width: 60%;
-            font-family: "Acrom";
+            font-family: "Acrom", sans-serif;
             font-style: normal;
             font-weight: 500;
             font-size: 24px;
@@ -1428,7 +1427,7 @@
             width: 150%;
             .contact_form_block_buttons_title {
               width: 100%;
-              font-family: "Acrom";
+              font-family: "Acrom", sans-serif;
               font-style: normal;
               font-weight: 400;
               font-size: 14px;
@@ -1529,7 +1528,7 @@
 
                   .button_white {
                     padding: 22px 40px;
-                    font-family: "Acrom";
+                    font-family: "Acrom", sans-serif;
                     span {
                       margin-left: 14px;
                     }

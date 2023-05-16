@@ -9,14 +9,10 @@ import "../components/styles/media_1024.scss"
 import "../components/styles/media_768.scss"
 import "../components/styles/media_375.scss"
 
-const PhoneButn = ({ onClick }) => {
-  const phoneButn = React.useRef()
+const PhoneBtn = ({ onClick }) => {
+  const phoneBtn = React.useRef()
   const poused = e => {
-    if (
-      phoneButn &&
-      phoneButn.current &&
-      phoneButn.current.contains(e.target)
-    ) {
+    if (phoneBtn && phoneBtn.current && phoneBtn.current.contains(e.target)) {
       document.getElementById("phone").setAttribute("class", "phone paused")
     } else {
       document.getElementById("phone").setAttribute("class", "phone")
@@ -33,17 +29,17 @@ const PhoneButn = ({ onClick }) => {
   return (
     <div className="phone_butn">
       <div id="phone" className="phone" onClick={onClick}></div>
-      <span ref={phoneButn} className="phone_icon" onClick={onClick}></span>
+      <span ref={phoneBtn} className="phone_icon" onClick={onClick}></span>
     </div>
   )
 }
 
-PhoneButn.propTypes = {
+PhoneBtn.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-PhoneButn.defaultProps = {
+PhoneBtn.defaultProps = {
   siteTitle: ``,
 }
 
-export default PhoneButn
+export default PhoneBtn

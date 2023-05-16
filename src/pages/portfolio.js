@@ -6,7 +6,7 @@ import HeroPortfolio from "../components/heroPortfolio/heroPortfolio"
 import ListOfPortfolio from "../components/listOfPortfolio/listOfPortfolio"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
 
-const Portfolios = ({ location }) => {
+const Portfolio = ({ location }) => {
   const PostsAndTags = useStaticQuery(graphql`
     query SiteTagQuery {
       allWpTag {
@@ -21,7 +21,7 @@ const Portfolios = ({ location }) => {
       }
       allWpPost(
         filter: {
-          categories: { nodes: { elemMatch: { slug: { eq: "portfolios" } } } }
+          categories: { nodes: { elemMatch: { slug: { eq: "portfolio" } } } }
         }
       ) {
         edges {
@@ -53,12 +53,12 @@ const Portfolios = ({ location }) => {
   return (
     <>
       <Layout>
-        <Seo title="Portfolios" />
+        <Seo title="Portfolio" />
         <HeroPortfolio
           location={location}
           tags={allTags}
           selectedTag={null}
-          title="Portfolios"
+          title="Portfolio"
         ></HeroPortfolio>
         <ListOfPortfolio posts={allPosts}></ListOfPortfolio>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
@@ -67,4 +67,4 @@ const Portfolios = ({ location }) => {
   )
 }
 
-export default Portfolios
+export default Portfolio

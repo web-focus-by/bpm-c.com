@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
-import PhoneButn from "./phone_butn"
+import PhoneBtn from "./phone_btn"
 import Modal from "./modal"
 import ThanksModal from "../components/thanks_modal"
 import DropdownServices from "./dropdown_services"
@@ -132,7 +132,7 @@ const Layout = ({ children }) => {
           clickOut={isClickOut}
         />
       </div>
-      <PhoneButn onClick={toggleModalActive}></PhoneButn>
+      <PhoneBtn onClick={toggleModalActive}></PhoneBtn>
       {isOpen && isShowModal ? (
         <Modal
           onClickClose={toggleModalActive}
