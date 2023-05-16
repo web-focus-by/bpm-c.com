@@ -726,7 +726,7 @@
         justify-content: space-between;
         .contacts_label {
           width: 35%;
-          font-family: "Acrom";
+          font-family: "Acrom", sans-serif;
           font-style: normal;
           font-weight: 400;
           font-size: 14px;
@@ -744,7 +744,7 @@
         }
         .contacts_value {
           width: 60%;
-          font-family: "Acrom";
+          font-family: "Acrom", sans-serif;
           font-style: normal;
           font-weight: 500;
           font-size: 24px;
@@ -776,7 +776,7 @@
           width: 160%;
           .contact_form_block_buttons_title {
             width: 100%;
-            font-family: "Acrom";
+            font-family: "Acrom", sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
@@ -876,7 +876,7 @@
                 align-items: center;
                 .button_white {
                   padding: 22px 40px;
-                  font-family: "Acrom";
+                  font-family: "Acrom", sans-serif;
                   span {
                     margin-left: 14px;
                   }

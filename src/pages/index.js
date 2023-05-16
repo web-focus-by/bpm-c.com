@@ -28,7 +28,7 @@ const IndexPage = ({ location }) => {
     query GetPostQuery {
       allWpPost(
         filter: {
-          categories: { nodes: { elemMatch: { slug: { eq: "portfolios" } } } }
+          categories: { nodes: { elemMatch: { slug: { eq: "portfolio" } } } }
         }
       ) {
         edges {

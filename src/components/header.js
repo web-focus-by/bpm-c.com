@@ -72,12 +72,10 @@ const Header = ({
           )[0]
         : null
     if (currentCase && menuItemsRef.current.includes(currentCase)) {
-      if (e.target.innerText !== "Portfolios") {
+      if (e.target.innerText !== "Portfolio") {
         justTurnOnMenu(e.target.innerText)
-        return
-      } else if (e.target.innerText === "Portfolios") {
+      } else if (e.target.innerText === "Portfolio") {
         justTurnOffMenu()
-        return
       }
     }
   }, [])

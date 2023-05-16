@@ -11,7 +11,7 @@ import "../components/styles/media_1024.scss"
 import "../components/styles/media_768.scss"
 import "../components/styles/media_375.scss"
 
-const ServicePackage = ({ siteTitle }) => {
+const ServicePackage = ({}) => {
   const servicePackage = useRef()
   const hasWindow = typeof window !== "undefined"
   const widthScreen = hasWindow ? window.innerWidth : null
@@ -64,17 +64,14 @@ const ServicePackage = ({ siteTitle }) => {
       id="margin_240_black_second"
       className="black_bg margin_240_black"
     >
-      <div className="container">
+      <div className="container custom-r-padding">
         <div className="service_package">
           <div className="service_package__title title_62">
             Web studio «BPM CLOUD»
             <br /> service package
           </div>
           <div className="service_package__info_list">
-            <div
-              className="service_package_info_list_block font_18"
-              style={{ fontWeight: 300 }}
-            >
+            <div className="service_package_info_list_block font_18">
               Whatever you turn to our digital agency and from wherever in the
               world, we are ready to start cooperation in many digital promotion
               areas for your business right now, and above all, we can:
@@ -89,10 +86,7 @@ const ServicePackage = ({ siteTitle }) => {
                 <li>Personalized applications’ development.</li>
               </ul>
             </div>
-            <div
-              className="service_package_info_list_block font_18"
-              style={{ fontWeight: 300 }}
-            >
+            <div className="service_package_info_list_block font_18">
               And that’s not all! Our digital marketing firm developments can
               turn your business from boring office monotonous work into real
               virtual and successful business project. Business with a human
@@ -106,10 +100,7 @@ const ServicePackage = ({ siteTitle }) => {
               <div className="service_package_info_block__title">
                 Website creation
               </div>
-              <div
-                className="service_package_info_block__text font_18"
-                style={{ fontWeight: 300 }}
-              >
+              <div className="service_package_info_block__text font_18">
                 Website construction is just the first step in the online world.
                 It’s important to organize effective product promotion on the
                 worldwide network. «BPM CLOUD» delivers services to businesses
@@ -126,10 +117,7 @@ const ServicePackage = ({ siteTitle }) => {
               <div className="service_package_info_block__title">
                 PPC by «BPM CLOUD»
               </div>
-              <div
-                className="service_package_info_block__text font_18"
-                style={{ fontWeight: 300 }}
-              >
+              <div className="service_package_info_block__text font_18">
                 Modern technology opens up endless possibilities. One of the
                 directions is considered to be contextual website advertising,
                 communities in social networks, and so on. Ad is displayed in
@@ -144,10 +132,7 @@ const ServicePackage = ({ siteTitle }) => {
               <div className="service_package_info_block__title">
                 Copywriting by «BPM CLOUD»
               </div>
-              <div
-                className="service_package_info_block__text font_18"
-                style={{ fontWeight: 300 }}
-              >
+              <div className="service_package_info_block__text font_18">
                 «BPM CLOUD» is widely known online marketing agency. Our
                 employees have been representing clients’ businesses in
                 favorable lights for many years. At disposal of customers are
@@ -160,10 +145,7 @@ const ServicePackage = ({ siteTitle }) => {
               <div className="service_package_info_block__title">
                 Development of mobile applications
               </div>
-              <div
-                className="service_package_info_block__text font_18"
-                style={{ fontWeight: 300 }}
-              >
+              <div className="service_package_info_block__text font_18">
                 Mobile applications for iOS and Android are already presented in
                 every business area. One website and the social network
                 community is not enough. Virtual platform by «BMP CLOUD» web

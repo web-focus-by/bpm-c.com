@@ -88,8 +88,8 @@
 
 .hash {
   &__list {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 
     .hash_list_block {
       display: inline-block;
@@ -127,6 +127,7 @@
   justify-content: space-between;
   align-items: baseline;
   font-weight: 500;
+  padding-right: 23px;
 }
 
 .margin_bottom_60 {
@@ -141,7 +142,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  font-family: "Acrom";
+  font-family: "Acrom", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 36px;

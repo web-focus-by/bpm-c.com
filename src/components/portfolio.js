@@ -103,7 +103,7 @@ const Portfolio = ({ posts }) => {
     if (index <= 5) {
       let tags = []
       if (post && post.node.tags) {
-        tags = post.node.tags.nodes.map((tag, i) => {
+        tags = post.node.tags.nodes.map(tag => {
           let valueTag = "#" + tag.slug
           return (
             <li
@@ -154,7 +154,7 @@ const Portfolio = ({ posts }) => {
       <div className="portfolio margin_bottom_240">
         <div className="view_title">
           <div className="title_62">Portfolio</div>
-          <Link className="active_link" to={"/portfolios/"}>
+          <Link className="active_link" to={"/portfolio/"}>
             View all
           </Link>
         </div>

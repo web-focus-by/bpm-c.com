@@ -21,21 +21,15 @@ const Footer = () => {
     { link: "/about-us/informationaboutcompany/", name: "About us" },
     { link: "/contacts/", name: "Contacts" },
   ]
+  const numberUsa = "+ 1 929 547 9159"
+  const numberCanada = "+ 1 647 493 9093"
+
   const socialMaediaLinks = [
     { link: "#", name: "insta" },
     { link: "#", name: "facebook" },
     { link: "#", name: "link" },
     { link: "#", name: "behance" },
   ]
-
-  const numberUsa =
-    widthScreen && widthScreen > 375
-      ? "USA + 1 929 547 9159"
-      : "+ 1 929 547 9159"
-  const numberCanada =
-    widthScreen && widthScreen > 375
-      ? "Canada + 1 647 493 9093"
-      : "+ 1 647 493 9093"
   const menuFooter = footerMenuLinks.map((val, index) => {
     return (
       <li key={index}>
@@ -70,10 +64,20 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="tel:19295479159">{numberUsa}</a>
+              <a href="tel:19295479159">
+                {numberUsa}{" "}
+                {widthScreen && widthScreen > 375 ? (
+                  <span style={{ color: "#B3B3B3" }}>USA</span>
+                ) : null}
+              </a>
             </li>
             <li>
-              <a href="tel:16474939093">{numberCanada}</a>
+              <a href="tel:16474939093">
+                {numberCanada}{" "}
+                {widthScreen && widthScreen > 375 ? (
+                  <span style={{ color: "#B3B3B3" }}>Canada</span>
+                ) : null}
+              </a>
             </li>
           </ul>
         </div>

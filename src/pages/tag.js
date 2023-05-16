@@ -23,7 +23,7 @@ const Tag = ({ location }) => {
         filter: {
           categories: {
             nodes: {
-              elemMatch: { slug: { in: ["blog", "news", "portfolios"] } }
+              elemMatch: { slug: { in: ["blog", "news", "portfolio"] } }
             }
           }
         }

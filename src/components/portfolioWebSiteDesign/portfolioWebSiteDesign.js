@@ -16,7 +16,7 @@ const PortfolioWebSiteDesign = ({ posts, titlePage }) => {
     if (index <= 5) {
       let tags = []
       if (post && post.node.tags) {
-        tags = post.node.tags.nodes.map((tag, i) => {
+        tags = post.node.tags.nodes.map(tag => {
           let valueTag = "#" + tag.slug
           return (
             <li
@@ -62,7 +62,7 @@ const PortfolioWebSiteDesign = ({ posts, titlePage }) => {
         <div className="view_title">
           <div className="title_62">{titlePage}</div>
           <div className="view_all">
-            <Link className="active_link" to={"/portfolios/"}>
+            <Link className="active_link" to={"/portfolio/"}>
               View all
             </Link>
           </div>
