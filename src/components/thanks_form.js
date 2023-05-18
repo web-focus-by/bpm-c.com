@@ -13,9 +13,9 @@ import "../components/styles/media_1024.scss"
 import "../components/styles/media_768.scss"
 import "../components/styles/media_375.scss"
 
-const ThanksForm = ({ siteTitle, backPage }) => {
+const ThanksForm = ({ backPage }) => {
   return (
-    <div className="container">
+    <div className="container thanks_form_container">
       <div className="form thanks_form margin_bottom_240">
         <div className="form__block thanks_form_block">
           <div className="form_block_title title_62">
