@@ -24,7 +24,12 @@
   .margin_bottom_60 {
     margin-bottom: 60px;
   }
-
+  .container.swiper_container {
+    padding: 0;
+    .view_title {
+      padding: 0 16px;
+    }
+  }
   .header {
     &__nav {
       .logo {
@@ -62,7 +67,7 @@
   .hero {
     &__subtitle {
       font-size: 16px;
-      margin-bottom: 50px;
+      margin-bottom: clamp(30px, 10vw, 50px);
     }
   }
 
@@ -101,6 +106,9 @@
 
   .form {
     background-position: 170px 120px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     &__block {
       .form_block_text {
@@ -691,7 +699,7 @@
 @media (min-width: 375px) and (max-width: 768px) {
   .header {
     &__nav {
-      padding-top: 34px;
+      padding-top: 22px;
     }
     &__logo {
       padding-bottom: 12px;
@@ -915,8 +923,9 @@
 
   .swiper {
     .swiper-slide {
-      width: 334px;
+      width: 320px;
       height: max-content;
+      margin: 0 16px;
     }
   }
 
@@ -1110,13 +1119,15 @@
         flex-direction: row;
         align-items: center;
         .form_block_gif {
-          margin-left: 30px;
+          margin-left: 0;
           margin-bottom: 0;
         }
       }
       .form_block_email {
         font-size: 30px;
         line-height: 115%;
+        margin-top: 10px;
+        margin-bottom: 55px;
       }
     }
   }
@@ -1328,9 +1339,10 @@
       ul {
         li {
           font-size: calc(15px + (16 - 15) * ((100vw - 375px) / (768 - 375)));
-          margin-bottom: calc(
-            12px + (14 - 12) * ((100vw - 375px) / (768 - 375))
-          );
+          //margin-bottom: calc(
+          //  12px + (14 - 12) * ((100vw - 375px) / (768 - 375))
+          //);
+          margin-bottom: 8px;
         }
       }
     }
@@ -2010,7 +2022,7 @@
 
   .footer {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.6fr 1fr 0.4fr 0.4fr;
+    grid-template-rows: 0.7fr 1fr 0.4fr 0.4fr;
     padding-top: 26px;
 
     div {
@@ -2135,6 +2147,9 @@
 
 @media (min-width: 320px) and (max-width: 530px) {
   .footer {
+    &__menu {
+      padding-bottom: 20px;
+    }
     &__contacts {
       ul {
         li {

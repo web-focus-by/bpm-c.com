@@ -202,7 +202,7 @@ const Blog = ({ titlePage }) => {
   })
 
   return (
-    <div className="container">
+    <div className="container swiper_container">
       <div className="blog margin_bottom_240">
         <div className="view_title">
           <div className="title_62">{titlePage}</div>
