@@ -93,7 +93,7 @@ const Header = ({
     <header className="header">
       <div className="container">
         <div className="header__nav">
-          <div style={{ paddingBottom: "20px" }}>
+          <div className="header__logo">
             <Link to={"/"}>
               <span className="logo"></span>
             </Link>

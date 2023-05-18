@@ -21,7 +21,9 @@ body {
   top: 0;
   background-color: rgb(255 255 255 / 60%);
   z-index: 2;
-
+  &__logo {
+    padding-bottom: 20px;
+  }
   &__nav {
     padding: 24px 0 0 0;
     display: flex;
@@ -645,9 +647,12 @@ body {
 
     .portfolio_products_block {
       .portfolio_products_block_pic {
-        margin-bottom: 24px;
-        img {
+        &__content {
           width: 100%;
+          height: clamp(330px, 24vw, 460px);
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 20px;
           margin-bottom: 0;
         }
       }
@@ -661,7 +666,6 @@ body {
           }
         }
       }
-      margin-bottom: 24px;
     }
 
     .portfolio_products_block_title {
@@ -1188,7 +1192,7 @@ body {
   &__list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 155px);
+    grid-template-rows: repeat(3, clamp(100px, 9vw, 155px));
     justify-content: space-between;
     grid-row-gap: 34px;
     margin-left: -64px;
@@ -1585,8 +1589,7 @@ body {
 }
 
 .service_package {
-  background: url(../../images/gradient_package.svg) no-repeat;
-  background-position: 71% 30%;
+  background: url(../../images/gradient_package.svg) no-repeat 71% 30%;
 
   &__backgroundColor {
     background: #1a1b1f;
