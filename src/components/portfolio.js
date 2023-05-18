@@ -126,9 +126,12 @@ const Portfolio = ({ posts }) => {
             <Link to={post.node.uri}>
               {post.node.featuredImage &&
               post.node.featuredImage.node.mediaItemUrl ? (
-                <img
-                  src={post.node.featuredImage.node.mediaItemUrl}
-                  alt="the post"
+                <div
+                  className="portfolio_products_block_pic__content"
+                  style={{
+                    backgroundImage:
+                      "url(" + post.node.featuredImage.node.mediaItemUrl + ")",
+                  }}
                 />
               ) : (
                 ""

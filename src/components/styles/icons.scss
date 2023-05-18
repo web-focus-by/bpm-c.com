@@ -40,6 +40,17 @@
   }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .yellow_hand {
+    display: inline-block;
+    background: url(../../images/yellow_hand_40.svg) no-repeat;
+    width: 33px;
+    height: 33px;
+    background-size: contain;
+    margin-left: 5px;
+  }
+}
+
 .yellow_hand_mini {
   display: inline-block;
   background: url(../../images/yellow_hand_mini.svg) no-repeat;
@@ -164,6 +175,25 @@
   background: url(../../images/arrow_white.svg) no-repeat;
   width: 19px;
   height: 9px;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .arrow_black,
+  .arrow_white {
+    display: inline-block;
+    width: 12px;
+    height: 6px;
+  }
+  .arrow {
+    &_black {
+      background: url(../../images/arrow_black.svg) no-repeat;
+      background-size: contain;
+    }
+    &_white {
+      background: url(../../images/arrow_white.svg) no-repeat;
+      background-size: contain;
+    }
+  }
 }
 
 .react {

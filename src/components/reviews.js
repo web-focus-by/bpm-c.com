@@ -23,7 +23,7 @@ const Reviews = ({}) => {
         "Is there any point in delaying starting our cooperation, if " +
         "leading experts are already with our digital marketing agency? " +
         "Let’s get acquainted and jointly go towards necessary goals in " +
-        "goods and services digital promotion.",
+        "goods and services digital promotion. The first step is so easy!",
       signature: "Valentina Gubareva",
       date: "12.10.2021",
     },
@@ -33,7 +33,7 @@ const Reviews = ({}) => {
         "Is there any point in delaying starting our cooperation, if " +
         "leading experts are already with our digital marketing agency? " +
         "Let’s get acquainted and jointly go towards necessary goals in " +
-        "goods and services digital promotion.",
+        "goods and services digital promotion. The first step is so easy!",
       signature: "Maria Ivanova",
       date: "12.10.2021",
     },
@@ -43,7 +43,7 @@ const Reviews = ({}) => {
         "Is there any point in delaying starting our cooperation, if " +
         "leading experts are already with our digital marketing agency? " +
         "Let’s get acquainted and jointly go towards necessary goals in " +
-        "goods and services digital promotion.",
+        "goods and services digital promotion. The first step is so easy!",
       signature: "Ekaterina Gubareva",
       date: "12.10.2021",
     },
@@ -53,7 +53,7 @@ const Reviews = ({}) => {
         "Is there any point in delaying starting our cooperation, if " +
         "leading experts are already with our digital marketing agency? " +
         "Let’s get acquainted and jointly go towards necessary goals in " +
-        "goods and services digital promotion.",
+        "goods and services digital promotion. The first step is so easy!",
       signature: "Valentina Gubarevich",
       date: "12.10.2021",
     },
