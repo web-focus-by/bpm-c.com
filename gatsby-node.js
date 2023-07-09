@@ -175,7 +175,12 @@ exports.createPages = async function ({ actions, graphql }) {
       },
     })
   })
-
+  actions.createRedirect({
+    fromPath: `/:page/index.html`,
+    toPath: `/:page`,
+    statusCode: 301,
+    isPermanent: true,
+  })
   actions.createPage({
     path: "/using-dsg",
     component: require.resolve("./src/templates/using-dsg.js"),
