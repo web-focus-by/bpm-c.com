@@ -16,10 +16,10 @@ const Footer = () => {
   const widthScreen = hasWindow ? window.innerWidth : null
   const footerMenuLinks = [
     { link: "/portfolio/", name: "Portfolio" },
-    { link: "/services/servicesitoutsourcing/", name: "Services" },
+    { link: "/services/it-outsourcing/", name: "Services" },
     { link: "/blog/", name: "Blog" },
-    { link: "/about-us/informationaboutcompany/", name: "About us" },
-    { link: "/contacts/", name: "Contacts" },
+    { link: "/about-us/information-about-company/", name: "About us" },
+    { link: "/about-us/contacts/", name: "Contacts" },
   ]
   const numberUsa = "+ 1 929 547 9159"
   const numberCanada = "+ 1 647 493 9093"

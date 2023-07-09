@@ -7,9 +7,10 @@ module.exports = {
   },
   pathPrefix: "/",
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sass`,
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sass",
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-source-wordpress",
       options: {
@@ -53,6 +54,13 @@ module.exports = {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-W22MQCV",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://bpm-c.com/`,
+        stripQueryString: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
