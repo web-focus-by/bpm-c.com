@@ -13,12 +13,12 @@ import "../components/styles/media_375.scss"
 const BPMCloud = ({ siteTitle }) => (
   <div className="container">
     <div className="bpm_cloud margin_bottom_240">
-      <div className="bpm_cloud__title title_62">BPM CLOUD</div>
+      <h2 className="bpm_cloud__title title_62">BPM CLOUD</h2>
       <div className="bpm_cloud__info">
         <div className="bpm_cloud_block">
-          <div className="bpm_cloud_block_title">
+          <h3 className="bpm_cloud_block_title">
             Comprehensive approach to internet marketing
-          </div>
+          </h3>
           <div className="bpm_cloud_block_text">
             Our online marketing agency has comprehensive approach to Internet
             marketing, so representatives of service sector, trade,
@@ -29,9 +29,9 @@ const BPMCloud = ({ siteTitle }) => (
           </div>
         </div>
         <div className="bpm_cloud_block">
-          <div className="bpm_cloud_block_title">
+          <h3 className="bpm_cloud_block_title">
             Dynamically developing digital marketing firm
-          </div>
+          </h3>
           <div className="bpm_cloud_block_text">
             Digital space is very multifaceted. We have provided impressive
             number of vectors for making efforts. With advancement of

@@ -21,10 +21,10 @@ const Hero = ({ location }) => {
         title="Main page"
       />
       <div className="hero">
-        <div className="hero__title title_80">
+        <h1 className="hero__title title_80">
           «BPM CLOUD» an IT company that clearly knows
           <span className="yellow_hand"></span>
-        </div>
+        </h1>
         <div className="hero__subtitle">
           We know all about art of creating effective websites, using both
           classic techniques and the most innovative world-class approaches.
