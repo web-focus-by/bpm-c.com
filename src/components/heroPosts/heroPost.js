@@ -14,7 +14,7 @@ import "../../components/styles/media_1024.scss"
 import "../../components/styles/media_768.scss"
 import "../../components/styles/media_375.scss"
 
-const HeroPost = ({ location, photo, info }) => {
+const HeroPost = ({ location, photo, alt, info }) => {
   const shift = 60000
   const [counter, setCounter] = useState(0)
   const items = info.tags.nodes.map((post, index) => {
@@ -35,7 +35,7 @@ const HeroPost = ({ location, photo, info }) => {
       <Breadcrumbs breadcrumbs={location} title={info.title} />
       <div className="photo">
         <div className="photo_block">
-          {photo ? <img src={photo} alt="Imagine" /> : ""}
+          {photo ? <img src={photo} alt={alt} /> : ""}
         </div>
         <div className="photo_description">
           <div className="photo_tags">
