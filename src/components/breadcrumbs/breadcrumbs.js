@@ -15,11 +15,10 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
   if (pathname) {
     breadcrumbItems = filePath
       ? filePath.map((item, index) => {
-          item = item.charAt(0).toUpperCase() + item.slice(1);
           if (item === "news") {
             item = "Blog"
           }
-          path = index !== 0 ? path + item.charAt(0).toUpperCase() + item.slice(1) + "/" : ""
+          path = index !== 0 ? path + item + "/" : ""
           let link = host === item ? domain : domain + "/" + path
           if (breadcrumbs.pathname !== "/") {
             return (
@@ -28,7 +27,7 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
                   {item === breadcrumbs.host
                     ? "Main page"
                     : filePath.length - 1 === index
-                    ? `${title.charAt(0).toUpperCase() + title.slice(1)}`
+                    ? title.charAt(0).toUpperCase() + title.slice(1)
                     : item.replace("-", " ")}
                 </Link>
                 <span className="breadcrumbs_span">

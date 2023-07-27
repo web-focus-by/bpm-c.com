@@ -13,7 +13,11 @@ import "../../components/styles/media_768.scss"
 import "../../components/styles/media_375.scss"
 
 const HeroWebSiteDesign = ({ title, content, location, titleLogo }) => {
-  const logoTitle = titleLogo && titleLogo.length > 0 ? titleLogo : null
+  const logoTitle = titleLogo && titleLogo.length > 0 ? titleLogo : null;
+  const itemUp = document.querySelectorAll('a.breadcrumbs');
+  itemUp.forEach(item => {
+    item.charAt(0).toUpperCase() + item.slice(1)
+  })
   return (
     <div className="container">
       <Breadcrumbs breadcrumbs={location} title={title} />

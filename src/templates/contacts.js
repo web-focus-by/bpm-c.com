@@ -65,6 +65,11 @@ const Contacts = ({ location }) => {
     setInterestedItems([""])
   }
 
+  const itemUp = document.querySelectorAll('a.breadcrumbs');
+  itemUp.forEach(item => {
+    item.charAt(0).toUpperCase() + item.slice(1)
+  })
+
   return (
     <>
       <Layout>

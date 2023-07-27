@@ -13,6 +13,11 @@ import "../components/styles/media_768.scss"
 import "../components/styles/media_375.scss"
 
 const Hero = ({ location }) => {
+  const itemUp = document.querySelectorAll('a.breadcrumbs');
+  itemUp.forEach(item => {
+    item.charAt(0).toUpperCase() + item.slice(1)
+  })
+
   return (
     <div className="container">
       <Breadcrumbs

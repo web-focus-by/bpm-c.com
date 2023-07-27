@@ -30,6 +30,11 @@ const HeroPost = ({ location, photo, alt, info }) => {
     return () => clearInterval(timer)
   }, [counter])
 
+  const itemUp = document.querySelectorAll('a.breadcrumbs');
+  itemUp.forEach(item => {
+    item.charAt(0).toUpperCase() + item.slice(1)
+  })
+
   return (
     <div className="container">
       <Breadcrumbs breadcrumbs={location} title={info.title} />

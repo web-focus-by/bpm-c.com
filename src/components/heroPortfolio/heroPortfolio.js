@@ -14,6 +14,10 @@ import "../../components/styles/media_768.scss"
 import "../../components/styles/media_375.scss"
 
 const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
+  const itemUp = document.querySelectorAll('a.breadcrumbs');
+  itemUp.forEach(item => {
+    item.charAt(0).toUpperCase() + item.slice(1)
+  })
   const [longList, setLongList] = useState(false)
   const result = tags.map((tag, index) => {
     if (!longList) {
