@@ -78,7 +78,7 @@ const Reviews = ({}) => {
     <div className="container swiper_container">
       <div className="reviews margin_bottom_240">
         <div className="view_title">
-          <div className="title_62">Reviews</div>
+          <h2 className="title_62">Reviews</h2>
           <Link className="active_link" to="/about-us/reviews/">
             View all
           </Link>

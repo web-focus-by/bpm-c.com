@@ -1,9 +1,13 @@
+const siteUrl = process.env.URL || `https://bpm-c.com/`
+
 module.exports = {
   siteMetadata: {
     title: `BPM Cloud`,
     description: `Full cycle digital agency offers development, design, maintenance and promotion of websites 🏆 We will raise the site to the TOP of search results`,
     author: `@bpm-cloud.by`,
-    siteUrl: `https://bpm-c.com/`,
+    siteUrl: siteUrl,
+    image: 'https://wp.bpm-c.com/wp-content/uploads/2022/08/logo.svg',
+    alt: 'BPM Cloud logo'
   },
   pathPrefix: "/",
   plugins: [
@@ -16,8 +20,8 @@ module.exports = {
         url: process.env.WPGRAPHQL_URL || `https://wp.bpm-c.com/graphql`,
       },
       schema: {
-        requestConcurrency: 5, // currently set to 15
-        previewRequestConcurrency: 2, // currently set to 5
+        requestConcurrency: 15, // currently set to 15
+        previewRequestConcurrency: 5, // currently set to 5
       },
       /*resolve: "gatsby-source-graphql",
       options: {
@@ -66,6 +70,12 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         output: "/",
+        serialize: ({ path, modifiedGmt }) => {
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+          }
+        },
       },
     },
     {

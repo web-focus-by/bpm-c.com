@@ -19,7 +19,7 @@
     "gatsby-plugin-sharp": "^4.18.1",
     "gatsby-plugin-sitemap": "^5.25.0",
     "gatsby-source-filesystem": "^4.18.1",
-    "gatsby-source-wordpress": "^6.19.0",
+    "gatsby-source-wordpress": "^6.25.5",
     "gatsby-transformer-sharp": "^4.18.1",
     "graphql": "^15.8.0",
     "node-sass": "7.0.3",
@@ -43,6 +43,7 @@
   ],
   "license": "0BSD",
   "scripts": {
+    "gatsby": "gatsby",
     "deploy": "gatsby build --prefix-paths && gh-pages -d private",
     "build": "gatsby build",
     "develop": "gatsby develop",

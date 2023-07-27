@@ -178,7 +178,7 @@ const Blog = ({ titlePage }) => {
               item.node.featuredImage.node.mediaItemUrl ? (
                 <img
                   src={item.node.featuredImage.node.mediaItemUrl}
-                  alt="the post"
+                  alt={item.node.featuredImage.node.title}
                 />
               ) : (
                 ""

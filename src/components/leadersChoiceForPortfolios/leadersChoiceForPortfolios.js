@@ -19,9 +19,9 @@ const LeadersChoiceForPortfolios = () => {
       <div className="leaders">
         <div className="leaders_choice_tagline">
           <div className="leaders_choice_tagline__block">
-            <div className="leaders_choice_tagline_block_title">
+            <h2 className="leaders_choice_tagline_block_title">
               Let’s work together
-            </div>
+            </h2>
             <div className="leaders_choice_tagline_block_gif">
               <img src={gifUriy} alt="Uriy" />
               <img src={gifKanu} alt="Kanu" />
