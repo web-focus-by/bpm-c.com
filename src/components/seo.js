@@ -20,8 +20,6 @@ function Seo({ description, lang, meta, title }) {
             description
             author
             siteUrl
-            image
-            alt
           }
         }
       }
@@ -64,11 +62,11 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: image,
+          content: 'https://wp.bpm-c.com/wp-content/uploads/2022/08/logo.svg',
         },
         {
           property: `og:image:alt`,
-          content: alt,
+          content: 'BPM Cloud logo',
         },
         {
           name: `twitter:card`,
