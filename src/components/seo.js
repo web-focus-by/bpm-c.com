@@ -20,8 +20,6 @@ function Seo({ description, lang, meta, title }) {
             description
             author
             siteUrl
-            image
-            alt
           }
         }
       }
@@ -30,9 +28,6 @@ function Seo({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-  const url = site.siteUrl
-  const image = site.image
-  const alt = site.alt
 
   return (
     <Helmet
@@ -60,15 +55,15 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `og:url`,
-          content: url,
+          content: site.siteMetadata?.siteUrl,
         },
         {
           property: `og:image`,
-          content: image,
+          content: 'https://wp.bpm-c.com/wp-content/uploads/2022/08/logo.svg',
         },
         {
           property: `og:image:alt`,
-          content: alt,
+          content: 'BPM Cloud logo',
         },
         {
           name: `twitter:card`,

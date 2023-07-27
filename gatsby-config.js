@@ -5,9 +5,7 @@ module.exports = {
     title: `BPM Cloud`,
     description: `Full cycle digital agency offers development, design, maintenance and promotion of websites 🏆 We will raise the site to the TOP of search results`,
     author: `@bpm-cloud.by`,
-    siteUrl: siteUrl,
-    image: 'https://wp.bpm-c.com/wp-content/uploads/2022/08/logo.svg',
-    alt: 'BPM Cloud logo'
+    siteUrl: siteUrl
   },
   pathPrefix: "/",
   plugins: [
