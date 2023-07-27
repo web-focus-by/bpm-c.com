@@ -15,6 +15,7 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
   if (pathname) {
     breadcrumbItems = filePath
       ? filePath.map((item, index) => {
+          item = item.charAt(0).toUpperCase() + item.slice(1);
           if (item === "news") {
             item = "Blog"
           }
@@ -40,13 +41,6 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
       : ""
     return breadcrumbItems
   }
-
-  const itemToUpper = document.querySelectorAll('.breadcrumbs');
-
-  itemToUpper.forEach(item => {
-    const innerItem = item.innerHTML
-    innerItem = innerItem.charAt(0).toUpperCase() + innerItem.slice(1);
-  })
   return (
     <div>
       <div>{breadcrumbItems}</div>
