@@ -40,6 +40,13 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
       : ""
     return breadcrumbItems
   }
+
+  const itemToUpper = document.querySelectorAll('.breadcrumbs');
+
+  itemToUpper.forEach(item => {
+    const innerItem = item.innerHTML
+    innerItem = innerItem.charAt(0).toUpperCase() + innerItem.slice(1);
+  })
   return (
     <div>
       <div>{breadcrumbItems}</div>
