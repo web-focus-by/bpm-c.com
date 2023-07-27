@@ -14,7 +14,7 @@ import "../../components/styles/media_1024.scss"
 import "../../components/styles/media_768.scss"
 import "../../components/styles/media_375.scss"
 
-const HeroPost = ({ location, photo, alt, info }) => {
+const HeroPost = ({ location, photo, info }) => {
   const shift = 60000
   const [counter, setCounter] = useState(0)
   const items = info.tags.nodes.map((post, index) => {
@@ -30,17 +30,12 @@ const HeroPost = ({ location, photo, alt, info }) => {
     return () => clearInterval(timer)
   }, [counter])
 
-  const itemUp = document.querySelectorAll('a.breadcrumbs');
-  itemUp.forEach(item => {
-    item.charAt(0).toUpperCase() + item.slice(1)
-  })
-
   return (
     <div className="container">
       <Breadcrumbs breadcrumbs={location} title={info.title} />
       <div className="photo">
         <div className="photo_block">
-          {photo ? <img src={photo} alt={alt} /> : ""}
+          {photo ? <img src={photo} alt="Imagine" /> : ""}
         </div>
         <div className="photo_description">
           <div className="photo_tags">

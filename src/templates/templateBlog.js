@@ -13,19 +13,13 @@ import "../components/styles/media_768.scss"
 import "../components/styles/media_375.scss"
 
 const TemplateBlog = ({ location }) => {
-
-  const itemUp = document.querySelectorAll('a.breadcrumbs');
-  itemUp.forEach(item => {
-    item.charAt(0).toUpperCase() + item.slice(1)
-  })
-  
   return (
     <>
       <Layout>
         <div className="container">
           <Breadcrumbs breadcrumbs={location} title="BLOG" />
           <div className="hero">
-            <h2 className="hero__title title_62">BLOG</h2>
+            <h className="hero__title title_62">BLOG</h>
           </div>
           <div className="header_circle_yellow"></div>
           <div className="header_circle_pink"></div>
