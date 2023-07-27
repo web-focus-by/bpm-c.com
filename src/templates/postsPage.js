@@ -7,6 +7,7 @@ import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios
 import Blog from "../components/blog"
 
 const PostsPage = ({ location, pageContext, data }) => {
+  console.log(pageContext.featuredImage.node);
   return (
     <>
       <Layout>
@@ -18,7 +19,7 @@ const PostsPage = ({ location, pageContext, data }) => {
               ? pageContext.featuredImage.node.mediaItemUrl
               : null
           }
-          alt={pageContext.featuredImage.node.alt ? pageContext.featuredImage.node.alt : 'Post-image'} 
+          alt={data.alt ? data.alt : 'Post-image'} 
           info={pageContext}
         ></HeroPost>
         <ContentPost content={pageContext}></ContentPost>
