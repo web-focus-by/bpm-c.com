@@ -18,7 +18,7 @@ const PostsPage = ({ location, pageContext, data }) => {
               ? pageContext.featuredImage.node.mediaItemUrl
               : null
           }
-          alt={pageContext.featuredImage.node.description}
+          alt={pageContext.featuredImage.node.title}
           info={pageContext}
         ></HeroPost>
         <ContentPost content={pageContext}></ContentPost>
