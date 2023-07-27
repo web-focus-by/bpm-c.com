@@ -20,8 +20,8 @@ module.exports = {
         url: process.env.WPGRAPHQL_URL || `https://wp.bpm-c.com/graphql`,
       },
       schema: {
-        requestConcurrency: 5, // currently set to 15
-        previewRequestConcurrency: 2, // currently set to 5
+        requestConcurrency: 15, // currently set to 15
+        previewRequestConcurrency: 5, // currently set to 5
       },
       /*resolve: "gatsby-source-graphql",
       options: {
