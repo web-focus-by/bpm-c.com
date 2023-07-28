@@ -3,6 +3,10 @@
     &:first-child {
         margin-left: 0px;
     }
+
+    &:last-child {
+        color: red;
+    }
     .breadcrumbs_span {
         margin-left: 21px;
     }
