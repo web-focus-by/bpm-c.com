@@ -25,13 +25,13 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
           if (breadcrumbs.pathname !== "/") {
             return (
               <span key={index} className="span_breadcrumbs" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                <Link className="breadcrumbs" to={`${link}`} itemprop="url">
+                <Link className="breadcrumbs" to={`${link}`} itemprop="url" style={index === filePath.length - 1 ? "color: #1A1B1F !important; cursor: default !important; pointer-events: none;" : "/"}>
                   {item === breadcrumbs.host
                     ? "Main page"
                     : filePath.length - 1 === index
                     ? `${title.charAt(0).toUpperCase() + title.slice(1)}`
                     : item.replace("-", " ")}
-                    <meta itemprop="position" content={filePath.findIndex(i=>i == item) + 1} /> 
+                    <meta itemprop="position" content={index} /> 
                 </Link>
                 <span className="breadcrumbs_span">
                   {index === filePath.length - 1 ? "" : "/"}
