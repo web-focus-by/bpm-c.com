@@ -35,7 +35,7 @@ const FooterBlock = ({ content, contentImage }) => {
       <div className="container">
         <div className="leaders margin_bottom_240">
           <div className="leaders_choice">
-            <div
+            <h3
               className="leaders_choice__title title_62"
               dangerouslySetInnerHTML={{ __html: title }}
             />

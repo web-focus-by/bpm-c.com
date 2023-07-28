@@ -68,7 +68,7 @@ const GoalsDesign = ({ content }) => {
         <div className="container">
           <div className="leaders margin_bottom_240">
             <div className="leaders_choice">
-              <div className="leaders_choice__title title_62">{title}</div>
+              <h3 className="leaders_choice__title title_62">{title}</h3>
               {paragraphsList && paragraphsList.length ? (
                 <div className="leaders_choice__block">
                   <div dangerouslySetInnerHTML={{ __html: paragraphsList }} />
@@ -110,7 +110,7 @@ const GoalsDesign = ({ content }) => {
         <div className="container">
           <div className="leaders margin_bottom_240">
             <div className="leaders_choice">
-              <div className="leaders_choice__title title_62">{title}</div>
+              <h3 className="leaders_choice__title title_62">{title}</h3>
               <div className="leaders_choice__block">
                 <div
                   className="leaders_choice_block_list font_18"
