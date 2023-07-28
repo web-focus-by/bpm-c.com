@@ -38,7 +38,7 @@ const HeroPost = ({ location, photo, info }) => {
       <Breadcrumbs breadcrumbs={location} title={info.title} />
       <div className="photo">
         <div className="photo_block"itemscope itemtype="https://schema.org/ImageObject">
-          {photo ? <img src={photo} alt={altTitle} itemprop="image"/> : "" }
+          {photo ? <img src={photo} alt={altTitle.replace('-', ' ')} itemprop="image"/> : "" }
         </div>
         <div className="photo_description">
           <div className="photo_tags">
