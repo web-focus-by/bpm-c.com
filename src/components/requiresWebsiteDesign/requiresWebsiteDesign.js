@@ -24,7 +24,7 @@ const RequiresWebsiteDesign = ({ content }) => {
               <div className="circle_pink"></div>
             </div>
             <div>
-              <h1 className="requires_design__title title_62">{title}</h1>
+              <h2 className="requires_design__title title_62">{title}</h2>
               <div
                 className="requires_design__info font_18"
                 dangerouslySetInnerHTML={{ __html: content.content.join("") }}

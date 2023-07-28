@@ -30,8 +30,8 @@ const HeroPost = ({ location, photo, info }) => {
     return () => clearInterval(timer)
   }, [counter])
 
-  const alt = photo.split('').reverse().join('');
-  const altTitle = alt.slice(2) + alt.slice('/')[0];
+  const alt = photo.split('/').reverse().join('');
+  const altTitle = alt.split('.')[0];
 
   return (
     <div className="container">

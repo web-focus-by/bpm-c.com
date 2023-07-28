@@ -18,7 +18,7 @@ const ResultsOfWebDesign = ({ content }) => {
       <div className="container">
         <div className="result_web_design margin_bottom_240">
           <div className="result_web_design_choice">
-            <h1
+            <h2
               className="result_web_design_choice__title title_62"
               dangerouslySetInnerHTML={{ __html: title }}
             />
