@@ -3,6 +3,14 @@
     &:first-child {
         margin-left: 0px;
     }
+    &:last-child {
+        .breadcrumbs{
+            &:hover {
+                cursor: auto;
+                color: #1A1B1F;
+            }
+        }
+    }
     .breadcrumbs_span {
         margin-left: 21px;
     }
@@ -37,6 +45,14 @@
         margin-left: 18px;
         &:first-child {
             margin-left: 0px;
+        }
+        &:last-child {
+            .breadcrumbs{
+                &:hover {
+                    cursor: auto;
+                    color: #1A1B1F;
+                }
+            }
         }
         .breadcrumbs_span {
             margin-left: 18px;
