@@ -45,12 +45,17 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
 
 
   useEffect(() => {
+    filePath.forEach(item => {
+      item = item.charAt(0).toUpperCase() + item.slice(1);
+    });
+
     const itemUp = documetn.querySelectorAll('a.breadcrumbs');
-    
+
     itemUp.forEach(item => {
       item = item.charAt(0).toUpperCase() + item.slice(1);
     });
   })
+
   return (
     <div>
       <div>{breadcrumbItems}</div>

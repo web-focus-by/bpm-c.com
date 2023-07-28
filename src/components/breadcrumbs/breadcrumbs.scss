@@ -21,13 +21,13 @@
             color: #935CFF;
         }
     }
+}
 
-    &:last-child {
-        .breadcrumbs{
-            &:hover {
-                cursor: auto;
-                color: #1A1B1F;
-            }
+.span_breadcrumbs:last-child {
+    .breadcrumbs{
+        &:hover {
+            cursor: auto;
+            color: #1A1B1F;
         }
     }
 }
@@ -55,13 +55,13 @@
                 color: #935CFF;
             }
         }
+    }
 
-        &:last-child {
-            .breadcrumbs{
-                &:hover {
-                    cursor: auto;
-                    color: #1A1B1F;
-                }
+    .span_breadcrumbs:last-child {
+        .breadcrumbs{
+            &:hover {
+                cursor: auto;
+                color: #1A1B1F;
             }
         }
     }
