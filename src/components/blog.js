@@ -206,7 +206,7 @@ const Blog = ({ titlePage }) => {
     <div className="container swiper_container">
       <div className="blog margin_bottom_240">
         <div className="view_title">
-          <div className="title_62">{titlePage}</div>
+          <h1 className="title_62">{titlePage}</h1>
           <Link className="active_link" to={"/blog/"} itemprop="url">
             View all
           </Link>

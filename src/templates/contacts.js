@@ -72,9 +72,9 @@ const Contacts = ({ location }) => {
         <div className="container">
           <Breadcrumbs breadcrumbs={location} title="Contacts" />
           <div className="hero">
-            <div className="hero__title title_62">
+            <h1 className="hero__title title_62">
               Contacts<span className="phone_icon"></span>
-            </div>
+            </h1>
           </div>
           <div className="header_circle_yellow"></div>
           <div className="header_circle_pink"></div>

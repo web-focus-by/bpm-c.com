@@ -40,7 +40,7 @@ const SiteDesignByBpmCloud = ({ content }) => {
       <div className="container">
         <div className="leaders margin_bottom_240">
           <div className="leaders_choice">
-            <div
+            <h1
               className="leaders_choice__title title_62"
               dangerouslySetInnerHTML={{ __html: title }}
             />

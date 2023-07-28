@@ -16,10 +16,10 @@ const HeroNews = ({ location, title }) => {
     <div className="container">
       <Breadcrumbs breadcrumbs={location} title={title} />
       <div className="hero margin_bottom_60">
-        <h2 className="hero__title title_80">
+        <h1 className="hero__title title_80">
           {title}
           <span className="newspaper"></span>
-        </h2>
+        </h1>
       </div>
       <div className="header_circle_yellow"></div>
       <div className="header_circle_pink"></div>

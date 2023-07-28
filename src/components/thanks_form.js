@@ -18,9 +18,9 @@ const ThanksForm = ({ backPage }) => {
     <div className="container thanks_form_container">
       <div className="form thanks_form margin_bottom_240">
         <div className="form__block thanks_form_block">
-          <div className="form_block_title title_62">
+          <h1 className="form_block_title title_62">
             Thank you for the request!{" "}
-          </div>
+          </h1>
           <div className="form_block_text">
             <p>Write to us, Yuri, Kanu or Vlada will contact you</p>
             <div className="form_block_gif"itemscope itemtype="https://schema.org/ImageObject">

@@ -66,10 +66,10 @@ const ServicePackage = ({}) => {
     >
       <div className="container custom-r-padding">
         <div className="service_package">
-          <h2 className="service_package__title title_62">
+          <h1 className="service_package__title title_62">
             Web studio «BPM CLOUD»
             <br /> service package
-          </h2>
+          </h1>
           <div className="service_package__info_list">
             <div className="service_package_info_list_block font_18">
               Whatever you turn to our digital agency and from wherever in the
@@ -97,9 +97,9 @@ const ServicePackage = ({}) => {
           </div>
           <div className="service_package__info">
             <div className="service_package_info_block">
-              <h3 className="service_package_info_block__title">
+              <h2 className="service_package_info_block__title">
                 Website creation
-              </h3>
+              </h2>
               <div className="service_package_info_block__text font_18">
                 Website construction is just the first step in the online world.
                 It’s important to organize effective product promotion on the
@@ -114,9 +114,9 @@ const ServicePackage = ({}) => {
               </div>
             </div>
             <div className="service_package_info_block">
-              <h3 className="service_package_info_block__title">
+              <h2 className="service_package_info_block__title">
                 PPC by «BPM CLOUD»
-              </h3>
+              </h2>
               <div className="service_package_info_block__text font_18">
                 Modern technology opens up endless possibilities. One of the
                 directions is considered to be contextual website advertising,
@@ -129,9 +129,9 @@ const ServicePackage = ({}) => {
               </div>
             </div>
             <div className="service_package_info_block">
-              <h3 className="service_package_info_block__title">
+              <h2 className="service_package_info_block__title">
                 Copywriting by «BPM CLOUD»
-              </h3>
+              </h2>
               <div className="service_package_info_block__text font_18">
                 «BPM CLOUD» is widely known online marketing agency. Our
                 employees have been representing clients’ businesses in
@@ -142,9 +142,9 @@ const ServicePackage = ({}) => {
               </div>
             </div>
             <div className="service_package_info_block">
-              <h3 className="service_package_info_block__title">
+              <h2 className="service_package_info_block__title">
                 Development of mobile applications
-              </h3>
+              </h2>
               <div className="service_package_info_block__text font_18">
                 Mobile applications for iOS and Android are already presented in
                 every business area. One website and the social network

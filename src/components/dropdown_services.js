@@ -68,9 +68,9 @@ const DropdownServices = ({
     return (
       <div className="dropdown_services_sticky">
         <div className="dropdown_services">
-          <h4 className="dropdown_services__title">
+          <h3 className="dropdown_services__title">
             <a>{result[0].label}</a>
-          </h4>
+          </h3>
           <div className="dropdown_services__info">
             <ul>{resultData}</ul>
           </div>

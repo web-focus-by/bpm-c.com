@@ -18,10 +18,10 @@ const HeroWebSiteDesign = ({ title, content, location, titleLogo }) => {
     <div className="container">
       <Breadcrumbs breadcrumbs={location} title={title} />
       <div className="hero margin_bottom_240">
-        <div className="hero__title title_80">
+        <h1 className="hero__title title_80">
           {title}
           <span className={logoTitle}></span>
-        </div>
+        </h1>
         {content && content.content[0] ? (
           <div className="hero__subtitle">
             <div dangerouslySetInnerHTML={{ __html: content.content[0] }} />

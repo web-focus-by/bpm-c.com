@@ -28,9 +28,9 @@ const ServicesITOutsourcing = ({ title, themes }) => {
       <div className="container">
         <div className="service_oitsourcing margin_bottom_240">
           <div className="service_oitsourcing_choice">
-            <h2 className="service_oitsourcing_choice__title title_62">
+            <h1 className="service_oitsourcing_choice__title title_62">
               Services in&nbsp;{title}
-            </h2>
+            </h1>
           </div>
           <div className="items_tagline__butn">{result}</div>
         </div>

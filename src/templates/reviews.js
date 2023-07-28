@@ -20,9 +20,9 @@ const Reviews = ({ location }) => {
         <div className="container">
           <Breadcrumbs breadcrumbs={location} title="Reviews" />
           <div className="hero">
-            <div className="hero__title title_62">
+            <h1 className="hero__title title_62">
               Reviews<span className="notes_of_reviewes"></span>
-            </div>
+            </h1>
           </div>
           <div className="header_circle_yellow"></div>
           <div className="header_circle_pink"></div>

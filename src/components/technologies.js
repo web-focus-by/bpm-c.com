@@ -106,7 +106,7 @@ const TechnologiesList = [
 const Technologies = () => (
   <div className="container">
     <div className="technologies margin_bottom_240">
-      <h2 className="technologies__title title_62">Technologies</h2>
+      <h1 className="technologies__title title_62">Technologies</h1>
       <div className="technologies__list">
         {TechnologiesList.map((el, i) => (
           <Link
