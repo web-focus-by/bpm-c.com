@@ -30,12 +30,15 @@ const HeroPost = ({ location, photo, info }) => {
     return () => clearInterval(timer)
   }, [counter])
 
+  const alt = photo.split('').reverse().join('');
+  const altTitle = alt.slice(2) + alt.slice('/')[0];
+
   return (
     <div className="container">
       <Breadcrumbs breadcrumbs={location} title={info.title} />
       <div className="photo">
         <div className="photo_block"itemscope itemtype="https://schema.org/ImageObject">
-          {photo ? <img src={photo} alt="Imagine" itemprop="image"/> : "" }
+          {photo ? <img src={photo} alt={altTitle} itemprop="image"/> : "" }
         </div>
         <div className="photo_description">
           <div className="photo_tags">
