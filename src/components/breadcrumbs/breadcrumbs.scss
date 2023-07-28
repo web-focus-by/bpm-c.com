@@ -8,6 +8,7 @@
             &:hover {
                 cursor: auto;
                 color: #1A1B1F;
+                pointer-events: none;
             }
         }
     }
@@ -31,13 +32,10 @@
     }
 }
 
-.span_breadcrumbs:last-child {
-    .breadcrumbs{
-        &:hover {
-            cursor: auto;
-            color: #1A1B1F;
-        }
-    }
+.span_breadcrumbs:last-child .breadcrumbs:hover {
+    cursor: auto;
+    color: #1A1B1F;
+    pointer-events: none;
 }
 
 @media (min-width: 1024px) and (max-width: 1366px) {
@@ -51,6 +49,7 @@
                 &:hover {
                     cursor: auto;
                     color: #1A1B1F;
+                    pointer-events: none;
                 }
             }
         }
@@ -73,12 +72,9 @@
         }
     }
 
-    .span_breadcrumbs:last-child {
-        .breadcrumbs{
-            &:hover {
-                cursor: auto;
-                color: #1A1B1F;
-            }
-        }
-    } 
+    .span_breadcrumbs:last-child .breadcrumbs:hover {
+        cursor: auto;
+        color: #1A1B1F;
+        pointer-events: none;
+    }
 }
