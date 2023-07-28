@@ -28,7 +28,7 @@ const HeroWebSiteDesign = ({ title, content, location, titleLogo }) => {
           </div>
         ) : null}
         <div className="hero__butn">
-          <Link className="link_btn" to={"/portfolio/"}>
+          <Link className="link_btn" to={"/portfolio/"} itemprop="url">
             <button className="button_white">
               View work<span className="arrow_black"></span>
             </button>

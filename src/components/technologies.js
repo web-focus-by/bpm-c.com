@@ -115,7 +115,7 @@ const Technologies = () => (
             to={el.link}
           >
             <div className="technologies_list_item">
-              <span className={el.icon}></span>
+              <span className={el.icon} itemprop="name"></span>
               <p
                 className="font_18"
                 dangerouslySetInnerHTML={{ __html: el.name }}

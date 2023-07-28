@@ -44,7 +44,7 @@ const Header = ({
           ref={el => (menuItemsRef.current[index] = el)}
           key={index}
         >
-          <Link to={item.path}>{item.label}</Link>
+          <Link to={item.path} itemprop="url">{item.label}</Link>
         </li>
       )
     } else {
@@ -94,8 +94,8 @@ const Header = ({
       <div className="container">
         <div className="header__nav">
           <div className="header__logo">
-            <Link to={"/"}>
-              <span className="logo"></span>
+            <Link to={"/"} itemprop="url">
+              <span className="logo" itemprop="name"></span>
             </Link>
           </div>
           <div className="header_nav_list" ref={refHeader}>

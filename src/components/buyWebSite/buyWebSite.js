@@ -32,7 +32,7 @@ const BuyWebSite = ({ content }) => {
     return (
       <div className="container">
         <div className="bpm_cloud margin_bottom_240">
-          <div
+          <h2
             className="bpm_cloud__title title_62"
             dangerouslySetInnerHTML={{ __html: title }}
           />

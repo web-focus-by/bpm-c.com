@@ -61,8 +61,8 @@ const ContentPost = ({ content }) => {
   ]
   const socialMedia = socialMaediaLinks.map((val, index) => {
     return (
-      <Link to={val.link}>
-        <span key={index} className={val.className}></span>
+      <Link to={val.link} itemprop="url">
+        <span key={index} className={val.className} itemprop="name"></span>
       </Link>
     )
   })
@@ -94,7 +94,7 @@ const ContentPost = ({ content }) => {
   return (
     <div className="container">
       <div className="post_title">
-        <div className="post_title__title title_62">{content.title}</div>
+        <h3 className="post_title__title title_62">{content.title}</h3>
       </div>
       <div className="content_post">
         <div className="content_post__block">
@@ -107,7 +107,7 @@ const ContentPost = ({ content }) => {
       </div>
       <div id="margin_240_black" className="black_bg_comment">
         <div className="comment_block">
-          <div className="comment_block__title title_62">Add comment</div>
+          <h3 className="comment_block__title title_62">Add comment</h3>
           <div className="comment_block__subtitle font_18">
             Choose a social network to leave a comment
           </div>
@@ -117,7 +117,7 @@ const ContentPost = ({ content }) => {
         </div>
       </div>
       <div className="other_comments">
-        <div className="other_comments__title title_62">
+        <h3 className="other_comments__title title_62">
           Other comments
           <div className="other_comments__comments">
             {comments}
@@ -136,7 +136,7 @@ const ContentPost = ({ content }) => {
               </div>
             </div>
           </div>
-        </div>
+        </h3>
       </div>
     </div>
   )

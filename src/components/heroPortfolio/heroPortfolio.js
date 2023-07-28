@@ -19,7 +19,7 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
     if (!longList) {
       if (index < 6) {
         return (
-          <Link to={tag.node.uri}>
+          <Link to={tag.node.uri} itemprop="url">
             <button
               key={index}
               className={
@@ -35,7 +35,7 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
       }
     } else {
       return (
-        <Link to={tag.node.uri}>
+        <Link to={tag.node.uri} itemprop="url">
           <button
             key={index}
             className={
@@ -74,10 +74,10 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
     <div className="container">
       <Breadcrumbs breadcrumbs={location} title={title} />
       <div className="hero">
-        <div className="hero__title title_80">
+        <h2 className="hero__title title_80">
           {title}
           <span className="puzzle"></span>
-        </div>
+        </h2>
         <div className="hero__butntag">
           {result}
           <button

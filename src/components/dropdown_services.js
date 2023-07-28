@@ -60,7 +60,7 @@ const DropdownServices = ({
   const resultData = data.map((value, index) => {
     return (
       <li key={index} onClick={closeMenu}>
-        <Link to={value.routeLink}>{value.name}</Link>
+        <Link to={value.routeLink} itemprop="url">{value.name}</Link>
       </li>
     )
   })
@@ -68,9 +68,9 @@ const DropdownServices = ({
     return (
       <div className="dropdown_services_sticky">
         <div className="dropdown_services">
-          <div className="dropdown_services__title">
+          <h4 className="dropdown_services__title">
             <a>{result[0].label}</a>
-          </div>
+          </h4>
           <div className="dropdown_services__info">
             <ul>{resultData}</ul>
           </div>

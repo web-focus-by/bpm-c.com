@@ -23,20 +23,21 @@ const PortfolioWebSiteDesign = ({ posts, titlePage }) => {
               key={post.node.id.toString() + valueTag.toString()}
               className="hash_list_block"
             >
-              <Link to={"/tag/" + tag.slug + "/"}>{valueTag}</Link>
+              <Link to={"/tag/" + tag.slug + "/"} itemprop="url">{valueTag}</Link>
             </li>
           )
         })
       }
       return (
         <div className="portfolio_products_block">
-          <div className="portfolio_products_block_pic">
-            <Link to={post.node.link}>
+          <div className="portfolio_products_block_pic" itemscope itemtype="https://schema.org/ImageObject">
+            <Link to={post.node.link} itemprop="url">
               {post.node.featuredImage &&
               post.node.featuredImage.node.mediaItemUrl ? (
                 <img
                   src={post.node.featuredImage.node.mediaItemUrl}
                   alt="the post"
+                  itemprop="image"
                 />
               ) : (
                 ""
@@ -47,7 +48,7 @@ const PortfolioWebSiteDesign = ({ posts, titlePage }) => {
             <ul className="hash__list">{tags}</ul>
           </div>
           <div className="portfolio_products_block_title">
-            <Link className="portfolio_link" to={post.node.link}>
+            <Link className="portfolio_link" to={post.node.link} itemprop="url">
               {post.node.title}
             </Link>
           </div>
@@ -62,7 +63,7 @@ const PortfolioWebSiteDesign = ({ posts, titlePage }) => {
         <div className="view_title">
           <div className="title_62">{titlePage}</div>
           <div className="view_all">
-            <Link className="active_link" to={"/portfolio/"}>
+            <Link className="active_link" to={"/portfolio/"} itemprop="url">
               View all
             </Link>
           </div>

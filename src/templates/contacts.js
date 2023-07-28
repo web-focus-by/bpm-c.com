@@ -47,8 +47,8 @@ const Contacts = ({ location }) => {
   const socialMedia = socialMaediaLinks.map((val, index) => {
     return (
       <li key={index.toString()}>
-        <Link to={val.link}>
-          <span className={val.name}></span>
+        <Link to={val.link} itemprop="url">
+          <span className={val.name} itemprop="name"></span>
         </Link>
       </li>
     )
@@ -109,7 +109,7 @@ const Contacts = ({ location }) => {
                 <div className="contact_form__block">
                   <div className="contact_form_block_buttons_title">
                     Services interested in:{" "}
-                    <span style={{ fontWeight: "bold" }}>
+                    <span style={{ fontWeight: "bold" }} itemprop="name">
                       {interestedItems && interestedItems.length > 0
                         ? interestedItems.slice(1).join(", ")
                         : ""}

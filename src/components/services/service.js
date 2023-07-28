@@ -32,7 +32,7 @@ const Service = ({ title }) => {
     ? dataItems.map(value => {
         return (
           <div className="services_list_item_wrapper" key={value.node.id}>
-            <Link style={{ textDecoration: "none" }} to={value.node.uri}>
+            <Link style={{ textDecoration: "none" }} to={value.node.uri} itemprop="url">
               <div className="services_list_item">
                 <span>{value.node.title}</span>
               </div>

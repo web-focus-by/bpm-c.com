@@ -35,7 +35,7 @@ const FooterBlock = ({ content, contentImage }) => {
       <div className="container">
         <div className="leaders margin_bottom_240">
           <div className="leaders_choice">
-            <div
+            <h3
               className="leaders_choice__title title_62"
               dangerouslySetInnerHTML={{ __html: title }}
             />
@@ -72,6 +72,7 @@ const FooterBlock = ({ content, contentImage }) => {
               <div
                 className="leaders_choice__title"
                 style={{ marginTop: "60px" }}
+                itemscope itemtype="https://schema.org/ImageObject"
               >
                 <img
                   src={contentImage}
@@ -81,6 +82,7 @@ const FooterBlock = ({ content, contentImage }) => {
                     height: "100%",
                     borderRadius: "25px",
                   }}
+                  itemprop="image"
                 />
               </div>
             ) : null}

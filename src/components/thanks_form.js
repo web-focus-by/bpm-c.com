@@ -23,10 +23,10 @@ const ThanksForm = ({ backPage }) => {
           </div>
           <div className="form_block_text">
             <p>Write to us, Yuri, Kanu or Vlada will contact you</p>
-            <div className="form_block_gif">
-              <img src={gifUriy} alt="Uriy" />
-              <img src={gifKanu} alt="Kanu" />
-              <img src={gifVlada} alt="Vlada" />
+            <div className="form_block_gif"itemscope itemtype="https://schema.org/ImageObject">
+              <img src={gifUriy} alt="Uriy" itemprop="image"/>
+              <img src={gifKanu} alt="Kanu" itemprop="image"/>
+              <img src={gifVlada} alt="Vlada" itemprop="image"/>
             </div>
           </div>
           <div className="form_block_wrapper">

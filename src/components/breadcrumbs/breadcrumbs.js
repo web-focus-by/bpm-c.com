@@ -24,8 +24,8 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
           let link = host === item ? domain : domain + "/" + path
           if (breadcrumbs.pathname !== "/") {
             return (
-              <span key={index} className="span_breadcrumbs">
-                <Link className="breadcrumbs" to={`${link}`}>
+              <span key={index} className="span_breadcrumbs" itemprop="name">
+                <Link className="breadcrumbs" to={`${link}`} itemprop="url">
                   {item === breadcrumbs.host
                     ? "Main page"
                     : filePath.length - 1 === index
