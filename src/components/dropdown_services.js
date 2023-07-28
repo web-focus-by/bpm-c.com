@@ -60,7 +60,7 @@ const DropdownServices = ({
   const resultData = data.map((value, index) => {
     return (
       <li key={index} onClick={closeMenu}>
-        <Link to={value.routeLink}>{value.name}</Link>
+        <Link to={value.routeLink} itemprop="url">{value.name}</Link>
       </li>
     )
   })

@@ -21,7 +21,7 @@ const HeroPost = ({ location, photo, info }) => {
     let valueTag = "#" + post.slug
     return (
       <li key={index} className="hash_list_block">
-        <Link to={"/tag/" + post.slug + "/"}>{valueTag}</Link>
+        <Link to={"/tag/" + post.slug + "/"} itemprop="url">{valueTag}</Link>
       </li>
     )
   })

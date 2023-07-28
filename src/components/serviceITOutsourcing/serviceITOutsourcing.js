@@ -15,7 +15,7 @@ import "./serviceITOutsourcing.scss"
 const ServicesITOutsourcing = ({ title, themes }) => {
   const result = themes.map((value, index) => {
     return (
-      <Link to={value.uri}>
+      <Link to={value.uri} itemprop="url">
         <button key={index + value.id} className="button_white_item">
           {value.title}
         </button>

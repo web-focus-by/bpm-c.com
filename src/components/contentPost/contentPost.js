@@ -61,8 +61,8 @@ const ContentPost = ({ content }) => {
   ]
   const socialMedia = socialMaediaLinks.map((val, index) => {
     return (
-      <Link to={val.link}>
-        <span key={index} className={val.className}></span>
+      <Link to={val.link} itemprop="url">
+        <span key={index} className={val.className} itemprop="name"></span>
       </Link>
     )
   })

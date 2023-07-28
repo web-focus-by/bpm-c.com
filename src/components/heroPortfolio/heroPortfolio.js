@@ -19,7 +19,7 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
     if (!longList) {
       if (index < 6) {
         return (
-          <Link to={tag.node.uri}>
+          <Link to={tag.node.uri} itemprop="url">
             <button
               key={index}
               className={
@@ -35,7 +35,7 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
       }
     } else {
       return (
-        <Link to={tag.node.uri}>
+        <Link to={tag.node.uri} itemprop="url">
           <button
             key={index}
             className={
