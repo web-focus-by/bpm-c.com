@@ -20,8 +20,8 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
           if (item === "news") {
             item = "Blog"
           }
-          path = index !== 0 ? path + item.charAt(0).toUpperCase() + item.slice(1) + "/" : ""
-          let link = host === item ? domain : domain + "/" + path
+          path = index !== 0 ? path + item.toLowerCase() + "/" : ""
+          let link = host === item.toLowerCase() ? domain : domain + "/" + path
           if (breadcrumbs.pathname !== "/") {
             return (
               <span key={index} className="span_breadcrumbs" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -46,10 +46,6 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
 
 
   useEffect(() => {
-    filePath.forEach(item => {
-      item = item.charAt(0).toUpperCase() + item.slice(1);
-    });
-
     const itemUp = documetn.querySelectorAll('a.breadcrumbs');
 
     itemUp.forEach(item => {
@@ -58,8 +54,10 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
   })
 
   return (
-    <div itemscope itemtype="http://schema.org/BreadcrumbList">
-      <div>{breadcrumbItems}</div>
+    <div>
+      <div class="breacrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+        {breadcrumbItems}
+        </div>
     </div>
   )
 }
