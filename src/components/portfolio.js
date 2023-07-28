@@ -156,7 +156,7 @@ const Portfolio = ({ posts }) => {
     <div className="container">
       <div className="portfolio margin_bottom_240">
         <div className="view_title">
-          <h1 className="title_62">Portfolio</h1>
+          <h2 className="title_62">Portfolio</h2>
           <Link className="active_link" to={"/portfolio/"} itemprop="url">
             View all
           </Link>
