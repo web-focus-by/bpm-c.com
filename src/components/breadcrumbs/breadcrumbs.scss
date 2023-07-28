@@ -22,10 +22,12 @@
         }
     }
 
-    .breadcrumbs:last-child {
-        &:hover {
-            cursor: auto;
-            color: #1A1B1F;
+    &:last-child {
+        .breadcrumbs{
+            &:hover {
+                cursor: auto;
+                color: #1A1B1F;
+            }
         }
     }
 }
@@ -54,10 +56,12 @@
             }
         }
 
-        .breadcrumbs:last-child {
-            &:hover {
-                cursor: auto;
-                color: #1A1B1F;
+        &:last-child {
+            .breadcrumbs{
+                &:hover {
+                    cursor: auto;
+                    color: #1A1B1F;
+                }
             }
         }
     }
