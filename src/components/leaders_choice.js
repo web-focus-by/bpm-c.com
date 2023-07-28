@@ -65,10 +65,10 @@ const LeadersChoice = ({}) => {
             <h2 className="leaders_choice_tagline_block_title">
               Let’s work together
             </h2>
-            <div className="leaders_choice_tagline_block_gif">
-              <img src={gifUriy} alt="Uriy" />
-              <img src={gifKanu} alt="Kanu" />
-              <img src={gifVlada} alt="Vlada" />
+            <div className="leaders_choice_tagline_block_gif" itemscope itemtype="https://schema.org/ImageObject">
+              <img src={gifUriy} alt="Uriy" itemprop="image"/>
+              <img src={gifKanu} alt="Kanu" itemprop="image"/>
+              <img src={gifVlada} alt="Vlada" itemprop="image"/>
             </div>
           </div>
           <div className="leaders_choice_tagline__butn">

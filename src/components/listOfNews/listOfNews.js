@@ -332,13 +332,14 @@ const ListOfNews = ({ posts }) => {
           }
           return (
             <div className="blogs_products_block">
-              <div className="blogs_products_block_pic">
+              <div className="blogs_products_block_pic" itemscope itemtype="https://schema.org/ImageObject">
                 <Link to={post.node.link} itemprop="url">
                   {post.node.featuredImage &&
                   post.node.featuredImage.node.mediaItemUrl ? (
                     <img
                       src={post.node.featuredImage.node.mediaItemUrl}
                       alt="the post"
+                      itemprop="image"
                     />
                   ) : (
                     ""
@@ -380,13 +381,14 @@ const ListOfNews = ({ posts }) => {
           }
           return (
             <div className="blogs_products_block">
-              <div className="blogs_products_block_pic">
+              <div className="blogs_products_block_pic" itemscope itemtype="https://schema.org/ImageObject">
                 <Link to={post.content.node.link} itemprop="url">
                   {post.content.node.featuredImage &&
                   post.content.node.featuredImage.node.mediaItemUrl ? (
                     <img
                       src={post.content.node.featuredImage.node.mediaItemUrl}
                       alt="the post"
+                      itemprop="image"
                     />
                   ) : (
                     ""
