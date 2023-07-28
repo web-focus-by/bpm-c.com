@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useEffect } from "react"
 import { Link } from "gatsby"
 import "./breadcrumbs.scss"
 
@@ -15,8 +16,8 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
   if (pathname) {
     breadcrumbItems = filePath
       ? filePath.map((item, index) => {
-          item = item.charAt(0).toUpperCase() + item.slice(1);
           if (item === "news") {
+            item = item.charAt(0).toUpperCase() + item.slice(1);
             item = "Blog"
           }
           path = index !== 0 ? path + item.charAt(0).toUpperCase() + item.slice(1) + "/" : ""
@@ -41,6 +42,15 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
       : ""
     return breadcrumbItems
   }
+
+
+  useEffect(() => {
+    const itemUp = documetn.querySelectorAll('a.breadcrumbs');
+    
+    itemUp.forEach(item => {
+      item = item.charAt(0).toUpperCase() + item.slice(1);
+    });
+  })
   return (
     <div>
       <div>{breadcrumbItems}</div>

@@ -60,7 +60,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://bpm-c.com`,
+        siteUrl: siteUrl,
         stripQueryString: true,
       },
     },

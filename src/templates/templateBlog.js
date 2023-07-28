@@ -19,7 +19,7 @@ const TemplateBlog = ({ location }) => {
         <div className="container">
           <Breadcrumbs breadcrumbs={location} title="BLOG" />
           <div className="hero">
-            <h2 className="hero__title title_62">BLOG</h2>
+            <h className="hero__title title_62">BLOG</h>
           </div>
           <div className="header_circle_yellow"></div>
           <div className="header_circle_pink"></div>
