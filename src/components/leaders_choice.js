@@ -19,9 +19,9 @@ const LeadersChoice = ({}) => {
       <div className="container custom-r-padding">
         <div className="leaders">
           <div className="leaders_choice">
-            <h1 className="leaders_choice__title title_62">
+            <h2 className="leaders_choice__title title_62">
               «BPM CLOUD» is chosen by leaders
-            </h1>
+            </h2>
             <div className="leaders_choice__block font_18">
               Why do partners choose us?
             </div>
