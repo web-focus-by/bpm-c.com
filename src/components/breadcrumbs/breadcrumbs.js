@@ -24,13 +24,14 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
           let link = host === item ? domain : domain + "/" + path
           if (breadcrumbs.pathname !== "/") {
             return (
-              <span key={index} className="span_breadcrumbs" itemprop="name">
+              <span key={index} className="span_breadcrumbs" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                 <Link className="breadcrumbs" to={`${link}`} itemprop="url">
                   {item === breadcrumbs.host
                     ? "Main page"
                     : filePath.length - 1 === index
                     ? `${title.charAt(0).toUpperCase() + title.slice(1)}`
                     : item.replace("-", " ")}
+                    <meta itemprop="position" content={filePath.findIndex(i=>i == item) + 1} /> 
                 </Link>
                 <span className="breadcrumbs_span">
                   {index === filePath.length - 1 ? "" : "/"}
@@ -58,7 +59,7 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
 
   return (
     <div>
-      <div>{breadcrumbItems}</div>
+      <div itemscope itemtype="http://schema.org/BreadcrumbList">{breadcrumbItems}</div>
     </div>
   )
 }
