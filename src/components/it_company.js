@@ -13,7 +13,7 @@ import "../components/styles/media_375.scss"
 const ITCompany = ({ siteTitle }) => (
   <div className="container">
     <div className="it_company margin_bottom_240">
-      <h1 className="it_company__title title_62">IT company</h1>
+      <h2 className="it_company__title title_62">IT company</h2>
       <div className="it_company__info font_18">
         «BPM CLOUD» digital marketing agency clearly knows what tools used to
         increase your sales and achieve your goals. We know all about art of

@@ -15,9 +15,9 @@ const CompanyDescription = ({ siteTitle }) => (
   <div className="container">
     <div className="company_description margin_bottom_240">
       <div>
-        <h1 className="company_description__title title_62">
+        <h2 className="company_description__title title_62">
           «BPM CLOUD» leading digital marketing agency
-        </h1>
+        </h2>
         <div className="company_description__info">
           <ul>
             <li className="font_18">
