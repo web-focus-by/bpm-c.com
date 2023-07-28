@@ -206,7 +206,7 @@ const WebDesignCreationVision = ({ content }) => {
       >
         <div className="container">
           <div className="service_package">
-            <h1
+            <h2
               className="service_package__title title_62"
               dangerouslySetInnerHTML={{ __html: title }}
             />
