@@ -18,6 +18,7 @@ import CompanyDescription from "../components/company_description"
 import ServicePackage from "../components/service_package"
 import LeadersChoice from "../components/leaders_choice"
 import ThanksModal from "../components/thanks_modal"
+import ScriptLD from "../components/scriptLD"
 
 const IndexPage = ({ location }) => {
   const [isShowThankModal, setIsShowThankModal] = React.useState(false)
@@ -94,6 +95,7 @@ const IndexPage = ({ location }) => {
         <ServicePackage></ServicePackage>
         <LeadersChoice></LeadersChoice>
       </Layout>
+      <ScriptLD/>
     </>
   )
 }

@@ -9,7 +9,6 @@ import Modal from "./modal"
 import ThanksModal from "../components/thanks_modal"
 import DropdownServices from "./dropdown_services"
 import MenuBurger from "../components/menuBurger"
-import ScriptLD from "../components/scriptLD"
 import "../components/styles/layout.scss"
 
 const Layout = ({ children }) => {
@@ -148,7 +147,6 @@ const Layout = ({ children }) => {
       ) : null}
       {children}
       <Footer></Footer>
-      <ScriptLD/>
     </>
   )
 }
