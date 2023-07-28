@@ -94,7 +94,7 @@ const ContentPost = ({ content }) => {
   return (
     <div className="container">
       <div className="post_title">
-        <h3 className="post_title__title title_62">{content.title}</h3>
+        <h1 className="post_title__title title_62">{content.title}</h1>
       </div>
       <div className="content_post">
         <div className="content_post__block">
@@ -107,7 +107,7 @@ const ContentPost = ({ content }) => {
       </div>
       <div id="margin_240_black" className="black_bg_comment">
         <div className="comment_block">
-          <h3 className="comment_block__title title_62">Add comment</h3>
+          <h2 className="comment_block__title title_62">Add comment</h2>
           <div className="comment_block__subtitle font_18">
             Choose a social network to leave a comment
           </div>
@@ -117,7 +117,7 @@ const ContentPost = ({ content }) => {
         </div>
       </div>
       <div className="other_comments">
-        <h3 className="other_comments__title title_62">
+        <h2 className="other_comments__title title_62">
           Other comments
           <div className="other_comments__comments">
             {comments}
@@ -136,7 +136,7 @@ const ContentPost = ({ content }) => {
               </div>
             </div>
           </div>
-        </h3>
+        </h2>
       </div>
     </div>
   )

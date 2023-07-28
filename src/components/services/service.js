@@ -44,7 +44,7 @@ const Service = ({ title }) => {
   return (
     <div className="container">
       <div className="services margin_bottom_240">
-        <h2 className="services__title title_62">{title}</h2>
+        <h1 className="services__title title_62">{title}</h1>
         <div className="services__list">{result}</div>
       </div>
     </div>

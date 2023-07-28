@@ -18,7 +18,7 @@ const WebSiteDesignReason = ({ content }) => {
     return (
       <div className="container">
         <div className="web-site-reason margin_bottom_240">
-          <div className="web-site-reason__title title_62">{title}</div>
+          <h1 className="web-site-reason__title title_62">{title}</h1>
           <div
             className="web-site-reason__info font_18"
             dangerouslySetInnerHTML={{ __html: contentString }}

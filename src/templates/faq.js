@@ -55,9 +55,9 @@ const Faq = ({ location, data }) => {
         <div className="container">
           <Breadcrumbs breadcrumbs={location} title="FAQ" />
           <div className="hero">
-            <div className="hero__title title_62">
+            <h1 className="hero__title title_62">
               FAQ<span className="faq"></span>
-            </div>
+            </h1>
             {contentPage}
           </div>
           <div className="header_circle_yellow"></div>

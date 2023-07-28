@@ -37,10 +37,10 @@ const Others = ({ content }) => {
       return (
         <div className="result_web_design margin_bottom_240">
           <div className="result_web_design_choice">
-            <div
+            <h1
               className="result_web_design_choice__title title_62"
               dangerouslySetInnerHTML={{ __html: title }}
-            ></div>
+            ></h1>
             <div className="result_web_design_choice__block">
               {list && list.length > 0 ? (
                 <div

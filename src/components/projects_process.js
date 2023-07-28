@@ -14,9 +14,9 @@ const ProjectsProcess = ({ siteTitle }) => {
   return (
     <div className="container">
       <div className="projects_process margin_bottom_240">
-        <h2 className="projects_process__title title_62">
+        <h1 className="projects_process__title title_62">
           Process of projects
-        </h2>
+        </h1>
         <div className="projects_process__subtitle font_18">
           We divide development into stages according to the end result. We can
           run them in parallel to help speed up the launch of the product.

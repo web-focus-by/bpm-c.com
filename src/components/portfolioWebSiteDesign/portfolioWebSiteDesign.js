@@ -61,7 +61,7 @@ const PortfolioWebSiteDesign = ({ posts, titlePage }) => {
     <div className="container">
       <div className="portfolio margin_bottom_240">
         <div className="view_title">
-          <div className="title_62">{titlePage}</div>
+          <h1 className="title_62">{titlePage}</h1>
           <div className="view_all">
             <Link className="active_link" to={"/portfolio/"} itemprop="url">
               View all

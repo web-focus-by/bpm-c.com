@@ -13,7 +13,7 @@ import "../components/styles/media_375.scss"
 const BPMCloud = ({ siteTitle }) => (
   <div className="container">
     <div className="bpm_cloud margin_bottom_240">
-      <h2 className="bpm_cloud__title title_62">BPM CLOUD</h2>
+      <h1 className="bpm_cloud__title title_62">BPM CLOUD</h1>
       <div className="bpm_cloud__info">
         <div className="bpm_cloud_block">
           <h3 className="bpm_cloud_block_title">
