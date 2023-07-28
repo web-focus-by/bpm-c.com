@@ -66,10 +66,10 @@ const ServicePackage = ({}) => {
     >
       <div className="container custom-r-padding">
         <div className="service_package">
-          <h1 className="service_package__title title_62">
+          <h2 className="service_package__title title_62">
             Web studio «BPM CLOUD»
             <br /> service package
-          </h1>
+          </h2>
           <div className="service_package__info_list">
             <div className="service_package_info_list_block font_18">
               Whatever you turn to our digital agency and from wherever in the
