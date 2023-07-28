@@ -58,8 +58,8 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
   })
 
   return (
-    <div>
-      <div itemscope itemtype="http://schema.org/BreadcrumbList">{breadcrumbItems}</div>
+    <div itemscope itemtype="http://schema.org/BreadcrumbList">
+      <div>{breadcrumbItems}</div>
     </div>
   )
 }
