@@ -26,7 +26,7 @@
 .breadcrumbs-last {
     background-color: #935CFF;
 }
-.breadcrumbs-last:hover {
+.span_breadcrumbs:last-child {
     cursor: auto;
     color: #1A1B1F;
     pointer-events: none;
@@ -57,7 +57,7 @@
             }
         }
     }
-    .breadcrumbs-last:hover {
+    .span_breadcrumbs:last-child {
         cursor: auto;
         color: #1A1B1F;
         pointer-events: none;
