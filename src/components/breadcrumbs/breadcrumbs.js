@@ -44,15 +44,6 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
     return breadcrumbItems
   }
 
-
-  useEffect(() => {
-    const itemUp = documetn.querySelectorAll('a.breadcrumbs');
-
-    itemUp.forEach(item => {
-      item = item.charAt(0).toUpperCase() + item.slice(1);
-    });
-  })
-
   return (
     <div>
       <div class="breacrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
