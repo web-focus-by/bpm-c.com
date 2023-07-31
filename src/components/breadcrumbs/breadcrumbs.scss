@@ -3,15 +3,7 @@
     &:first-child {
         margin-left: 0px;
     }
-    &:last-child {
-        .breadcrumbs{
-            &:hover {
-                cursor: auto;
-                color: #1A1B1F;
-                pointer-events: none;
-            }
-        }
-    }
+    
     .breadcrumbs_span {
         margin-left: 21px;
     }
@@ -31,8 +23,10 @@
         }
     }
 }
-
-.span_breadcrumbs:last-child .breadcrumbs:hover {
+.breadcrumbs-last {
+    background-color: #935CFF;
+}
+.breadcrumbs-last:hover {
     cursor: auto;
     color: #1A1B1F;
     pointer-events: none;
@@ -44,15 +38,7 @@
         &:first-child {
             margin-left: 0px;
         }
-        &:last-child {
-            .breadcrumbs{
-                &:hover {
-                    cursor: auto;
-                    color: #1A1B1F;
-                    pointer-events: none;
-                }
-            }
-        }
+
         .breadcrumbs_span {
             margin-left: 18px;
         }
@@ -72,7 +58,7 @@
         }
     }
 
-    .span_breadcrumbs:last-child .breadcrumbs:hover {
+    .breadcrumbs-last:hover {
         cursor: auto;
         color: #1A1B1F;
         pointer-events: none;

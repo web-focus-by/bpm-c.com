@@ -7,7 +7,7 @@ const ScriptLD = () => {
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "url" : "https://bpm-c.com/",
-                "logo": "--cсылка на лого компании--",
+                "logo": "https://wp.bpm-c.com/wp-content/uploads/2022/08/logo.svg",
                 "name" : "BPM Cloud",
                 "email": "hello@bpm-c.com",
                 "address": {
