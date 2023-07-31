@@ -98,7 +98,7 @@ const Header = ({
               <span className="logo" itemprop="name"></span>
             </Link>
           </div>
-          <div className="header_nav_list" ref={refHeader}>
+          <div className="header_nav_list" ref={refHeader} itemscope itemtype="https://schema.org/SiteNavigationElement">
             <ul>{menuItems}</ul>
           </div>
           <div
