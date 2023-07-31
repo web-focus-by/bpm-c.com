@@ -35,9 +35,9 @@ const ThanksModal = ({ onClickClose, backPageModal }) => {
         <div className="modal__content thanks_modal_content" ref={refInside}>
           <div className="form">
             <div className="form__block">
-              <h1 className="form_block_title title_62">
+              <h2 className="form_block_title title_62">
                 Thank you for the request!
-              </h1>
+              </h2>
               <div className="form_block_text">
                 <p>
                   <i>Write to us,</i> Yuri, Kanu or Vlada will contact you{" "}

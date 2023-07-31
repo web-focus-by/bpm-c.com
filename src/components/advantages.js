@@ -73,9 +73,9 @@ const Advantages = ({}) => {
     >
       <div className="container">
         <div className="advantages">
-          <h1 className="advantages__title title_62">
+          <h2 className="advantages__title title_62">
             What our digital agency aiming for
-          </h1>
+          </h2>
           <div
             className="advantages__subtitle font_18"
             style={{ fontWeight: 300, lineHeight: "150%" }}

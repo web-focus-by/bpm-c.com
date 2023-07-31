@@ -35,7 +35,7 @@ const Modal = ({ onClickClose, showThankForm }) => {
         <div className="modal__content" ref={refInside}>
           <div className="form">
             <div className="form__block">
-              <h1 className="form_block_title title_62">Get in touch</h1>
+              <h2 className="form_block_title title_62">Get in touch</h2>
               <div className="form_block_text">
                 <p>Write to us, Yuri, Kanu or Vlada will contact you</p>
                 <div className="form_block_gif" itemscope itemtype="https://schema.org/ImageObject">
