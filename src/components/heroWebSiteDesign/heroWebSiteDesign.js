@@ -16,7 +16,9 @@ const HeroWebSiteDesign = ({ title, content, location, titleLogo }) => {
   const logoTitle = titleLogo && titleLogo.length > 0 ? titleLogo : null
   return (
     <div className="container">
-      <Breadcrumbs breadcrumbs={location} title={title} />
+      <div class="breacrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <Breadcrumbs breadcrumbs={location} title={title} />
+      </div>
       <div className="hero margin_bottom_240">
         <h1 className="hero__title title_80">
           {title}
