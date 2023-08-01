@@ -26,10 +26,10 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
               <span key={index} className="span_breadcrumbs" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                 <Link className="breadcrumbs" to={`${link}`} itemprop="url">
                   {item === breadcrumbs.host
-                    ? "Main page"
+                    ? item.replace(item, "Home")
                     : filePath.length - 1 === index
                     ? `${title.charAt(0).toUpperCase() + title.slice(1)}`
-                    : link === 'https://bpm-c.com/' ? item = 'Home' : item.replace("-", " ")}
+                    : item.replace("-", " ")}
                     <meta itemprop="position" content={index} /> 
                 </Link>
                 <span className="breadcrumbs_span">
