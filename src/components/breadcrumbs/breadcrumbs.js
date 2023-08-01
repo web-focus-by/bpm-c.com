@@ -1,5 +1,4 @@
 import * as React from "react"
-import { useEffect } from "react"
 import { Link } from "gatsby"
 import "./breadcrumbs.scss"
 
@@ -27,10 +26,10 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
               <span key={index} className="span_breadcrumbs" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                 <Link className="breadcrumbs" to={`${link}`} itemprop="url">
                   {item === breadcrumbs.host
-                    ? item = "Home"
+                    ? "Main page"
                     : filePath.length - 1 === index
                     ? `${title.charAt(0).toUpperCase() + title.slice(1)}`
-                    : item.replace("-", " ")}
+                    : link === 'https://bpm-c.com/' ? 'Home' : item.replace("-", " ")}
                     <meta itemprop="position" content={index} /> 
                 </Link>
                 <span className="breadcrumbs_span">
