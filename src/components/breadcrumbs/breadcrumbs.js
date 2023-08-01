@@ -20,16 +20,14 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
           if (item === "news") {
             item = "Blog"
           }
-          if (item === "Bpm c.com") {
-            item = "Home"
-          }
           path = index !== 0 ? path + item.toLowerCase() + "/" : ""
           let link = host === item.toLowerCase() ? domain.toLowerCase() : domain.toLowerCase() + "/" + path.toLowerCase()
           if (breadcrumbs.pathname !== "/") {
             return (
               <span key={index} className="span_breadcrumbs" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                 <Link className="breadcrumbs" to={`${link}`} itemprop="url">
-                  {item === breadcrumbs.host
+                  {link === 'https://bpm-c.com/' ? 'Home' :
+                  item === breadcrumbs.host
                     ? "Main page"
                     : filePath.length - 1 === index
                     ? `${title.charAt(0).toUpperCase() + title.slice(1)}`
