@@ -29,7 +29,7 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
                     ? "Main page"
                     : filePath.length - 1 === index
                     ? `${title.charAt(0).toUpperCase() + title.slice(1)}`
-                    : link === 'https://bpm-c.com/' ? 'Home' : item.replace("-", " ")}
+                    : link === 'https://bpm-c.com/' ? item = 'Home' : item.replace("-", " ")}
                     <meta itemprop="position" content={index} /> 
                 </Link>
                 <span className="breadcrumbs_span">
