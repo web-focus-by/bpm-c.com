@@ -128,7 +128,7 @@ const ListOfPortfolio = ({ posts }) => {
           let valueTag = "#" + tag.slug
           return (
             <li className="hash_list_block">
-              <Link to={"/tag/" + tag.slug + "/"} itemprop="url">{valueTag}</Link>
+              <Link to={"/tag/" + tag.slug + "/"}>{valueTag}</Link>
             </li>
           )
         })
@@ -140,7 +140,7 @@ const ListOfPortfolio = ({ posts }) => {
           className="portfolio_products_block"
         >
           <div className="portfolio_products_block_pic" itemtype="https://schema.org/ImageObject" itemscope="">
-            <Link to={post.content.node.link} itemprop="url">
+            <Link to={post.content.node.link}>
               {post.content.node.featuredImage &&
               post.content.node.featuredImage.node.mediaItemUrl ? (
                 <img
@@ -157,7 +157,7 @@ const ListOfPortfolio = ({ posts }) => {
             <ul className="hash__list">{tags}</ul>
           </div>
           <div className="portfolio_products_block_title">
-            <Link className="portfolio_link" to={post.content.node.link} itemprop="url">
+            <Link className="portfolio_link" to={post.content.node.link}>
               {post.content.node.title}
             </Link>
           </div>

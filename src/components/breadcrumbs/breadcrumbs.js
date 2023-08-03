@@ -27,13 +27,13 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
           let link = host === item.toLowerCase() ? domain.toLowerCase() : domain.toLowerCase() + "/" + path.toLowerCase()
           if (breadcrumbs.pathname !== "/") {
             return (
-              <span key={index} className="span_breadcrumbs" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                <Link className="breadcrumbs" to={`${link}`} itemprop="url">
-                  { index === 0 ?
+              <span key={index} className="span_breadcrumbs" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <Link className="breadcrumbs" to={`${link}`}>
+                  <span itemprop="name">{ index === 0 ?
                   "IT Company" :
                    filePath.length - 1 === index
                     ? `${title.charAt(0).toUpperCase() + title.slice(1)}`
-                    : item.replace("-", " ")}
+                    : item.replace("-", " ")} </span>
                     <meta itemprop="position" content={index} /> 
                 </Link>
                 <span className="breadcrumbs_span">

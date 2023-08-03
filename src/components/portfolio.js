@@ -110,7 +110,7 @@ const Portfolio = ({ posts }) => {
               key={post.node.id.toString() + valueTag.toString()}
               className="hash_list_block"
             >
-              <Link to={"/tag/" + tag.slug + "/"} itemprop="url">{valueTag}</Link>
+              <Link to={"/tag/" + tag.slug + "/"} >{valueTag}</Link>
             </li>
           )
         })
@@ -123,7 +123,7 @@ const Portfolio = ({ posts }) => {
           className="portfolio_products_block"
         >
           <div className="portfolio_products_block_pic">
-            <Link to={post.node.uri} itemprop="url">
+            <Link to={post.node.uri}>
               {post.node.featuredImage &&
               post.node.featuredImage.node.mediaItemUrl ? (
                 <div
@@ -142,7 +142,7 @@ const Portfolio = ({ posts }) => {
             <ul className="hash__list">{tags}</ul>
           </div>
           <div className="portfolio_products_block_title">
-            <Link className="class_link" to={post.node.uri} itemprop="url">
+            <Link className="class_link" to={post.node.uri}>
               {post.node.title}
             </Link>
           </div>
@@ -157,7 +157,7 @@ const Portfolio = ({ posts }) => {
       <div className="portfolio margin_bottom_240">
         <div className="view_title">
           <h2 className="title_62">Portfolio</h2>
-          <Link className="active_link" to={"/portfolio/"} itemprop="url">
+          <Link className="active_link" to={"/portfolio/"}>
             View all
           </Link>
         </div>

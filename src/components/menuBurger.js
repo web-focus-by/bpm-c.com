@@ -83,7 +83,7 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
         ? item.subsequentItems.map((subValue, ind) => {
             return (
               <li id={subValue.id} key={ind}>
-                <Link to={subValue.path} itemprop="url">{subValue.label}</Link>
+                <Link to={subValue.path} itemprop="url"><span itemprop="name">{subValue.label}</span></Link>
               </li>
             )
           })
@@ -98,7 +98,7 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
           }}
         >
           <Link id={itemId} to={"/" + item.primaryItem.toLowerCase() + "/"} itemprop="url">
-            {item.primaryItem}
+            <span itemprop="name">{item.primaryItem}</span>
           </Link>
         </li>
       )
