@@ -2,6 +2,12 @@
     margin-left: 21px;
     &:first-child {
         margin-left: 0px;
+        display: none;
+    }
+    &:first-child:after {
+        margin-left: 0px;
+        display: block;
+        content: "IT Company";
     }
 
     .breadcrumbs_span {
