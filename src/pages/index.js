@@ -95,7 +95,6 @@ const IndexPage = ({ location }) => {
         <ServicePackage></ServicePackage>
         <LeadersChoice></LeadersChoice>
       </Layout>
-      <ScriptLD/>
     </>
   )
 }
