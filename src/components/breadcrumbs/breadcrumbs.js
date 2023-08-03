@@ -32,7 +32,7 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
                   { index === 0 ?
                   "IT Company" :
                    filePath.length - 1 === index
-                    ? `${index === 0 ? "IT Company" : title}`
+                    ? `${title.charAt(0).toUpperCase() + title.slice(1)}`
                     : item.replace("-", " ")}
                     <meta itemprop="position" content={index} /> 
                 </Link>
