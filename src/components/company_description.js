@@ -49,7 +49,7 @@ const CompanyDescription = ({ siteTitle }) => (
           </ul>
         </div>
       </div>
-      <div className="company_description__pic" itemscope itemtype="https://schema.org/ImageObject">
+      <div className="company_description__pic" itemtype="https://schema.org/ImageObject" itemscope>
         <img src={imgLaptop_2} alt="the laptop" itemprop="image"/>
       </div>
     </div>

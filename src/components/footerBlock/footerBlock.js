@@ -72,7 +72,7 @@ const FooterBlock = ({ content, contentImage }) => {
               <h2
                 className="leaders_choice__title"
                 style={{ marginTop: "60px" }}
-                itemscope itemtype="https://schema.org/ImageObject"
+                itemtype="https://schema.org/ImageObject" itemscope
               >
                 <img
                   src={contentImage}

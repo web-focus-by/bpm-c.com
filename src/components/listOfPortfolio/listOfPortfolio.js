@@ -139,7 +139,7 @@ const ListOfPortfolio = ({ posts }) => {
           key={post.content.node.id}
           className="portfolio_products_block"
         >
-          <div className="portfolio_products_block_pic" itemscope itemtype="https://schema.org/ImageObject">
+          <div className="portfolio_products_block_pic" itemtype="https://schema.org/ImageObject" itemscope>
             <Link to={post.content.node.link} itemprop="url">
               {post.content.node.featuredImage &&
               post.content.node.featuredImage.node.mediaItemUrl ? (

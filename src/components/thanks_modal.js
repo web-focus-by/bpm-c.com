@@ -43,7 +43,7 @@ const ThanksModal = ({ onClickClose, backPageModal }) => {
                   <i>Write to us,</i> Yuri, Kanu or Vlada will contact you{" "}
                   <b>as soon as possible</b>
                 </p>
-                <div className="form_block_gif" itemscope itemtype="https://schema.org/ImageObject">
+                <div className="form_block_gif" itemtype="https://schema.org/ImageObject" itemscope>
                   <img src={gifUriy} alt="Uriy" itemprop="image"/>
                   <img src={gifKanu} alt="Kanu" itemprop="image"/>
                   <img src={gifVlada} alt="Vlada" itemprop="image"/>
