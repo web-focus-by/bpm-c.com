@@ -29,11 +29,11 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
             return (
               <span key={index} className="span_breadcrumbs" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
                 <Link className="breadcrumbs" to={`${link}`}>
-                  { index === 0 ?
+                  <span itemprop="name">{ index === 0 ?
                   "IT Company" :
                    filePath.length - 1 === index
                     ? `${title.charAt(0).toUpperCase() + title.slice(1)}`
-                    : item.replace("-", " ")}
+                    : item.replace("-", " ")} </span>
                     <meta itemprop="position" content={index} /> 
                 </Link>
                 <span className="breadcrumbs_span">
