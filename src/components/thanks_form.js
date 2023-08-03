@@ -23,7 +23,7 @@ const ThanksForm = ({ backPage }) => {
           </h2>
           <div className="form_block_text">
             <p>Write to us, Yuri, Kanu or Vlada will contact you</p>
-            <div className="form_block_gif"itemscope itemtype="https://schema.org/ImageObject">
+            <div className="form_block_gif" itemtype="https://schema.org/ImageObject" itemscope="">
               <img src={gifUriy} alt="Uriy" itemprop="image"/>
               <img src={gifKanu} alt="Kanu" itemprop="image"/>
               <img src={gifVlada} alt="Vlada" itemprop="image"/>

@@ -173,7 +173,7 @@ const Blog = ({ titlePage }) => {
           ref={el => (refCases.current[index] = el)}
         >
           <Link to={item.node.uri} itemprop="url">
-            <div className="blog_products_block_pic" itemscope itemtype="https://schema.org/ImageObject">
+            <div className="blog_products_block_pic" itemtype="https://schema.org/ImageObject" itemscope>
               {item.node.featuredImage &&
               item.node.featuredImage.node.mediaItemUrl ? (
                 <img
