@@ -12,6 +12,10 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
     breadcrumbs && breadcrumbs.href
       ? breadcrumbs.href.split("/").slice(1, -1).slice(1)
       : ""
+
+  console.log(title);
+
+  const name = title === 'bpm-c.com' || 'Bpm-c.com' ? "IT Company" : title;
   if (pathname) {
     breadcrumbItems = filePath
       ? filePath.map((item, index) => {
@@ -25,10 +29,10 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
             return (
               <span key={index} className="span_breadcrumbs" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                 <Link className="breadcrumbs" to={`${link}`} itemprop="url">
-                  {item === breadcrumbs.host
-                    ? "IT Company"
-                    : filePath.length - 1 === index
-                    ? `${title.charAt(0).toUpperCase() + title.slice(1)}`
+                  { index === 0 ?
+                  "IT Company" :
+                   filePath.length - 1 === index
+                    ? `${name.charAt(0).toUpperCase() + name.slice(1)}`
                     : item.replace("-", " ")}
                     <meta itemprop="position" content={index} /> 
                 </Link>
