@@ -21,7 +21,7 @@ const HeroPost = ({ location, photo, info }) => {
     let valueTag = "#" + post.slug
     return (
       <li key={index} className="hash_list_block">
-        <Link to={"/tag/" + post.slug + "/"} itemprop="url">{valueTag}</Link>
+        <Link to={"/tag/" + post.slug + "/"}>{valueTag}</Link>
       </li>
     )
   })
@@ -35,7 +35,7 @@ const HeroPost = ({ location, photo, info }) => {
 
   return (
     <div className="container">
-      <div class="breacrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+      <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
         <Breadcrumbs breadcrumbs={location} title={info.title} />
       </div>
       <div className="photo">

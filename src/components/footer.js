@@ -33,7 +33,7 @@ const Footer = () => {
   const menuFooter = footerMenuLinks.map((val, index) => {
     return (
       <li key={index}>
-        <Link to={val.link} itemprop="url">{val.name}</Link>
+        <Link to={val.link}>{val.name}</Link>
       </li>
     )
   })
@@ -41,7 +41,7 @@ const Footer = () => {
   const socialMedia = socialMaediaLinks.map((val, index) => {
     return (
       <li key={index}>
-        <Link to={val.link} itemprop="url">
+        <Link to={val.link}>
           <span className={val.name} itemprop="name"></span>
         </Link>
       </li>
@@ -52,7 +52,7 @@ const Footer = () => {
     <div className="container">
       <div className="footer margin_bottom_60">
         <div className="footer__logo">
-          <a href="#" itemprop="url">
+          <a href="#">
             <span className="logo" itemprop="name"></span>
           </a>
         </div>

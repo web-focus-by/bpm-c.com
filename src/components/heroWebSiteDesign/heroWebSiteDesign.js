@@ -16,7 +16,7 @@ const HeroWebSiteDesign = ({ title, content, location, titleLogo }) => {
   const logoTitle = titleLogo && titleLogo.length > 0 ? titleLogo : null
   return (
     <div className="container">
-      <div class="breacrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+      <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
         <Breadcrumbs breadcrumbs={location} title={title} />
       </div>
       <div className="hero margin_bottom_240">
@@ -30,7 +30,7 @@ const HeroWebSiteDesign = ({ title, content, location, titleLogo }) => {
           </div>
         ) : null}
         <div className="hero__butn">
-          <Link className="link_btn" to={"/portfolio/"} itemprop="url">
+          <Link className="link_btn" to={"/portfolio/"}>
             <button className="button_white">
               View work<span className="arrow_black"></span>
             </button>

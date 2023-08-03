@@ -15,7 +15,7 @@ import "../components/styles/media_375.scss"
 const Hero = ({ location }) => {
   return (
     <div className="container">
-      <div class="breacrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+      <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
       <Breadcrumbs
         className="display_none"
         breadcrumbs={location}
@@ -32,7 +32,7 @@ const Hero = ({ location }) => {
           classic techniques and the most innovative world-class approaches.
         </div>
         <div className="hero__butn">
-          <Link className="link_btn" to={"/portfolio/"} itemprop="url">
+          <Link className="link_btn" to={"/portfolio/"}>
             <button className="button_white">
               View work<span className="arrow_black" itemprop="name"></span>
             </button>

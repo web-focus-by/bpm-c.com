@@ -324,7 +324,7 @@ const ListOfNews = ({ posts }) => {
                     key={i.toString() + valueTag.toString()}
                     className="hash_list_block"
                   >
-                    <Link to={"/tag/" + tag.slug + "/"} itemprop="url">{valueTag}</Link>
+                    <Link to={"/tag/" + tag.slug + "/"}>{valueTag}</Link>
                   </li>
                 )
               }
@@ -333,7 +333,7 @@ const ListOfNews = ({ posts }) => {
           return (
             <div className="blogs_products_block">
               <div className="blogs_products_block_pic" itemtype="https://schema.org/ImageObject" itemscope="">
-                <Link to={post.node.link} itemprop="url">
+                <Link to={post.node.link}>
                   {post.node.featuredImage &&
                   post.node.featuredImage.node.mediaItemUrl ? (
                     <img
@@ -354,7 +354,7 @@ const ListOfNews = ({ posts }) => {
                   {Moment(post.node.link).format("DD-MM-YYYY")}
                 </div>
               </div>
-              <Link to={post.node.link} itemprop="url">
+              <Link to={post.node.link}>
                 <div className="blogs_products_block_title">
                   <a>{post.node.title}</a>
                 </div>
@@ -373,7 +373,7 @@ const ListOfNews = ({ posts }) => {
                     key={i.toString() + valueTag.toString()}
                     className="hash_list_block"
                   >
-                    <Link to={"/tag/" + tag.slug + "/"} itemprop="url">{valueTag}</Link>
+                    <Link to={"/tag/" + tag.slug + "/"}>{valueTag}</Link>
                   </li>
                 )
               }
@@ -382,7 +382,7 @@ const ListOfNews = ({ posts }) => {
           return (
             <div className="blogs_products_block">
               <div className="blogs_products_block_pic" itemtype="https://schema.org/ImageObject" itemscope="">
-                <Link to={post.content.node.link} itemprop="url">
+                <Link to={post.content.node.link}>
                   {post.content.node.featuredImage &&
                   post.content.node.featuredImage.node.mediaItemUrl ? (
                     <img
@@ -403,9 +403,9 @@ const ListOfNews = ({ posts }) => {
                   {Moment(post.content.node.link).format("DD-MM-YYYY")}
                 </div>
               </div>
-              <Link to={post.content.node.link} itemprop="url">
+              <Link to={post.content.node.link}>
                 <div className="blogs_products_block_title">
-                  <a itemprop="url">{post.content.node.title}</a>
+                  <a>{post.content.node.title}</a>
                 </div>
               </Link>
             </div>
