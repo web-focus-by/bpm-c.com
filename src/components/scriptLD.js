@@ -17,7 +17,7 @@ import * as React from "react"
 // };
 
 const ORG_SCHEMA = JSON.stringify({
-  "@context": "https://schema.org",
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
   "@type": "Organization",
   "url" : "https://bpm-c.com/",
   "logo": "https://wp.bpm-c.com/wp-content/uploads/2022/08/logo.svg",
