@@ -3,7 +3,7 @@ import * as React from "react"
 const ScriptLD = () => {
     return (
         <script type="application/ld+json">
-            {
+            {`${
                 {
                     "@context": "https://schema.org",
                     "@type": "Organization",
@@ -30,7 +30,7 @@ const ScriptLD = () => {
                       }
                     ]
                   }
-            }
+            }`}
         </script>
     )
 }
