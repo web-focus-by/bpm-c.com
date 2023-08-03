@@ -13,7 +13,7 @@ let data = {
     "postalCode": "220013",
     "streetAddress": "Independence Avenue, 77",
     },
-    "telephone" : "+ 1 929 547 9159"
+  "telephone" : "+ 1 929 547 9159"
 };
 
 const ScriptLD = () => {
