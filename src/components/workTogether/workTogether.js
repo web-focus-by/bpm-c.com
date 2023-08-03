@@ -22,7 +22,7 @@ const WorkTogether = ({}) => {
             <h2 className="leaders_choice_tagline_block_title">
               Let’s work together
             </h2>
-            <div className="leaders_choice_tagline_block_gif" itemtype="https://schema.org/ImageObject" itemscope>
+            <div className="leaders_choice_tagline_block_gif" itemtype="https://schema.org/ImageObject" itemscope="">
               <img src={gifUriy} alt="Uriy" itemprop="image"/>
               <img src={gifKanu} alt="Kanu" itemprop="image"/>
               <img src={gifVlada} alt="Vlada" itemprop="image"/>
