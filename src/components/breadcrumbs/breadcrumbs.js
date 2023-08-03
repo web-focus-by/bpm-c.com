@@ -15,7 +15,6 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
 
   console.log(title);
 
-  const name = title === 'bpm-c.com' || 'Bpm-c.com' ? "IT Company" : title;
   if (pathname) {
     breadcrumbItems = filePath
       ? filePath.map((item, index) => {
@@ -28,7 +27,7 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
           if (breadcrumbs.pathname !== "/") {
             return (
               <span key={index} className="span_breadcrumbs" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                <Link className="breadcrumbs" to={`${link}`}>
+                <Link className="breadcrumbs" to={`${link}`} itemtype="http://schema.org/Thing" itemprop="item">
                   <span itemprop="name">{ index === 0 ?
                   "IT Company" :
                    filePath.length - 1 === index
