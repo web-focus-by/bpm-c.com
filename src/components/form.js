@@ -2,9 +2,9 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import ContactForm from "./contactForm/ContactForm"
 
-import gifUriy from "../images/uriy.gif"
-import gifKanu from "../images/kanu.gif"
-import gifVlada from "../images/vlada.gif"
+import gifUriy from "../images/uriy.webm"
+import gifKanu from "../images/kanu.webm"
+import gifVlada from "../images/vlada.webm"
 
 import "../components/styles/media_1920.scss"
 import "../components/styles/media_1366.scss"
