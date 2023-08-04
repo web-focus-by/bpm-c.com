@@ -71,7 +71,7 @@ const Contacts = ({ location }) => {
         <Seo title="Contacts" />
         <div className="container">
           <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-            <ul itemscope="" itemtype="http://schema.org/BreadcrumbList"><Breadcrumbs breadcrumbs={location} title="Contacts" /></ul>
+            <Breadcrumbs breadcrumbs={location} title="Contacts" />
           </div>
           <div className="hero">
             <h1 className="hero__title title_62">

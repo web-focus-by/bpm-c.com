@@ -36,7 +36,7 @@ const HeroPost = ({ location, photo, info }) => {
   return (
     <div className="container">
       <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-        <ul itemscope="" itemtype="http://schema.org/BreadcrumbList"><Breadcrumbs breadcrumbs={location} title={info.title} /></ul>
+        <Breadcrumbs breadcrumbs={location} title={info.title} />
       </div>
       <div className="photo">
         <div className="photo_block" itemtype="https://schema.org/ImageObject" itemscope="">

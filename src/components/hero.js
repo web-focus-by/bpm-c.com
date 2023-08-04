@@ -15,14 +15,12 @@ import "../components/styles/media_375.scss"
 const Hero = ({ location }) => {
   return (
     <div className="container">
-      <div class="breacrumbs-list">
-        <ul itemscope="" itemtype="http://schema.org/BreadcrumbList">
-          <Breadcrumbs
-          className="display_none"
-          breadcrumbs={location}
-          title="Main page"
-        />
-        </ul>
+      <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+      <Breadcrumbs
+        className="display_none"
+        breadcrumbs={location}
+        title="Main page"
+      />
       </div>
       <div className="hero">
         <h1 className="hero__title title_80">
