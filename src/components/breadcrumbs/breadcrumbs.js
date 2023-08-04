@@ -33,7 +33,7 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
                    filePath.length - 1 === index
                     ? `${title.charAt(0).toUpperCase() + title.slice(1)}`
                     : item.replace("-", " ")} </span>
-                    <meta itemprop="position" content={+index + 1} /> 
+                    <meta itemprop="position" content={+index + 1} />
                 </Link>
                 <span className="breadcrumbs_span">
                   {index === filePath.length - 1 ? "" : "/"}

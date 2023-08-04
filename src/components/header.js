@@ -55,7 +55,7 @@ const Header = ({
           key={index}
           onClick={activeMenu}
         >
-          <span>{item.label}</span>
+          <span itemprop="name">{item.label}</span>
         </li>
       )
     }

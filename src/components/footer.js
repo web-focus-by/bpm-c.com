@@ -42,7 +42,7 @@ const Footer = () => {
     return (
       <li key={index}>
         <Link to={val.link}>
-          <span className={val.name} itemprop="name"></span>
+          <span className={val.name}></span>
         </Link>
       </li>
     )
@@ -53,7 +53,7 @@ const Footer = () => {
       <div className="footer margin_bottom_60">
         <div className="footer__logo">
           <a href="#">
-            <span className="logo" itemprop="name"></span>
+            <span className="logo"></span>
           </a>
         </div>
         <div className="footer__contacts">
@@ -67,7 +67,7 @@ const Footer = () => {
               <a href="tel:19295479159">
                 {numberUsa}{" "}
                 {widthScreen && widthScreen > 375 ? (
-                  <span style={{ color: "#B3B3B3" }} itemprop="name">USA</span>
+                  <span style={{ color: "#B3B3B3" }}>USA</span>
                 ) : null}
               </a>
             </li>
@@ -75,7 +75,7 @@ const Footer = () => {
               <a href="tel:16474939093">
                 {numberCanada}{" "}
                 {widthScreen && widthScreen > 375 ? (
-                  <span style={{ color: "#B3B3B3" }} itemprop="name">Canada</span>
+                  <span style={{ color: "#B3B3B3" }}>Canada</span>
                 ) : null}
               </a>
             </li>
