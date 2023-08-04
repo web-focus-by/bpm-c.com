@@ -17,7 +17,7 @@ const HeroWebSiteDesign = ({ title, content, location, titleLogo }) => {
   return (
     <div className="container">
       <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-        <Breadcrumbs breadcrumbs={location} title={title} />
+        <ul itemscope="" itemtype="http://schema.org/BreadcrumbList"><Breadcrumbs breadcrumbs={location} title={title} /></ul>
       </div>
       <div className="hero margin_bottom_240">
         <h1 className="hero__title title_80">

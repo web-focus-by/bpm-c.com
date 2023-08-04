@@ -15,7 +15,7 @@ const HeroNews = ({ location, title }) => {
   return (
     <div className="container">
       <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-      <Breadcrumbs breadcrumbs={location} title={title} />
+        <ul itemscope="" itemtype="http://schema.org/BreadcrumbList"><Breadcrumbs breadcrumbs={location} title={title} /></ul>
       </div>
       <div className="hero margin_bottom_60">
         <h1 className="hero__title title_80">
