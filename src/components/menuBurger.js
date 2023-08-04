@@ -109,7 +109,7 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
           ref={el => (menuItemsRef.current[index] = el)}
           onClick={showSubsequentItems}
         >
-          <a id={itemId}>{item.primaryItem}</a>
+          <a id={itemId} itemprop="url"><span itemprop="name">{item.primaryItem}</span></a>
           <div
             className="subsequentItem"
             id={itemId}
