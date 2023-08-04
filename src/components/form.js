@@ -2,9 +2,9 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import ContactForm from "./contactForm/ContactForm"
 
-import gifUriy from "../images/uriy.webm"
-import gifKanu from "../images/kanu.webm"
-import gifVlada from "../images/vlada.webm"
+import gifUriy from "../images/uriy.gif"
+import gifKanu from "../images/kanu.gif"
+import gifVlada from "../images/vlada.gif"
 
 import "../components/styles/media_1920.scss"
 import "../components/styles/media_1366.scss"
@@ -30,10 +30,10 @@ const Form = ({ showThankForm }) => {
           </div>
           <div className="form_block_text">
             <p>Write to us, Yuri, Kanu or Vlada will contact you</p>
-            <div className="form_block_gif">
-              <video src={gifUriy}/>
-              <video src={gifKanu}/>
-              <video src={gifVlada}/>
+            <div className="form_block_gif" itemtype="https://schema.org/ImageObject" itemscope>
+              <img src={gifUriy} alt="Uriy" itemprop="image"/>
+              <img src={gifKanu} alt="Kanu" itemprop="image"/>
+              <img src={gifVlada} alt="Vlada" itemprop="image"/>
             </div>
           </div>
           <div className="form_block_email">
