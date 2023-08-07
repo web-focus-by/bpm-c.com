@@ -18,9 +18,9 @@ const Reviews = ({ location }) => {
     <>
       <Layout>
         <div className="container">
-          <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <ul class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
             <Breadcrumbs breadcrumbs={location} title="Reviews" />
-          </div>
+          </ul>
           <div className="hero">
             <h1 className="hero__title title_62">
               Reviews<span className="notes_of_reviewes"></span>
