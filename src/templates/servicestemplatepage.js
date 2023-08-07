@@ -64,29 +64,18 @@ const Servicestemplatepage = ({ pageContext, location, data }) => {
       <WebSiteDesignReason
         content={content && content[1] ? content[1] : null}
       ></WebSiteDesignReason>
-      <PortfolioWebSiteDesign
-        posts={posts}
-        titlePage={"Portfolio"}
-      ></PortfolioWebSiteDesign>
       <GoalsDesign
         content={content && content[2] ? content[2] : null}
       ></GoalsDesign>
-      <Form></Form>
       <RequiresWebsiteDesign
         content={content && content[3] ? content[3] : null}
       ></RequiresWebsiteDesign>
-      <ServicesItem></ServicesItem>
       <ResWebDesign
         content={content && content[4] ? content[4] : null}
       ></ResWebDesign>
-      <Blog titlePage="Blog"></Blog>
-      <WebDesignCreationVision
-        content={content && content[5] ? content[5] : null}
-      ></WebDesignCreationVision>
       <ResultsOfWebDesign
         content={content && content[6] ? content[6] : null}
       ></ResultsOfWebDesign>
-      <Reviews></Reviews>
       <BuyWebSite
         content={content && content[7] ? content[7] : null}
       ></BuyWebSite>
