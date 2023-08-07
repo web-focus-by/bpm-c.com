@@ -72,7 +72,7 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
 
   return (
     <div className="container">
-      <div class="breacrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+      <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
         <Breadcrumbs breadcrumbs={location} title={title} />
       </div>
       <div className="hero">
