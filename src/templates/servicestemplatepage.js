@@ -61,24 +61,24 @@ const Servicestemplatepage = ({ pageContext, location, data }) => {
         title={pageContext.title}
         themes={themes}
       ></ServiceITOutsourcing>
-      <WebSiteDesignReason
+      <ResultsOfWebDesign
         content={content && content[1] ? content[1] : null}
-      ></WebSiteDesignReason>
-      <GoalsDesign
+      ></ResultsOfWebDesign>
+      <ResultsOfWebDesign
         content={content && content[2] ? content[2] : null}
-      ></GoalsDesign>
-      <RequiresWebsiteDesign
+      ></ResultsOfWebDesign>
+      <ResultsOfWebDesign
         content={content && content[3] ? content[3] : null}
-      ></RequiresWebsiteDesign>
-      <ResWebDesign
+      ></ResultsOfWebDesign>
+      <ResultsOfWebDesign
         content={content && content[4] ? content[4] : null}
-      ></ResWebDesign>
+      ></ResultsOfWebDesign>
       <ResultsOfWebDesign
         content={content && content[5] ? content[5] : null}
       ></ResultsOfWebDesign>
-      <BuyWebSite
+      <ResultsOfWebDesign
         content={content && content[6] ? content[6] : null}
-      ></BuyWebSite>
+      ></ResultsOfWebDesign>
       <SiteDesignByBpmCloud
         content={content && content[7] ? content[7] : null}
       ></SiteDesignByBpmCloud>
