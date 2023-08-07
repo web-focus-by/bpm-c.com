@@ -75,7 +75,52 @@ body {
 }
 
 .service-item__subtitle {
-  width: 993px;
+  span {
+    width: 993px;
+  }
+}
+
+.benefits-item {
+  min-width: 1102px;
+
+  div {
+    display: flex;
+    width: 350px;
+    height: 375px;
+    padding: 30px 20px 35px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+    border-radius: 25px;
+
+    div {
+      width: 350px;
+      height: 375px;
+      background-color: #E1DAF4;
+
+      h4 {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%;
+      }
+
+      span {
+        width: 100%;
+        padding: 26px 20px 0;
+      }
+
+      &:first-child::before {
+        background-image: url(../../images/Globe.svg)
+      }
+      &::before {
+        background-image: url(../../images/Rocket.svg)
+      }
+      &:last-child::before {
+        background-image: url(../../images/Trophy.svg)
+      }
+    }
+  }
 }
 
 .burger {

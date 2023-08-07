@@ -11,7 +11,7 @@ import "../../components/styles/media_768.scss"
 import "../../components/styles/media_375.scss"
 import "./resultsOfWebDesign.scss"
 
-const ResultsOfWebDesign = ({ content }) => {
+const ServiceBenefitsItems = ({ content }) => {
   if (content) {
     const title = content.title.replace(/<[^>]+>/g, "")
     return (
@@ -24,7 +24,7 @@ const ResultsOfWebDesign = ({ content }) => {
             />
             <div className="result_web_design_choice__block">
               <div
-                className="result_web_design_choice_block_list font_18 service-item__subtitle"
+                className="result_web_design_choice_block_list font_18 service-item__subtitle benefits-item"
                 dangerouslySetInnerHTML={{ __html: content.content.join("") }}
               />
             </div>
@@ -35,12 +35,12 @@ const ResultsOfWebDesign = ({ content }) => {
   }
 }
 
-ResultsOfWebDesign.propTypes = {
+ServiceBenefitsItems.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-ResultsOfWebDesign.defaultProps = {
+ServiceBenefitsItems.defaultProps = {
   siteTitle: ``,
 }
 
-export default ResultsOfWebDesign
+export default ServiceBenefitsItems
