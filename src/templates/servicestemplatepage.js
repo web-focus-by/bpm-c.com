@@ -3,21 +3,10 @@ import { graphql } from "gatsby"
 import { fractionContent } from "../utils/fractionContent"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import HeroWebSiteDesign from "../components/heroWebSiteDesign/heroWebSiteDesign"
-import PortfolioWebSiteDesign from "../components/portfolioWebSiteDesign/portfolioWebSiteDesign"
-import WebSiteDesignReason from "../components/webSiteDesignReason/webSiteDesignReason"
-import GoalsDesign from "../components/goalsDesign/goalsDesign"
-import RequiresWebsiteDesign from "../components/requiresWebsiteDesign/requiresWebsiteDesign"
-import ResWebDesign from "../components/resWebDesign/resWebDesign"
+import HeroServiceItems from "../components/heroServiceItems/heroServiceItems"
 import ResultsOfWebDesign from "../components/resultsOfWebDesign/resultsOfWebDesign"
-import WebDesignCreationVision from "../components/webDesignCreationVision/webDesignCreationVision"
 import ServiceITOutsourcing from "../components/serviceITOutsourcing/serviceITOutsourcing"
 import SiteDesignByBpmCloud from "../components/siteDesignByBpmCloud/siteDesignByBpmCloud"
-import BuyWebSite from "../components/buyWebSite/buyWebSite"
-import Form from "../components/form"
-import Blog from "../components/blog"
-import ServicesItem from "../components/servicesItem"
-import Reviews from "../components/reviews"
 import FooterBlock from "../components/footerBlock/footerBlock"
 import WorkTogether from "../components/workTogether/workTogether"
 import Others from "../components/others/others"
@@ -52,11 +41,11 @@ const Servicestemplatepage = ({ pageContext, location, data }) => {
 
   return (
     <Layout>
-      <HeroWebSiteDesign
+      <HeroServiceItems
         title={contentPage.title}
         content={content && content[0] ? content[0] : null}
         location={location}
-      ></HeroWebSiteDesign>
+      ></HeroServiceItems>
       <ServiceITOutsourcing
         title={pageContext.title}
         themes={themes}
