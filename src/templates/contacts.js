@@ -70,9 +70,9 @@ const Contacts = ({ location }) => {
       <Layout>
         <Seo title="Contacts" />
         <div className="container">
-          <ul class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
             <Breadcrumbs breadcrumbs={location} title="Contacts" />
-          </ul>
+          </div>
           <div className="hero">
             <h1 className="hero__title title_62">
               Contacts<span className="phone_icon"></span>
