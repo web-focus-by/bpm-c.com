@@ -9,7 +9,7 @@ import "../../components/styles/media_1366.scss"
 import "../../components/styles/media_1024.scss"
 import "../../components/styles/media_768.scss"
 import "../../components/styles/media_375.scss"
-import "./resultsOfWebDesign.scss"
+import "../../components/resultsOfWebDesign/resultsOfWebDesign.scss"
 
 const ServiceBenefitsItems = ({ content }) => {
   if (content) {
