@@ -4,6 +4,7 @@ import { fractionContent } from "../utils/fractionContent"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import HeroServiceItems from "../components/heroServiceItems/heroServiceItems"
+import ServiceItemsTextContent from "../components/serviceItemsTextContent"
 import ResultsOfWebDesign from "../components/resultsOfWebDesign/resultsOfWebDesign"
 import ServiceITOutsourcing from "../components/serviceITOutsourcing/serviceITOutsourcing"
 import SiteDesignByBpmCloud from "../components/siteDesignByBpmCloud/siteDesignByBpmCloud"
@@ -50,12 +51,12 @@ const Servicestemplatepage = ({ pageContext, location, data }) => {
         title={pageContext.title}
         themes={themes}
       ></ServiceITOutsourcing>
-      <ResultsOfWebDesign
+      <ServiceItemsTextContent
         content={content && content[1] ? content[1] : null}
-      ></ResultsOfWebDesign>
-      <ResultsOfWebDesign
+      ></ServiceItemsTextContent>
+      <ServiceItemsTextContent
         content={content && content[2] ? content[2] : null}
-      ></ResultsOfWebDesign>
+      ></ServiceItemsTextContent>
       <ResultsOfWebDesign
         content={content && content[3] ? content[3] : null}
       ></ResultsOfWebDesign>
