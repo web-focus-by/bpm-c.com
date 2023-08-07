@@ -74,16 +74,16 @@ const Servicestemplatepage = ({ pageContext, location, data }) => {
         content={content && content[4] ? content[4] : null}
       ></ResWebDesign>
       <ResultsOfWebDesign
-        content={content && content[6] ? content[6] : null}
+        content={content && content[5] ? content[5] : null}
       ></ResultsOfWebDesign>
       <BuyWebSite
-        content={content && content[7] ? content[7] : null}
+        content={content && content[6] ? content[6] : null}
       ></BuyWebSite>
       <SiteDesignByBpmCloud
-        content={content && content[8] ? content[8] : null}
+        content={content && content[7] ? content[7] : null}
       ></SiteDesignByBpmCloud>
       <FooterBlock
-        content={content && content[9] ? content[9] : null}
+        content={content && content[8] ? content[8] : null}
       ></FooterBlock>
       {otherArray && otherArray.length > 0 ? (
         <Others content={otherArray ? otherArray : null}></Others>
