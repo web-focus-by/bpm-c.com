@@ -98,6 +98,9 @@ body {
       height: 375px;
       width: 350px;
       display: block;
+      p:first-child {
+        display: none !important;
+      }
 
       h4 {
         font-size: 20px;
@@ -106,10 +109,12 @@ body {
         line-height: 110%;
       }
 
-      span, p {
-        width: 100%;
-        padding: 26px 0 0;
-        height: auto;
+      p {
+        span {
+          width: 100%;
+          padding: 26px 0 0;
+          height: auto;
+        }
       }
     }
 
