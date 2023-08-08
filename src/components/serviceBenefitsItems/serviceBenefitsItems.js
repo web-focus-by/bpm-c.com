@@ -24,7 +24,7 @@ const ServiceBenefitsItems = ({ content }) => {
             />
             <div className="result_web_design_choice__block">
               <div
-                className="result_web_design_choice_block_list font_18 service-item__subtitle benefits-item"
+                className="result_web_design_choice_block_list font_18 benefits-item"
                 dangerouslySetInnerHTML={{ __html: content.content.join("") }}
               />
             </div>
