@@ -168,21 +168,6 @@ body {
     div {
       display: block;
       width: 310px;
-      
-      span:first-child {
-        display: block;
-        border-radius: 100%;
-        background: radial-gradient(
-          50% 50% at 50% 50%,
-          rgba(255, 215, 113, 0.8) 0%,
-          rgba(255, 215, 113, 0.464) 100%
-        );
-        filter: blur(80px);
-        width: 46px;
-        height: 46px;
-        margin-bottom: 29px;
-        padding: 0;
-      }
 
       h3 {
         font-size: 20px;
@@ -199,8 +184,8 @@ body {
       }
     }
 
-    &:first-child {
-      span:first-child {
+    div:first-child {
+      h3::before {
         display: block;
         border-radius: 100%;
         background: radial-gradient(
@@ -215,8 +200,8 @@ body {
         height: 46px;
       }
     }
-    &:last-child {
-      span:first-child {
+    div:last-child {
+      h3::before{
         display: block;
         border-radius: 100%;
         background: radial-gradient(
