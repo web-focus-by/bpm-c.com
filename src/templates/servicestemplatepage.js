@@ -8,6 +8,7 @@ import ServiceItemsTextContent from "../components/serviceItemsTextContent/servi
 import ServiceBenefitsItems from "../components/serviceBenefitsItems/serviceBenefitsItems"
 import ServiceEngagementItems from "../components/serviceEngagementItems/serviceEngagementItems"
 import ServiceItemsChoose from "../components/serviceItemsChoose/serviceItemsChoose"
+import ServiceHowToWork from "../components/serviceHowToWork/serviceHowToWork"
 import ResultsOfWebDesign from "../components/resultsOfWebDesign/resultsOfWebDesign"
 import ServiceITOutsourcing from "../components/serviceITOutsourcing/serviceITOutsourcing"
 import SiteDesignByBpmCloud from "../components/siteDesignByBpmCloud/siteDesignByBpmCloud"
