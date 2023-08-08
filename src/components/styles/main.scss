@@ -118,42 +118,42 @@ body {
       }
     }
 
-    div:first-child {
-      p:first-child {
-        display: none !important;
-      }
-      span:first-child {
-        display: block;
-        background: url(../../images/Globe.svg) no-repeat;
-        width: 30px;
-        height: 30px;
-        padding: 0;
-      }
-    }
-    div {
-      p:first-child {
-        display: none !important;
-      }
-      span:first-child {
-        display: block;
-        background: url(../../images/Rocket.svg) no-repeat;
-        width: 30px;
-        height: 30px;
-        padding: 0;
-      }
-    }
-    div:last-child {
-      p:first-child {
-        display: none !important;
-      }
-      span:first-child {
-        display: block;
-        background: url(../../images/Trophy.svg) no-repeat;
-        width: 30px;
-        height: 30px;
-        padding: 0;
-      }
-    }
+    // div:first-child {
+    //   p:first-child {
+    //     display: none !important;
+    //   }
+    //   span:first-child {
+    //     display: block;
+    //     background: url(../../images/Globe.svg) no-repeat;
+    //     width: 30px;
+    //     height: 30px;
+    //     padding: 0;
+    //   }
+    // }
+    // div {
+    //   p:first-child {
+    //     display: none !important;
+    //   }
+    //   span:first-child {
+    //     display: block;
+    //     background: url(../../images/Rocket.svg) no-repeat;
+    //     width: 30px;
+    //     height: 30px;
+    //     padding: 0;
+    //   }
+    // }
+    // div:last-child {
+    //   p:first-child {
+    //     display: none !important;
+    //   }
+    //   span:first-child {
+    //     display: block;
+    //     background: url(../../images/Trophy.svg) no-repeat;
+    //     width: 30px;
+    //     height: 30px;
+    //     padding: 0;
+    //   }
+    // }
   }
 }
 
