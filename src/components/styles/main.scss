@@ -224,6 +224,7 @@ body {
     display: flex;
     padding: 30px 20px 0 20px;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 26px;
     border-radius: 25px;
 
@@ -232,17 +233,15 @@ body {
       height: auto;
       width: 350px;
       display: block;
+
+      font-family: 'Acrom';
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+
       p:first-child {
         display: none !important;
-      }
-
-      span:first-child {
-        color: var(--gray-gray-1, #1A1B1F);
-        font-family: 'Acrom';
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 100%;
       }
 
       h4 {
@@ -253,10 +252,14 @@ body {
       }
 
       p {
+        width: 310px;
+        height: auto;
         span {
-          width: 310px;
-          padding: 26px 20px 0;
-          height: auto;
+          padding: 26px 0 0;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
         }
       }
     }
