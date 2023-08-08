@@ -15,22 +15,23 @@ import "./serviceHowToWork.scss"
 const ServiceHowToWork = ({ content }) => {
   if (content) {
     const title = content.title.replace(/<[^>]+>/g, "")
+    const midArr = content.content.shift();
     return (
-      <div className="container">
-        <div className="service_how_to margin_bottom_240">
-          <div className="result_web_design_choice">
+        <div className="container">
+        <div className="result_web_design margin_bottom_240">
+          <div className="result_web_design_choice service_how_to">
             <h2
               className="result_web_design_choice__title title_62 service-item__subtitle"
               dangerouslySetInnerHTML={{ __html: title }}
             />
+            <div
+                className="result_web_design_choice_block_list font_18 engagement-item"
+                dangerouslySetInnerHTML={{ __html: content.content[0] }}
+            />
             <div className="result_web_design_choice__block">
               <div
                 className="result_web_design_choice_block_list font_18 engagement-item"
-                dangerouslySetInnerHTML={{ __html: content.content[0] }}
-              />
-              <div
-                className="result_web_design_choice_block_list font_18 engagement-item"
-                dangerouslySetInnerHTML={{ __html: content.content[1] }}
+                dangerouslySetInnerHTML={{ __html: midArr.join("") }}
               />
             </div>
           </div>
