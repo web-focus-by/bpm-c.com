@@ -39,7 +39,6 @@ body {
           display: inline-block;
           padding-bottom: 20px;
           border-bottom: 4px solid transparent;
-          padding-top: -20px;
           &:hover {
             border-bottom: 4px solid #935cff;
             transition: 100ms;
@@ -114,7 +113,7 @@ body {
       }
     }
 
-    &:first-child {
+    div:first-child {
       span:first-child {
         display: block;
         background: url(../../images/Globe.svg) no-repeat;
@@ -122,7 +121,7 @@ body {
         height: 30px;
       }
     }
-    &::before {
+    div {
       span:first-child {
         display: block;
         background: url(../../images/Rocket.svg) no-repeat;
@@ -130,7 +129,7 @@ body {
         height: 30px;
       }
     }
-    &:last-child {
+    div:last-child {
       span:first-child {
         display: block;
         background: url(../../images/Trophy.svg) no-repeat;
@@ -150,9 +149,10 @@ body {
     gap: 66px;
 
     div {
+      display: block;
       width: 310px;
       
-      span {
+      span:first-child {
         display: block;
         background: url(../../images/Globe.svg) no-repeat;
         width: 46px;
