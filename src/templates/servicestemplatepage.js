@@ -7,7 +7,7 @@ import HeroServiceItems from "../components/heroServiceItems/heroServiceItems"
 import ServiceItemsTextContent from "../components/serviceItemsTextContent/serviceItemsTextContent"
 import ServiceBenefitsItems from "../components/serviceBenefitsItems/serviceBenefitsItems"
 import ServiceEngagementItems from "../components/serviceEngagementItems/serviceEngagementItems"
-import ServiceHowToWork from "../components/serviceHowToWork/serviceHowToWork"
+import ServiceItemsChoose from "../components/serviceItemsChoose/serviceItemsChoose"
 import ResultsOfWebDesign from "../components/resultsOfWebDesign/resultsOfWebDesign"
 import ServiceITOutsourcing from "../components/serviceITOutsourcing/serviceITOutsourcing"
 import SiteDesignByBpmCloud from "../components/siteDesignByBpmCloud/siteDesignByBpmCloud"
@@ -69,9 +69,9 @@ const Servicestemplatepage = ({ pageContext, location, data }) => {
       <ServiceHowToWork
         content={content && content[5] ? content[5] : null}
       ></ServiceHowToWork>
-      <ResultsOfWebDesign
+      <ServiceItemsChoose
         content={content && content[6] ? content[6] : null}
-      ></ResultsOfWebDesign>
+      ></ServiceItemsChoose>
       <SiteDesignByBpmCloud
         content={content && content[7] ? content[7] : null}
       ></SiteDesignByBpmCloud>
