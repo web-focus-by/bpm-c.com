@@ -89,7 +89,7 @@ body {
 
   div {
     display: flex;
-    padding: 30px 20px 35px 20px;
+    padding: 30px 20px 0 20px;
     align-items: flex-start;
     gap: 26px;
     border-radius: 25px;
@@ -105,31 +105,37 @@ body {
         font-style: normal;
         font-weight: 400;
         line-height: 110%;
-
-        &:first-child::before {
-          display: block;
-          background: url(../../images/Globe.svg) no-repeat;
-          width: 30px;
-          height: 30px;
-        }
-        &::before {
-          display: block;
-          background: url(../../images/Rocket.svg) no-repeat;
-          width: 30px;
-          height: 30px;
-        }
-        &:last-child::before {
-          display: block;
-          background: url(../../images/Trophy.svg) no-repeat;
-          width: 30px;
-          height: 30px;
-        }
       }
 
-      span {
+      span, p {
         width: 100%;
         padding: 26px 0 0;
         height: auto;
+      }
+    }
+
+    &:first-child {
+      span:first-child {
+        display: block;
+        background: url(../../images/Globe.svg) no-repeat;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    &::before {
+      span:first-child {
+        display: block;
+        background: url(../../images/Rocket.svg) no-repeat;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    &:last-child {
+      span:first-child {
+        display: block;
+        background: url(../../images/Trophy.svg) no-repeat;
+        width: 30px;
+        height: 30px;
       }
     }
   }
