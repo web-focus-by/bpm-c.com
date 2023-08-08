@@ -217,6 +217,52 @@ body {
   }
 }
 
+.choose-item {
+  max-width: 1478px;
+
+  div {
+    display: flex;
+    padding: 30px 20px 0 20px;
+    align-items: flex-start;
+    gap: 26px;
+    border-radius: 25px;
+
+    div {
+      background-color: #FFECBB;
+      height: auto;
+      width: 350px;
+      display: block;
+      p:first-child {
+        display: none !important;
+      }
+
+      span:first-child {
+        color: var(--gray-gray-1, #1A1B1F);
+        font-family: 'Acrom';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+      }
+
+      h4 {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+      }
+
+      p {
+        span {
+          width: 310px;
+          padding: 26px 20px 0;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
 .burger {
   width: 36px;
   height: 2px;

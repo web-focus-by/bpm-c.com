@@ -11,7 +11,7 @@ import "../../components/styles/media_768.scss"
 import "../../components/styles/media_375.scss"
 import "../../components/resultsOfWebDesign/resultsOfWebDesign.scss"
 
-const ServiceBenefitsItems = ({ content }) => {
+const ServiceItemsChoose = ({ content }) => {
   if (content) {
     const title = content.title.replace(/<[^>]+>/g, "")
     return (
@@ -24,7 +24,7 @@ const ServiceBenefitsItems = ({ content }) => {
             />
             <div className="result_web_design_choice__block">
               <div
-                className="result_web_design_choice_block_list font_18 benefits-item"
+                className="result_web_design_choice_block_list font_18 choose-item"
                 dangerouslySetInnerHTML={{ __html: content.content.join("") }}
               />
             </div>
@@ -35,12 +35,12 @@ const ServiceBenefitsItems = ({ content }) => {
   }
 }
 
-ServiceBenefitsItems.propTypes = {
+ServiceItemsChoose.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-ServiceBenefitsItems.defaultProps = {
+ServiceItemsChoose.defaultProps = {
   siteTitle: ``,
 }
 
-export default ServiceBenefitsItems
+export default ServiceItemsChoose
