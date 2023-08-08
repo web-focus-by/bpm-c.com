@@ -88,7 +88,6 @@ body {
 
   div {
     display: flex;
-    padding: 30px 20px 0 20px;
     align-items: flex-start;
     gap: 26px;
     border-radius: 25px;
@@ -97,6 +96,7 @@ body {
       background-color: #e1daf4;
       height: 375px;
       width: 350px;
+      padding: 30px 20px 0 20px;
       display: block;
       p:first-child {
         display: none !important;
@@ -222,16 +222,17 @@ body {
 
   div {
     display: flex;
-    padding: 30px 20px 0 20px;
     align-items: flex-start;
     flex-wrap: wrap;
+    max-width: 1478px;
     gap: 26px;
     border-radius: 25px;
 
     div {
       background-color: #FFECBB;
       height: auto;
-      width: 350px;
+      min-height: 309px;
+      max-width: 350px;
       display: block;
 
       font-family: 'Acrom';
@@ -239,6 +240,7 @@ body {
       font-style: normal;
       font-weight: 500;
       line-height: 100%;
+      padding: 30px 20px 0 20px;
 
       p:first-child {
         display: none !important;
