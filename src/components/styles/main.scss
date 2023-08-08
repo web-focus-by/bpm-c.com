@@ -135,6 +135,58 @@ body {
   }
 }
 
+.engagement-item {
+  max-width: 1062px;
+
+  div {
+    display: flex;
+    align-items: flex-start;
+    gap: 66px;
+
+    div {
+      width: 310px;
+      
+      span {
+        display: block;
+        background: url(../../images/Globe.svg) no-repeat;
+        width: 46px;
+        height: 46px;
+        margin-bottom: 29px;
+      }
+
+      b {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%;
+      }
+
+      span {
+        width: 100%;
+        padding: 20px 0 0;
+        height: auto;
+      }
+    }
+
+    &:first-child {
+      span {
+        display: block;
+        background: url(../../images/Globe.svg) no-repeat;
+        width: 46px;
+        height: 46px;
+      }
+    }
+    &:last-child {
+      span {
+        display: block;
+        background: url(../../images/Globe.svg) no-repeat;
+        width: 46px;
+        height: 46px;
+      }
+    }
+  }
+}
+
 .burger {
   width: 36px;
   height: 2px;
