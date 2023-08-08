@@ -22,7 +22,7 @@ const ServiceItemsChoose = ({ content }) => {
               className="result_web_design_choice__title title_62 service-item__subtitle"
               dangerouslySetInnerHTML={{ __html: title }}
             />
-            <div className="result_web_design_choice__block">
+            <div className="result_web_design_choice__block choose-item__block">
               <div
                 className="result_web_design_choice_block_list font_18 choose-item"
                 dangerouslySetInnerHTML={{ __html: content.content.join("") }}
