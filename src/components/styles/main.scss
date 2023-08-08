@@ -171,7 +171,13 @@ body {
       
       span:first-child {
         display: block;
-        background: url(../../images/Globe.svg) no-repeat;
+        border-radius: 100%;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(255, 215, 113, 0.8) 0%,
+          rgba(255, 215, 113, 0.464) 100%
+        );
+        filter: blur(80px);
         width: 46px;
         height: 46px;
         margin-bottom: 29px;
@@ -195,7 +201,15 @@ body {
     &:first-child {
       span:first-child {
         display: block;
-        background: url(../../images/Globe.svg) no-repeat;
+        border-radius: 100%;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(143, 114, 226, 0.6) 0%,
+          rgba(135, 130, 224, 0.6) 0%,
+          rgba(144, 139, 237, 0.6) 0.01%,
+          rgba(143, 114, 226, 0.48) 100%
+        );
+        filter: blur(80px);
         width: 46px;
         height: 46px;
       }
@@ -203,7 +217,13 @@ body {
     &:last-child {
       span:first-child {
         display: block;
-        background: url(../../images/Globe.svg) no-repeat;
+        border-radius: 100%;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(243, 159, 191, 0.8) 0%,
+          rgba(243, 159, 191, 0.8) 100%
+        );
+        filter: blur(80px);
         width: 46px;
         height: 46px;
       }

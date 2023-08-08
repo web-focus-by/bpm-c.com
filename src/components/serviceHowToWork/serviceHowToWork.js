@@ -26,11 +26,11 @@ const ServiceHowToWork = ({ content }) => {
             <div className="result_web_design_choice__block">
               <div
                 className="result_web_design_choice_block_list font_18 engagement-item"
-                dangerouslySetInnerHTML={{ __html: content.content.join("") }}
+                dangerouslySetInnerHTML={{ __html: content.content[0] }}
               />
               <div
                 className="result_web_design_choice_block_list font_18 engagement-item"
-                dangerouslySetInnerHTML={{ __html: content.content.join("") }}
+                dangerouslySetInnerHTML={{ __html: content.content[1] }}
               />
             </div>
           </div>
