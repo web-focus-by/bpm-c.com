@@ -44,6 +44,13 @@ body {
             transition: 100ms;
           }
 
+          &:first-child {
+            a,
+            span {
+              margin-right: 0;
+            }
+          }
+
           &:last-child {
             a,
             span {
