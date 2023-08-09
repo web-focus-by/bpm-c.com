@@ -40,29 +40,23 @@ body {
           padding-bottom: 20px;
           border-bottom: 4px solid transparent;
           max-width: max-content;
+          margin-right: 60px;
           &:hover {
             border-bottom: 4px solid #935cff;
             transition: 100ms;
           }
 
           &:first-child {
-            a,
-            span {
-              margin-right: 0;
-            }
+            margin-right: 0;
           }
 
           &:last-child {
-            a,
-            span {
-              margin-right: 0;
-            }
+            margin-right: 0;
           }
 
           a,
           span {
             text-decoration: none;
-            margin-right: 60px;
             color: #1a1b1f;
             font-weight: 500;
 
