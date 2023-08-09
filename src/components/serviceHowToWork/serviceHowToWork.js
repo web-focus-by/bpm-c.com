@@ -19,17 +19,17 @@ const ServiceHowToWork = ({ content }) => {
           <div className="margin_bottom_240">
             <div className="result_web_design_choice__block service_how_to">
               <div className="result_web_design_choice_block_list font_18">
-              <h2
-                className="result_web_design_choice__title title_62 service-item__subtitle"
-                dangerouslySetInnerHTML={{ __html: title }}
-              />
-              <div
-                className="result_web_design_choice_block_list font_18 service_how_to"
-                dangerouslySetInnerHTML={{ __html: content.content.join("") }}
-              />
+                <h2
+                  className="result_web_design_choice__title title_62 service-item__subtitle"
+                  dangerouslySetInnerHTML={{ __html: title }}
+                />
+                <div
+                  className="result_web_design_choice_block_list font_18 service_how_item"
+                  dangerouslySetInnerHTML={{ __html: content.content.join("") }}
+                />
               </div>
               <div
-                className="result_web_design_choice_block_list font_18"
+                className="result_web_design_choice_block_list font_18 service_how_item__two"
                 dangerouslySetInnerHTML={{ __html: content.content.join("") }}
               />
             </div>
