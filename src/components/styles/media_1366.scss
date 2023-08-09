@@ -131,6 +131,7 @@
       .header_nav_list {
         ul {
           li {
+            max-width: max-content;
             a,
             span {
               font-size: 13px;
