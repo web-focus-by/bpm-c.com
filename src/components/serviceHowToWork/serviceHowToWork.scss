@@ -12,5 +12,11 @@
         p {
             display: none;
         }
+
+        div {
+            p {
+                display: block;
+            }
+        }
     }
 }
