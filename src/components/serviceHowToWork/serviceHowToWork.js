@@ -10,6 +10,7 @@ import "../../components/styles/media_1024.scss"
 import "../../components/styles/media_768.scss"
 import "../../components/styles/media_375.scss"
 import "../../components/resultsOfWebDesign/resultsOfWebDesign.scss"
+import "./serviceHowToWork.scss"
 
 const ServiceHowToWork = ({ content }) => {
   if (content) {
