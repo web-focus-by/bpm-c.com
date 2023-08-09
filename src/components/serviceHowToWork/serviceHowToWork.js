@@ -23,9 +23,13 @@ const ServiceHowToWork = ({ content }) => {
                 className="result_web_design_choice__title title_62 service-item__subtitle"
                 dangerouslySetInnerHTML={{ __html: title }}
               />
-              </div>
               <div
                 className="result_web_design_choice_block_list font_18 service_how_to"
+                dangerouslySetInnerHTML={{ __html: content.content.join("") }}
+              />
+              </div>
+              <div
+                className="result_web_design_choice_block_list font_18"
                 dangerouslySetInnerHTML={{ __html: content.content.join("") }}
               />
             </div>
