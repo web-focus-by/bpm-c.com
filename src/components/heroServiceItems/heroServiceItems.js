@@ -22,7 +22,9 @@ const HeroServiceItems = ({ title, content, location, titleLogo }) => {
       <div className="hero margin_bottom_240">
         <h1 className="hero__title title_80 service-item__title">
           {title}
-          <span className="star"></span>
+          {content && content.content[0] ? (
+            <span className="star"></span>
+          ) : null}
         </h1>
         {content && content.content[0] ? (
           <div className="hero__subtitle">
