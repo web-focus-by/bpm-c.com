@@ -37,7 +37,7 @@
         p:first-child {
           display: none !important;
         }
-        span:first-child {
+        h4::before {
           display: block;
           background: url(../../images/gatsby.svg) no-repeat;
           width: 30px;
@@ -49,7 +49,7 @@
         p:first-child {
           display: none !important;
         }
-        span:first-child {
+        h4::before {
           display: block;
           background: url(../../images/gatsby.svg) no-repeat;
           width: 30px;
@@ -61,7 +61,7 @@
         p:first-child {
           display: none !important;
         }
-        span:first-child {
+        h4::before {
           display: block;
           background: url(../../images/gatsby.svg) no-repeat;
           width: 30px;
