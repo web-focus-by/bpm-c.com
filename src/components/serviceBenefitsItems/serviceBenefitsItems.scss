@@ -1,0 +1,73 @@
+.benefits-item {
+    max-width: 1102px;
+  
+    div {
+      display: flex;
+      align-items: flex-start;
+      gap: 26px;
+      border-radius: 25px;
+  
+      div {
+        background-color: #e1daf4;
+        height: 375px;
+        width: 350px;
+        padding: 30px 20px 0 20px;
+        display: block;
+        p:first-child {
+          display: none !important;
+        }
+  
+        h4 {
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 110%;
+        }
+  
+        p {
+          span {
+            width: 100%;
+            padding: 26px 0 0;
+            height: auto;
+          }
+        }
+      }
+  
+      div:first-child {
+        p:first-child {
+          display: none !important;
+        }
+        span:first-child {
+          display: block;
+          background: url(../../images/gatsby.svg) no-repeat;
+          width: 30px;
+          height: 30px;
+          padding: 0;
+        }
+      }
+      div {
+        p:first-child {
+          display: none !important;
+        }
+        span:first-child {
+          display: block;
+          background: url(../../images/gatsby.svg) no-repeat;
+          width: 30px;
+          height: 30px;
+          padding: 0;
+        }
+      }
+      div:last-child {
+        p:first-child {
+          display: none !important;
+        }
+        span:first-child {
+          display: block;
+          background: url(../../images/gatsby.svg) no-repeat;
+          width: 30px;
+          height: 30px;
+          padding: 0;
+        }
+      }
+    }
+  }
