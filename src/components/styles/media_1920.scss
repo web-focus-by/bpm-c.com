@@ -909,9 +909,6 @@
     margin: calc(230px + (320 - 230) * ((100vw - 1366px) / (1920 - 1366))) 0;
 
     &__block {
-      margin-bottom: calc(
-        40px + (56 - 49) * ((100vw - 1366px) / (1920 - 1366))
-      );
 
       .leaders_choice_tagline_block_title {
         font-size: 62px;
