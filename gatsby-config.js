@@ -51,12 +51,12 @@ module.exports = {
         icon: `src/images/logoBpm.svg`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: "GTM-W22MQCV",
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-google-tagmanager",
+    //   options: {
+    //     id: "GTM-W22MQCV",
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
