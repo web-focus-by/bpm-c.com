@@ -72,7 +72,7 @@ const Blog = ({ titlePage }) => {
       if (i < 2) {
         return (
           <li key={i} className="hash_list_block">
-            <Link to={"/tag/" + val + "/"} itemprop="url">{val}</Link>
+            <Link to={"/tag/" + val + "/"}>{val}</Link>
           </li>
         )
       }
@@ -172,8 +172,8 @@ const Blog = ({ titlePage }) => {
           className="blog_products_block"
           ref={el => (refCases.current[index] = el)}
         >
-          <Link to={item.node.uri} itemprop="url">
-            <div className="blog_products_block_pic" itemscope itemtype="https://schema.org/ImageObject">
+          <Link to={item.node.uri}>
+            <div className="blog_products_block_pic" itemtype="https://schema.org/ImageObject" itemscope="">
               {item.node.featuredImage &&
               item.node.featuredImage.node.mediaItemUrl ? (
                 <img
@@ -193,7 +193,7 @@ const Blog = ({ titlePage }) => {
             </div>
           </div>
           <div className="blog_products_block_title">
-            <Link className="class_link" to={item.node.uri} itemprop="url">
+            <Link className="class_link" to={item.node.uri}>
               {item.node.title}
             </Link>
           </div>
@@ -207,7 +207,7 @@ const Blog = ({ titlePage }) => {
       <div className="blog margin_bottom_240">
         <div className="view_title">
           <h2 className="title_62">{titlePage}</h2>
-          <Link className="active_link" to={"/blog/"} itemprop="url">
+          <Link className="active_link" to={"/blog/"}>
             View all
           </Link>
         </div>

@@ -19,7 +19,7 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
     if (!longList) {
       if (index < 6) {
         return (
-          <Link to={tag.node.uri} itemprop="url">
+          <Link to={tag.node.uri}>
             <button
               key={index}
               className={
@@ -35,7 +35,7 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
       }
     } else {
       return (
-        <Link to={tag.node.uri} itemprop="url">
+        <Link to={tag.node.uri}>
           <button
             key={index}
             className={
@@ -72,7 +72,9 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
 
   return (
     <div className="container">
-      <Breadcrumbs breadcrumbs={location} title={title} />
+      <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+        <Breadcrumbs breadcrumbs={location} title={title} />
+      </div>
       <div className="hero">
         <h1 className="hero__title title_80">
           {title}
