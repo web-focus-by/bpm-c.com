@@ -812,7 +812,7 @@ body {
 .portfolio_link {
   position: relative;
   text-decoration: none;
-  color: #935cff;
+  color: #1a1b1f;
   &::after {
     content: "";
     position: absolute;
@@ -823,13 +823,13 @@ body {
     bottom: -3px;
     left: 0;
     background-color: #935cff;
-    color: #935cff;
+    color: #1a1b1f;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
   &:hover {
     &::after {
-      color: #935cff;
+      color: #1a1b1f;
       transform: scaleX(0);
       transform-origin: bottom left;
     }
