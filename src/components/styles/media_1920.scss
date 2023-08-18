@@ -475,7 +475,6 @@
       grid-column-gap: calc(
         19px + (26 - 19) * ((100vw - 1366px) / (1920 - 1366))
       );
-      grid-row-gap: calc(43px + (60 - 43) * ((100vw - 1366px) / (1920 - 1366)));
 
       .services_list_item {
         border-radius: calc(
