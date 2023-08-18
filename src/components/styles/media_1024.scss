@@ -482,13 +482,7 @@
 
   .technologies {
     &__list {
-      //margin-left: calc(-33px + (-47 + 33) * ((100vw - 768px) / (900 - 768)));
       margin: 0 -30px;
-      .technologies_list_item {
-        p {
-          //font-size: calc(16px + (13 - 16) * ((100vw - 768px) / (1024 - 768)));
-        }
-      }
     }
   }
 

@@ -1455,6 +1455,9 @@ body {
 
 .bpm_cloud {
   display: grid;
+  &__title {
+    margin-top: 0;
+  }
 
   &__info {
     display: flex;

@@ -410,6 +410,9 @@
   }
 
   .bpm_cloud {
+    &__title {
+      margin-top: 0;
+    }
     &__info {
       .bpm_cloud_block {
         .bpm_cloud_block_title {
