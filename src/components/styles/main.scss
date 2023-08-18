@@ -423,7 +423,7 @@ body {
   padding-right: 60px;
   position: sticky;
   //margin-bottom: 277px;
-  top: 522px;
+  top: 775px;
   z-index: 3;
   .phone {
     // background: #9C7CF1 url(../../images/phone_butn.svg) no-repeat;
@@ -768,7 +768,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
-    grid-column-gap: 1%;
+    grid-column-gap: 36px;
     grid-row-gap: 0.5%;
 
     .portfolio_products_block {
