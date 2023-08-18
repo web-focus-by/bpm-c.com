@@ -1132,6 +1132,7 @@ body {
     .form_block_title {
       color: #ffffff;
       margin-bottom: 0;
+      margin-top: 0;
     }
 
     .form_block_info {
@@ -1187,17 +1188,16 @@ body {
 
     .form_block_wrapper {
       form {
-        padding-top: 40px;
 
         .form_line-wrapper {
           position: relative;
 
           &:first-child {
-            margin-bottom: 78px;
+            margin-bottom: 32px;
           }
 
           &:nth-child(2) {
-            margin-bottom: 58px;
+            margin-bottom: 32px;
           }
 
           input {
@@ -1209,7 +1209,7 @@ body {
             background-color: transparent;
             border-bottom: 1px solid #fff;
             width: 100%;
-            padding-bottom: 10px;
+            padding-bottom: 46px;
           }
 
           input:focus ~ label,
