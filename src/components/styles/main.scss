@@ -1299,7 +1299,7 @@ body {
     .services_list_item_wrapper {
       &:hover {
         .services_list_item {
-          transform: translateY(-18px);
+          transform: translateY(-50px);
           background: url(../../images/test.png) no-repeat;
           background-size: cover;
           background-position-x: 100%;
@@ -1307,6 +1307,7 @@ body {
           // background-position: 70% 80px;
 
           span {
+            transform: translateY(-18px);
             color: #ffffff;
           }
         }
