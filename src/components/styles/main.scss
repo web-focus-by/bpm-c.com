@@ -795,6 +795,21 @@ body {
       }
     }
 
+    .portfolio_products_block:hover {
+      .portfolio_products_block_list {
+        ul {
+          li {
+            background-color:#1A1B1F;
+            color: #ffffff;
+            a {
+              background-color:#1A1B1F;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+
     .portfolio_products_block_title {
       color: #1a1b1f;
       font-size: 30px;
