@@ -751,6 +751,9 @@
           background: url(../../images/test_375.svg) no-repeat;
           background-size: cover;
           background-position-x: 100%;
+          span {
+            transform: translateY(0);
+          }
         }
       }
     }
