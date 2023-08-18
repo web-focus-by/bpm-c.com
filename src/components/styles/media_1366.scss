@@ -131,10 +131,11 @@
       .header_nav_list {
         ul {
           li {
+            max-width: max-content;
+            margin-right: 42px;
             a,
             span {
               font-size: 13px;
-              margin-right: 42px;
             }
           }
         }
@@ -288,8 +289,8 @@
 
   .services {
     &__list {
-      grid-column-gap: 19px;
-      grid-row-gap: 43px;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
 
       .services_list_item {
         border-radius: 18px;
@@ -409,6 +410,10 @@
   }
 
   .bpm_cloud {
+    &__title {
+      margin-top: 0;
+      margin-bottom: 26px;
+    }
     &__info {
       .bpm_cloud_block {
         .bpm_cloud_block_title {
@@ -674,7 +679,6 @@
     margin: 230px 0;
 
     &__block {
-      margin-bottom: 40px;
 
       .leaders_choice_tagline_block_title {
         font-size: 44px;
