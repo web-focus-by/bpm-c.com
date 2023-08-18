@@ -1456,9 +1456,11 @@ body {
       .blog_products_block_list{
         ul {
           li {
-            background-color:#1A1B1F;
-            color: #ffffff;
-            border-radius: 80px;
+            a{
+              background-color:#1A1B1F;
+              color: #ffffff;
+              border-radius: 80px;
+            }
           }
         }
       }
