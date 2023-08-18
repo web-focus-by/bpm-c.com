@@ -3,14 +3,7 @@
     &:first-child {
         margin-left: 0px;
     }
-    &:last-child {
-        .breadcrumbs{
-            &:hover {
-                cursor: auto;
-                color: #1A1B1F;
-            }
-        }
-    }
+
     .breadcrumbs_span {
         margin-left: 21px;
     }
@@ -32,12 +25,9 @@
 }
 
 .span_breadcrumbs:last-child {
-    .breadcrumbs{
-        &:hover {
-            cursor: auto;
-            color: #1A1B1F;
-        }
-    }
+    cursor: auto;
+    color: #1A1B1F;
+    pointer-events: none;
 }
 
 @media (min-width: 1024px) and (max-width: 1366px) {
@@ -46,14 +36,7 @@
         &:first-child {
             margin-left: 0px;
         }
-        &:last-child {
-            .breadcrumbs{
-                &:hover {
-                    cursor: auto;
-                    color: #1A1B1F;
-                }
-            }
-        }
+
         .breadcrumbs_span {
             margin-left: 18px;
         }
@@ -72,13 +55,9 @@
             }
         }
     }
-
     .span_breadcrumbs:last-child {
-        .breadcrumbs{
-            &:hover {
-                cursor: auto;
-                color: #1A1B1F;
-            }
-        }
-    } 
+        cursor: auto;
+        color: #1A1B1F;
+        pointer-events: none;
+    }
 }
