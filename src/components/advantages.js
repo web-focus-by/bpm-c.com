@@ -47,24 +47,6 @@ const Advantages = ({}) => {
     }
   }
 
-  useEffect(() => {
-    if (widthScreen > 375) {
-      document.addEventListener("scroll", resizeBlock, true)
-      return () => {
-        if (document && document.getElementById("margin_240_black")) {
-          element = document.getElementById("margin_240_black")
-          if (typeof window !== "undefined") {
-            cssObj = window.getComputedStyle(element)
-            cssObjMarginLeft = cssObj.getPropertyValue("margin-left")
-            cssObjMarginRight = cssObj.getPropertyValue("margin-right")
-          } else {
-            cssObj = null
-          }
-        }
-        document.removeEventListener("scroll", resizeBlock, true)
-      }
-    }
-  }, [])
   return (
     <div
       ref={advantages}
