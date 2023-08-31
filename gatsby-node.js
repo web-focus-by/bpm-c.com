@@ -175,4 +175,44 @@ exports.createPages = async function ({ actions, graphql }) {
       },
     })
   })
+
+  const { createRedirect } = actions
+
+  createRedirect({
+    fromPath: `/about-us/blog/`,
+    toPath: `/blog/`,
+  })
+  createRedirect({
+    fromPath: `/news/`,
+    toPath: `/blog/`,
+  })
+  createRedirect({
+    fromPath: `/news/news-topic/`,
+    toPath: `/blog/`,
+  })
+  createRedirect({
+    fromPath: `/news/new-topic-two/`,
+    toPath: `/blog/`,
+  })
+  createRedirect({
+    fromPath: `/category/blog/`,
+    toPath: `/blog/`,
+  })
+  createRedirect({
+    fromPath: `/category/portfolio/`,
+    toPath: `/portfolio/ `,
+  })
+  createRedirect({
+    fromPath: `/category/news/`,
+    toPath: `/blog/`,
+  })
+  createRedirect({
+    fromPath: `/category/uncategorized/`,
+    toPath: `/`,
+  })
+  createRedirect({
+    fromPath: `/services/it-outsourcing/development-outsourcing-on-angularjs/`,
+    toPath: `/services/it-outsourcing/angular-development-outsourcing/`,
+  })
+
 }
