@@ -4,6 +4,7 @@ import { fractionContent } from "../utils/fractionContent"
 import Layout from "../components/layout"
 import Breadcrumbs from "../components/breadcrumbs/breadcrumbs"
 import Seo from "../components/seo"
+import ScriptLDFQA from "../components/ScriptLDFQA"
 import "../components/styles/main.scss"
 import "../components/styles/icons.scss"
 import "../components/styles/modules.scss"
@@ -68,6 +69,7 @@ const Faq = ({ location, data }) => {
         </div>
         <Seo title="FAQ" />
       </Layout>
+      <ScriptLDFQA/>
     </>
   )
 }
