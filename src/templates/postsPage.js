@@ -26,7 +26,6 @@ const PostsPage = ({ location, pageContext, data }) => {
         <Blog titlePage="Other news"></Blog>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
-      <ScriptLDBlog/>
     </>
   )
 }
