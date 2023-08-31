@@ -5,6 +5,7 @@ import HeroPost from "../components/heroPosts/heroPost"
 import ContentPost from "../components/contentPost/contentPost"
 import LeadersChoiceForPortfolios from "../components/leadersChoiceForPortfolios/leadersChoiceForPortfolios"
 import Blog from "../components/blog"
+import ScriptLDBlog from "../components/ScriptLDBlog"
 
 const PostsPage = ({ location, pageContext, data }) => {
   console.log(pageContext.featuredImage.node);
@@ -25,6 +26,7 @@ const PostsPage = ({ location, pageContext, data }) => {
         <Blog titlePage="Other news"></Blog>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
       </Layout>
+      <ScriptLDBlog/>
     </>
   )
 }

@@ -65,12 +65,24 @@ const ORG_SCHEMA = JSON.stringify({
 	},
 	"image": "https://wp.bpm-c.com/wp-content/uploads/2022/08/logo.svg"
 });
+
+const WEB_SCHEMA = JSON.stringify({
+    "@context":"http://schema.org",
+    "@type":"WebSite",
+    "url":"https://bpm-c.com/",
+    "name":"BPM Cloud",
+    "sameAs": [
+      "https://www.instagram.com/bpm_cloud/",
+      "https://www.facebook.com/bpm.it1"
+    ]
+  });
   
   const ScriptLD = () => {
       return (
         <>
         <script type='application/ld+json' dangerouslySetInnerHTML={ { __html: ORG_SCHEMA} } />
         <script type='application/ld+json' dangerouslySetInnerHTML={ { __html: LOCAL_SCHEMA} } />
+        <script type='application/ld+json' dangerouslySetInnerHTML={ { __html: WEB_SCHEMA} } />
         </>
       )
   }
