@@ -210,5 +210,9 @@ exports.createPages = async function ({ actions, graphql }) {
     fromPath: `/category/uncategorized/`,
     toPath: `/`,
   })
+  createRedirect({
+    fromPath: `/services/it-outsourcing/development-outsourcing-on-angularjs/`,
+    toPath: `/services/it-outsourcing/angular-development-outsourcing/`,
+  })
 
 }
