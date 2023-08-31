@@ -1,4 +1,22 @@
 .service_how_to {
     display: flex;
     gap: 145px;
+
+    .service_how_item {
+        div {
+            display: none;
+        }
+    }
+
+    .service_how_item__two {
+        p {
+            display: none;
+        }
+
+        div {
+            p {
+                display: block;
+            }
+        }
+    }
 }

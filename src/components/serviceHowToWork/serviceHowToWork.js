@@ -10,27 +10,32 @@ import "../../components/styles/media_1024.scss"
 import "../../components/styles/media_768.scss"
 import "../../components/styles/media_375.scss"
 import "../../components/resultsOfWebDesign/resultsOfWebDesign.scss"
+import "./serviceHowToWork.scss"
 
 const ServiceHowToWork = ({ content }) => {
   if (content) {
     const title = content.title.replace(/<[^>]+>/g, "")
     return (
         <div className="container">
-        <div className="service_how_to margin_bottom_240">
-          <div className="result_web_design_choice">
-            <h2
-              className="result_web_design_choice__title title_62 service-item__subtitle"
-              dangerouslySetInnerHTML={{ __html: title }}
-            />
-            <div className="result_web_design_choice__block">
+          <div className="margin_bottom_240">
+            <div className="result_web_design_choice__block service_how_to">
+              <div className="result_web_design_choice_block_list font_18">
+                <h2
+                  className="result_web_design_choice__title title_62 service-item__subtitle"
+                  dangerouslySetInnerHTML={{ __html: title }}
+                />
+                <div
+                  className="result_web_design_choice_block_list font_18 service_how_item"
+                  dangerouslySetInnerHTML={{ __html: content.content.join("") }}
+                />
+              </div>
               <div
-                className="result_web_design_choice_block_list font_18 engagement-item"
+                className="result_web_design_choice_block_list font_18 service_how_item__two"
                 dangerouslySetInnerHTML={{ __html: content.content.join("") }}
               />
             </div>
           </div>
         </div>
-      </div>
     )
   }
 }

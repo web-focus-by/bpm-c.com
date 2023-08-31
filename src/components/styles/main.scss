@@ -39,22 +39,20 @@ body {
           display: inline-block;
           padding-bottom: 20px;
           border-bottom: 4px solid transparent;
+          max-width: max-content;
+          margin-right: 60px;
           &:hover {
             border-bottom: 4px solid #935cff;
             transition: 100ms;
           }
 
           &:last-child {
-            a,
-            span {
-              margin-right: 0;
-            }
+            margin-right: 0;
           }
 
           a,
           span {
             text-decoration: none;
-            margin-right: 60px;
             color: #1a1b1f;
             font-weight: 500;
 
@@ -70,7 +68,7 @@ body {
 }
 
 .service-item__title {
-  max-width: 832px;
+  max-width: 832px !important;
 }
 
 .service-item__subtitle {
@@ -81,80 +79,6 @@ body {
 
 .service-item__content {
   width: 993px;
-}
-
-.benefits-item {
-  max-width: 1102px;
-
-  div {
-    display: flex;
-    align-items: flex-start;
-    gap: 26px;
-    border-radius: 25px;
-
-    div {
-      background-color: #e1daf4;
-      height: 375px;
-      width: 350px;
-      padding: 30px 20px 0 20px;
-      display: block;
-      p:first-child {
-        display: none !important;
-      }
-
-      h4 {
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 110%;
-      }
-
-      p {
-        span {
-          width: 100%;
-          padding: 26px 0 0;
-          height: auto;
-        }
-      }
-    }
-
-    // div:first-child {
-    //   p:first-child {
-    //     display: none !important;
-    //   }
-    //   span:first-child {
-    //     display: block;
-    //     background: url(../../images/Globe.svg) no-repeat;
-    //     width: 30px;
-    //     height: 30px;
-    //     padding: 0;
-    //   }
-    // }
-    // div {
-    //   p:first-child {
-    //     display: none !important;
-    //   }
-    //   span:first-child {
-    //     display: block;
-    //     background: url(../../images/Rocket.svg) no-repeat;
-    //     width: 30px;
-    //     height: 30px;
-    //     padding: 0;
-    //   }
-    // }
-    // div:last-child {
-    //   p:first-child {
-    //     display: none !important;
-    //   }
-    //   span:first-child {
-    //     display: block;
-    //     background: url(../../images/Trophy.svg) no-repeat;
-    //     width: 30px;
-    //     height: 30px;
-    //     padding: 0;
-    //   }
-    // }
-  }
 }
 
 .engagement-item {
@@ -247,7 +171,7 @@ body {
       padding: 30px 20px 0 20px;
 
       p:first-child {
-        display: none !important;
+        color: #1A1B1F;
       }
 
       h4 {
@@ -1929,7 +1853,7 @@ body {
 
   &__block {
     display: flex;
-    margin-bottom: 56px;
+    margin-bottom: 8px;
 
     .leaders_choice_tagline_block_title {
       font-weight: 500;
@@ -2390,4 +2314,9 @@ body {
   100% {
     left: 60%;
   }
+}
+
+
+.leaders_choice_tagline__block {
+  align-items: center;
 }
