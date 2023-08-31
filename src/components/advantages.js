@@ -65,6 +65,7 @@ const Advantages = ({}) => {
       }
     }
   }, [])
+
   return (
     <div
       ref={advantages}

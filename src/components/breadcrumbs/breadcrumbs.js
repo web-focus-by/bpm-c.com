@@ -12,6 +12,9 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
     breadcrumbs && breadcrumbs.href
       ? breadcrumbs.href.split("/").slice(1, -1).slice(1)
       : ""
+
+  console.log(title);
+
   if (pathname) {
     breadcrumbItems = filePath
       ? filePath.map((item, index) => {
@@ -23,14 +26,14 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
           let link = host === item.toLowerCase() ? domain.toLowerCase() : domain.toLowerCase() + "/" + path.toLowerCase()
           if (breadcrumbs.pathname !== "/") {
             return (
-              <span key={index} className="span_breadcrumbs" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                <Link className="breadcrumbs" to={`${link}`} itemprop="url">
-                  {item === breadcrumbs.host
-                    ? item.replace(item, "Home")
-                    : filePath.length - 1 === index
+              <span key={index} className="span_breadcrumbs" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <Link className="breadcrumbs" to={`${link}`} itemtype="http://schema.org/Thing" itemprop="item">
+                  <span itemprop="name">{ index === 0 ?
+                  "IT Company" :
+                   filePath.length - 1 === index
                     ? `${title.charAt(0).toUpperCase() + title.slice(1)}`
-                    : item.replace("-", " ")}
-                    <meta itemprop="position" content={index} /> 
+                    : item.replace("-", " ")} </span>
+                    <meta itemprop="position" content={+index + 1} />
                 </Link>
                 <span className="breadcrumbs_span">
                   {index === filePath.length - 1 ? "" : "/"}
@@ -45,9 +48,9 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
 
   return (
     <div>
-      <div>
+      <ul>
         {breadcrumbItems}
-        </div>
+        </ul>
     </div>
   )
 }

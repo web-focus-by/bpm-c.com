@@ -32,7 +32,7 @@ const Hero = ({ location }) => {
           classic techniques and the most innovative world-class approaches.
         </div>
         <div className="hero__butn">
-          <Link className="link_btn" to={"/portfolio/"} itemprop="url">
+          <Link className="link_btn" to={"/portfolio/"}>
             <button className="button_white">
               View work<span className="arrow_black" itemprop="name"></span>
             </button>

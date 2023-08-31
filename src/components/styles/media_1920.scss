@@ -159,11 +159,11 @@
       .header_nav_list {
         ul {
           li {
+            margin-right: calc(
+                42px + (60 - 42) * ((100vw - 1366px) / (1920 - 1366))
+            );
             a,
             span {
-              margin-right: calc(
-                42px + (60 - 42) * ((100vw - 1366px) / (1920 - 1366))
-              );
               font-size: calc(
                 13px + (18 - 13) * ((100vw - 1366px) / (1920 - 1366))
               );
@@ -176,7 +176,7 @@
 
   .phone_butn {
     padding-right: calc(42px + (60 - 42) * ((100vw - 1366px) / (1920 - 1366)));
-    top: 522px;
+    top: 775px;
     .phone {
       width: calc(114px + (160 - 114) * ((100vw - 1366px) / (1920 - 1366)));
       height: calc(114px + (160 - 114) * ((100vw - 1366px) / (1920 - 1366)));
@@ -475,7 +475,6 @@
       grid-column-gap: calc(
         19px + (26 - 19) * ((100vw - 1366px) / (1920 - 1366))
       );
-      grid-row-gap: calc(43px + (60 - 43) * ((100vw - 1366px) / (1920 - 1366)));
 
       .services_list_item {
         border-radius: calc(
@@ -776,7 +775,7 @@
   }
 
   .company_description {
-    column-gap: 50px;
+    column-gap: 19px;
 
     &__info {
       ul {
@@ -909,9 +908,6 @@
     margin: calc(230px + (320 - 230) * ((100vw - 1366px) / (1920 - 1366))) 0;
 
     &__block {
-      margin-bottom: calc(
-        40px + (56 - 49) * ((100vw - 1366px) / (1920 - 1366))
-      );
 
       .leaders_choice_tagline_block_title {
         font-size: 62px;

@@ -14,8 +14,8 @@ import "../../components/styles/media_375.scss"
 const HeroNews = ({ location, title }) => {
   return (
     <div className="container">
-      <div class="breacrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
-      <Breadcrumbs breadcrumbs={location} title={title} />
+      <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+        <Breadcrumbs breadcrumbs={location} title={title} />
       </div>
       <div className="hero margin_bottom_60">
         <h1 className="hero__title title_80">
