@@ -44,7 +44,7 @@ const Header = ({
           ref={el => (menuItemsRef.current[index] = el)}
           key={index}
         >
-          <Link to={item.path} itemprop="url">{item.label}</Link>
+          <Link to={item.path} itemprop="url"><span itemprop="name">{item.label}</span></Link>
         </li>
       )
     } else {
@@ -55,7 +55,7 @@ const Header = ({
           key={index}
           onClick={activeMenu}
         >
-          <span>{item.label}</span>
+          <span itemprop="name">{item.label}</span>
         </li>
       )
     }
@@ -98,7 +98,7 @@ const Header = ({
               <span className="logo" itemprop="name"></span>
             </Link>
           </div>
-          <div className="header_nav_list" ref={refHeader} itemscope itemtype="https://schema.org/SiteNavigationElement">
+          <div className="header_nav_list" ref={refHeader} itemscope="" itemtype="https://schema.org/SiteNavigationElement">
             <ul>{menuItems}</ul>
           </div>
           <div
