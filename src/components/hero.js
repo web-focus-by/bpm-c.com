@@ -15,7 +15,7 @@ import "../components/styles/media_375.scss"
 const Hero = ({ location }) => {
   return (
     <div className="container">
-      <div class="breacrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+      <div class="breacrumbs-list">
       <Breadcrumbs
         className="display_none"
         breadcrumbs={location}
