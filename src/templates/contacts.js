@@ -261,8 +261,7 @@ const Contacts = ({ location }) => {
                           </button>
                         </div>
                         <p>
-                          By pressing the button, I agree for the processing of
-                          personal data
+                          I agree to the Privacy Policy and Terms of Service
                         </p>
                       </div>
                     </form>
