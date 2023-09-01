@@ -1,0 +1,9 @@
+# Redirects from what the browser requests to what we serve
+/about-us/blog              /blog
+/news                       /blog
+/news/news-topic            /blog
+/news/new-topic-two         /blog
+/category/blog              /blog
+/category/portfolio         /portfolio
+/category/news              /blog
+/category/uncategorized     /
