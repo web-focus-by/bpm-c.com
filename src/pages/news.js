@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Redirect } from "react-router-dom"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -60,12 +61,13 @@ const News = ({ location }) => {
 
   return (
     <>
-      <Layout>
+      <Redirect to='/blog' />
+      {/* <Layout>
         <Seo title="blog" />
         <HeroNews location={location} title="Blog"></HeroNews>
         <ListOfNews posts={allPosts} tags={allTags}></ListOfNews>
         <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
-      </Layout>
+      </Layout> */}
     </>
   )
 }
