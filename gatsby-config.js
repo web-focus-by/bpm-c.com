@@ -134,40 +134,40 @@ module.exports = {
         redirect: [
           'RewriteRule ^not-existing-url/?$ /existing-url [R=301,L,NE]',
           {
-            from: '/about-us/blog',
-            to: 'https://bpm-c.com/blog',
+            from: '/about-us/blog/',
+            to: '/blog/',
           },
           {
-            from: '/news',
-            to: 'https://bpm-c.com/blog',
+            from: '/news/',
+            to: '/blog/',
           },
           {
             from: '/news/news-topic',
-            to: 'https://bpm-c.com/blog',
+            to: '/blog/',
           },
           {
-            from: '/news/new-topic-two',
-            to: 'https://bpm-c.com/blog',
+            from: '/news/new-topic-two/',
+            to: '/blog/',
           },
           {
-            from: '/category/blog',
-            to: 'https://bpm-c.com/blog',
+            from: '/category/blog/',
+            to: '/blog/',
           },
           {
-            from: '/category/portfolio',
-            to: 'https://bpm-c.com/portfolio',
+            from: '/category/portfolio/',
+            to: '/portfolio/',
           },
           {
-            from: '/category/news',
-            to: 'https://bpm-c.com/blog',
+            from: '/category/news/',
+            to: '/blog/',
           },
           {
-            from: '/category/uncategorized',
-            to: 'https://bpm-c.com/',
+            from: '/category/uncategorized/',
+            to: '/',
           },
           {
-            from: '/services/it-outsourcing/development-outsourcing-on-angularjs',
-            to: 'https://bpm-c.com/services/it-outsourcing/angular-development-outsourcing/',
+            from: '/services/it-outsourcing/development-outsourcing-on-angularjs/',
+            to: '/services/it-outsourcing/angular-development-outsourcing/',
           },
         ],
       },
