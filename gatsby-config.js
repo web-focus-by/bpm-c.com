@@ -126,54 +126,50 @@ module.exports = {
         www: false,
         SymLinksIfOwnerMatch: true,
         host: 'https://bpm-c.com/', // if 'www' is set to 'false', be sure to also remove it here!
-        ErrorDocument: `
-          ErrorDocument 401 /error_pages/401.html
-          ErrorDocument 404 /error_pages/404.html
-          ErrorDocument 500 /error_pages/500.html
-        `,
+        // ErrorDocument: `
+        //   ErrorDocument 401 /error_pages/401.html
+        //   ErrorDocument 404 /error_pages/404.html
+        //   ErrorDocument 500 /error_pages/500.html
+        // `,
         redirect: [
           'RewriteRule ^not-existing-url/?$ /existing-url [R=301,L,NE]',
           {
-            from: 'https://bpm-c.com/about-us/blog/',
-            to: 'https://bpm-c.com/blog/',
+            from: '/about-us/blog',
+            to: 'https://bpm-c.com/blog',
           },
           {
-            from: 'https://bpm-c.com/news/',
-            to: 'https://bpm-c.com/blog/',
+            from: '/news',
+            to: 'https://bpm-c.com/blog',
           },
           {
-            from: 'https://bpm-c.com/news/news-topic/',
-            to: 'https://bpm-c.com/blog/',
+            from: '/news/news-topic',
+            to: 'https://bpm-c.com/blog',
           },
           {
-            from: 'https://bpm-c.com/news/new-topic-two/',
-            to: 'https://bpm-c.com/blog/',
+            from: '/news/new-topic-two',
+            to: 'https://bpm-c.com/blog',
           },
           {
-            from: 'https://bpm-c.com/category/blog/',
-            to: 'https://bpm-c.com/blog/',
+            from: '/category/blog',
+            to: 'https://bpm-c.com/blog',
           },
           {
-            from: 'https://bpm-c.com/category/portfolio/',
-            to: 'https://bpm-c.com/portfolio/',
+            from: '/category/portfolio',
+            to: 'https://bpm-c.com/portfolio',
           },
           {
-            from: 'https://bpm-c.com/category/news/',
-            to: 'https://bpm-c.com/blog/',
+            from: '/category/news',
+            to: 'https://bpm-c.com/blog',
           },
           {
-            from: 'https://bpm-c.com/category/uncategorized/',
+            from: '/category/uncategorized',
             to: 'https://bpm-c.com/',
           },
           {
-            from: 'https://bpm-c.com/services/it-outsourcing/development-outsourcing-on-angularjs/',
+            from: '/services/it-outsourcing/development-outsourcing-on-angularjs',
             to: 'https://bpm-c.com/services/it-outsourcing/angular-development-outsourcing/',
           },
         ],
-        custom: `
-            # This is a custom rule!
-            # This is a another custom rule!
-        `,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
