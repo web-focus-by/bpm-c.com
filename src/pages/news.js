@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Navigate } from "react-router-dom"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -59,20 +58,16 @@ const News = ({ location }) => {
   const allTags = PostsAndTags ? PostsAndTags.allWpTag.edges : []
   const allPosts = PostsAndTags ? PostsAndTags.allWpPost.edges : []
 
-  if(typeof document !== 'undefined') {
-    return ( <Navigate to='/blog' /> )
-  } else {
-    return (
-      <>
-        <Layout>
-          <Seo title="blog" />
-          <HeroNews location={location} title="Blog"></HeroNews>
-          <ListOfNews posts={allPosts} tags={allTags}></ListOfNews>
-          <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
-        </Layout>
-      </>
-    )
-  }
+  return (
+    <>
+      <Layout>
+        <Seo title="blog" />
+        <HeroNews location={location} title="Blog"></HeroNews>
+        <ListOfNews posts={allPosts} tags={allTags}></ListOfNews>
+        <LeadersChoiceForPortfolios></LeadersChoiceForPortfolios>
+      </Layout>
+    </>
+  )
 }
 
 export default News

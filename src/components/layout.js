@@ -1,6 +1,5 @@
 import * as React from "react"
 import { useState, useEffect, useRef } from "react"
-import { BrowserRouter } from "react-router-dom"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
@@ -110,97 +109,48 @@ const Layout = ({ children }) => {
     setModalActive(true)
   }
 
-  if(typeof document !== 'undefined') {
-    return (
-      <>
-        <BrowserRouter>
-        <div className="header" ref={refMenu}>
-          <Header
-            turnOnMenu={closeOpenMenu}
-            mainItems={mainItems}
-            clickOut={isClickOut}
-            justTurnOnMenu={onlyTurnOnMenu}
-            justTurnOffMenu={closeMenu}
-            openCloseMenu={openCloseMenu}
-          />
-          <DropdownServices
-            isToggle={isToggle}
-            turnOffMenu={closeMenu}
-            selectedItem={selectedItem}
-            allItems={allItemsForMenu}
-          />
-          <MenuBurger
-            isOpenBurgerMenu={isOpenBurgerMenu}
-            mainItems={mainItems}
-            allItems={allItemsForMenu}
-            clickOut={isClickOut}
-          />
-        </div>
-        <PhoneBtn onClick={toggleModalActive}></PhoneBtn>
-        {isOpen && isShowModal ? (
-          <Modal
-            onClickClose={toggleModalActive}
-            showThankForm={showThankFormModal}
-          ></Modal>
-        ) : null}
-        {isShowThankModal ? (
-          <ThanksModal
-            onClickClose={toggleModalActive}
-            backPageModal={backPageModal}
-          ></ThanksModal>
-        ) : null}
-        {children}
-        <Footer></Footer>
-        <ScriptLD/>
-        </BrowserRouter>
-      </>
-    )
-  } else {
-    return (
-      <>
-        <div className="header" ref={refMenu}>
-          <Header
-            turnOnMenu={closeOpenMenu}
-            mainItems={mainItems}
-            clickOut={isClickOut}
-            justTurnOnMenu={onlyTurnOnMenu}
-            justTurnOffMenu={closeMenu}
-            openCloseMenu={openCloseMenu}
-          />
-          <DropdownServices
-            isToggle={isToggle}
-            turnOffMenu={closeMenu}
-            selectedItem={selectedItem}
-            allItems={allItemsForMenu}
-          />
-          <MenuBurger
-            isOpenBurgerMenu={isOpenBurgerMenu}
-            mainItems={mainItems}
-            allItems={allItemsForMenu}
-            clickOut={isClickOut}
-          />
-        </div>
-        <PhoneBtn onClick={toggleModalActive}></PhoneBtn>
-        {isOpen && isShowModal ? (
-          <Modal
-            onClickClose={toggleModalActive}
-            showThankForm={showThankFormModal}
-          ></Modal>
-        ) : null}
-        {isShowThankModal ? (
-          <ThanksModal
-            onClickClose={toggleModalActive}
-            backPageModal={backPageModal}
-          ></ThanksModal>
-        ) : null}
-        {children}
-        <Footer></Footer>
-        <ScriptLD/>
-      </>
-    )
-  }
-
-
+  return (
+    <>
+      <div className="header" ref={refMenu}>
+        <Header
+          turnOnMenu={closeOpenMenu}
+          mainItems={mainItems}
+          clickOut={isClickOut}
+          justTurnOnMenu={onlyTurnOnMenu}
+          justTurnOffMenu={closeMenu}
+          openCloseMenu={openCloseMenu}
+        />
+        <DropdownServices
+          isToggle={isToggle}
+          turnOffMenu={closeMenu}
+          selectedItem={selectedItem}
+          allItems={allItemsForMenu}
+        />
+        <MenuBurger
+          isOpenBurgerMenu={isOpenBurgerMenu}
+          mainItems={mainItems}
+          allItems={allItemsForMenu}
+          clickOut={isClickOut}
+        />
+      </div>
+      <PhoneBtn onClick={toggleModalActive}></PhoneBtn>
+      {isOpen && isShowModal ? (
+        <Modal
+          onClickClose={toggleModalActive}
+          showThankForm={showThankFormModal}
+        ></Modal>
+      ) : null}
+      {isShowThankModal ? (
+        <ThanksModal
+          onClickClose={toggleModalActive}
+          backPageModal={backPageModal}
+        ></ThanksModal>
+      ) : null}
+      {children}
+      <Footer></Footer>
+      <ScriptLD/>
+    </>
+  )
 }
 
 Layout.propTypes = {
