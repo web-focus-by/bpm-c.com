@@ -98,7 +98,7 @@ const Contacts = ({ location }) => {
                 </div>
                 <div className="contacts_value">
                   <ul>
-                    <li key="phoneNumber"><a href="tel:+19295479159">+ 1 929 547 9159 USA</a><br/><a href="tel:+16474939093">+ 1 647 493 9093 Canada</a></li>
+                    <li key="phoneNumber"><a href="tel:+19295479159">+ 1 929 547 9159 USA</a><a href="tel:+16474939093">+ 1 647 493 9093 Canada</a></li>
                     <li key="mail"><a href="mailto:hello@bpmcloud.com">hello@bpmcloud.com</a></li>
                     <li key="socialMediaLinks">{socialMedia}</li>
                   </ul>
@@ -279,7 +279,7 @@ const Contacts = ({ location }) => {
                           id="message"
                           autoComplete="off"
                           name="message"
-                          className="contact_form-mess input-mess contact_form_mess input-yellow"
+                          className="contact_form-phone input-phone contact_form_phone input-yellow"
                           onChange={e => {
                             setMessageValue(e.target.value)
                           }}
@@ -287,6 +287,7 @@ const Contacts = ({ location }) => {
                         />
                         <label>Message</label>
                       </div>
+
                       <div className="contact_form_block_send">
                         <div>
                           <button className="button_white" type="submit">
