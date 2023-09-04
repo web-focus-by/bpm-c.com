@@ -208,7 +208,7 @@ const Contacts = ({ location }) => {
                         clear()
                       }}
                     >
-                      <div className="contact_form_line-wrapper">
+                      {/* <div className="contact_form_line-wrapper">
                         <input
                           id="company"
                           value={companyValue}
@@ -222,7 +222,7 @@ const Contacts = ({ location }) => {
                           required
                         />
                         <label>Company</label>
-                      </div>
+                      </div> */}
 
                       <div className="contact_form_line-wrapper">
                         <input

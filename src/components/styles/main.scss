@@ -934,7 +934,7 @@ body {
 }
 
 .contacts {
-  margin-top: 60px;
+  margin-top: 80px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -971,6 +971,7 @@ body {
         font-size: 24px;
         line-height: 100%;
         color: #1a1b1f;
+        margin-top: -20px;
         ul {
           padding: 0;
           margin: 0;
@@ -987,7 +988,6 @@ body {
 
           li:first-child {
             flex-direction: column;
-            margin-top: -30px;
           }
         }
       }
