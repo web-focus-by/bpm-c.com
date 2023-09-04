@@ -75,6 +75,7 @@ const Contacts = ({ location }) => {
             <h1 className="hero__title title_62">
               Contacts<span className="phone_icon"></span>
             </h1>
+            <p className="hero__description">Feel free to get in touch with us by filling out our contact form. Your insights and details will enable us to understand your needs accurately and provide you with the best assistance possible. We look forward to assisting you at the earliest convenience.</p>
           </div>
           <div className="header_circle_yellow"></div>
           <div className="header_circle_pink"></div>
