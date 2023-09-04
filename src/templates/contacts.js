@@ -88,13 +88,13 @@ const Contacts = ({ location }) => {
                   <ul>
                     <li key="phone">Phone</li>
                     <li key="e-mail">E-mail</li>
-                    <li key="socialMedia">Social media</li>
+                    <li key="socialMedia">Social media / messangers</li>
                   </ul>
                 </div>
                 <div className="contacts_value">
                   <ul>
-                    <li key="phoneNumber">+ 375 29 715 05 86</li>
-                    <li key="mail">info@bpmcloud.com</li>
+                    <li key="phoneNumber"><a href="tel:+19295479159">+ 1 929 547 9159 USA</a><br><a href="tel:+16474939093">+ 1 647 493 9093 Canada</a></li>
+                    <li key="mail"><a href="mailto:hello@bpmcloud.com">hello@bpmcloud.com</a></li>
                     <li key="socialMediaLinks">{socialMedia}</li>
                   </ul>
                 </div>
@@ -254,9 +254,9 @@ const Contacts = ({ location }) => {
                             Send<span className="arrow_black"></span>
                           </button>
                         </div>
-                        <p>
+                        <input type="checkbox">
                           I agree to the Privacy Policy and Terms of Service
-                        </p>
+                        </input>
                       </div>
                     </form>
                   </div>
