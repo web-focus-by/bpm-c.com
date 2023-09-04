@@ -58,6 +58,11 @@ const News = ({ location }) => {
   const allTags = PostsAndTags ? PostsAndTags.allWpTag.edges : []
   const allPosts = PostsAndTags ? PostsAndTags.allWpPost.edges : []
 
+  if(typeof window !== 'undefined') {
+    console.log(window.location.pathname);
+  }
+
+
   return (
     <>
       <Layout>

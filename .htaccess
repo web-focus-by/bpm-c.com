@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+Redirect 301 /about-us/blog/ https://bpm-c.com/blog/
+Redirect 301 /news/ https://bpm-c.com/blog/
+Redirect 301 /news/news-topic/ https://bpm-c.com/blog/
+Redirect 301 /news/new-topic-two/ https://bpm-c.com/blog/
+Redirect 301 /category/blog/ https://bpm-c.com/blog/
+Redirect 301 /category/news/ https://bpm-c.com/blog/
+Redirect 301 /category/portfolio/ https://bpm-c.com/portfolio/
+Redirect 301 /category/uncategorized/ https://bpm-c.com/
