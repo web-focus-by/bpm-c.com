@@ -40,8 +40,6 @@ const Contacts = ({ location }) => {
   const socialMaediaLinks = [
     { link: "#", name: "insta" },
     { link: "#", name: "facebook" },
-    { link: "#", name: "link" },
-    { link: "#", name: "behance" },
   ]
 
   const socialMedia = socialMaediaLinks.map((val, index) => {
@@ -90,7 +88,6 @@ const Contacts = ({ location }) => {
                   <ul>
                     <li key="phone">Phone</li>
                     <li key="e-mail">E-mail</li>
-                    <li key="address">Address</li>
                     <li key="socialMedia">Social media</li>
                   </ul>
                 </div>
@@ -98,9 +95,6 @@ const Contacts = ({ location }) => {
                   <ul>
                     <li key="phoneNumber">+ 375 29 715 05 86</li>
                     <li key="mail">info@bpmcloud.com</li>
-                    <li key="addressValue">
-                      Independence Avenue, 77, office 53
-                    </li>
                     <li key="socialMediaLinks">{socialMedia}</li>
                   </ul>
                 </div>
@@ -270,7 +264,7 @@ const Contacts = ({ location }) => {
               </div>
             </div>
           </div>
-          <div className="margin_bottom_240">
+          {/* <div className="margin_bottom_240">
             <iframe
               title="address of office on google map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.544970835492!2d27.596358815992996!3d53.9220613391322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf5d99239d81%3A0x9abeb6f83c6393fb!2z0L_RgC4g0J3QtdC30LDQstC40YHQuNC80L7RgdGC0LggNzcsINCc0LjQvdGB0Lo!5e0!3m2!1sru!2sby!4v1664284593785!5m2!1sru!2sby"
@@ -281,7 +275,7 @@ const Contacts = ({ location }) => {
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div>
+          </div> */}
         </div>
       </Layout>
     </>
