@@ -255,8 +255,8 @@ const Contacts = ({ location }) => {
                             Send<span className="arrow_black"></span>
                           </button>
                         </div>
-                        <input type="checkbox"/>
-                        <label htmlFor="">I agree to the Privacy Policy and Terms of Service</label>
+                        <input type="checkbox" id="agree" name="agree" value="yes"/>
+                        <label htmlFor="agree">I agree to the Privacy Policy and Terms of Service</label>
                       </div>
                     </form>
                   </div>
