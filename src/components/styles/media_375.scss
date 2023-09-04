@@ -364,6 +364,7 @@
             top: 585px;
             padding: 0;
             margin: 0;
+            width: max-content;
             li {
               display: flex;
               list-style: none;
@@ -385,7 +386,7 @@
         background-position: 110px 165px;
         &__block {
           color: #1a1b1f;
-          width: 120%;
+          width: 95%;
           .contact_form_block_buttons_title {
             width: 100%;
             font-family: "Acrom", sans-serif;
