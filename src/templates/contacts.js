@@ -93,7 +93,7 @@ const Contacts = ({ location }) => {
                 </div>
                 <div className="contacts_value">
                   <ul>
-                    <li key="phoneNumber"><a href="tel:+19295479159">+ 1 929 547 9159 USA</a><br><a href="tel:+16474939093">+ 1 647 493 9093 Canada</a></li>
+                    <li key="phoneNumber"><a href="tel:+19295479159">+ 1 929 547 9159 USA</a><br/><a href="tel:+16474939093">+ 1 647 493 9093 Canada</a></li>
                     <li key="mail"><a href="mailto:hello@bpmcloud.com">hello@bpmcloud.com</a></li>
                     <li key="socialMediaLinks">{socialMedia}</li>
                   </ul>
@@ -254,9 +254,8 @@ const Contacts = ({ location }) => {
                             Send<span className="arrow_black"></span>
                           </button>
                         </div>
-                        <input type="checkbox">
-                          I agree to the Privacy Policy and Terms of Service
-                        </input>
+                        <input type="checkbox"/>
+                        <label htmlFor="">I agree to the Privacy Policy and Terms of Service</label>
                       </div>
                     </form>
                   </div>
