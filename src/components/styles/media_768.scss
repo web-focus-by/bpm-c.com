@@ -70,6 +70,15 @@
       font-size: 16px;
       margin-bottom: clamp(30px, 10vw, 50px);
     }
+
+    &__description {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: #5c5c5c;
+      width: 560px;
+      margin-top: 0;
+    }
   }
 
   .portfolio {
