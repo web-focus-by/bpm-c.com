@@ -325,13 +325,14 @@
 
   .contacts {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     &__contact {
       width: 100%;
       .contacts_table {
         display: flex;
         gap: 5%;
         justify-content: space-between;
+        width: 290px;
         .contacts_label {
           width: 35%;
           font-family: "Acrom", sans-serif;
@@ -346,7 +347,7 @@
             li {
               display: flex;
               list-style: none;
-              margin-bottom: 80px;
+              margin-bottom: 89px;
             }
           }
         }
@@ -355,27 +356,31 @@
           font-family: "Acrom", sans-serif;
           font-style: normal;
           font-weight: 500;
-          font-size: 24px;
+          font-size: 20px;
           line-height: 100%;
           color: #1a1b1f;
+          margin-top: -18px;
           ul {
+            position: absolute;
+            left: 16px;
             padding: 0;
             margin: 0;
             li {
               display: flex;
               list-style: none;
               margin-bottom: 60px;
-              margin-right: 10px;
+            }
+            li:first-child {
+              margin-bottom: 30px;
             }
           }
         }
       }
     }
     &__contacts_form {
-      width: 100%;
+      width: 290px;
       .contact_form {
         border-radius: 40px;
-        padding: 0 125px 10px 98px;
         display: grid;
         grid-template-columns: 1.03fr 0.97fr;
         background-position: 110px 165px;
@@ -481,7 +486,10 @@
                 margin-top: 60px;
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
+                align-items: start;
+                flex-direction: column;
+                row-gap: 25px;
+                width: 290px;
 
                 .button_white {
                   padding: 22px 40px;

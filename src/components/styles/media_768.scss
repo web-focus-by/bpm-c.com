@@ -1644,15 +1644,15 @@
     .contacts {
       margin-top: 60px;
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       &__contact {
         width: 100%;
         .contacts_table {
           display: flex;
           gap: 5%;
           justify-content: space-between;
+          width:545px;
           .contacts_label {
-            width: 35%;
             font-family: "Acrom", sans-serif;
             font-style: normal;
             font-weight: 400;
@@ -1670,7 +1670,7 @@
             }
           }
           .contacts_value {
-            width: 60%;
+            width: 500px;
             font-family: "Acrom", sans-serif;
             font-style: normal;
             font-weight: 500;
@@ -1683,7 +1683,7 @@
               li {
                 display: flex;
                 list-style: none;
-                margin-bottom: 40px;
+                margin-bottom: 30px;
                 margin-right: 10px;
               }
             }
@@ -1691,10 +1691,11 @@
         }
       }
       &__contacts_form {
-        width: 100%;
+        width: 85%;
         .contact_form {
+          width: 100%;
           border-radius: 40px;
-          padding: 0 125px 10px 98px;
+          padding: 0;
           display: grid;
           grid-template-columns: 1.03fr 0.97fr;
           background-position: 110px 165px;
