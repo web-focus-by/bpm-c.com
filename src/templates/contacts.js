@@ -208,7 +208,7 @@ const Contacts = ({ location }) => {
                         clear()
                       }}
                     >
-                      {/* <div className="contact_form_line-wrapper">
+                      <div className="contact_form_line-wrapper">
                         <input
                           id="company"
                           value={companyValue}
@@ -222,7 +222,7 @@ const Contacts = ({ location }) => {
                           required
                         />
                         <label>Company</label>
-                      </div> */}
+                      </div>
 
                       <div className="contact_form_line-wrapper">
                         <input
@@ -270,6 +270,22 @@ const Contacts = ({ location }) => {
                           required
                         />
                         <label>E-mail*</label>
+                      </div>
+
+                      <div className="contact_form_line-wrapper">
+                        <input
+                          value={messageValue}
+                          type="text"
+                          id="message"
+                          autoComplete="off"
+                          name="message"
+                          className="contact_form-message input-message contact_form_message input-yellow"
+                          onChange={e => {
+                            setMessageValue(e.target.value)
+                          }}
+                          required
+                        />
+                        <label>Message</label>
                       </div>
                       <div className="contact_form_block_send">
                         <div>

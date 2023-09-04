@@ -1063,14 +1063,7 @@ body {
 
             .contact_form_line-wrapper {
               position: relative;
-
-              &:first-child {
-                margin-bottom: 78px;
-              }
-
-              &:nth-child(2) {
-                margin-bottom: 58px;
-              }
+              margin-bottom: 78px;
 
               input {
                 color: #1a1b1f;
