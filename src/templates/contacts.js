@@ -271,23 +271,6 @@ const Contacts = ({ location }) => {
                         />
                         <label>E-mail*</label>
                       </div>
-
-                      <div className="contact_form_line-wrapper">
-                        <input
-                          value={messageValue}
-                          type="text"
-                          id="message"
-                          autoComplete="off"
-                          name="message"
-                          className="contact_form-phone input-phone contact_form_phone input-yellow"
-                          onChange={e => {
-                            setMessageValue(e.target.value)
-                          }}
-                          required
-                        />
-                        <label>Message</label>
-                      </div>
-
                       <div className="contact_form_block_send">
                         <div>
                           <button className="button_white" type="submit">
