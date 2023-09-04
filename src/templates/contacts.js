@@ -17,12 +17,14 @@ import "../components/styles/media_375.scss"
 
 const CONTACT_MUTATION = gql`
   mutation CreateSubmissionMutation(
+    $company: String!
     $name: String!
     $telephone: String!
     $email: String!
+    $message: String!
   ) {
     createSubmission(
-      input: { name: $name, telephone: $telephone, email: $email }
+      input: { name: $name, telephone: $telephone, email: $email, message: $message }
     ) {
       success
       data
@@ -33,9 +35,11 @@ const CONTACT_MUTATION = gql`
 const Contacts = ({ location }) => {
   const [createSubmission, { loading, error, data }] =
     useMutation(CONTACT_MUTATION)
+  const [companyValue, setCompanyValue] = useState("")
   const [nameValue, setNameValue] = useState("")
   const [telephoneValue, setTelephoneValue] = useState("")
   const [emailValue, setEmailValue] = useState("")
+  const [messageValue, setMessageValue] = useState("")
   const [interestedItems, setInterestedItems] = useState([""])
   const socialMaediaLinks = [
     { link: "#", name: "insta" },
@@ -194,14 +198,32 @@ const Contacts = ({ location }) => {
                         e.preventDefault()
                         createSubmission({
                           variables: {
+                            company: companyValue,
                             name: nameValue,
                             telephone: telephoneValue,
                             email: emailValue,
+                            message: messageValue,
                           },
                         })
                         clear()
                       }}
                     >
+                      <div className="contact_form_line-wrapper">
+                        <input
+                          id="company"
+                          value={companyValue}
+                          type="text"
+                          autoComplete="off"
+                          name="company"
+                          className="contact_form_company input-yellow "
+                          onChange={e => {
+                            setCompanyValue(e.target.value)
+                          }}
+                          required
+                        />
+                        <label>Company</label>
+                      </div>
+
                       <div className="contact_form_line-wrapper">
                         <input
                           id="name"
@@ -247,7 +269,23 @@ const Contacts = ({ location }) => {
                           }}
                           required
                         />
-                        <label>E-mail</label>
+                        <label>E-mail*</label>
+                      </div>
+
+                      <div className="contact_form_line-wrapper">
+                        <input
+                          value={messageValue}
+                          type="text"
+                          id="message"
+                          autoComplete="off"
+                          name="message"
+                          className="contact_form-mess input-mess contact_form_mess input-yellow"
+                          onChange={e => {
+                            setMessageValue(e.target.value)
+                          }}
+                          required
+                        />
+                        <label>Message</label>
                       </div>
                       <div className="contact_form_block_send">
                         <div>
