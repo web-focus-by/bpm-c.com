@@ -25,10 +25,8 @@ const Footer = () => {
   const numberCanada = "+ 1 647 493 9093"
 
   const socialMaediaLinks = [
-    { link: "#", name: "insta" },
-    { link: "#", name: "facebook" },
-    { link: "#", name: "link" },
-    { link: "#", name: "behance" },
+    { link: "https://www.instagram.com/bpm_cloud/", name: "insta" },
+    { link: "https://www.facebook.com/bpm.it1", name: "facebook" },
   ]
   const menuFooter = footerMenuLinks.map((val, index) => {
     return (

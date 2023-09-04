@@ -17,12 +17,14 @@ import "../components/styles/media_375.scss"
 
 const CONTACT_MUTATION = gql`
   mutation CreateSubmissionMutation(
+    $company: String!
     $name: String!
     $telephone: String!
     $email: String!
+    $message: String!
   ) {
     createSubmission(
-      input: { name: $name, telephone: $telephone, email: $email }
+      input: { company: $company, name: $name, telephone: $telephone, email: $email, message: $message }
     ) {
       success
       data
@@ -33,15 +35,15 @@ const CONTACT_MUTATION = gql`
 const Contacts = ({ location }) => {
   const [createSubmission, { loading, error, data }] =
     useMutation(CONTACT_MUTATION)
+  const [companyValue, setCompanyValue] = useState("")
   const [nameValue, setNameValue] = useState("")
   const [telephoneValue, setTelephoneValue] = useState("")
   const [emailValue, setEmailValue] = useState("")
+  const [messageValue, setMessageValue] = useState("")
   const [interestedItems, setInterestedItems] = useState([""])
   const socialMaediaLinks = [
-    { link: "#", name: "insta" },
-    { link: "#", name: "facebook" },
-    { link: "#", name: "link" },
-    { link: "#", name: "behance" },
+    { link: "https://www.instagram.com/bpm_cloud/", name: "insta" },
+    { link: "https://www.facebook.com/bpm.it1", name: "facebook" },
   ]
 
   const socialMedia = socialMaediaLinks.map((val, index) => {
@@ -77,6 +79,7 @@ const Contacts = ({ location }) => {
             <h1 className="hero__title title_62">
               Contacts<span className="phone_icon"></span>
             </h1>
+            <p className="hero__description">Feel free to get in touch with us by filling out our contact form. Your insights and details will enable us to understand your needs accurately and provide you with the best assistance possible. We look forward to assisting you at the earliest convenience.</p>
           </div>
           <div className="header_circle_yellow"></div>
           <div className="header_circle_pink"></div>
@@ -90,17 +93,13 @@ const Contacts = ({ location }) => {
                   <ul>
                     <li key="phone">Phone</li>
                     <li key="e-mail">E-mail</li>
-                    <li key="address">Address</li>
-                    <li key="socialMedia">Social media</li>
+                    <li key="socialMedia">Social media / messangers</li>
                   </ul>
                 </div>
                 <div className="contacts_value">
                   <ul>
-                    <li key="phoneNumber">+ 375 29 715 05 86</li>
-                    <li key="mail">info@bpmcloud.com</li>
-                    <li key="addressValue">
-                      Independence Avenue, 77, office 53
-                    </li>
+                    <li key="phoneNumber"><a href="tel:+19295479159">+ 1 929 547 9159 USA</a><a href="tel:+16474939093">+ 1 647 493 9093 Canada</a></li>
+                    <li key="mail"><a href="mailto:hello@bpmcloud.com">hello@bpmcloud.com</a></li>
                     <li key="socialMediaLinks">{socialMedia}</li>
                   </ul>
                 </div>
@@ -199,14 +198,32 @@ const Contacts = ({ location }) => {
                         e.preventDefault()
                         createSubmission({
                           variables: {
+                            company: companyValue,
                             name: nameValue,
                             telephone: telephoneValue,
                             email: emailValue,
+                            message: messageValue,
                           },
                         })
                         clear()
                       }}
                     >
+                      <div className="contact_form_line-wrapper">
+                        <input
+                          id="company"
+                          value={companyValue}
+                          type="text"
+                          autoComplete="off"
+                          name="company"
+                          className="contact_form_company input-yellow "
+                          onChange={e => {
+                            setCompanyValue(e.target.value)
+                          }}
+                          required
+                        />
+                        <label>Company</label>
+                      </div>
+
                       <div className="contact_form_line-wrapper">
                         <input
                           id="name"
@@ -252,7 +269,23 @@ const Contacts = ({ location }) => {
                           }}
                           required
                         />
-                        <label>E-mail</label>
+                        <label>E-mail*</label>
+                      </div>
+
+                      <div className="contact_form_line-wrapper">
+                        <input
+                          value={messageValue}
+                          type="text"
+                          id="message"
+                          autoComplete="off"
+                          name="message"
+                          className="contact_form-message input-message contact_form_message input-yellow"
+                          onChange={e => {
+                            setMessageValue(e.target.value)
+                          }}
+                          required
+                        />
+                        <label>Message</label>
                       </div>
                       <div className="contact_form_block_send">
                         <div>
@@ -260,9 +293,8 @@ const Contacts = ({ location }) => {
                             Send<span className="arrow_black"></span>
                           </button>
                         </div>
-                        <p>
-                          I agree to the Privacy Policy and Terms of Service
-                        </p>
+                        <input type="checkbox" id="agree" name="agree" value="yes"/>
+                        <label htmlFor="agree">I agree to the Privacy Policy and Terms of Service</label>
                       </div>
                     </form>
                   </div>
@@ -270,7 +302,7 @@ const Contacts = ({ location }) => {
               </div>
             </div>
           </div>
-          <div className="margin_bottom_240">
+          {/* <div className="margin_bottom_240">
             <iframe
               title="address of office on google map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.544970835492!2d27.596358815992996!3d53.9220613391322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf5d99239d81%3A0x9abeb6f83c6393fb!2z0L_RgC4g0J3QtdC30LDQstC40YHQuNC80L7RgdGC0LggNzcsINCc0LjQvdGB0Lo!5e0!3m2!1sru!2sby!4v1664284593785!5m2!1sru!2sby"
@@ -281,7 +313,7 @@ const Contacts = ({ location }) => {
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div>
+          </div> */}
         </div>
       </Layout>
     </>
