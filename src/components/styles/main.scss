@@ -940,7 +940,7 @@ body {
   flex-wrap: wrap;
   gap: 2%;
   &__contact {
-    width: 38%;
+    width: 20%;
     margin-top: 30px;
     .contacts_table {
       display: flex;
@@ -965,7 +965,7 @@ body {
         }
       }
       .contacts_value {
-        width: 60%;
+        width: 100%;
         font-family: "Acrom", sans-serif;
         font-style: normal;
         font-weight: 500;
@@ -989,6 +989,7 @@ body {
           }
 
           li:first-child {
+            row-gap: 12px;
             flex-direction: column;
           }
         }
@@ -1019,10 +1020,10 @@ body {
           width: 100%;
           margin-top: 5px;
           margin-bottom: 40px;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          column-gap: 20px;
+
+          .button_item_tag {
+            margin: 0.4rem 15px 0.4rem 0;
+          }
         }
         .contact_form_block_title {
           color: #1a1b1f;

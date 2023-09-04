@@ -384,6 +384,7 @@
         display: grid;
         grid-template-columns: 1.03fr 0.97fr;
         background-position: 110px 165px;
+        padding: 0;
         &__block {
           color: #1a1b1f;
           width: 95%;
@@ -512,7 +513,7 @@
                   max-width: 250px;
                   font-weight: 400;
                   font-size: 14px;
-                  line-height: 100%;
+                  line-height: 120%;
                   margin: 0;
                 }
               }
@@ -1613,7 +1614,7 @@
                     max-width: 250px;
                     font-weight: 400;
                     font-size: 14px;
-                    line-height: 100%;
+                    line-height: 120%;
                     margin: 0;
                   }
                 }
