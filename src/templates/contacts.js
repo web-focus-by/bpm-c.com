@@ -42,8 +42,8 @@ const Contacts = ({ location }) => {
   const [messageValue, setMessageValue] = useState("")
   const [interestedItems, setInterestedItems] = useState([""])
   const socialMaediaLinks = [
-    { link: "#", name: "insta" },
-    { link: "#", name: "facebook" },
+    { link: "https://www.instagram.com/bpm_cloud/", name: "insta" },
+    { link: "https://www.facebook.com/bpm.it1", name: "facebook" },
   ]
 
   const socialMedia = socialMaediaLinks.map((val, index) => {
