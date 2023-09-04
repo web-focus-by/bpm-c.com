@@ -13,8 +13,6 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
       ? breadcrumbs.href.split("/").slice(1, -1).slice(1)
       : ""
 
-  console.log(title);
-
   if (pathname) {
     breadcrumbItems = filePath
       ? filePath.map((item, index) => {

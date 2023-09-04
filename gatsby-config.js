@@ -118,60 +118,6 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
-    {
-      resolve: 'gatsby-plugin-htaccess',
-      options: {
-        RewriteBase: '/custom/',
-        https: true,
-        www: false,
-        SymLinksIfOwnerMatch: true,
-        host: 'https://bpm-c.com/', // if 'www' is set to 'false', be sure to also remove it here!
-        // ErrorDocument: `
-        //   ErrorDocument 401 /error_pages/401.html
-        //   ErrorDocument 404 /error_pages/404.html
-        //   ErrorDocument 500 /error_pages/500.html
-        // `,
-        redirect: [
-          'RewriteRule ^not-existing-url/?$ /existing-url [R=301,L,NE]',
-          {
-            from: '/about-us/blog/',
-            to: '/blog/',
-          },
-          {
-            from: '/news/',
-            to: '/blog/',
-          },
-          {
-            from: '/news/news-topic',
-            to: '/blog/',
-          },
-          {
-            from: '/news/new-topic-two/',
-            to: '/blog/',
-          },
-          {
-            from: '/category/blog/',
-            to: '/blog/',
-          },
-          {
-            from: '/category/portfolio/',
-            to: '/portfolio/',
-          },
-          {
-            from: '/category/news/',
-            to: '/blog/',
-          },
-          {
-            from: '/category/uncategorized/',
-            to: '/',
-          },
-          {
-            from: '/services/it-outsourcing/development-outsourcing-on-angularjs/',
-            to: '/services/it-outsourcing/angular-development-outsourcing/',
-          },
-        ],
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
