@@ -507,7 +507,7 @@
                   user-select: none;
                 }
 
-                p {
+                label {
                   max-width: 250px;
                   font-weight: 400;
                   font-size: 14px;
@@ -1103,7 +1103,7 @@
   }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 530px) and (min-width: 321px) {
   .header_circle_yellow {
     position: absolute;
     width: 124.48px;
@@ -1424,7 +1424,6 @@
     }
 
     .contacts {
-      margin-top: 60px;
       display: flex;
       flex-direction: column;
       &__contact {
@@ -1433,6 +1432,7 @@
           display: flex;
           gap: 5%;
           justify-content: space-between;
+          width: 290px;
           .contacts_label {
             font-family: "Acrom", sans-serif;
             font-style: normal;
@@ -1446,7 +1446,7 @@
               li {
                 display: flex;
                 list-style: none;
-                margin-bottom: 80px;
+                margin-bottom: 89px;
               }
             }
           }
@@ -1454,9 +1454,10 @@
             font-family: "Acrom", sans-serif;
             font-style: normal;
             font-weight: 500;
-            font-size: 24px;
+            font-size: 20px;
             line-height: 100%;
             color: #1a1b1f;
+            margin-top: -18px;
             ul {
               position: absolute;
               left: 16px;
@@ -1476,7 +1477,7 @@
         }
       }
       &__contacts_form {
-        width: 100%;
+        width: 290px;
         .contact_form {
           border-radius: 40px;
           display: grid;
@@ -1484,7 +1485,7 @@
           background-position: 110px 165px;
           &__block {
             color: #1a1b1f;
-            width: 150%;
+            width: 120%;
             .contact_form_block_buttons_title {
               width: 100%;
               font-family: "Acrom", sans-serif;
@@ -1528,9 +1529,9 @@
 
             .contact_form_block_email {
               a {
-                font-weight: 500;
-                font-size: 24px;
-                line-height: 100%;
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 115%;
                 text-decoration: none;
                 color: #1a1b1f;
               }
@@ -1541,6 +1542,7 @@
             .contact_form_block_wrapper {
               form {
                 padding-top: 40px;
+                width: 96%;
 
                 .contact_form_line-wrapper {
                   position: relative;
@@ -1586,6 +1588,8 @@
                   justify-content: space-between;
                   align-items: start;
                   flex-direction: column;
+                  row-gap: 25px;
+                  width: 290px;
 
                   .button_white {
                     padding: 22px 40px;
@@ -1598,7 +1602,12 @@
                     }
                   }
 
-                  p {
+                  input+label {
+                    display: inline-flex;
+                    user-select: none;
+                  }
+
+                  label {
                     max-width: 250px;
                     font-weight: 400;
                     font-size: 14px;
