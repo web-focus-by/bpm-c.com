@@ -1642,6 +1642,7 @@
     }
 
     .contacts {
+      margin-top: 60px;
       display: flex;
       flex-direction: column-reverse;
       &__contact {
@@ -1664,7 +1665,7 @@
               li {
                 display: flex;
                 list-style: none;
-                margin-bottom: 80px;
+                margin-bottom: 50px;
               }
             }
           }
@@ -1682,7 +1683,7 @@
               li {
                 display: flex;
                 list-style: none;
-                margin-bottom: 60px;
+                margin-bottom: 40px;
                 margin-right: 10px;
               }
             }
