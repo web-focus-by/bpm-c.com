@@ -779,7 +779,7 @@
     flex-wrap: wrap;
     gap: 2%;
     &__contact {
-      width: 38%;
+      width: 30%;
       .contacts_table {
         display: flex;
         gap: 5%;
@@ -814,7 +814,7 @@
           ul {
             padding: 0;
             margin: 0;
-            width: 500px;
+            width: max-content;
             li {
               display: flex;
               list-style: none;
@@ -835,21 +835,29 @@
         background-position: 110px 165px;
         &__block {
           color: #1a1b1f;
-          width: 200%;
+          width: 191%;
           .contact_form_block_buttons_title {
             width: 100%;
             font-family: "Acrom", sans-serif;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 14px;
             line-height: 100%;
             color: #1a1b1f;
           }
           .contact_form_block_buttons {
-            width: 100%;
-            margin-top: 5px;
             margin-bottom: 40px;
-            margin-left: -10px;
+            margin-left: 0;
+            margin-top: 5px;
+            width: fit-content;
+            column-gap: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .button_item_tag {
+              font-size: 16px;
+              line-height: 100%;
+            }
           }
           .contact_form_block_title {
             color: #1a1b1f;
@@ -938,7 +946,7 @@
                 justify-content: space-between;
                 align-items: center;
                 .button_white {
-                  padding: 22px 40px;
+                  padding: 15px 28px;
                   font-family: "Acrom", sans-serif;
                   span {
                     margin-left: 14px;
@@ -948,7 +956,7 @@
                   }
                 }
 
-                p {
+                label {
                   max-width: 250px;
                   font-weight: 400;
                   font-size: 14px;

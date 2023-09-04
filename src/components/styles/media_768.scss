@@ -1644,7 +1644,7 @@
     .contacts {
       margin-top: 60px;
       display: flex;
-      flex-direction: column;
+      flex-direction: column !important;
       &__contact {
         width: 100%;
         .contacts_table {
@@ -1680,18 +1680,27 @@
             ul {
               padding: 0;
               margin: 0;
+              width: max-content;
               li {
                 display: flex;
                 list-style: none;
                 margin-bottom: 30px;
                 margin-right: 10px;
+                li {
+                  a {
+                    span{
+                    width: 36px;
+                    height: 36px;
+                    }
+                  }
+                }
               }
             }
           }
         }
       }
       &__contacts_form {
-        width: 85%;
+        width: 100% !important;
         .contact_form {
           width: 100%;
           border-radius: 40px;
@@ -1712,9 +1721,13 @@
               color: #1a1b1f;
             }
             .contact_form_block_buttons {
-              width: 100%;
               margin-top: 5px;
               margin-bottom: 40px;
+              width: fit-content;
+              column-gap: 10px;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
             }
             .contact_form_block_title {
               color: #1a1b1f;

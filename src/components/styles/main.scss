@@ -732,7 +732,7 @@ body {
         line-height: 100%;
         color: #1a1b1f;
         font-family: "Acrom", sans-serif;
-        margin: 0.4rem;
+        margin: 0.4rem 0;
         :hover {
           cursor: pointer;
         }
@@ -974,6 +974,7 @@ body {
         color: #1a1b1f;
         margin-top: -30px;
         ul {
+          width: max-content;
           padding: 0;
           margin: 0;
           li {
@@ -998,13 +999,13 @@ body {
     width: 60%;
     .contact_form {
       border-radius: 40px;
-      padding: 0 125px 10px 98px;
+      padding: 0 0 10px 98px;
       display: grid;
       grid-template-columns: 1.03fr 0.97fr;
       background-position: 110px 165px;
       &__block {
         color: #1a1b1f;
-        width: 230%;
+        width: 191%;
         .contact_form_block_buttons_title {
           width: 100%;
           font-family: "Acrom", sans-serif;
@@ -1018,6 +1019,10 @@ body {
           width: 100%;
           margin-top: 5px;
           margin-bottom: 40px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          column-gap: 20px;
         }
         .contact_form_block_title {
           color: #1a1b1f;
