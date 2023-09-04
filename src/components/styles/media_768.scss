@@ -1800,7 +1800,9 @@
                   margin-top: 60px;
                   display: flex;
                   justify-content: space-between;
-                  align-items: center;
+                  align-items: start;
+                  flex-direction: column;
+                  row-gap: 25px;
                   .button_white {
                     padding: 22px 40px;
                     font-family: "Acrom", sans-serif;
@@ -1812,7 +1814,7 @@
                     }
                   }
 
-                  p {
+                  label {
                     max-width: 250px;
                     font-weight: 400;
                     font-size: 14px;

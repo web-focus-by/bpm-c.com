@@ -829,13 +829,13 @@
       width: 60%;
       .contact_form {
         border-radius: 40px;
-        padding: 0 125px 10px 98px;
+        padding: 0 0 10px 146px;
         display: grid;
         grid-template-columns: 1.03fr 0.97fr;
         background-position: 110px 165px;
         &__block {
           color: #1a1b1f;
-          width: 160%;
+          width: 200%;
           .contact_form_block_buttons_title {
             width: 100%;
             font-family: "Acrom", sans-serif;
