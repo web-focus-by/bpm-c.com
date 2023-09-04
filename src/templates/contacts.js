@@ -24,7 +24,7 @@ const CONTACT_MUTATION = gql`
     $message: String!
   ) {
     createSubmission(
-      input: { name: $name, telephone: $telephone, email: $email, message: $message }
+      input: { company: $company, name: $name, telephone: $telephone, email: $email, message: $message }
     ) {
       success
       data
