@@ -1121,6 +1121,37 @@
 
 @media (max-width: 530px) {
 
+  .services {
+    &__list {
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+      grid-row-gap: 12px;
+
+      .services_list_item {
+        height: 120px;
+        border-radius: 20px;
+
+        &:hover a {
+          padding-bottom: 0;
+        }
+
+        a {
+          font-size: 18px;
+        }
+
+        &:hover {
+          transform: translateY(0);
+          background: url(../../images/test_375.svg) no-repeat;
+          background-size: cover;
+          background-position-x: 100%;
+          span {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+
   .form {
     padding: 80px 16px;
 
