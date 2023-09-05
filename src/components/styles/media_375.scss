@@ -258,6 +258,41 @@
     }
   }
 
+  .company_description {
+    &__title {
+        width: 90%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &__pic {
+      img {
+        width: 100%;
+        min-width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 20px;
+        object-position: 0px -40px;
+      }
+    }
+
+    &__info {
+      min-width: 90%;
+      width: 90%;
+      ul {
+        width: 90%;
+        li {
+          font-size: 16px;
+          margin-bottom: 14px;
+
+          &:last-child {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
   .form {
     .form_block_wrapper form .form_block_send {
       margin-top: 38px;
@@ -1258,6 +1293,42 @@
           content: url("../../images/gradient_blue1366.svg");
           position: relative;
           right: 4%;
+        }
+      }
+    }
+  }
+
+  .company_description {
+    &__title {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &__pic {
+      width: 100%;
+      img {
+        width: 100%;
+        min-width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 20px;
+        object-position: 0px -40px;
+      }
+    }
+
+    &__info {
+      min-width: 90%;
+      width: 100%;
+      ul {
+        width: 100%;
+        li {
+          font-size: 16px;
+          margin-bottom: 14px;
+
+          &:last-child {
+            margin-bottom: 20px;
+          }
         }
       }
     }
