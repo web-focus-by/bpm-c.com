@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Navigate } from "react-router-dom"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -58,13 +57,6 @@ const News = ({ location }) => {
   `)
   const allTags = PostsAndTags ? PostsAndTags.allWpTag.edges : []
   const allPosts = PostsAndTags ? PostsAndTags.allWpPost.edges : []
-
-  if(typeof window !== 'undefined' && window.location.pathname === '/news/') {
-    return(
-      <Navigate to='/blog/'/>
-    )
-  }
-
 
   return (
     <>
