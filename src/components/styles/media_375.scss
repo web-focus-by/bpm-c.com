@@ -1188,6 +1188,35 @@
     }
   }
 
+  .projects_process {
+    &__subtitle {
+      margin-bottom: 24px;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 150%;
+    }
+
+    &__list {
+      background-image: none;
+    }
+
+    .projects_process_list_item {
+      height: 51px;
+      width: -webkit-fill-available;
+      justify-content: normal;
+      p {
+        padding-left: 50px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+      }
+      .projects_process_list_item {
+        left: 0;
+        padding: 0;
+      }
+    }
+  }
+
   .header_circle_yellow {
     position: absolute;
     width: 124.48px;
