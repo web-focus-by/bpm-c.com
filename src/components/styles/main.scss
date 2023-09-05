@@ -16,7 +16,7 @@ body {
 }
 
 .header {
-  border-bottom: 2px solid #f0eff1;
+  border-bottom: 1.5px solid #f0eff1;
   position: sticky;
   top: 0;
   background-color: rgb(255 255 255 / 60%);
@@ -1261,7 +1261,7 @@ body {
             background-color: transparent;
             border-bottom: 1px solid #fff;
             width: 100%;
-            padding-bottom: 46px;
+            padding-top: 46px;
           }
 
           input:focus ~ label,
@@ -1310,7 +1310,7 @@ body {
           }
           p {
             max-width: 250px;
-            font-weight: 400;
+            font-weight: 300;
             font-size: 14px;
             line-height: 100%;
             margin: 0;
@@ -1770,6 +1770,10 @@ body {
   display: grid;
   grid-template-columns: 1.2fr 0.9fr;
   column-gap: 19px;
+
+  &__title {
+    margin-top: 0;
+  }
 
   &__info {
     min-width: 855px;
@@ -2250,7 +2254,7 @@ body {
 
 .swiper {
   .swiper-slide {
-    width: 347px;
+    width: 346px;
     height: max-content;
   }
 }

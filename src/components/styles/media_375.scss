@@ -141,6 +141,13 @@
     }
   }
 
+  .swiper {
+    .swiper-slide {
+      width: 100%;;
+      height: max-content;
+    }
+  }
+
   .dropdown_burgermenu_sticky {
     position: sticky;
     top: 100px;
@@ -245,6 +252,45 @@
     &__info {
       margin-right: 0;
     }
+
+    &__title {
+      width: 100%;
+    }
+  }
+
+  .company_description {
+    &__title {
+        width: 90%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &__pic {
+      img {
+        width: 100%;
+        min-width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 20px;
+        object-position: 0px -40px;
+      }
+    }
+
+    &__info {
+      min-width: 90%;
+      width: 90%;
+      ul {
+        width: 90%;
+        li {
+          font-size: 16px;
+          margin-bottom: 14px;
+
+          &:last-child {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
   }
 
   .form {
@@ -258,6 +304,7 @@
   }
   .technologies__list {
     grid-row-gap: 55px;
+    margin-left: 10px;
     .technologies_list_item {
       height: auto;
     }
@@ -1024,6 +1071,13 @@
       }
     }
   }
+
+  .it_company {
+    &__title {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
 }
 
 @media (min-width: 320px) and (max-width: 375px) {
@@ -1034,6 +1088,13 @@
           calc(290px + (340 - 290) * ((100vw - 375px) / (768 - 320)))
           0;
       }
+    }
+  }
+
+  .it_company {
+    &__title {
+      width: 100%;
+      margin-bottom: 24px;
     }
   }
 
@@ -1082,6 +1143,12 @@
       }
     }
   }
+  .it_company {
+    &__title {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
 }
 
 @media (min-width: 340px) and (max-width: 767px) {
@@ -1101,6 +1168,13 @@
           }
         }
       }
+    }
+  }
+
+  .it_company {
+    &__title {
+      width: 100%;
+      margin-bottom: 24px;
     }
   }
 }
@@ -1315,6 +1389,195 @@
 }
 
 @media (max-width: 530px) {
+
+  .services {
+    &__list {
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+      grid-row-gap: 12px;
+
+      .services_list_item {
+        height: 120px;
+        border-radius: 20px;
+
+        &:hover a {
+          padding-bottom: 0;
+        }
+
+        a {
+          font-size: 18px;
+        }
+
+        &:hover {
+          transform: translateY(0);
+          background: url(../../images/test_375.svg) no-repeat;
+          background-size: cover;
+          background-position-x: 100%;
+          span {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+
+  .technologies__list {
+    margin-left: 10px;
+  }
+
+  .form {
+    padding: 80px 16px;
+
+    &__block {
+      .form_block_title {
+        font-size: 42px;
+        margin-bottom: 40px;
+      }
+
+      .form_block_info {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 150%;
+        margin-top: 24px;
+      }
+
+      .form_block_text {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 150%;
+        flex-direction: column;
+        align-items: self-start;
+        margin-top: 20px;
+
+        .form_block_gif {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .projects_process {
+    &__subtitle {
+      margin-bottom: 24px;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 150%;
+    }
+
+    &__list {
+      background-image: none;
+    }
+
+    .projects_process_list_item {
+      height: 51px;
+      width: -webkit-fill-available;
+      justify-content: normal;
+      p {
+        padding-left: 50px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+      }
+      .projects_process_list_item {
+        left: 0;
+        padding: 0;
+      }
+    }
+
+    .projects_process_list_item:first-child {
+      p {
+        padding-left: 0;
+      }
+
+      .projects_process_list_item {
+        left: 0;
+        padding: 0 0 0 50px;
+      }
+    }
+  }
+
+  .advantages {
+    &__subtitle {
+      margin-bottom: 0;
+      max-width: none;
+      margin-top: 30px;
+      font-size: 15px;
+    }
+
+    &__info {
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+
+      .advantages_info_block {
+        color: #fff;
+
+        &:first-child::before {
+          display: flex;
+          content: url("../../images/gradient_purple1366.svg");
+          position: relative;
+          right: 4%;
+        }
+
+        &:nth-child(2)::before {
+          display: flex;
+          content: url("../../images/gradient_yellow1366.svg");
+          position: relative;
+          right: 4%;
+        }
+
+        &:nth-child(3)::before {
+          display: flex;
+          content: url("../../images/gradient_pink1366.svg");
+          position: relative;
+          right: 4%;
+        }
+
+        &:nth-child(4)::before {
+          display: flex;
+          content: url("../../images/gradient_blue1366.svg");
+          position: relative;
+          right: 4%;
+        }
+      }
+    }
+  }
+
+  .company_description {
+    &__title {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &__pic {
+      width: 100%;
+      img {
+        width: 100%;
+        min-width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 20px;
+        object-position: 0px -40px;
+      }
+    }
+
+    &__info {
+      min-width: 90%;
+      width: 100%;
+      ul {
+        width: 100%;
+        li {
+          font-size: 16px;
+          margin-bottom: 14px;
+
+          &:last-child {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
   .header_circle_yellow {
     position: absolute;
     width: 124.48px;
@@ -1333,6 +1596,21 @@
     filter: blur(30px);
     z-index: -1;
   }
+
+  .it_company {
+    &__title {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+
+  .swiper {
+    .swiper-slide {
+      width: 93%;;
+      height: max-content;
+    }
+  }
+
   @keyframes header_circle_yellow {
     0% {
       bottom: 50%;
@@ -1468,6 +1746,7 @@
       .leaders_choice_tagline_block_title {
         font-size: calc(42px + (46 - 42) * ((100vw - 375px) / (768 - 375)));
         letter-spacing: -0.1px;
+        text-align: center;
       }
 
       .leaders_choice_tagline_block_gif {
