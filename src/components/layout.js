@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useState, useEffect, useRef } from "react"
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Redirect } from "react-router-dom"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
@@ -154,10 +154,7 @@ const Layout = ({ children }) => {
           <Footer></Footer>
           <ScriptLD/>
           <Routes>
-            <Route path="/news/" element={<Navigate to='/blog/' />} />
-            <Route path="/about-us/blog/ " element={<Blog />} />
-            <Route path="/news/news-topic/" element={<Blog />} />
-            <Route path="/news/new-topic-two/" element={<Blog />} />
+            <Redirect strict from="/news/news-topic/" to="/blog/" />
           </Routes>
         </BrowserRouter>
       </>
