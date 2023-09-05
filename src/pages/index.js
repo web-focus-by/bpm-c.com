@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Routes, Route, Navigate, Router } from "react-router-dom"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -19,7 +18,6 @@ import CompanyDescription from "../components/company_description"
 import ServicePackage from "../components/service_package"
 import LeadersChoice from "../components/leaders_choice"
 import ThanksModal from "../components/thanks_modal"
-import ScriptLD from "../components/scriptLD"
 
 const IndexPage = ({ location }) => {
   const [isShowThankModal, setIsShowThankModal] = React.useState(false)
@@ -73,65 +71,31 @@ const IndexPage = ({ location }) => {
     setIsShowForm(false)
   }
 
-  if(typeof document !== 'undefined' || typeof window !== 'undefined') {
-    return (
-      <>
-        <Router>
-          <Layout>
-            <Seo title="Index" />
-            <Hero location={location}></Hero>
-            {isShowThankModal ? (
-              <ThanksModal backPage={backPageModal}></ThanksModal>
-            ) : null}
-            <ITCompany></ITCompany>
-            <Portfolio posts={allPosts}></Portfolio>
-            {isShowForm ? <Form showThankForm={showThankForm}></Form> : null}
-            {isShowThankForm ? <ThanksForm backPage={backPage}></ThanksForm> : null}
-            <ServicesItem></ServicesItem>
-            <Technologies></Technologies>
-            <BPMCloud></BPMCloud>
-            <ProjectsProcess></ProjectsProcess>
-            <Blog titlePage="Blog"></Blog>
-            <Advantages></Advantages>
-            <Reviews></Reviews>
-            <CompanyDescription></CompanyDescription>
-            <ServicePackage></ServicePackage>
-            <LeadersChoice></LeadersChoice>
-          </Layout>
-          <Routes>
-            <Route path="/" element={<IndexPage />} />
-            <Route path="/news/" element={<Blog />} />
-          </Routes>
-        </Router>
-      </>
-    )
-  } else {
-    return (
-      <>
-          <Layout>
-            <Seo title="Index" />
-            <Hero location={location}></Hero>
-            {isShowThankModal ? (
-              <ThanksModal backPage={backPageModal}></ThanksModal>
-            ) : null}
-            <ITCompany></ITCompany>
-            <Portfolio posts={allPosts}></Portfolio>
-            {isShowForm ? <Form showThankForm={showThankForm}></Form> : null}
-            {isShowThankForm ? <ThanksForm backPage={backPage}></ThanksForm> : null}
-            <ServicesItem></ServicesItem>
-            <Technologies></Technologies>
-            <BPMCloud></BPMCloud>
-            <ProjectsProcess></ProjectsProcess>
-            <Blog titlePage="Blog"></Blog>
-            <Advantages></Advantages>
-            <Reviews></Reviews>
-            <CompanyDescription></CompanyDescription>
-            <ServicePackage></ServicePackage>
-            <LeadersChoice></LeadersChoice>
-          </Layout>
-      </>
-    )
-  }
+  return (
+    <>
+        <Layout>
+          <Seo title="Index" />
+          <Hero location={location}></Hero>
+          {isShowThankModal ? (
+            <ThanksModal backPage={backPageModal}></ThanksModal>
+          ) : null}
+          <ITCompany></ITCompany>
+          <Portfolio posts={allPosts}></Portfolio>
+          {isShowForm ? <Form showThankForm={showThankForm}></Form> : null}
+          {isShowThankForm ? <ThanksForm backPage={backPage}></ThanksForm> : null}
+          <ServicesItem></ServicesItem>
+          <Technologies></Technologies>
+          <BPMCloud></BPMCloud>
+          <ProjectsProcess></ProjectsProcess>
+          <Blog titlePage="Blog"></Blog>
+          <Advantages></Advantages>
+          <Reviews></Reviews>
+          <CompanyDescription></CompanyDescription>
+          <ServicePackage></ServicePackage>
+          <LeadersChoice></LeadersChoice>
+        </Layout>
+    </>
+  )
 }
 
 export default IndexPage
