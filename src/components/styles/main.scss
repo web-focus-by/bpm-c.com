@@ -1771,6 +1771,10 @@ body {
   grid-template-columns: 1.2fr 0.9fr;
   column-gap: 19px;
 
+  &__title {
+    margin-top: 0;
+  }
+
   &__info {
     min-width: 855px;
     ul {
@@ -2250,7 +2254,7 @@ body {
 
 .swiper {
   .swiper-slide {
-    width: 347px;
+    width: 346px;
     height: max-content;
   }
 }

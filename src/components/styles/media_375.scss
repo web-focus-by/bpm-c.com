@@ -873,16 +873,6 @@
         padding: 0;
       }
     }
-
-    .projects_process_list_item:first-child {
-      p {
-        padding-left: 0;
-      }
-      .projects_process_list_item {
-        left: 0;
-        padding: 0;
-      }
-    }
   }
 
   .padding_50 {
@@ -1498,9 +1488,10 @@
       p {
         padding-left: 0;
       }
+
       .projects_process_list_item {
         left: 0;
-        padding: 0;
+        padding: 0 0 0 50px;
       }
     }
   }
