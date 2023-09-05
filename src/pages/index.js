@@ -99,7 +99,7 @@ const IndexPage = ({ location }) => {
             <LeadersChoice></LeadersChoice>
           </Layout>
           <Routes>
-            <Route path="/news/" element={<Navigate to="/blog/" />} />
+            <Route path="/news/" element={<Blog />} />
           </Routes>
         </Router>
       </>
