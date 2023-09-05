@@ -99,6 +99,7 @@ const IndexPage = ({ location }) => {
             <LeadersChoice></LeadersChoice>
           </Layout>
           <Routes>
+            <Route path="/" element={<IndexPage />} />
             <Route path="/news/" element={<Blog />} />
           </Routes>
         </Router>
