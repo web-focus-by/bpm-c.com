@@ -85,7 +85,7 @@ const Reviews = ({}) => {
         </div>
         <div className="reviews__info">
           <Swiper
-            spaceBetween={widthScreen <= 1024 ? 20 : 26}
+            spaceBetween={widthScreen <= 1366 ? 20 : 26}
             slidesPerView={"auto"}
             // onSlideChange={() => console.log("slide change")}
             // onSwiper={swiper => console.log(swiper)}
@@ -108,6 +108,18 @@ const Reviews = ({}) => {
               },
               768: {
                 width: 768,
+                allowTouchMove: true,
+              },
+              425: {
+                width: 425,
+                allowTouchMove: true,
+              },
+              375: {
+                width: 375,
+                allowTouchMove: true,
+              },
+              320: {
+                width: 320,
                 allowTouchMove: true,
               },
             }}
