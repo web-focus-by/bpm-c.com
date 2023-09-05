@@ -1,5 +1,4 @@
 import * as React from "react"
-import { redirect } from "react-router"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -59,9 +58,7 @@ const News = ({ location }) => {
   const allTags = PostsAndTags ? PostsAndTags.allWpTag.edges : []
   const allPosts = PostsAndTags ? PostsAndTags.allWpPost.edges : []
 
-  if(typeof document !== 'undefined' || typeof window !== 'undefined') {
-    return redirect('/blog/')
-  }
+
   return (
     <>
       <Layout>
