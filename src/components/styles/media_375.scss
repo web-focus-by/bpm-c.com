@@ -269,6 +269,7 @@
   }
   .technologies__list {
     grid-row-gap: 55px;
+    margin-left: 10px;
     .technologies_list_item {
       height: auto;
     }
@@ -1150,6 +1151,10 @@
         }
       }
     }
+  }
+
+  .technologies__list {
+    margin-left: 10px;
   }
 
   .form {
