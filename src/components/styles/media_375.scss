@@ -1217,6 +1217,52 @@
     }
   }
 
+  .advantages {
+    &__subtitle {
+      margin-bottom: 0;
+      max-width: none;
+      margin-top: 30px;
+      font-size: 15px;
+    }
+
+    &__info {
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+
+      .advantages_info_block {
+        color: #fff;
+
+        &:first-child::before {
+          display: flex;
+          content: url("../../images/gradient_purple1366.svg");
+          position: relative;
+          right: 4%;
+        }
+
+        &:nth-child(2)::before {
+          display: flex;
+          content: url("../../images/gradient_yellow1366.svg");
+          position: relative;
+          right: 4%;
+        }
+
+        &:nth-child(3)::before {
+          display: flex;
+          content: url("../../images/gradient_pink1366.svg");
+          position: relative;
+          right: 4%;
+        }
+
+        &:nth-child(4)::before {
+          display: flex;
+          content: url("../../images/gradient_blue1366.svg");
+          position: relative;
+          right: 4%;
+        }
+      }
+    }
+  }
+
   .header_circle_yellow {
     position: absolute;
     width: 124.48px;
