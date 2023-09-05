@@ -238,6 +238,18 @@ const Blog = ({ titlePage }) => {
                 width: 768,
                 allowTouchMove: true,
               },
+              425: {
+                width: 425,
+                allowTouchMove: true,
+              },
+              375: {
+                width: 375,
+                allowTouchMove: true,
+              },
+              320: {
+                width: 320,
+                allowTouchMove: true,
+              },
             }}
           >
             {result}
