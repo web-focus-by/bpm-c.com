@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Routes, Route, Navigate, Router } from "react-router-dom"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -74,27 +75,32 @@ const IndexPage = ({ location }) => {
 
   return (
     <>
-      <Layout>
-        <Seo title="Index" />
-        <Hero location={location}></Hero>
-        {isShowThankModal ? (
-          <ThanksModal backPage={backPageModal}></ThanksModal>
-        ) : null}
-        <ITCompany></ITCompany>
-        <Portfolio posts={allPosts}></Portfolio>
-        {isShowForm ? <Form showThankForm={showThankForm}></Form> : null}
-        {isShowThankForm ? <ThanksForm backPage={backPage}></ThanksForm> : null}
-        <ServicesItem></ServicesItem>
-        <Technologies></Technologies>
-        <BPMCloud></BPMCloud>
-        <ProjectsProcess></ProjectsProcess>
-        <Blog titlePage="Blog"></Blog>
-        <Advantages></Advantages>
-        <Reviews></Reviews>
-        <CompanyDescription></CompanyDescription>
-        <ServicePackage></ServicePackage>
-        <LeadersChoice></LeadersChoice>
-      </Layout>
+      <Router>
+        <Layout>
+          <Seo title="Index" />
+          <Hero location={location}></Hero>
+          {isShowThankModal ? (
+            <ThanksModal backPage={backPageModal}></ThanksModal>
+          ) : null}
+          <ITCompany></ITCompany>
+          <Portfolio posts={allPosts}></Portfolio>
+          {isShowForm ? <Form showThankForm={showThankForm}></Form> : null}
+          {isShowThankForm ? <ThanksForm backPage={backPage}></ThanksForm> : null}
+          <ServicesItem></ServicesItem>
+          <Technologies></Technologies>
+          <BPMCloud></BPMCloud>
+          <ProjectsProcess></ProjectsProcess>
+          <Blog titlePage="Blog"></Blog>
+          <Advantages></Advantages>
+          <Reviews></Reviews>
+          <CompanyDescription></CompanyDescription>
+          <ServicePackage></ServicePackage>
+          <LeadersChoice></LeadersChoice>
+        </Layout>
+        <Routes>
+          <Route path="/news/" element={<Navigate to="/blog/" />} />
+        </Routes>
+      </Router>
     </>
   )
 }
