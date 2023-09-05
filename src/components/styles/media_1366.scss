@@ -147,6 +147,14 @@
     margin-top: 134px;
   }
 
+  .swiper {
+    .swiper-slide {
+      width: 250px;
+      height: max-content;
+      margin: 0 16px;
+    }
+  }
+
   .form {
     padding: 71px 89px 71px 70px;
     background-position: 0 30px;
