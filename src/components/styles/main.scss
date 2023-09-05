@@ -16,7 +16,7 @@ body {
 }
 
 .header {
-  border-bottom: 2px solid #f0eff1;
+  border-bottom: 1.5px solid #f0eff1;
   position: sticky;
   top: 0;
   background-color: rgb(255 255 255 / 60%);
@@ -1261,7 +1261,7 @@ body {
             background-color: transparent;
             border-bottom: 1px solid #fff;
             width: 100%;
-            padding-bottom: 46px;
+            padding-top: 46px;
           }
 
           input:focus ~ label,
@@ -1310,7 +1310,7 @@ body {
           }
           p {
             max-width: 250px;
-            font-weight: 400;
+            font-weight: 300;
             font-size: 14px;
             line-height: 100%;
             margin: 0;
