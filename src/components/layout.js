@@ -153,9 +153,6 @@ const Layout = ({ children }) => {
           {children}
           <Footer></Footer>
           <ScriptLD/>
-          <Routes>
-            <Redirect strict from="/news/news-topic/" to="/blog/" />
-          </Routes>
         </BrowserRouter>
       </>
     )

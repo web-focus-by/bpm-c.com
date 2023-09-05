@@ -59,6 +59,9 @@ const News = ({ location }) => {
   const allTags = PostsAndTags ? PostsAndTags.allWpTag.edges : []
   const allPosts = PostsAndTags ? PostsAndTags.allWpPost.edges : []
 
+  if(typeof document !== 'undefined' || typeof window !== 'undefined') {
+    return redirect('/blog/')
+  }
   return (
     <>
       <Layout>
