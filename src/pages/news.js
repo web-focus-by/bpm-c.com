@@ -58,6 +58,7 @@ const News = ({ location }) => {
   const allTags = PostsAndTags ? PostsAndTags.allWpTag.edges : []
   const allPosts = PostsAndTags ? PostsAndTags.allWpPost.edges : []
 
+
   return (
     <>
       <Layout>
