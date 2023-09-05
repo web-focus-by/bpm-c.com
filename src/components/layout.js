@@ -10,6 +10,7 @@ import Modal from "./modal"
 import ThanksModal from "../components/thanks_modal"
 import DropdownServices from "./dropdown_services"
 import MenuBurger from "../components/menuBurger"
+import Blog from "./blog"
 import ScriptLD from "./scriptLD"
 import "../components/styles/layout.scss"
 
@@ -154,9 +155,9 @@ const Layout = ({ children }) => {
           <ScriptLD/>
           <Routes>
             <Route path="/news/" element={<Navigate to='/blog/' />} />
-            <Route path="/about-us/blog/ " element={<Navigate to='/blog/' />} />
-            <Route path="/news/news-topic/" element={<Navigate to='/blog/' />} />
-            <Route path="/news/new-topic-two/" element={<Navigate to='/blog/' />} />
+            <Route path="/about-us/blog/ " element={<Blog />} />
+            <Route path="/news/news-topic/" element={<Blog />} />
+            <Route path="/news/new-topic-two/" element={<Blog />} />
           </Routes>
         </BrowserRouter>
       </>
