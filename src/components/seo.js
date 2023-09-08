@@ -38,6 +38,10 @@ function Seo({ description, lang, meta, title }) {
       titleTemplate={defaultTitle ? `%s / ${defaultTitle}` : null}
       meta={[
         {
+          name: `robots`,
+          content: `noindex, nofollow`,
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
