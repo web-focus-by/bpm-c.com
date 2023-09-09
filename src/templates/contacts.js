@@ -207,9 +207,20 @@ const Contacts = ({ location }) => {
                       id="search-contact_form"
                       onSubmit={e => {
                         e.preventDefault()
-                        clear()
+                        if(checkEmailMask(emailValue)) {
+                          clear()
+                          setCompanyValue('')
+                          setNameValue('')
+                          setTelephoneValue('')
+                          setEmailValue('')
+                          setMessageValue('')
+                        } else {
+                          return;
+                        }
+
                       }}
                     action="mailto:rinakashi13@mail.ru"
+                    method="POST"
                     >
                       <div className="contact_form_line-wrapper">
                         <input
@@ -270,7 +281,6 @@ const Contacts = ({ location }) => {
                           className="contact_form-mail input-mail contact_form_mail input-yellow"
                           onChange={e => {
                             setEmailValue(e.target.value)
-                            checkEmailMask(e.target.value)
                           }}
                           required
                         />
