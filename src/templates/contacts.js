@@ -275,7 +275,13 @@ const Contacts = ({ location }) => {
                           name="email"
                           className="contact_form-mail input-mail contact_form_mail input-yellow"
                           onChange={e => {
-                            setEmailValue(e.target.value)
+                            if(!/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(e.target.value)) {
+                              e.target.classList.add('invalid');
+                              setEmailValue(e.target.value)
+                            } else {
+                              e.target.classList.remove('invalid');
+                              setEmailValue(e.target.value)
+                            }
                           }}
                           required
                         />
@@ -292,13 +298,7 @@ const Contacts = ({ location }) => {
                           maxlength="256"
                           className="contact_form-message input-message contact_form_message input-yellow"
                           onChange={e => {
-                              if(!/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(e.target.value)) {
-                                e.target.classList.add('invalid');
                                 setMessageValue(e.target.value)
-                              } else {
-                                e.target.classList.remove('invalid');
-                                setMessageValue(e.target.value)
-                              }
                           }}
                         />
                         <label>Message</label>
