@@ -261,7 +261,7 @@ const Contacts = ({ location }) => {
                           autoComplete="off"
                           name="telephone"
                           className="contact_form-phone input-phone contact_form_phone input-yellow"
-                          mask="+4\9 99 999 99"
+                          mask="+\ 999999999"
                           maskChar=" "
                           onChange={e => {
                             setTelephoneValue(e.target.value)
@@ -274,7 +274,7 @@ const Contacts = ({ location }) => {
                       <div className="contact_form_line-wrapper">
                         <input
                           value={emailValue}
-                          type="text"
+                          type="email"
                           id="mail"
                           autoComplete="off"
                           name="email"
