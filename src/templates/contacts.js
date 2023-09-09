@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useState } from "react"
+import InputMask from 'react-input-mask'
 import { Link } from "gatsby"
 import { gql, useMutation } from "@apollo/client"
 import Breadcrumbs from "../components/breadcrumbs/breadcrumbs"
@@ -49,7 +50,7 @@ const Contacts = ({ location }) => {
   const socialMedia = socialMaediaLinks.map((val, index) => {
     return (
       <li key={index.toString()}>
-        <Link to={val.link}>
+        <Link to={val.link} target="_blank">
           <span className={val.name} itemprop="name"></span>
         </Link>
       </li>
@@ -93,7 +94,7 @@ const Contacts = ({ location }) => {
                   <ul>
                     <li key="phone">Phone</li>
                     <li key="e-mail">E-mail</li>
-                    <li key="socialMedia">Social media / messangers</li>
+                    <li key="socialMedia">Social media</li>
                   </ul>
                 </div>
                 <div className="contacts_value">
@@ -216,10 +217,10 @@ const Contacts = ({ location }) => {
                           autoComplete="off"
                           name="company"
                           className="contact_form_company input-yellow "
+                          maxlength="100"
                           onChange={e => {
                             setCompanyValue(e.target.value)
                           }}
-                          required
                         />
                         <label>Company</label>
                       </div>
@@ -232,6 +233,7 @@ const Contacts = ({ location }) => {
                           autoComplete="off"
                           name="name"
                           className="contact_form_name input-yellow "
+                          maxlength="50"
                           onChange={e => {
                             setNameValue(e.target.value)
                           }}
@@ -241,13 +243,16 @@ const Contacts = ({ location }) => {
                       </div>
 
                       <div className="contact_form_line-wrapper">
-                        <input
+                        <InputMask
                           value={telephoneValue}
                           type="text"
                           id="tel"
                           autoComplete="off"
                           name="telephone"
                           className="contact_form-phone input-phone contact_form_phone input-yellow"
+                          maxlength="13"
+                          mask="+\999 99 999 99 99"
+                          maskChar=" "
                           onChange={e => {
                             setTelephoneValue(e.target.value)
                           }}
@@ -279,11 +284,11 @@ const Contacts = ({ location }) => {
                           id="message"
                           autoComplete="off"
                           name="message"
+                          maxlength="256"
                           className="contact_form-message input-message contact_form_message input-yellow"
                           onChange={e => {
                             setMessageValue(e.target.value)
                           }}
-                          required
                         />
                         <label>Message</label>
                       </div>

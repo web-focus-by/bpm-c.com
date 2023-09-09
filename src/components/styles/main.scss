@@ -986,6 +986,10 @@ body {
               text-decoration: none;
               color:#1A1B1F;
             }
+
+            a:hover {
+              color: #935cff;
+            }
           }
 
           li:first-child {
@@ -2157,6 +2161,10 @@ body {
       a {
         text-decoration: none;
         color: #1a1b1f;
+      }
+
+      a:hover {
+        color:#935cff;
       }
     }
   }
