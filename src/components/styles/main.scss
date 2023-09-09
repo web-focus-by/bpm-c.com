@@ -1092,6 +1092,10 @@ body {
                 top: -30px;
               }
 
+              input:focus {
+                content: '+';
+              }
+
               label {
                 font-weight: 500;
                 position: absolute;
