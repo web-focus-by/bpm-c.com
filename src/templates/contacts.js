@@ -253,7 +253,7 @@ const Contacts = ({ location }) => {
                       </div>
 
                       <div className="contact_form_line-wrapper">
-                        <InputMask value= {...telephoneValue}
+                        <InputMask value= {telephoneValue}
                           type="number"
                           id="tel"
                           autoComplete="off"
