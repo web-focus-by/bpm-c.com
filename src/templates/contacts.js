@@ -251,7 +251,7 @@ const Contacts = ({ location }) => {
                           name="telephone"
                           className="contact_form-phone input-phone contact_form_phone input-yellow"
                           maxlength="13"
-                          mask="+\999 99 999 99 99"
+                          mask="+"
                           maskChar=" "
                           onChange={e => {
                             setTelephoneValue(e.target.value)
