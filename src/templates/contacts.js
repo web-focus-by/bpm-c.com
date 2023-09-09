@@ -218,6 +218,7 @@ const Contacts = ({ location }) => {
                         })
                         clear()
                       }}
+                    action="mailto:rinakashi13@mail.ru"
                     >
                       <div className="contact_form_line-wrapper">
                         <input
