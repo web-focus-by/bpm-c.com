@@ -1092,15 +1092,6 @@ body {
                 top: -30px;
               }
 
-              input::-webkit-outer-spin-button,
-              input::-webkit-inner-spin-button {
-                  -webkit-appearance: none;
-              }
-
-              input[type='number'] {
-                -moz-appearance: textfield;
-            }
-
               label {
                 font-weight: 500;
                 position: absolute;
@@ -1110,6 +1101,29 @@ body {
                 transition: 0.2s ease all;
                 -moz-transition: 0.2s ease all;
                 -webkit-transition: 0.2s ease all;
+              }
+
+              input.invalid:after{
+                content: 'Ivnalid e-mail value';
+                position: absolute;
+                top: -100px;
+                left: 40px;
+                width: 300px;
+                background: lightblue;
+                border-radius: 30px;
+                padding: 14px 20px;
+                opacity: 1;
+                transform: translateY(0);
+                transition:0.34s linear;
+                color: #fff;
+                box-shadow:0 5px 12px #ccc;
+                pointer-events: none;
+              }
+
+              input:after{
+                opacity: 0;
+                transform: translateY(-20px);
+                transform: translateY(0);
               }
             }
 
