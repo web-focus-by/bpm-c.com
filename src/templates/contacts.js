@@ -40,6 +40,7 @@ const Contacts = ({ location }) => {
   const [nameValue, setNameValue] = useState("")
   const [telephoneValue, setTelephoneValue] = useState("")
   const [emailValue, setEmailValue] = useState("")
+  const [emailError, setEmailError] = useState(true)
   const [messageValue, setMessageValue] = useState("")
   const [interestedItems, setInterestedItems] = useState([""])
   const socialMaediaLinks = [
@@ -67,6 +68,15 @@ const Contacts = ({ location }) => {
   const clear = () => {
     setInterestedItems([""])
   }
+
+  const checkEmailMask = email => {
+    console.log(email);
+    if (/.+@.+\.[A-Za-z]+$/.test(email)) {
+      setEmailError(false);
+    } else {
+      setEmailError(true);
+    }
+  };
 
   return (
     <>
@@ -269,6 +279,7 @@ const Contacts = ({ location }) => {
                           className="contact_form-mail input-mail contact_form_mail input-yellow"
                           onChange={e => {
                             setEmailValue(e.target.value)
+                            checkEmailMask(e.target.value)
                           }}
                           required
                         />
