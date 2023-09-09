@@ -206,17 +206,12 @@ const Contacts = ({ location }) => {
                       id="search-contact_form"
                       onSubmit={e => {
                         e.preventDefault()
-                        if(!emailError) {
                           clear()
                           setCompanyValue('')
                           setNameValue('')
                           setTelephoneValue('')
                           setEmailValue('')
                           setMessageValue('')
-                        } else {
-                          return;
-                        }
-
                       }}
                     action="mailto:rinakashi13@mail.ru"
                     method="POST"
