@@ -39,7 +39,7 @@ const Footer = () => {
   const socialMedia = socialMaediaLinks.map((val, index) => {
     return (
       <li key={index}>
-        <Link to={val.link}>
+        <Link to={val.link} target="_blank">
           <span className={val.name}></span>
         </Link>
       </li>

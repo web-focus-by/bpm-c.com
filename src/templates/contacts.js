@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useState } from "react"
+import InputMask from 'react-input-mask'
 import { Link } from "gatsby"
 import { gql, useMutation } from "@apollo/client"
 import Breadcrumbs from "../components/breadcrumbs/breadcrumbs"
@@ -39,6 +40,7 @@ const Contacts = ({ location }) => {
   const [nameValue, setNameValue] = useState("")
   const [telephoneValue, setTelephoneValue] = useState("")
   const [emailValue, setEmailValue] = useState("")
+  const [emailError, setEmailError] = useState(true)
   const [messageValue, setMessageValue] = useState("")
   const [interestedItems, setInterestedItems] = useState([""])
   const socialMaediaLinks = [
@@ -49,7 +51,7 @@ const Contacts = ({ location }) => {
   const socialMedia = socialMaediaLinks.map((val, index) => {
     return (
       <li key={index.toString()}>
-        <Link to={val.link}>
+        <Link to={val.link} target="_blank">
           <span className={val.name} itemprop="name"></span>
         </Link>
       </li>
@@ -66,6 +68,14 @@ const Contacts = ({ location }) => {
   const clear = () => {
     setInterestedItems([""])
   }
+
+  const checkEmailMask = email => {
+    if (/.+@.+\.[A-Za-z]+$/.test(email)) {
+      setEmailError(false);
+    } else {
+      setEmailError(true);
+    }
+  };
 
   return (
     <>
@@ -93,7 +103,7 @@ const Contacts = ({ location }) => {
                   <ul>
                     <li key="phone">Phone</li>
                     <li key="e-mail">E-mail</li>
-                    <li key="socialMedia">Social media / messangers</li>
+                    <li key="socialMedia">Social media</li>
                   </ul>
                 </div>
                 <div className="contacts_value">
@@ -196,17 +206,15 @@ const Contacts = ({ location }) => {
                       id="search-contact_form"
                       onSubmit={e => {
                         e.preventDefault()
-                        createSubmission({
-                          variables: {
-                            company: companyValue,
-                            name: nameValue,
-                            telephone: telephoneValue,
-                            email: emailValue,
-                            message: messageValue,
-                          },
-                        })
-                        clear()
+                          clear()
+                          setCompanyValue('')
+                          setNameValue('')
+                          setTelephoneValue('')
+                          setEmailValue('')
+                          setMessageValue('')
                       }}
+                    action="mailto:rinakashi13@mail.ru"
+                    method="POST"
                     >
                       <div className="contact_form_line-wrapper">
                         <input
@@ -216,10 +224,10 @@ const Contacts = ({ location }) => {
                           autoComplete="off"
                           name="company"
                           className="contact_form_company input-yellow "
+                          maxlength="100"
                           onChange={e => {
                             setCompanyValue(e.target.value)
                           }}
-                          required
                         />
                         <label>Company</label>
                       </div>
@@ -232,6 +240,7 @@ const Contacts = ({ location }) => {
                           autoComplete="off"
                           name="name"
                           className="contact_form_name input-yellow "
+                          maxlength="50"
                           onChange={e => {
                             setNameValue(e.target.value)
                           }}
@@ -241,13 +250,14 @@ const Contacts = ({ location }) => {
                       </div>
 
                       <div className="contact_form_line-wrapper">
-                        <input
-                          value={telephoneValue}
+                        <InputMask value = {telephoneValue}
                           type="text"
                           id="tel"
                           autoComplete="off"
                           name="telephone"
                           className="contact_form-phone input-phone contact_form_phone input-yellow"
+                          mask="+\ 999999999"
+                          maskChar=" "
                           onChange={e => {
                             setTelephoneValue(e.target.value)
                           }}
@@ -259,7 +269,7 @@ const Contacts = ({ location }) => {
                       <div className="contact_form_line-wrapper">
                         <input
                           value={emailValue}
-                          type="text"
+                          type="email"
                           id="mail"
                           autoComplete="off"
                           name="email"
@@ -279,11 +289,11 @@ const Contacts = ({ location }) => {
                           id="message"
                           autoComplete="off"
                           name="message"
+                          maxlength="256"
                           className="contact_form-message input-message contact_form_message input-yellow"
                           onChange={e => {
                             setMessageValue(e.target.value)
                           }}
-                          required
                         />
                         <label>Message</label>
                       </div>
@@ -293,7 +303,7 @@ const Contacts = ({ location }) => {
                             Send<span className="arrow_black"></span>
                           </button>
                         </div>
-                        <input type="checkbox" id="agree" name="agree" value="yes"/>
+                        <input type="checkbox" id="agree" name="agree" value="yes" required/>
                         <label htmlFor="agree">I agree to the Privacy Policy and Terms of Service</label>
                       </div>
                     </form>

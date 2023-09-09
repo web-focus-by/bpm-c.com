@@ -986,6 +986,10 @@ body {
               text-decoration: none;
               color:#1A1B1F;
             }
+
+            a:hover {
+              color: #935cff;
+            }
           }
 
           li:first-child {
@@ -1087,6 +1091,15 @@ body {
               input[data-empty="false"] ~ label {
                 top: -30px;
               }
+
+              input::-webkit-outer-spin-button,
+              input::-webkit-inner-spin-button {
+                  -webkit-appearance: none;
+              }
+
+              input[type='number'] {
+                -moz-appearance: textfield;
+            }
 
               label {
                 font-weight: 500;
@@ -2157,6 +2170,10 @@ body {
       a {
         text-decoration: none;
         color: #1a1b1f;
+      }
+
+      a:hover {
+        color:#935cff;
       }
     }
   }
