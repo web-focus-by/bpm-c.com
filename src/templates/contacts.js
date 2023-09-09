@@ -70,7 +70,6 @@ const Contacts = ({ location }) => {
   }
 
   const checkEmailMask = email => {
-    console.log(email);
     if (/.+@.+\.[A-Za-z]+$/.test(email)) {
       setEmailError(false);
     } else {
@@ -207,7 +206,7 @@ const Contacts = ({ location }) => {
                       id="search-contact_form"
                       onSubmit={e => {
                         e.preventDefault()
-                        if(checkEmailMask(emailValue)) {
+                        if(!emailError) {
                           clear()
                           setCompanyValue('')
                           setNameValue('')
@@ -262,7 +261,7 @@ const Contacts = ({ location }) => {
                           autoComplete="off"
                           name="telephone"
                           className="contact_form-phone input-phone contact_form_phone input-yellow"
-                          maxlength="13"
+                          max="13"
                           onChange={e => {
                             setTelephoneValue(e.target.value)
                           }}
