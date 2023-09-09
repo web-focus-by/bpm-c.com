@@ -243,16 +243,14 @@ const Contacts = ({ location }) => {
                       </div>
 
                       <div className="contact_form_line-wrapper">
-                        <InputMask
-                          value={telephoneValue}
-                          type="text"
+                        <InputMask value= {...telephoneValue}
+                          type="number"
                           id="tel"
                           autoComplete="off"
                           name="telephone"
                           className="contact_form-phone input-phone contact_form_phone input-yellow"
-                          maxlength="13"
-                          mask="+"
-                          maskChar=" "
+                          mask="+\ 999999999999"
+                          maskChar={null}
                           onChange={e => {
                             setTelephoneValue(e.target.value)
                           }}
@@ -298,7 +296,7 @@ const Contacts = ({ location }) => {
                             Send<span className="arrow_black"></span>
                           </button>
                         </div>
-                        <input type="checkbox" id="agree" name="agree" value="yes"/>
+                        <input type="checkbox" id="agree" name="agree" value="yes" required/>
                         <label htmlFor="agree">I agree to the Privacy Policy and Terms of Service</label>
                       </div>
                     </form>
