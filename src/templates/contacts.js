@@ -255,13 +255,14 @@ const Contacts = ({ location }) => {
                       </div>
 
                       <div className="contact_form_line-wrapper">
-                        <input value = {telephoneValue}
+                        <InputMask value = {telephoneValue}
                           type="number"
                           id="tel"
                           autoComplete="off"
                           name="telephone"
                           className="contact_form-phone input-phone contact_form_phone input-yellow"
-                          max="13"
+                          mask="+4\9 99 999 99"
+                          maskChar=" "
                           onChange={e => {
                             setTelephoneValue(e.target.value)
                           }}
