@@ -207,15 +207,6 @@ const Contacts = ({ location }) => {
                       id="search-contact_form"
                       onSubmit={e => {
                         e.preventDefault()
-                        createSubmission({
-                          variables: {
-                            company: companyValue,
-                            name: nameValue,
-                            telephone: telephoneValue,
-                            email: emailValue,
-                            message: messageValue,
-                          },
-                        })
                         clear()
                       }}
                     action="mailto:rinakashi13@mail.ru"
@@ -254,7 +245,7 @@ const Contacts = ({ location }) => {
                       </div>
 
                       <div className="contact_form_line-wrapper">
-                        <InputMask value = {`+${telephoneValue}`}
+                        <input value = {`+${telephoneValue}`}
                           type="number"
                           id="tel"
                           autoComplete="off"
