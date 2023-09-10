@@ -80,6 +80,7 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
           {title}
           <span className="puzzle"></span>
         </h1>
+        <p className="hero__description">Discover the transformative power of BPM Cloud! Dive into our portfolio to witness the evolution of businesses through innovative BPM solutions. Explore real-world success stories that showcase enhanced efficiency, streamlined operations, and empowered growth. Your journey to business excellence starts here. Explore our case studies now and get inspired!</p>
         <div className="hero__butntag">
           {result}
           <button
