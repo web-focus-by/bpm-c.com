@@ -53,7 +53,7 @@ const Portfolio = ({ location }) => {
   return (
     <>
       <Layout>
-        <Seo description="Explore BPM Cloud's impressive portfolio showcasing impactful data-driven solutions across fintech, travel & leisure, music, and e-commerce. Witness the results of our expertly crafted work." title="Portfolio" />
+        <Seo description="Explore BPM Cloud's impressive portfolio showcasing impactful data-driven solutions across fintech, travel & leisure, music, and e-commerce. Witness the results of our expertly crafted work." title="ЕЕЕ" />
         <HeroPortfolio
           location={location}
           tags={allTags}
