@@ -40,7 +40,7 @@ const Contacts = ({ location }) => {
   const [nameValue, setNameValue] = useState("")
   const [telephoneValue, setTelephoneValue] = useState("")
   const [emailValue, setEmailValue] = useState("")
-  const [emailError, setEmailError] = useState(true)
+  const [emailError, setEmailError] = useState(null);
   const [messageValue, setMessageValue] = useState("")
   const [interestedItems, setInterestedItems] = useState([""])
   const socialMaediaLinks = [
@@ -69,12 +69,18 @@ const Contacts = ({ location }) => {
     setInterestedItems([""])
   }
 
-  const checkEmailMask = email => {
-    if (/.+@.+\.[A-Za-z]+$/.test(email)) {
-      setEmailError(false);
+  const isValidEmail = (email) => {
+    return /\S+@\S+\.\S+/.test(email);
+  }
+
+  const handleChange = event => {
+    if (!isValidEmail(event.target.value)) {
+      setEmailError('Email is invalid');
     } else {
-      setEmailError(true);
+      setEmailError(null);
     }
+
+    setEmailValue(event.target.value);
   };
 
   return (
@@ -274,19 +280,12 @@ const Contacts = ({ location }) => {
                           autoComplete="off"
                           name="email"
                           className="contact_form-mail input-mail contact_form_mail input-yellow"
-                          onChange={e => {
-                            if(!/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(e.target.value)) {
-                              e.target.classList.add('invalid');
-                              setEmailValue(e.target.value)
-                            } else {
-                              e.target.classList.remove('invalid');
-                              setEmailValue(e.target.value)
-                            }
-                          }}
+                          onChange={handleChange}
                           required
                         />
                         <label>E-mail*</label>
                       </div>
+                      {error && <input  id="mail" style={{borderColor: 'red'}} placeholder={error}/>}
 
                       <div className="contact_form_line-wrapper">
                         <input
@@ -329,7 +328,7 @@ const Contacts = ({ location }) => {
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div> */}
+                        </div> */}
         </div>
       </Layout>
     </>
