@@ -266,6 +266,10 @@
   }
 
   .hero {
+    &__portfolio {
+      margin-bottom: 80px;
+    }
+
     &__subtitle {
       font-size: 16px;
       margin-bottom: clamp(30px, 10vw, 50px);

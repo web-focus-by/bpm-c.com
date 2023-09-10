@@ -328,6 +328,11 @@
   }
 
   .hero {
+
+    &__portfolio {
+      margin-bottom: 100px;
+    }
+
     margin-top: calc(160px + (134 - 174) * ((100vw - 768px) / (1024 - 768)));
     &__subtitle {
       line-height: 130%;

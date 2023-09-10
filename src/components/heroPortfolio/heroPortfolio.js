@@ -75,7 +75,7 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
       <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
         <Breadcrumbs breadcrumbs={location} title={title} />
       </div>
-      <div className="hero">
+      <div className="hero hero__portfolio">
         <h1 className="hero__title title_80">
           {title}
           <span className="puzzle"></span>

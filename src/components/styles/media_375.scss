@@ -319,6 +319,9 @@
   }
 
   .hero {
+    &__portfolio {
+        margin-bottom: 40px;
+    }
     &__title {
       font-family: "Acrom", sans-serif;
       font-style: normal;
