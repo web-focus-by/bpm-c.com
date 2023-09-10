@@ -280,12 +280,11 @@ const Contacts = ({ location }) => {
                           autoComplete="off"
                           name="email"
                           className="contact_form-mail input-mail contact_form_mail input-yellow"
-                          onChange={handleChange}
+                          onChange={error ? <input  id="mail" style={{borderColor: 'red'}} placeholder={error}/> : handleChange}
                           required
                         />
                         <label>E-mail*</label>
                       </div>
-                      {error && <input  id="mail" style={{borderColor: 'red'}} placeholder={error}/>}
 
                       <div className="contact_form_line-wrapper">
                         <input
