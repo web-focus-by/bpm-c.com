@@ -92,7 +92,7 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
             {longList ? "Close" : "See more"}
           </button>
         </div>
-        <div className="resume-portfolio">
+        {/* <div className="resume-portfolio">
           <span className="resume-portfolio-text">200+ completed projects</span>
           <span className="resume-portfolio-text">
             200+ specialists in the team
@@ -100,7 +100,7 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
           <span className="resume-portfolio-text">
             200% of clients come back to us
           </span>
-        </div>
+        </div> */}
       </div>
       <div className="header_circle_yellow"></div>
       <div className="header_circle_pink"></div>
