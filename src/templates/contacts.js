@@ -275,7 +275,7 @@ const Contacts = ({ location }) => {
                       <div className="contact_form_line-wrapper">
                         <input
                           value={emailValue}
-                          type="email"
+                          type="text"
                           id="mail"
                           autoComplete="off"
                           name="email"
