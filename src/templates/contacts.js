@@ -40,7 +40,6 @@ const Contacts = ({ location }) => {
   const [nameValue, setNameValue] = useState("")
   const [telephoneValue, setTelephoneValue] = useState("")
   const [emailValue, setEmailValue] = useState("")
-  const [emailError, setEmailError] = useState(true)
   const [messageValue, setMessageValue] = useState("")
   const [interestedItems, setInterestedItems] = useState([""])
   const socialMaediaLinks = [
@@ -68,14 +67,6 @@ const Contacts = ({ location }) => {
   const clear = () => {
     setInterestedItems([""])
   }
-
-  const checkEmailMask = email => {
-    if (/.+@.+\.[A-Za-z]+$/.test(email)) {
-      setEmailError(false);
-    } else {
-      setEmailError(true);
-    }
-  };
 
   return (
     <>
@@ -275,7 +266,7 @@ const Contacts = ({ location }) => {
                           name="email"
                           className="contact_form-mail input-mail contact_form_mail input-yellow"
                           onChange={e => {
-                            setEmailValue(e.target.value)
+                            setEmailValue(e.target.value);
                           }}
                           required
                         />
@@ -292,7 +283,7 @@ const Contacts = ({ location }) => {
                           maxlength="256"
                           className="contact_form-message input-message contact_form_message input-yellow"
                           onChange={e => {
-                            setMessageValue(e.target.value)
+                                setMessageValue(e.target.value)
                           }}
                         />
                         <label>Message</label>
@@ -323,7 +314,7 @@ const Contacts = ({ location }) => {
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div> */}
+                        </div> */}
         </div>
       </Layout>
     </>
