@@ -1581,6 +1581,17 @@
     }
   }
 
+  .hero{
+    &__description {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 130%;
+      color: #5c5c5c;
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
   .header_circle_yellow {
     position: absolute;
     width: 124.48px;
