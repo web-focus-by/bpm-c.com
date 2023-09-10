@@ -40,7 +40,6 @@ const Contacts = ({ location }) => {
   const [nameValue, setNameValue] = useState("")
   const [telephoneValue, setTelephoneValue] = useState("")
   const [emailValue, setEmailValue] = useState("")
-  const [emailError, setEmailError] = useState(null);
   const [messageValue, setMessageValue] = useState("")
   const [interestedItems, setInterestedItems] = useState([""])
   const socialMaediaLinks = [
@@ -68,20 +67,6 @@ const Contacts = ({ location }) => {
   const clear = () => {
     setInterestedItems([""])
   }
-
-  const isValidEmail = (email) => {
-    return /\S+@\S+\.\S+/.test(email);
-  }
-
-  const handleChange = event => {
-    if (!isValidEmail(event.target.value)) {
-      setEmailError('Email is invalid');
-    } else {
-      setEmailError(null);
-    }
-
-    setEmailValue(event.target.value);
-  };
 
   return (
     <>
@@ -275,12 +260,14 @@ const Contacts = ({ location }) => {
                       <div className="contact_form_line-wrapper">
                         <input
                           value={emailValue}
-                          type="text"
+                          type="email"
                           id="mail"
                           autoComplete="off"
                           name="email"
                           className="contact_form-mail input-mail contact_form_mail input-yellow"
-                          onChange={error ? <input  id="mail" style={{borderColor: 'red'}} placeholder={error}/> : handleChange}
+                          onChange={e => {
+                            setEmailValue(e.target.value);
+                          }}
                           required
                         />
                         <label>E-mail*</label>
