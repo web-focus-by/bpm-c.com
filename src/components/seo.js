@@ -25,8 +25,6 @@ function Seo({ description, lang, meta, title }) {
       }
     `
   )
-
-  const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
 
   return (
@@ -43,7 +41,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `description`,
-          content: metaDescription,
+          content: description ? description : site.siteMetadata.description,
         },
         {
           property: `og:title`,
@@ -51,7 +49,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: description ? description : site.siteMetadata.description,
         },
         {
           property: `og:type`,
@@ -83,7 +81,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: description ? description : site.siteMetadata.description,
         },
       ].concat(meta)}
     />
