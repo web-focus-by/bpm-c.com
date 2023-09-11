@@ -53,7 +53,7 @@ const Portfolio = ({ location }) => {
   return (
     <>
       <Layout>
-        <Seo title="Portfolio" />
+        <Seo title="Portfolio"/>
         <HeroPortfolio
           location={location}
           tags={allTags}

@@ -25,9 +25,9 @@ function Seo({ description, lang, meta, title }) {
       }
     `
   )
-
-  const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+
+
 
   return (
     <Helmet
@@ -43,7 +43,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `description`,
-          content: metaDescription,
+          content: title === 'Portfolio' ? 'Explore BPM Cloud\'s impressive portfolio showcasing impactful data-driven solutions across fintech, travel & leisure, music, and e-commerce. Witness the results of our expertly crafted work.' : site.siteMetadata.description,
         },
         {
           property: `og:title`,
@@ -51,7 +51,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: title === 'Portfolio' ? 'Explore BPM Cloud\'s impressive portfolio showcasing impactful data-driven solutions across fintech, travel & leisure, music, and e-commerce. Witness the results of our expertly crafted work.' : site.siteMetadata.description,
         },
         {
           property: `og:type`,
@@ -83,7 +83,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: title === 'Portfolio' ? 'Explore BPM Cloud\'s impressive portfolio showcasing impactful data-driven solutions across fintech, travel & leisure, music, and e-commerce. Witness the results of our expertly crafted work.' : site.siteMetadata.description,
         },
       ].concat(meta)}
     />

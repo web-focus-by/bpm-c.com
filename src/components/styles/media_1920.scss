@@ -135,14 +135,10 @@
     &__butntag {
       .button_item_tag {
         font-size: calc(11px + (16 - 11) * ((100vw - 1366px) / (1920 - 1366)));
-        padding: calc(16px + (22 - 16) * ((100vw - 1366px) / (1920 - 1366)))
-          calc(29px + (40 - 29) * ((100vw - 1366px) / (1920 - 1366)));
         &__active {
           font-size: calc(
             11px + (16 - 11) * ((100vw - 1366px) / (1920 - 1366))
           );
-          padding: calc(16px + (22 - 16) * ((100vw - 1366px) / (1920 - 1366)))
-            calc(29px + (40 - 29) * ((100vw - 1366px) / (1920 - 1366)));
         }
       }
     }

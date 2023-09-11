@@ -75,11 +75,12 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
       <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
         <Breadcrumbs breadcrumbs={location} title={title} />
       </div>
-      <div className="hero">
+      <div className="hero hero__portfolio">
         <h1 className="hero__title title_80">
           {title}
           <span className="puzzle"></span>
         </h1>
+        <p className="hero__description">Discover the transformative power of BPM Cloud! Dive into our portfolio to witness the evolution of businesses through innovative BPM solutions. Explore real-world success stories that showcase enhanced efficiency, streamlined operations, and empowered growth. Your journey to business excellence starts here. Explore our case studies now and get inspired!</p>
         <div className="hero__butntag">
           {result}
           <button
@@ -91,7 +92,7 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
             {longList ? "Close" : "See more"}
           </button>
         </div>
-        <div className="resume-portfolio">
+        {/* <div className="resume-portfolio">
           <span className="resume-portfolio-text">200+ completed projects</span>
           <span className="resume-portfolio-text">
             200+ specialists in the team
@@ -99,7 +100,7 @@ const HeroPortfolio = ({ location, tags, selectedTag, title }) => {
           <span className="resume-portfolio-text">
             200% of clients come back to us
           </span>
-        </div>
+        </div> */}
       </div>
       <div className="header_circle_yellow"></div>
       <div className="header_circle_pink"></div>

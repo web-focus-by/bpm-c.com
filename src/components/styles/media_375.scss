@@ -319,6 +319,9 @@
   }
 
   .hero {
+    &__portfolio {
+        margin-bottom: 40px;
+    }
     &__title {
       font-family: "Acrom", sans-serif;
       font-style: normal;
@@ -1575,6 +1578,17 @@
           }
         }
       }
+    }
+  }
+
+  .hero{
+    &__description {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 130%;
+      color: #5c5c5c;
+      width: 100%;
+      margin-top: 0;
     }
   }
 
