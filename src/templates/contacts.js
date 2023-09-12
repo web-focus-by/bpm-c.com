@@ -55,7 +55,7 @@ const Contacts = ({ location }) => {
     handleSubmit,
     watch,
   } = useForm({
-    defaultValues: { name: "", email: "", telephone: "" },
+    defaultValues: { company: "", name: "", email: "", telephone: "", message: "" },
     mode: "onBlur",
   })
 
@@ -285,7 +285,7 @@ const Contacts = ({ location }) => {
                           required: "Please enter your phone number.",
                           pattern: {
                             value:
-                              /^(?:\+)?[ -]?\(?([1-9][0-8][0-9])\)?[ -]?([2-9][0-9]{2})[ -]?([0-9]{4})$/,
+                              /^(?:\+[1-9])?[ -]?\(?([1-9][0-8][0-9])\)?[ -]?([2-9][0-9]{2})[ -]?([0-9]{4})$/,
                             message: "Phone number in not correct",
                           },
                         })}

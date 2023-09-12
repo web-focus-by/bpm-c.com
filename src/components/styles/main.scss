@@ -1080,6 +1080,11 @@ body {
               position: relative;
               margin-bottom: 78px;
 
+              .input_invalid {
+                border-bottom: 1px solid #e11d48;
+                color: #e11d48;
+              }
+
               input {
                 color: #1a1b1f;
                 font-weight: 500;
