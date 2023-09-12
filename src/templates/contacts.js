@@ -48,10 +48,6 @@ const Contacts = ({ location }) => {
     email: true,
     telephone: true,
   })
-  const socialMaediaLinks = [
-    { link: "https://www.instagram.com/bpm_cloud/", name: "insta" },
-    { link: "https://www.facebook.com/bpm.it1", name: "facebook" },
-  ]
 
   const {
     register,
@@ -62,6 +58,32 @@ const Contacts = ({ location }) => {
     defaultValues: { name: "", email: "", telephone: "" },
     mode: "onBlur",
   })
+
+  useEffect(() => {
+    const subscription = watch((value, { name }) =>
+      setIsEmpty(prevState => ({ ...prevState, [name]: value[name] === "" }))
+    )
+    return () => subscription.unsubscribe()
+  }, [watch])
+
+  const submitHandler = data => {
+    if (isValid) {
+      createSubmission({
+        variables: {
+          ...data,
+        },
+      }).then(() => {
+        props.submitCallback()
+      })
+    }
+  }
+
+  if (error) return `Submission error! ${error.message}`
+
+  const socialMaediaLinks = [
+    { link: "https://www.instagram.com/bpm_cloud/", name: "insta" },
+    { link: "https://www.facebook.com/bpm.it1", name: "facebook" },
+  ]
 
   const socialMedia = socialMaediaLinks.map((val, index) => {
     return (
@@ -83,13 +105,6 @@ const Contacts = ({ location }) => {
   const clear = () => {
     setInterestedItems([""])
   }
-
-  useEffect(() => {
-    const subscription = watch((value, { name }) =>
-      setIsEmpty(prevState => ({ ...prevState, [name]: value[name] === "" }))
-    )
-    return () => subscription.unsubscribe()
-  }, [watch])
 
   return (
     <>
@@ -230,91 +245,99 @@ const Contacts = ({ location }) => {
                     action="mailto:rinakashi13@mail.ru"
                     method="POST"
                     >
-                      <div className="contact_form_line-wrapper">
-                        <input
-                          id="company"
-                          value={companyValue}
-                          type="text"
-                          name="company"
-                          className="contact_form_company input-yellow "
-                          maxlength="100"
-                          onChange={e => {
-                            setCompanyValue(e.target.value)
-                          }}
-                        />
-                        <label>Company</label>
-                      </div>
 
-                      <div className="contact_form_line-wrapper">
-                        <input
-                          id="name"
-                          value={nameValue}
-                          type="text"
-                          name="name"
-                          className="contact_form_name input-yellow "
-                          maxlength="50"
-                          onChange={e => {
-                            setNameValue(e.target.value)
-                          }}
-                          required
-                        />
-                        <label>Name*</label>
-                      </div>
+                    <div className="contact_form_line-wrapper">
+                      <input
+                        {...register("message")}
+                        type="text"
+                        id="company"
+                        autoComplete="off"
+                        maxlength="100"
+                        className={`contact_form-company input-company contact_form_company input-yellow`}
+                      />
+                      <label>Company</label>
+                    </div>
+                    <div className="contact_form_line-wrapper">
+                      <input
+                        {...register("name", {
+                          required: "Please enter your name.",
+                        })}
+                        id="name"
+                        type="text"
+                        autoComplete="off"
+                        name="name"
+                        maxlength="50"
+                        className={`contact_form_name input-yellow  ${
+                          errors.name ? "input_invalid" : ""
+                        }`}
+                        data-empty={!!isEmpty.name}
+                        required
+                      />
+                      <label>Name*</label>
+                      {errors.name && (
+                        <span className={"error_message"}>{errors.name?.message}</span>
+                      )}
+                    </div>
 
-                      <div className="contact_form_line-wrapper">
-                        <InputMask value = {telephoneValue}
-                          type="text"
-                          id="tel"
-                          name="telephone"
-                          className="contact_form-phone input-phone contact_form_phone input-yellow"
-                          mask="+\ 999999999999"
-                          maskChar=" "
-                          onChange={e => {
-                            setTelephoneValue(e.target.value)
-                          }}
-                          required
-                        />
-                        <label>Phone*</label>
-                      </div>
+                    <div className="contact_form_line-wrapper">
+                      <input
+                        {...register("telephone", {
+                          required: "Please enter your phone number.",
+                          pattern: {
+                            value:
+                              /^(?:\+)?[ -]?\(?([1-9][0-8][0-9])\)?[ -]?([2-9][0-9]{2})[ -]?([0-9]{4})$/,
+                            message: "Phone number in not correct",
+                          },
+                        })}
+                        className={`contact_form-phone input-phone contact_form_phone input-yellow ${
+                          errors.telephone ? "input_invalid" : ""
+                        }`}
+                        id="tel"
+                        autoComplete="off"
+                        data-empty={!!isEmpty.telephone}
+                        required
+                      />
+                      <label>Phone*</label>
+                      {errors.telephone && (
+                        <span className={"error_message"}>{errors.telephone?.message}</span>
+                      )}
+                    </div>
 
-                      <div className="contact_form_line-wrapper">
-                        <input {...register("email", {
-                            pattern: {
-                              value: /\S+@\S+\.\S+/,
-                              message: "Entered value does not match email format",
-                            },
-                          })}
-                          value={emailValue}
-                          type="text"
-                          id="mail"
-                          name="email"
-                          className={`contact_form-mail input-mail contact_form_mail input-yellow ${
-                            errors.email ? "input_invalid" : ""
-                          }`}
-                          maxlength="100"
-                          data-empty={!!isEmpty.email}
-                          onChange={e => {
-                            setEmailValue(e.target.value);
-                          }}
-                          required
-                        />
-                        <label>E-mail*</label>
-                      </div>
+                    <div className="contact_form_line-wrapper">
+                      <input
+                        {...register("email", {
+                          pattern: {
+                            value: /\S+@\S+\.\S+/,
+                            message: "Entered value does not match email format",
+                          },
+                        })}
+                        type="text"
+                        id="mail"
+                        autoComplete="off"
+                        maxlength="100"
+                        className={`contact_form-mail input-mail contact_form_mail input-yellow ${
+                          errors.email ? "input_invalid" : ""
+                        }`}
+                        data-empty={!!isEmpty.email}
+                        required
+                      />
+                      <label>E-mail*</label>
+                      {errors.email && (
+                        <span className={"error_message"}>{errors.email?.message}</span>
+                      )}
+                    </div>
 
-                      <div className="contact_form_line-wrapper">
-                        <input
-                          value={messageValue}
-                          type="text"
-                          id="message"
-                          name="message"
-                          maxlength="256"
-                          className="contact_form-message input-message contact_form_message input-yellow"
-                          onChange={e => {
-                                setMessageValue(e.target.value)
-                          }}
-                        />
-                        <label>Message</label>
-                      </div>
+                    <div className="contact_form_line-wrapper">
+                      <input
+                        {...register("message")}
+                        type="text"
+                        id="message"
+                        autoComplete="off"
+                        maxlength="256"
+                        className={`contact_form-message input-message contact_form_message input-yellow`}
+                      />
+                      <label>Message</label>
+                    </div>
                       <div className="contact_form_block_send">
                         <div>
                           <button className="button_white" type="submit">
