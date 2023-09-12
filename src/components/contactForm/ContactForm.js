@@ -125,14 +125,13 @@ const ContactForm = props => {
 
       <div className="form_block_send">
         <div>
-          <button className="button_black" type="submit">
-            Send<span className="arrow_white"></span>
-          </button>
+            <button className="button_white" type="submit">
+              Send<span className="arrow_black"></span>
+            </button>
+          </div>
+          <input type="checkbox" id="agree" name="agree" value="yes" required/>
+          <label htmlFor="agree">I agree to the Privacy Policy and Terms of Service</label>
         </div>
-        <p>
-          By pressing the button, I agree for the processing of personal data
-        </p>
-      </div>
     </form>
   )
 }

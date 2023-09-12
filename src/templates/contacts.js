@@ -285,7 +285,7 @@ const Contacts = ({ location }) => {
                             },
                           })}
                           value={emailValue}
-                          type="email"
+                          type="text"
                           id="mail"
                           name="email"
                           className={`contact_form-mail input-mail contact_form_mail input-yellow ${
