@@ -247,7 +247,7 @@ const Contacts = ({ location }) => {
                           autoComplete="off"
                           name="telephone"
                           className="contact_form-phone input-phone contact_form_phone input-yellow"
-                          mask="+\ 999999999"
+                          mask="+\ 999999999999"
                           maskChar=" "
                           onChange={e => {
                             setTelephoneValue(e.target.value)
