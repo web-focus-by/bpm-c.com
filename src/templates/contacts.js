@@ -42,6 +42,11 @@ const Contacts = ({ location }) => {
   const [emailValue, setEmailValue] = useState("")
   const [messageValue, setMessageValue] = useState("")
   const [interestedItems, setInterestedItems] = useState([""])
+  const [isEmpty, setIsEmpty] = useState({
+    name: true,
+    email: true,
+    telephone: true,
+  })
   const socialMaediaLinks = [
     { link: "https://www.instagram.com/bpm_cloud/", name: "insta" },
     { link: "https://www.facebook.com/bpm.it1", name: "facebook" },
@@ -67,6 +72,13 @@ const Contacts = ({ location }) => {
   const clear = () => {
     setInterestedItems([""])
   }
+
+  useEffect(() => {
+    const subscription = watch((value, { name }) =>
+      setIsEmpty(prevState => ({ ...prevState, [name]: value[name] === "" }))
+    )
+    return () => subscription.unsubscribe()
+  }, [watch])
 
   return (
     <>
@@ -258,14 +270,22 @@ const Contacts = ({ location }) => {
                       </div>
 
                       <div className="contact_form_line-wrapper">
-                        <input
+                        <input {...register("email", {
+                            pattern: {
+                              value: /\S+@\S+\.\S+/,
+                              message: "Entered value does not match email format",
+                            },
+                          })}
                           value={emailValue}
                           type="email"
                           id="mail"
                           autoComplete="off"
                           name="email"
-                          className="contact_form-mail input-mail contact_form_mail input-yellow"
+                          className={`contact_form-mail input-mail contact_form_mail input-yellow ${
+                            errors.email ? "input_invalid" : ""
+                          }`}
                           maxlength="100"
+                          data-empty={!!isEmpty.email}
                           onChange={e => {
                             setEmailValue(e.target.value);
                           }}
