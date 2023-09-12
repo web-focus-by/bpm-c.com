@@ -251,7 +251,6 @@ const Contacts = ({ location }) => {
                         {...register("message")}
                         type="text"
                         id="company"
-                        autoComplete="off"
                         maxlength="100"
                         className={`contact_form-company input-company contact_form_company input-yellow`}
                       />
@@ -264,7 +263,6 @@ const Contacts = ({ location }) => {
                         })}
                         id="name"
                         type="text"
-                        autoComplete="off"
                         name="name"
                         maxlength="50"
                         className={`contact_form_name input-yellow  ${
@@ -280,12 +278,12 @@ const Contacts = ({ location }) => {
                     </div>
 
                     <div className="contact_form_line-wrapper">
-                      <input
+                      <InputMask
                         {...register("telephone", {
                           required: "Please enter your phone number.",
                           pattern: {
                             value:
-                              /^(?:\+[1-9])?[ -]?\(?([1-9][0-8][0-9])\)?[ -]?([2-9][0-9]{2})[ -]?([0-9]{4})$/,
+                              /^[0-9]$/,
                             message: "Phone number in not correct",
                           },
                         })}
@@ -293,7 +291,8 @@ const Contacts = ({ location }) => {
                           errors.telephone ? "input_invalid" : ""
                         }`}
                         id="tel"
-                        autoComplete="off"
+                        mask="+\ 999999999"
+                        maskChar=" "
                         data-empty={!!isEmpty.telephone}
                         required
                       />
@@ -313,7 +312,6 @@ const Contacts = ({ location }) => {
                         })}
                         type="text"
                         id="mail"
-                        autoComplete="off"
                         maxlength="100"
                         className={`contact_form-mail input-mail contact_form_mail input-yellow ${
                           errors.email ? "input_invalid" : ""
@@ -332,7 +330,6 @@ const Contacts = ({ location }) => {
                         {...register("message")}
                         type="text"
                         id="message"
-                        autoComplete="off"
                         maxlength="256"
                         className={`contact_form-message input-message contact_form_message input-yellow`}
                       />
