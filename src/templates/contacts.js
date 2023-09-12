@@ -71,7 +71,7 @@ const Contacts = ({ location }) => {
   return (
     <>
       <Layout>
-        <Seo title="Contacts" />
+        <Seo title="Contact Us for Web and Mobile Development " />
         <div className="container">
           <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
             <Breadcrumbs breadcrumbs={location} title="Contacts" />
