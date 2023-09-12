@@ -265,6 +265,7 @@ const Contacts = ({ location }) => {
                           autoComplete="off"
                           name="email"
                           className="contact_form-mail input-mail contact_form_mail input-yellow"
+                          maxlength="100"
                           onChange={e => {
                             setEmailValue(e.target.value);
                           }}
