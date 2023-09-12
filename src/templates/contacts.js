@@ -1,5 +1,6 @@
 import * as React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useForm } from "react-hook-form"
 import InputMask from 'react-input-mask'
 import { Link } from "gatsby"
 import { gql, useMutation } from "@apollo/client"
@@ -42,6 +43,43 @@ const Contacts = ({ location }) => {
   const [emailValue, setEmailValue] = useState("")
   const [messageValue, setMessageValue] = useState("")
   const [interestedItems, setInterestedItems] = useState([""])
+  const [isEmpty, setIsEmpty] = useState({
+    name: true,
+    email: true,
+    telephone: true,
+  })
+
+  const {
+    register,
+    formState: { errors, isValid },
+    handleSubmit,
+    watch,
+  } = useForm({
+    defaultValues: { company: "", name: "", email: "", telephone: "", message: "" },
+    mode: "onBlur",
+  })
+
+  useEffect(() => {
+    const subscription = watch((value, { name }) =>
+      setIsEmpty(prevState => ({ ...prevState, [name]: value[name] === "" }))
+    )
+    return () => subscription.unsubscribe()
+  }, [watch])
+
+  const submitHandler = data => {
+    if (isValid) {
+      createSubmission({
+        variables: {
+          ...data,
+        },
+      }).then(() => {
+        props.submitCallback()
+      })
+    }
+  }
+
+  if (error) return `Submission error! ${error.message}`
+
   const socialMaediaLinks = [
     { link: "https://www.instagram.com/bpm_cloud/", name: "insta" },
     { link: "https://www.facebook.com/bpm.it1", name: "facebook" },
@@ -71,7 +109,7 @@ const Contacts = ({ location }) => {
   return (
     <>
       <Layout>
-        <Seo title="Contacts" />
+        <Seo title="Contact Us for Web and Mobile Development " />
         <div className="container">
           <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
             <Breadcrumbs breadcrumbs={location} title="Contacts" />
@@ -194,100 +232,92 @@ const Contacts = ({ location }) => {
                   </div>
                   <div className="contact_form_block_wrapper">
                     <form
-                      id="search-contact_form"
-                      onSubmit={e => {
-                        e.preventDefault()
-                          clear()
-                          setCompanyValue('')
-                          setNameValue('')
-                          setTelephoneValue('')
-                          setEmailValue('')
-                          setMessageValue('')
-                      }}
-                    action="mailto:rinakashi13@mail.ru"
-                    method="POST"
-                    >
-                      <div className="contact_form_line-wrapper">
-                        <input
-                          id="company"
-                          value={companyValue}
-                          type="text"
-                          autoComplete="off"
-                          name="company"
-                          className="contact_form_company input-yellow "
-                          maxlength="100"
-                          onChange={e => {
-                            setCompanyValue(e.target.value)
-                          }}
-                        />
-                        <label>Company</label>
-                      </div>
+                      id="search-contact_form">
 
-                      <div className="contact_form_line-wrapper">
-                        <input
-                          id="name"
-                          value={nameValue}
-                          type="text"
-                          autoComplete="off"
-                          name="name"
-                          className="contact_form_name input-yellow "
-                          maxlength="50"
-                          onChange={e => {
-                            setNameValue(e.target.value)
-                          }}
-                          required
-                        />
-                        <label>Name*</label>
-                      </div>
+                    <div className="contact_form_line-wrapper">
+                      <input
+                        {...register("message")}
+                        type="text"
+                        name="company"
+                        id="company"
+                        maxlength="100"
+                        className={`contact_form-company input-company contact_form_company input-yellow`}
+                      />
+                      <label>Company</label>
+                    </div>
+                    <div className="contact_form_line-wrapper">
+                      <input
+                        {...register("name", {
+                          required: "Please enter your name.",
+                        })}
+                        id="name"
+                        type="text"
+                        name="name"
+                        maxlength="50"
+                        className={`contact_form_name input-yellow  ${
+                          errors.name ? "input_invalid" : ""
+                        }`}
+                        data-empty={!!isEmpty.name}
+                        required
+                      />
+                      <label>Name*</label>
+                      {errors.name && (
+                        <span className={"error_message"}>{errors.name?.message}</span>
+                      )}
+                    </div>
 
-                      <div className="contact_form_line-wrapper">
-                        <InputMask value = {telephoneValue}
-                          type="text"
-                          id="tel"
-                          autoComplete="off"
-                          name="telephone"
-                          className="contact_form-phone input-phone contact_form_phone input-yellow"
-                          mask="+\ 999999999"
-                          maskChar=" "
-                          onChange={e => {
-                            setTelephoneValue(e.target.value)
-                          }}
-                          required
-                        />
-                        <label>Phone*</label>
-                      </div>
+                    <div className="contact_form_line-wrapper">
+                      <InputMask
+                        {...register("telephone")}
+                        className={`contact_form-phone input-phone contact_form_phone input-yellow ${
+                          errors.telephone ? "input_invalid" : ""
+                        }`}
+                        id="tel"
+                        mask="+\ 999999999999"
+                        maskChar=" "
+                        data-empty={!!isEmpty.telephone}
+                        required
+                      />
+                      <label>Phone*</label>
+                      {errors.telephone && (
+                        <span className={"error_message"}>{errors.telephone?.message}</span>
+                      )}
+                    </div>
 
-                      <div className="contact_form_line-wrapper">
-                        <input
-                          value={emailValue}
-                          type="email"
-                          id="mail"
-                          autoComplete="off"
-                          name="email"
-                          className="contact_form-mail input-mail contact_form_mail input-yellow"
-                          onChange={e => {
-                            setEmailValue(e.target.value);
-                          }}
-                          required
-                        />
-                        <label>E-mail*</label>
-                      </div>
+                    <div className="contact_form_line-wrapper">
+                      <input
+                        {...register("email", {
+                          pattern: {
+                            value: /\S+@\S+\.\S+/,
+                            message: "Entered value does not match email format",
+                          },
+                        })}
+                        type="text"
+                        id="mail"
+                        maxlength="100"
+                        className={`contact_form-mail input-mail contact_form_mail input-yellow ${
+                          errors.email ? "input_invalid" : ""
+                        }`}
+                        data-empty={!!isEmpty.email}
+                        required
+                      />
+                      <label>E-mail*</label>
+                      {errors.email && (
+                        <span className={"error_message"}>{errors.email?.message}</span>
+                      )}
+                    </div>
 
-                      <div className="contact_form_line-wrapper">
-                        <input
-                          value={messageValue}
-                          type="text"
-                          id="message"
-                          autoComplete="off"
-                          name="message"
-                          maxlength="256"
-                          className="contact_form-message input-message contact_form_message input-yellow"
-                          onChange={e => {
-                                setMessageValue(e.target.value)
-                          }}
-                        />
-                        <label>Message</label>
-                      </div>
+                    <div className="contact_form_line-wrapper">
+                      <input
+                        {...register("message")}
+                        type="text"
+                        name="message"
+                        id="message"
+                        maxlength="256"
+                        className={`contact_form-message input-message contact_form_message input-yellow`}
+                      />
+                      <label>Message</label>
+                    </div>
                       <div className="contact_form_block_send">
                         <div>
                           <button className="button_white" type="submit">
