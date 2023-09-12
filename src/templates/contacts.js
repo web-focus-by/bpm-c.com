@@ -1,5 +1,6 @@
 import * as React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useForm } from "react-hook-form"
 import InputMask from 'react-input-mask'
 import { Link } from "gatsby"
 import { gql, useMutation } from "@apollo/client"
@@ -51,6 +52,16 @@ const Contacts = ({ location }) => {
     { link: "https://www.instagram.com/bpm_cloud/", name: "insta" },
     { link: "https://www.facebook.com/bpm.it1", name: "facebook" },
   ]
+
+  const {
+    register,
+    formState: { errors, isValid },
+    handleSubmit,
+    watch,
+  } = useForm({
+    defaultValues: { name: "", email: "", telephone: "" },
+    mode: "onBlur",
+  })
 
   const socialMedia = socialMaediaLinks.map((val, index) => {
     return (
@@ -224,7 +235,6 @@ const Contacts = ({ location }) => {
                           id="company"
                           value={companyValue}
                           type="text"
-                          autoComplete="off"
                           name="company"
                           className="contact_form_company input-yellow "
                           maxlength="100"
@@ -240,7 +250,6 @@ const Contacts = ({ location }) => {
                           id="name"
                           value={nameValue}
                           type="text"
-                          autoComplete="off"
                           name="name"
                           className="contact_form_name input-yellow "
                           maxlength="50"
@@ -256,7 +265,6 @@ const Contacts = ({ location }) => {
                         <InputMask value = {telephoneValue}
                           type="text"
                           id="tel"
-                          autoComplete="off"
                           name="telephone"
                           className="contact_form-phone input-phone contact_form_phone input-yellow"
                           mask="+\ 999999999999"
@@ -279,7 +287,6 @@ const Contacts = ({ location }) => {
                           value={emailValue}
                           type="email"
                           id="mail"
-                          autoComplete="off"
                           name="email"
                           className={`contact_form-mail input-mail contact_form_mail input-yellow ${
                             errors.email ? "input_invalid" : ""
@@ -299,7 +306,6 @@ const Contacts = ({ location }) => {
                           value={messageValue}
                           type="text"
                           id="message"
-                          autoComplete="off"
                           name="message"
                           maxlength="256"
                           className="contact_form-message input-message contact_form_message input-yellow"
