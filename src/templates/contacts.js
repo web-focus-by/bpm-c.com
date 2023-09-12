@@ -232,24 +232,13 @@ const Contacts = ({ location }) => {
                   </div>
                   <div className="contact_form_block_wrapper">
                     <form
-                      id="search-contact_form"
-                      onSubmit={e => {
-                        e.preventDefault()
-                          clear()
-                          setCompanyValue('')
-                          setNameValue('')
-                          setTelephoneValue('')
-                          setEmailValue('')
-                          setMessageValue('')
-                      }}
-                    action="mailto:rinakashi13@mail.ru"
-                    method="POST"
-                    >
+                      id="search-contact_form">
 
                     <div className="contact_form_line-wrapper">
                       <input
                         {...register("message")}
                         type="text"
+                        name="company"
                         id="company"
                         maxlength="100"
                         className={`contact_form-company input-company contact_form_company input-yellow`}
@@ -279,19 +268,12 @@ const Contacts = ({ location }) => {
 
                     <div className="contact_form_line-wrapper">
                       <InputMask
-                        {...register("telephone", {
-                          required: "Please enter your phone number.",
-                          pattern: {
-                            value:
-                              /^[0-9]$/,
-                            message: "Phone number in not correct",
-                          },
-                        })}
+                        {...register("telephone")}
                         className={`contact_form-phone input-phone contact_form_phone input-yellow ${
                           errors.telephone ? "input_invalid" : ""
                         }`}
                         id="tel"
-                        mask="+\ 999999999"
+                        mask="+\ 999999999999"
                         maskChar=" "
                         data-empty={!!isEmpty.telephone}
                         required
@@ -329,6 +311,7 @@ const Contacts = ({ location }) => {
                       <input
                         {...register("message")}
                         type="text"
+                        name="message"
                         id="message"
                         maxlength="256"
                         className={`contact_form-message input-message contact_form_message input-yellow`}
