@@ -125,8 +125,8 @@ const ContactForm = props => {
 
       <div className="form_block_send">
         <div>
-            <button className="button_white" type="submit">
-              Send<span className="arrow_black"></span>
+            <button className="button_black" type="submit">
+              Send<span className="arrow_white"></span>
             </button>
           </div>
           <input type="checkbox" id="agree" name="agree" value="yes" required/>
