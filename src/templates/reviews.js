@@ -23,8 +23,31 @@ const Reviews = ({ location }) => {
           </div>
           <div className="hero">
             <h1 className="hero__title title_62">
-              Reviews<span className="notes_of_reviewes"></span>
+              Testimonials<span className="notes_of_reviewes"></span>
             </h1>
+          </div>
+          <div className="container">
+            <div className="reviews margin_bottom_60">
+              <div className="reviews__list">
+                <div className="list_item">
+                  <div className="rewiews__list_logo">
+                    <img src="" alt="logo" />
+                  </div>
+                  <div className="rewievs__list_text">
+                    <p>I had the pleasure of utilizing the website redesign services offered by BPM Cloud, and I must say, I am thoroughly impressed. As the Marketing Manager, I sought a fresh perspective to elevate our brand. Their concepts seamlessly blended innovation with our identity, redefining our visual appeal. Effective communication, expert design, and a deep understanding of our needs make BPM Cloud our top choice. They've reinvigorated our image, leaving a lasting impact on our success.</p>
+                  </div>
+                  <div className="reviews__list_info">
+                      <div className="info_descr">
+                        <div className="reviews_name">Maria Rodriguez</div>
+                        <div className="reviews_vacan">Marketing Manager</div>
+                      </div>
+                      <div className="reviews__project">
+                        <Link to="/">Check the project</Link>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="header_circle_yellow"></div>
           <div className="header_circle_pink"></div>
