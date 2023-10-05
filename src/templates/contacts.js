@@ -66,17 +66,17 @@ const Contacts = ({ location }) => {
     return () => subscription.unsubscribe()
   }, [watch])
 
-  const submitHandler = data => {
-    if (isValid) {
-      createSubmission({
-        variables: {
-          ...data,
-        },
-      }).then(() => {
-        props.submitCallback()
-      })
-    }
-  }
+  // const submitHandler = data => {
+  //   if (isValid) {
+  //     createSubmission({
+  //       variables: {
+  //         ...data,
+  //       },
+  //     }).then(() => {
+  //       props.submitCallback()
+  //     })
+  //   }
+  // }
 
   if (error) return `Submission error! ${error.message}`
 
@@ -231,8 +231,8 @@ const Contacts = ({ location }) => {
                     )}
                   </div>
                   <div className="contact_form_block_wrapper">
-                    <form
-                      id="search-contact_form">
+                    <form>
+                      {/* // id="search-contact_form" action="https://getform.io/f/8b83345e-926d-46a9-b977-4ea1b3c45ae1" method="POST" onSubmit={null} */}
 
                     <div className="contact_form_line-wrapper">
                       <input

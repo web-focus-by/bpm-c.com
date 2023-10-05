@@ -1,3 +1,7 @@
+.breadcrumbs-list {
+    margin-top: 60px;
+}
+
 .span_breadcrumbs {
     margin-left: 21px;
     &:first-child {
@@ -31,6 +35,10 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1366px) {
+    .breadcrumbs-list {
+        margin-top: 42px;
+    }
+
     .span_breadcrumbs {
         margin-left: 18px;
         &:first-child {
@@ -59,5 +67,17 @@
         cursor: auto;
         color: #1A1B1F;
         pointer-events: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .breadcrumbs-list {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumbs-list {
+        margin-top: 30px;
     }
 }
