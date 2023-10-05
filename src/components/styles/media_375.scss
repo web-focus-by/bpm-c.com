@@ -2127,4 +2127,80 @@
       }
     }
   }
+
+  .breacrumbs-list {
+    margin-top: 50px;
+  }
+
+  .breadcrumbs_span {
+    margin-left: 15px;
+  }
+
+  .span_breadcrumbs {
+      margin-left: 15px;
+  }
+
+  .reviews {
+    margin-top: 5px;
+    .reviews__list {
+      max-width: 343px;
+      .list_item {
+        max-width: 343px;
+        padding: 30px;
+        margin-top: 20px;
+
+        .reviews__list_text {
+          margin: 25px 0 20px;
+          max-width: 283px;
+
+          p {
+            font-size: 15px;
+            color: #1A1B1F;
+            margin: 0;
+          }
+        }
+
+        .reviews__list_info {
+          flex-direction: column;
+
+          .info_descr {
+            .reviews_name {
+              margin-bottom: 10px;
+              font-size: 16px;
+              color: #1A1B1F;
+            }
+
+            .reviews_vacan {
+              font-size: 14px;
+              color: #5C5C5C;
+            }
+          }
+
+          .reviews__project {
+            margin-top: 25px;
+            a {
+              font-size: 16px;
+              text-decoration-line: underline;
+              color: #1A1B1F;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .reviews__list_text {
+    margin: 25px 0 20px;
+    max-width: 80%;
+
+    p {
+      max-width: 100%;
+      font-size: 15px;
+      color: #1A1B1F;
+      margin: 0;
+    }
+  }
 }
