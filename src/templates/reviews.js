@@ -28,7 +28,7 @@ const Reviews = ({ location }) => {
       <Layout>
         <div className="container">
           <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-            <Breadcrumbs breadcrumbs={location} title="Reviews" />
+            <Breadcrumbs breadcrumbs={location} title="Testimonials" />
           </div>
           <div className="hero">
             <h1 className="hero__title title_62">
@@ -192,7 +192,7 @@ const Reviews = ({ location }) => {
           <div className="header_circle_purple"></div>
         </div>
         <AllReviews></AllReviews>
-        <Seo title="Reviews" />
+        <Seo title="Testimonials" description="Explore BPM Cloud's success stories across diverse industries, showcasing our partnerships with startups and large enterprises. Our global collaboration, consultancy, and integration empower businesses with innovative IT solutions." />
       </Layout>
     </>
   )

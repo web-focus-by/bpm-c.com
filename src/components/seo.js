@@ -26,7 +26,7 @@ function Seo({ description, lang, meta, title }) {
     `
   )
   const defaultTitle = site.siteMetadata?.title
-  const defaultDescr = title === 'Portfolio' ? 'Explore BPM Cloud\'s impressive portfolio showcasing impactful data-driven solutions across fintech, travel & leisure, music, and e-commerce. Witness the results of our expertly crafted work.' : title === 'Contact Us for Web and Mobile Development ' ? 'Reach out to BPM Cloud for a consultation on your web or mobile application concept. Your ideas will be carefully reviewed by our experts. Simply complete the form, and our team will promptly respond to you!' : site.siteMetadata.description
+  const defaultDescr = description ? description : site.siteMetadata?.description
 
 
 

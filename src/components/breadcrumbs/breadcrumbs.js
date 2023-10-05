@@ -20,6 +20,9 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
           if (item === "news") {
             item = "Blog"
           }
+          if (item === "Reviews") {
+            item = "Testimonials"
+          }
           path = index !== 0 ? path + item.toLowerCase() + "/" : ""
           let link = host === item.toLowerCase() ? domain.toLowerCase() : domain.toLowerCase() + "/" + path.toLowerCase()
           if (breadcrumbs.pathname !== "/") {
