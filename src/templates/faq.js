@@ -59,15 +59,15 @@ const Faq = ({ location, data }) => {
           </div>
           <div className="hero">
             <h1 className="hero__title title_62">
-              FAQ<span className="faq"></span>
+            Frequently Asked Questions<span className="faq"></span>
             </h1>
-            {contentPage}
+            <p className="hero__description">Below is a compilation of frequently asked questions that we typically encounter. If you haven't come across the query you're seeking, please feel free to <span class="contact">contact us</span>!</p>
           </div>
           <div className="header_circle_yellow"></div>
           <div className="header_circle_pink"></div>
           <div className="header_circle_purple"></div>
         </div>
-        <Seo title="FAQ" />
+        <Seo title="Frequently Asked Questions About Software Development" description="Explore our FAQ page to uncover in-depth answers to your queries about software development and the wide range of services offered by BPM Cloud. Get informed and make informed decisions for your business needs." />
       </Layout>
       <ScriptLDFQA/>
     </>
