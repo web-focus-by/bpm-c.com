@@ -89,7 +89,7 @@ const IndexPage = ({ location }) => {
           <ProjectsProcess></ProjectsProcess>
           <Blog titlePage="Blog"></Blog>
           <Advantages></Advantages>
-          <Reviews></Reviews>
+          <Reviews titlePage="Testimonials"></Reviews>
           <CompanyDescription></CompanyDescription>
           <ServicePackage></ServicePackage>
           <LeadersChoice></LeadersChoice>

@@ -109,7 +109,7 @@ const Contacts = ({ location }) => {
   return (
     <>
       <Layout>
-        <Seo title="Contact Us for Web and Mobile Development " />
+        <Seo title="Contact Us for Web and Mobile Development " description="Reach out to BPM Cloud for a consultation on your web or mobile application concept. Your ideas will be carefully reviewed by our experts. Simply complete the form, and our team will promptly respond to you!"/>
         <div className="container">
           <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
             <Breadcrumbs breadcrumbs={location} title="Contacts" />
