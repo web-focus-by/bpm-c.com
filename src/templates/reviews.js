@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Breadcrumbs from "../components/breadcrumbs/breadcrumbs"
 import Seo from "../components/seo"
@@ -30,10 +31,10 @@ const Reviews = ({ location }) => {
             <div className="reviews margin_bottom_60">
               <div className="reviews__list">
                 <div className="list_item">
-                  <div className="rewiews__list_logo">
-                    <img src="" alt="logo" />
+                  <div className="reviews__list_logo">
+                    <img src="../images/Armani.png" alt="logo" />
                   </div>
-                  <div className="rewievs__list_text">
+                  <div className="reviews__list_text">
                     <p>I had the pleasure of utilizing the website redesign services offered by BPM Cloud, and I must say, I am thoroughly impressed. As the Marketing Manager, I sought a fresh perspective to elevate our brand. Their concepts seamlessly blended innovation with our identity, redefining our visual appeal. Effective communication, expert design, and a deep understanding of our needs make BPM Cloud our top choice. They've reinvigorated our image, leaving a lasting impact on our success.</p>
                   </div>
                   <div className="reviews__list_info">
