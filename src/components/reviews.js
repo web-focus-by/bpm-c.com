@@ -79,7 +79,7 @@ const Reviews = ({}) => {
       <div className="reviews margin_bottom_240">
         <div className="view_title">
           <h2 className="title_62">Reviews</h2>
-          <Link className="active_link" to="/about-us/reviews/">
+          <Link className="active_link" to="/about-us/testimonials/">
             View all
           </Link>
         </div>
