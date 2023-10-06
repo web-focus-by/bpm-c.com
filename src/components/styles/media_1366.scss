@@ -1361,5 +1361,79 @@
       }
     }
   }
+
+  .fqa {
+  margin: 71px 0 0;
+    .fqa__list {
+      max-width: 1053px;
+      &-item {
+        padding: 20px 0;
+
+        .fqa_number {
+          margin: 8px 0;
+          margin-right: 35px;
+          p {
+            font-size: 17.075px;
+          }
+        }
+
+        .fqa_question {
+          width: 700px;
+          margin: 8px 0;
+          height: min-content;
+          p, p.question {
+            font-size: 17.075px;
+          }
+
+          .fqa_answer {
+            margin-top: 0px; //21
+            max-width: 583px;
+
+            p.answer {
+              margin-top: 14px;
+              font-size: 12.806px;
+            }
+
+            ul.answer {
+              margin: 0;
+              margin-top: 14px;
+              list-style-type: none;
+
+              li {
+                margin-top: 7px;
+                font-size: 12.806px;
+              }
+
+              li::before {
+                content: '—';
+                margin: 0 6.4px 0 0;
+              }
+
+              li:first-child {
+                margin-top: 0;
+              }
+            }
+
+            p.answer:first-child {
+              margin-top: 0;
+            }
+          }
+        }
+
+        .fqa_label {
+          background:url(../../images/plus-small.png) no-repeat;
+          height: 35px;
+        }
+
+        .accordion_toggle:checked ~ .fqa_question>.fqa_answer {
+            margin-top: 21px;
+        }
+
+        .accordion_toggle:checked ~ .fqa_label {
+          background:url(../../images/minus-small.png) no-repeat;
+        }
+      }
+    }
+  }
 }
 
