@@ -2810,7 +2810,8 @@
           }
 
           .fqa_answer {
-            margin-top: 0px; //20
+            margin-top: 0; //20
+            margin-left: -300px;
             max-width: 100%;
             min-width: 643px;
 

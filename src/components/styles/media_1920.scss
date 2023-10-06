@@ -109,7 +109,7 @@
   }
 
   .hero {
-    margin-top: calc(134px + (188 - 134) * ((100vw - 1366px) / (1920 - 1366)));
+    margin-top: 110px;
 
     &__subtitle {
       font-size: calc(14px + (20 - 14) * ((100vw - 1366px) / (1920 - 1366)));

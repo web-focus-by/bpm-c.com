@@ -35,7 +35,7 @@ const Faq = ({ location, data }) => {
             <h1 className="hero__title title_62">
             Frequently Asked Questions<span className="faq"></span>
             </h1>
-            <p className="hero__description">Below is a compilation of frequently asked questions that we typically encounter. If you haven't come across the query you're seeking, please feel free to <span class="contact">contact us</span>!</p>
+            <p className="hero__description">Below is a compilation of frequently asked questions that we typically encounter. If you haven't come across the query you're seeking, please feel free to <Link class="contact" to="/about-us/contacts/">contact us</Link>!</p>
           </div>
           <div className="container" style={{padding: 0}}>
             <div className="fqa margin_bottom_240">
@@ -162,7 +162,7 @@ const Faq = ({ location, data }) => {
                   <div className="fqa_question">
                     <p className="question">Do you provide outstaffing services?</p>
                       <div className="fqa_answer" >
-                        <p className="answer">Yes, we offer <Link>outstaffing services</Link> as part of our comprehensive offerings. Outstaffing allows you to augment your team with our skilled professionals who work remotely as an extension of your workforce. This arrangement provides flexibility in scaling your team as needed, while we handle the recruitment, onboarding, and management of our dedicated resources. You retain control over the tasks and projects they work on, ensuring seamless integration and enhanced productivity.</p>
+                        <p className="answer">Yes, we offer <Link to="/">outstaffing services</Link> as part of our comprehensive offerings. Outstaffing allows you to augment your team with our skilled professionals who work remotely as an extension of your workforce. This arrangement provides flexibility in scaling your team as needed, while we handle the recruitment, onboarding, and management of our dedicated resources. You retain control over the tasks and projects they work on, ensuring seamless integration and enhanced productivity.</p>
                       </div>
                   </div>
                 </div>
@@ -186,7 +186,7 @@ const Faq = ({ location, data }) => {
                   <div className="fqa_question">
                     <p className="question">What is the typical process involved in custom software development?</p>
                       <div className="fqa_answer" >
-                        <p className="answer">The typical process of <Link>custom software development</Link> involves the following steps:</p>
+                        <p className="answer">The typical process of <Link to="/">custom software development</Link> involves the following steps:</p>
                         <ul className="answer">
                           <li>Requirements Gathering and Analysis</li>
                           <li>Design</li>
@@ -258,7 +258,7 @@ const Faq = ({ location, data }) => {
                           <li><strong>Integration Challenges:</strong> Compatibility issues with existing systems during integration.</li>
                           <li><strong>Resource Availability:</strong> Ensuring skilled developers are available throughout the project.</li>
                         </ul>
-                        <p className="answer">Awareness of these challenges enables proactive mitigation and better <Link>project management</Link> for successful custom software development.</p>
+                        <p className="answer">Awareness of these challenges enables proactive mitigation and better <Link to="/">project management</Link> for successful custom software development.</p>
                       </div>
                   </div>
                 </div>
@@ -275,7 +275,7 @@ const Faq = ({ location, data }) => {
                           <li><strong>Requirements Gathering:</strong> Defining project goals and features.</li>
                           <li><strong>Design Phase:</strong> Providing feedback on the software's look and feel.</li>
                           <li><strong>Development:</strong> Reviewing progress, suggesting adjustments.</li>
-                          <li><strong>Testing:</strong> Participating in <Link>quality assurance</Link> and bug identification.</li>
+                          <li><strong>Testing:</strong> Participating in <Link to="/">quality assurance</Link> and bug identification.</li>
                           <li><strong>Feedback Loop:</strong> Regular updates and incorporating your suggestions.</li>
                         </ul>
                         <p className="answer">Your input ensures the final software aligns precisely with your vision and needs. We adapt to your desired level of engagement to create a successful and satisfying partnership.</p>
