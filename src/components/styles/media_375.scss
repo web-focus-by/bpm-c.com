@@ -346,6 +346,7 @@
       color: #5c5c5c;
       width: 100%;
       margin-top: 0;
+      margin-top: 20px;
     }
   }
 
@@ -360,6 +361,7 @@
   .title_62 {
     font-size: 42px;
     margin-bottom: 24px !important;
+    display: inline;
   }
 
   .margin_bottom_240 {
@@ -1189,6 +1191,12 @@
 }
 
 @media screen and (max-width: 425px) {
+  .title_62 {
+    display: inline;
+    position: relative;
+    top: -50px;
+  }
+
   .contacts {
     display: flex;
     flex-direction: column;
@@ -1588,7 +1596,7 @@
       line-height: 130%;
       color: #5c5c5c;
       width: 100%;
-      margin-top: 0;
+      margin-top: -30px;
     }
   }
 
@@ -2129,11 +2137,14 @@
   }
 
   .breacrumbs-list {
-    margin-top: 50px;
+    margin-top: 30px;
+    position: absolute;
   }
 
-  .breadcrumbs_span {
-    margin-left: 15px;
+  .span_breadcrumbs {
+    .breadcrumbs_span {
+      margin-left: 15px !important;
+    }
   }
 
   .span_breadcrumbs {
@@ -2194,7 +2205,7 @@
     .fqa__list {
       max-width: 343px;
       &-item {
-        padding: 35px 0 49px;
+        padding: 35px 0 35px;
 
         .fqa_number {
           margin: 0px 0 40px;
@@ -2229,6 +2240,7 @@
               margin: 0;
               margin-top: 15px;
               list-style-type: none;
+              padding-left: 0;
 
               li {
                 margin-top: 10px;
@@ -2254,6 +2266,8 @@
         .fqa_label {
           background:url(../../images/plus-small.png) no-repeat;
           height: 35px;
+          position: relative;
+          left: 2.5%;
         }
 
         .accordion_toggle:checked ~ .fqa_question>.fqa_answer {
@@ -2270,16 +2284,39 @@
 }
 
 
-@media screen and (max-width: 320px) {
-  .reviews__list_text {
-    margin: 25px 0 20px;
-    max-width: 80%;
+@media screen and (max-width: 320px){
 
-    p {
-      max-width: 100%;
-      font-size: 15px;
-      color: #1A1B1F;
-      margin: 0;
+  .container {
+    padding: 0 20px 0 8px;
+  }
+
+  .title_62 {
+    font-size: 34px;
+  }
+
+  .breacrumbs-list {
+    width: 320px;
+  }
+
+  .span_breadcrumbs {
+
+    .breadcrumbs {
+      font-size: 13px !important;
+    }
+    .breadcrumbs_span {
+      margin-left: 5px !important;
+      font-size: 13px !important;
+    }
+  }
+
+  .reviews {
+    .reviews__list {
+      .list_item {
+        .reviews__list_text {
+          margin: 25px 0 20px;
+          max-width: 234px;
+        }
+      }
     }
   }
 

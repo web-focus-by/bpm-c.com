@@ -491,12 +491,14 @@
   width: 47px;
   height: 47px;
   background: url(../../images/notes_of_reviewes.svg) no-repeat;
+  margin-left: 20px;
+  position: relative;
+  top: 5px;
 }
 
 .faq {
   display: inline-block;
-  width: 47px;
-  height: 47px;
+  background-size: 47px 47px;
   background: url(../../images/fqa.svg) no-repeat;
 }
 
@@ -505,4 +507,53 @@
   width: 47px;
   height: 47px;
   background: url(../../images/about_company.svg) no-repeat;
+}
+
+
+@media screen and (max-width: 1366px) {
+  .notes_of_reviewes {
+    display: inline-block;
+    background: url(../../images/notes_of_reviewes.svg) no-repeat;
+    margin-left: 13px;
+    top: 20px;
+    background-size: 33px 33px;
+  }
+
+  .faq {
+    display: inline-block;
+    background-size: 33px 33px;
+    background: url(../../images/fqa.svg) no-repeat;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .notes_of_reviewes {
+    display: inline-block;
+    background: url(../../images/notes_of_reviewes.svg) no-repeat;
+    margin-left: 10px;
+    top: 17px;
+    background-size: 34px 34px;
+  }
+
+  .faq {
+    display: inline-block;
+    background-size: 34px 34px;
+    background: url(../../images/fqa.svg) no-repeat;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .notes_of_reviewes {
+    display: inline-block;
+    background: url(../../images/notes_of_reviewes.svg) no-repeat;
+    margin-left: 10px;
+    top: 17px;
+    background-size: 34px 34px;
+  }
+
+  .faq {
+    display: inline-block;
+    background-size: 34px 34px;
+    background: url(../../images/fqa.svg) no-repeat;
+  }
 }

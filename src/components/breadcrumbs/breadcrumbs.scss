@@ -1,3 +1,7 @@
+.breacrumbs-list {
+    display: inline-table;
+}
+
 .span_breadcrumbs {
     margin-left: 21px;
     &:first-child {
@@ -25,8 +29,12 @@
 
 .span_breadcrumbs:last-child {
     cursor: auto;
-    color: #1A1B1F;
+    color: #5C5C5C;
     pointer-events: none;
+
+    a {
+        color: #5C5C5C;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1366px) {
@@ -60,7 +68,7 @@
     }
     .span_breadcrumbs:last-child {
         cursor: auto;
-        color: #1A1B1F;
+        color: #5C5C5C;
         pointer-events: none;
     }
 }
@@ -73,7 +81,10 @@
 
 @media (max-width: 480px) {
     .breadcrumbs-list {
-        margin-top: 30px;
+        width: 378px;
+        margin-top: 0;
+        margin-bottom: 40px;
+        position: fixed;
     }
 
     .breadcrumbs_span {
@@ -82,5 +93,8 @@
 
     .span_breadcrumbs {
         margin-left: 15px;
+        font-size: 14px;
+        line-height: 100%;
+
     }
 }
