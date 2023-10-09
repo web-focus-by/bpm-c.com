@@ -498,7 +498,8 @@
 
 .faq {
   display: inline-block;
-  background-size: 47px 47px;
+  width: 47px;
+  height: 47px;
   background: url(../../images/fqa.svg) no-repeat;
 }
 
@@ -554,6 +555,9 @@
   .faq {
     display: inline-block;
     background-size: 34px 34px;
+    top: 15px;
+    position: relative;
+    margin-right: 10px;
     background: url(../../images/fqa.svg) no-repeat;
   }
 }
