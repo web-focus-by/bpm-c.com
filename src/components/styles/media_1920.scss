@@ -92,9 +92,7 @@
   }
 
   .margin_bottom_240 {
-    margin-bottom: calc(
-      170px + (240 - 170) * ((100vw - 1366px) / (1920 - 1366))
-    );
+    margin-bottom: 240px;
   }
 
   .margin_240_black {
