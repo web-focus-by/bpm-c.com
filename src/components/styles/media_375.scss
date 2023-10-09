@@ -346,6 +346,7 @@
       color: #5c5c5c;
       width: 100%;
       margin-top: 0;
+      margin-top: 20px;
     }
   }
 
@@ -1192,6 +1193,8 @@
 @media screen and (max-width: 425px) {
   .title_62 {
     display: inline;
+    position: relative;
+    top: -50px;
   }
 
   .contacts {
@@ -1593,7 +1596,7 @@
       line-height: 130%;
       color: #5c5c5c;
       width: 100%;
-      margin-top: 0;
+      margin-top: -30px;
     }
   }
 
@@ -2202,7 +2205,7 @@
     .fqa__list {
       max-width: 343px;
       &-item {
-        padding: 35px 0 49px;
+        padding: 35px 0 35px;
 
         .fqa_number {
           margin: 0px 0 40px;
@@ -2237,6 +2240,7 @@
               margin: 0;
               margin-top: 15px;
               list-style-type: none;
+              padding-left: 0;
 
               li {
                 margin-top: 10px;
@@ -2262,6 +2266,8 @@
         .fqa_label {
           background:url(../../images/plus-small.png) no-repeat;
           height: 35px;
+          position: relative;
+          left: 2.5%;
         }
 
         .accordion_toggle:checked ~ .fqa_question>.fqa_answer {
