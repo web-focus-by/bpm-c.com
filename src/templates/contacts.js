@@ -147,6 +147,99 @@ const Contacts = ({ location }) => {
             <div className="contacts__contacts_form">
               <div className="contact_form">
                 <div className="contact_form__block">
+                  <div className="contact_form_block_wrapper">
+                    <form>
+                      {/* // id="search-contact_form" action="https://getform.io/f/8b83345e-926d-46a9-b977-4ea1b3c45ae1" method="POST" onSubmit={null} */}
+                      <div className="contact_form_line-double">
+                        <div className="contact_form_line-wrapper">
+                          <input
+                            {...register("name", {
+                              required: "Please enter your name.",
+                            })}
+                            id="name"
+                            type="text"
+                            name="name"
+                            maxlength="50"
+                            className={`contact_form_name input-yellow  ${
+                              errors.name ? "input_invalid" : ""
+                            }`}
+                            data-empty={!!isEmpty.name}
+                            required
+                          />
+                          <label>Name</label>
+                          {errors.name && (
+                            <span className={"error_message"}>{errors.name?.message}</span>
+                          )}
+                          </div>
+
+                          <div className="contact_form_line-wrapper">
+                          <input
+                            {...register("email", {
+                              pattern: {
+                                value: /\S+@\S+\.\S+/,
+                                message: "Entered value does not match email format",
+                              },
+                            })}
+                            type="text"
+                            id="mail"
+                            maxlength="100"
+                            className={`contact_form-mail input-mail contact_form_mail input-yellow ${
+                              errors.email ? "input_invalid" : ""
+                            }`}
+                            data-empty={!!isEmpty.email}
+                            required
+                          />
+                          <label>E-mail</label>
+                          {errors.email && (
+                            <span className={"error_message"}>{errors.email?.message}</span>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="contact_form_line-double">
+                        <div className="contact_form_line-wrapper">
+                          <InputMask
+                            {...register("telephone")}
+                            className={`contact_form-phone input-phone contact_form_phone input-yellow ${
+                              errors.telephone ? "input_invalid" : ""
+                            }`}
+                            id="tel"
+                            mask="+\ 999999999999"
+                            maskChar=" "
+                            data-empty={!!isEmpty.telephone}
+                            required
+                          />
+                          <label>Phone</label>
+                          {errors.telephone && (
+                            <span className={"error_message"}>{errors.telephone?.message}</span>
+                          )}
+                        </div>
+
+                        <div className="contact_form_line-wrapper">
+                          <input
+                            {...register("message")}
+                            type="text"
+                            name="company"
+                            id="company"
+                            maxlength="100"
+                            className={`contact_form-company input-company contact_form_company input-yellow`}
+                          />
+                          <label>Company</label>
+                        </div>
+                      </div>
+
+                      <div className="contact_form_line-wrapper">
+                        <input
+                          {...register("message")}
+                          type="text"
+                          name="message"
+                          id="message"
+                          maxlength="256"
+                          className={`contact_form-message input-message contact_form_message input-yellow`}
+                        />
+                        <label>Message</label>
+                      </div>
+
                   <div className="contact_form_block_buttons_title">
                     Services interested in:{" "}
                     <span style={{ fontWeight: "bold" }} itemprop="name">
@@ -230,94 +323,6 @@ const Contacts = ({ location }) => {
                       </button>
                     )}
                   </div>
-                  <div className="contact_form_block_wrapper">
-                    <form>
-                      {/* // id="search-contact_form" action="https://getform.io/f/8b83345e-926d-46a9-b977-4ea1b3c45ae1" method="POST" onSubmit={null} */}
-
-                    <div className="contact_form_line-wrapper">
-                      <input
-                        {...register("message")}
-                        type="text"
-                        name="company"
-                        id="company"
-                        maxlength="100"
-                        className={`contact_form-company input-company contact_form_company input-yellow`}
-                      />
-                      <label>Company</label>
-                    </div>
-                    <div className="contact_form_line-wrapper">
-                      <input
-                        {...register("name", {
-                          required: "Please enter your name.",
-                        })}
-                        id="name"
-                        type="text"
-                        name="name"
-                        maxlength="50"
-                        className={`contact_form_name input-yellow  ${
-                          errors.name ? "input_invalid" : ""
-                        }`}
-                        data-empty={!!isEmpty.name}
-                        required
-                      />
-                      <label>Name*</label>
-                      {errors.name && (
-                        <span className={"error_message"}>{errors.name?.message}</span>
-                      )}
-                    </div>
-
-                    <div className="contact_form_line-wrapper">
-                      <InputMask
-                        {...register("telephone")}
-                        className={`contact_form-phone input-phone contact_form_phone input-yellow ${
-                          errors.telephone ? "input_invalid" : ""
-                        }`}
-                        id="tel"
-                        mask="+\ 999999999999"
-                        maskChar=" "
-                        data-empty={!!isEmpty.telephone}
-                        required
-                      />
-                      <label>Phone*</label>
-                      {errors.telephone && (
-                        <span className={"error_message"}>{errors.telephone?.message}</span>
-                      )}
-                    </div>
-
-                    <div className="contact_form_line-wrapper">
-                      <input
-                        {...register("email", {
-                          pattern: {
-                            value: /\S+@\S+\.\S+/,
-                            message: "Entered value does not match email format",
-                          },
-                        })}
-                        type="text"
-                        id="mail"
-                        maxlength="100"
-                        className={`contact_form-mail input-mail contact_form_mail input-yellow ${
-                          errors.email ? "input_invalid" : ""
-                        }`}
-                        data-empty={!!isEmpty.email}
-                        required
-                      />
-                      <label>E-mail*</label>
-                      {errors.email && (
-                        <span className={"error_message"}>{errors.email?.message}</span>
-                      )}
-                    </div>
-
-                    <div className="contact_form_line-wrapper">
-                      <input
-                        {...register("message")}
-                        type="text"
-                        name="message"
-                        id="message"
-                        maxlength="256"
-                        className={`contact_form-message input-message contact_form_message input-yellow`}
-                      />
-                      <label>Message</label>
-                    </div>
                       <div className="contact_form_block_send">
                         <div>
                           <button className="button_white" type="submit">
