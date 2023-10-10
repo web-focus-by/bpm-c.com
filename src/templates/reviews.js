@@ -27,7 +27,7 @@ const Reviews = ({ location }) => {
     <>
       <Layout>
         <div className="container">
-          <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <div className="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
             <Breadcrumbs breadcrumbs={location} title="Testimonials" />
           </div>
           <div className="hero">

@@ -944,7 +944,7 @@ body {
 }
 
 .contacts {
-  margin-top: 60px;
+  margin-top: 43px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -954,10 +954,11 @@ body {
     margin-top: 42px;
     .contacts_table {
       display: flex;
-      gap: 5%;
+      gap: 48px;
       justify-content: space-between;
+      min-width: 450px;
       .contacts_label {
-        width: 47%;
+        width: 94px;
         font-family: "Acrom", sans-serif;
         font-style: normal;
         font-weight: 400;
@@ -967,22 +968,27 @@ body {
         ul {
           padding: 0;
           margin: 0;
+          width: 94px;
           li {
             display: flex;
             list-style: none;
             margin-bottom: 70px;
           }
+
+          li:first-child {
+            margin-bottom: 91px;
+          }
         }
       }
       .contacts_value {
-        width: 43%;
+        width: 305px;
         font-family: "Acrom", sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 24px;
         line-height: 100%;
         color: #1a1b1f;
-        margin-top: -42px;
+        margin-top: -25px;
         ul {
           width: max-content;
           padding: 0;
@@ -991,7 +997,7 @@ body {
             display: flex;
             list-style: none;
             margin-bottom: 60px;
-            margin-right: 10px;
+            margin-right: 20px;
             a {
               text-decoration: none;
               color:#1A1B1F;
@@ -1005,6 +1011,7 @@ body {
           li:first-child {
             row-gap: 12px;
             flex-direction: column;
+
           }
         }
       }
@@ -1014,28 +1021,31 @@ body {
     width: 60%;
     .contact_form {
       border-radius: 40px;
-      padding: 0 0 10px 98px;
+      padding: 20px 0 0 164px;
       display: grid;
       grid-template-columns: 1.03fr 0.97fr;
       background-position: 110px 165px;
       &__block {
         color: #1a1b1f;
-        width: 191%;
         .contact_form_block_buttons_title {
           width: 100%;
           font-family: "Acrom", sans-serif;
           font-style: normal;
           font-weight: 500;
-          font-size: 14px;
+          font-size: 16px;
           line-height: 100%;
           color: #1a1b1f;
         }
         .contact_form_block_buttons {
           width: 100%;
-          margin-top: 5px;
-          margin-bottom: 40px;
+          margin-top: 11px;
+          margin-bottom: 20px;
+
 
           .button_item_tag {
+            font-family: "Acrom", sans-serif;
+            font-size: 16px;
+            line-height: 100%;
             margin: 0.4rem 15px 0.4rem 0;
           }
         }
@@ -1093,13 +1103,21 @@ body {
 
             }
 
-            .contact_form_line-wrapper {
+            .contact_form_line-wrapper, .contact_form_line-wrapper--one {
               position: relative;
-              margin-bottom: 35px;
+              margin-bottom: 40px;
               width: 730px;
 
               .input_invalid {
                 border-bottom: 1px solid #e11d48;
+                color: #e11d48;
+              }
+
+              .label_invalid{
+                color: #e11d48;
+              }
+
+              .error_message  {
                 color: #e11d48;
               }
 
@@ -1110,20 +1128,21 @@ body {
                 border: 0;
                 outline: none;
                 background-color: transparent;
-                border-bottom: 1px solid #1a1b1f;
+                border-bottom: 1px solid #858A9E;
                 width: 100%;
-                padding-bottom: 10px;
+                padding-bottom: 0;
               }
               input:focus ~ label,
               input[data-empty="false"] ~ label {
                 top: -30px;
               }
 
-              label {
+              label, .label {
+                color: #1a1b1f;
                 font-weight: 500;
                 position: absolute;
                 pointer-events: none;
-                left: 5px;
+                left: 0;
                 top: -46px;
                 transition: 0.2s ease all;
                 -moz-transition: 0.2s ease all;
@@ -1131,15 +1150,19 @@ body {
               }
             }
 
+            .contact_form_line-wrapper--one {
+              margin-bottom: 27px;
+            }
+
             .contact_form_block_send {
-              margin-top: 60px;
+              margin-top: 26px;
               display: flex;
-              justify-content: space-between;
-              align-items: center;
+              flex-direction: column;
 
               .button_white {
                 padding: 22px 40px;
                 font-family: "Acrom", sans-serif;
+                max-width: 157px;
 
                 span {
                   margin-left: 14px;
@@ -1167,7 +1190,7 @@ body {
                 height: 1em;
                 flex-shrink: 0;
                 flex-grow: 0;
-                border: 1px solid #1A1B1F;
+                border: 1px solid #858A9E;
                 border-radius: 0.25em;
                 margin-right: 0.5em;
                 background-repeat: no-repeat;
@@ -1176,15 +1199,31 @@ body {
               }
 
               input:checked+label::before {
-                border-color: #1A1B1F;
+                border-color: #858A9E;
                 background-image: url("../../images/check.svg");
+              }
+
+              .label_invalid{
+                color: #e11d48;
+
+                a {
+                  color: #e11d48;
+                }
+              }
+
+              .checkbox_invalid+label::before {
+                border: 1px solid #e11d48;
               }
 
               label {
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 100%;
-                margin: 0;
+                margin: 0 0 60px;
+
+                a {
+                  color: #935CFF;
+                }
               }
             }
           }
@@ -2449,7 +2488,7 @@ body {
 }
 
 .breacrumbs-list {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .reviews {
@@ -2586,6 +2625,7 @@ body {
 
               a {
                 text-decoration-line: underline;
+                font-weight: 400;
                 color: #935CFF;
                 cursor: pointer;
               }
@@ -2613,7 +2653,7 @@ body {
                   font-family: 'Acrom';
                   font-size: 16px;
                   font-style: normal;
-                  font-weight: 500;
+                  font-weight: 400;
                   line-height: 100%;
                   text-decoration-line: underline;
                   color: #935cff;

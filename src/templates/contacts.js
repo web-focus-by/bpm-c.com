@@ -43,10 +43,15 @@ const Contacts = ({ location }) => {
   const [emailValue, setEmailValue] = useState("")
   const [messageValue, setMessageValue] = useState("")
   const [interestedItems, setInterestedItems] = useState([""])
+  // const [checked, setChecked] = useState(false);
+  // const [disabled, setDisabled] = useState(false);
   const [isEmpty, setIsEmpty] = useState({
     name: true,
     email: true,
     telephone: true,
+    company: true,
+    message: true,
+    checkbox: true
   })
 
   const {
@@ -55,17 +60,16 @@ const Contacts = ({ location }) => {
     handleSubmit,
     watch,
   } = useForm({
-    defaultValues: { company: "", name: "", email: "", telephone: "", message: "" },
+    defaultValues: { company: "", name: "", email: "", telephone: "", message: "", checkbox: "" },
     mode: "onBlur",
   })
 
   useEffect(() => {
-    const subscription = watch((value, { name }) =>
+    const subscription = watch((value, { name }) => {
       setIsEmpty(prevState => ({ ...prevState, [name]: value[name] === "" }))
-    )
+    })
     return () => subscription.unsubscribe()
   }, [watch])
-
   // const submitHandler = data => {
   //   if (isValid) {
   //     createSubmission({
@@ -106,26 +110,30 @@ const Contacts = ({ location }) => {
     setInterestedItems([""])
   }
 
+  const style = {
+    position: 'relative',
+    top: -95,
+  }
+
   return (
     <>
       <Layout>
         <Seo title="Contact Us for Web and Mobile Development " description="Reach out to BPM Cloud for a consultation on your web or mobile application concept. Your ideas will be carefully reviewed by our experts. Simply complete the form, and our team will promptly respond to you!"/>
         <div className="container">
-          <div class="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <div className="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
             <Breadcrumbs breadcrumbs={location} title="Contacts" />
           </div>
           <div className="hero">
-            <h1 className="hero__title title_62">
-              Contacts Us <span className="phone_icon"></span>
+            <h1 className="hero__title title_80 contact_title">
+              Contact&nbsp;Us<span className="phone_icon"></span>
             </h1>
-            <p className="hero__description">Feel free to get in touch with us by filling out our contact form. Your insights and details will enable us to understand your needs accurately and provide you with the best assistance possible. We look forward to assisting you at the earliest convenience.</p>
           </div>
           <div className="header_circle_yellow"></div>
           <div className="header_circle_pink"></div>
           <div className="header_circle_purple"></div>
         </div>
         <div className="container">
-          <div className="contacts margin_bottom_60">
+          <div className="contacts margin_bottom_240">
             <div className="contacts__contact">
               <div className="contacts_table">
                 <div className="contacts_label">
@@ -154,19 +162,18 @@ const Contacts = ({ location }) => {
                         <div className="contact_form_line-wrapper">
                           <input
                             {...register("name", {
-                              required: "Please enter your name.",
+                              required: "Please, complete this field",
                             })}
                             id="name"
                             type="text"
                             name="name"
-                            maxlength="50"
+                            maxLength="50"
                             className={`contact_form_name input-yellow  ${
                               errors.name ? "input_invalid" : ""
                             }`}
                             data-empty={!!isEmpty.name}
-                            required
                           />
-                          <label>Name</label>
+                          <label className={`${errors.name ? "label_invalid" : ""}`}>Name</label>
                           {errors.name && (
                             <span className={"error_message"}>{errors.name?.message}</span>
                           )}
@@ -177,19 +184,19 @@ const Contacts = ({ location }) => {
                             {...register("email", {
                               pattern: {
                                 value: /\S+@\S+\.\S+/,
-                                message: "Entered value does not match email format",
+                                message: "Please, type correct email",
                               },
+                              required: "Please, complete this field",
                             })}
                             type="text"
                             id="mail"
-                            maxlength="100"
+                            maxLength="100"
                             className={`contact_form-mail input-mail contact_form_mail input-yellow ${
                               errors.email ? "input_invalid" : ""
                             }`}
                             data-empty={!!isEmpty.email}
-                            required
                           />
-                          <label>E-mail</label>
+                          <label className={`${errors.email ? "label_invalid" : ""}`}>E-mail</label>
                           {errors.email && (
                             <span className={"error_message"}>{errors.email?.message}</span>
                           )}
@@ -199,7 +206,9 @@ const Contacts = ({ location }) => {
                       <div className="contact_form_line-double">
                         <div className="contact_form_line-wrapper">
                           <InputMask
-                            {...register("telephone")}
+                            {...register("telephone", {
+                              required: "Please, type correct phone",
+                            })}
                             className={`contact_form-phone input-phone contact_form_phone input-yellow ${
                               errors.telephone ? "input_invalid" : ""
                             }`}
@@ -207,9 +216,8 @@ const Contacts = ({ location }) => {
                             mask="+\ 999999999999"
                             maskChar=" "
                             data-empty={!!isEmpty.telephone}
-                            required
                           />
-                          <label>Phone</label>
+                          <label className={`${errors.telephone ? "label_invalid" : ""}`}>Phone</label>
                           {errors.telephone && (
                             <span className={"error_message"}>{errors.telephone?.message}</span>
                           )}
@@ -217,31 +225,47 @@ const Contacts = ({ location }) => {
 
                         <div className="contact_form_line-wrapper">
                           <input
-                            {...register("message")}
+                            {...register("company", {
+                              required: "Please, complete this field",
+                            })}
+                            id="company"
                             type="text"
                             name="company"
-                            id="company"
-                            maxlength="100"
-                            className={`contact_form-company input-company contact_form_company input-yellow`}
+                            maxLength="50"
+                            className={`contact_form_company input-yellow  ${
+                              errors.company ? "input_invalid" : ""
+                            }`}
+                            data-empty={!!isEmpty.company}
                           />
-                          <label>Company</label>
+                          <label className={`${errors.company ? "label_invalid" : ""}`}>Company</label>
+                          {errors.company && (
+                            <span className={"error_message"}>{errors.company?.message}</span>
+                          )}
                         </div>
                       </div>
 
-                      <div className="contact_form_line-wrapper">
+                      <div className="contact_form_line-wrapper--one">
                         <input
-                          {...register("message")}
-                          type="text"
-                          name="message"
-                          id="message"
-                          maxlength="256"
-                          className={`contact_form-message input-message contact_form_message input-yellow`}
+                          {...register("message", {
+                              required: "Please, complete this field",
+                            })}
+                            id="message"
+                            type="text"
+                            name="message"
+                            maxLength="256"
+                            className={`contact_form_message input-yellow  ${
+                              errors.message ? "input_invalid" : ""
+                            }`}
+                            data-empty={!!isEmpty.message}
                         />
-                        <label>Message</label>
+                        <label className={`${errors.message ? "label_invalid" : ""}`}>Message</label>
+                          {errors.message && (
+                            <span className={"error_message"}>{errors.message?.message}</span>
+                          )}
                       </div>
 
                   <div className="contact_form_block_buttons_title">
-                    Services interested in:{" "}
+                    Services you are interested in:{" "}
                     <span style={{ fontWeight: "bold" }} itemprop="name">
                       {interestedItems && interestedItems.length > 0
                         ? interestedItems.slice(1).join(", ")
@@ -257,7 +281,7 @@ const Contacts = ({ location }) => {
                       }}
                       className="button_item_tag"
                     >
-                      + Development
+                      <span className="plus"></span>Development
                     </button>
                     <button
                       id="design"
@@ -267,7 +291,7 @@ const Contacts = ({ location }) => {
                       }}
                       className="button_item_tag"
                     >
-                      + Design
+                      <span className="plus"></span>Design
                     </button>
                     <button
                       id="seo"
@@ -277,7 +301,7 @@ const Contacts = ({ location }) => {
                       }}
                       className="button_item_tag"
                     >
-                      + SEO
+                      <span className="plus"></span>SEO
                     </button>
                     <button
                       id="ppc"
@@ -287,7 +311,7 @@ const Contacts = ({ location }) => {
                       }}
                       className="button_item_tag"
                     >
-                      + PPC
+                      <span className="plus"></span>PPC
                     </button>
                     <button
                       id="copywriting"
@@ -297,9 +321,9 @@ const Contacts = ({ location }) => {
                       }}
                       className="button_item_tag"
                     >
-                      + Copywriting
+                      <span className="plus"></span>Copywriting
                     </button>
-                    {interestedItems && interestedItems.length > 1 ? (
+                    {/* {interestedItems && interestedItems.length > 1 ? (
                       <button
                         id="clear"
                         key="clear"
@@ -321,16 +345,20 @@ const Contacts = ({ location }) => {
                       >
                         Clear
                       </button>
-                    )}
+                    )} */}
                   </div>
                       <div className="contact_form_block_send">
-                        <div>
-                          <button className="button_white" type="submit">
+                        <input {...register("checkbox", {
+                              required: "Please, agree to the Terms of Use and the Privacy Policy",
+                        })}
+                          type="checkbox" id="agree" name="agree" value="yes" data-checked={!!isEmpty.checkbox} className={`${errors.checkbox ? "checkbox_invalid" : ""}`} />
+                        <label htmlFor="agree" className={`${errors.checkbox ? "checkbox_invalid" : ""}`}>I agree to the&nbsp;<Link to="/">Privacy Policy</Link>&nbsp;and&nbsp;<Link to="/">Terms of Use</Link></label>
+                        {errors.checkbox && (
+                            <span className={"error_check"}>{errors.checkbox?.message}</span>
+                          )}
+                        <button className="button_white" type="submit">
                             Send<span className="arrow_black"></span>
                           </button>
-                        </div>
-                        <input type="checkbox" id="agree" name="agree" value="yes" required/>
-                        <label htmlFor="agree">I agree to the Privacy Policy and Terms of Service</label>
                       </div>
                     </form>
                   </div>

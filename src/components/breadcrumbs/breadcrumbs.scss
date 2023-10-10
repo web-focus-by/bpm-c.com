@@ -39,17 +39,18 @@
 
 @media (min-width: 1024px) and (max-width: 1366px) {
     .breadcrumbs-list {
-        margin-top: 42px;
+        margin-top: 35px;
     }
 
     .span_breadcrumbs {
-        margin-left: 18px;
+        margin-left: 10px;
         &:first-child {
             margin-left: 0px;
         }
 
         .breadcrumbs_span {
-            margin-left: 18px;
+            margin-left: 10px;
+            font-size: 11px;
         }
         .breadcrumbs {
             width: 79px;
@@ -57,7 +58,7 @@
             font-family: 'Acrom';
             font-style: normal;
             font-weight: 400;
-            font-size: 14px;
+            font-size: 11px;
             line-height: 100%;
             color: #1A1B1F;
             &:hover {
@@ -75,7 +76,19 @@
 
 @media (max-width: 768px) {
     .breadcrumbs-list {
-        margin-top: 50px;
+        margin-top: 44px;
+    }
+
+    .span_breadcrumbs {
+        margin-left: 12px;
+        &:first-child {
+            margin-left: 0px;
+        }
+
+        .breadcrumbs_span {
+            margin-left: 12px;
+            font-size: 11px;
+        }
     }
 }
 
