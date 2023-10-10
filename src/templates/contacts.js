@@ -124,7 +124,7 @@ const Contacts = ({ location }) => {
             <Breadcrumbs breadcrumbs={location} title="Contacts" />
           </div>
           <div className="hero">
-            <h1 className="hero__title title_80" style={{top: -68, position: 'relative'}}>
+            <h1 className="hero__title title_80 contact_title">
               Contact&nbsp;Us<span className="phone_icon"></span>
             </h1>
           </div>
