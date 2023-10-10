@@ -333,7 +333,7 @@
       margin-bottom: 100px;
     }
 
-    margin-top: calc(160px + (134 - 174) * ((100vw - 768px) / (1024 - 768)));
+    margin-top: 72px;;
     &__subtitle {
       line-height: 130%;
       margin-bottom: 28px;
@@ -786,10 +786,11 @@
       margin-top: 30px;
       .contacts_table {
         display: flex;
-        gap: 5%;
+        gap: 34px;
         justify-content: space-between;
+        min-width: 321px;
         .contacts_label {
-          width: 30%;
+          width: 67px;
           font-family: "Acrom", sans-serif;
           font-style: normal;
           font-weight: 400;
@@ -799,15 +800,20 @@
           ul {
             padding: 0;
             margin: 0;
+            width: 67px;
             li {
               display: flex;
               list-style: none;
-              margin-bottom: 50px;
+              margin-bottom: 53px;
+            }
+
+            li:first-child {
+              margin-bottom: 64px;
             }
           }
         }
         .contacts_value {
-          width: 65%;
+          width: 220px;
           font-family: "Acrom", sans-serif;
           font-style: normal;
           font-weight: 500;
@@ -823,7 +829,7 @@
               display: flex;
               list-style: none;
               margin-bottom: 43px;
-              margin-right: 10px;
+              margin-right: 14px;
             }
             li:first-child {
               row-gap: 8px;
@@ -849,7 +855,7 @@
             font-family: "Acrom", sans-serif;
             font-style: normal;
             font-weight: 500;
-            font-size: 14px;
+            font-size: 12px;
             line-height: 100%;
             color: #1a1b1f;
           }
@@ -858,7 +864,7 @@
             margin-left: 0;
             margin-top: 5px;
             .button_item_tag {
-              font-size: 16px;
+              font-size: 12px;
               line-height: 100%;
               margin: 0.4rem 14px 0.4rem 0;
             }
@@ -906,25 +912,29 @@
             form {
               padding-top: 40px;
 
-              .contact_form_line-wrapper {
+              .contact_form_line-double {
+                display: flex;
+                gap: 14px;
+                margin-bottom: 23px;
+
+                .contact_form_line-wrapper {
+                  width: 252px;
+                }
+
+              }
+
+              .contact_form_line-wrapper, .contact_form_line-wrapper--one {
                 position: relative;
-
-                &:first-child {
-                  margin-bottom: 78px;
-                }
-
-                &:nth-child(2) {
-                  margin-bottom: 58px;
-                }
 
                 input {
                   color: #1a1b1f;
                   font-weight: 500;
                   line-height: 100%;
+                  font-size: 12px;
                   border: 0;
                   outline: none;
                   background-color: transparent;
-                  border-bottom: 1px solid #1a1b1f;
+                  border-bottom: 1px solid #858A9E;
                   width: 100%;
                   padding-bottom: 10px;
                 }
@@ -936,19 +946,24 @@
                 label {
                   position: absolute;
                   pointer-events: none;
-                  left: 5px;
-                  top: -30px;
+                  left: 0;
+                  top: -32px;
+                  font-size: 12px;
                   transition: 0.2s ease all;
                   -moz-transition: 0.2s ease all;
                   -webkit-transition: 0.2s ease all;
                 }
               }
 
+              .contact_form_line-wrapper--one {
+                margin-bottom: 23px;
+              }
+
               .contact_form_block_send {
                 margin-top: 60px;
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
+                flex-direction: column;
+
                 .button_white {
                   padding: 15px 28px;
                   font-family: "Acrom", sans-serif;
@@ -962,7 +977,7 @@
 
                 label {
                   font-weight: 400;
-                  font-size: 14px;
+                  font-size: 10px;
                   line-height: 100%;
                   margin: 0;
                 }

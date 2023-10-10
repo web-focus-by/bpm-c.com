@@ -1027,7 +1027,6 @@ body {
       background-position: 110px 165px;
       &__block {
         color: #1a1b1f;
-        width: 191%;
         .contact_form_block_buttons_title {
           width: 100%;
           font-family: "Acrom", sans-serif;
@@ -1129,7 +1128,7 @@ body {
                 border: 0;
                 outline: none;
                 background-color: transparent;
-                border-bottom: 1px solid #1a1b1f;
+                border-bottom: 1px solid #858A9E;
                 width: 100%;
                 padding-bottom: 0;
               }
@@ -1191,7 +1190,7 @@ body {
                 height: 1em;
                 flex-shrink: 0;
                 flex-grow: 0;
-                border: 1px solid #1A1B1F;
+                border: 1px solid #858A9E;
                 border-radius: 0.25em;
                 margin-right: 0.5em;
                 background-repeat: no-repeat;
@@ -1200,7 +1199,7 @@ body {
               }
 
               input:checked+label::before {
-                border-color: #1A1B1F;
+                border-color: #858A9E;
                 background-image: url("../../images/check.svg");
               }
 

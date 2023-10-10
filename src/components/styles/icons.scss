@@ -541,6 +541,25 @@
     background-size: 33px 33px;
     background: url(../../images/fqa.svg) no-repeat;
   }
+
+  .plus {
+    display: inline-block;
+    background-size: 10px 10px;
+    background: url(../../images/close.svg) no-repeat;
+    margin-right: 6px;
+    position: relative;
+    top: 2px;
+  }
+
+  .phone_icon {
+    position: relative;
+    display: inline-block;
+    transform: scale(-1, 1);
+    margin-left: -6px;
+    top: 17px;
+    background: url(../../images/phone_icon.svg) no-repeat;
+    background-size: 33px 33px;
+  }
 }
 
 @media screen and (max-width: 768px) {
