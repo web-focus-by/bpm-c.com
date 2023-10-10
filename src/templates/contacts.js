@@ -115,17 +115,16 @@ const Contacts = ({ location }) => {
             <Breadcrumbs breadcrumbs={location} title="Contacts" />
           </div>
           <div className="hero">
-            <h1 className="hero__title title_62">
-              Contacts Us <span className="phone_icon"></span>
+            <h1 className="hero__title title_80">
+              Contact Us<span className="phone_icon"></span>
             </h1>
-            <p className="hero__description">Feel free to get in touch with us by filling out our contact form. Your insights and details will enable us to understand your needs accurately and provide you with the best assistance possible. We look forward to assisting you at the earliest convenience.</p>
           </div>
           <div className="header_circle_yellow"></div>
           <div className="header_circle_pink"></div>
           <div className="header_circle_purple"></div>
         </div>
         <div className="container">
-          <div className="contacts margin_bottom_60">
+          <div className="contacts margin_bottom_240">
             <div className="contacts__contact">
               <div className="contacts_table">
                 <div className="contacts_label">
@@ -228,7 +227,7 @@ const Contacts = ({ location }) => {
                         </div>
                       </div>
 
-                      <div className="contact_form_line-wrapper">
+                      <div className="contact_form_line-wrapper--one">
                         <input
                           {...register("message")}
                           type="text"
@@ -241,7 +240,7 @@ const Contacts = ({ location }) => {
                       </div>
 
                   <div className="contact_form_block_buttons_title">
-                    Services interested in:{" "}
+                    Services you are interested in:{" "}
                     <span style={{ fontWeight: "bold" }} itemprop="name">
                       {interestedItems && interestedItems.length > 0
                         ? interestedItems.slice(1).join(", ")
@@ -257,7 +256,7 @@ const Contacts = ({ location }) => {
                       }}
                       className="button_item_tag"
                     >
-                      + Development
+                      <span class="plus"></span>Development
                     </button>
                     <button
                       id="design"
@@ -267,7 +266,7 @@ const Contacts = ({ location }) => {
                       }}
                       className="button_item_tag"
                     >
-                      + Design
+                      <span class="plus"></span>Design
                     </button>
                     <button
                       id="seo"
@@ -277,7 +276,7 @@ const Contacts = ({ location }) => {
                       }}
                       className="button_item_tag"
                     >
-                      + SEO
+                      <span class="plus"></span>SEO
                     </button>
                     <button
                       id="ppc"
@@ -287,7 +286,7 @@ const Contacts = ({ location }) => {
                       }}
                       className="button_item_tag"
                     >
-                      + PPC
+                      <span class="plus"></span>PPC
                     </button>
                     <button
                       id="copywriting"
@@ -297,9 +296,9 @@ const Contacts = ({ location }) => {
                       }}
                       className="button_item_tag"
                     >
-                      + Copywriting
+                      <span class="plus"></span>Copywriting
                     </button>
-                    {interestedItems && interestedItems.length > 1 ? (
+                    {/* {interestedItems && interestedItems.length > 1 ? (
                       <button
                         id="clear"
                         key="clear"
@@ -321,16 +320,14 @@ const Contacts = ({ location }) => {
                       >
                         Clear
                       </button>
-                    )}
+                    )} */}
                   </div>
                       <div className="contact_form_block_send">
-                        <div>
+                          <input type="checkbox" id="agree" name="agree" value="yes" required/>
+                          <label htmlFor="agree">I agree to the&nbsp;<Link to="/">Privacy Policy</Link>&nbsp;and&nbsp;<Link to="/">Terms of Use</Link></label>
                           <button className="button_white" type="submit">
                             Send<span className="arrow_black"></span>
                           </button>
-                        </div>
-                        <input type="checkbox" id="agree" name="agree" value="yes" required/>
-                        <label htmlFor="agree">I agree to the Privacy Policy and Terms of Service</label>
                       </div>
                     </form>
                   </div>

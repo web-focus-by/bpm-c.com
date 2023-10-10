@@ -467,8 +467,10 @@
 
 .phone_icon {
   display: inline-block;
+  transform: scale(-1, 1);
   width: 53px;
   height: 53px;
+  margin-left: 20px;
   background: url(../../images/phone_icon.svg) no-repeat;
 }
 
@@ -508,6 +510,20 @@
   width: 47px;
   height: 47px;
   background: url(../../images/about_company.svg) no-repeat;
+}
+
+.plus {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(../../images/close.svg) no-repeat;
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 1920px) {
+  .phone_icon {
+    background-size: 47px 47px;
+  }
 }
 
 
