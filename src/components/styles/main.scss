@@ -1114,6 +1114,14 @@ body {
                 color: #e11d48;
               }
 
+              .label_invalid{
+                color: #e11d48;
+              }
+
+              .error_message  {
+                color: #e11d48;
+              }
+
               input {
                 color: #1a1b1f;
                 font-weight: 500;
@@ -1130,7 +1138,8 @@ body {
                 top: -30px;
               }
 
-              label {
+              label, .label {
+                color: #1a1b1f;
                 font-weight: 500;
                 position: absolute;
                 pointer-events: none;
@@ -1195,11 +1204,27 @@ body {
                 background-image: url("../../images/check.svg");
               }
 
+              .label_invalid{
+                color: #e11d48;
+
+                a {
+                  color: #e11d48;
+                }
+              }
+
+              .checkbox_invalid+label::before {
+                border: 1px solid #e11d48;
+              }
+
               label {
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 100%;
                 margin: 0 0 60px;
+
+                a {
+                  color: #935CFF;
+                }
               }
             }
           }
