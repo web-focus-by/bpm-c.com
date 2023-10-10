@@ -76,7 +76,19 @@
 
 @media (max-width: 768px) {
     .breadcrumbs-list {
-        margin-top: 50px;
+        margin-top: 44px;
+    }
+
+    .span_breadcrumbs {
+        margin-left: 12px;
+        &:first-child {
+            margin-left: 0px;
+        }
+
+        .breadcrumbs_span {
+            margin-left: 12px;
+            font-size: 11px;
+        }
     }
 }
 

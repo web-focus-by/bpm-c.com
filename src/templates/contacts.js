@@ -110,6 +110,11 @@ const Contacts = ({ location }) => {
     setInterestedItems([""])
   }
 
+  const style = {
+    position: 'relative',
+    top: -95,
+  }
+
   return (
     <>
       <Layout>
@@ -119,8 +124,8 @@ const Contacts = ({ location }) => {
             <Breadcrumbs breadcrumbs={location} title="Contacts" />
           </div>
           <div className="hero">
-            <h1 className="hero__title title_80">
-              Contact Us<span className="phone_icon"></span>
+            <h1 className="hero__title title_80" style={{top: -68, position: 'relative'}}>
+              Contact&nbsp;Us<span className="phone_icon"></span>
             </h1>
           </div>
           <div className="header_circle_yellow"></div>
