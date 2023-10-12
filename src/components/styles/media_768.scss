@@ -2910,8 +2910,7 @@
         .fqa_label {
           background:url(../../images/plus-small.png) no-repeat;
           height: 35px;
-          position: relative;
-          margin-left: 187px;
+          width: 35px;
         }
 
         .accordion_toggle:checked ~ .fqa_question>.fqa_answer {
