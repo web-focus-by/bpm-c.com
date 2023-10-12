@@ -74,7 +74,7 @@ const IndexPage = ({ location }) => {
   return (
     <>
         <Layout>
-          <Seo title="Index" />
+          <Seo title="BPM-C" />
           <Hero location={location}></Hero>
           {isShowThankModal ? (
             <ThanksModal backPage={backPageModal}></ThanksModal>
