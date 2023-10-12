@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { gql, useMutation } from "@apollo/client"
 import PropTypes from "prop-types"
 import { useForm } from "react-hook-form"
+import InputMask from 'react-input-mask'
 
 const CONTACT_MUTATION = gql`
   mutation CreateSubmissionMutation(
@@ -58,79 +59,120 @@ const ContactForm = props => {
 
   return (
     <form id="search-form" onSubmit={handleSubmit(submitHandler)}>
-      <div className="form_line-wrapper">
-        <input
-          {...register("name", {
-            required: "Please enter your name.",
-          })}
-          id="name"
-          type="text"
-          autoComplete="off"
-          name="name"
-          className={`form_name input-yellow ${
-            errors.name ? "input_invalid" : ""
-          }`}
-          data-empty={!!isEmpty.name}
-        />
-        <label>Name*</label>
-        {errors.name && (
-          <span className={"error_message"}>{errors.name?.message}</span>
-        )}
+      <div className="form_line-double">
+        <div className="form_line-wrapper">
+          <input
+            {...register("name", {
+              required: "Please, complete this field",
+            })}
+            id="name"
+            type="text"
+            name="name"
+            maxLength="50"
+            className={`form_name input-yellow  ${
+              errors.name ? "input_invalid" : ""
+            }`}
+            data-empty={!!isEmpty.name}
+          />
+          <label className={`${errors.name ? "label_invalid" : ""}`}>Name</label>
+          {errors.name && (
+            <span className={"error_message"}>{errors.name?.message}</span>
+          )}
+          </div>
+
+          <div className="form_line-wrapper">
+          <input
+            {...register("email", {
+              pattern: {
+                value: /\S+@\S+\.\S+/,
+                message: "Please, type correct email",
+              },
+              required: "Please, complete this field",
+            })}
+            type="text"
+            id="mail"
+            maxLength="100"
+            className={`form-mail input-mail form_mail input-yellow ${
+              errors.email ? "input_invalid" : ""
+            }`}
+            data-empty={!!isEmpty.email}
+          />
+          <label className={`${errors.email ? "label_invalid" : ""}`}>E-mail</label>
+          {errors.email && (
+            <span className={"error_message"}>{errors.email?.message}</span>
+          )}
+        </div>
       </div>
 
-      <div className="form_line-wrapper">
-        <input
-          {...register("telephone", {
-            required: "Please enter your phone number.",
-            pattern: {
-              value:
-                /^(?:\+1)?[ -]?\(?([2-9][0-8][0-9])\)?[ -]?([2-9][0-9]{2})[ -]?([0-9]{4})$/,
-              message: "Phone number in not correct",
-            },
-          })}
-          className={`form-phone input-phone form_phone input-yellow ${
-            errors.telephone ? "input_invalid" : ""
-          }`}
-          id="tel"
-          autoComplete="off"
-          data-empty={!!isEmpty.telephone}
-        />
-        <label>Phone*</label>
-        {errors.telephone && (
-          <span className={"error_message"}>{errors.telephone?.message}</span>
-        )}
+      <div className="form_line-double">
+        <div className="form_line-wrapper">
+          <InputMask
+            {...register("telephone", {
+              required: "Please, type correct phone",
+            })}
+            className={`form-phone input-phone form_phone input-yellow ${
+              errors.telephone ? "input_invalid" : ""
+            }`}
+            id="tel"
+            mask="+\ 999999999999"
+            maskChar=" "
+            data-empty={!!isEmpty.telephone}
+          />
+          <label className={`${errors.telephone ? "label_invalid" : ""}`}>Phone</label>
+          {errors.telephone && (
+            <span className={"error_message"}>{errors.telephone?.message}</span>
+          )}
+        </div>
+
+        <div className="form_line-wrapper">
+          <input
+            {...register("company", {
+              required: "Please, complete this field",
+            })}
+            id="company"
+            type="text"
+            name="company"
+            maxLength="50"
+            className={`form_company input-yellow  ${
+              errors.company ? "input_invalid" : ""
+            }`}
+            data-empty={!!isEmpty.company}
+          />
+          <label className={`${errors.company ? "label_invalid" : ""}`}>Company</label>
+          {errors.company && (
+            <span className={"error_message"}>{errors.company?.message}</span>
+          )}
+        </div>
       </div>
 
-      <div className="form_line-wrapper">
+      <div className="form_line-wrapper--one">
         <input
-          {...register("email", {
-            pattern: {
-              value: /\S+@\S+\.\S+/,
-              message: "Entered value does not match email format",
-            },
-          })}
-          type="text"
-          id="mail"
-          autoComplete="off"
-          className={`form-mail input-mail form_mail input-yellow ${
-            errors.email ? "input_invalid" : ""
-          }`}
-          data-empty={!!isEmpty.email}
+          {...register("message", {
+              required: "Please, complete this field",
+            })}
+            id="message"
+            type="text"
+            name="message"
+            maxLength="256"
+            className={`form_message input-yellow  ${
+              errors.message ? "input_invalid" : ""
+            }`}
+            data-empty={!!isEmpty.message}
         />
-        <label>E-mail</label>
-        {errors.email && (
-          <span className={"error_message"}>{errors.email?.message}</span>
-        )}
+        <label className={`${errors.message ? "label_invalid" : ""}`}>Message</label>
+          {errors.message && (
+            <span className={"error_message"}>{errors.message?.message}</span>
+          )}
       </div>
 
       <div className="form_block_send">
-        <div>
+          <input type="checkbox" id="agree" name="agree" value="yes" required/>
+          <label htmlFor="agree">I agree to the Privacy Policy and Terms of Use</label>
+          <div>
             <button className="button_black" type="submit">
               Send<span className="arrow_white"></span>
             </button>
           </div>
-          <input type="checkbox" id="agree" name="agree" value="yes" required/>
-          <label htmlFor="agree">I agree to the Privacy Policy and Terms of Service</label>
         </div>
     </form>
   )

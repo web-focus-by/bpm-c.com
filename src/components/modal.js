@@ -8,9 +8,9 @@ import "../components/styles/media_1366.scss"
 import "../components/styles/media_1024.scss"
 import "../components/styles/media_768.scss"
 import "../components/styles/media_375.scss"
-import gifUriy from "../images/uriy.gif"
-import gifKanu from "../images/kanu.gif"
-import gifVlada from "../images/vlada.gif"
+import Uriy from "../images/uriy.mp4"
+import Kanu from "../images/kanu.mp4"
+import Vlada from "../images/vlada.mp4"
 import ContactForm from "./contactForm/ContactForm"
 
 const Modal = ({ onClickClose, showThankForm }) => {
@@ -39,9 +39,18 @@ const Modal = ({ onClickClose, showThankForm }) => {
               <div className="form_block_text">
                 <p>Write to us, Yuri, Kanu or Vlada will contact you</p>
                 <div className="form_block_gif" itemtype="https://schema.org/ImageObject" itemscope="">
-                  <img src={gifUriy} alt="Uriy" itemprop="image"/>
-                  <img src={gifKanu} alt="Kanu" itemprop="image"/>
-                  <img src={gifVlada} alt="Vlada" itemprop="image"/>
+                  <div className="circle-video">
+                    <video src={Uriy} type="video/mp4" id="circle" autoPlay muted loop>
+                    </video>
+                  </div>
+                  <div className="circle-video">
+                    <video src={Kanu} type="video/mp4" id="circle" autoPlay muted loop>
+                    </video>
+                  </div>
+                  <div className="circle-video">
+                    <video src={Vlada} type="video/mp4" id="circle" autoPlay muted loop>
+                    </video>
+                  </div>
                 </div>
               </div>
               <div className="form_block_wrapper">

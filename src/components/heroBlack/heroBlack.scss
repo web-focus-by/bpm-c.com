@@ -1,0 +1,81 @@
+.container.black {
+    background-color: #1A1B1F;
+    border-radius: 25px;
+    padding: 180px 220px;
+    margin-bottom: 240px;
+
+    .black {
+        padding: 0;
+    }
+
+    .black__title {
+        margin-bottom: 60px;
+        .title {
+            width: 896px;
+            color:#fff;
+            font-family: 'Acrom';
+            font-size: 62px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 105%; /* 65.1px */
+            text-transform: capitalize;
+            margin-bottom: 40px;
+        }
+
+        .description {
+            width: 750px;
+            color:#fff;
+            font-family: 'Acrom';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+        }
+    }
+
+    .black__cards {
+        .black_undertitle {
+            color:#fff;
+            font-family: 'Acrom';
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 115%;
+            margin-bottom: 30px;
+        }
+
+        .cards-list {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 20px;
+            row-gap: 25px;
+
+            .black_item {
+                width: 720px;
+
+                .item__info {
+                    color:#fff;
+                    font-family: 'Acrom';
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
+            }
+        }
+    }
+
+    .violett_circle {
+        display: inline-block;
+        position: absolute;
+        top: 5420px;
+        left: 1264px;
+        width: 268px;
+        height: 268px;
+        border-radius: 100%;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(143, 114, 226, 0.60) 0%, rgba(135, 130, 224, 0.60) 0%, rgba(144, 139, 237, 0.60) 0.01%, rgba(143, 114, 226, 0.48) 100%);
+        filter: blur(60px);
+        z-index: 2;
+    }
+}

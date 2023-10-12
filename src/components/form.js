@@ -2,9 +2,9 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import ContactForm from "./contactForm/ContactForm"
 
-import gifUriy from "../images/uriy.gif"
-import gifKanu from "../images/kanu.gif"
-import gifVlada from "../images/vlada.gif"
+import Uriy from "../images/uriy.mp4"
+import Kanu from "../images/kanu.mp4"
+import Vlada from "../images/vlada.mp4"
 
 import "../components/styles/media_1920.scss"
 import "../components/styles/media_1366.scss"
@@ -21,25 +21,29 @@ const Form = ({ showThankForm }) => {
     <div className="containerForm">
       <div className="form margin_bottom_240">
         <div className="form__block">
-          <h2 className="form_block_title title_62">Get in touch</h2>
+          <h2 className="form_block_title title_62">Want to talk about your project?</h2>
           <div className="form_block_info">
-            Is there any point in delaying starting our cooperation, if leading
-            experts are already with our digital marketing agency? Let’s get
-            acquainted and jointly go towards necessary goals in goods and
-            services digital promotion. The first step is so easy!
+            Please, do not hesitate to share any of your ideas or demands with us.
           </div>
           <div className="form_block_text">
-            <p>Write to us, Yuri, Kanu or Vlada will contact you</p>
-            <div className="form_block_gif" itemtype="https://schema.org/ImageObject" itemscope>
-              <img src={gifUriy} alt="Uriy" itemprop="image"/>
-              <img src={gifKanu} alt="Kanu" itemprop="image"/>
-              <img src={gifVlada} alt="Vlada" itemprop="image"/>
+            <div className="text_info">
+              <p>Fill out the form</p>
+              <p>Yuri, Kanu or Vlada will get back to you soon</p>
             </div>
-          </div>
-          <div className="form_block_email">
-            <a href="mailto:hello@bpm-c.com" target="_blank">
-              info@bpm-c.com
-            </a>
+            <div className="form_block_gif" itemtype="https://schema.org/ImageObject" itemscope>
+              <div className="circle-video">
+                <video src={Uriy} type="video/mp4" id="circle" autoPlay muted loop>
+                </video>
+              </div>
+              <div className="circle-video">
+                <video src={Kanu} type="video/mp4" id="circle" autoPlay muted loop>
+                </video>
+              </div>
+              <div className="circle-video">
+                <video src={Vlada} type="video/mp4" id="circle" autoPlay muted loop>
+                </video>
+              </div>
+            </div>
           </div>
         </div>
         <div className="form__block">

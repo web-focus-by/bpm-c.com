@@ -32,7 +32,7 @@ const HeroWebSiteDesign = ({ title, content, location, titleLogo }) => {
         <div className="hero__butn">
           <Link className="link_btn" to={"/portfolio/"}>
             <button className="button_white">
-              View work<span className="arrow_black"></span>
+              Let’s work together<span className="arrow_black"></span>
             </button>
           </Link>
         </div>

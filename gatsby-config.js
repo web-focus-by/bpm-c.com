@@ -9,6 +9,7 @@ module.exports = {
   },
   pathPrefix: "/",
   plugins: [
+    "gatsby-plugin-netlify",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     "gatsby-plugin-sass",
