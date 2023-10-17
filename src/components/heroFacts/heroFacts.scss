@@ -135,3 +135,72 @@
         }
     }
 }
+
+@media screen and (max-width: 1366px){
+    .facts {
+        .facts__title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 28px;
+
+            .title {
+                width: 266px;
+                font-size: 44.11px;
+            }
+
+            .description {
+                width: 519px;
+
+                p {
+                    font-size: 12.806px;
+                    padding-left: 0px;
+                }
+            }
+        }
+
+        .facts__cards {
+            .cards-list {
+                display: flex;
+                gap: 14px;
+                .fact-item {
+                    width: 252px;
+                    height: 324px;
+                    background-color: #1A1B1F;
+                    padding: 21px;
+                    border-radius: 17px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .item__info {
+                        &-title {
+                            max-width: 171px;
+                            font-size: 17.075px;
+                        }
+
+                        &-content {
+                            font-size: 12.806px;
+                            margin-top: 14px;
+                            width: 209px;
+                        }
+                    }
+
+                    .fact-item__circle.two {
+                        display: flex;
+                        height: 42px;
+                        .circle-one {
+                            width: 42px;
+                            height: 42px;
+                        }
+
+                        .circle-two {
+                            margin-left: -23px;
+                            width: 42px;
+                            height: 42px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
