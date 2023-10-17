@@ -143,3 +143,66 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .container.black {
+        background-color: #1A1B1F;
+        border-radius: 18px;
+        padding: 84px 40px;
+        margin-bottom: 80px;
+
+        .black {
+            padding: 0;
+        }
+
+        .black__title {
+            margin-bottom: 40px;
+            .title {
+                width: 569px;
+                font-size: 42px;
+                margin-bottom: 20px;
+            }
+
+            .description {
+                width: 688px;
+                font-size: 15px;
+            }
+        }
+
+        .black__cards {
+            .black_undertitle {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+
+            .cards-list {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 20px;
+                row-gap: 20px;
+
+                .black_item {
+                    width: 330px;
+
+                    .item__info {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+        .violett_circle {
+            display: inline-block;
+            position: absolute;
+            top: 5188px;
+            left: 478px;
+            width: 189px;
+            height: 189px;
+            border-radius: 100%;
+            background: radial-gradient(50% 50% at 50% 50%, rgba(143, 114, 226, 0.60) 0%, rgba(135, 130, 224, 0.60) 0%, rgba(144, 139, 237, 0.60) 0.01%, rgba(143, 114, 226, 0.48) 100%);
+            filter: blur(60px);
+            z-index: 2;
+        }
+    }
+}

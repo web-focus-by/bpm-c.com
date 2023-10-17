@@ -660,6 +660,13 @@
     background-size: 34px 34px;
     background: url(../../images/fqa.svg) no-repeat;
   }
+
+    .circle {
+      display: inline-block;
+      background: url(../../images/circle.svg) no-repeat;
+      background-size: 16px 16px;
+      margin: 0 27px 0 15px;
+    }
 }
 
 @media screen and (max-width: 450px) {
