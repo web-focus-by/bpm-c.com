@@ -686,4 +686,19 @@
     margin-left: 10px;
     background: url(../../images/fqa.svg) no-repeat;
   }
+
+  .about_company {
+    display: inline-block;
+    margin-left: 10px;
+    position: absolute;
+    background: url(../../images/about_company.svg) no-repeat;
+    background-size: 34px 34px;
+  }
+
+  .circle {
+    display: inline-block;
+    background: url(../../images/circle.svg) no-repeat;
+    background-size: 16px 16px;
+    margin: 6px 12px 0 12px;
+  }
 }

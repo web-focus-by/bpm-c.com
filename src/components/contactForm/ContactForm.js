@@ -3,6 +3,7 @@ import { gql, useMutation } from "@apollo/client"
 import PropTypes from "prop-types"
 import { useForm } from "react-hook-form"
 import InputMask from 'react-input-mask'
+import { Link } from "gatsby"
 
 const CONTACT_MUTATION = gql`
   mutation CreateSubmissionMutation(
@@ -167,7 +168,7 @@ const ContactForm = props => {
 
       <div className="form_block_send">
           <input type="checkbox" id="agree" name="agree" value="yes" required/>
-          <label htmlFor="agree">I agree to the Privacy Policy and Terms of Use</label>
+          <label htmlFor="agree">I agree to the&nbsp;<Link to="/">Privacy Policy</Link>&nbsp;and&nbsp;<Link to="/">Terms of Use</Link></label>
           <div>
             <button className="button_black" type="submit">
               Send<span className="arrow_white"></span>
