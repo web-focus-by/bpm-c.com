@@ -606,6 +606,44 @@
     background: url(../../images/phone_icon.svg) no-repeat;
     background-size: 33px 33px;
   }
+
+  .cup {
+    display: inline-block;
+    background: url(../../images/cup.svg) no-repeat;
+    background-size: 28px 28px;
+  }
+  .heart {
+    display: inline-block;
+    background: url(../../images/heart.svg) no-repeat;
+    background-size: 35px 35px;
+  }
+
+  .develop {
+    display: inline-block;
+    background: url(../../images/develop.svg) no-repeat;
+    background-size: 17px 17px;
+    position: relative;
+    top: -15px;
+    left: 0px;
+  }
+
+  .computer {
+    display: inline-block;
+    background: url(../../images/pc.svg) no-repeat;
+    background-size: 24px 24px;
+  }
+
+  .light {
+    display: inline-block;
+    background: url(../../images/light.svg) no-repeat;
+    background-size: 30px 30px;
+  }
+
+  .circle {
+    display: inline-block;
+    background: url(../../images/circle.svg) no-repeat;
+    background-size: 18px 18px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -622,6 +660,13 @@
     background-size: 34px 34px;
     background: url(../../images/fqa.svg) no-repeat;
   }
+
+    .circle {
+      display: inline-block;
+      background: url(../../images/circle.svg) no-repeat;
+      background-size: 16px 16px;
+      margin: 0 27px 0 15px;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -640,5 +685,20 @@
     position: absolute;
     margin-left: 10px;
     background: url(../../images/fqa.svg) no-repeat;
+  }
+
+  .about_company {
+    display: inline-block;
+    margin-left: 10px;
+    position: absolute;
+    background: url(../../images/about_company.svg) no-repeat;
+    background-size: 34px 34px;
+  }
+
+  .circle {
+    display: inline-block;
+    background: url(../../images/circle.svg) no-repeat;
+    background-size: 16px 16px;
+    margin: 6px 12px 0 12px;
   }
 }

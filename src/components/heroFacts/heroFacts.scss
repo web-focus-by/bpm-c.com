@@ -135,3 +135,213 @@
         }
     }
 }
+
+@media screen and (max-width: 1366px){
+    .facts {
+        .facts__title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 28px;
+
+            .title {
+                width: 266px;
+                font-size: 44.11px;
+            }
+
+            .description {
+                width: 519px;
+
+                p {
+                    font-size: 12.806px;
+                    padding-left: 0px;
+                }
+            }
+        }
+
+        .facts__cards {
+            .cards-list {
+                display: flex;
+                gap: 14px;
+                .fact-item {
+                    width: 252px;
+                    height: 324px;
+                    background-color: #1A1B1F;
+                    padding: 21px;
+                    border-radius: 17px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .item__info {
+                        &-title {
+                            max-width: 171px;
+                            font-size: 17.075px;
+                        }
+
+                        &-content {
+                            font-size: 12.806px;
+                            margin-top: 14px;
+                            width: 209px;
+                        }
+                    }
+
+                    .fact-item__circle.two {
+                        display: flex;
+                        height: 42px;
+                        .circle-one {
+                            width: 42px;
+                            height: 42px;
+                        }
+
+                        .circle-two {
+                            margin-left: -23px;
+                            width: 42px;
+                            height: 42px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .facts {
+        .facts__title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+
+            .title {
+                width: 507px;
+                font-size: 46px;
+            }
+
+            .description {
+                width: 687px;
+
+                p {
+                    font-size: 15px;
+                    padding-left: 0px;
+                }
+            }
+        }
+
+        .facts__cards {
+            .cards-list {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+                .fact-item {
+                    width: 274px;
+                    height: 360px;
+                    background-color: #1A1B1F;
+                    padding: 30px;
+                    border-radius: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .item__info {
+                        &-title {
+                            max-width: 181px;
+                            font-size: 20px;
+                        }
+
+                        &-content {
+                            font-size: 15px;
+                            margin-top: 20px;
+                            width: 274px;
+                        }
+                    }
+
+                    .fact-item__circle.two {
+                        display: flex;
+                        height: 60px;
+                        .circle-one {
+                            width: 60px;
+                            height: 60px;
+                        }
+
+                        .circle-two {
+                            margin-left: -23px;
+                            width: 60px;
+                            height: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .facts {
+        .facts__title {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-bottom: 30px;
+
+            .title {
+                width: 267px;
+                font-size: 42px;
+            }
+
+            .description {
+                width: 343px;
+
+                p {
+                    font-size: 15px;
+                    padding-left: 0px;
+                }
+            }
+        }
+
+        .facts__cards {
+            .cards-list {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+                .fact-item {
+                    width: 343px;
+                    height: 360px;
+                    background-color: #1A1B1F;
+                    padding: 30px;
+                    border-radius: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .item__info {
+                        &-title {
+                            max-width: 181px;
+                            font-size: 20px;
+                        }
+
+                        &-content {
+                            font-size: 15px;
+                            margin-top: 20px;
+                            width: 283px;
+                        }
+                    }
+
+                    .fact-item__circle.two {
+                        display: flex;
+                        height: 60px;
+                        .circle-one {
+                            width: 60px;
+                            height: 60px;
+                        }
+
+                        .circle-two {
+                            margin-left: -23px;
+                            width: 60px;
+                            height: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

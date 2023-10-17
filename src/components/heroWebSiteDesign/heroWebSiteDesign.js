@@ -16,16 +16,16 @@ const HeroWebSiteDesign = ({ title, content, location, titleLogo }) => {
   const logoTitle = titleLogo && titleLogo.length > 0 ? titleLogo : null
   return (
     <div className="container">
-      <div className="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+      <div className="breacrumbs-list about_list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
         <Breadcrumbs breadcrumbs={location} title={title} />
       </div>
       <div className="hero margin_bottom_240">
-        <h1 className="hero__title title_80">
+        <h1 className="hero__title title_80 about_title">
           {title}
           <span className={logoTitle}></span>
         </h1>
         {content && content.content[0] ? (
-          <div className="hero__subtitle">
+          <div className="hero__subtitle about_subtitle">
             <div dangerouslySetInnerHTML={{ __html: content.content[0] }} />
           </div>
         ) : null}
