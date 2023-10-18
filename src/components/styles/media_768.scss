@@ -183,6 +183,7 @@
           }
           .contact_form_block_wrapper {
             form {
+              max-width: 700px;
               padding-top: 40px;
 
               .contact_form_line-double {
@@ -237,7 +238,7 @@
               }
 
               .contact_form_block_send {
-                margin-top: 60px;
+                margin-top: -15px;
                 display: flex;
                 width: 400px;
                 flex-direction: column;
