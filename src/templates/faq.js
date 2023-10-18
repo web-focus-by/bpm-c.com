@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Link, graphql } from "gatsby"
 import { fractionContent } from "../utils/fractionContent"
 import Layout from "../components/layout"
@@ -35,8 +35,8 @@ const Faq = ({ location, data }) => {
             <div className="fqa margin_bottom_240">
               <div className="fqa__list">
                 <div className="fqa__list-item">
-                  <label className="fqa_label" htmlFor="toggle-01">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-01" hidden></input>
+                  <label className="fqa_label" htmlFor="toggle-01" id="01">
+                    <input type="radio" class="accordion_toggle" name="accordion" id="toggle-01" hidden ></input>
                     <div className="fqa_number"><p>01.</p></div>
                     <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -52,7 +52,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-02">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-02" hidden></input>
+                    <input type="radio" class="accordion_toggle" name="accordion" id="toggle-02" hidden  ></input>
                     <div className="fqa_number"><p>02.</p></div>
                     <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -76,7 +76,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-03">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-03" hidden></input>
+                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-03" hidden  ></input>
                   <div className="fqa_number"><p>03.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -92,7 +92,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-04">
-                   <input type="radio" class="accordion_toggle" name="accordion" id="toggle-04" hidden></input>
+                   <input type="radio" class="accordion_toggle" name="accordion" id="toggle-04" hidden  ></input>
                     <div className="fqa_number"><p>04.</p></div>
                     <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -116,13 +116,13 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-05">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-05" hidden></input>
+                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-05" hidden  ></input>
                     <div className="fqa_number"><p>05.</p></div>
                     <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
                     <p className="question">What are the advantages of outsourcing your project to our team?</p>
                       <div className="fqa_answer" >
-                        <p className="answer"><Link to="/">Software development outsourcing</Link> your project to our team offers numerous advantages:</p>
+                        <p className="answer"><Link to="/services/it-outsourcing/software-development-outsourcing/">Software development outsourcing</Link> your project to our team offers numerous advantages:</p>
                         <ul className="answer">
                           <li>Our skilled professionals bring expertise across various domains, ensuring a fresh perspective and innovative solutions.</li>
                           <li>We provide cost-effectiveness by eliminating the need for in-house infrastructure and staff.</li>
@@ -137,7 +137,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-06">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-06" hidden></input>
+                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-06" hidden  ></input>
                     <div className="fqa_number"><p>06.</p></div>
                     <div className="fqa_icon"><span className="label_icon"></span></div>
                     <div className="fqa_question">
@@ -151,7 +151,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-07">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-07" hidden></input>
+                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-07" hidden  ></input>
                     <div className="fqa_number"><p>07.</p></div>
                     <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -165,13 +165,13 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-08">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-08" hidden></input>
+                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-08" hidden  ></input>
                   <div className="fqa_number"><p>08.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
                     <p className="question">Do you provide outstaffing services?</p>
                       <div className="fqa_answer" >
-                        <p className="answer">Yes, we offer <Link to="/">outstaffing services</Link> as part of our comprehensive offerings. Outstaffing allows you to augment your team with our skilled professionals who work remotely as an extension of your workforce. This arrangement provides flexibility in scaling your team as needed, while we handle the recruitment, onboarding, and management of our dedicated resources. You retain control over the tasks and projects they work on, ensuring seamless integration and enhanced productivity.</p>
+                        <p className="answer">Yes, we offer <Link to="/services/it-outstaffing/">outstaffing services</Link> as part of our comprehensive offerings. Outstaffing allows you to augment your team with our skilled professionals who work remotely as an extension of your workforce. This arrangement provides flexibility in scaling your team as needed, while we handle the recruitment, onboarding, and management of our dedicated resources. You retain control over the tasks and projects they work on, ensuring seamless integration and enhanced productivity.</p>
                       </div>
                     </div>
                   </label>
@@ -179,7 +179,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-09">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-09" hidden></input>
+                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-09" hidden  ></input>
                   <div className="fqa_number"><p>09.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -193,7 +193,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-10">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-10" hidden></input>
+                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-10" hidden  ></input>
                   <div className="fqa_number"><p>10.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -218,7 +218,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-11">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-11" hidden></input>
+                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-11" hidden  ></input>
                   <div className="fqa_number"><p>11.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -232,7 +232,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-12">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-12" hidden></input>
+                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-12" hidden  ></input>
                   <div className="fqa_number"><p>12.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -246,7 +246,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-13">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-13" hidden></input>
+                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-13" hidden  ></input>
                   <div className="fqa_number"><p>13.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -260,7 +260,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-14">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-14" hidden></input>
+                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-14" hidden  ></input>
                   <div className="fqa_number"><p>14.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -279,7 +279,7 @@ const Faq = ({ location, data }) => {
                           <li><strong>Integration Challenges:</strong> Compatibility issues with existing systems during integration.</li>
                           <li><strong>Resource Availability:</strong> Ensuring skilled developers are available throughout the project.</li>
                         </ul>
-                        <p className="answer">Awareness of these challenges enables proactive mitigation and better <Link to="/">project management</Link> for successful custom software development.</p>
+                        <p className="answer">Awareness of these challenges enables proactive mitigation and better <Link to="/services/it-outsourcing/project-management-outsourcing/">project management</Link> for successful custom software development.</p>
                       </div>
                     </div>
                   </label>
@@ -287,7 +287,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-15">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-15" hidden></input>
+                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-15" hidden  ></input>
                   <div className="fqa_number"><p>15.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -298,7 +298,7 @@ const Faq = ({ location, data }) => {
                           <li><strong>Requirements Gathering:</strong> Defining project goals and features.</li>
                           <li><strong>Design Phase:</strong> Providing feedback on the software's look and feel.</li>
                           <li><strong>Development:</strong> Reviewing progress, suggesting adjustments.</li>
-                          <li><strong>Testing:</strong> Participating in <Link to="/">quality assurance</Link> and bug identification.</li>
+                          <li><strong>Testing:</strong> Participating in <Link to="/services/testing-and-qa/">quality assurance</Link> and bug identification.</li>
                           <li><strong>Feedback Loop:</strong> Regular updates and incorporating your suggestions.</li>
                         </ul>
                         <p className="answer">Your input ensures the final software aligns precisely with your vision and needs. We adapt to your desired level of engagement to create a successful and satisfying partnership.</p>
@@ -309,7 +309,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-16">
-                   <input type="radio" class="accordion_toggle" name="accordion" id="toggle-16" hidden></input>
+                   <input type="radio" class="accordion_toggle" name="accordion" id="toggle-16" hidden  ></input>
                   <div className="fqa_number"><p>16.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -323,7 +323,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-17">
-                   <input type="radio" class="accordion_toggle" name="accordion" id="toggle-17" hidden></input>
+                   <input type="radio" class="accordion_toggle" name="accordion" id="toggle-17" hidden  ></input>
                   <div className="fqa_number"><p>17.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -352,7 +352,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-18">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-18" hidden></input>
+                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-18" hidden  ></input>
                   <div className="fqa_number"><p>18.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -366,7 +366,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-19">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-19" hidden></input>
+                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-19" hidden  ></input>
                   <div className="fqa_number"><p>19.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
