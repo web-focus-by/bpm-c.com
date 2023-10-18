@@ -17,6 +17,18 @@ import "../components/styles/media_768.scss"
 import "../components/styles/media_375.scss"
 
 const Faq = ({ location, data }) => {
+  const [arr, addArr] = useState([]);
+
+  function chengeValue(event) {
+    addArr([...arr, event.target.value]);
+
+    if (arr[arr.length - 1] === arr[arr.length - 2]) {
+      event.target.checked = false;
+    } else {
+      return;
+    }
+  }
+console.log(arr)
 
   return (
     <>
@@ -36,7 +48,7 @@ const Faq = ({ location, data }) => {
               <div className="fqa__list">
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-01" id="01">
-                    <input type="radio" class="accordion_toggle" name="accordion" id="toggle-01" hidden ></input>
+                    <input type="radio" className="accordion_toggle" name="accordion" id="toggle-01" value="1" hidden onClick={(event) => chengeValue(event)}></input>
                     <div className="fqa_number"><p>01.</p></div>
                     <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -52,7 +64,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-02">
-                    <input type="radio" class="accordion_toggle" name="accordion" id="toggle-02" hidden  ></input>
+                    <input type="radio" className="accordion_toggle" name="accordion" id="toggle-02" value="2" hidden onClick={(event) => chengeValue(event)}></input>
                     <div className="fqa_number"><p>02.</p></div>
                     <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -76,7 +88,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-03">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-03" hidden  ></input>
+                  <input type="radio" className="accordion_toggle" name="accordion" id="toggle-03" value="3" hidden onClick={(event) => chengeValue(event)}  ></input>
                   <div className="fqa_number"><p>03.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -92,7 +104,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-04">
-                   <input type="radio" class="accordion_toggle" name="accordion" id="toggle-04" hidden  ></input>
+                   <input type="radio" className="accordion_toggle" name="accordion" id="toggle-04" value="4" hidden onClick={(event) => chengeValue(event)}  ></input>
                     <div className="fqa_number"><p>04.</p></div>
                     <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -116,7 +128,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-05">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-05" hidden  ></input>
+                  <input type="radio" className="accordion_toggle" name="accordion" id="toggle-05" value="5" hidden onClick={(event) => chengeValue(event)}  ></input>
                     <div className="fqa_number"><p>05.</p></div>
                     <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -137,7 +149,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-06">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-06" hidden  ></input>
+                  <input type="radio" className="accordion_toggle" name="accordion" id="toggle-06" value="6" hidden onClick={(event) => chengeValue(event)}  ></input>
                     <div className="fqa_number"><p>06.</p></div>
                     <div className="fqa_icon"><span className="label_icon"></span></div>
                     <div className="fqa_question">
@@ -151,7 +163,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-07">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-07" hidden  ></input>
+                  <input type="radio" className="accordion_toggle" name="accordion" id="toggle-07" value="7" hidden onClick={(event) => chengeValue(event)}  ></input>
                     <div className="fqa_number"><p>07.</p></div>
                     <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -165,7 +177,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-08">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-08" hidden  ></input>
+                  <input type="radio" className="accordion_toggle" name="accordion" id="toggle-08" value="8" hidden onClick={(event) => chengeValue(event)}  ></input>
                   <div className="fqa_number"><p>08.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -179,7 +191,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-09">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-09" hidden  ></input>
+                  <input type="radio" className="accordion_toggle" name="accordion" id="toggle-09" value="9" hidden onClick={(event) => chengeValue(event)}  ></input>
                   <div className="fqa_number"><p>09.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -193,7 +205,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-10">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-10" hidden  ></input>
+                  <input type="radio" className="accordion_toggle" name="accordion" id="toggle-10" value="10" hidden onClick={(event) => chengeValue(event)}  ></input>
                   <div className="fqa_number"><p>10.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -218,7 +230,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-11">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-11" hidden  ></input>
+                  <input type="radio" className="accordion_toggle" name="accordion" id="toggle-11" value="11" hidden onClick={(event) => chengeValue(event)}  ></input>
                   <div className="fqa_number"><p>11.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -232,7 +244,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-12">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-12" hidden  ></input>
+                  <input type="radio" className="accordion_toggle" name="accordion" id="toggle-12" value="12" hidden onClick={(event) => chengeValue(event)}  ></input>
                   <div className="fqa_number"><p>12.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -246,7 +258,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-13">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-13" hidden  ></input>
+                  <input type="radio" className="accordion_toggle" name="accordion" id="toggle-13" value="13" hidden onClick={(event) => chengeValue(event)}  ></input>
                   <div className="fqa_number"><p>13.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -260,7 +272,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-14">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-14" hidden  ></input>
+                  <input type="radio" className="accordion_toggle" name="accordion" id="toggle-14" value="14" hidden onClick={(event) => chengeValue(event)}  ></input>
                   <div className="fqa_number"><p>14.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -287,7 +299,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-15">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-15" hidden  ></input>
+                  <input type="radio" className="accordion_toggle" name="accordion" id="toggle-15" value="15" hidden onClick={(event) => chengeValue(event)}  ></input>
                   <div className="fqa_number"><p>15.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -309,7 +321,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-16">
-                   <input type="radio" class="accordion_toggle" name="accordion" id="toggle-16" hidden  ></input>
+                   <input type="radio" className="accordion_toggle" name="accordion" id="toggle-16" value="16" hidden onClick={(event) => chengeValue(event)}  ></input>
                   <div className="fqa_number"><p>16.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -323,7 +335,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-17">
-                   <input type="radio" class="accordion_toggle" name="accordion" id="toggle-17" hidden  ></input>
+                   <input type="radio" className="accordion_toggle" name="accordion" id="toggle-17" value="17" hidden onClick={(event) => chengeValue(event)}  ></input>
                   <div className="fqa_number"><p>17.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -352,7 +364,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-18">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-18" hidden  ></input>
+                  <input type="radio" className="accordion_toggle" name="accordion" id="toggle-18" value="18" hidden onClick={(event) => chengeValue(event)}  ></input>
                   <div className="fqa_number"><p>18.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
@@ -366,7 +378,7 @@ const Faq = ({ location, data }) => {
 
                 <div className="fqa__list-item">
                   <label className="fqa_label" htmlFor="toggle-19">
-                  <input type="radio" class="accordion_toggle" name="accordion" id="toggle-19" hidden  ></input>
+                  <input type="radio" className="accordion_toggle" name="accordion" id="toggle-19" value="19" hidden onClick={(event) => chengeValue(event)}  ></input>
                   <div className="fqa_number"><p>19.</p></div>
                   <div className="fqa_icon"><span className="label_icon"></span></div>
                   <div className="fqa_question">
