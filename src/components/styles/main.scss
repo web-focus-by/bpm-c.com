@@ -1048,6 +1048,20 @@ body {
             line-height: 100%;
             margin: 0.4rem 15px 0.4rem 0;
           }
+
+          .button_item_tag.active {
+            color: #fff;
+            background-color: #1a1b1f;
+          }
+
+          .button_item_tag:hover {
+            transition:  all 0.3s linear;
+          }
+
+          .button_item_tag:hover>span {
+            filter: invert(1);
+            transition:  all 0.3s linear;;
+          }
         }
         .contact_form_block_title {
           color: #1a1b1f;

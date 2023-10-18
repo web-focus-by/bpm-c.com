@@ -106,8 +106,11 @@ const Contacts = ({ location }) => {
     return interestedItems
   }
 
-  const clear = () => {
-    setInterestedItems([""])
+  const setActive = id => {
+    const activeItem = document.getElementById(id);
+    const activeSpan = activeItem.querySelector('span');
+    activeItem.classList.add('active');
+    activeSpan.classList.add('active');
   }
 
   const style = {
@@ -276,8 +279,10 @@ const Contacts = ({ location }) => {
                     <button
                       id="development"
                       key="development"
-                      onClick={() => {
-                        addItem("development")
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addItem("development");
+                        setActive("development");
                       }}
                       className="button_item_tag"
                     >
@@ -286,8 +291,10 @@ const Contacts = ({ location }) => {
                     <button
                       id="design"
                       key="design"
-                      onClick={() => {
-                        addItem("design")
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addItem("design");
+                        setActive("design");
                       }}
                       className="button_item_tag"
                     >
@@ -296,8 +303,10 @@ const Contacts = ({ location }) => {
                     <button
                       id="seo"
                       key="seo"
-                      onClick={() => {
-                        addItem("seo")
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addItem("seo");
+                        setActive("seo");
                       }}
                       className="button_item_tag"
                     >
@@ -306,8 +315,10 @@ const Contacts = ({ location }) => {
                     <button
                       id="ppc"
                       key="ppc"
-                      onClick={() => {
-                        addItem("ppc")
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addItem("ppc");
+                        setActive("ppc");
                       }}
                       className="button_item_tag"
                     >
@@ -316,8 +327,10 @@ const Contacts = ({ location }) => {
                     <button
                       id="copywriting"
                       key="copywriting"
-                      onClick={() => {
-                        addItem("copywriting")
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addItem("copywriting");
+                        setActive("copywriting");
                       }}
                       className="button_item_tag"
                     >
@@ -352,7 +365,7 @@ const Contacts = ({ location }) => {
                               required: "Please, agree to the Terms of Use and the Privacy Policy",
                         })}
                           type="checkbox" id="agree" name="agree" value="yes" data-checked={!!isEmpty.checkbox} className={`${errors.checkbox ? "checkbox_invalid" : ""}`} />
-                        <label htmlFor="agree" className={`${errors.checkbox ? "checkbox_invalid" : ""}`}>I agree to the&nbsp;<Link to="/">Privacy Policy</Link>&nbsp;and&nbsp;<Link to="/">Terms of Use</Link></label>
+                        <label htmlFor="agree" className={`${errors.checkbox ? "checkbox_invalid" : ""}`}>I agree to the  <Link to="/">Privacy Policy</Link>  and  <Link to="/">Terms of Use</Link></label>
                         {errors.checkbox && (
                             <span className={"error_check"}>{errors.checkbox?.message}</span>
                           )}

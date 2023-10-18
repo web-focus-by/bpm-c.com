@@ -17,12 +17,6 @@ import "../components/styles/media_768.scss"
 import "../components/styles/media_375.scss"
 
 const Faq = ({ location, data }) => {
-  const content =
-    data && data.wpPage ? fractionContent(data.wpPage.content) : null
-  const title = content[0].title
-    ? content[0].title.replace(/<[^>]+>/g, "")
-    : null
-
 
   return (
     <>

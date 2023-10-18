@@ -519,6 +519,13 @@
   height: 14px;
   background: url(../../images/close.svg) no-repeat;
   margin-right: 8px;
+  position: relative;
+  top: 1px;
+}
+
+.plus.active {
+  filter: invert(1);
+  transition:  all 0.3s linear;;
 }
 
 .circle {
