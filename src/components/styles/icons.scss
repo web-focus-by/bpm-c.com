@@ -603,6 +603,13 @@
     background: url(../../images/fqa.svg) no-repeat;
   }
 
+  .label_icon {
+    display: inline-block;
+    background: url(../../images/plus-vio.svg) no-repeat;
+    background-size: 15px 15px;
+    transform: rotate(0deg);
+  }
+
   .plus {
     display: inline-block;
     background-size: 10px 10px;
