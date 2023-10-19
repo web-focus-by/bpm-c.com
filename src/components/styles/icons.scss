@@ -505,6 +505,14 @@
   background: url(../../images/fqa.svg) no-repeat;
 }
 
+.label_icon {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background: url(../../images/plus-vio.svg) no-repeat;
+  transform: rotate(0deg);
+}
+
 .about_company {
   display: inline-block;
   width: 47px;
@@ -595,6 +603,13 @@
     background: url(../../images/fqa.svg) no-repeat;
   }
 
+  .label_icon {
+    display: inline-block;
+    background: url(../../images/plus-vio.svg) no-repeat;
+    background-size: 15px 15px;
+    transform: rotate(0deg);
+  }
+
   .plus {
     display: inline-block;
     background-size: 10px 10px;
@@ -668,12 +683,19 @@
     background: url(../../images/fqa.svg) no-repeat;
   }
 
-    .circle {
-      display: inline-block;
-      background: url(../../images/circle.svg) no-repeat;
-      background-size: 16px 16px;
-      margin: 0 27px 0 15px;
-    }
+  .label_icon {
+    display: inline-block;
+    background: url(../../images/plus-vio.svg) no-repeat;
+    background-size: 16px 16px;
+    transform: rotate(0deg);
+  }
+
+  .circle {
+    display: inline-block;
+    background: url(../../images/circle.svg) no-repeat;
+    background-size: 16px 16px;
+    margin: 0 27px 0 15px;
+  }
 }
 
 @media screen and (max-width: 450px) {
