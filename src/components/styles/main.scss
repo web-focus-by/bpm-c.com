@@ -1488,8 +1488,8 @@ body {
       justify-content: center;
       align-items: center;
       text-align: center;
-      color: #1a1b1f;
-      background: #e1daf4;
+      color: #fff;
+      background: #1a1b1f;
       border-radius: 25px;
       height: 210px;
       transition: all 0.25s;
@@ -1501,7 +1501,7 @@ body {
         font-size: 20px;
         line-height: 110%;
         text-align: center;
-        color: #1a1b1f;
+        color: #fff;
       }
     }
     .services_list_item_wrapper {
@@ -1511,12 +1511,10 @@ body {
           background: url(../../images/test.png) no-repeat;
           background-size: cover;
           background-position-x: 100%;
-          color: #ffffff;
           // background-position: 70% 80px;
 
           span {
             transform: translateY(-50px);
-            color: #ffffff;
           }
         }
       }
