@@ -10,7 +10,7 @@ const HeroFacts = ({ title, description, flex, dataContent}) => {
     <div className="container">
         <div className="hero margin_bottom_240">
               <div className="facts">
-                  <div className="facts__title">
+                  <div className={`facts__title ${flex === 'true' ? '' : 'no-flex'}`}>
                       <div className="title">{title}</div>
                       <div className="description">
                           <p>{description}</p>
@@ -27,6 +27,7 @@ const HeroFacts = ({ title, description, flex, dataContent}) => {
                               <div className={`fact-item__circle ${obj.classCircle}`}>
                                 <div className="circle-one"></div>
                                 <div className="circle-two"></div>
+                                <div className="circle-three"></div>
                               </div>
                             </div>
                             ))}

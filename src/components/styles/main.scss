@@ -548,10 +548,6 @@ body {
       }
     }
   }
-
-  // .active{
-  //     transform: scale(1);
-  // }
 }
 
 .thanks_modal {
@@ -667,6 +663,10 @@ body {
   width: 80%;
 }
 
+.vio_title {
+  color: #935CFF;
+}
+
 .hero {
   margin-top: 188px;
 
@@ -676,7 +676,7 @@ body {
 
   &__title {
     line-height: 100%;
-    max-width: 65%;
+    max-width: 75%;
     font-size: 80px;
     margin-bottom: 20px;
     color: #1a1b1f;
