@@ -18,9 +18,9 @@ const HeroValues = ({ title, emoji, description, dataContent}) => {
                   </div>
                   <div className="values__cards">
                       <div className="cards-list">
-                          {dataContent.map(obj => (
+                          {dataContent.map((obj, index )=> (
                               <div className={`value-item ${dataContent.length > 3 ? 'length': ''}`}>
-                                <div className="item__info-number">{obj.num}.</div>
+                                <div className="item__info-number">0{index + 1}.</div>
                                 <div className="item__info-title">{obj.title}</div>
                                 <div className="item__info-content">{obj.content}</div>
                             </div>

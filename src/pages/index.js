@@ -7,6 +7,7 @@ import ITCompany from "../components/it_company"
 import HeroFacts from "../components/heroFacts/heroFacts.js"
 import Portfolio from "../components/portfolio"
 import HeroAccordion from "../components/heroAccord/heroAccord"
+import HeroValues from "../components/heroValues/heroValues"
 import Form from "../components/form"
 import ThanksForm from "../components/thanks_form"
 import ServicesIndex from "../components/servicesIndex"
@@ -109,7 +110,7 @@ const IndexPage = ({ location }) => {
   ]
 
     const commonAccor = [
-  {
+    {
       title: 'What types of apps can you develop?',
       content: 'If your business doesn’t have its own IT department and obtaining of the digital product is an inevitable necessity, we can take care of the product development and further maintenance. Our skilled professional teams are ready to take full responsibility for software or application development from the first till the last step. ',
     },
@@ -128,6 +129,27 @@ const IndexPage = ({ location }) => {
     {
       title: 'What is your preferred development methodology?',
       content: 'We use all the most popular and efficient methodologies including Scrum, Waterfall, and Kanban. The choice is mostly depended on the project specifics, but Scrum with its iterations is the most widely used. ',
+    }
+]
+
+const buisness = [ 'Though the market is full of software development companies of different size, working experience and project scales, BPM Cloud is able to provide your business with IT development services based on many years of practical and commercial experience. ', 'Partnering with BPM Cloud is the key to successful and cost-efficient realization of business’s IT needs and goals or brave plans and dreams. We’re always ready to discuss the peculiarities of the project and IT solutions you need till both sides come to agreement, so you’re guaranteed a satisfying result. ']
+
+const buisChoose = [
+    {
+      title: 'Prompt start',
+      content: 'There are no delays and excessive bureaucracy, as we are ready to start within 1-2 weeks.',
+    },
+    {
+      title: 'Clear conditions and policy',
+      content: 'We are always ready to discuss the project details and explain all the costs and terms of our cooperation.',
+    },
+    {
+      title: 'High quality',
+      content: 'Obtaining the experienced teams of developers, QA-engineers and UX/UI designers guarantees that the final product will be flawless.',
+    },
+    {
+      title: 'Assistance and maintenance',
+      content: 'We will not leave you alone, and you may request further help at any moment.',
     }
 ]
 
@@ -168,6 +190,7 @@ const IndexPage = ({ location }) => {
           <Technologies></Technologies>
           <ProjectsProcess></ProjectsProcess>
           <ServicesIndex title="Industries We Serve"></ServicesIndex>
+          <HeroValues title="Why do businesses choose BPM Cloud?" description={buisness} dataContent={buisChoose}></HeroValues>
           <Reviews titlePage="Testimonials"></Reviews>
           <Blog titlePage="Blog"></Blog>
           <HeroAccordion title="Common questions about our work" dataContent={commonAccor}></HeroAccordion>
