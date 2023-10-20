@@ -1573,6 +1573,12 @@ body {
 }
 
 .projects_process {
+
+  &__title {
+    max-width: 763px;
+    text-transform: capitalize;
+  }
+
   &__subtitle {
     color: #5c5c5c;
     max-width: 46.5%;

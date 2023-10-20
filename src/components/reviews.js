@@ -13,119 +13,73 @@ import "../components/styles/media_1024.scss"
 import "../components/styles/media_768.scss"
 import "../components/styles/media_375.scss"
 
+import armani from "../images/Armani.png"
+import tourist from "../images/TOURIST.png"
+import profit from "../images/Profit.png"
+
 const Reviews = ({}) => {
   const hasWindow = typeof window !== "undefined"
   const widthScreen = hasWindow ? window.innerWidth : null
   const dataText = [
     {
       id: "slide_1",
+      img: armani,
       description:
-        "Is there any point in delaying starting our cooperation, if " +
-        "leading experts are already with our digital marketing agency? " +
-        "Let’s get acquainted and jointly go towards necessary goals in " +
-        "goods and services digital promotion. The first step is so easy!",
-      signature: "Valentina Gubareva",
-      date: "12.10.2021",
+        "I had the pleasure of utilizing the website redesign services offered by BPM Cloud, and I must say, I am thoroughly impressed. As the Marketing Manager, I sought a fresh perspective to elevate our brand. Their concepts seamlessly blended innovation with our identity, redefining our visual appeal. Effective communication, expert design, and a deep understanding of our needs make BPM Cloud our top choice. They've reinvigorated our image, leaving a lasting impact on our success.",
+      signature: "Maria Rodriguez",
+      vacan: 'Marketing Manager',
     },
     {
       id: "slide_2",
+      img: tourist,
       description:
-        "Is there any point in delaying starting our cooperation, if " +
-        "leading experts are already with our digital marketing agency? " +
-        "Let’s get acquainted and jointly go towards necessary goals in " +
-        "goods and services digital promotion. The first step is so easy!",
-      signature: "Maria Ivanova",
-      date: "12.10.2021",
+        "Impressed with BPM Cloud's UX/UI design and development service! Crafting our portal showcasing diverse services was seamless. Intuitive design, smooth navigation, and flawless responsiveness. Their team's collaborative approach and technical expertise made the process a breeze. Highly recommend their top-notch services!",
+      signature: "Emily Johnson",
+      vacan: 'Head of Product',
     },
     {
       id: "slide_3",
+      img: profit,
       description:
-        "Is there any point in delaying starting our cooperation, if " +
-        "leading experts are already with our digital marketing agency? " +
-        "Let’s get acquainted and jointly go towards necessary goals in " +
-        "goods and services digital promotion. The first step is so easy!",
-      signature: "Ekaterina Gubareva",
-      date: "12.10.2021",
-    },
-    {
-      id: "slide_4",
-      description:
-        "Is there any point in delaying starting our cooperation, if " +
-        "leading experts are already with our digital marketing agency? " +
-        "Let’s get acquainted and jointly go towards necessary goals in " +
-        "goods and services digital promotion. The first step is so easy!",
-      signature: "Valentina Gubarevich",
-      date: "12.10.2021",
+        "BPM Cloud's software development service transformed our investment corporate website. Their technical prowess elegantly translated intricate financial tools into an intuitive interface. The collaboration was seamless, and the responsive design ensures a flawless experience across devices. Highly recommend BPM Cloud for their expertise in enhancing digital presence.",
+      signature: "Michael Smith",
+      vacan: 'Chief Investment Officer',
     },
   ]
   const result = dataText.map(obj => {
     return (
-      <SwiperSlide key={obj.id}>
-        <div className="reviews_info_block">
-          <div className="reviews_info_block_text">{obj.description}</div>
-          <div className="reviews_info_block_name">{obj.signature}</div>
-          <div className="reviews_info_block_date">
-            <ul>
-              <li>Creative director</li>
-              <li>{obj.date}</li>
-            </ul>
+      <div key={obj.id} className="reviews__list">
+        <div className="list_item">
+          <div className="reviews__list_logo">
+            <img src={obj.img} alt="logo" />
+          </div>
+          <div className="reviews__list_text">
+            <p>{obj.description}</p>
+          </div>
+          <div className="reviews__list_info">
+              <div className="info_descr">
+                <div className="reviews_name">{obj.signature}</div>
+                <div className="reviews_vacan">{obj.vacan}</div>
+              </div>
+              <div className="reviews__project">
+                <Link to="/">Check the project</Link>
+              </div>
           </div>
         </div>
-      </SwiperSlide>
+      </div>
     )
   })
   return (
     <div className="container swiper_container">
       <div className="reviews margin_bottom_240">
         <div className="view_title">
-          <h2 className="title_62">Reviews</h2>
+          <h2 className="title_62">What Our Clients Say</h2>
           <Link className="active_link" to="/about-us/testimonials/">
             View all
           </Link>
         </div>
         <div className="reviews__info">
-          <Swiper
-            spaceBetween={widthScreen <= 1366 ? 20 : 26}
-            slidesPerView={"auto"}
-            // onSlideChange={() => console.log("slide change")}
-            // onSwiper={swiper => console.log(swiper)}
-            breakpoints={{
-              1920: {
-                width: 1920,
-                allowTouchMove: true,
-              },
-              1366: {
-                width: 1366,
-                allowTouchMove: true,
-              },
-              1025: {
-                width: 1025,
-                allowTouchMove: true,
-              },
-              1024: {
-                width: 1024,
-                allowTouchMove: true,
-              },
-              768: {
-                width: 768,
-                allowTouchMove: true,
-              },
-              425: {
-                width: 425,
-                allowTouchMove: true,
-              },
-              375: {
-                width: 375,
-                allowTouchMove: true,
-              },
-              320: {
-                width: 320,
-                allowTouchMove: true,
-              },
-            }}
-          >
             {result}
-          </Swiper>
         </div>
       </div>
     </div>

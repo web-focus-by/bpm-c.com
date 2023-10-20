@@ -9,12 +9,13 @@ import Portfolio from "../components/portfolio"
 import HeroAccordion from "../components/heroAccord/heroAccord"
 import Form from "../components/form"
 import ThanksForm from "../components/thanks_form"
+import Service from "../components/services/service"
 import ServicesItem from "../components/servicesItem"
 import Technologies from "../components/technologies"
 import ProjectsProcess from "../components/projects_process"
 import Blog from "../components/blog"
 import Reviews from "../components/reviews"
-import LeadersChoice from "../components/leaders_choice"
+import WorkTogether from "../components/workTogether/workTogether"
 import ThanksModal from "../components/thanks_modal"
 
 const IndexPage = ({ location }) => {
@@ -166,11 +167,11 @@ const IndexPage = ({ location }) => {
           <ServicesItem></ServicesItem>
           <Technologies></Technologies>
           <ProjectsProcess></ProjectsProcess>
-          <ServicesItem></ServicesItem>
+          <Service title="Industries We Serve"></Service>
           <Reviews titlePage="Testimonials"></Reviews>
           <Blog titlePage="Blog"></Blog>
           <HeroAccordion title="Common questions about our work" dataContent={commonAccor}></HeroAccordion>
-          <LeadersChoice></LeadersChoice>
+          <WorkTogether></WorkTogether>
         </Layout>
     </>
   )
