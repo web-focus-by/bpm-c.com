@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero"
+import ITCompany from "../components/it_company"
 import HeroFacts from "../components/heroFacts/heroFacts.js"
 import Portfolio from "../components/portfolio"
 import Form from "../components/form"
@@ -99,18 +100,19 @@ const IndexPage = ({ location }) => {
         <Layout>
           <Seo title="Index" />
           <Hero location={location}></Hero>
+          <ITCompany></ITCompany>
           {isShowThankModal ? (
             <ThanksModal backPage={backPageModal}></ThanksModal>
           ) : null}
-        <HeroFacts
-          title="What are the benefits of our software development services?"
-          description="There are many software development IT companies all around the world, but BPM Cloud has several main advantages that allow it to distinguish from the whole mass."
-          flex="false"
-          dataContent={facts}
-        ></HeroFacts>
           <Portfolio posts={allPosts}></Portfolio>
           {isShowForm ? <Form showThankForm={showThankForm}></Form> : null}
           {isShowThankForm ? <ThanksForm backPage={backPage}></ThanksForm> : null}
+          <HeroFacts
+            title="What are the benefits of our software development services?"
+            description="There are many software development IT companies all around the world, but BPM Cloud has several main advantages that allow it to distinguish from the whole mass."
+            flex="false"
+            dataContent={facts}
+          ></HeroFacts>
           <ServicesItem></ServicesItem>
           <Technologies></Technologies>
           <BPMCloud></BPMCloud>

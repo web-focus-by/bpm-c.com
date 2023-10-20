@@ -574,6 +574,15 @@
   background: url(../../images/pc.svg) no-repeat;
 }
 
+.laptop {
+  display: inline-block;
+  min-width: 37px;
+  height: 37px;
+  background: url(../../images/laptop-icon.svg) no-repeat;
+  margin-top: 27px;
+  margin-left: 27px;
+}
+
 .light {
   display: inline-block;
   width: 40px;

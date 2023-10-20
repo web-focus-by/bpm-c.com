@@ -19,7 +19,7 @@ const HeroFacts = ({ title, description, flex, dataContent}) => {
                   <div className="facts__cards">
                       <div className="cards-list">
                           {dataContent.map(obj => (
-                            <div className="fact-item">
+                            <div className={`fact-item ${obj.classCircle}`}>
                               <div className="item__info">
                                   <div className="item__info-title">{obj.title}</div>
                                   <div className="item__info-content">{obj.content}</div>

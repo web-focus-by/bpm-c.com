@@ -132,12 +132,12 @@
 
                 .fact-item__circle.three {
                     display: flex;
-                    height: 60px;
+                    height: 40px;
                     width: 150px;
                     .circle-one {
                         position: relative;
-                        width: 60px;
-                        height: 60px;
+                        width: 40px;
+                        height: 40px;
                         border-radius: 100%;
                         background: #9C7CF1;
                         filter: blur(12.5px);
@@ -146,27 +146,32 @@
 
                     .circle-two {
                         position: relative;
-                        margin-left: -23px;
-                        width: 60px;
-                        height: 60px;
+                        margin-left: -11px;
+                        width: 40px;
+                        height: 40px;
                         border-radius: 100%;
                         background: #B1D2E0;
                         filter: blur(12.5px);
-                        z-index: 1;
+                        z-index: 3;
                     }
 
                     .circle-three {
                         position: relative;
-                        margin-left: -74px;
+                        margin-left: -51px;
                         margin-top: -21px;
-                        width: 60px;
-                        height: 60px;
+                        width: 40px;
+                        height: 40px;
                         border-radius: 100%;
                         background: #FFBBD5;
                         filter: blur(12.5px);
                         z-index: 1;
                     }
                 }
+            }
+
+            .fact-item .three {
+                width: 355px;
+                height: 487px;
             }
 
             .fact-item:nth-child(2) {
