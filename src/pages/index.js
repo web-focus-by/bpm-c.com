@@ -9,7 +9,7 @@ import Portfolio from "../components/portfolio"
 import HeroAccordion from "../components/heroAccord/heroAccord"
 import Form from "../components/form"
 import ThanksForm from "../components/thanks_form"
-import Service from "../components/services/service"
+import ServicesIndex from "../components/servicesIndex"
 import ServicesItem from "../components/servicesItem"
 import Technologies from "../components/technologies"
 import ProjectsProcess from "../components/projects_process"
@@ -167,7 +167,7 @@ const IndexPage = ({ location }) => {
           <ServicesItem></ServicesItem>
           <Technologies></Technologies>
           <ProjectsProcess></ProjectsProcess>
-          <Service title="Industries We Serve"></Service>
+          <ServicesIndex title="Industries We Serve"></ServicesIndex>
           <Reviews titlePage="Testimonials"></Reviews>
           <Blog titlePage="Blog"></Blog>
           <HeroAccordion title="Common questions about our work" dataContent={commonAccor}></HeroAccordion>
