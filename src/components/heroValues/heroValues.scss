@@ -167,11 +167,40 @@
                 }
 
                 .code {
-                    width: 229px;
+                    width: 247px;
                     background-color: #1A1B1F;
                     border-radius: 25px;
                     margin-bottom: 51px;
                     padding: 20px;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    .vio {
+                        color: #B578CC;
+                    }
+                    .bl {
+                        color: #61AFEF;
+                    }
+                    .sftbl {
+                        color: #6F9EB9;
+                    }
+                    .yel {
+                        color: #E9D70C;
+                    }
+                    .white {
+                       color: #ABB2BF;
+                    }
+                    .red {
+                        color: #CD4B3C;
+                    }
+                    .or {
+                        color:#D17A44;
+                    }
+                    .green {
+                        color: #98C379;
+                    }
                 }
 
                 .welcome {
