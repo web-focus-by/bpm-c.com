@@ -598,6 +598,13 @@
   background: url(../../images/service-icon.svg) no-repeat;
 }
 
+.support {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url(../../images/support.svg) no-repeat;
+}
+
 @media screen and (max-width: 1920px) {
   .phone_icon {
     background-size: 47px 47px;
