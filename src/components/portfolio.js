@@ -104,7 +104,7 @@ const Portfolio = ({ posts }) => {
       let tags = []
       if (post && post.node.tags) {
         tags = post.node.tags.nodes.map(tag => {
-          let valueTag = "#" + tag.slug
+          let valueTag = tag.slug
           return (
             <li
               key={post.node.id.toString() + valueTag.toString()}
@@ -143,7 +143,7 @@ const Portfolio = ({ posts }) => {
           </div>
           <div className="portfolio_products_block_title">
             <Link className="class_link" to={post.node.uri}>
-              {post.node.title}
+              «{post.node.title}»
             </Link>
           </div>
         </div>

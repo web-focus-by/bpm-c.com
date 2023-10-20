@@ -1478,6 +1478,26 @@ body {
   }
 }
 
+.accor__title {
+   max-width: 731px;
+   text-transform: capitalize;
+}
+
+.accor__description {
+  display: flex;
+  gap:20px;
+
+  p {
+    margin: 0;
+    min-width: 730px;
+    font-family: 'Acrom';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+
 .services {
   &__list {
     display: grid;

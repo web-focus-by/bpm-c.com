@@ -590,6 +590,14 @@
   background: url(../../images/light.svg) no-repeat;
 }
 
+.service {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin-left: 20px;
+  background: url(../../images/service-icon.svg) no-repeat;
+}
+
 @media screen and (max-width: 1920px) {
   .phone_icon {
     background-size: 47px 47px;
