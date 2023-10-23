@@ -9,8 +9,7 @@ import HeroFacts from "../components/heroFacts/heroFacts.js"
 import Portfolio from "../components/portfolio"
 import HeroAccordion from "../components/heroAccord/heroAccord"
 import HeroValues from "../components/heroValues/heroValues"
-import Modal from "../components/modal"
-import ThanksModal from "../components/thanks_modal"
+import HeroLine from "../components/heroLine/heroLine"
 import ServicesIndex from "../components/servicesIndex"
 import ServicesItem from "../components/servicesItem"
 import Technologies from "../components/technologies"
@@ -163,6 +162,7 @@ const buisChoose = [
             flex="false"
             dataContent={facts}
           ></HeroFacts>
+          <HeroLine></HeroLine>
           <ServicesItem></ServicesItem>
           <Technologies></Technologies>
           <ProjectsProcess></ProjectsProcess>

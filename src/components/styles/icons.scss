@@ -678,6 +678,20 @@
   background: url(../../images/edu.svg) no-repeat;
 }
 
+.clapp-icon {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  background: url(../../images/clapp-icon.svg) no-repeat;
+}
+
+.power-icon {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  background: url(../../images/power-icon.svg) no-repeat;
+}
+
 @media screen and (max-width: 1920px) {
   .phone_icon {
     background-size: 47px 47px;
