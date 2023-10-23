@@ -147,7 +147,7 @@ const ContactForm = props => {
       </div>
 
       <div className="form_line-wrapper--one">
-        <input
+        <textarea
           {...register("message", {
               required: "Please, complete this field",
             })}

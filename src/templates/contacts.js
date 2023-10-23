@@ -60,7 +60,7 @@ const Contacts = ({ location }) => {
     handleSubmit,
     watch,
   } = useForm({
-    defaultValues: { company: "", name: "", email: "", telephone: "", message: "", checkbox: "" },
+    defaultValues: { company: "", name: "", email: "", message: "", checkbox: "" },
     mode: "onBlur",
   })
 
@@ -99,18 +99,33 @@ const Contacts = ({ location }) => {
     )
   })
 
-  const addItem = item => {
+  const addItem = (item) => {
     if (interestedItems.indexOf(item) === -1) {
       setInterestedItems([...interestedItems, item])
-    }
+    } 
     return interestedItems
   }
 
-  const setActive = id => {
+  const removeItem = (item) => {
+    setInterestedItems([...interestedItems.filter(elem => elem !== item)]);
+    return interestedItems
+  }
+
+  const toggleActive = (id) => {
     const activeItem = document.getElementById(id);
     const activeSpan = activeItem.querySelector('span');
-    activeItem.classList.add('active');
-    activeSpan.classList.add('active');
+
+    if(activeItem.classList.contains('active')) {
+      activeItem.classList.remove('active');
+    } else {
+      activeItem.classList.add('active');
+    }
+
+    if(activeSpan.classList.contains('active')) {
+      activeSpan.classList.remove('active');
+    } else {
+      activeSpan.classList.add('active');
+    }
   }
 
   const style = {
@@ -124,7 +139,7 @@ const Contacts = ({ location }) => {
         <Seo title="Contact Us for Web and Mobile Development " description="Reach out to BPM Cloud for a consultation on your web or mobile application concept. Your ideas will be carefully reviewed by our experts. Simply complete the form, and our team will promptly respond to you!"/>
         <div className="container">
           <div className="breacrumbs-list contacts" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-            <Breadcrumbs breadcrumbs={location} title="Contacts" />
+            <Breadcrumbs breadcrumbs={location} title="Contact Us" />
           </div>
           <div className="hero">
             <h1 className="hero__title title_80 contact_title">
@@ -282,7 +297,11 @@ const Contacts = ({ location }) => {
                       onClick={(e) => {
                         e.preventDefault();
                         addItem("development");
-                        setActive("development");
+                        toggleActive("development",);
+                      }}
+                      onDoubleClick={(e) => {
+                        e.preventDefault();
+                        removeItem("development")
                       }}
                       className="button_item_tag"
                     >
@@ -294,7 +313,11 @@ const Contacts = ({ location }) => {
                       onClick={(e) => {
                         e.preventDefault();
                         addItem("design");
-                        setActive("design");
+                        toggleActive("design",);
+                      }}
+                      onDoubleClick={(e) => {
+                        e.preventDefault();
+                        removeItem("design")
                       }}
                       className="button_item_tag"
                     >
@@ -306,7 +329,11 @@ const Contacts = ({ location }) => {
                       onClick={(e) => {
                         e.preventDefault();
                         addItem("seo");
-                        setActive("seo");
+                        toggleActive("seo",);
+                      }}
+                      onDoubleClick={(e) => {
+                        e.preventDefault();
+                        removeItem("seo")
                       }}
                       className="button_item_tag"
                     >
@@ -318,7 +345,11 @@ const Contacts = ({ location }) => {
                       onClick={(e) => {
                         e.preventDefault();
                         addItem("ppc");
-                        setActive("ppc");
+                        toggleActive("ppc",);
+                      }}
+                      onDoubleClick={(e) => {
+                        e.preventDefault();
+                        removeItem("ppc")
                       }}
                       className="button_item_tag"
                     >
@@ -330,7 +361,11 @@ const Contacts = ({ location }) => {
                       onClick={(e) => {
                         e.preventDefault();
                         addItem("copywriting");
-                        setActive("copywriting");
+                        toggleActive("copywriting",);
+                      }}
+                      onDoubleClick={(e) => {
+                        e.preventDefault();
+                        removeItem("copywriting")
                       }}
                       className="button_item_tag"
                     >

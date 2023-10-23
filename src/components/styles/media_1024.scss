@@ -151,7 +151,7 @@
             position: relative;
             width: 650px;
 
-            input {
+            input, textarea {
               color: #fff;
               font-weight: 500;
               line-height: 100%;
@@ -1092,7 +1092,7 @@
               .contact_form_line-wrapper, .contact_form_line-wrapper--one {
                 position: relative;
 
-                input {
+                input, textarea {
                   color: #1a1b1f;
                   font-weight: 500;
                   line-height: 100%;

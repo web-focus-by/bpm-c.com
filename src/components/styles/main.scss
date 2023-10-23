@@ -1141,7 +1141,7 @@ body {
                 color: #e11d48;
               }
 
-              input {
+              input, textarea {
                 color: #1a1b1f;
                 font-weight: 500;
                 line-height: 100%;
@@ -1215,7 +1215,7 @@ body {
                 margin-right: 0.5em;
                 background-repeat: no-repeat;
                 background-position: center center;
-                background-size: 50% 50%;
+                background-size: 80% 80%;
               }
 
               input:checked+label::before {
@@ -1350,7 +1350,7 @@ body {
           position: relative;
           width: 650px;
 
-          input {
+          input, textarea {
             color: #fff;
             font-weight: 500;
             line-height: 100%;
