@@ -506,10 +506,15 @@ body {
       &__block {
         .form_block_text {
           font-size: 16px;
+          margin-bottom: 56px;
 
           .form_block_gif {
             margin-left: 12px;
           }
+        }
+
+        .form_block_wrapper {
+          margin-left: 0;
         }
 
         .form_block_modal_button {

@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero"
+import Form from "../components/form"
 import ITCompany from "../components/it_company"
 import HeroFacts from "../components/heroFacts/heroFacts.js"
 import Portfolio from "../components/portfolio"
@@ -151,10 +152,11 @@ const buisChoose = [
   return (
     <>
         <Layout>
-          <Seo title="Index" />
+          <Seo title="Custom Software Development Company" description="BPM Cloud is a leading custom software development company. Our skilled and experienced team delivers tailored web app development services to help achieve your business goals efficiently. Get started on your project today!" />
           <Hero location={location}></Hero>
           <ITCompany></ITCompany>
           <Portfolio posts={allPosts}></Portfolio>
+          <Form></Form>
           <HeroAccordion title="What are the services that we provide?" emoji="service" descr={service} dataContent={serviceAccor}></HeroAccordion>
           <HeroFacts
             title="What are the benefits of our software development services?"
