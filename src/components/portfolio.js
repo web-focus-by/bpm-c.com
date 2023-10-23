@@ -1,7 +1,9 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useEffect, useRef } from "react"
+import Marquee from "react-fast-marquee";
 import { Link } from "gatsby"
+
 import "../components/styles/main.scss"
 import "../components/styles/icons.scss"
 import "../components/styles/modules.scss"
@@ -104,13 +106,19 @@ const Portfolio = ({ posts }) => {
       let tags = []
       if (post && post.node.tags) {
         tags = post.node.tags.nodes.map(tag => {
-          let valueTag = "#" + tag.slug
+          let valueTag = tag.slug.replace('-', ' ')
+          let tagVal
+          if(tag.slug === 'ux-ui-design') {
+            tagVal = 'UX/UI-design';
+          } else {
+            tagVal = valueTag.charAt(0).toUpperCase() + valueTag.slice(1)
+          }
           return (
             <li
               key={post.node.id.toString() + valueTag.toString()}
               className="hash_list_block"
             >
-              <Link to={"/tag/" + tag.slug + "/"} >{valueTag}</Link>
+              <Link to={"/tag/" + tag.slug + "/"} >{tagVal}</Link>
             </li>
           )
         })
@@ -143,7 +151,7 @@ const Portfolio = ({ posts }) => {
           </div>
           <div className="portfolio_products_block_title">
             <Link className="class_link" to={post.node.uri}>
-              {post.node.title}
+              «{post.node.title}»
             </Link>
           </div>
         </div>

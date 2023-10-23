@@ -30,6 +30,39 @@
         }
     }
 
+    .facts__title.no-flex {
+        display: block;
+        margin-bottom: 70px;
+
+        .title {
+            width: 1081px;
+            font-family: 'Acrom';
+            font-size: 62px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 105%; /* 65.1px */
+            text-transform: capitalize;
+            margin-bottom: 40px;
+        }
+
+        .description {
+            width: 730px;
+
+            p {
+                color: #5C5C5C;
+                font-family: 'Acrom';
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                margin: 0;
+                padding-left: 13px;
+            }
+        }
+    }
+
+
+
     .facts__cards {
         .cards-list {
             display: flex;
@@ -91,7 +124,54 @@
                         filter: blur(12.5px);
                         z-index: 1;
                     }
+
+                    .circle-three {
+                        display: none;
+                    }
                 }
+
+                .fact-item__circle.three {
+                    display: flex;
+                    height: 40px;
+                    width: 150px;
+                    .circle-one {
+                        position: relative;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 100%;
+                        background: #9C7CF1;
+                        filter: blur(12.5px);
+                        z-index: 2;
+                    }
+
+                    .circle-two {
+                        position: relative;
+                        margin-left: -11px;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 100%;
+                        background: #B1D2E0;
+                        filter: blur(12.5px);
+                        z-index: 3;
+                    }
+
+                    .circle-three {
+                        position: relative;
+                        margin-left: -51px;
+                        margin-top: -21px;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 100%;
+                        background: #FFBBD5;
+                        filter: blur(12.5px);
+                        z-index: 1;
+                    }
+                }
+            }
+
+            .fact-item .three {
+                width: 355px;
+                height: 487px;
             }
 
             .fact-item:nth-child(2) {
@@ -103,6 +183,21 @@
 
                     .circle-two {
                         background: #9C7CF1;
+                    }
+                }
+
+                .fact-item__circle.three {
+
+                    .circle-one {
+                        background: #9C7CF1;
+                    }
+
+                    .circle-two {
+                        background: #B1D2E0;
+                    }
+
+                    .circle-three  {
+                        background: #FFD771;
                     }
                 }
             }
@@ -118,6 +213,21 @@
                         background: #FFD771;
                     }
                 }
+
+                .fact-item__circle.three {
+
+                    .circle-one {
+                        background: #9C7CF1;
+                    }
+
+                    .circle-two {
+                        background: #FFD771;
+                    }
+
+                    .circle-three  {
+                        background: #FFBBD5;
+                    }
+                }
             }
 
             .fact-item:nth-child(4) {
@@ -129,6 +239,21 @@
 
                     .circle-two {
                         background: #9C7CF1;
+                    }
+                }
+
+                .fact-item__circle.three {
+
+                    .circle-one {
+                        background: #FFBBD5;
+                    }
+
+                    .circle-two {
+                        background: #B1D2E0;
+                    }
+
+                    .circle-three  {
+                        background: #FFD771;
                     }
                 }
             }

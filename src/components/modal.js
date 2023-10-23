@@ -35,10 +35,13 @@ const Modal = ({ onClickClose, showThankForm }) => {
         <div className="modal__content" ref={refInside}>
           <div className="form">
             <div className="form__block">
-              <h2 className="form_block_title title_62">Get in touch</h2>
+              <h2 className="form_block_title title_62">Want to talk about your project?</h2>
               <div className="form_block_text">
-                <p>Write to us, Yuri, Kanu or Vlada will contact you</p>
-                <div className="form_block_gif" itemtype="https://schema.org/ImageObject" itemscope="">
+                <div className="text_info">
+                  <p>Fill out the form</p>
+                  <p>Yuri, Kanu or Vlada will get back to you soon</p>
+                </div>
+                <div className="form_block_gif" itemtype="https://schema.org/ImageObject" itemscope>
                   <div className="circle-video">
                     <video src={Uriy} type="video/mp4" id="circle" autoPlay muted loop>
                     </video>

@@ -15,40 +15,39 @@ const ProjectsProcess = ({ siteTitle }) => {
     <div className="container">
       <div className="projects_process margin_bottom_240">
         <h2 className="projects_process__title title_62">
-          Process of projects
+          What is our development process?
         </h2>
         <div className="projects_process__subtitle font_18">
-          We divide development into stages according to the end result. We can
-          run them in parallel to help speed up the launch of the product.
+          We understand that different companies have different requirements depending on the business specifics, internal resources and deadlines. However, these are the main steps of digital product creation provided by our IT development company.
         </div>
         <div className="projects_process__list">
-          <div className="projects_process_list_item padding_50">
+          <div className="projects_process_list_item">
             <p>analytics</p>
             <span className="smallpuzzle"></span>
-            <div className="projects_process_list_item padding_167">
-              <p>graphics</p>
-              <span className="pen"></span>
-              <div className="projects_process_list_item padding_185">
+              <div className="projects_process_list_item">
                 <p>design</p>
                 <span className="dye"></span>
-                <div className="projects_process_list_item padding_161">
+                <div className="projects_process_list_item">
                   <p>front-end</p>
                   <span className="front"></span>
-                  <div className="projects_process_list_item padding_161">
+                  <div className="projects_process_list_item">
                     <p>back-end</p>
                     <span className="back"></span>
-                    <div className="projects_process_list_item padding_185">
+                    <div className="projects_process_list_item">
                       <p>testing</p>
                       <span className="testing"></span>
-                      <div className="projects_process_list_item padding_184">
+                      <div className="projects_process_list_item">
                         <p>launch</p>
                         <span className="smallstar"></span>
+                         <div className="projects_process_list_item">
+                          <p>support</p>
+                          <span className="support"></span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>

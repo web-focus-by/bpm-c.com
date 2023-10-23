@@ -69,10 +69,12 @@ const Blog = ({ titlePage }) => {
     }, [])
 
     return results.map((val, i) => {
+      const tagVal = val.replace('-', ' ');
+      console.log(val)
       if (i < 2) {
         return (
           <li key={i} className="hash_list_block">
-            <Link to={"/tag/" + val + "/"}>{val}</Link>
+            <Link style={{textTransform: 'capitalize'}} to={"/tag/" + val + "/"}>{tagVal}</Link>
           </li>
         )
       }

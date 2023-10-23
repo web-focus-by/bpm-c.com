@@ -122,7 +122,6 @@
         background-position: 110px 165px;
         &__block {
           color: #1a1b1f;
-          width: 150%;
           .contact_form_block_buttons_title {
             width: 100%;
             font-family: "Acrom", sans-serif;
@@ -205,7 +204,7 @@
                   margin-bottom: 44px;
                 }
 
-                input {
+                input, textarea  {
                   color: #1a1b1f;
                   font-weight: 500;
                   line-height: 100%;
@@ -436,7 +435,7 @@
             margin-top: 25px;
             margin-bottom: 25px;
 
-            input {
+            input, textarea {
               color: #fff;
               font-weight: 500;
               line-height: 100%;
@@ -2488,7 +2487,7 @@
                   margin-bottom: 44px;
                 }
 
-                input {
+                input, textarea {
                   color: #1a1b1f;
                   font-weight: 500;
                   line-height: 100%;

@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useRef } from "react"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import "../components/styles/main.scss"
 import "../components/styles/icons.scss"
@@ -36,13 +37,12 @@ const ThanksModal = ({ onClickClose, backPageModal }) => {
           <div className="form">
             <div className="form__block">
               <h2 className="form_block_title title_62">
-                Thank you for the request!
+                Thank you for your trust!
               </h2>
               <div className="form_block_text">
-                <p>
-                  <i>Write to us,</i> Yuri, Kanu or Vlada will contact you{" "}
-                  <b>as soon as possible</b>
-                </p>
+                <div className="text_info">
+                  <p>We'll get back to you shortly</p>
+                </div>
                 <div className="form_block_gif" itemtype="https://schema.org/ImageObject" itemscope="">
                   <div className="circle-video">
                     <video src={Uriy} type="video/mp4" id="circle" autoPlay muted loop>
@@ -61,9 +61,12 @@ const ThanksModal = ({ onClickClose, backPageModal }) => {
               <div className="form_block_wrapper">
                 <form id="search-form" action="#" method="POST">
                   <div className="form_block_send">
-                    <button className="button_black" onClick={backPageModal}>
-                      Back to page
-                    </button>
+                    <p>In the meantime, you can take a look at our <Link to="/portfolio/">portfolio</Link> or browse through our latest <Link to="/blog/">blog post</Link></p>
+                    <div>
+                      <button className="button_black" type="submit">
+                        Send<span className="arrow_white"></span>
+                      </button>
+                    </div>
                   </div>
                 </form>
               </div>
