@@ -675,6 +675,7 @@
       }
 
       .prof_path_history {
+        overflow: hidden;
         .prof_path_line {
           display: flex;
           gap: 0;
@@ -686,7 +687,7 @@
           }
 
           .descr {
-            width: 243px;
+            width: 219px;
             font-size: 15px;
           }
         }
@@ -700,6 +701,7 @@
     }
 
     .prof_path__images {
+      overflow: hidden;
       margin-left: 0px;
       .images_table {
         width: 343px;
@@ -863,17 +865,11 @@
       }
 
     .yellow_circle {
-      width: 129px;
-      height: 129px;
-      top: 7876px;
-      left: 549px;
+      display: none;
     }
 
     .peach_circle {
-      width: 129px;
-      height: 129px;
-      top: 7876px;
-      left: 529px;
+      display: none;
     }
   }
 
@@ -1184,7 +1180,7 @@
     font-weight: 500;
     font-size: 46px;
     line-height: 105%;
-    width: 100%;
+    width: 90%;
   }
 
   .reviews {

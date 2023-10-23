@@ -29,7 +29,66 @@ const HeroLine = ({}) => {
                 <div className="power">
                     <span className="power-icon"></span>
                 </div>
-
+                <p>BPM CLOUD</p>
+                <p>BPM CLOUD</p>
+                <div className="clapp">
+                    <span className="clapp-icon"></span>
+                </div>
+                <p>BPM CLOUD</p>
+                <p>BPM CLOUD</p>
+                <div className="power">
+                    <span className="power-icon"></span>
+                </div>
+                <p>BPM CLOUD</p>
+                <p>BPM CLOUD</p>
+                <div className="clapp">
+                    <span className="clapp-icon"></span>
+                </div>
+                <p>BPM CLOUD</p>
+                <p>BPM CLOUD</p>
+                <div className="power">
+                    <span className="power-icon"></span>
+                </div>
+                <p>BPM CLOUD</p>
+                <p>BPM CLOUD</p>
+                <div className="clapp">
+                    <span className="clapp-icon"></span>
+                </div>
+                <p>BPM CLOUD</p>
+                <p>BPM CLOUD</p>
+                <div className="power">
+                    <span className="power-icon"></span>
+                </div>
+                <p>BPM CLOUD</p>
+                <p>BPM CLOUD</p>
+                <div className="clapp">
+                    <span className="clapp-icon"></span>
+                </div>
+                <p>BPM CLOUD</p>
+                <p>BPM CLOUD</p>
+                <div className="power">
+                    <span className="power-icon"></span>
+                </div>
+                <p>BPM CLOUD</p>
+                <p>BPM CLOUD</p>
+                <div className="clapp">
+                    <span className="clapp-icon"></span>
+                </div>
+                <p>BPM CLOUD</p>
+                <p>BPM CLOUD</p>
+                <div className="power">
+                    <span className="power-icon"></span>
+                </div>
+                <p>BPM CLOUD</p>
+                <p>BPM CLOUD</p>
+                <div className="clapp">
+                    <span className="clapp-icon"></span>
+                </div>
+                <p>BPM CLOUD</p>
+                <p>BPM CLOUD</p>
+                <div className="power">
+                    <span className="power-icon"></span>
+                </div>
             </div>
         </marquee>
     </div>
