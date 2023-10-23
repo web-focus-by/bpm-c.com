@@ -1,5 +1,9 @@
 import * as React from "react"
 import PropTypes from "prop-types"
+import Modal from "../modal"
+import ThanksModal from "../thanks_modal"
+import { useState, useRef } from "react"
+
 import "../../components/styles/main.scss"
 import "../../components/styles/icons.scss"
 import "../../components/styles/modules.scss"
@@ -14,6 +18,24 @@ import "../../components/styles/media_768.scss"
 import "../../components/styles/media_375.scss"
 
 const WorkTogether = ({}) => {
+  const [isShowThankModal, setIsShowThankModal] = useState(false)
+  const [isShowModal, setIsShowModal] = useState(true)
+  const [isOpen, setModalActive] = useState(false)
+  const toggleModalActive = () => {
+    setModalActive(!isOpen)
+  }
+
+  const showThankFormModal = () => {
+    setIsShowModal(false)
+    setIsShowThankModal(true)
+  }
+
+  const backPageModal = () => {
+    setIsShowModal(true)
+    setIsShowThankModal(false)
+    setModalActive(true)
+  }
+
   return (
     <div className="container">
       <div className="leaders">
@@ -38,9 +60,21 @@ const WorkTogether = ({}) => {
             </div>
           </div>
           <div className="leaders_choice_tagline__butn">
-            <button className="button_white">
+            <button className="button_white" onClick={(e) => toggleModalActive()}>
               Get in touch<span className="arrow_black"></span>
             </button>
+            {isOpen && isShowModal ? (
+            <Modal
+              onClickClose={toggleModalActive}
+              showThankForm={showThankFormModal}
+            ></Modal>
+            ) : null}
+            {isShowThankModal ? (
+              <ThanksModal
+                onClickClose={toggleModalActive}
+                backPageModal={backPageModal}
+              ></ThanksModal>
+            ) : null}
           </div>
           <div className="footer_circle_yellow"></div>
           <div className="footer_circle_pink"></div>

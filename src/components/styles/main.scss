@@ -798,8 +798,7 @@ body {
       .portfolio_products_block_pic {
         &__content {
           width: 100%;
-          height: clamp(330px, 24vw, 460px);
-          background-size: cover;
+          height: 390px;
           background-repeat: no-repeat;
           border-radius: 20px;
           margin-bottom: 0;

@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState, useRef } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -8,8 +9,8 @@ import HeroFacts from "../components/heroFacts/heroFacts.js"
 import Portfolio from "../components/portfolio"
 import HeroAccordion from "../components/heroAccord/heroAccord"
 import HeroValues from "../components/heroValues/heroValues"
-import Form from "../components/form"
-import ThanksForm from "../components/thanks_form"
+import Modal from "../components/modal"
+import ThanksModal from "../components/thanks_modal"
 import ServicesIndex from "../components/servicesIndex"
 import ServicesItem from "../components/servicesItem"
 import Technologies from "../components/technologies"
@@ -17,13 +18,8 @@ import ProjectsProcess from "../components/projects_process"
 import Blog from "../components/blog"
 import Reviews from "../components/reviews"
 import WorkTogether from "../components/workTogether/workTogether"
-import ThanksModal from "../components/thanks_modal"
 
 const IndexPage = ({ location }) => {
-  const [isShowThankModal, setIsShowThankModal] = React.useState(false)
-  // const [isShowModal, setIsShowModal] = React.useState(true)
-  const [isShowThankForm, setIsShowThankForm] = React.useState(false)
-  const [isShowForm, setIsShowForm] = React.useState(true)
   const postsAndTags = useStaticQuery(graphql`
     query GetPostQuery {
       allWpPost(
@@ -153,32 +149,13 @@ const buisChoose = [
     }
 ]
 
-  const backPageModal = () => {
-    setIsShowThankForm(false)
-  }
-
-  const backPage = () => {
-    setIsShowThankModal(false)
-    setIsShowForm(true)
-  }
-
-  const showThankForm = () => {
-    setIsShowThankForm(true)
-    setIsShowForm(false)
-  }
-
   return (
     <>
         <Layout>
           <Seo title="Index" />
           <Hero location={location}></Hero>
           <ITCompany></ITCompany>
-          {isShowThankModal ? (
-            <ThanksModal backPage={backPageModal}></ThanksModal>
-          ) : null}
           <Portfolio posts={allPosts}></Portfolio>
-          {isShowForm ? <Form showThankForm={showThankForm}></Form> : null}
-        {isShowThankForm ? <ThanksForm backPage={backPage}></ThanksForm> : null}
           <HeroAccordion title="What are the services that we provide?" emoji="service" descr={service} dataContent={serviceAccor}></HeroAccordion>
           <HeroFacts
             title="What are the benefits of our software development services?"
