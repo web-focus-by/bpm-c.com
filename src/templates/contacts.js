@@ -283,12 +283,7 @@ const Contacts = ({ location }) => {
                       </div>
 
                   <div className="contact_form_block_buttons_title">
-                    Services you are interested in:{" "}
-                    <span style={{ fontWeight: "bold" }} itemprop="name">
-                      {interestedItems && interestedItems.length > 0
-                        ? interestedItems.slice(1).join(", ")
-                        : ""}
-                    </span>
+                    Services you are interested in:
                   </div>
                   <div className="contact_form_block_buttons">
                     <button
