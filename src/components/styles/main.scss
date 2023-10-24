@@ -2695,22 +2695,29 @@ body {
       p {
         color: #935CFF;
       }
-    }
 
-    .accordion-arrow {
-      background-color:#935CFF;
-    }
+      .accordion-arrow {
+        background-color:#935CFF;
 
-    .label_icon {
-      display: inline-block;
-      position: relative;
-      z-index: 2;
-      width: 21px;
-      height: 21px;
-      transform: rotate(0deg);
-      background: url(../../images/plus.svg) no-repeat;
-      transition: all .5s ease;
+        .label_icon {
+          display: inline-block;
+          position: relative;
+          z-index: 2;
+          transform: rotate(0deg);
+          background: url(../../images/plus.svg) no-repeat;
+          transition: all .5s ease;
+        }
+      }
     }
+  }
+
+  .label_icon:hover {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    transform: rotate(0deg);
+    background: url(../../images/plus.svg) no-repeat;
+    transition: all .5s ease;
   }
   
   .accordion-header {
