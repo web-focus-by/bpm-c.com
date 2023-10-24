@@ -7,8 +7,6 @@ import Breadcrumbs from "../components/breadcrumbs/breadcrumbs"
 import Seo from "../components/seo"
 import ScriptLDFQA from "../components/ScriptLDFQA"
 
-import { PortfolioLink } from "../components/links"
-
 import "../components/styles/main.scss"
 import "../components/styles/icons.scss"
 import "../components/styles/modules.scss"
@@ -34,7 +32,7 @@ const faqList = [
   },
   {
     q: "What types of industries have you worked with for custom software development?",
-    a: [`We have a diverse" ${PortfolioLink} of custom software development spanning various industries. Our experience includes, but is not limited to:`, "— Finance;",
+    a: [`We have a diverse" portfolio of custom software development spanning various industries. Our experience includes, but is not limited to:`, "— Finance;",
     "— Healthcare;",
     "— E-commerce;",
     "— Manufacturing;",
@@ -59,7 +57,7 @@ const faqList = [
   },
   {
     q: "Do you provide outstaffing services?",
-    a: ["Yes, we offer \<Link to=>\outstaffing services\</Link>\ as part of our comprehensive offerings. Outstaffing allows you to augment your team with our skilled professionals who work remotely as an extension of your workforce. This arrangement provides flexibility in scaling your team as needed, while we handle the recruitment, onboarding, and management of our dedicated resources. You retain control over the tasks and projects they work on, ensuring seamless integration and enhanced productivity."],
+    a: ["Yes, we offer outstaffing services as part of our comprehensive offerings. Outstaffing allows you to augment your team with our skilled professionals who work remotely as an extension of your workforce. This arrangement provides flexibility in scaling your team as needed, while we handle the recruitment, onboarding, and management of our dedicated resources. You retain control over the tasks and projects they work on, ensuring seamless integration and enhanced productivity."],
   },
   {
     q: "How long does it usually take to develop custom software?",
@@ -67,7 +65,7 @@ const faqList = [
   },
   {
     q: "What is the typical process involved in custom software development?",
-    a: ["The typical process of <Link to="/">custom software development</Link> involves the following steps:","— Requirements Gathering and Analysis",
+    a: ["The typical process of custom software development involves the following steps:","— Requirements Gathering and Analysis",
    "— Design",
    "— Development",
    "— Testing",
@@ -130,16 +128,12 @@ const faqList = [
   },
   {
     q: "Do you provide end-user documentation?",
-    a: ["At <Link to=>BPM Cloud</Link>, we ensure comprehensive end-user documentation is available. However, its provision is subject to inclusion in the work contract. This guarantees transparency and aligns with our commitment to meeting your specific project needs."],
+    a: ["At BPM Cloud, we ensure comprehensive end-user documentation is available. However, its provision is subject to inclusion in the work contract. This guarantees transparency and aligns with our commitment to meeting your specific project needs."],
   },
   {
     q: "How do you ensure that the final product meets my expectations?",
     a: ["Ensuring your satisfaction is paramount. We employ a meticulous process that involves continuous communication, regular progress updates, and milestone reviews. Your feedback is integrated throughout development, addressing any concerns promptly. Rigorous testing and quality assurance verify the software's functionality, aligning it with your expectations. Our collaborative approach guarantees the final product meets or exceeds your envisioned outcomes."],
-  },
-  {
-    q: "How do you ensure that the final product meets my expectations?",
-    a: [`${<a></a>}`],
-  },
+  }
 ]
 const Faq = ({location}) => {
   const [openId, setId] = useState(null);
