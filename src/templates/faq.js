@@ -42,7 +42,7 @@ const faqList = [
   },
   {
     q: "What are the advantages of outsourcing your project to our team?",
-    a: ["<Link to=>Software development outsourcing</Link> your project to our team offers numerous advantages:", "— Our skilled professionals bring expertise across various domains, ensuring a fresh perspective and innovative solutions.",
+    a: ["Software development outsourcing your project to our team offers numerous advantages:", "— Our skilled professionals bring expertise across various domains, ensuring a fresh perspective and innovative solutions.",
     "— We provide cost-effectiveness by eliminating the need for in-house infrastructure and staff.",
     "— With a proven track record, we ensure timely delivery, quality assurance, and reduced development time.",
     "— Our collaborative approach promotes clear communication and transparent progress tracking.", "Additionally, outsourcing allows your business to focus on core activities while we handle the technical complexities, resulting in a tailored, efficient, and competitive software solution."],
@@ -97,14 +97,14 @@ const faqList = [
     "— <strong>Security Concerns:</strong> Ensuring software security against cyber threats and data breaches.",
     "— <strong>User Adoption:</strong> Ensuring the software is intuitive and user-friendly for optimal user adoption.",
     "— <strong>Integration Challenges:</strong> Compatibility issues with existing systems during integration.",
-    "— <strong>Resource Availability:</strong> Ensuring skilled developers are available throughout the project.", "Awareness of these challenges enables proactive mitigation and better <Link to=>project management</Link> for successful custom software development."],
+    "— <strong>Resource Availability:</strong> Ensuring skilled developers are available throughout the project.", "Awareness of these challenges enables proactive mitigation and better project management for successful custom software development."],
   },
   {
     q: "What level of involvement will I have during the development process?",
     a: ["Your involvement during the development process can be tailored to your preferences. We value collaboration and transparency, so you can actively participate in:", "— <strong>Requirements Gathering:</strong> Defining project goals and features.",
     "— <strong>Design Phase:</strong> Providing feedback on the software's look and feel.",
     "— <strong>Development:</strong> Reviewing progress, suggesting adjustments.",
-    "— <strong>Testing:</strong> Participating in <Link to=>quality assurance</Link> and bug identification.",
+    "— <strong>Testing:</strong> Participating in quality assurance and bug identification.",
     "— <strong>Feedback Loop:</strong> Regular updates and incorporating your suggestions.", "Your input ensures the final software aligns precisely with your vision and needs. We adapt to your desired level of engagement to create a successful and satisfying partnership."],
   },
   {
