@@ -148,7 +148,7 @@ const buisChoose = [
       content: 'We will not leave you alone, and you may request further help at any moment.',
     }
 ]
-
+console.log("— Custom Software Development;\n — Mobile App Development;")
   return (
     <>
         <Layout>
