@@ -8,7 +8,7 @@ export const AccordionItem = ({ faqItem, onClick, isOpen, num }) => {
       <button className={`accordion-header ${isOpen ? "active" : ""}`} onClick={() => onClick()}>
         <div className="number">{num}</div>
         <p>{faqItem.q}</p>
-        <div className={`accordion-arrow ${isOpen ? "active" : ""}`}><span class={`label-icon ${isOpen ? "active" : ""}`}></span></div>
+        <div className={`accordion-arrow ${isOpen ? "active" : ""}`}><span class={`${isOpen ? "label-icon_white" : "label-icon"}`}></span></div>
       </button>
       <div
         className="accordion-collapse"

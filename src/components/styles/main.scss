@@ -2692,7 +2692,9 @@ body {
 
   .accordion-item:hover {
     .accordion-header {
-      color: #935CFF;
+      p {
+        color: #935CFF;
+      }
     }
 
     .accordion-arrow {
@@ -2700,7 +2702,13 @@ body {
     }
 
     .label_icon {
-      background: url(../../images/plus.png) no-repeat;
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+      width: 21px;
+      height: 21px;
+      transform: rotate(0deg);
+      background: url(../../images/plus.svg) no-repeat;
       transition: all .5s ease;
     }
   }
@@ -2829,10 +2837,24 @@ body {
     width: 30px;
     height: 17px;
     transition: all .5s ease;
+    z-index: -1;
+  }
+
+  .label-icon_white {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    width: 21px;
+    height: 21px;
+    transform: rotate(135deg);
+    background: url(../../images/plus.svg) no-repeat;
+    transition: all .5s ease;
   }
 
   .label-icon {
     display: inline-block;
+    position: relative;
+    z-index: 2;
     width: 21px;
     height: 21px;
     background: url(../../images/plus-vio.svg) no-repeat;
@@ -2841,12 +2863,6 @@ body {
   
   .accordion-arrow.active {
     background-color:#935CFF;
-  }
-
-  .accordion-arrow.active>.label_icon{
-    transform: rotate(135deg);
-    background: url(../../images/plus.png) no-repeat;
-    transition: all .5s ease;
   }
 }
 
