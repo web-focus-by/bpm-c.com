@@ -483,10 +483,16 @@
             margin-top: 25px;
             margin-bottom: 25px;
 
+            .error_message  {
+              color: #e11d48;
+              font-size: 12px;
+            }
+
             input, textarea {
               color: #fff;
               font-weight: 500;
               line-height: 100%;
+              font-size: 16px;
               border: 0;
               outline: none;
               background-color: transparent;
@@ -503,6 +509,7 @@
             .input_invalid {
               border-bottom: 1px solid #e11d48;
               color: #e11d48;
+              font-size: 16px;
             }
             .label_invalid {
               color: #e11d48;
@@ -522,6 +529,7 @@
             span.error_message {
               position: absolute;
               color: #e11d48;
+              font-size: 1px;
             }
           }
 
@@ -1648,6 +1656,7 @@
                   color: #1a1b1f;
                   font-weight: 500;
                   line-height: 100%;
+                  font-size: 16px;
                   border: 0;
                   outline: none;
                   background-color: transparent;
@@ -2401,14 +2410,14 @@
                 margin-bottom: 44px;
 
                 .contact_form_line-wrapper {
-                  width: 688px;
+                  width: 343px;
                 }
 
               }
 
               .contact_form_line-wrapper, .contact_form_line-wrapper--one  {
                 position: relative;
-                width: 688px;
+                width: 343px;
                 &:first-child {
                   margin-bottom: 44px;
                 }
@@ -2417,6 +2426,7 @@
                   color: #1a1b1f;
                   font-weight: 500;
                   line-height: 100%;
+                  font-size: 16px;
                   border: 0;
                   outline: none;
                   background-color: transparent;
@@ -2597,7 +2607,7 @@
       border: none;
   
       p {
-        width: 238px;
+        width: 55%;
         font-family: 'Acrom';
         font-size: 20px;
         font-style: normal;
@@ -2721,11 +2731,11 @@
     }
     
     .accordion-arrow.active {
-      padding: 12px 4px 10px 8px;
+      padding: 10px 9px 13px 2px;
       background-color:#935CFF;
     }
   
-    .label-icon_white{
+    .label-icon_white {
       transform: rotate(135deg);
       background: url(../../images/plus.png) no-repeat;
       background-size: 16px 16px;

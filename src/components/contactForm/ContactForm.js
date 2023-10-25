@@ -75,9 +75,12 @@ const ContactForm = props => {
             }`}
             data-empty={!!isEmpty.name}
           />
-          <label className={`${errors.name ? "label_invalid" : ""}`}>Name</label>
+          <label className={`${errors.name ? "label_invalid" : ""}`}>Name*</label>
           {errors.name && (
-            <span className={"error_message"}>{errors.name?.message}</span>
+            <>
+              <br></br>
+              <span className={"error_message"}>{errors.name?.message}</span>
+            </>
           )}
           </div>
 
@@ -98,9 +101,12 @@ const ContactForm = props => {
             }`}
             data-empty={!!isEmpty.email}
           />
-          <label className={`${errors.email ? "label_invalid" : ""}`}>E-mail</label>
+          <label className={`${errors.email ? "label_invalid" : ""}`}>E-mail*</label>
           {errors.email && (
-            <span className={"error_message"}>{errors.email?.message}</span>
+            <>
+              <br></br>
+              <span className={"error_message"}>{errors.email?.message}</span>
+            </>
           )}
         </div>
       </div>
@@ -108,21 +114,13 @@ const ContactForm = props => {
       <div className="form_line-double">
         <div className="form_line-wrapper">
           <InputMask
-            {...register("telephone", {
-              required: "Please, type correct phone",
-            })}
-            className={`form-phone input-phone form_phone input-yellow ${
-              errors.telephone ? "input_invalid" : ""
-            }`}
+            {...register("telephone")}
+            className="form-phone input-phone form_phone input-yellow"
             id="tel"
-            mask="+\ 999999999999"
+            mask="+\ 999 (99) 999-99-99"
             maskChar=" "
-            data-empty={!!isEmpty.telephone}
           />
-          <label className={`${errors.telephone ? "label_invalid" : ""}`}>Phone</label>
-          {errors.telephone && (
-            <span className={"error_message"}>{errors.telephone?.message}</span>
-          )}
+          <label>Phone</label>
         </div>
 
         <div className="form_line-wrapper">
@@ -141,7 +139,10 @@ const ContactForm = props => {
           />
           <label className={`${errors.company ? "label_invalid" : ""}`}>Company</label>
           {errors.company && (
-            <span className={"error_message"}>{errors.company?.message}</span>
+            <>
+              <br></br>
+              <span className={"error_message"}>{errors.company?.message}</span>
+            </>
           )}
         </div>
       </div>
@@ -160,9 +161,12 @@ const ContactForm = props => {
             }`}
             data-empty={!!isEmpty.message}
         />
-        <label className={`${errors.message ? "label_invalid" : ""}`}>Message</label>
+        <label className={`${errors.message ? "label_invalid" : ""}`}>Message*</label>
           {errors.message && (
-            <span className={"error_message"}>{errors.message?.message}</span>
+            <>
+              <br></br>
+            < span className={"error_message"}>{errors.message?.message}</span>
+            </>
           )}
       </div>
 
@@ -170,7 +174,7 @@ const ContactForm = props => {
           <input type="checkbox" id="agree" name="agree" value="yes" required/>
           <label htmlFor="agree">I agree to the<span>&nbsp;</span><Link to="/">Privacy Policy</Link><span>&nbsp;</span>and<span>&nbsp;</span><Link to="/">Terms of Use</Link></label>
           <div>
-            <button className="button_black" type="submit">
+            <button className={`button_black ${errors.message || errors.company || errors.email || errors.name ? 'btn_error' : ''}`} type="submit">
               Send<span className="arrow_white"></span>
             </button>
           </div>

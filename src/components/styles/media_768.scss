@@ -46,6 +46,7 @@
   }
 
   .contacts {
+    max-width: 708px;
     margin-top: 69px;
     display: flex;
     flex-direction: column !important;
@@ -112,13 +113,14 @@
       }
     }
     &__contacts_form {
-      width: 100% !important;
+      max-width: 688px;
+      width: 100%;
       .contact_form {
         width: 100%;
         border-radius: 40px;
         padding: 0;
         display: grid;
-        grid-template-columns: 1.03fr 0.97fr;
+        grid-template-columns: 1fr;
         background-position: 110px 165px;
         &__block {
           color: #1a1b1f;
@@ -192,14 +194,14 @@
                 margin-bottom: 44px;
 
                 .contact_form_line-wrapper {
-                  width: 688px;
+                  width: 120%;
                 }
 
               }
 
               .contact_form_line-wrapper, .contact_form_line-wrapper--one  {
                 position: relative;
-                width: 688px;
+                width: 120%;
                 &:first-child {
                   margin-bottom: 44px;
                 }
@@ -208,11 +210,12 @@
                   color: #1a1b1f;
                   font-weight: 500;
                   line-height: 100%;
+                  font-size: 18px;
                   border: 0;
                   outline: none;
                   background-color: transparent;
                   border-bottom: 1px solid #1a1b1f;
-                  width: 100%;
+                  width: 90%;
                   padding-bottom: 10px;
                 }
                 input:focus ~ label,
@@ -413,7 +416,7 @@
             gap: 0;
 
             .form_line-wrapper {
-              width: 608px;
+              width: 120%;
             }
 
           }
@@ -424,26 +427,32 @@
             gap: 0;
 
             .form_line-wrapper {
-              width: 608px;
+              width: 120%;
             }
 
           }
 
           .form_line-wrapper, .form_line-wrapper--one {
             position: relative;
-            width: 608px;
+            width: 120%;
             margin-top: 25px;
             margin-bottom: 25px;
+
+            .error_message  {
+              color: #e11d48;
+              font-size: 14px;
+            }
 
             input, textarea {
               color: #fff;
               font-weight: 500;
               line-height: 100%;
+              font-size: 18px;
               border: 0;
               outline: none;
               background-color: transparent;
               border-bottom: 1px solid #fff;
-              width: 100%;
+              width: 90%;
               padding-top: 46px;
             }
 
@@ -455,6 +464,7 @@
             .input_invalid {
               border-bottom: 1px solid #e11d48;
               color: #e11d48;
+              font-size: 16px;
             }
             .label_invalid {
               color: #e11d48;
@@ -474,6 +484,7 @@
             span.error_message {
               position: absolute;
               color: #e11d48;
+              font-size: 14px;
             }
           }
 
@@ -2328,7 +2339,8 @@
       }
     }
 
-      .contacts {
+    .contacts {
+    max-width: 708px;
     margin-top: 69px;
     display: flex;
     flex-direction: column !important;
@@ -2395,13 +2407,14 @@
       }
     }
     &__contacts_form {
-      width: 100% !important;
+      max-width: 688px;
+      width: 100%;
       .contact_form {
         width: 100%;
         border-radius: 40px;
         padding: 0;
         display: grid;
-        grid-template-columns: 1.03fr 0.97fr;
+        grid-template-columns: 1fr;
         background-position: 110px 165px;
         &__block {
           color: #1a1b1f;
@@ -2475,14 +2488,14 @@
                 margin-bottom: 44px;
 
                 .contact_form_line-wrapper {
-                  width: 688px;
+                  width: 120%;
                 }
 
               }
 
               .contact_form_line-wrapper, .contact_form_line-wrapper--one  {
                 position: relative;
-                width: 688px;
+                width: 120%;
                 &:first-child {
                   margin-bottom: 44px;
                 }
@@ -2491,11 +2504,12 @@
                   color: #1a1b1f;
                   font-weight: 500;
                   line-height: 100%;
+                  font-size: 18px;
                   border: 0;
                   outline: none;
                   background-color: transparent;
                   border-bottom: 1px solid #1a1b1f;
-                  width: 100%;
+                  width: 90%;
                   padding-bottom: 10px;
                 }
                 input:focus ~ label,
@@ -3334,7 +3348,7 @@
       border: none;
   
       p {
-        width: 417px;
+        width: 65%;
         font-family: 'Acrom';
         font-size: 20px;
         font-style: normal;
@@ -3458,7 +3472,7 @@
     }
     
     .accordion-arrow.active {
-      padding: 12px 4px 10px 8px;
+      padding: 10px 9px 13px 2px;
       background-color:#935CFF;
     }
   

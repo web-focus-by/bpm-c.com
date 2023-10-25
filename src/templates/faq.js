@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState, useRef } from "react"
+import { useState } from "react"
 import { Link, graphql } from "gatsby"
 import { AccordionItem } from "../components/faqItem"
 import Layout from "../components/layout"
@@ -137,13 +137,14 @@ const faqList = [
 ]
 const Faq = ({location}) => {
   const [openId, setId] = useState(null);
-  
+  const [hoverId, setHover] = useState(null);
+
   return (
     <>
     <Layout>
         <div className="container">
           <div className="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-            <Breadcrumbs breadcrumbs={location} title="FAQ" />
+            <Breadcrumbs breadcrumbs={location} title="Frequently Asked QuestionsAQ" />
           </div>
           <div className="hero">
             <h1 className="hero__title title_62">
@@ -158,9 +159,11 @@ const Faq = ({location}) => {
                   return (
                     <AccordionItem
                       onClick={() => (id === openId ? setId(null) : setId(id))}
+                      onMouseOver={(e) => setHover(id)} 
+                      onMouseLeave={(e) => setHover(null)}
                       faqItem={faqItem}
                       isOpen={id === openId}
-                      key={id}
+                      isHover={id === hoverId}
                       num={`${id < 9 ? '0' : ''}${id + 1}.`}
                     />
                   );

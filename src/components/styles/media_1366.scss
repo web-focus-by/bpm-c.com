@@ -261,10 +261,16 @@
             position: relative;
             width: 650px;
 
+            .error_message  {
+              color: #e11d48;
+              font-size: 16px;
+            }
+
             input, textarea {
               color: #fff;
               font-weight: 500;
               line-height: 100%;
+              font-size: 16px;
               border: 0;
               outline: none;
               background-color: transparent;
@@ -300,6 +306,7 @@
             span.error_message {
               position: absolute;
               color: #e11d48;
+              font-size: 16px;
             }
           }
 
@@ -963,6 +970,7 @@
   }
 
   .contacts {
+    width: 90%;
     margin-top: 43px;
     display: flex;
     justify-content: space-between;
@@ -1054,7 +1062,7 @@
               font-size: 12px;
               line-height: 90%;
               margin: 0.4rem 14px 0.4rem 0;
-              padding: 5px 9px;
+              padding: 7px 16px 10px;
             }
           }
           .contact_form_block_title {
@@ -1119,7 +1127,7 @@
                   color: #1a1b1f;
                   font-weight: 500;
                   line-height: 100%;
-                  font-size: 12px;
+                  font-size: 16px;
                   border: 0;
                   outline: none;
                   background-color: transparent;
@@ -2012,7 +2020,7 @@
     border: none;
 
     p {
-      width: 875px;
+      width: 65%;
       font-family: 'Acrom';
       font-size: 24px;
       font-style: normal;
@@ -2151,6 +2159,7 @@
 
 @media screen and (max-width: 1600px) {
   .contacts {
+    width: 90%;
     margin-top: 43px;
     display: flex;
     justify-content: space-between;
@@ -2242,7 +2251,7 @@
               font-size: 12px;
               line-height: 90%;
               margin: 0.4rem 14px 0.4rem 0;
-              padding: 5px 9px;
+              padding: 7px 16px 10px;
             }
           }
           .contact_form_block_title {
@@ -2307,7 +2316,7 @@
                   color: #1a1b1f;
                   font-weight: 500;
                   line-height: 100%;
-                  font-size: 12px;
+                  font-size: 16px;
                   border: 0;
                   outline: none;
                   background-color: transparent;
