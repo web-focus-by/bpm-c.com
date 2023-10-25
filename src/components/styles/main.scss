@@ -950,7 +950,6 @@ body {
 }
 
 .contacts {
-  width: 90%;
   margin-top: 43px;
   display: flex;
   justify-content: space-between;
@@ -2697,20 +2696,11 @@ body {
 
       .accordion-arrow {
         background-color:#935CFF;
-
-        .label_icon {
-          display: inline-block;
-          position: relative;
-          z-index: 2;
-          transform: rotate(0deg);
-          background: url(../../images/plus.svg) no-repeat;
-          transition: all .5s ease;
-        }
       }
     }
   }
 
-  .label_icon:hover {
+  .label-icon.label_icon_hover {
     display: inline-block;
     position: relative;
     z-index: 2;
@@ -2728,7 +2718,7 @@ body {
     border: none;
 
     p {
-      width: 875px;
+      width: 65%;
       font-family: 'Acrom';
       font-size: 24px;
       font-style: normal;
@@ -2853,6 +2843,17 @@ body {
     width: 21px;
     height: 21px;
     transform: rotate(135deg);
+    background: url(../../images/plus.svg) no-repeat;
+    transition: all .5s ease;
+  }
+
+  .label-icon_hover {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    width: 21px;
+    height: 21px;
+    transform: rotate(0deg);
     background: url(../../images/plus.svg) no-repeat;
     transition: all .5s ease;
   }
