@@ -191,9 +191,12 @@ const Contacts = ({ location }) => {
                             }`}
                             data-empty={!!isEmpty.name}
                           />
-                          <label className={`${errors.name ? "label_invalid" : ""}`}>Name</label>
+                          <label className={`${errors.name ? "label_invalid" : ""}`}>Name*</label>
                           {errors.name && (
-                            <span className={"error_message"}>{errors.name?.message}</span>
+                            <>
+                                <br></br>
+                                <span className={"error_message"}>{errors.name?.message}</span>
+                              </>
                           )}
                           </div>
 
@@ -214,9 +217,12 @@ const Contacts = ({ location }) => {
                             }`}
                             data-empty={!!isEmpty.email}
                           />
-                          <label className={`${errors.email ? "label_invalid" : ""}`}>E-mail</label>
+                          <label className={`${errors.email ? "label_invalid" : ""}`}>E-mail*</label>
                           {errors.email && (
-                            <span className={"error_message"}>{errors.email?.message}</span>
+                            <>
+                              <br></br>
+                              <span className={"error_message"}>{errors.email?.message}</span>
+                            </>
                           )}
                         </div>
                       </div>
@@ -224,20 +230,13 @@ const Contacts = ({ location }) => {
                       <div className="contact_form_line-double">
                         <div className="contact_form_line-wrapper">
                           <InputMask
-                            {...register("telephone", {
-                              required: "Please, type correct phone",
-                            })}
-                            className={`contact_form-phone input-phone contact_form_phone input-yellow ${
-                              errors.telephone ? "input_invalid" : ""
-                            }`}
+                            {...register("telephone")}
+                            className="contact_form-phone input-phone contact_form_phone input-yellow"
                             id="tel"
                             mask="+\ 999 (99) 999-99-99"
                             maskChar=" "
                           />
-                          <label className={`${errors.telephone ? "label_invalid" : ""}`}>Phone</label>
-                          {errors.telephone && (
-                            <span className={"error_message"}>{errors.telephone?.message}</span>
-                          )}
+                          <label>Phone</label>
                         </div>
 
                         <div className="contact_form_line-wrapper">
@@ -256,7 +255,10 @@ const Contacts = ({ location }) => {
                           />
                           <label className={`${errors.company ? "label_invalid" : ""}`}>Company</label>
                           {errors.company && (
-                            <span className={"error_message"}>{errors.company?.message}</span>
+                            <>
+                              <br></br>
+                              <span className={"error_message"}>{errors.company?.message}</span>
+                            </>
                           )}
                         </div>
                       </div>
@@ -275,9 +277,12 @@ const Contacts = ({ location }) => {
                             }`}
                             data-empty={!!isEmpty.message}
                         />
-                        <label className={`${errors.message ? "label_invalid" : ""}`}>Message</label>
+                        <label className={`${errors.message ? "label_invalid" : ""}`}>Message*</label>
                           {errors.message && (
-                            <span className={"error_message"}>{errors.message?.message}</span>
+                            <>
+                              <br></br>
+                              <span className={"error_message"}>{errors.message?.message}</span>
+                            </>
                           )}
                       </div>
 
@@ -365,29 +370,6 @@ const Contacts = ({ location }) => {
                     >
                       <span className="plus"></span>Copywriting
                     </button>
-                    {/* {interestedItems && interestedItems.length > 1 ? (
-                      <button
-                        id="clear"
-                        key="clear"
-                        onClick={() => {
-                          clear()
-                        }}
-                        className="button_item_tag"
-                      >
-                        Clear
-                      </button>
-                    ) : (
-                      <button
-                        id="clear"
-                        key="clear"
-                        onClick={() => {
-                          clear()
-                        }}
-                        className="button_item_tag__not_visible"
-                      >
-                        Clear
-                      </button>
-                    )} */}
                   </div>
                       <div className="contact_form_block_send">
                         <input {...register("checkbox", {
@@ -398,7 +380,7 @@ const Contacts = ({ location }) => {
                         {errors.checkbox && (
                             <span className={"error_check"}>{errors.checkbox?.message}</span>
                           )}
-                        <button className="button_white" type="submit">
+                        <button className={`button_white ${errors.message || errors.company || errors.email || errors.name ? 'btn_error' : ''}`} disabled={errors.message || errors.company || errors.email || errors.name ? 'disabled' : ''}type="submit">
                             Send<span className="arrow_black"></span>
                           </button>
                       </div>
@@ -408,18 +390,6 @@ const Contacts = ({ location }) => {
               </div>
             </div>
           </div>
-          {/* <div className="margin_bottom_240">
-            <iframe
-              title="address of office on google map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.544970835492!2d27.596358815992996!3d53.9220613391322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf5d99239d81%3A0x9abeb6f83c6393fb!2z0L_RgC4g0J3QtdC30LDQstC40YHQuNC80L7RgdGC0LggNzcsINCc0LjQvdGB0Lo!5e0!3m2!1sru!2sby!4v1664284593785!5m2!1sru!2sby"
-              width="100%"
-              height="480"
-              style={{ border: 0, borderRadius: 25 }}
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-                        </div> */}
         </div>
       </Layout>
     </>

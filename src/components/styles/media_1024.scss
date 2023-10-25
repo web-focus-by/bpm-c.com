@@ -187,9 +187,10 @@
               -webkit-transition: 0.2s ease all;
             }
 
-            span.error_message {
+            .error_message {
               position: absolute;
               color: #e11d48;
+              font-size: 16px;
             }
           }
 

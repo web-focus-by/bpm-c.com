@@ -210,6 +210,7 @@
                   color: #1a1b1f;
                   font-weight: 500;
                   line-height: 100%;
+                  font-size: 18px;
                   border: 0;
                   outline: none;
                   background-color: transparent;
@@ -437,10 +438,16 @@
             margin-top: 25px;
             margin-bottom: 25px;
 
+            .error_message  {
+              color: #e11d48;
+              font-size: 14px;
+            }
+
             input, textarea {
               color: #fff;
               font-weight: 500;
               line-height: 100%;
+              font-size: 18px;
               border: 0;
               outline: none;
               background-color: transparent;
@@ -457,6 +464,7 @@
             .input_invalid {
               border-bottom: 1px solid #e11d48;
               color: #e11d48;
+              font-size: 16px;
             }
             .label_invalid {
               color: #e11d48;
@@ -476,6 +484,7 @@
             span.error_message {
               position: absolute;
               color: #e11d48;
+              font-size: 14px;
             }
           }
 
@@ -2495,6 +2504,7 @@
                   color: #1a1b1f;
                   font-weight: 500;
                   line-height: 100%;
+                  font-size: 18px;
                   border: 0;
                   outline: none;
                   background-color: transparent;
