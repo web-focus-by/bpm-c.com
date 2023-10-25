@@ -963,6 +963,7 @@
   }
 
   .contacts {
+    width: 90%;
     margin-top: 43px;
     display: flex;
     justify-content: space-between;
@@ -1054,7 +1055,7 @@
               font-size: 12px;
               line-height: 90%;
               margin: 0.4rem 14px 0.4rem 0;
-              padding: 5px 9px;
+              padding: 7px 16px 10px;
             }
           }
           .contact_form_block_title {
@@ -2151,6 +2152,7 @@
 
 @media screen and (max-width: 1600px) {
   .contacts {
+    width: 90%;
     margin-top: 43px;
     display: flex;
     justify-content: space-between;
@@ -2242,7 +2244,7 @@
               font-size: 12px;
               line-height: 90%;
               margin: 0.4rem 14px 0.4rem 0;
-              padding: 5px 9px;
+              padding: 7px 16px 10px;
             }
           }
           .contact_form_block_title {

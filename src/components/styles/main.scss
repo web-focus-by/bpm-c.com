@@ -950,13 +950,13 @@ body {
 }
 
 .contacts {
+  width: 90%;
   margin-top: 43px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2%;
   &__contact {
-    width: 20%;
     margin-top: 42px;
     .contacts_table {
       display: flex;
@@ -1024,7 +1024,6 @@ body {
     }
   }
   &__contacts_form {
-    width: 60%;
     .contact_form {
       border-radius: 40px;
       padding: 20px 0 0 164px;

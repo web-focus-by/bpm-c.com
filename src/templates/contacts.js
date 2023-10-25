@@ -231,9 +231,8 @@ const Contacts = ({ location }) => {
                               errors.telephone ? "input_invalid" : ""
                             }`}
                             id="tel"
-                            mask="+\ 999999999999"
+                            mask="+\ 999 (99) 999-99-99"
                             maskChar=" "
-                            data-empty={!!isEmpty.telephone}
                           />
                           <label className={`${errors.telephone ? "label_invalid" : ""}`}>Phone</label>
                           {errors.telephone && (
@@ -263,7 +262,7 @@ const Contacts = ({ location }) => {
                       </div>
 
                       <div className="contact_form_line-wrapper--one">
-                        <input
+                        <textarea
                           {...register("message", {
                               required: "Please, complete this field",
                             })}
@@ -283,7 +282,7 @@ const Contacts = ({ location }) => {
                       </div>
 
                   <div className="contact_form_block_buttons_title">
-                    Services you are interested in:
+                    Services you are interested in
                   </div>
                   <div className="contact_form_block_buttons">
                     <button
