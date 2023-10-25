@@ -956,6 +956,7 @@ body {
   flex-wrap: wrap;
   gap: 2%;
   &__contact {
+    width: 30%;
     margin-top: 42px;
     .contacts_table {
       display: flex;
@@ -1023,6 +1024,7 @@ body {
     }
   }
   &__contacts_form {
+    width: 60%;
     .contact_form {
       border-radius: 40px;
       padding: 20px 0 0 164px;
