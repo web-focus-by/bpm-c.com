@@ -151,6 +151,12 @@
             position: relative;
             width: 650px;
 
+            .error_message  {
+              color: #e11d48;
+              top: -22px;
+              font-size: 12px;
+            }
+
             input, textarea {
               color: #fff;
               font-weight: 500;
@@ -187,10 +193,10 @@
               -webkit-transition: 0.2s ease all;
             }
 
-            .error_message {
+            span.error_message {
               position: absolute;
               color: #e11d48;
-              font-size: 16px;
+              font-size: 12px;
             }
           }
 
@@ -1159,6 +1165,11 @@
         }
       }
     }
+  }
+
+  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper .error_message, .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper--one .error_message {
+    font-size: 12px;
+    top: -26px;
   }
   .swiper {
     .swiper-slide {
