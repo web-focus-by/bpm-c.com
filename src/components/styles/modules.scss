@@ -17,6 +17,21 @@
   }
 }
 
+.button_white.btn_error:hover {
+  border: 1px solid rgba(26, 27, 31, 0.5);
+  color: #1010104D;
+  background: transparent;
+  -webkit-transition: all 0.3s linear;
+  cursor: default;
+
+  &:hover {
+    .arrow_black {
+      background: url(../../images/arrow_black.svg) no-repeat;
+      opacity: 50%;
+    }
+  }
+}
+
 .button_item_tag {
   border: 1px solid #1a1b1f;
   padding: 10px 20px;
@@ -63,6 +78,21 @@
     cursor: pointer;
     .arrow_white {
       background: url(../../images/arrow_black.svg) no-repeat;
+    }
+  }
+}
+
+.button_black.btn_error:hover {
+  opacity: 50%;
+  color: #fff;
+  background: transparent;
+  -webkit-transition: all 0.3s linear;
+  cursor: default;
+
+  &:hover {
+    .arrow_white {
+      background: url(../../images/arrow_white.svg) no-repeat;
+      opacity: 50%;
     }
   }
 }

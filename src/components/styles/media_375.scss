@@ -486,11 +486,13 @@
             .error_message  {
               color: #e11d48;
               font-size: 12px;
+              top: -4px;
             }
 
             input, textarea {
               color: #fff;
-              font-weight: 500;
+              font-style: normal;
+              font-weight: 400;
               line-height: 100%;
               font-size: 16px;
               border: 0;
@@ -2424,7 +2426,8 @@
 
                 input, textarea  {
                   color: #1a1b1f;
-                  font-weight: 500;
+                  font-style: normal;
+                  font-weight: 400;
                   line-height: 100%;
                   font-size: 16px;
                   border: 0;
@@ -2493,6 +2496,10 @@
       }
     }
   }
+  }
+
+  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper .error_message, .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper--one .error_message {
+    top: -19px;
   }
 
   .about_list {

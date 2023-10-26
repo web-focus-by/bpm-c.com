@@ -441,6 +441,7 @@
             .error_message  {
               color: #e11d48;
               font-size: 14px;
+              top: 4px;
             }
 
             input, textarea {
@@ -2491,6 +2492,10 @@
                   width: 120%;
                 }
 
+                .contact_form_line-wrapper .error_message {
+                  top: 4px;
+                }
+
               }
 
               .contact_form_line-wrapper, .contact_form_line-wrapper--one  {
@@ -2527,6 +2532,10 @@
                   -moz-transition: 0.2s ease all;
                   -webkit-transition: 0.2s ease all;
                 }
+              }
+
+              .contact_form_line-wrapper .error_message {
+                top: 4px;
               }
 
               .contact_form_line-wrapper--one {
@@ -2571,6 +2580,10 @@
       }
     }
   }
+  }
+
+  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper .error_message, .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper--one .error_message {
+    top: 4px;
   }
 
   .footer {
