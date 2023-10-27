@@ -24,6 +24,11 @@ const ProjectsProcess = ({ siteTitle }) => {
           <div className="projects_process_list_item">
             <p>analytics</p>
             <span className="smallpuzzle"></span>
+            <div className="projects_process_list_item__hover-elem">
+              <span className="ober"></span>
+              <p>- Understanding client needs, goals, and functionalities.</p>
+              <p>- Analyzing industry trends, competition, and user expectations.</p>
+            </div>
               <div className="projects_process_list_item">
                 <p>design</p>
                 <span className="dye"></span>

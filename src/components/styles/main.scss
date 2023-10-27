@@ -1632,14 +1632,14 @@ body {
       &:hover {
         .services_list_item {
           transform: translateY(-18px);
-          background: url(../../images/test.png) no-repeat;
+          // background: url(../../images/test.png) no-repeat;
           background-size: cover;
           background-position-x: 100%;
           // background-position: 70% 80px;
 
-          span {
-            transform: translateY(-50px);
-          }
+          // span {
+          //   transform: translateY(-50px);
+          // }
         }
       }
     }
@@ -1720,6 +1720,25 @@ body {
       top: 100%;
           left: 105%;
       position: absolute;
+    }
+
+    .projects_process_list_item__hover-elem {
+      background-color:#935CFF;
+      border-radius: 25px;
+      padding: 30px 20px;
+      position: absolute;
+      top: 78px;
+      width: 288px;
+      z-index: 2;
+
+      p {
+        color:#fff;
+        font-family: 'Acrom';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+      }
     }
   }
 }
