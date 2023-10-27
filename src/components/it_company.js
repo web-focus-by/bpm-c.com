@@ -34,20 +34,25 @@ const values = [
   },
 ]
 
-const anim = (idShow, wrap) => {
-  // const parentElem = document.getElementById(id);
+const anim = (elem, idShow, wrap) => {
+  const parentElem = document.getElementById(elem);;
   const showElem = document.getElementById(idShow);
-  // const wrapper = document.getElementById(wrap);
+  const wrapper = document.getElementById(wrap);
 
-  showElem.classList.add('show');
-  // wrapper.classList.add('show');
-  // parentElem.classList.remove('type');
+  wrapper.classList.add('vis');
 
-  // setTimeout(function () {
-  //   showElem.classList.remove('show');
-  //   wrapper.classList.remove('show');
-  //   parentElem.classList.add('type');
-  // }, 5000);
+  setTimeout(() => {
+    showElem.classList.add('show');
+    setTimeout(() => {
+      parentElem.classList.remove('type');
+    }, 4500)
+  }, 400);
+
+  setTimeout(function () {
+    showElem.classList.remove('show');
+    wrapper.classList.remove('vis');
+    parentElem.classList.add('type');
+  }, 5000);
 }
 
 const ITCompany = () => (
@@ -76,7 +81,8 @@ const ITCompany = () => (
               <img src={about} alt="about_bpm" />
               <div className="laptop_circle"><span className="laptop"></span></div>
             </div>
-             <div className="value_item it_company-item people" id="people">
+            <div className="value_item it_company-item people" id="people">
+              <span className="gif" id="gif"></span>
               <div className="values_kanu">
                 <div className="circle-video">
                   <video src={Kanu} type="video/mp4" id="circle" autoPlay muted loop>
@@ -93,7 +99,7 @@ const ITCompany = () => (
                   <p style={{marginLeft: 30}}><span className="white">&lt;</span><span className="red">/div</span><span className="white">&gt;</span></p>
                   <p style={{marginLeft: 15}}><span className="vio">)</span></p>
                   <p id="code" onAnimationEnd={() => {
-                    anim('vlada');
+                    anim('code', 'vlada', 'gif');
                     console.log('end');
                   }}><span className="yel">{'}'}</span></p>
                 </div>
