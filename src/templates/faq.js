@@ -144,7 +144,7 @@ const Faq = ({location}) => {
     <Layout>
         <div className="container">
           <div className="breacrumbs-list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-            <Breadcrumbs breadcrumbs={location} title="Frequently Asked QuestionsAQ" />
+            <Breadcrumbs breadcrumbs={location} title="Frequently Asked Questions" />
           </div>
           <div className="hero">
             <h1 className="hero__title title_62">

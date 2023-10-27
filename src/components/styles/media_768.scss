@@ -208,7 +208,8 @@
 
                 input, textarea  {
                   color: #1a1b1f;
-                  font-weight: 500;
+                  font-style: normal;
+                  font-weight: 400;
                   line-height: 100%;
                   font-size: 18px;
                   border: 0;
@@ -446,7 +447,8 @@
 
             input, textarea {
               color: #fff;
-              font-weight: 500;
+              font-style: normal;
+              font-weight: 400;
               line-height: 100%;
               font-size: 18px;
               border: 0;
@@ -2507,7 +2509,8 @@
 
                 input, textarea {
                   color: #1a1b1f;
-                  font-weight: 500;
+                  font-style: normal;
+                  font-weight: 400;
                   line-height: 100%;
                   font-size: 18px;
                   border: 0;
@@ -3468,9 +3471,6 @@
       padding: 13px 4px 10px 8px;
       border: 1px solid #935CFF;
       border-radius: 100%;
-      position: absolute;
-      top: -5px;
-      right: 0;
       display: block;
       width: 30px;
       height: 17px;
@@ -3491,6 +3491,13 @@
   
     .label-icon_white {
       transform: rotate(135deg);
+      background: url(../../images/plus.png) no-repeat;
+      background-size: 16px 16px;
+      transition: all .5s ease;
+    }
+
+    .label-icon_hover {
+      transform: rotate(0deg);
       background: url(../../images/plus.png) no-repeat;
       background-size: 16px 16px;
       transition: all .5s ease;

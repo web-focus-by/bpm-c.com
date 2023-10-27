@@ -2721,9 +2721,6 @@
       padding: 13px 4px 10px 8px;
       border: 1px solid #935CFF;
       border-radius: 100%;
-      position: absolute;
-      top: 0;
-      right: 0;
       display: block;
       width: 30px;
       height: 17px;
@@ -2744,6 +2741,13 @@
   
     .label-icon_white {
       transform: rotate(135deg);
+      background: url(../../images/plus.png) no-repeat;
+      background-size: 16px 16px;
+      transition: all .5s ease;
+    }
+
+    .label-icon_hover {
+      transform: rotate(0deg);
       background: url(../../images/plus.png) no-repeat;
       background-size: 16px 16px;
       transition: all .5s ease;
