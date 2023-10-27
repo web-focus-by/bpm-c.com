@@ -1,6 +1,5 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import Marqure from "react-fast-marquee"
 
 import "./heroLine.scss"
 import "../../components/styles/main.scss"

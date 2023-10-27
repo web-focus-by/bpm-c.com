@@ -6,6 +6,7 @@
 
     .black {
         padding: 0;
+        position: relative;
     }
 
     .black__title {
@@ -69,8 +70,8 @@
     .violett_circle {
         display: inline-block;
         position: absolute;
-        top: 5220px;
-        left: 1264px;
+        top: 5%;
+        right: 10%;
         width: 268px;
         height: 268px;
         border-radius: 100%;
@@ -81,7 +82,7 @@
 }
 
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1650px) {
     .container.black {
         background-color: #1A1B1F;
         border-radius: 18px;
@@ -132,8 +133,8 @@
         .violett_circle {
             display: inline-block;
             position: absolute;
-            top: 3900px;
-            left: 938px;
+            top: 0;
+            left: 65%;
             width: 191px;
             height: 191px;
             border-radius: 100%;
@@ -153,6 +154,7 @@
 
         .black {
             padding: 0;
+            position: relative;
         }
 
         .black__title {
@@ -195,8 +197,8 @@
         .violett_circle {
             display: inline-block;
             position: absolute;
-            top: 5188px;
-            left: 478px;
+            top: 0;
+            left: 65%;
             width: 189px;
             height: 189px;
             border-radius: 100%;

@@ -88,7 +88,7 @@ const princip = [
   {
     num: '02',
     title: 'Flexible price',
-    content: 'This is the format when you pay only for the amount of work, according to the hourly/daily/weekly rate or to the amount of resources spent.'
+    content: 'This is the format when you pay only for the amount of work, according to the hourly/daily/ weekly rate or to the amount of resources spent.'
   },
       {
     num: '03',
