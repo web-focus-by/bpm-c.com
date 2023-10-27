@@ -417,7 +417,7 @@
             gap: 0;
 
             .form_line-wrapper {
-              width: 120%;
+              width: 110%;
             }
 
           }
@@ -428,21 +428,21 @@
             gap: 0;
 
             .form_line-wrapper {
-              width: 120%;
+              width: 110%;
             }
 
           }
 
           .form_line-wrapper, .form_line-wrapper--one {
             position: relative;
-            width: 120%;
+            width: 110%;
             margin-top: 25px;
             margin-bottom: 25px;
 
             .error_message  {
               color: #e11d48;
               font-size: 14px;
-              top: 4px;
+              top: 76px;
             }
 
             input, textarea {
@@ -488,6 +488,7 @@
               position: absolute;
               color: #e11d48;
               font-size: 14px;
+              top: 76px;
             }
           }
 
@@ -592,18 +593,19 @@
       margin-top: 30px;
       max-width: 688px;
       border-radius: 25px;
-      padding: 50px 79px;
+      padding: 50px 0;
       background-color: #935CFF;
 
       .quote {
         color: #FFF;
         width: 530px;
         font-size: 24px;
-        margin-left: 0;
+        margin: 0 auto;
       }
 
       .image {
-        margin: 23px 207px 0;
+        width: 87px;
+        margin: 23px auto 0;
 
         img {
           border-radius: 100%;
@@ -612,12 +614,14 @@
       }
 
       .name {
-        margin: 7px 0 0 225px;
+        width: 77px;
+        margin: 7px auto 0;
         font-size: 14px;
       }
 
       .position {
-        margin: 5px 236px 0;
+        width: 31px;
+        margin: 5px auto 0;
         font-size: 14px;
       }
     }
@@ -693,7 +697,7 @@
         border-radius: 100%;
         background-color: #FFD771;
         padding: 28px;
-        top: 3451px;
+        top: 3362px;
         left: 80px;
       }
 
@@ -704,7 +708,7 @@
         border-radius: 100%;
         background-color: #B1D2E0;
         padding: 18px;
-        top: 3989px;
+        top: 3900px;
         left: 414px;
       }
     }
@@ -756,18 +760,20 @@
     }
 
     .profit__images {
-      margin-left: 115px;
+      margin-left: 0;
       margin-top: 40px;
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
+      margin-bottom: 50px;
 
       img:first-child {
-        height: 351px;
+        height: 525px;
         margin-right: 14px;
       }
 
       img:nth-child(2) {
-        height: 212px;
+        height: 275px;
       }
 
       .stick_computer {
@@ -777,8 +783,8 @@
         border-radius: 100%;
         background-color: #FFD771;
         padding: 17px 18px;
-        top: 6838px;
-        left: 126px;
+        top: 6940px;
+        left: 43px;
       }
 
       .stick_light {
@@ -788,8 +794,8 @@
         border-radius: 100%;
         background-color: #B1D2E0;
         padding: 12px 3px 0px 14px;
-        top: 6517px;
-        left: 409px;
+        top: 6426px;
+        left: 587px;
       }
     }
   }

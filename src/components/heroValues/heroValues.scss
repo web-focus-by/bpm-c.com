@@ -282,7 +282,7 @@
 
 
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1650px) {
     .values {
         margin-top: -39px;
         .values__title {
@@ -340,7 +340,7 @@
                 .value-item {
                     border-right: 1px solid #E1DAF4;
                     padding-right: 16px;
-                    padding-left: 7px;
+                    padding-left: 10px;
 
                     .item__info-number {
                         font-size: 44.11px;
@@ -354,7 +354,7 @@
                     }
 
                     .item__info-content {
-                        max-width: 331px;
+                        max-width: 332px;
                         font-size: 12.806px;
                     }
                 }
@@ -370,8 +370,10 @@
 
                 .value-item.length {
                     padding-left: 17px;
+                    padding-right: 23px;
 
                     .item__info-content {
+                        max-width: 227px;
                         font-size: 12.806px;
                     }
                 }
@@ -379,6 +381,9 @@
                 .value-item.length:first-child {
                     padding-left: 0;
                     padding-right: 23px;
+                }
+                .value-item.length:last-child {
+                    padding-right: 0;
                 }
             }
         }
@@ -481,11 +486,11 @@
                 .value-item.length {
                     border-right: 1px solid #E1DAF4;
                     border-bottom: none;
-                    max-width: 330px;
                     padding-left: 10px;
                     margin-bottom: 0;
 
                     .item__info-content {
+                        max-width: 333px;
                         font-size: 15px;
                         padding-bottom: 0px;
                     }
@@ -505,7 +510,7 @@
                 .value-item.length:nth-child(3){
                     margin-top: 25px;
                      .item__info-content {
-                        max-width: 313px;
+                        max-width: 311px;
                         font-size: 15px;
                     }
                 }
