@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useState } from "react"
+import { AccordionItem } from "../faqItem"
 import "../styles/main.scss"
 import "../styles/icons.scss"
 import "../styles/modules.scss"
@@ -10,7 +11,10 @@ import "../styles/media_1024.scss"
 import "../styles/media_768.scss"
 import "../styles/media_375.scss"
 
-const HeroAccordion = ({title, emoji, descr, dataContent}) => {
+const HeroAccordion = ({ title, emoji, descr, dataContent }) => {
+    const [openId, setId] = useState(null);
+    const [hoverId, setHover] = useState(null);
+
   return (
     <>
         <div className="container">
@@ -26,23 +30,21 @@ const HeroAccordion = ({title, emoji, descr, dataContent}) => {
                     : null}
             </div>
             <div className="fqa margin_bottom_240">
-                <div className="fqa__list">
-                    {dataContent.map((obj, index) => (
-                        <div className="fqa__list-item">
-                            <label className="fqa_label" htmlFor={`toggle-0${index + 1}-${emoji ? emoji: ''}`} id={`0${index + 1}`}>
-                            <input type="radio" className="accordion_toggle" name="accordion" id={`toggle-0${index + 1}-${emoji ? emoji: ''}`} value={index + 1} hidden></input>
-                                <div className="fqa_number"><p>0{index + 1}.</p></div>
-                            <div className="fqa_icon"><span className="label_icon"></span></div>
-                            <div className="fqa_question">
-                            <p className="question">{obj.title}</p>
-                                <div className="fqa_answer">
-                                <p className="answer">{obj.content}</p>
-                                </div>
-                            </div>
-                            </label>
-                        </div>
-                    ))}
-                </div>
+              <ul className="accordion">
+                {dataContent.map((faqItem, id) => {
+                  return (
+                    <AccordionItem
+                      onClick={() => (id === openId ? setId(null) : setId(id))}
+                      onMouseOver={(e) => setHover(id)}
+                      onMouseLeave={(e) => setHover(null)}
+                      faqItem={faqItem}
+                      isOpen={id === openId}
+                      isHover={id === hoverId}
+                      num={`${id < 9 ? '0' : ''}${id + 1}.`}
+                    />
+                  );
+                })}
+              </ul>
             </div>
         </div>
     </>

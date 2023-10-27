@@ -17,26 +17,38 @@ import Vlada from "../images/vlada.mp4"
 
 const values = [
   {
-    num: '01',
     title: 'Flexibility',
     content: 'Our clients have all the freedom to choose the cooperation model, that will fit them the most. For example, you may choose mere consulting services or apply to hiring a full development team with dozens of programmers, QA specialists, designers, and business analysts that will take responsibility for developing a new IT solution from scratch.'
   },
   {
-    num: '02',
     title: 'Cooperation',
     content: 'You’ll never be left unaware of the processes, results and unexpected delays that happen during the process of development. We are also always ready to listen and discuss the requirements and find the best possible solution.'
   },
-      {
-    num: '03',
+  {
     title: 'Clarity',
     content: 'No pitfalls connected with the prices, stuff, and timetable. You’ll be informed about all the aspects of the future work before it starts. All conditions will be mentioned in the documentation and contracts that we sign.'
   },
   {
-    num: '04',
     title: 'Thorough analysis and planning',
     content: 'We aren’t the hotheads who are ready to start immediately after you call for us. We follow the sophisticated process of requirements analysis and planning, so that all the unnecessary and unwilling costs and delays were calculated and devastated.'
   },
 ]
+
+const anim = (idShow, wrap) => {
+  // const parentElem = document.getElementById(id);
+  const showElem = document.getElementById(idShow);
+  // const wrapper = document.getElementById(wrap);
+
+  showElem.classList.add('show');
+  // wrapper.classList.add('show');
+  // parentElem.classList.remove('type');
+
+  // setTimeout(function () {
+  //   showElem.classList.remove('show');
+  //   wrapper.classList.remove('show');
+  //   parentElem.classList.add('type');
+  // }, 5000);
+}
 
 const ITCompany = () => (
   <div className="container">
@@ -53,9 +65,9 @@ const ITCompany = () => (
             <span className="value-line"></span>
           </div>
             <div className="cards-list">
-                {values.map(obj => (
+                {values.map((obj, index) => (
                     <div className="value-item it_company-item">
-                      <div className="item__info-number it_company-item">{obj.num}.</div>
+                      <div className="item__info-number it_company-item">0{index + 1}.</div>
                       <div className="item__info-title it_company-item">{obj.title}</div>
                       <div className="item__info-content it_company-item">{obj.content}</div>
                   </div>
@@ -64,13 +76,13 @@ const ITCompany = () => (
               <img src={about} alt="about_bpm" />
               <div className="laptop_circle"><span className="laptop"></span></div>
             </div>
-             <div className="value_item it_company-item people">
+             <div className="value_item it_company-item people" id="people">
               <div className="values_kanu">
                 <div className="circle-video">
                   <video src={Kanu} type="video/mp4" id="circle" autoPlay muted loop>
                   </video>
                 </div>
-                <div className="code">
+                <div className="code type" id="code">
                   <p><span className="vio">export function</span> <span className="bl">App</span><span className="yel">(</span><span className="sftbl">props</span><span className="yel">)</span>&nbsp;<span className="yel">{'{'}</span></p>
                   <p style={{marginLeft: 15}}><span className="vio">return (</span></p>
                   <p style={{marginLeft: 30}}><span className="white">&lt;</span><span className="red">div</span> <span className="or">className</span><span className="sftbl">=</span><span className="green">'App'</span><span className="white">&gt;</span></p>
@@ -80,10 +92,13 @@ const ITCompany = () => (
 
                   <p style={{marginLeft: 30}}><span className="white">&lt;</span><span className="red">/div</span><span className="white">&gt;</span></p>
                   <p style={{marginLeft: 15}}><span className="vio">)</span></p>
-                  <p><span className="yel">{'}'}</span></p>
+                  <p id="code" onAnimationEnd={() => {
+                    anim('vlada');
+                    console.log('end');
+                  }}><span className="yel">{'}'}</span></p>
                 </div>
               </div>
-              <div className="values_vlada">
+              <div className="values_vlada" id="vlada">
                 <div className="circle-video">
                   <video src={Vlada} type="video/mp4" id="circle" autoPlay muted loop>
                   </video>

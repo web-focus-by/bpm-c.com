@@ -80,51 +80,51 @@ const IndexPage = ({ location }) => {
 
   const serviceAccor = [
   {
-      title: 'IT outsourcing',
-      content: 'If your business doesn’t have its own IT department and obtaining of the digital product is an inevitable necessity, we can take care of the product development and further maintenance. Our skilled professional teams are ready to take full responsibility for software or application development from the first till the last step. ',
+      q: 'IT outsourcing',
+      a: ['If your business doesn’t have its own IT department and obtaining of the digital product is an inevitable necessity, we can take care of the product development and further maintenance. Our skilled professional teams are ready to take full responsibility for software or application development from the first till the last step.'],
     },
     {
-      title: 'IT outstaffing',
-      content: 'If your company’s in-house IT department lacks expertise,  we are ready to provide you with our experts who can help and guide their not so experienced colleagues or even cover some aspects of work, where their knowledge finds the best use.',
+      q: 'IT outstaffing',
+      a: ['If your company’s in-house IT department lacks expertise,  we are ready to provide you with our experts who can help and guide their not so experienced colleagues or even cover some aspects of work, where their knowledge finds the best use.'],
     },
     {
-      title: 'Web application development',
-      content: 'Many years of commercial and development experience allow us to understand the needs and desires of digital market and provide the best IT solutions. We at BPM Cloud possess all the necessary knowledge that will make companies’ Internet products visible and attractive for the users. ',
+      q: 'Web application development',
+      a: ['Many years of commercial and development experience allow us to understand the needs and desires of digital market and provide the best IT solutions. We at BPM Cloud possess all the necessary knowledge that will make companies’ Internet products visible and attractive for the users. '],
     },
     {
-      title: 'Mobile app development',
-      content: 'As more and more people use mobile phones to get access to companies’ products, you definitely need your own mobile app. Our software development IT company works with numerous technologies that help to create digital products both for Android and iOS users.',
+      q: 'Mobile app development',
+      a: ['As more and more people use mobile phones to get access to companies’ products, you definitely need your own mobile app. Our software development IT company works with numerous technologies that help to create digital products both for Android and iOS users.'],
     },
     {
-      title: 'UX/UI design',
-      content: 'The outlook is the part visible for the users from the first second they start interacting with your digital product, and that’s why business pay so much attention to design and user experience. Our software building company is ready to provide you with highly qualified designers, who are well aware about the modern market design preferences.',
+      q: 'UX/UI design',
+      a: ['The outlook is the part visible for the users from the first second they start interacting with your digital product, and that’s why business pay so much attention to design and user experience. Our software building company is ready to provide you with highly qualified designers, who are well aware about the modern market design preferences.'],
     },
     {
-      title: 'Quality assurance',
-      content: 'Even the best programmers and designers are not guaranteed from mistakes, and even the best products can get flaws. Our QA specialists are ready to help you with chasing these flaws and ensuring that the users will get the product of the highest quality possible. In doing so, they base themselves on the most up-to-date testing practices available.',
+      q: 'Quality assurance',
+      a: ['Even the best programmers and designers are not guaranteed from mistakes, and even the best products can get flaws. Our QA specialists are ready to help you with chasing these flaws and ensuring that the users will get the product of the highest quality possible. In doing so, they base themselves on the most up-to-date testing practices available.'],
     }
   ]
 
     const commonAccor = [
     {
-      title: 'What types of apps can you develop?',
-      content: 'If your business doesn’t have its own IT department and obtaining of the digital product is an inevitable necessity, we can take care of the product development and further maintenance. Our skilled professional teams are ready to take full responsibility for software or application development from the first till the last step. ',
+      q: 'What types of apps can you develop?',
+      a: ['If your business doesn’t have its own IT department and obtaining of the digital product is an inevitable necessity, we can take care of the product development and further maintenance. Our skilled professional teams are ready to take full responsibility for software or application development from the first till the last step.'],
     },
     {
-      title: 'How long does it take to build an application?',
-      content: 'The time of development depends on many factors and individual from case to case. The average timeline is about 4-5 months, but can be longer or shorter depending on the project complexity.',
+      q: 'How long does it take to build an application?',
+      a: ['The time of development depends on many factors and individual from case to case. The average timeline is about 4-5 months, but can be longer or shorter depending on the project complexity.'],
     },
     {
-      title: 'How much does it cost?',
-      content: 'The price of development will be different because of the such factors as location, staff experience, deadlines, and the cooperation model chosen by the client company. All the costs are discussed individually.',
+      q: 'How much does it cost?',
+      a: ['The price of development will be different because of the such factors as location, staff experience, deadlines, and the cooperation model chosen by the client company. All the costs are discussed individually.'],
     },
     {
-      title: 'How do you control the quality of the software you deliver?',
-      content: 'We possess a large team of experienced QA engineers who are fully dedicated to the quality assurance process and do their best, so that our client get the flawless final product.',
+      q: 'How do you control the quality of the software you deliver?',
+      a: ['We possess a large team of experienced QA engineers who are fully dedicated to the quality assurance process and do their best, so that our client get the flawless final product.'],
     },
     {
-      title: 'What is your preferred development methodology?',
-      content: 'We use all the most popular and efficient methodologies including Scrum, Waterfall, and Kanban. The choice is mostly depended on the project specifics, but Scrum with its iterations is the most widely used. ',
+      q: 'What is your preferred development methodology?',
+      a: ['We use all the most popular and efficient methodologies including Scrum, Waterfall, and Kanban. The choice is mostly depended on the project specifics, but Scrum with its iterations is the most widely used. '],
     }
 ]
 
@@ -132,20 +132,20 @@ const buisness = [ 'Though the market is full of software development companies 
 
 const buisChoose = [
     {
-      title: 'Prompt start',
-      content: 'There are no delays and excessive bureaucracy, as we are ready to start within 1-2 weeks.',
+      q: 'Prompt start',
+      a: ['There are no delays and excessive bureaucracy, as we are ready to start within 1-2 weeks.'],
     },
     {
-      title: 'Clear conditions and policy',
-      content: 'We are always ready to discuss the project details and explain all the costs and terms of our cooperation.',
+      q: 'Clear conditions and policy',
+      a: ['We are always ready to discuss the project details and explain all the costs and terms of our cooperation.'],
     },
     {
-      title: 'High quality',
-      content: 'Obtaining the experienced teams of developers, QA-engineers and UX/UI designers guarantees that the final product will be flawless.',
+      q: 'High quality',
+      a: ['Obtaining the experienced teams of developers, QA-engineers and UX/UI designers guarantees that the final product will be flawless.'],
     },
     {
-      title: 'Assistance and maintenance',
-      content: 'We will not leave you alone, and you may request further help at any moment.',
+      q: 'Assistance and maintenance',
+      a: ['We will not leave you alone, and you may request further help at any moment.'],
     }
   ]
   return (

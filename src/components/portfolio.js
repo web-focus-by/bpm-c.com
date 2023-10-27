@@ -1,7 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useEffect, useRef } from "react"
-import Marquee from "react-fast-marquee";
 import { Link } from "gatsby"
 
 import "../components/styles/main.scss"

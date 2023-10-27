@@ -1,3 +1,16 @@
+@keyframes typing {
+  from { width: 0 }
+  to {
+    width: 100%;
+    border-right: none;
+}
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
 .values {
     margin-top: -39px;
     .values__title {
@@ -189,6 +202,7 @@
 
                     p {
                         margin: 0;
+                        width: 0;
                     }
 
                     .vio {
@@ -217,6 +231,36 @@
                     }
                 }
 
+                .code.type {
+                    p {
+                        overflow: hidden; /* Ensures the content is not revealed until the animation */
+                        white-space: nowrap; /* Keeps the content on a single line */
+                        animation:
+                        typing 3.5s steps(30, end);
+                        animation-delay: 0s;
+                        animation-fill-mode: both;
+                    }
+
+                    p:nth-child(2) {
+                        animation-delay: 3s;
+                    }
+                    p:nth-child(3) {
+                        animation-delay: 5s;
+                    }
+                    p:nth-child(4) {
+                        animation-delay: 8s;
+                    }
+                    p:nth-child(5) {
+                        animation-delay: 11s;
+                    }
+                    p:nth-child(6) {
+                        animation-delay: 13.5s;
+                    }
+                    p:nth-child(7) {
+                        animation-delay: 14s;
+                    }
+                }
+
                 .welcome {
                     background-color: #1A1B1F;
                     border-radius: 25px;
@@ -226,9 +270,25 @@
             }
 
             .values_vlada {
+                visibility: hidden;
+                position: relative;
+                top: 64px;
+                transition: all 0.5s ease-in-out;
                 margin-bottom: 0;
                 margin-left: 184px;
             }
+
+            .values_vlada.show {
+                visibility: visible;
+                position: relative;
+                transition: all 0.5s ease-in-out;
+                top: 0;
+                margin-bottom: 0;
+                margin-left: 184px;
+            }
+        }
+
+        .people.show {
         }
 
         .value-item:first-child {
