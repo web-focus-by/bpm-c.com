@@ -1131,6 +1131,23 @@ body {
 
               .contact_form_line-wrapper {
                 width: 355px;
+
+                .error_message  {
+                  display: inline-block;
+                  opacity: 0;
+                  transition: all 1s ease-in-out;
+                  position: relative;
+                  top: -27px;
+                  color: #e11d48;
+                  font-size: 14px;
+                  line-height: 24px;
+                  height: 24px;
+                }
+
+                .error_message.show_error  {
+                  opacity: 1;
+                  transition: all 1s ease-in-out;
+                }
               }
 
             }
@@ -1144,17 +1161,29 @@ body {
                 border-bottom: 1px solid #e11d48;
                 color: #e11d48;
                 font-size: 18px;
+                transition: all 1s ease-in-out;
               }
 
               .label_invalid{
                 color: #e11d48;
+                transition: all 1s ease-in-out;
               }
 
               .error_message  {
+                display: inline-block;
+                opacity: 0;
+                transition: all 1s ease-in-out;
                 position: relative;
-                top: -19px;
+                top: -27px;
                 color: #e11d48;
                 font-size: 14px;
+                line-height: 24px;
+                height: 24px;
+              }
+
+              .error_message.show_error  {
+                opacity: 1;
+                transition: all 1s ease-in-out;
               }
 
               input, textarea {
@@ -1262,14 +1291,17 @@ body {
 
               .label_invalid{
                 color: #e11d48;
+                transition: all 1s ease-in-out;
 
                 a {
                   color: #e11d48;
+                  transition: all 1s ease-in-out;
                 }
               }
 
               .checkbox_invalid+label::before {
                 border: 1px solid #e11d48;
+                transition: all 1s ease-in-out;
               }
 
               label {
@@ -1428,10 +1460,17 @@ body {
           }
 
           .error_message {
+            opacity: 0;
+            transition: all 1s ease-in-out;
             position: relative;
             top: -19px;
             color: #e11d48;
             font-size: 14px;
+          }
+
+          .error_message.show_error  {
+            opacity: 1;
+            transition: all 1s ease-in-out;
           }
         }
 
@@ -3327,4 +3366,22 @@ body {
   .margin_bottom_240 {
     margin-bottom: 270px;
   }
+}
+
+
+.error_message  {
+  display: inline-block;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  position: relative;
+  top: -19px;
+  color: #e11d48;
+  font-size: 14px;
+  line-height: 24px;
+  height: 24px;
+}
+
+.error_message.show_error  {
+  opacity: 1;
+  transition: all 1s ease-in-out;
 }
