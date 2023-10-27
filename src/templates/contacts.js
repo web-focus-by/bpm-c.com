@@ -102,7 +102,7 @@ const Contacts = ({ location }) => {
   const addItem = (item) => {
     if (interestedItems.indexOf(item) === -1) {
       setInterestedItems([...interestedItems, item])
-    } 
+    }
     return interestedItems
   }
 
@@ -192,12 +192,8 @@ const Contacts = ({ location }) => {
                             data-empty={!!isEmpty.name}
                           />
                           <label className={`${errors.name ? "label_invalid" : ""}`}>Name*</label>
-                          {errors.name && (
-                            <>
-                                <br></br>
-                                <span className={"error_message"}>{errors.name?.message}</span>
-                              </>
-                          )}
+                            <br></br>
+                            <span className={`error_message ${errors.name ? "show_error" : ""}`}>{errors.name?.message}</span>
                           </div>
 
                           <div className="contact_form_line-wrapper">
@@ -218,12 +214,8 @@ const Contacts = ({ location }) => {
                             data-empty={!!isEmpty.email}
                           />
                           <label className={`${errors.email ? "label_invalid" : ""}`}>E-mail*</label>
-                          {errors.email && (
-                            <>
-                              <br></br>
-                              <span className={"error_message"}>{errors.email?.message}</span>
-                            </>
-                          )}
+                          <br></br>
+                          <span className={`error_message ${errors.email ? "show_error" : ""}`}>{errors.email?.message}</span>
                         </div>
                       </div>
 
@@ -254,12 +246,8 @@ const Contacts = ({ location }) => {
                             data-empty={!!isEmpty.company}
                           />
                           <label className={`${errors.company ? "label_invalid" : ""}`}>Company</label>
-                          {errors.company && (
-                            <>
-                              <br></br>
-                              <span className={"error_message"}>{errors.company?.message}</span>
-                            </>
-                          )}
+                          <br></br>
+                          <span className={`error_message ${errors.company ? "show_error" : ""}`}>{errors.company?.message}</span>
                         </div>
                       </div>
 
@@ -278,12 +266,8 @@ const Contacts = ({ location }) => {
                             data-empty={!!isEmpty.message}
                         />
                         <label className={`${errors.message ? "label_invalid" : ""}`}>Message*</label>
-                          {errors.message && (
-                            <>
-                              <br></br>
-                              <span className={"error_message"}>{errors.message?.message}</span>
-                            </>
-                          )}
+                          <br></br>
+                          <span className={`error_message ${errors.message ? "show_error" : ""}`}>{errors.message?.message}</span>
                       </div>
 
                   <div className="contact_form_block_buttons_title">
@@ -380,7 +364,7 @@ const Contacts = ({ location }) => {
                         {errors.checkbox && (
                             <span className={"error_check"}>{errors.checkbox?.message}</span>
                           )}
-                        <button className={`button_white ${errors.message || errors.company || errors.email || errors.name ? 'btn_error' : ''}`} disabled={errors.message || errors.company || errors.email || errors.name ? 'disabled' : ''}type="submit">
+                        <button className="button_white" type={ errors.message || errors.company || errors.email || errors.name ? '' : 'submit'}>
                             Send<span className="arrow_black"></span>
                           </button>
                       </div>

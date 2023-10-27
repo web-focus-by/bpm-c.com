@@ -174,8 +174,8 @@ const ContactForm = props => {
           <input type="checkbox" id="agree" name="agree" value="yes" required/>
           <label htmlFor="agree">I agree to the<span>&nbsp;</span><Link to="/">Privacy Policy</Link><span>&nbsp;</span>and<span>&nbsp;</span><Link to="/">Terms of Use</Link></label>
           <div>
-            <button className={`button_black ${errors.message || errors.company || errors.email || errors.name ? 'btn_error' : ''}`} type="submit">
-              Send<span className="arrow_white"></span>
+          <button className="button_black" type={ errors.message || errors.company || errors.email || errors.name ? '' : 'submit'}>
+  Send<span className="arrow_white"></span>
             </button>
           </div>
         </div>
