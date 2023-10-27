@@ -639,18 +639,17 @@
       margin-top: 30px;
       max-width: 343px;
       border-radius: 25px;
-      padding: 40px 28px;
+      padding: 40px 0;
       background-color: #935CFF;
 
       .quote {
         color: #FFF;
         width: 288px;
         font-size: 24px;
-        margin-left: 0;
       }
 
       .image {
-        margin: 23px 91px 0;
+        margin: 23px auto 0;
 
         img {
           border-radius: 100%;
@@ -659,7 +658,7 @@
       }
 
       .name {
-        margin: 7px 0 0 96px;
+        margin: 7px auto 0;
         font-size: 14px;
       }
 
@@ -705,15 +704,13 @@
 
         span.line {
           height: 1224px;
-          left: 109px;
-          top: 3924px;
         }
       }
     }
 
     .prof_path__images {
       overflow: hidden;
-      margin-left: 0px;
+      width: 100%;
       .images_table {
         width: 343px;
         display: flex;
@@ -743,8 +740,6 @@
         border-radius: 100%;
         background-color: #FFD771;
         padding: 28px;
-        top: 5232px;
-        left: 15px;
       }
 
       .stick_heart {
@@ -754,8 +749,6 @@
         border-radius: 100%;
         background-color: #B1D2E0;
         padding: 18px;
-        top: 5620px;
-        left: 215px;
       }
     }
   }
@@ -814,7 +807,6 @@
 
       img:first-child {
         height: 263px;
-        margin-right: 17px;
       }
 
       img:nth-child(2) {
@@ -828,8 +820,6 @@
         border-radius: 100%;
         background-color: #FFD771;
         padding: 17px 18px;
-        top: 10088px;
-        left: 17px;
       }
 
       .stick_light {
@@ -839,8 +829,6 @@
         border-radius: 100%;
         background-color: #B1D2E0;
         padding: 12px 3px 0px 14px;
-        top: 9827px;
-        left: 297px;
       }
     }
   }
@@ -1760,18 +1748,17 @@
       margin-top: 30px;
       max-width: 343px;
       border-radius: 25px;
-      padding: 40px 28px;
+      padding: 40px 0;
       background-color: #935CFF;
 
       .quote {
         color: #FFF;
         width: 288px;
         font-size: 24px;
-        margin-left: 0;
       }
 
       .image {
-        margin: 23px 91px 0;
+        margin: 23px auto 0;
 
         img {
           border-radius: 100%;
@@ -1780,12 +1767,12 @@
       }
 
       .name {
-        margin: 7px 0 0 96px;
+        margin: 7px auto 0;
         font-size: 14px;
       }
 
       .position {
-        margin: 5px 120px 0;
+        margin: 5px auto 0;
         font-size: 14px;
       }
     }
@@ -1807,7 +1794,6 @@
       }
 
       .prof_path_history {
-        overflow: hidden;
         .prof_path_line {
           display: flex;
           gap: 0;
@@ -1819,22 +1805,23 @@
           }
 
           .descr {
-            width: 219px;
+            min-width: 219px;
+            max-width: 243px;
             font-size: 15px;
+            padding: 0;
           }
         }
 
         span.line {
           height: 1224px;
-          left: 109px;
-          top: 3924px;
+          left: 23%;
+          top: 7px;
         }
       }
     }
 
     .prof_path__images {
       overflow: hidden;
-      margin-left: 0px;
       .images_table {
         width: 343px;
         display: flex;
@@ -1864,8 +1851,8 @@
         border-radius: 100%;
         background-color: #FFD771;
         padding: 28px;
-        top: 5232px;
-        left: 15px;
+        left: 0;
+        top: 60px;
       }
 
       .stick_heart {
@@ -1875,8 +1862,7 @@
         border-radius: 100%;
         background-color: #B1D2E0;
         padding: 18px;
-        top: 5620px;
-        left: 215px;
+        right: 431px;
       }
     }
   }
@@ -1935,7 +1921,6 @@
 
       img:first-child {
         height: 263px;
-        margin-right: 17px;
       }
 
       img:nth-child(2) {
@@ -1949,8 +1934,6 @@
         border-radius: 100%;
         background-color: #FFD771;
         padding: 17px 18px;
-        top: 10088px;
-        left: 17px;
       }
 
       .stick_light {
@@ -1960,8 +1943,7 @@
         border-radius: 100%;
         background-color: #B1D2E0;
         padding: 12px 3px 0px 14px;
-        top: 9827px;
-        left: 297px;
+        right: 2%;
       }
     }
   }
@@ -2852,29 +2834,29 @@
       border-top: 1px solid #E1DAF4;
       padding: 0;
     }
-    
+
     .accordion-item {
       width: 100%;
       padding: 35px 0 35px;
       cursor: pointer;
       border-bottom: 1px solid #E1DAF4;
     }
-  
+
     .accordion-item:hover {
       .accordion-header {
         color: #935CFF;
       }
-  
+
       .accordion-arrow {
         background-color:#935CFF;
       }
-  
+
       .label_icon {
         background: url(../../images/plus.png) no-repeat;
         transition: all .5s ease;
       }
     }
-    
+
     .accordion-header {
       display: flex;
       position: relative;
@@ -2882,7 +2864,7 @@
       background-color: transparent;
       cursor: pointer;
       border: none;
-  
+
       p {
         width: 55%;
         font-family: 'Acrom';
@@ -2895,7 +2877,7 @@
         text-align: left;
       }
     }
-  
+
     .accordion-header.active {
       color: #935CFF;
     }
@@ -2912,17 +2894,17 @@
       color: #935CFF;
       margin-right: 11px;
     }
-    
+
     .accordion-collapse {
       height: 0;
       overflow: hidden;
       transition: height 0.3s;
     }
-    
+
     .accordion-collapse.open {
       height: auto;
     }
-    
+
     .accordion-body {
       width: 281px;
       padding: 30px 0 0 56px;
@@ -2932,23 +2914,23 @@
       font-weight: 400;
       line-height: 150%;
       color: #5C5C5C;
-  
+
       p {
         padding-top: 20px;
         margin: 0;
         word-wrap: break-word;
       }
-  
+
       p:first-child {
         padding-top: 0;
       }
     }
-  
+
     ul.answer {
       margin: 0;
       margin-top: 20px;
       list-style-type: none;
-  
+
       li {
         margin-top: 10px;
         font-family: 'Acrom';
@@ -2957,11 +2939,11 @@
         font-weight: 400;
         line-height: 150%;
         color: #5C5C5C;
-  
+
         strong {
           color: #1A1B1F;
         }
-  
+
         a {
           font-family: 'Acrom';
           font-size: 16px;
@@ -2972,7 +2954,7 @@
           color: #935cff;
         }
       }
-  
+
       li::before {
         content: '—';
         color: #5C5C5C;
@@ -2981,12 +2963,12 @@
         display: inline-block;
         position: relative;
       }
-  
+
       li:first-child {
         margin-top: 0;
       }
     }
-    
+
     .accordion-arrow {
       padding: 13px 4px 10px 8px;
       border: 1px solid #935CFF;
@@ -2996,19 +2978,19 @@
       height: 17px;
       transition: all .5s ease;
     }
-  
+
     .label-icon {
       display: inline-block;
       background: url(../../images/plus-vio.svg) no-repeat;
       background-size: 16px 16px;
       transform: rotate(0deg);
     }
-    
+
     .accordion-arrow.active {
       padding: 10px 9px 13px 2px;
       background-color:#935CFF;
     }
-  
+
     .label-icon_white {
       transform: rotate(135deg);
       background: url(../../images/plus.png) no-repeat;

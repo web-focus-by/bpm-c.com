@@ -1216,18 +1216,17 @@
       margin-top: 38px;
       max-width: 1053px;
       border-radius: 18px;
-      padding: 50px 148px;
+      padding: 50px 0;
       background-color: #935CFF;
 
       .quote {
         color: #FFF;
         width: 696px;
         font-size: 21.344px;
-        margin-left: 30px;
       }
 
       .image {
-        margin: 20px 335px 0;
+        margin: 20px auto 0;
 
         img {
           border-radius: 100%;
@@ -1236,12 +1235,12 @@
       }
 
       .name {
-        margin: 7px 0 0 351px;
+        margin: 7px auto 0;
         font-size: 9.96px;
       }
 
       .position {
-        margin: 3px 367px 0;
+        margin: 3px auto 0;
         font-size: 9.96px;
       }
     }
@@ -1279,14 +1278,12 @@
 
         span.line {
           height: 596px;
-          left: 253px;
-          top: 2161px;
+          left: 18.6%;
         }
       }
     }
 
     .prof_path__images {
-      margin-left: 51px;
       .images_table {
         width: 481px;
         display: flex;
@@ -1316,8 +1313,6 @@
         border-radius: 100%;
         background-color: #FFD771;
         padding: 28px;
-        top: 2071px;
-        left: 712px;
       }
 
       .stick_heart {
@@ -1327,8 +1322,7 @@
         border-radius: 100%;
         background-color: #B1D2E0;
         padding: 18px;
-        top: 2626px;
-        left: 1019px;
+        right: 120px;
       }
     }
   }
@@ -1377,14 +1371,13 @@
     }
 
     .profit__images {
-      margin-left: 103px;
       margin-top: 122px;
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
 
       img:first-child {
         height: 351px;
-        margin-right: 14px;
       }
 
       img:nth-child(2) {
@@ -1398,8 +1391,6 @@
         border-radius: 100%;
         background-color: #FFD771;
         padding: 17px 18px;
-        top: 4908px;
-        left: 750px;
       }
 
       .stick_light {
@@ -1409,8 +1400,6 @@
         border-radius: 100%;
         background-color: #B1D2E0;
         padding: 12px 3px 0px 17px;
-        top: 4582px;
-        left: 1037px;
       }
     }
   }
@@ -1446,15 +1435,15 @@
     .yellow_circle {
       width: 129px;
       height: 129px;
-      top: 5790px;
-      left: 868px;
+      top: 0;
+      left: 65%;
     }
 
     .peach_circle {
       width: 129px;
       height: 129px;
-      top: 5790px;
-      left: 808px;
+      top: 0;
+      left: 60%;;
     }
   }
 }
@@ -1990,9 +1979,9 @@
     border-top: 1px solid #E1DAF4;
     padding: 0;
   }
-  
+
   .accordion-item {
-    width: 100%;
+  width: 100%;
     padding: 30px 0;
     cursor: pointer;
     border-bottom: 1px solid #E1DAF4;
@@ -2012,7 +2001,7 @@
       transition: all .5s ease;
     }
   }
-  
+
   .accordion-header {
     display: flex;
     position: relative;
@@ -2049,19 +2038,19 @@
     line-height: 100%;
     color: #935CFF;
   }
-  
+
   .accordion-collapse {
-    height: 0;
+  height: 0;
     overflow: hidden;
     transition: height 0.3s;
   }
-  
+
   .accordion-collapse.open {
-    height: auto;
+  height: auto;
   }
-  
+
   .accordion-body {
-    width: 820px;
+  width: 820px;
     padding: 30px 10px 0 90px;
     font-family: 'Acrom';
     font-size: 18px;
@@ -2378,273 +2367,6 @@
           }
         }
       }
-    }
-  }
-
-  .mission {
-    .mission__title {
-      .title {
-        font-size: 44.11px;
-        margin-bottom: 16px;
-      }
-      .mission_description {
-        display: flex;
-        justify-content: space-between;
-        gap: 14px;
-          p {
-            color: #5C5C5C;
-            width: 519px;
-            font-size: 12.806px;
-          }
-      }
-    }
-
-    .mission__quote {
-      margin-top: 38px;
-      max-width: 1053px;
-      border-radius: 18px;
-      padding: 50px 0;
-      background-color: #935CFF;
-
-      .quote {
-        color: #FFF;
-        width: 696px;
-        font-size: 21.344px;
-        margin: 0 auto;
-      }
-
-      .image {
-        width: 87px;
-        margin: 20px auto 0;
-
-        img {
-          border-radius: 100%;
-          height: 87px;
-        }
-      }
-
-      .name {
-        width: 55px;
-        margin: 7px auto 0;
-        font-size: 9.96px;
-      }
-
-      .position {
-        width: 23px;
-        margin: 3px auto 0;
-        font-size: 9.96px;
-      }
-    }
-  }
-
-  .prof_path {
-    display: flex;
-    .prof_path__wrap{
-      max-width: 519px;
-      .prof_path_title {
-        font-size: 44.11px;
-      }
-      .prof_path_description {
-        width: 519px;
-        font-size: 13px;
-        margin: 28px 0 30px;
-      }
-
-      .prof_path_history {
-        .prof_path_line {
-          display: flex;
-          gap: 25px;
-          margin-bottom: 29px;
-
-          .year {
-            font-size: 21.344px;
-            min-width: 63px;
-          }
-
-          .descr {
-            width: 377px;
-            font-size: 12.806px;
-          }
-        }
-
-        span.line {
-          height: 596px;
-          left: 269px;
-          top: 2469px;
-        }
-      }
-    }
-
-    .prof_path__images {
-      margin-left: 51px;
-      .images_table {
-        width: 481px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 14px;
-
-        img {
-          width: 284px;
-        }
-
-        img:first-child {
-          width: 183px;
-          height: 286px;
-          align-self: end;
-        }
-
-        img:last-child {
-          width: 182px;
-          height: 238px;
-        }
-      }
-
-      .stick_cup {
-        position: absolute;
-        max-width: 28px;
-        max-height: 28px;
-        border-radius: 100%;
-        background-color: #FFD771;
-        padding: 28px;
-        top: 2396px;
-        left: 703px;
-      }
-
-      .stick_heart {
-        position: absolute;
-        max-width: 35px;
-        max-height: 35px;
-        border-radius: 100%;
-        background-color: #B1D2E0;
-        padding: 18px;
-        top: 2934px;
-        left: 1030px;
-      }
-    }
-  }
-
-  .profit {
-    display: flex;
-    justify-content: space-between;
-    .profit__wrap{
-      max-width: 519px;
-      .profit_title {
-        font-size: 44.11px;
-      }
-      .profit_description {
-        font-size: 12.806px;
-        margin: 28px 0 50px;
-      }
-
-      .profit__companie {
-        .profit_not-it {
-          border-top: 1px solid #E1DAF4;
-          padding: 17px 0 19px;
-          .title {
-            font-size: 17.075px;
-            margin-bottom: 10px;
-          }
-
-          .descr {
-            font-size: 12.806px;
-          }
-        }
-
-        .profit_it {
-            border-top: 1px solid #E1DAF4;
-            border-bottom: 1px solid #E1DAF4;
-            padding: 17px 0 19px;
-          .title {
-            font-size: 17.075px;
-            margin-bottom: 10px;
-          }
-
-          .descr {
-            font-size: 12.806px;
-          }
-        }
-      }
-    }
-
-    .profit__images {
-      margin-left: 103px;
-      margin-top: 122px;
-      display: flex;
-      flex-wrap: wrap;
-
-      img:first-child {
-        height: 351px;
-        margin-right: 14px;
-      }
-
-      img:nth-child(2) {
-        height: 212px;
-      }
-
-      .stick_computer {
-        position: absolute;
-        max-width: 24px;
-        max-height: 24px;
-        border-radius: 100%;
-        background-color: #FFD771;
-        padding: 17px 18px;
-        top: 5360px;
-        left: 871px;
-      }
-
-      .stick_light {
-        position: absolute;
-        max-width: 50px;
-        max-height: 50px;
-        border-radius: 100%;
-        background-color: #B1D2E0;
-        padding: 12px 3px 0px 17px;
-        top: 5035px;
-        left: 1152px;
-      }
-    }
-  }
-
-  .partnering {
-      .partnering_title {
-        width: 584px;
-        font-size: 44.11px;
-      }
-      .partnering_description {
-        width: 515px;
-        font-size: 12.806px;
-        margin: 28px 0 50px;
-      }
-
-    .partnering__cards {
-      display: flex;
-      gap: 16px;
-        .cards_item {
-          .title {
-            font-size: 17.075px;
-            margin-bottom: 14px;
-            padding-bottom: 14px;
-          }
-
-          .descr {
-            max-width: 252px;
-            font-size: 12.806px;
-          }
-        }
-      }
-
-    .yellow_circle {
-      width: 129px;
-      height: 129px;
-      top: 6195px;
-      left: 868px;
-    }
-
-    .peach_circle {
-      width: 129px;
-      height: 129px;
-      top: 6195px;
-      left: 859px;
     }
   }
 

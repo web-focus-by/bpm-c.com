@@ -2752,7 +2752,7 @@ body {
     border-top: 1px solid #E1DAF4;
     padding: 0;
   }
-  
+
   .accordion-item {
     width: 100%;
     padding: 30px 0;
@@ -2780,7 +2780,7 @@ body {
     background: url(../../images/plus.svg) no-repeat;
     transition: all .5s ease;
   }
-  
+
   .accordion-header {
     display: flex;
     position: relative;
@@ -2817,17 +2817,17 @@ body {
     line-height: 100%;
     color: #935CFF;
   }
-  
+
   .accordion-collapse {
     height: 0;
     overflow: hidden;
     transition: height 0.3s;
   }
-  
+
   .accordion-collapse.open {
     height: auto;
   }
-  
+
   .accordion-body {
     width: 820px;
     padding: 30px 10px 0 90px;
@@ -2893,7 +2893,7 @@ body {
       margin-top: 0;
     }
   }
-  
+
   .accordion-arrow {
     padding: 13px 8px 15px 9px;
     border: 1px solid #935CFF;
@@ -2937,7 +2937,7 @@ body {
     background: url(../../images/plus-vio.svg) no-repeat;
     transform: rotate(0deg);
   }
-  
+
   .accordion-arrow.active {
     background-color:#935CFF;
   }
@@ -2975,7 +2975,7 @@ body {
     margin-top: 53px;
     max-width: 1480px;
     border-radius: 25px;
-    padding: 70px 251px;
+    padding: 70px 0;
     background-color: #935CFF;
 
     .quote {
@@ -2987,10 +2987,12 @@ body {
       font-style: normal;
       font-weight: 500;
       line-height: 115%;
+      margin: 0 auto;
     }
 
     .image {
-      margin: 28px 429px 0;
+      width: 120px;
+      margin: 28px auto 0;
 
       img {
         border-radius: 100%;
@@ -2998,7 +3000,8 @@ body {
     }
 
     .name {
-      margin: 13px 0 0 450px;
+      width: 77px;
+      margin: 13px auto 0;
       color: #fff;
       font-family: 'Acrom';
       font-size: 14px;
@@ -3008,7 +3011,8 @@ body {
     }
 
     .position {
-      margin: 5px 473px 0;
+      width: 31px;
+      margin: 5px auto 0;
       color: #fff;
       font-family: 'Acrom';
       font-size: 14px;
@@ -3021,6 +3025,8 @@ body {
 
 .prof_path {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   .prof_path__wrap{
     max-width: 730px;
     .prof_path_title {
@@ -3044,6 +3050,7 @@ body {
     }
 
     .prof_path_history {
+      position: relative;
       .prof_path_line {
         display: flex;
         gap: 40px;
@@ -3067,14 +3074,15 @@ body {
           font-style: normal;
           font-weight: 400;
           line-height: 150%;
-          padding: 0 0 0 10px;
+          padding: 0 1px 0 10px;
+          overflow: hidden;
         }
       }
 
       span.line {
         position: absolute;
-        left: 360px;
-        top: 3017px;
+        left: 19.2%;
+        top: 0;
         width: 1px;
         height: 839px;
         background: linear-gradient(180deg, #935CFF 66.84%, rgba(147, 92, 255, 0.00) 104.87%);
@@ -3083,7 +3091,7 @@ body {
   }
 
   .prof_path__images {
-    margin-left: 72px;
+    position: relative;
     .images_table {
       width: 678px;
       display: flex;
@@ -3107,8 +3115,8 @@ body {
       border-radius: 100%;
       background-color: #FFD771;
       padding: 40px;
-      top: 2890px;
-      left: 990px;
+      top: 15%;
+      left: -30px;
     }
 
     .stick_heart {
@@ -3118,8 +3126,8 @@ body {
       border-radius: 100%;
       background-color: #B1D2E0;
       padding: 25px;
-      top: 3672px;
-      left: 1431px;
+      bottom: 10%;
+      right: 170px;
     }
   }
 }
@@ -3199,14 +3207,14 @@ body {
   }
 
   .profit__images {
-    margin-left: 128px;
     margin-top: 172px;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
 
     img:first-child {
       height: 494px;
-      margin-right: 20px;
     }
 
     img:nth-child(2) {
@@ -3220,8 +3228,8 @@ body {
       border-radius: 100%;
       background-color: #FFD771;
       padding: 23px 24px 21px;
-      top: 6893px;
-      left: 1054px;
+      bottom: 0;
+      left: -35px;
     }
 
     .stick_light {
@@ -3231,13 +3239,14 @@ body {
       border-radius: 100%;
       background-color: #B1D2E0;
       padding: 16px 20px 15px 17px;
-      top: 6435px;
-      left: 1461px;
+      top: -42px;
+      right: 28%;
     }
   }
 }
 
 .partnering {
+  position: relative;
     .partnering_title {
       width: 822px;
       color:#1A1B1F;
@@ -3289,8 +3298,8 @@ body {
   .yellow_circle {
     display: inline-block;
     position: absolute;
-    top: 7840px;
-    left: 1214px;
+    top: 0;
+    right: 10%;
     width: 268px;
     height: 268px;
     border-radius: 100%;
@@ -3302,8 +3311,8 @@ body {
   .peach_circle {
     display: inline-block;
     position: absolute;
-    top: 7840px;
-    left: 1114px;
+    top: 0;
+    right: 15%;
     width: 268px;
     height: 268px;
     border-radius: 100%;
