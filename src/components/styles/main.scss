@@ -1394,8 +1394,8 @@ body {
           }
 
           input:focus ~ label,
-          {
-            top: -25x;
+          input[data-empty="false"] ~ label {
+            top: -30x;
           }
 
           .input_invalid {
@@ -2877,9 +2877,7 @@ body {
     padding: 13px 8px 15px 9px;
     border: 1px solid #935CFF;
     border-radius: 100%;
-    position: absolute;
-    top: -35%;
-    right: 0;
+    margin-left: auto;
     display: block;
     width: 30px;
     height: 17px;
