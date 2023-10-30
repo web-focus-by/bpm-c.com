@@ -132,20 +132,20 @@ const buisness = [ 'Though the market is full of software development companies 
 
 const buisChoose = [
     {
-      q: 'Prompt start',
-      a: ['There are no delays and excessive bureaucracy, as we are ready to start within 1-2 weeks.'],
+      title: 'Prompt start',
+      content: ['There are no delays and excessive bureaucracy, as we are ready to start within 1-2 weeks.'],
     },
     {
-      q: 'Clear conditions and policy',
-      a: ['We are always ready to discuss the project details and explain all the costs and terms of our cooperation.'],
+      title: 'Clear conditions and policy',
+      content: ['We are always ready to discuss the project details and explain all the costs and terms of our cooperation.'],
     },
     {
-      q: 'High quality',
-      a: ['Obtaining the experienced teams of developers, QA-engineers and UX/UI designers guarantees that the final product will be flawless.'],
+      title: 'High quality',
+      content: ['Obtaining the experienced teams of developers, QA-engineers and UX/UI designers guarantees that the final product will be flawless.'],
     },
     {
-      q: 'Assistance and maintenance',
-      a: ['We will not leave you alone, and you may request further help at any moment.'],
+      title: 'Assistance and maintenance',
+      content: ['We will not leave you alone, and you may request further help at any moment.'],
     }
   ]
   return (

@@ -77,6 +77,12 @@ const Header = ({
       } else if (e.target.innerText === "Portfolio") {
         justTurnOffMenu()
       }
+
+      if (e.target.innerText !== "Blog") {
+        justTurnOnMenu(e.target.innerText)
+      } else if (e.target.innerText === "Blog") {
+        justTurnOffMenu()
+      }
     }
   }, [])
 
