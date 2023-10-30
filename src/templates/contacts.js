@@ -364,7 +364,7 @@ const Contacts = ({ location }) => {
                         {errors.checkbox && (
                             <span className={"error_check"}>{errors.checkbox?.message}</span>
                           )}
-                        <button className="button_white" type={ errors.message || errors.company || errors.email || errors.name ? '' : 'submit'}>
+                        <button className="button_white" type={ errors.message || errors.company || errors.email || errors.name ? '' : 'submit'} onClick={(e) => e.preventDefault()}>
                             Send<span className="arrow_black"></span>
                           </button>
                       </div>

@@ -965,6 +965,7 @@ body {
   margin-top: 43px;
   display: flex;
   justify-content: space-between;
+transition: all 0.5s ease-in-out;
   flex-wrap: wrap;
   gap: 2%;
   &__contact {
@@ -1036,12 +1037,12 @@ body {
     }
   }
   &__contacts_form {
-    width: 60%;
+    width: 50%;
     .contact_form {
       border-radius: 40px;
-      padding: 20px 0 0 164px;
+      padding: 20px 0 0 0;
       display: grid;
-      grid-template-columns: 1.03fr 0.97fr;
+      grid-template-columns: 1fr;
       background-position: 110px 165px;
       &__block {
         color: #1a1b1f;
@@ -1135,7 +1136,7 @@ body {
                 .error_message  {
                   display: inline-block;
                   opacity: 0;
-                  transition: all 1s ease-in-out;
+                  transition: all 0.5s ease-in-out;
                   position: relative;
                   top: -27px;
                   color: #e11d48;
@@ -1146,7 +1147,7 @@ body {
 
                 .error_message.show_error  {
                   opacity: 1;
-                  transition: all 1s ease-in-out;
+                  transition: all 0.5s ease-in-out;
                 }
               }
 
@@ -1161,18 +1162,18 @@ body {
                 border-bottom: 1px solid #e11d48;
                 color: #e11d48;
                 font-size: 18px;
-                transition: all 1s ease-in-out;
+                transition: all 0.5s ease-in-out;
               }
 
               .label_invalid{
                 color: #e11d48;
-                transition: all 1s ease-in-out;
+                transition: all 0.5s ease-in-out;
               }
 
               .error_message  {
                 display: inline-block;
                 opacity: 0;
-                transition: all 1s ease-in-out;
+                transition: all 0.5s ease-in-out;
                 position: relative;
                 top: -27px;
                 color: #e11d48;
@@ -1183,7 +1184,7 @@ body {
 
               .error_message.show_error  {
                 opacity: 1;
-                transition: all 1s ease-in-out;
+                transition: all 0.5s ease-in-out;
               }
 
               input, textarea {
@@ -1291,7 +1292,7 @@ body {
 
               .label_invalid{
                 color: #e11d48;
-                transition: all 1s ease-in-out;
+                transition: all 0.5s ease-in-out;
 
                 a {
                   color: #e11d48;
@@ -1301,7 +1302,7 @@ body {
 
               .checkbox_invalid+label::before {
                 border: 1px solid #e11d48;
-                transition: all 1s ease-in-out;
+                transition: all 0.5s ease-in-out;
               }
 
               label {
@@ -1442,11 +1443,13 @@ body {
           }
 
           .input_invalid {
-            border-bottom: 1px solid #e11d48;
+border-bottom: 1px solid #e11d48;
+            transition: all 0.5s ease-in-out;
             color: #e11d48;
           }
           .label_invalid {
             color: #e11d48;
+            transition: all 0.5s ease-in-out;
           }
 
           label {
@@ -1540,15 +1543,18 @@ body {
               }
 
               .label_invalid{
-                color: #e11d48;
+color: #e11d48;
+                transition: all 0.5s ease-in-out;
 
                 a {
-                  color: #e11d48;
+color: #e11d48;
+                  transition: all 0.5s ease-in-out;
                 }
               }
 
               .checkbox_invalid+label::before {
-                border: 1px solid #e11d48;
+border: 1px solid #e11d48;
+                transition: all 0.5s ease-in-out;
               }
 
               label {
@@ -3443,7 +3449,7 @@ body {
 .error_message  {
   display: inline-block;
   opacity: 0;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   position: relative;
   top: -19px;
   color: #e11d48;
@@ -3454,5 +3460,5 @@ body {
 
 .error_message.show_error  {
   opacity: 1;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
