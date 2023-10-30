@@ -1132,23 +1132,6 @@ transition: all 0.5s ease-in-out;
 
               .contact_form_line-wrapper {
                 width: 355px;
-
-                .error_message  {
-                  display: inline-block;
-                  opacity: 0;
-                  transition: all 0.5s ease-in-out;
-                  position: relative;
-                  top: -27px;
-                  color: #e11d48;
-                  font-size: 14px;
-                  line-height: 24px;
-                  height: 24px;
-                }
-
-                .error_message.show_error  {
-                  opacity: 1;
-                  transition: all 0.5s ease-in-out;
-                }
               }
 
             }
@@ -1167,23 +1150,6 @@ transition: all 0.5s ease-in-out;
 
               .label_invalid{
                 color: #e11d48;
-                transition: all 0.5s ease-in-out;
-              }
-
-              .error_message  {
-                display: inline-block;
-                opacity: 0;
-                transition: all 0.5s ease-in-out;
-                position: relative;
-                top: -27px;
-                color: #e11d48;
-                font-size: 14px;
-                line-height: 24px;
-                height: 24px;
-              }
-
-              .error_message.show_error  {
-                opacity: 1;
                 transition: all 0.5s ease-in-out;
               }
 
@@ -1460,20 +1426,6 @@ border-bottom: 1px solid #e11d48;
             transition: 0.2s ease all;
             -moz-transition: 0.2s ease all;
             -webkit-transition: 0.2s ease all;
-          }
-
-          .error_message {
-            opacity: 0;
-            transition: all 1s ease-in-out;
-            position: relative;
-            top: -19px;
-            color: #e11d48;
-            font-size: 14px;
-          }
-
-          .error_message.show_error  {
-            opacity: 1;
-            transition: all 1s ease-in-out;
           }
         }
 
@@ -3450,8 +3402,8 @@ border: 1px solid #e11d48;
   display: inline-block;
   opacity: 0;
   transition: all 0.5s ease-in-out;
-  position: relative;
-  top: -19px;
+  position: absolute;
+  top: 50%;
   color: #e11d48;
   font-size: 14px;
   line-height: 24px;

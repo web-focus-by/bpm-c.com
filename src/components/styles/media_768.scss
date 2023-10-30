@@ -439,12 +439,6 @@
             margin-top: 25px;
             margin-bottom: 25px;
 
-            .error_message  {
-              color: #e11d48;
-              font-size: 14px;
-              top: 76px;
-            }
-
             input, textarea {
               color: #fff;
               font-style: normal;
@@ -482,13 +476,6 @@
               transition: 0.2s ease all;
               -moz-transition: 0.2s ease all;
               -webkit-transition: 0.2s ease all;
-            }
-
-            span.error_message {
-              position: absolute;
-              color: #e11d48;
-              font-size: 14px;
-              top: 76px;
             }
           }
 
@@ -2353,7 +2340,25 @@
       }
     }
 
-    .contacts {
+  .error_message  {
+    display: inline-block;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 95%;
+    color: #e11d48;
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+  }
+
+  .error_message.show_error  {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
+
+
+  .contacts {
     max-width: 708px;
     margin-top: 69px;
     display: flex;
@@ -2505,10 +2510,6 @@
                   width: 120%;
                 }
 
-                .contact_form_line-wrapper .error_message {
-                  top: 4px;
-                }
-
               }
 
               .contact_form_line-wrapper, .contact_form_line-wrapper--one  {
@@ -2546,10 +2547,6 @@
                   -moz-transition: 0.2s ease all;
                   -webkit-transition: 0.2s ease all;
                 }
-              }
-
-              .contact_form_line-wrapper .error_message {
-                top: 4px;
               }
 
               .contact_form_line-wrapper--one {
@@ -2594,10 +2591,6 @@
       }
     }
   }
-  }
-
-  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper .error_message, .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper--one .error_message {
-    top: 4px;
   }
 
   .footer {
