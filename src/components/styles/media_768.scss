@@ -411,13 +411,30 @@
         width: 608px;
         margin: 30px 0 0 0;
         form {
+
+          .error_message  {
+            display: inline-block;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+            position: absolute;
+            top: 95%;
+            color: #e11d48;
+            font-size: 14px;
+            line-height: 24px;
+            height: 24px;
+          }
+
+          .error_message.show_error  {
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+          }
           .form_line-double {
             display: flex;
             flex-direction: column;
             gap: 0;
 
             .form_line-wrapper {
-              width: 110%;
+              width: 90%;
             }
 
           }
@@ -428,14 +445,14 @@
             gap: 0;
 
             .form_line-wrapper {
-              width: 110%;
+              width: 90%;
             }
 
           }
 
           .form_line-wrapper, .form_line-wrapper--one {
             position: relative;
-            width: 110%;
+            width: 90%;
             margin-top: 25px;
             margin-bottom: 25px;
 

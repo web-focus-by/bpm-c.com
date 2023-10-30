@@ -2438,19 +2438,19 @@
         form {
           .form_line-double {
             display: flex;
-            gap: 71px;
+            gap: 59px;
             margin-bottom: 3px;
 
             .form_line-wrapper {
               margin-bottom: 10px;
-              width: 195px;
+              min-width: 219px;
             }
 
           }
 
           .form_line-wrapper, .form_line-wrapper--one {
             position: relative;
-            width: 650px;
+            width: 499px;
 
             input, textarea {
               color: #fff;

@@ -135,6 +135,24 @@
         width: 462px;
         margin: -4px 0 0 -17px;
         form {
+
+          .error_message  {
+            display: inline-block;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+            position: absolute;
+            top: 70%;
+            color: #e11d48;
+            font-size: 12px;
+            line-height: 24px;
+            height: 24px;
+          }
+
+          .error_message.show_error  {
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+          }
+
           .form_line-double {
             display: flex;
             gap: 20px;
@@ -142,14 +160,15 @@
 
             .form_line-wrapper {
               margin-bottom: 10px;
-              width: 40%;
+              min-width: 30%;
+              width: 35%;
             }
 
           }
 
           .form_line-wrapper, .form_line-wrapper--one {
             position: relative;
-            width: 85%;
+            width: 75%;
 
             input {
               color: #fff;
