@@ -15,7 +15,6 @@ const ProjectsProcess = ({ siteTitle }) => {
   const hoverOn = (target) => {
     const elem = target;
     const child = elem.querySelector('.projects_process_list_item__hover-elem');
-    console.log('on')
     elem.classList.add('hover');
     child.classList.add('hover');
   }
@@ -23,7 +22,6 @@ const ProjectsProcess = ({ siteTitle }) => {
   const hoverLeave = (target) => {
     const elem = target;
     const child = elem.querySelector('.projects_process_list_item__hover-elem.hover');
-    console.log('leave')
     elem.classList.remove('hover');
     child.classList.remove('hover');
   }
@@ -42,7 +40,7 @@ const ProjectsProcess = ({ siteTitle }) => {
           <div className="projects_process_list_item" onMouseOver={(e) => hoverOn(e.target)} onMouseLeave={(e) => hoverLeave(e.target)}>
             <p>analytics</p>
             <span className="smallpuzzle"></span>
-            <div className="projects_process_list_item__hover-elem" onMouseOver={(e) => hoverOn(e.target)} onMouseLeave={(e) => hoverLeave(e.target)}>
+            <div className="projects_process_list_item__hover-elem">
               <span className="ober"></span>
               <p>- Understanding client needs, goals, and functionalities.</p>
               <p>- Analyzing industry trends, competition, and user expectations.</p>
@@ -50,7 +48,7 @@ const ProjectsProcess = ({ siteTitle }) => {
               <div className="projects_process_list_item">
                 <p>design</p>
                 <span className="dye"></span>
-                <div className="projects_process_list_item__hover-elem" onMouseOver={(e) => hoverOn(e.target)} onMouseLeave={(e) => hoverLeave(e.target)}>
+                <div className="projects_process_list_item__hover-elem">
                   <span className="ober"></span>
                   <p>- Creation of a detailed software architecture, outlining components, modules, and interactions.</p>
                   <p>- UI and UX design to ensure intuitive and effective interaction.</p>
@@ -58,7 +56,7 @@ const ProjectsProcess = ({ siteTitle }) => {
                 <div className="projects_process_list_item">
                   <p>front-end</p>
                   <span className="front"></span>
-                  <div className="projects_process_list_item__hover-elem" onMouseOver={(e) => hoverOn(e.target)} onMouseLeave={(e) => hoverLeave(e.target)}>
+                  <div className="projects_process_list_item__hover-elem">
                     <span className="ober"></span>
                     <p>- Creating the structure and styling for user interfaces.</p>
                     <p>- Adding interactivity and dynamic functionalities.</p>
@@ -66,7 +64,7 @@ const ProjectsProcess = ({ siteTitle }) => {
                   <div className="projects_process_list_item">
                     <p>back-end</p>
                     <span className="back"></span>
-                    <div className="projects_process_list_item__hover-elem" onMouseOver={(e) => hoverOn(e.target)} onMouseLeave={(e) => hoverLeave(e.target)}>
+                    <div className="projects_process_list_item__hover-elem">
                       <span className="ober"></span>
                       <p>- Developing the core functionality and data processing.</p>
                       <p>- Storing and managing data using databases.</p>
@@ -74,7 +72,7 @@ const ProjectsProcess = ({ siteTitle }) => {
                     <div className="projects_process_list_item">
                       <p>testing</p>
                       <span className="testing"></span>
-                      <div className="projects_process_list_item__hover-elem" onMouseOver={(e) => hoverOn(e.target)} onMouseLeave={(e) => hoverLeave(e.target)}>
+                      <div className="projects_process_list_item__hover-elem">
                         <span className="ober"></span>
                         <p>- Testing individual components for functionality.</p>
                         <p>- Ensuring different parts work seamlessly together.</p>
@@ -83,7 +81,7 @@ const ProjectsProcess = ({ siteTitle }) => {
                       <div className="projects_process_list_item">
                         <p>launch</p>
                         <span className="smallstar"></span>
-                        <div className="projects_process_list_item__hover-elem" onMouseOver={(e) => hoverOn(e.target)} onMouseLeave={(e) => hoverLeave(e.target)}>
+                        <div className="projects_process_list_item__hover-elem">
                           <span className="ober"></span>
                             <p>- Making the software available on servers or cloud platforms.</p>
                             <p>- Keeping an eye on performance and user interactions.</p>
@@ -92,7 +90,7 @@ const ProjectsProcess = ({ siteTitle }) => {
                          <div className="projects_process_list_item">
                           <p>support</p>
                           <span className="support"></span>
-                          <div className="projects_process_list_item__hover-elem" onMouseOver={(e) => hoverOn(e.target)} onMouseLeave={(e) => hoverLeave(e.target)}>
+                          <div className="projects_process_list_item__hover-elem">
                             <span className="ober"></span>
                             <p>- Ongoing technical support, bug fixes, and updates as required.</p>
                             <p>- Analyzing industry trends, competition, and user expectations.</p>
