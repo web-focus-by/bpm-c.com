@@ -1571,7 +1571,7 @@
             width: 100%;
             font-family: "Acrom", sans-serif;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 14px;
             line-height: 100%;
             color: #1a1b1f;
@@ -1703,18 +1703,19 @@
                 }
 
                 input+label::before {
-                  position: relative;
-                  top: 2px
+                  position: absolute;
+                  top: 2px;
+                  left: -25px;
                 }
 
                 label {
-                  max-width: 303px;
+                  max-width: 284px;
                   font-weight: 400;
                   font-size: 14px;
                   line-height: 120%;
                   position: relative;
                   top: 10px;
-                  margin: 0 0 25px;
+                  margin: 0 0 25px 25px;
                 }
               }
             }
@@ -2601,7 +2602,7 @@
             width: 100%;
             font-family: "Acrom", sans-serif;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 16px;
             line-height: 100%;
             color: #1a1b1f;

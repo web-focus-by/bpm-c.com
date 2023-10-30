@@ -360,7 +360,7 @@ const Contacts = ({ location }) => {
                               required: "Please, agree to the Terms of Use and the Privacy Policy",
                         })}
                           type="checkbox" id="agree" name="agree" value="yes" data-checked={!!isEmpty.checkbox} className={`${errors.checkbox ? "checkbox_invalid" : ""}`} />
-                        <label htmlFor="agree" className={`${errors.checkbox ? "checkbox_invalid" : ""}`}>I agree to the<span>&nbsp;</span><Link to="/">Privacy Policy</Link><span>&nbsp;</span>and<span>&nbsp;</span><Link to="/">Terms of Use</Link></label>
+                        <label htmlFor="agree" className={`${errors.checkbox ? "checkbox_invalid" : ""}`}>I agree to the<span>&nbsp;</span><Link to="/">Privacy Policy</Link><span>  </span>and<span>&nbsp;</span><Link to="/">Terms of Use</Link></label>
                         {errors.checkbox && (
                             <span className={"error_check"}>{errors.checkbox?.message}</span>
                           )}

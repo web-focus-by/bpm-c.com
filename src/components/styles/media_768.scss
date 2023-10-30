@@ -128,7 +128,7 @@
             width: 100%;
             font-family: "Acrom", sans-serif;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 16px;
             line-height: 100%;
             color: #1a1b1f;
@@ -2437,7 +2437,7 @@
             width: 100%;
             font-family: "Acrom", sans-serif;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 16px;
             line-height: 100%;
             color: #1a1b1f;
@@ -3517,6 +3517,13 @@
 }
 
 @media screen and (max-width: 857px) {
+
+  .breacrumbs-list.contacts {
+    position: absolute;
+    margin: 0;
+    top: 17%;
+  }
+
  .contacts {
     max-width: 708px;
     margin-top: 69px;
@@ -3600,7 +3607,7 @@
             width: 100%;
             font-family: "Acrom", sans-serif;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 16px;
             line-height: 100%;
             color: #1a1b1f;
@@ -3666,14 +3673,14 @@
                 margin-bottom: 44px;
 
                 .contact_form_line-wrapper {
-                  width: 120%;
+                  width: 100%;
                 }
 
               }
 
               .contact_form_line-wrapper, .contact_form_line-wrapper--one  {
                 position: relative;
-                width: 120%;
+                width: 100%;
                 &:first-child {
                   margin-bottom: 44px;
                 }
