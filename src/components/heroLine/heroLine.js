@@ -89,7 +89,19 @@ const HeroLine = ({}) => {
                     <span className="power-icon"></span>
                 </div>
             </div>
-        </marquee>
+          </marquee>
+          <div className="emily">
+            <span className="cursor"></span>
+            <p className="name">Emily</p>
+          </div>
+          <div className="joshua">
+            <span className="cursor"></span>
+            <p className="name">Joshua</p>
+          </div>
+          <div className="michael">
+            <span className="cursor"></span>
+            <p className="name">Michael</p>
+          </div>
     </div>
   )
 }

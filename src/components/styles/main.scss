@@ -1602,6 +1602,7 @@ body {
 }
 
 .services {
+  position: relative;
   &__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1618,6 +1619,7 @@ body {
       border-radius: 25px;
       height: 210px;
       transition: all 0.25s;
+      position: relative;
 
       span {
         text-decoration: none;
@@ -1632,17 +1634,29 @@ body {
       &:hover {
         .services_list_item {
           transform: translateY(-18px);
-          background: url(../../images/test.png) no-repeat;
+          // background: url(../../images/test.png) no-repeat;
           background-size: cover;
           background-position-x: 100%;
           // background-position: 70% 80px;
 
-          span {
-            transform: translateY(-50px);
-          }
+          // span {
+          //   transform: translateY(-50px);
+          // }
         }
       }
     }
+  }
+
+  .vio-item {
+    display: inline-block;
+    opacity: 0;
+    width: 133px;
+    height: 133px;
+    border-radius: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, #8F72E2 0%, #8782E0 0%, #908BED 0.01%, rgba(143, 114, 226, 0.80) 100%);
+    filter: blur(20px);
+    z-index: 5;
+    transition: opacity .4s ease-in;
   }
 }
 
@@ -1705,6 +1719,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0 45px;
+    cursor: pointer;
 
     p {
       font-weight: 400;
@@ -1718,9 +1733,65 @@ body {
       padding: 0 45px;
       height: 100%;
       top: 100%;
-          left: 105%;
+      left: 105%;
       position: absolute;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
     }
+    .projects_process_list_item.hover {
+      transition: all 0.5s ease-in-out;
+      background-color: #935CFF;
+    }
+
+    .projects_process_list_item__hover-elem {
+      display: none;
+      opacity: 0;
+      transition: opacity .7s ease-in-out;
+      transition-delay: 0.3s;
+      background-color:#935CFF;
+      border-radius: 25px;
+      padding: 15px 20px 30px;
+      position: absolute;
+      top: 78px;
+      width: 288px;
+      z-index: 2;
+
+      .ober {
+        display: inline-block;
+        width: 37px;
+        height: 17px;
+        background: url(../../images/ober.svg);
+        position: absolute;
+        top: -6.5%;
+        left: 45%;
+      }
+
+      p {
+        color:#fff;
+        cursor: default;
+        font-family: 'Acrom';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        margin: 15px 0 0;
+      }
+
+      p:first-child {
+        margin: 0;
+      }
+    }
+
+    .projects_process_list_item__hover-elem.hover {
+        display: block;
+        opacity: 1;
+        transition: opacity .7s ease-in-out;
+        transition-delay: .4s;
+    }
+  }
+  .projects_process_list_item.hover {
+    transition: all 0.5s ease-in-out;
+    background-color: #935CFF;
   }
 }
 

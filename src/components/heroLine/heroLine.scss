@@ -1,5 +1,112 @@
+@keyframes line-emily {
+  0% {
+    top: 0;
+    left: 80%;
+  }
+
+  20% {
+    top: 60%;
+    left: 90%
+  }
+
+  40% {
+    left: 70%;
+    top: 40%;
+  }
+
+  60% {
+    top: 0;
+    left: 60%;
+  }
+
+  80% {
+    top: 50%;
+    left: 90%
+  }
+
+  100% {
+    left: 80%;
+    top: 0;
+  }
+}
+
+@keyframes line-joshua {
+  0% {
+    top: 50%;
+    left: 60%;
+  }
+
+  20% {
+    top: 30%;
+    left: 40%
+  }
+
+  40% {
+    left: 70%;
+    top: 100%;
+  }
+
+  60% {
+    top: 50%;
+    left: 40%;
+  }
+
+  80% {
+    top: 70%;
+    left:30%
+  }
+
+  100% {
+    top: 50%;
+    left: 60%;
+  }
+}
+
+@keyframes line-michael {
+  0% {
+    top: 10%;
+    left: 20%;
+  }
+
+  20% {
+    top: 40%;
+    left: 10%
+  }
+
+  40% {
+    left: 40%;
+    top: 0;
+  }
+
+  60% {
+    top: 30%;
+    left: 50%;
+  }
+
+  80% {
+    top: 50%;
+    left: 30%
+  }
+
+  100% {
+    top: 10%;
+    left: 20%;
+  }
+}
+
+// @keyframes line-nameleft {
+//   0% {
+//     left: 10%;
+//   }
+
+//   100% {
+//     left: 60%;
+//   }
+// }
+
 .line_wrapper {
     margin-bottom: 240px;
+    position: relative;
     .line {
         .line_inner {
             width: 100%;
@@ -17,7 +124,7 @@
                 margin-right: 30px;
                 margin-left: 30px;
             }
-    
+
             .clapp, .power {
                 background-color: #935CFF;
                 border-radius: 100%;
@@ -25,6 +132,90 @@
                 max-width: 43px;
                 max-height: 43px;
             }
+        }
+    }
+
+    .emily {
+        margin-left: 30px;
+        position: absolute;
+        animation: line-emily 8s linear infinite;
+        span {
+            width: 18px;
+            height: 21px;
+            display: inline-block;
+            background: url(../../images/orange.svg) no-repeat;
+            position: absolute;
+            top: -18px;
+            left: -16px;
+        }
+
+        p {
+            max-width: 40px;
+            border-radius: 5px;
+            padding: 8px 17px;
+            background-color: #FF8A00;
+            color: #fff;
+            font-family: 'Acrom';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+        }
+    }
+
+    .michael {
+        margin-left: 0px;
+        position: absolute;
+        animation: line-michael 6s linear infinite;
+        span {
+            width: 18px;
+            height: 21px;
+            display: inline-block;
+            background: url(../../images/pink.svg) no-repeat;
+            position: absolute;
+            top: -18px;
+            left: -16px;
+        }
+
+        p {
+            max-width: 56px;
+            border-radius: 5px;
+            padding: 8px 17px;
+            background-color: #FF3E88;
+            color: #fff;
+            font-family: 'Acrom';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+        }
+    }
+
+    .joshua {
+        margin-left: 10px;
+        position: absolute;
+        animation: line-joshua 13s linear infinite;
+        span {
+            width: 18px;
+            height: 21px;
+            display: inline-block;
+            background: url(../../images/vio.svg) no-repeat;
+            position: absolute;
+            top: -18px;
+            left: -16px;
+        }
+
+        p {
+            max-width: 53px;
+            border-radius: 5px;
+            padding: 8px 17px;
+            background-color: #935CFF;
+            color: #fff;
+            font-family: 'Acrom';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
         }
     }
 }

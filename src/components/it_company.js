@@ -91,7 +91,7 @@ const ITCompany = () => (
                 <div className="code type" id="code">
                   <p><span className="vio">export function</span> <span className="bl">App</span><span className="yel">(</span><span className="sftbl">props</span><span className="yel">)</span>&nbsp;<span className="yel">{'{'}</span></p>
                   <p style={{marginLeft: 15}}><span className="vio">return (</span></p>
-                  <p style={{marginLeft: 30}}><span className="white">&lt;</span><span className="red">div</span> <span className="or">className</span><span className="sftbl">=</span><span className="green">'App'</span><span className="white">&gt;</span></p>
+                  <p style={{marginLeft: 30}}><span className="white">&lt;</span><span className="red">div</span> <span className="or">className</span><span className="sftbl">=</span><span className="green">'app'</span><span className="white">&gt;</span></p>
 
                   <p style={{marginLeft: 45}}><span className="white">&lt;</span><span className="red">h1</span><span className="white">&gt;</span><span className="white">Secret message</span><span className="white">&lt;</span><span className="red">/h1</span><span className="white">&gt;</span></p>
 
