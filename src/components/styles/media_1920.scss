@@ -1090,6 +1090,24 @@
         width: 462px;
         margin: -4px 0 0 -17px;
         form {
+
+          .error_message  {
+            display: inline-block;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+            position: absolute;
+            top: 70%;
+            color: #e11d48;
+            font-size: 14px;
+            line-height: 24px;
+            height: 24px;
+          }
+
+          .error_message.show_error  {
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+          }
+
           .form_line-double {
             display: flex;
             gap: 71px;
@@ -1097,19 +1115,14 @@
 
             .form_line-wrapper {
               margin-bottom: 10px;
-              width: 195px;
+              min-width: 253px;
             }
 
           }
 
           .form_line-wrapper, .form_line-wrapper--one {
             position: relative;
-            width: 650px;
-
-            .error_message  {
-              color: #e11d48;
-              font-size: 16px;
-            }
+            width: 576px;
 
             input, textarea {
               color: #fff;
@@ -1147,12 +1160,6 @@
               transition: 0.2s ease all;
               -moz-transition: 0.2s ease all;
               -webkit-transition: 0.2s ease all;
-            }
-
-            span.error_message {
-              position: absolute;
-              color: #e11d48;
-              font-size: 16px;
             }
           }
 

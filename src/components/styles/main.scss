@@ -965,6 +965,7 @@ body {
   margin-top: 43px;
   display: flex;
   justify-content: space-between;
+transition: all 0.5s ease-in-out;
   flex-wrap: wrap;
   gap: 2%;
   &__contact {
@@ -1036,12 +1037,12 @@ body {
     }
   }
   &__contacts_form {
-    width: 60%;
+    width: 50.5%;
     .contact_form {
       border-radius: 40px;
-      padding: 20px 0 0 164px;
+      padding: 20px 0 0 0;
       display: grid;
-      grid-template-columns: 1.03fr 0.97fr;
+      grid-template-columns: 1fr;
       background-position: 110px 165px;
       &__block {
         color: #1a1b1f;
@@ -1131,23 +1132,6 @@ body {
 
               .contact_form_line-wrapper {
                 width: 355px;
-
-                .error_message  {
-                  display: inline-block;
-                  opacity: 0;
-                  transition: all 1s ease-in-out;
-                  position: relative;
-                  top: -27px;
-                  color: #e11d48;
-                  font-size: 14px;
-                  line-height: 24px;
-                  height: 24px;
-                }
-
-                .error_message.show_error  {
-                  opacity: 1;
-                  transition: all 1s ease-in-out;
-                }
               }
 
             }
@@ -1161,29 +1145,12 @@ body {
                 border-bottom: 1px solid #e11d48;
                 color: #e11d48;
                 font-size: 18px;
-                transition: all 1s ease-in-out;
+                transition: all 0.5s ease-in-out;
               }
 
               .label_invalid{
                 color: #e11d48;
-                transition: all 1s ease-in-out;
-              }
-
-              .error_message  {
-                display: inline-block;
-                opacity: 0;
-                transition: all 1s ease-in-out;
-                position: relative;
-                top: -27px;
-                color: #e11d48;
-                font-size: 14px;
-                line-height: 24px;
-                height: 24px;
-              }
-
-              .error_message.show_error  {
-                opacity: 1;
-                transition: all 1s ease-in-out;
+                transition: all 0.5s ease-in-out;
               }
 
               input, textarea {
@@ -1291,7 +1258,7 @@ body {
 
               .label_invalid{
                 color: #e11d48;
-                transition: all 1s ease-in-out;
+                transition: all 0.5s ease-in-out;
 
                 a {
                   color: #e11d48;
@@ -1301,7 +1268,7 @@ body {
 
               .checkbox_invalid+label::before {
                 border: 1px solid #e11d48;
-                transition: all 1s ease-in-out;
+                transition: all 0.5s ease-in-out;
               }
 
               label {
@@ -1403,14 +1370,32 @@ body {
       width: 650px;
       margin-left: -11px;
       form {
+
+        .error_message  {
+          display: inline-block;
+          opacity: 0;
+          transition: all 0.5s ease-in-out;
+          position: absolute;
+          top: 75%;
+          color: #e11d48;
+          font-size: 14px;
+          line-height: 24px;
+          height: 24px;
+        }
+
+        .error_message.show_error  {
+          opacity: 1;
+          transition: all 0.5s ease-in-out;
+        }
+
         .form_line-double {
           display: flex;
-          gap: 100px;
+          gap: 50px;
           margin-bottom: 3px;
 
           .form_line-wrapper {
             margin-bottom: 24px;
-            width: 275px;
+            width: 300px;
           }
 
         }
@@ -1442,11 +1427,13 @@ body {
           }
 
           .input_invalid {
-            border-bottom: 1px solid #e11d48;
+border-bottom: 1px solid #e11d48;
+            transition: all 0.5s ease-in-out;
             color: #e11d48;
           }
           .label_invalid {
             color: #e11d48;
+            transition: all 0.5s ease-in-out;
           }
 
           label {
@@ -1457,20 +1444,6 @@ body {
             transition: 0.2s ease all;
             -moz-transition: 0.2s ease all;
             -webkit-transition: 0.2s ease all;
-          }
-
-          .error_message {
-            opacity: 0;
-            transition: all 1s ease-in-out;
-            position: relative;
-            top: -19px;
-            color: #e11d48;
-            font-size: 14px;
-          }
-
-          .error_message.show_error  {
-            opacity: 1;
-            transition: all 1s ease-in-out;
           }
         }
 
@@ -1540,15 +1513,18 @@ body {
               }
 
               .label_invalid{
-                color: #e11d48;
+color: #e11d48;
+                transition: all 0.5s ease-in-out;
 
                 a {
-                  color: #e11d48;
+color: #e11d48;
+                  transition: all 0.5s ease-in-out;
                 }
               }
 
               .checkbox_invalid+label::before {
-                border: 1px solid #e11d48;
+border: 1px solid #e11d48;
+                transition: all 0.5s ease-in-out;
               }
 
               label {
@@ -3443,9 +3419,9 @@ body {
 .error_message  {
   display: inline-block;
   opacity: 0;
-  transition: all 1s ease-in-out;
-  position: relative;
-  top: -19px;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: 50%;
   color: #e11d48;
   font-size: 14px;
   line-height: 24px;
@@ -3454,5 +3430,5 @@ body {
 
 .error_message.show_error  {
   opacity: 1;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }

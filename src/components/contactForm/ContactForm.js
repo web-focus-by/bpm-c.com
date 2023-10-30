@@ -76,12 +76,8 @@ const ContactForm = props => {
             data-empty={!!isEmpty.name}
           />
           <label className={`${errors.name ? "label_invalid" : ""}`}>Name*</label>
-          {errors.name && (
-            <>
-              <br></br>
-              <span className={"error_message"}>{errors.name?.message}</span>
-            </>
-          )}
+          <br></br>
+          <span className={`error_message ${errors.name ? "show_error" : ""}`}>{errors.name?.message}</span>
           </div>
 
           <div className="form_line-wrapper">
@@ -102,12 +98,8 @@ const ContactForm = props => {
             data-empty={!!isEmpty.email}
           />
           <label className={`${errors.email ? "label_invalid" : ""}`}>E-mail*</label>
-          {errors.email && (
-            <>
-              <br></br>
-              <span className={"error_message"}>{errors.email?.message}</span>
-            </>
-          )}
+          <br></br>
+          <span className={`error_message ${errors.email ? "show_error" : ""}`}>{errors.email?.message}</span>
         </div>
       </div>
 
@@ -138,12 +130,8 @@ const ContactForm = props => {
             data-empty={!!isEmpty.company}
           />
           <label className={`${errors.company ? "label_invalid" : ""}`}>Company</label>
-          {errors.company && (
-            <>
-              <br></br>
-              <span className={"error_message"}>{errors.company?.message}</span>
-            </>
-          )}
+          <br></br>
+          <span className={`error_message ${errors.company ? "show_error" : ""}`}>{errors.company?.message}</span>
         </div>
       </div>
 
@@ -162,17 +150,13 @@ const ContactForm = props => {
             data-empty={!!isEmpty.message}
         />
         <label className={`${errors.message ? "label_invalid" : ""}`}>Message*</label>
-          {errors.message && (
-            <>
-              <br></br>
-            < span className={"error_message"}>{errors.message?.message}</span>
-            </>
-          )}
+        <br></br>
+        <span className={`error_message ${errors.message ? "show_error" : ""}`}>{errors.message?.message}</span>
       </div>
 
       <div className="form_block_send">
           <input type="checkbox" id="agree" name="agree" value="yes" required/>
-          <label htmlFor="agree">I agree to the<span>&nbsp;</span><Link to="/">Privacy Policy</Link><span>&nbsp;</span>and<span>&nbsp;</span><Link to="/">Terms of Use</Link></label>
+          <label htmlFor="agree">I agree to the<span>&nbsp;</span><Link to="/">Privacy Policy</Link><span>  </span>and<span>&nbsp;</span><Link to="/">Terms of Use</Link></label>
           <div>
           <button className="button_black" type={ errors.message || errors.company || errors.email || errors.name ? '' : 'submit'}>
   Send<span className="arrow_white"></span>

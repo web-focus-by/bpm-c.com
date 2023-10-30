@@ -448,9 +448,27 @@
       }
 
       .form_block_wrapper {
-        width: 343px;
+        width: 335px;
         margin: 30px 0 0 0;
         form {
+
+          .error_message  {
+            display: inline-block;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+            position: absolute;
+            top: 75%;
+            color: #e11d48;
+            font-size: 12px;
+            line-height: 24px;
+            height: 24px;
+          }
+
+          .error_message.show_error  {
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+          }
+
           .form_line-double {
             display: flex;
             flex-direction: column;
@@ -470,7 +488,7 @@
             gap: 0;
 
             .form_line-wrapper {
-              width: 343px;
+              width: 335px;
               margin-top: 25px;
               margin-bottom: 25px;
             }
@@ -479,17 +497,9 @@
 
           .form_line-wrapper, .form_line-wrapper--one {
             position: relative;
-            width: 343px;
+            width: 335px;
             margin-top: 25px;
             margin-bottom: 25px;
-
-            .error_message  {
-              color: #e11d48;
-              font-size: 12px;
-              top: -4px;
-            }
-
-            
 
             input, textarea {
               color: #fff;
@@ -528,12 +538,6 @@
               transition: 0.2s ease all;
               -moz-transition: 0.2s ease all;
               -webkit-transition: 0.2s ease all;
-            }
-
-            span.error_message {
-              position: absolute;
-              color: #e11d48;
-              font-size: 12px;
             }
           }
 
@@ -577,9 +581,11 @@
                   border: 1px solid #858A9E;
                   border-radius: 0.25em;
                   margin-right: 0.5em;
+                  position: absolute;
                   background-repeat: no-repeat;
                   background-position: center center;
                   background-size: 50% 50%;
+                  left: 16px;
                 }
 
                 input:checked+label::before {
@@ -598,13 +604,12 @@
                 .checkbox_invalid+label::before {
                   border: 1px solid #e11d48;
                 }
-
                 label {
                   display: inline-block;
                   font-weight: 400;
                   font-size: 14px;
                   line-height: 100%;
-                  margin: 0 0 40px;
+                  margin: 0 0 40px 25px;
                   max-width: 220px;
 
                   a {
@@ -806,9 +811,11 @@
       display: flex;
       flex-wrap: wrap;
       width: 343px;
+      gap: 14px;
 
       img:first-child {
         height: 263px;
+        margin-right: 0;
       }
 
       img:nth-child(2) {
@@ -1571,7 +1578,7 @@
             width: 100%;
             font-family: "Acrom", sans-serif;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 14px;
             line-height: 100%;
             color: #1a1b1f;
@@ -1703,18 +1710,19 @@
                 }
 
                 input+label::before {
-                  position: relative;
-                  top: 2px
+                  position: absolute;
+                  top: 2px;
+                  left: -25px;
                 }
 
                 label {
-                  max-width: 303px;
+                  max-width: 284px;
                   font-weight: 400;
                   font-size: 14px;
                   line-height: 120%;
                   position: relative;
                   top: 10px;
-                  margin: 0 0 25px;
+                  margin: 0 0 25px 25px;
                 }
               }
             }
@@ -2601,7 +2609,7 @@
             width: 100%;
             font-family: "Acrom", sans-serif;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 16px;
             line-height: 100%;
             color: #1a1b1f;
@@ -2750,10 +2758,6 @@
       }
     }
   }
-  }
-
-  .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper .error_message, .contacts__contacts_form .contact_form__block .contact_form_block_wrapper form .contact_form_line-wrapper--one .error_message {
-    top: -19px;
   }
 
   .about_list {
