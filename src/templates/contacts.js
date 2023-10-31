@@ -253,21 +253,14 @@ const Contacts = ({ location }) => {
 
                       <div className="contact_form_line-wrapper--one">
                         <textarea
-                          {...register("message", {
-                              required: "Please, complete this field",
-                            })}
+                          {...register("message")}
                             id="message"
                             type="text"
                             name="message"
                             maxLength="256"
-                            className={`contact_form_message input-yellow  ${
-                              errors.message ? "input_invalid" : ""
-                            }`}
-                            data-empty={!!isEmpty.message}
+                            className="contact_form_message input-yellow"
                         />
-                        <label className={`${errors.message ? "label_invalid" : ""}`}>Message*</label>
-                          <br></br>
-                          <span className={`error_message ${errors.message ? "show_error" : ""}`}>{errors.message?.message}</span>
+                        <label>Message</label>
                       </div>
 
                   <div className="contact_form_block_buttons_title">
@@ -360,7 +353,7 @@ const Contacts = ({ location }) => {
                               required: "Please, agree to the Terms of Use and the Privacy Policy",
                         })}
                           type="checkbox" id="agree" name="agree" value="yes" data-checked={!!isEmpty.checkbox} className={`${errors.checkbox ? "checkbox_invalid" : ""}`} />
-                        <label htmlFor="agree" className={`${errors.checkbox ? "checkbox_invalid" : ""}`}>I agree to the<span>&nbsp;</span><Link to="/">Privacy Policy</Link><span>  </span>and<span>&nbsp;</span><Link to="/">Terms of Use</Link></label>
+                        <label htmlFor="agree" className={`${errors.checkbox ? "checkbox_invalid" : ""}`}>I agree to the<span>&nbsp;</span><Link to="/">Privacy Policy&nbsp;</Link><span>  </span>and<span>&nbsp;</span><Link to="/">Terms of Use</Link></label>
                         {errors.checkbox && (
                             <span className={"error_check"}>{errors.checkbox?.message}</span>
                           )}
