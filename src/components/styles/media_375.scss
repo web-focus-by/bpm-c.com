@@ -1,4 +1,22 @@
 @media (max-width: 375px) {
+
+  .error_message  {
+    display: inline-block;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 65%;
+    color: #e11d48;
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+  }
+
+  .error_message.show_error  {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
+
   .blog {
     &__products {
       display: flex;
@@ -1638,7 +1656,7 @@
                 margin-bottom: 41px;
 
                 .contact_form_line-wrapper {
-                  width: 343px;
+                  width: 96%;
                 }
 
               }
@@ -1646,7 +1664,7 @@
               .contact_form_line-wrapper, .contact_form_line-wrapper--one {
                 position: relative;
                 margin-bottom: 39px;
-                width: 343px;
+                width: 96%;
 
                 &:first-child {
                   margin-bottom: 39px;
@@ -2674,14 +2692,14 @@
                 margin-bottom: 44px;
 
                 .contact_form_line-wrapper {
-                  width: 343px;
+                  width: 96%;
                 }
 
               }
 
               .contact_form_line-wrapper, .contact_form_line-wrapper--one  {
                 position: relative;
-                width: 343px;
+                width: 96%;
                 &:first-child {
                   margin-bottom: 44px;
                 }
