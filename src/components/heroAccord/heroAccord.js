@@ -19,9 +19,9 @@ const HeroAccordion = ({ title, emoji, descr, dataContent }) => {
     <>
         <div className="container">
             <div className="hero">
-                <h1 className="accor__title title_62">
+                <h2 className="accor__title title_62">
                         {title}<span className={emoji}></span>
-                </h1>
+                </h2>
                 {descr ? <div className="accor__description">
                             {descr.map((item) => (
                                 <p className="accor__description">{item}</p>

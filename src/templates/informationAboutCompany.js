@@ -130,7 +130,7 @@ const InformationAboutCompany = ({ location, data }) => {
         <div className="container">
           <div className="mission margin_bottom_240">
             <div className="mission__title">
-              <div className="title">Our mission</div>
+              <h2 className="title">Our mission</h2>
               <div className="mission_description">
                 <p>Our goal has been remaining unchanged since the very first days of our work – high-quality IT services and results within satisfying costs, timelines, and cooperation conditions.</p>
                 <p>We are always ready to negotiate and look for compromises, as we understand market specifics and client company’s possibilities. There are no exceptions, as we have similar attitude regarding all our partners.</p>
@@ -147,7 +147,7 @@ const InformationAboutCompany = ({ location, data }) => {
         <div className="container">
           <div className="prof_path margin_bottom_240">
             <div className="prof_path__wrap">
-              <div className="prof_path_title">Our professional path</div>
+              <h2 className="prof_path_title">Our professional path</h2>
               <div className="prof_path_description">
                 Every business has its own unique history of success, and BPM Cloud is not an exception. We’re sure, that we’ll get far more achievement and new stages of our professional growth that we’ll gladly share with our partners and leads.
               </div>
@@ -204,17 +204,17 @@ const InformationAboutCompany = ({ location, data }) => {
         <div className="container">
           <div className="profit margin_bottom_240">
             <div className="profit__wrap">
-              <div className="profit_title">Who can profit from our services?</div>
+              <h2 className="profit_title">Who can profit from our services?</h2>
               <div className="profit_description">
                 Though the range of businesses we work with is literally unlimited, we can highlight the main types of our clients who find our services useful.
               </div>
               <div className="profit__companie">
                 <div className="profit_not-it">
-                  <div className="title">Non-IT companies</div>
+                  <h3 className="title">Non-IT companies</h3>
                   <div className="descr">These are the clients who work in the spheres not connected with informational technologies, but who also want to obtain any digital product. For them, we offer a vast range of services, including software and application development, full IT augmentation and many others.</div>
                 </div>
                 <div className="profit_it">
-                  <div className="title">IT product companies</div>
+                  <h3 className="title">IT product companies</h3>
                   <div className="descr">These are in some way our colleagues, who lack experience or staff and want to fill this gap. We may offer such types of services as IT consulting, QA outsourcing or project management outsourcing.</div>
                 </div>
               </div>
@@ -230,24 +230,24 @@ const InformationAboutCompany = ({ location, data }) => {
         <HeroValues title="What is our pricing policy?" emoji='false' description={descriptionOfPricing} dataContent={princip}></HeroValues>
         <div className="container">
           <div className="partnering margin_bottom_240">
-              <div className="partnering_title">What can you get from partnering with us?</div>
+              <h2 className="partnering_title">What can you get from partnering with us?</h2>
               <div className="partnering_description">
                 Though you may see many outsourcing IT companies of different size and experience, we at BPM Cloud can offer you several benefits.</div>
               <div className="partnering__cards">
                 <div className="cards_item">
-                  <div className="title">No delays</div>
+                  <h3 className="title">No delays</h3>
                   <div className="descr">Immediately after finalizing the negotiation stage, we initiate work on your project, ensuring a seamless transition from planning to execution.</div>
                 </div>
                 <div className="cards_item">
-                  <div className="title">Cost-efficient solutions</div>
+                  <h3 className="title">Cost-efficient solutions</h3>
                   <div className="descr">The market statistics and our own practice say that working with us is about 30% cheaper if compared to hiring, training and managing an in-house IT department.</div>
                 </div>
                 <div className="cards_item">
-                  <div className="title">Clear working conditions</div>
+                  <h3 className="title">Clear working conditions</h3>
                   <div className="descr">Frankness and corporate sincerity are the main principles of our working policy, so you’ll always be aware of the work in progress. And of course, no pitfalls in contracts and working conditions.</div>
                 </div>
                 <div className="cards_item">
-                  <div className="title">Full dedication</div>
+                  <h3 className="title">Full dedication</h3>
                   <div className="descr">We’re ready to take full responsibility for the development process, so a minimum of your attention is required. </div>
                 </div>
             </div>

@@ -11,15 +11,15 @@ const HeroBlack = ({ title, description, undertitle, dataContent}) => {
     <div className="container black">
         <div className="black">
             <div className="black__title">
-                    <div className="title">{title}</div>
+                    <h2 className="title">{title}</h2>
                     <div className="description">{description}</div>
             </div>
             <div className="black__cards">
-                <div className="black_undertitle">{undertitle}:</div>
+                <h3 className="black_undertitle">{undertitle}:</h3>
                 <div className="cards-list">
                     {dataContent.map(item => (
                         <div className="black_item">
-                            <div className="item__info">— {item}</div>
+                            <div className="item__info">{item}</div>
                         </div>
                     ))}
                 </div>

@@ -11,7 +11,7 @@ const HeroFacts = ({ title, description, flex, dataContent}) => {
         <div className="hero margin_bottom_240">
               <div className="facts">
                   <div className={`facts__title ${flex === 'true' ? '' : 'no-flex'}`}>
-                      <div className="title">{title}</div>
+                      <h2 className="title">{title}</h2>
                       <div className="description">
                           <p>{description}</p>
                       </div>
@@ -21,7 +21,7 @@ const HeroFacts = ({ title, description, flex, dataContent}) => {
                           {dataContent.map(obj => (
                             <div className={`fact-item ${obj.classCircle}`}>
                               <div className="item__info">
-                                  <div className="item__info-title">{obj.title}</div>
+                                  <h3 className="item__info-title">{obj.title}</h3>
                                   <div className="item__info-content">{obj.content}</div>
                               </div>
                               <div className={`fact-item__circle ${obj.classCircle}`}>
