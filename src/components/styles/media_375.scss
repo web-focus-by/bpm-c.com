@@ -354,7 +354,7 @@
     &__subtitle {
       font-weight: 300;
       font-size: 15px;
-      line-height: 130%;
+      line-height: 150%;
     }
 
     &__description {
@@ -711,6 +711,7 @@
 
       .prof_path_history {
         overflow: hidden;
+        margin-bottom: 20px;
         .prof_path_line {
           display: flex;
           gap: 0;
@@ -728,7 +729,7 @@
         }
 
         span.line {
-          height: 1224px;
+          height: 1147px;
         }
       }
     }
@@ -764,7 +765,7 @@
         max-height: 28px;
         border-radius: 100%;
         background-color: #FFD771;
-        padding: 28px;
+        padding: 22px;
       }
 
       .stick_heart {
@@ -1822,6 +1823,7 @@
       }
 
       .prof_path_history {
+        margin-bottom: 20px;
         .prof_path_line {
           display: flex;
           gap: 0;
@@ -1841,7 +1843,7 @@
         }
 
         span.line {
-          height: 1224px;
+          height: 1147px;
           left: 23%;
           top: 7px;
         }
@@ -1878,9 +1880,9 @@
         max-height: 28px;
         border-radius: 100%;
         background-color: #FFD771;
-        padding: 28px;
+        padding: 23px 19px 21px 24px;
         left: 0;
-        top: 60px;
+        top: 45px;
       }
 
       .stick_heart {
@@ -1889,8 +1891,9 @@
         max-height: 35px;
         border-radius: 100%;
         background-color: #B1D2E0;
-        padding: 18px;
-        right: 431px;
+        padding: 14px 10px 10px 16px;
+        right: 24%;
+        bottom: 4%;
       }
     }
   }
@@ -1948,11 +1951,11 @@
       width: 343px;
 
       img:first-child {
-        height: 263px;
+        width: 196px;
       }
 
       img:nth-child(2) {
-        height: 170px;
+        width: 127px;
       }
 
       .stick_computer {
@@ -1962,6 +1965,7 @@
         border-radius: 100%;
         background-color: #FFD771;
         padding: 17px 18px;
+        bottom: -40px;
       }
 
       .stick_light {
@@ -1970,8 +1974,8 @@
         max-height: 50px;
         border-radius: 100%;
         background-color: #B1D2E0;
-        padding: 12px 3px 0px 14px;
-        right: 2%;
+        padding: 12px 4px 0px 14px;
+        right: 0;
       }
     }
   }
