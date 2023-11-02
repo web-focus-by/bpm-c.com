@@ -723,13 +723,13 @@
           }
 
           .descr {
-            width: 219px;
+            width: 100%;
             font-size: 15px;
           }
         }
 
         span.line {
-          height: 1147px;
+          height: 1082px;
         }
       }
     }
@@ -765,7 +765,9 @@
         max-height: 28px;
         border-radius: 100%;
         background-color: #FFD771;
-        padding: 22px;
+        padding: 19px 16px 17px 22px;
+        left: 0;
+        top: 50px;
       }
 
       .stick_heart {
@@ -1835,15 +1837,14 @@
           }
 
           .descr {
-            min-width: 219px;
-            max-width: 243px;
+            width: 100%;
             font-size: 15px;
             padding: 0;
           }
         }
 
         span.line {
-          height: 1147px;
+          height: 1082px;
           left: 23%;
           top: 7px;
         }
@@ -1868,6 +1869,10 @@
           align-self: end;
         }
 
+        img:nth-child(3) {
+          width: 202px;
+        }
+
         img:last-child {
           width: 121px;
           height: 161px;
@@ -1880,9 +1885,9 @@
         max-height: 28px;
         border-radius: 100%;
         background-color: #FFD771;
-        padding: 23px 19px 21px 24px;
+        padding: 19px 16px 17px 22px;
         left: 0;
-        top: 45px;
+        top: 50px;
       }
 
       .stick_heart {
@@ -1892,8 +1897,8 @@
         border-radius: 100%;
         background-color: #B1D2E0;
         padding: 14px 10px 10px 16px;
-        right: 24%;
-        bottom: 4%;
+        right: 21%;
+        bottom: 5%;
       }
     }
   }
@@ -2796,12 +2801,12 @@
 
   .span_breadcrumbs {
     .breadcrumbs_span {
-      margin-left: 15px !important;
+      margin-left: 10px !important;
     }
   }
 
   .span_breadcrumbs {
-      margin-left: 15px;
+      margin-left: 10px;
   }
 
   .reviews {
