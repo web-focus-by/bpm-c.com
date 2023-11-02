@@ -11,7 +11,7 @@ const HeroValues = ({ title, emoji, description, dataContent}) => {
         <div className="hero margin_bottom_240">
               <div className="values">
                   <div className={`values__title ${description.length === 1 ? 'flex': ''}`}>
-                      <div className="title">{title}{emoji === 'true' ? <span className="dev"><span class="develop"></span></span>: null}</div>
+                      <h2 className="title">{title}{emoji === 'true' ? <span className="dev"><span class="develop"></span></span>: null}</h2>
                       <div className={`description ${description.length === 1 ? '': 'flex'}`}>
                           {description.map(item => (<p>{item}</p>))}
                       </div>
@@ -21,7 +21,7 @@ const HeroValues = ({ title, emoji, description, dataContent}) => {
                           {dataContent.map((obj, index )=> (
                               <div className={`value-item ${dataContent.length > 3 ? 'length': ''}`}>
                                 <div className="item__info-number">0{index + 1}.</div>
-                                <div className="item__info-title">{obj.title}</div>
+                                <h3 className="item__info-title">{obj.title}</h3>
                                 <div className="item__info-content">{obj.content}</div>
                             </div>
                             ))}

@@ -117,21 +117,14 @@ const ContactForm = props => {
 
         <div className="form_line-wrapper">
           <input
-            {...register("company", {
-              required: "Please, complete this field",
-            })}
+            {...register("company")}
             id="company"
             type="text"
             name="company"
             maxLength="50"
-            className={`form_company input-yellow  ${
-              errors.company ? "input_invalid" : ""
-            }`}
-            data-empty={!!isEmpty.company}
+            className="form_company input-yellow"
           />
-          <label className={`${errors.company ? "label_invalid" : ""}`}>Company</label>
-          <br></br>
-          <span className={`error_message ${errors.company ? "show_error" : ""}`}>{errors.company?.message}</span>
+          <label>Company</label>
         </div>
       </div>
 
@@ -156,7 +149,7 @@ const ContactForm = props => {
 
       <div className="form_block_send">
           <input type="checkbox" id="agree" name="agree" value="yes" required/>
-          <label htmlFor="agree">I agree to the<span>&nbsp;</span><Link to="/">Privacy Policy</Link><span>  </span>and<span>&nbsp;</span><Link to="/">Terms of Use</Link></label>
+          <label htmlFor="agree">I agree to the<span>&nbsp;</span><Link to="/">Privacy Policy</Link><span> &nbsp;</span>and<span>&nbsp;</span><Link to="/">Terms of Use</Link></label>
           <div>
           <button className="button_black" type={ errors.message || errors.company || errors.email || errors.name ? '' : 'submit'}>
   Send<span className="arrow_white"></span>

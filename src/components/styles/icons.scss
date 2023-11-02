@@ -793,6 +793,18 @@
     transform: rotate(0deg);
   }
 
+  .computer {
+    display: inline-block;
+    background: url(../../images/pc.svg) no-repeat;
+    background-size: 30px 30px;
+  }
+
+  .light {
+    display: inline-block;
+    background: url(../../images/light.svg) no-repeat;
+    background-size: 40px 40px;
+  }
+
   .circle {
     display: inline-block;
     background: url(../../images/circle.svg) no-repeat;
@@ -808,6 +820,17 @@
     margin-left: 10px;
     top: 17px;
     background-size: 34px 34px;
+  }
+
+  .cup {
+    display: inline-block;
+    background: url(../../images/cup.svg) no-repeat;
+    background-size: 23px 23px;
+  }
+  .heart {
+    display: inline-block;
+    background: url(../../images/heart.svg) no-repeat;
+    background-size: 28px 29px;
   }
 
   .faq {
@@ -832,5 +855,17 @@
     background: url(../../images/circle.svg) no-repeat;
     background-size: 16px 16px;
     margin: 6px 12px 0 1px;
+  }
+
+  .computer {
+    display: inline-block;
+    background: url(../../images/pc.svg) no-repeat;
+    background-size: 23px 23px;
+  }
+
+  .light {
+    display: inline-block;
+    background: url(../../images/light.svg) no-repeat;
+    background-size: 30px 30px;
   }
 }

@@ -20,6 +20,7 @@
             font-weight: 500;
             line-height: 105%; /* 65.1px */
             text-transform: capitalize;
+            margin: 0;
             margin-bottom: 40px;
         }
 
@@ -49,7 +50,7 @@
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-            column-gap: 20px;
+            column-gap: 40px;
             row-gap: 25px;
 
             .black_item {
@@ -62,6 +63,16 @@
                     font-style: normal;
                     font-weight: 400;
                     line-height: 150%;
+                    position: relative;
+                    left: 15px
+                }
+
+                .item__info::before {
+                    left: -15px;
+                    content: '—';
+                    height: 100%;
+                    position: absolute;
+                    margin-right: 10px;
                 }
             }
         }
@@ -78,7 +89,37 @@
         background: radial-gradient(50% 50% at 50% 50%, rgba(143, 114, 226, 0.60) 0%, rgba(135, 130, 224, 0.60) 0%, rgba(144, 139, 237, 0.60) 0.01%, rgba(143, 114, 226, 0.48) 100%);
         filter: blur(60px);
         z-index: 2;
+        animation: header_circle_purple 6s linear infinite,
+        header_circle_purpleleft 6s linear infinite alternate;
     }
+
+    @keyframes header_circle_purple {
+        0% {
+          bottom: 80%;
+          left: 40%;
+        }
+      
+        50% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+          bottom: 10px;
+        }
+      
+        100% {
+          bottom: 80%;
+          left: 40%;
+        }
+      }
+      
+      @keyframes header_circle_purpleleft {
+        0% {
+          left: 10%;
+        }
+      
+        100% {
+          left: 60%;
+        }
+      }
 }
 
 
@@ -198,7 +239,7 @@
             display: inline-block;
             position: absolute;
             top: 0;
-            left: 65%;
+            left: 0%;
             width: 189px;
             height: 189px;
             border-radius: 100%;
@@ -247,7 +288,7 @@
                 row-gap: 15px;
 
                 .black_item {
-                    width: 343px;
+                    width: 324px;
 
                     .item__info {
                         font-size: 18px;
@@ -260,7 +301,7 @@
             display: inline-block;
             position: absolute;
             top: 0;
-            left: 191px;
+            left: 0;
             width: 130px;
             height: 130px;
             border-radius: 100%;

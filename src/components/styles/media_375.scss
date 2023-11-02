@@ -354,7 +354,7 @@
     &__subtitle {
       font-weight: 300;
       font-size: 15px;
-      line-height: 130%;
+      line-height: 150%;
     }
 
     &__description {
@@ -711,6 +711,7 @@
 
       .prof_path_history {
         overflow: hidden;
+        margin-bottom: 20px;
         .prof_path_line {
           display: flex;
           gap: 0;
@@ -722,13 +723,13 @@
           }
 
           .descr {
-            width: 219px;
+            width: 100%;
             font-size: 15px;
           }
         }
 
         span.line {
-          height: 1224px;
+          height: 1082px;
         }
       }
     }
@@ -764,7 +765,9 @@
         max-height: 28px;
         border-radius: 100%;
         background-color: #FFD771;
-        padding: 28px;
+        padding: 19px 16px 17px 22px;
+        left: 0;
+        top: 50px;
       }
 
       .stick_heart {
@@ -1822,6 +1825,7 @@
       }
 
       .prof_path_history {
+        margin-bottom: 20px;
         .prof_path_line {
           display: flex;
           gap: 0;
@@ -1833,15 +1837,14 @@
           }
 
           .descr {
-            min-width: 219px;
-            max-width: 243px;
+            width: 100%;
             font-size: 15px;
             padding: 0;
           }
         }
 
         span.line {
-          height: 1224px;
+          height: 1082px;
           left: 23%;
           top: 7px;
         }
@@ -1866,6 +1869,10 @@
           align-self: end;
         }
 
+        img:nth-child(3) {
+          width: 202px;
+        }
+
         img:last-child {
           width: 121px;
           height: 161px;
@@ -1878,9 +1885,9 @@
         max-height: 28px;
         border-radius: 100%;
         background-color: #FFD771;
-        padding: 28px;
+        padding: 19px 16px 17px 22px;
         left: 0;
-        top: 60px;
+        top: 50px;
       }
 
       .stick_heart {
@@ -1889,8 +1896,9 @@
         max-height: 35px;
         border-radius: 100%;
         background-color: #B1D2E0;
-        padding: 18px;
-        right: 431px;
+        padding: 14px 10px 10px 16px;
+        right: 21%;
+        bottom: 5%;
       }
     }
   }
@@ -1948,11 +1956,11 @@
       width: 343px;
 
       img:first-child {
-        height: 263px;
+        width: 196px;
       }
 
       img:nth-child(2) {
-        height: 170px;
+        width: 127px;
       }
 
       .stick_computer {
@@ -1962,6 +1970,7 @@
         border-radius: 100%;
         background-color: #FFD771;
         padding: 17px 18px;
+        bottom: -40px;
       }
 
       .stick_light {
@@ -1970,8 +1979,8 @@
         max-height: 50px;
         border-radius: 100%;
         background-color: #B1D2E0;
-        padding: 12px 3px 0px 14px;
-        right: 2%;
+        padding: 12px 4px 0px 14px;
+        right: 0;
       }
     }
   }
@@ -2792,12 +2801,12 @@
 
   .span_breadcrumbs {
     .breadcrumbs_span {
-      margin-left: 15px !important;
+      margin-left: 10px !important;
     }
   }
 
   .span_breadcrumbs {
-      margin-left: 15px;
+      margin-left: 10px;
   }
 
   .reviews {
