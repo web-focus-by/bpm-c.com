@@ -219,3 +219,99 @@
         }
     }
 }
+
+@media screen and (max-width: 1600px) {
+  .line_wrapper {
+    margin-bottom: 150px;
+    position: relative;
+    .line {
+        .line_inner {
+            width: 100%;
+            display: flex;
+            p {
+                color: #1A1B1F;
+                font-family: 'Acrom';
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 100%; /* 80px */
+                text-transform: capitalize;
+                margin: 0;
+                margin-right: 20px;
+                margin-left: 20px;
+            }
+
+            .clapp, .power {
+                background-color: #935CFF;
+                border-radius: 100%;
+                padding: 15px 11px 3px 18px;
+                max-width: 43px;
+                max-height: 43px;
+            }
+        }
+    }
+
+    .emily {
+        margin-left: 30px;
+        position: absolute;
+        animation: line-emily 8s linear infinite;
+        span {
+            display: inline-block;
+            background: url(../../images/orange.svg) no-repeat;
+            background-size: 14px 17px;
+            position: absolute;
+            top: -6px;
+            left: -10px;
+        }
+
+        p {
+            max-width: 40px;
+            border-radius: 5px;
+            padding: 5px 12px;
+            font-size: 10px;
+        }
+    }
+
+    .michael {
+        margin-left: 0px;
+        position: absolute;
+        animation: line-michael 6s linear infinite;
+        span {
+            display: inline-block;
+            background: url(../../images/pink.svg) no-repeat;
+            background-size: 14px 17px;
+            position: absolute;
+            top: -6px;
+            left: -10px;
+        }
+
+        p {
+            max-width: 56px;
+            border-radius: 5px;
+            padding: 5px 12px;
+            font-size: 10px;
+        }
+    }
+
+    .joshua {
+        margin-left: 10px;
+        position: absolute;
+        animation: line-joshua 13s linear infinite;
+        span {
+            display: inline-block;
+            background: url(../../images/vio.svg) no-repeat;
+            background-size: 14px 17px;
+            position: absolute;
+            top: -6px;
+            left: -10px;
+        }
+
+        p {
+            max-width: 53px;
+            border-radius: 5px;
+            padding: 5px 12px;
+            font-size: 10px;
+        }
+    }
+}
+}

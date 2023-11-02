@@ -51,7 +51,7 @@ const ServicesIndex = ({ title }) => {
         <div className="services__list">
             {data.map((obj) => (
             <div className="services_list_item">
-                    <span>{obj.title}<span class={obj.classTitle}></span></span>
+                    <span>{obj.title}<div class={obj.classTitle}></div></span>
             </div>
             ))}
         </div>

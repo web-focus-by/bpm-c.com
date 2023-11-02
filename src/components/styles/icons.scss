@@ -70,11 +70,12 @@
 .smallpuzzle {
   display: inline-block;
   background: url(../../images/smallpuzzle.svg) no-repeat;
+  background-size: 18px 24px;
   width: 23px;
   height: 23px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1366px) {
   .smallpuzzle {
     display: inline-block;
     background: url(../../images/minipuzzle.svg) no-repeat !important;
@@ -601,10 +602,9 @@
   position: relative;
   top: 7px;
   display: inline-block;
-  width: 30px;
-  height: 30px;
   margin-left: 10px;
   background: url(../../images/health.svg) no-repeat;
+  background-size: 30px 30px;
 }
 .tele {
   position: relative;
@@ -700,6 +700,11 @@
     background-size: 33px 33px;
   }
 
+  .service {
+    position: relative;
+    top: 7px;
+  }
+
   .faq {
     display: inline-block;
     background-size: 33px 33px;
@@ -768,6 +773,99 @@
     display: inline-block;
     background: url(../../images/circle.svg) no-repeat;
     background-size: 18px 18px;
+  }
+
+  .clapp-icon {
+    display: inline-block;
+    background: url(../../images/clapp-icon.svg) no-repeat;
+    background-size: 24px 24px;
+  }
+  
+  .power-icon {
+    display: inline-block;
+    background: url(../../images/power-icon.svg) no-repeat;
+    background-size: 24px 24px;
+  }
+
+  .health {
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-left: 10px;
+    background: url(../../images/health.svg) no-repeat;
+    background-size: 21px 21px;
+  }
+  .tele {
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-left: 10px;
+    background: url(../../images/tele.svg) no-repeat;
+    background-size: 21px 21px;
+  }
+  .enter {
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-left: 10px;
+    background: url(../../images/enter.svg) no-repeat;
+    background-size: 21px 21px;
+  }
+  .retail {
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-left: 10px;
+    background: url(../../images/retail.svg) no-repeat;
+    background-size: 21px 21px;
+  }
+  .fin {
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-left: 10px;
+    background: url(../../images/fin.svg) no-repeat;
+    background-size: 21px 21px;
+  }
+  .marketing {
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-left: 10px;
+    background: url(../../images/marketing.svg) no-repeat;
+    background-size: 21px 21px;
+  }
+  .log {
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-left: 10px;
+    background: url(../../images/log.svg) no-repeat;
+    background-size: 21px 21px;
+  }
+  .edu {
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-left: 10px;
+    background: url(../../images/edu.svg) no-repeat;
+    background-size: 21px 21px;
   }
 }
 

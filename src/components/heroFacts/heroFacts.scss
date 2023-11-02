@@ -263,7 +263,7 @@
     }
 }
 
-@media screen and (max-width: 1366px){
+@media screen and (max-width: 1600px){
     .facts {
         .facts__title {
             display: flex;
@@ -277,6 +277,22 @@
 
             .description {
                 width: 519px;
+
+                p {
+                    font-size: 12.806px;
+                    padding-left: 0px;
+                }
+            }
+        }
+
+        .facts__title.no-flex {
+            .title {
+                font-size: 44px;
+                width: 776px;
+            }
+
+            .description {
+                width: 562px;
 
                 p {
                     font-size: 12.806px;

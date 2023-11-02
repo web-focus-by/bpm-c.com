@@ -102,6 +102,25 @@
 
   .it_company {
     margin-top: 220px;
+
+    &__title {
+      max-width: 393px;
+      margin-bottom: 0 !important;
+      margin-top: 0;
+    }
+
+    &__info {
+      display: flex;
+      gap: 14px;
+      margin: 28px 0 50px;
+      p {
+        width: 488px;
+        color: #5c5c5c;
+        margin-bottom: 0 !important;
+        font-size: 12px;
+        line-height: 150%;
+      }
+    }
   }
 
   .web-site-reason {
@@ -131,11 +150,36 @@
   .title_62 {
     max-width: 100%;
     font-size: 46px;
+    margin-bottom: 28px;
   }
 
   .portfolio {
-    .portfolio_products_block_title {
-      font-size: 22px;
+    &__products {
+      .portfolio_products_block {
+        .portfolio_products_block_title {
+          font-size: calc(
+            22px + (30 - 22) * ((100vw - 1366px) / (1920 - 1366))
+          );
+        }
+
+        .portfolio_products_block_pic {
+          width: 519px;
+          height: 277px;
+          margin-bottom: calc(
+            17px + (24 - 17) * ((100vw - 1366px) / (1920 - 1366))
+          );
+
+          &__content {
+            background-size: 519px 277px;
+          }
+        }
+
+        .portfolio_products_block_list {
+          margin-bottom: calc(
+            17px + (24 - 17) * ((100vw - 1366px) / (1920 - 1366))
+          );
+        }
+      }
     }
   }
 
@@ -175,7 +219,7 @@
     .swiper-slide {
       width: 250px;
       height: max-content;
-      margin: 0 16px;
+      margin: 0;
     }
   }
 
@@ -1545,9 +1589,7 @@
   .projects_process {
     .projects_process_list_item {
       .projects_process_list_item {
-        left: calc(
-          130.5px + (148.5 - 130.5) * ((100vw - 1024px) / (1366 - 1024))
-        );
+        left: 105%;
       }
     }
   }
@@ -2147,6 +2189,26 @@ s
     top: 10%;
   }
 
+  .accor__title {
+    max-width: 556px;
+    text-transform: capitalize;
+ }
+ 
+ .accor__description {
+   display: flex;
+   gap: 14px;
+ 
+   p {
+     margin: 0;
+     min-width: 519px;
+     font-family: 'Acrom';
+     font-size: 12px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 150%;
+   }
+ }
+
   .contacts {
     width: 100%;
     margin-top: 43px;
@@ -2564,6 +2626,106 @@ s
                   }
                 }
               }
+        }
+      }
+    }
+  }
+
+  
+
+  .services {
+    &__list {
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+
+      .services_list_item {
+        border-radius: 18px;
+        height: 149px;
+
+        span, a {
+          position: relative;
+          font-size: 14px;
+        }
+
+        &:hover {
+          // background-position: 95% 45px;
+          background: url(../../images/test_1366.svg) no-repeat;
+          background-size: cover;
+          background-position-x: 100%;
+        }
+      }
+    }
+  }
+
+  .blog {
+    &__products {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 14px;
+  
+      .blog_products_block {
+        .blog_products_block_pic {
+          width: 252px;
+          height: 241px;
+          border-radius: 14px;
+          overflow: hidden;
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 241px;
+            border-radius: 14px;
+          }
+        }
+  
+        .blog_products_block_pic:hover {
+            cursor: url(../../images/cursor-pointer.svg), pointer;
+            img {
+              transition: 1s;
+              transform: scale(1.1);
+            }
+          }
+  
+        .blog_products_block_list {
+          margin: 27px 0 24px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+  
+          .hash_list_block {
+            cursor: pointer;
+            &:first-child {
+              margin-right: 10px;
+            }
+          }
+  
+          .blog_products_block_list_date {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+          }
+        }
+  
+        .blog_products_block_title {
+          a {
+            color: #935CFF;
+          }
+          font-size: 24px;
+          font-weight: 500;
+        }
+      }
+  
+  
+      .blog_products_block:hover {
+        .blog_products_block_list{
+          ul {
+            li {
+              a{
+                background-color:#1A1B1F;
+                color: #ffffff;
+                border-radius: 80px;
+              }
+            }
+          }
         }
       }
     }
