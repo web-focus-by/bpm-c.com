@@ -793,6 +793,18 @@
     transform: rotate(0deg);
   }
 
+  .computer {
+    display: inline-block;
+    background: url(../../images/pc.svg) no-repeat;
+    background-size: 30px 30px;
+  }
+
+  .light {
+    display: inline-block;
+    background: url(../../images/light.svg) no-repeat;
+    background-size: 40px 40px;
+  }
+
   .circle {
     display: inline-block;
     background: url(../../images/circle.svg) no-repeat;

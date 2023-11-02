@@ -96,20 +96,18 @@
     @keyframes header_circle_purple {
         0% {
           bottom: 80%;
-          left: 60%;
+          left: 40%;
         }
       
         50% {
           -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
           bottom: 10px;
-          width: 534.48px;
-          height: 534.48px;
         }
       
         100% {
           bottom: 80%;
-          left: 60%;
+          left: 40%;
         }
       }
       
@@ -241,7 +239,7 @@
             display: inline-block;
             position: absolute;
             top: 0;
-            left: 65%;
+            left: 0%;
             width: 189px;
             height: 189px;
             border-radius: 100%;
@@ -303,7 +301,7 @@
             display: inline-block;
             position: absolute;
             top: 0;
-            left: 191px;
+            left: 0;
             width: 130px;
             height: 130px;
             border-radius: 100%;
