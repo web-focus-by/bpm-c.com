@@ -215,7 +215,7 @@ const Blog = ({ titlePage }) => {
         </div>
         <div className="blog__products">
           <Swiper
-            spaceBetween={widthScreen <= 1366 ? 20 : 25}
+            spaceBetween={widthScreen <= 1366 ? 15 : 20}
             slidesPerView={"auto"}
             // onSlideChange={() => console.log("slide change")}
             // onSwiper={swiper => console.log(swiper)}
@@ -224,7 +224,7 @@ const Blog = ({ titlePage }) => {
                 width: 1920,
                 allowTouchMove: true,
               },
-              1366: {
+              1600: {
                 width: 1366,
                 allowTouchMove: true,
               },
