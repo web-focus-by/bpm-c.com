@@ -16,10 +16,23 @@
     }
   }
   .it_company {
-    margin-top: 280px;
+    margin-top: 204px;
+
+   &__title {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
     &__info {
       line-height: 150%;
+      flex-direction: column;
       margin-right: -12px;
+      width: 688px;
+
+      p {
+        margin-top: 0;
+        width: 688px;
+        font-size: 15px !important;
+      }
     }
   }
   .web-site-reason {
@@ -310,8 +323,11 @@
     }
 
     &__subtitle {
-      font-size: 16px;
-      margin-bottom: clamp(30px, 10vw, 50px);
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      margin-bottom: 30px;
     }
 
     &__description {
@@ -1571,10 +1587,6 @@
     }
   }
 
-  .it_company {
-    margin-top: calc(180px + (280 - 180) * ((100vw - 375px) / (768 - 375)));
-  }
-
   .web-site-reason {
     margin-top: calc(180px + (280 - 180) * ((100vw - 375px) / (768 - 375)));
   }
@@ -2700,11 +2712,11 @@
 @media (max-width: 600px) {
   .it_company {
     flex-direction: column;
-    margin-top: 240px;
+    margin-top: 204px;
 
     &__title {
       max-width: none;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     &__info {

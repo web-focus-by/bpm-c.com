@@ -901,6 +901,16 @@
     transform: rotate(0deg);
   }
 
+  .laptop {
+    display: inline-block;
+    min-width: 28px;
+    height: 28px;
+    background: url(../../images/laptop-icon.svg) no-repeat;
+    background-size: 28px 28px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
   .computer {
     display: inline-block;
     background: url(../../images/pc.svg) no-repeat;
