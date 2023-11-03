@@ -24,7 +24,7 @@ const Hero = ({ location }) => {
       </div>
       <div className="hero">
         <h1 className="hero__title title_80">
-          <span class="vio_title">BPM Cloud</span><br />A Custom Software<br />Development Company
+          <span class="vio_title">BPM&nbsp;Cloud</span><br />A&nbsp;Custom Software<br />Development Company
           <span className="yellow_hand"></span>
         </h1>
         <div className="hero__subtitle">

@@ -1307,6 +1307,180 @@
             }
         }
     }
+
+    .values__cards .cards-list .value-item.it_company-item {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding-right: 12px;
+
+        .item__info-content {
+            max-width: 331px;
+            color:#5C5C5C;
+            font-family: 'Acrom';
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+        }
+    }
+
+    .values__cards .cards-list .value-item.it_company-item:first-child {
+        height: 285px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding-right: 12px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.bpm {
+        border-right: 1px solid #E1DAF4;
+        margin-top: 25px;
+        padding-right: 15px;
+        margin-bottom: 50px;
+        height: 350px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.bpm img {
+            width: 323px;
+            height: 323px;
+            margin-top: 0;
+            margin-left: 5px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.bpm .laptop_circle {
+        position: relative;
+        top: -324px;
+        left: 29px;
+        background-color: #FFD771;
+        border-radius: 100%;
+        width:  68px;
+        height: 68px;
+    }
+
+    .values__cards .value-lines .value-line {
+        width: 334px;
+    }
+
+    .values__cards .value-lines.length .value-line {
+        min-width: 334px;
+    }
+
+    .values__cards .value-lines.length {
+        top: -325px;
+    }
+
+    .values__cards .value-lines.length .value-line:last-child {
+        display: none;
+    }
+
+    .values__cards .value-lines.under {
+        margin-left: 0;
+    }
+
+    .values__cards .value-lines.under.tablet {
+        display: flex;
+        position: relative;
+        top: -725px;
+        margin-left: 0;
+        height: 1px;
+        gap: 20px;
+    }
+
+    .values__cards .value-lines.under.tablet .value-line {
+        display: inline-block;
+        min-width: 334px;
+        height: 1px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people {
+        padding-left: 10px;
+        margin-top: 25px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_kanu .circle-video {
+        width: 40px;
+        height: 40px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_vlada .circle-video {
+        width: 40px;
+        height: 40px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_kanu video {
+        width: 40px;
+        height: 40px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_vlada video {
+        width: 40px;
+        height: 40px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .gif {
+        width: 350px;
+        height: 50%;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_kanu .code {
+        width: 229px;
+        padding: 20px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_kanu .code.type p {
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_vlada {
+        top: 0;
+        margin-left: 118px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_vlada.show {
+        top: -67px;
+        margin-left: 118px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_vlada .welcome  {
+        background-color: #1A1B1F;
+        border-radius: 17px;
+        font-size: 10px;
+        line-height: 150%;
+        color: #fff;
+        padding: 14px;
+    }
+
+    .values__cards .cards-list .value-item.it_company-item:nth-child(2) {
+        padding-right: 0;
+        max-width: 331px;
+        font-size: 15px;
+        border-right: none;
+    }
+
+    .values__cards .cards-list .value-item.it_company-item:nth-child(3) {
+        margin-top: 0;
+        padding-left: 0;
+        border-left: none;
+        max-width: 331px;
+        font-size: 15px;
+        height: 272px;
+    }
+
+    .values__cards .cards-list .value-item.it_company-item:nth-child(4) {
+        margin-top: 0;
+        padding-right: 0;
+        max-width: 331px;
+        font-size: 15px;
+    }
+
+    .values__cards .cards-list .value-item .item__info-number {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .values__cards .cards-list .value-item .item__info-title {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 450px) {

@@ -529,6 +529,23 @@
             }
         }
 
+        .facts__title.no-flex {
+            .title {
+                width: 343px;
+                font-size: 42px;
+                margin-bottom: 20px;
+            }
+
+            .description {
+                width: 343px;
+
+                p {
+                    font-size: 15px;
+                    padding-left: 0px;
+                }
+            }
+        }
+
         .facts__cards {
             .cards-list {
                 display: flex;

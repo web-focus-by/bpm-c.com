@@ -2192,22 +2192,22 @@ s
   .accor__title {
     max-width: 556px;
     text-transform: capitalize;
- }
- 
- .accor__description {
-   display: flex;
-   gap: 14px;
- 
-   p {
-     margin: 0;
-     min-width: 519px;
-     font-family: 'Acrom';
-     font-size: 12px;
-     font-style: normal;
-     font-weight: 400;
-     line-height: 150%;
-   }
- }
+  }
+
+  .accor__description {
+    display: flex;
+    gap: 14px;
+
+    p {
+      margin: 0;
+      min-width: 519px;
+      font-family: 'Acrom';
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
 
   .contacts {
     width: 100%;

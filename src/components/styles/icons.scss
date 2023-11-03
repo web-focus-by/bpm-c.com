@@ -940,6 +940,15 @@
     background-size: 34px 34px;
   }
 
+  .service {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    background: url(../../images/service-icon.svg) no-repeat;
+    background-size: 30px 30px;
+  }
+
   .cup {
     display: inline-block;
     background: url(../../images/cup.svg) no-repeat;
