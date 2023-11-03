@@ -877,36 +877,34 @@
 
   .portfolio {
     &__products {
+      column-gap: 20px;
+      row-gap: 20px;
       .portfolio_products_block {
-        .hash {
-          ul {
-            li {
-              &:last-child {
-                display: none;
-              }
-            }
-          }
+        .portfolio_products_block_title {
+          margin-top: 12px;
+          font-size: 24px;
+          line-height: 115%;
         }
 
         .portfolio_products_block_pic {
-          margin-bottom: 19px;
-          &__content {
-            height: clamp(280px, 24vw, 330px);
-          }
+          width: 334px;
+          height: 240px;
+          margin-bottom: 20px;
 
-          img {
-            // height: 280px;
-            object-fit: cover;
-            border-radius: 10%;
+          &__content {
+            background-size: 334px 240px;
           }
         }
 
         .portfolio_products_block_list {
-          margin-bottom: 16px;
+          margin-bottom: calc(
+            17px + (24 - 17) * ((100vw - 1366px) / (1920 - 1366))
+          );
         }
       }
     }
   }
+
   .modal {
     &__content {
       .form {
