@@ -905,6 +905,16 @@
     }
   }
 
+  .accor__description {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+
+   p {
+     font-size: 15px;
+   }
+ }
+
   .modal {
     &__content {
       .form {
@@ -982,8 +992,6 @@
         }
 
         &:hover {
-          // background-position: 50% 75px;
-          background: url(../../images/test_768.svg) no-repeat;
           background-size: contain;
           background-position-x: 100%;
         }
@@ -3521,7 +3529,7 @@
     }
 
     .accordion-arrow.active {
-      padding: 10px 9px 13px 2px;
+      padding: 12px 9px 13px 4px;
       background-color:#935CFF;
     }
 

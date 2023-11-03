@@ -440,6 +440,23 @@
             }
         }
 
+        .facts__title.no-flex {
+            margin-bottom: 30px;
+            .title {
+                width: 524px;
+                font-size: 44px;
+            }
+
+            .description {
+                width: 687px;
+
+                p {
+                    font-size: 15px;
+                    padding-left: 0px;
+                }
+            }
+        }
+
         .facts__cards {
             .cards-list {
                 display: flex;
