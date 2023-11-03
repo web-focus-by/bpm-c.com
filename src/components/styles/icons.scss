@@ -691,7 +691,7 @@
 }
 
 
-@media screen and (max-width: 1650px) {
+@media screen and (max-width: 1600px) {
   .notes_of_reviewes {
     display: inline-block;
     background: url(../../images/notes_of_reviewes.svg) no-repeat;
@@ -755,6 +755,16 @@
     position: relative;
     top: -15px;
     left: 0px;
+  }
+
+  .laptop {
+    display: inline-block;
+    min-width: 26px;
+    height: 26px;
+    background: url(../../images/laptop-icon.svg) no-repeat;
+    background-size: 26px 26px;
+    margin-top: 19px;
+    margin-left: 19px;
   }
 
   .computer {

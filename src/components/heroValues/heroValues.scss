@@ -413,6 +413,7 @@
         .values__cards {
             .cards-list {
                 display: flex;
+                flex-wrap: nowrap;
 
                 .value-item {
                     border-right: 1px solid #E1DAF4;
@@ -463,44 +464,36 @@
                     padding-right: 0;
                 }
 
-            }
-        }
-
-
-        .values__cards {
-            .cards-list {
-                display: flex;
-                flex-wrap: wrap;
-                .value-item.it_company-item {
+                .value-item .it_company-item {
                     margin-top: 23px;
                     margin-bottom: 23px;
                     padding-right: 22px;
-        
-                     .item__info-content {
-                        max-width: 375px;
+
+                    .item__info-content {
+                        max-width: 357px;
                         color:#5C5C5C;
                         font-family: 'Acrom';
-                        font-size: 12px;
+                        font-size: 18px;
                         font-style: normal;
                         font-weight: 400;
                         line-height: 150%;
                     }
                 }
-        
+
                 .value-item.it_company-item:nth-child(3) {
                     border-left: 1px solid #E1DAF4;
                     order: 5;
                 }
-        
+
                 .value-item.it_company-item:nth-child(4) {
                     border-right: none;
                     order: 6;
-        
+
                     .item__info-content {
                         max-width: 432px;
                     }
                 }
-        
+
                 .value_item.it_company-item.bpm {
                     img {
                         width: 350px;
@@ -508,7 +501,7 @@
                         margin-top: 10px;
                         margin-left: 70px;
                     }
-        
+
                     .laptop_circle {
                         position: relative;
                         top: -357px;
@@ -519,11 +512,11 @@
                         height: 91px;
                     }
                 }
-        
+
                 .value_item.it_company-item.people {
                     margin-top: 30px;
                     padding-right: 10px;
-        
+
                     .gif {
                         opacity: 0;
                         width: 600px;
@@ -532,7 +525,7 @@
                         background: url(../../images/gif.gif) no-repeat;
                         transition: all 0.5s;
                     }
-        
+
                     .gif.vis {
                         opacity: 1;
                         width: 600px;
@@ -541,7 +534,7 @@
                         background: url(../../images/gif.gif) no-repeat;
                         transition: all 0.5s;
                     }
-        
+
                     .values_kanu, .values_vlada {
                         display: flex;
                         gap: 10px;
@@ -552,22 +545,22 @@
                             object-fit: cover;
                             border-radius: 50%;
                         }
-        
+
                         .code {
                             width: 247px;
                             background-color: #1A1B1F;
                             border-radius: 25px;
                             margin-bottom: 51px;
                             padding: 20px;
-        
-        
+
+
                             p {
                                 margin: 0;
                                 width: 0;
                                 overflow: hidden; /* Ensures the content is not revealed until the animation */
                                 white-space: nowrap; /* Keeps the content on a single line */
                             }
-        
+
                             .vio {
                                 color: #B578CC;
                             }
@@ -581,7 +574,7 @@
                                 color: #E9D70C;
                             }
                             .white {
-                               color: #ABB2BF;
+                            color: #ABB2BF;
                             }
                             .red {
                                 color: #CD4B3C;
@@ -593,7 +586,7 @@
                                 color: #98C379;
                             }
                         }
-        
+
                         .code.type {
                             p {
                                 animation:
@@ -601,7 +594,7 @@
                                 animation-delay: 0s;
                                 animation-fill-mode: both;
                             }
-        
+
                             p:nth-child(2) {
                                 animation-delay: 4s;
                             }
@@ -622,7 +615,7 @@
                                 animation-delay: 13.5s;
                             }
                         }
-        
+
                         .welcome {
                             background-color: #1A1B1F;
                             border-radius: 25px;
@@ -630,7 +623,7 @@
                             padding: 20px;
                         }
                     }
-        
+
                     .values_vlada {
                         opacity: 0;
                         transition: all 0.5s ease-in-out;
@@ -639,7 +632,7 @@
                         margin-bottom: 0;
                         margin-left: 184px;
                     }
-        
+
                     .values_vlada.show {
                         opacity: 1;
                         position: relative;
@@ -647,56 +640,166 @@
                         top: 0;
                     }
                 }
-        
-                .value-item:first-child {
-                    padding-left: 0;
-                }
-        
-                .value-item:last-child {
-                    border-right: none;
-                    padding-right: 0;
-                }
-        
-                .value-item.length {
-                    padding-left: 30px;
-                }
-        
-                .value-item.length:first-child {
-                    padding-left: 0;
-                    padding-right: 43px;
-                }
+
             }
-        
-            .value-lines{
-                width: 980px;
-                display: flex;
-                gap: 20px;
-        
-                .value-line {
-                    width: 480px;
-                    height: 1px;
-                    background-color: #E1DAF4;
-                }
+        }
+
+        .value-lines{
+            width: 980px;
+            display: flex;
+            gap: 20px;
+
+            .value-line {
+                width: 480px;
+                height: 1px;
+                background-color: #E1DAF4;
             }
-        
-            .value-lines.under{
-                width: 980px;
-                margin-left: 500px;
-            }
-        
-            .value-lines.length {
-                width: 100%;
-                position: relative;
-                top: -426px;
-        
-                .value-line {
-                    min-width: 480px;
-                    height: 1px;
-                    background-color: #E1DAF4;
-                }
+        }
+
+        .value-lines.under{
+            width: 980px;
+            margin-left: 500px;
+        }
+
+        .value-lines.length {
+            width: 100%;
+            position: relative;
+            top: -426px;
+
+            .value-line {
+                min-width: 480px;
+                height: 1px;
+                background-color: #E1DAF4;
             }
         }
     }
+
+        .values__cards .cards-list .value-item.it_company-item {
+            height: 230px;
+            margin-top: 23px;
+            margin-bottom: 23px;
+            padding-right: 22px;
+
+            .item__info-content {
+                max-width: 327px;
+                color:#5C5C5C;
+                font-family: 'Acrom';
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+            }
+        }
+
+        .values__cards .cards-list .value_item.it_company-item.people {
+            margin-top: -33px;
+        }
+
+        .values__cards .cards-list .value_item.it_company-item.bpm img {
+                width: 249px;
+                height: 249px;
+                margin-top: 10px;
+                margin-left: 50px;
+        }
+
+        .values__cards .cards-list .value_item.it_company-item.bpm .laptop_circle {
+            position: relative;
+            top: -257px;
+            left: 52px;
+            background-color: #FFD771;
+            border-radius: 100%;
+            width:  64px;
+            height: 64px;
+        }
+
+        .values__cards .value-lines .value-line {
+            width: 340px;
+        }
+
+        .values__cards .value-lines.length .value-line {
+            min-width: 340px;
+        }
+
+        .values__cards .value-lines.length {
+            top: -301px;
+        }
+
+        .values__cards .value-lines.under {
+            margin-left: 360px;
+        }
+
+        .values__cards .cards-list .value_item.it_company-item.people .values_kanu .circle-video {
+            width: 28px;
+            height: 28px;
+        }
+
+        .values__cards .cards-list .value_item.it_company-item.people .values_vlada .circle-video {
+            width: 28px;
+            height: 28px;
+        }
+
+        .values__cards .cards-list .value_item.it_company-item.people .values_kanu video {
+            width: 28px;
+            height: 28px;
+        }
+
+        .values__cards .cards-list .value_item.it_company-item.people .values_vlada video {
+            width: 28px;
+            height: 28px;
+        }
+
+        .values__cards .cards-list .value_item.it_company-item.people .gif {
+            width: 350px;
+            height: 50%;
+        }
+
+        .values__cards .cards-list .value_item.it_company-item.people .values_kanu .code {
+            width: 170px;
+            padding: 14px;
+        }
+
+        .values__cards .cards-list .value_item.it_company-item.people .values_kanu .code.type p {
+            font-size: 10px;
+            line-height: 150%;
+        }
+
+        .values__cards .cards-list .value_item.it_company-item.people .values_vlada {
+            top: 0;
+            margin-left: 151px;
+        }
+
+        .values__cards .cards-list .value_item.it_company-item.people .values_vlada.show {
+            top: -67px;
+            margin-left: 151px;
+        }
+
+        .values__cards .cards-list .value_item.it_company-item.people .values_vlada .welcome  {
+            background-color: #1A1B1F;
+            border-radius: 17px;
+            font-size: 10px;
+            line-height: 150%;
+            color: #fff;
+            padding: 14px;
+        }
+        .values__cards .cards-list .value-item.it_company-item:nth-child(4) {
+            padding-right: 0;
+            max-width: 327px;
+            font-size: 12px;
+            margin-top: -33px;
+        }
+
+        .values__cards .cards-list .value-item.it_company-item:nth-child(3) {
+            margin-top: -33px;
+        }
+
+        .values__cards .cards-list .value-item .item__info-number {
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+        .values__cards .cards-list .value-item .item__info-title {
+            font-size: 17px;
+        }
 }
 
 @media screen and (max-width: 1024px) {
