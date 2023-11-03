@@ -2762,6 +2762,10 @@
 
   .reviews {
     margin-top: 5px;
+
+    .view_title h2 {
+      width: 252px;
+    }
     .reviews__list {
       max-width: 343px;
       .list_item {
@@ -2971,7 +2975,7 @@
     }
 
     .accordion-arrow.active {
-      padding: 10px 9px 13px 2px;
+      padding: 12px 9px 13px 4px;
       background-color:#935CFF;
     }
 
