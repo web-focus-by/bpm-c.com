@@ -117,6 +117,12 @@ const ITCompany = () => (
             <span className="value-line"></span>
             <span className="value-line"></span>
           </div>
+
+          <div className="value-lines under tablet">
+            <span className="value-line"></span>
+            <span className="value-line"></span>
+          </div>
+
           <div className="value-lines length">
             <span className="value-line"></span>
             <span className="value-line"></span>

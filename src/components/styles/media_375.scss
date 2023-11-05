@@ -265,17 +265,6 @@
     }
   }
 
-  .it_company {
-    margin-top: 180px;
-    &__info {
-      margin-right: 0;
-    }
-
-    &__title {
-      width: 100%;
-    }
-  }
-
   .company_description {
     &__title {
         width: 90%;
@@ -414,6 +403,7 @@
       color: #ffffff;
 
       .form_block_title {
+        top: -50px;
         margin-top: 64px;
         color: #ffffff;
         margin-bottom: 0;
@@ -927,45 +917,6 @@
     transition: margin-right 1s, margin-left 1s;
   }
 
-  .portfolio {
-    &__products {
-      grid-template-columns: 1fr;
-      grid-row-gap: 24px;
-
-      .portfolio_products_block {
-        .hash {
-          ul {
-            li {
-              &:nth-child(3) {
-                display: inline-block;
-              }
-            }
-          }
-        }
-
-        .portfolio_products_block_title {
-          font-size: 24px;
-        }
-
-        .portfolio_products_block_pic {
-          margin-bottom: 13px;
-
-          &__content {
-            height: 240px;
-          }
-        }
-
-        .portfolio__products {
-          .portfolio_products_block {
-            .portfolio_products_block_list {
-              margin-bottom: 12px;
-            }
-          }
-        }
-      }
-    }
-  }
-
   .blogs {
     display: flex;
     flex-direction: column-reverse;
@@ -1082,6 +1033,7 @@
           }
 
           .form_block_title {
+            top: -50px;
             font-size: 42px;
           }
           .form_block_modal_button {
@@ -1106,6 +1058,7 @@
     padding: 0;
     .thanks_form_block {
       .form_block_title {
+        top: -50px;
         margin-bottom: 24px;
       }
       .form_block_text {
@@ -1143,7 +1096,6 @@
 
         &:hover {
           transform: translateY(0);
-          background: url(../../images/test_375.svg) no-repeat;
           background-size: cover;
           background-position-x: 100%;
           span {
@@ -1187,7 +1139,7 @@
       width: -webkit-fill-available;
       justify-content: normal;
       p {
-        padding-left: 50px;
+        padding: 0  0 0 45px;
         font-weight: 400;
         font-size: 18px;
         line-height: 150%;
@@ -1366,21 +1318,6 @@
 }
 
 @media (max-width: 340px) {
-  .portfolio {
-    &__products {
-      .portfolio_products_block {
-        .hash {
-          ul {
-            li {
-              &:nth-child(3) {
-                display: none;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
   .blogs {
     &__products {
       .blogs_products_block {
@@ -1396,13 +1333,6 @@
       }
     }
   }
-
-  .it_company {
-    &__title {
-      width: 100%;
-      margin-bottom: 24px;
-    }
-  }
 }
 
 @media (min-width: 320px) and (max-width: 375px) {
@@ -1413,13 +1343,6 @@
           calc(290px + (340 - 290) * ((100vw - 375px) / (768 - 320)))
           0;
       }
-    }
-  }
-
-  .it_company {
-    &__title {
-      width: 100%;
-      margin-bottom: 24px;
     }
   }
 
@@ -1435,6 +1358,7 @@
         background-size: 70%;
         &__block {
           .form_block_title {
+            top: -50px;
             font-size: calc(40px + (42 - 40) * ((100vw - 375px) / (768 - 375)));
           }
         }
@@ -1462,44 +1386,11 @@
         background-size: 70%;
         &__block {
           .form_block_title {
+            top: -50px;
             font-size: 42px;
           }
         }
       }
-    }
-  }
-  .it_company {
-    &__title {
-      width: 100%;
-      margin-bottom: 24px;
-    }
-  }
-}
-
-@media (min-width: 340px) and (max-width: 767px) {
-  .portfolio {
-    &__products {
-      grid-template-columns: 1fr;
-      grid-row-gap: 24px;
-
-      .portfolio_products_block {
-        .portfolio_products_block_pic {
-          margin-bottom: 18px;
-
-          img {
-            height: 240px;
-            object-fit: cover;
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-
-  .it_company {
-    &__title {
-      width: 100%;
-      margin-bottom: 24px;
     }
   }
 }
@@ -1514,7 +1405,7 @@
   .title_62 {
     display: inline;
     position: relative;
-    top: -50px;
+    top: 0;
   }
 
   .contact_title {
@@ -1755,6 +1646,64 @@
 }
 
 @media (max-width: 530px) {
+  .it_company__values {
+    margin-bottom: 80px;
+  }
+
+  .swiper-backface-hidden .swiper-slide {
+    max-width: 320px;
+  }
+  
+  .portfolio {
+    &__products {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+      .portfolio_products_block {
+        .portfolio_products_block_title {
+          margin-top: 12px;
+          font-size: 24px;
+          line-height: 115%;
+        }
+
+        .portfolio_products_block_pic {
+          width: 343px;
+          height: 240px;
+          margin-bottom: 20px;
+
+          &__content {
+            background-size: 343px 240px;
+            object-fit: cover;
+          }
+        }
+
+        .portfolio_products_block_list {
+          margin-bottom: calc(
+            17px + (24 - 17) * ((100vw - 1366px) / (1920 - 1366))
+          );
+        }
+      }
+    }
+  }
+
+  .accor__title {
+    max-width: 343px;
+    text-transform: capitalize;
+  }
+
+  .accor__description {
+    display: flex;
+    gap: 14px;
+
+    p {
+      margin: 0;
+      min-width: 100%;
+      font-family: 'Acrom';
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
 
   .mission {
     .mission__title {
@@ -2065,6 +2014,7 @@
 
     &__block {
       .form_block_title {
+        top: -50px;
         font-size: 42px;
         margin-bottom: 40px;
       }
@@ -2239,9 +2189,24 @@
   }
 
   .it_company {
-    &__title {
+    margin-top: 160px;
+
+   &__title {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+    &__info {
+      line-height: 150%;
+      flex-direction: column;
+      margin-right: -12px;
       width: 100%;
-      margin-bottom: 24px;
+      margin-top: 0;
+
+      p {
+        margin-top: 0;
+        width: 100%;
+        font-size: 15px !important;
+      }
     }
   }
 
@@ -2811,6 +2776,10 @@
 
   .reviews {
     margin-top: 5px;
+
+    .view_title h2 {
+      width: 252px;
+    }
     .reviews__list {
       max-width: 343px;
       .list_item {
@@ -3020,7 +2989,7 @@
     }
 
     .accordion-arrow.active {
-      padding: 10px 9px 13px 2px;
+      padding: 12px 9px 13px 4px;
       background-color:#935CFF;
     }
 

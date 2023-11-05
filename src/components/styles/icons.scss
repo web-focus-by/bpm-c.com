@@ -691,7 +691,7 @@
 }
 
 
-@media screen and (max-width: 1650px) {
+@media screen and (max-width: 1600px) {
   .notes_of_reviewes {
     display: inline-block;
     background: url(../../images/notes_of_reviewes.svg) no-repeat;
@@ -755,6 +755,16 @@
     position: relative;
     top: -15px;
     left: 0px;
+  }
+
+  .laptop {
+    display: inline-block;
+    min-width: 26px;
+    height: 26px;
+    background: url(../../images/laptop-icon.svg) no-repeat;
+    background-size: 26px 26px;
+    margin-top: 19px;
+    margin-left: 19px;
   }
 
   .computer {
@@ -891,6 +901,16 @@
     transform: rotate(0deg);
   }
 
+  .laptop {
+    display: inline-block;
+    min-width: 28px;
+    height: 28px;
+    background: url(../../images/laptop-icon.svg) no-repeat;
+    background-size: 28px 28px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
   .computer {
     display: inline-block;
     background: url(../../images/pc.svg) no-repeat;
@@ -918,6 +938,15 @@
     margin-left: 10px;
     top: 17px;
     background-size: 34px 34px;
+  }
+
+  .service {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    background: url(../../images/service-icon.svg) no-repeat;
+    background-size: 30px 30px;
   }
 
   .cup {

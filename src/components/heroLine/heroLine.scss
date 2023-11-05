@@ -1,3 +1,16 @@
+html{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body
+{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 @keyframes line-emily {
   0% {
     top: 0;
@@ -226,7 +239,8 @@
     position: relative;
     .line {
         .line_inner {
-            width: 100%;
+            width: 1366px;
+            max-width: 1366px;
             display: flex;
             p {
                 color: #1A1B1F;
@@ -314,4 +328,50 @@
         }
     }
 }
+}
+
+@media screen and (max-width: 768px){
+  .line_wrapper .emily {
+    margin-left: -30px;
+    position: absolute;
+    animation: line-emily 8s linear infinite;
+    span {
+        display: inline-block;
+        background: url(../../images/orange.svg) no-repeat;
+        background-size: 14px 17px;
+        position: absolute;
+        top: -6px;
+        left: -10px;
+    }
+
+    p {
+        max-width: 40px;
+        border-radius: 5px;
+        padding: 5px 12px;
+        font-size: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 530px){
+    .line_wrapper .emily {
+      margin-left: -20px;
+      position: absolute;
+      animation: line-emily 8s linear infinite;
+      span {
+          display: inline-block;
+          background: url(../../images/orange.svg) no-repeat;
+          background-size: 14px 17px;
+          position: absolute;
+          top: -6px;
+          left: -10px;
+      }
+
+      p {
+          max-width: 40px;
+          border-radius: 5px;
+          padding: 5px 12px;
+          font-size: 10px;
+      }
+    }
 }

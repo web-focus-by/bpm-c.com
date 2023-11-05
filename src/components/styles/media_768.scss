@@ -16,10 +16,23 @@
     }
   }
   .it_company {
-    margin-top: 280px;
+    margin-top: 204px;
+
+   &__title {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
     &__info {
       line-height: 150%;
+      flex-direction: column;
       margin-right: -12px;
+      width: 688px;
+
+      p {
+        margin-top: 0;
+        width: 688px;
+        font-size: 15px !important;
+      }
     }
   }
   .web-site-reason {
@@ -310,8 +323,11 @@
     }
 
     &__subtitle {
-      font-size: 16px;
-      margin-bottom: clamp(30px, 10vw, 50px);
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      margin-bottom: 30px;
     }
 
     &__description {
@@ -861,36 +877,44 @@
 
   .portfolio {
     &__products {
+      column-gap: 20px;
+      row-gap: 20px;
       .portfolio_products_block {
-        .hash {
-          ul {
-            li {
-              &:last-child {
-                display: none;
-              }
-            }
-          }
+        .portfolio_products_block_title {
+          margin-top: 12px;
+          font-size: 24px;
+          line-height: 115%;
         }
 
         .portfolio_products_block_pic {
-          margin-bottom: 19px;
-          &__content {
-            height: clamp(280px, 24vw, 330px);
-          }
+          width: 334px;
+          height: 240px;
+          margin-bottom: 20px;
 
-          img {
-            // height: 280px;
-            object-fit: cover;
-            border-radius: 10%;
+          &__content {
+            background-size: 334px 240px;
           }
         }
 
         .portfolio_products_block_list {
-          margin-bottom: 16px;
+          margin-bottom: calc(
+            17px + (24 - 17) * ((100vw - 1366px) / (1920 - 1366))
+          );
         }
       }
     }
   }
+
+  .accor__description {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+
+   p {
+     font-size: 15px;
+   }
+ }
+
   .modal {
     &__content {
       .form {
@@ -968,8 +992,6 @@
         }
 
         &:hover {
-          // background-position: 50% 75px;
-          background: url(../../images/test_768.svg) no-repeat;
           background-size: contain;
           background-position-x: 100%;
         }
@@ -1569,10 +1591,6 @@
           calc(0px + (35 - 0) * ((100vw - 375px) / (768 - 375)));
       }
     }
-  }
-
-  .it_company {
-    margin-top: calc(180px + (280 - 180) * ((100vw - 375px) / (768 - 375)));
   }
 
   .web-site-reason {
@@ -2700,11 +2718,11 @@
 @media (max-width: 600px) {
   .it_company {
     flex-direction: column;
-    margin-top: 240px;
+    margin-top: 204px;
 
     &__title {
       max-width: none;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     &__info {
@@ -3511,7 +3529,7 @@
     }
 
     .accordion-arrow.active {
-      padding: 10px 9px 13px 2px;
+      padding: 12px 9px 13px 4px;
       background-color:#935CFF;
     }
 
