@@ -15,15 +15,8 @@ import "../components/styles/media_375.scss"
 const Hero = ({ location }) => {
   return (
     <div className="container">
-      <div className="breacrumbs-list">
-      <Breadcrumbs
-        className="display_none"
-        breadcrumbs={location}
-        title="Main page"
-      />
-      </div>
       <div className="hero">
-        <h1 className="hero__title title_80">
+        <h1 className="hero__title title_80 index_title">
           <span class="vio_title">BPM&nbsp;Cloud</span><br />A&nbsp;Custom Software<br />Development Company
           <span className="yellow_hand"></span>
         </h1>
