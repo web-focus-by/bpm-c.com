@@ -403,6 +403,7 @@
       color: #ffffff;
 
       .form_block_title {
+        top: -50px;
         margin-top: 64px;
         color: #ffffff;
         margin-bottom: 0;
@@ -1032,6 +1033,7 @@
           }
 
           .form_block_title {
+            top: -50px;
             font-size: 42px;
           }
           .form_block_modal_button {
@@ -1056,6 +1058,7 @@
     padding: 0;
     .thanks_form_block {
       .form_block_title {
+        top: -50px;
         margin-bottom: 24px;
       }
       .form_block_text {
@@ -1355,6 +1358,7 @@
         background-size: 70%;
         &__block {
           .form_block_title {
+            top: -50px;
             font-size: calc(40px + (42 - 40) * ((100vw - 375px) / (768 - 375)));
           }
         }
@@ -1382,6 +1386,7 @@
         background-size: 70%;
         &__block {
           .form_block_title {
+            top: -50px;
             font-size: 42px;
           }
         }
@@ -1400,7 +1405,7 @@
   .title_62 {
     display: inline;
     position: relative;
-    top: -50px;
+    top: 0;
   }
 
   .contact_title {
@@ -1641,7 +1646,15 @@
 }
 
 @media (max-width: 530px) {
-.portfolio {
+  .it_company__values {
+    margin-bottom: 80px;
+  }
+
+  .swiper-backface-hidden .swiper-slide {
+    max-width: 320px;
+  }
+  
+  .portfolio {
     &__products {
       grid-template-columns: 1fr;
       row-gap: 20px;
@@ -2001,6 +2014,7 @@
 
     &__block {
       .form_block_title {
+        top: -50px;
         font-size: 42px;
         margin-bottom: 40px;
       }

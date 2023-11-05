@@ -181,6 +181,7 @@
         }
 
         .value_item.it_company-item.people {
+            position: relative;
             margin-top: 30px;
             padding-right: 10px;
 
@@ -753,6 +754,7 @@
     }
 
     .values__cards .cards-list .value_item.it_company-item.people .gif {
+        margin-top: -25px;
         width: 350px;
         height: 50%;
     }
@@ -1309,9 +1311,12 @@
     }
 
     .values__cards .cards-list .value-item.it_company-item {
-        margin-top: 25px;
+        padding-top: 25px;
+        margin-top: 0;
         margin-bottom: 25px;
-        padding-right: 12px;
+        padding-right: 0;
+        border-right: none;
+        border-top: 1px solid #E1DAF4;
 
         .item__info-content {
             max-width: 331px;
@@ -1325,17 +1330,17 @@
     }
 
     .values__cards .cards-list .value-item.it_company-item:first-child {
-        height: 285px;
         margin-top: 25px;
         margin-bottom: 25px;
         padding-right: 12px;
     }
 
     .values__cards .cards-list .value_item.it_company-item.bpm {
-        border-right: 1px solid #E1DAF4;
-        margin-top: 25px;
-        padding-right: 15px;
-        margin-bottom: 50px;
+        border-right: none;
+        border-top: 1px solid #E1DAF4;
+        margin-top: 0;
+        padding-top: 25px;
+        margin-bottom: 25px;
         height: 350px;
     }
 
@@ -1357,32 +1362,27 @@
     }
 
     .values__cards .value-lines .value-line {
+        display: none;
         width: 334px;
     }
 
     .values__cards .value-lines.length .value-line {
+        display: none;
         min-width: 334px;
     }
 
     .values__cards .value-lines.length {
+        display: none;
         top: -325px;
     }
 
-    .values__cards .value-lines.length .value-line:last-child {
-        display: none;
-    }
-
     .values__cards .value-lines.under {
+        display: none;
         margin-left: 0;
     }
 
     .values__cards .value-lines.under.tablet {
-        display: flex;
-        position: relative;
-        top: -725px;
-        margin-left: 0;
-        height: 1px;
-        gap: 20px;
+        display: none;
     }
 
     .values__cards .value-lines.under.tablet .value-line {
@@ -1393,7 +1393,8 @@
 
     .values__cards .cards-list .value_item.it_company-item.people {
         padding-left: 10px;
-        margin-top: 25px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .values__cards .cards-list .value_item.it_company-item.people .values_kanu .circle-video {
@@ -1417,6 +1418,8 @@
     }
 
     .values__cards .cards-list .value_item.it_company-item.people .gif {
+        margin-top: -5px;
+        margin-left: -10px;
         width: 350px;
         height: 50%;
     }
@@ -1438,13 +1441,13 @@
 
     .values__cards .cards-list .value_item.it_company-item.people .values_vlada.show {
         top: -67px;
-        margin-left: 118px;
+        margin-left: 69px;
     }
 
     .values__cards .cards-list .value_item.it_company-item.people .values_vlada .welcome  {
         background-color: #1A1B1F;
         border-radius: 17px;
-        font-size: 10px;
+        font-size: 14px;
         line-height: 150%;
         color: #fff;
         padding: 14px;
@@ -1463,7 +1466,7 @@
         border-left: none;
         max-width: 331px;
         font-size: 15px;
-        height: 272px;
+        height: auto;
     }
 
     .values__cards .cards-list .value-item.it_company-item:nth-child(4) {
@@ -1471,6 +1474,11 @@
         padding-right: 0;
         max-width: 331px;
         font-size: 15px;
+
+        .item__info-content {
+            padding-bottom: 25px;
+            border-bottom: 1px solid #E1DAF4;
+        }
     }
 
     .values__cards .cards-list .value-item .item__info-number {

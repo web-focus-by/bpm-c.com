@@ -48,22 +48,24 @@ const Reviews = ({}) => {
   ]
   const result = dataText.map(obj => {
     return (
-      <div key={obj.id} className="reviews__list">
-        <div className="list_item">
-          <div className="reviews__list_logo">
-            <img src={obj.img} alt="logo" />
-          </div>
-          <div className="reviews__list_text">
-            <p>{obj.description}</p>
-          </div>
-          <div className="reviews__list_info">
-              <div className="info_descr">
-                <div className="reviews_name">{obj.signature}</div>
-                <div className="reviews_vacan">{obj.vacan}</div>
-              </div>
-              <div className="reviews__project">
-                <Link to="/">Check the project</Link>
-              </div>
+      <div className="container">
+        <div key={obj.id} className="reviews__list">
+          <div className="list_item">
+            <div className="reviews__list_logo">
+              <img src={obj.img} alt="logo" />
+            </div>
+            <div className="reviews__list_text">
+              <p>{obj.description}</p>
+            </div>
+            <div className="reviews__list_info">
+                <div className="info_descr">
+                  <div className="reviews_name">{obj.signature}</div>
+                  <div className="reviews_vacan">{obj.vacan}</div>
+                </div>
+                <div className="reviews__project">
+                  <Link to="/">Check the project</Link>
+                </div>
+            </div>
           </div>
         </div>
       </div>
