@@ -31,15 +31,23 @@ const Service = ({ title }) => {
 
   const block = (e) => {
     const item = document.querySelector(".vio-item");
-    item.style.position = 'fixed';
-    item.style.opacity = '1';
-    item.style.left = e.clientX + -10 + 'px';
-    item.style.top = e.clientY + -10 + 'px';
+    if(window.innerWidth > 1024) {
+      item.style.position = 'fixed';
+      item.style.opacity = '1';
+      item.style.left = e.clientX + -10 + 'px';
+      item.style.top = e.clientY + -10 + 'px';
+    } else if(window.innerWidth < 1024) {
+      return
+    }
   }
 
   const opacity = (e) => {
     const item = document.querySelector(".vio-item");
-    item.style.opacity = '0';
+    if(window.innerWidth > 1023) {
+      item.style.opacity = '0';
+    } else if(window.innerWidth < 1024) {
+      return
+    }
   }
 
   const dataItems = data ? data.allWpPage.edges : null

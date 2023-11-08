@@ -50,7 +50,7 @@ const ServicesIndex = ({ title }) => {
         <h2 className="services__title title_62">{title}</h2>
         <div className="services__list">
             {data.map((obj) => (
-            <div className="services_list_item">
+            <div className="services_list_item index">
                     <span>{obj.title}<div class={obj.classTitle}></div></span>
             </div>
             ))}

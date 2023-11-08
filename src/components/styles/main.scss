@@ -1722,6 +1722,10 @@ border: 1px solid #e11d48;
       transition: all 0.5s ease-in-out;
       background-color: #935CFF;
     }
+    .projects_process_list_item.click {
+      transition: all 0.5s ease-in-out;
+      background-color: #935CFF;
+    }
 
     .projects_process_list_item__hover-elem {
       display: none;
@@ -1754,7 +1758,14 @@ border: 1px solid #e11d48;
         font-style: normal;
         font-weight: 400;
         line-height: 150%;
-        margin: 15px 0 0;
+        margin: 15px 0 0 18px;
+        position: relative;
+      }
+
+      p::before {
+        content:'—';
+        position: absolute;
+        left: -18px;
       }
 
       p:first-child {
@@ -1768,8 +1779,20 @@ border: 1px solid #e11d48;
         transition: opacity .7s ease-in-out;
         transition-delay: .4s;
     }
+
+    .projects_process_list_item__hover-elem.click {
+      display: block;
+      opacity: 1;
+      transition: opacity .7s ease-in-out;
+      transition-delay: .4s;
+    }
   }
   .projects_process_list_item.hover {
+    transition: all 0.5s ease-in-out;
+    background-color: #935CFF;
+  }
+
+  .projects_process_list_item.click {
     transition: all 0.5s ease-in-out;
     background-color: #935CFF;
   }
