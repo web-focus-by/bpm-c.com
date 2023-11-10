@@ -7,7 +7,7 @@ export const AccordionItem = ({ faqItem, onClick, onMouseOver, onMouseLeave, isO
     <li className={`accordion-item`} onMouseOver={() => onMouseOver()} onMouseLeave={() => onMouseLeave()}> 
       <button className={`accordion-header ${isOpen ? "active" : ""}`} onClick={() => onClick()}>
         <div className="number">{num}</div>
-        <p>{faqItem.q}</p>
+        <h2>{faqItem.q}</h2>
         <div className={`accordion-arrow ${isOpen ? "active" : ""}`}><span class={`${isOpen ? "label-icon_white" : isHover ? "label-icon_hover" : "label-icon"}`}></span></div>
       </button>
       <div
