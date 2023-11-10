@@ -2046,7 +2046,7 @@
     cursor: pointer;
     border: none;
 
-    p {
+    h2 {
       width: 65%;
       font-family: 'Acrom';
       font-size: 24px;
@@ -2174,7 +2174,7 @@
   }
 s
   .label-icon_white{
-    transform: rotate(90deg);
+    transform: rotate(45deg);
     background: url(../../images/plus.png) no-repeat;
     transition: all .5s ease;
   }
