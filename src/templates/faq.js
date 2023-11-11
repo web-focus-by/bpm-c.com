@@ -113,7 +113,7 @@ const faqList = [
   },
   {
     q: "What factors influence the cost of software development?",
-    a: ["Custom software development may pose several risks and challenges:", "— Complexity: Intricate features and functionality can increase development time and cost",
+    a: ["Custom software development may pose several risks and challenges:", "— Complexity: Intricate features and functionality can increase development time and cost.",
     "— Scope: The number of features, user roles, and modules affects workload and expenses.",
     "— Technology: The choice of programming languages, frameworks, and tools can impact costs.",
     "— Design: Elaborate UI/UX design or custom graphics may incur additional expenses.",
