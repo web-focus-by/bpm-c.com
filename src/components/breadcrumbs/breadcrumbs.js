@@ -16,10 +16,15 @@ console.log(filePath)
   if (pathname) {
     breadcrumbItems = filePath
       ? filePath.map((item, index) => {
+        console.log(item)
+        if (item === "news") {
+          item = "Blog"
+        }
+
+        if (item === "about-us") {
+          item = "About Us"
+        }
         item = item.charAt(0).toUpperCase() + item.slice(1);
-          if (item === "news") {
-            item = "Blog"
-          }
           path = index !== 0 ? path + item.toLowerCase() + "/" : ""
           let link = host === item.toLowerCase() ? domain.toLowerCase() : domain.toLowerCase() + "/" + path.toLowerCase()
           if (breadcrumbs.pathname !== "/") {
