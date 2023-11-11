@@ -32,7 +32,7 @@ const faqList = [
   },
   {
     q: "What types of industries have you worked with for custom software development?",
-    a: [`We have a diverse" portfolio of custom software development spanning various industries. Our experience includes, but is not limited to:`, "— Finance;",
+    a: [`We have a diverse portfolio of custom software development spanning various industries. Our experience includes, but is not limited to:`, "— Finance",
     "— Healthcare",
     "— E-commerce",
     "— Manufacturing",
@@ -49,11 +49,11 @@ const faqList = [
   },
   {
     q: "Will you sign an NDA?",
-    a: ["LoremAbsolutely, ensuring confidentiality is a priority for us. We are more than willing to sign a Non-Disclosure Agreement (NDA) to safeguard your sensitive information and project details. Your trust is paramount, and we're committed to maintaining the security and privacy of all aspects of our collaboration. ipsum dolor sit amet consectetur adipisicing elit. Eius accusamus cumque officiis, tempora ipsa a."],
+    a: ["Absolutely, ensuring confidentiality is a priority for us. We are more than willing to sign a Non-Disclosure Agreement (NDA) to safeguard your sensitive information and project details. Your trust is paramount, and we're committed to maintaining the security and privacy of all aspects of our collaboration."],
   },
   {
     q: "What methodologies do you use in your work?",
-    a: ["Absolutely, ensuring confidentiality is a priority for us. We are more than willing to sign a Non-Disclosure Agreement (NDA) to safeguard your sensitive information and project details. Your trust is paramount, and we're committed to maintaining the security and privacy of all aspects of our collaboration."],
+    a: ["In our work, we employ a range of effective methodologies tailored to project needs. Agile methodologies like Scrum and Kanban ensure flexibility, allowing for iterative development, frequent feedback, and adaptability to changing requirements. For more structured projects, we use Waterfall, where phases follow a linear sequence. Our choice depends on project complexity, timelines, and client preferences."],
   },
   {
     q: "Do you provide outstaffing services?",
@@ -88,7 +88,7 @@ const faqList = [
   },
   {
     q: "What are the potential risks or challenges in custom software development?",
-    a: ["Custom software development may pose several risks and challenges:", "— Scope Creep: Expanding project scope beyond initial plans, affecting timelines and costs.",
+    a: ["Custom software development may pose several risks and challenges:", "— Scope creep: Expanding project scope beyond initial plans, affecting timelines and costs.",
     "— Budget overruns: Unforeseen complexities leading to increased expenses.",
     "— Timeline delays: Technical issues, scope changes, or external factors causing delays.",
     "— Quality assurance: Ensuring bug-free software through rigorous testing can be challenging.",
@@ -113,7 +113,7 @@ const faqList = [
   },
   {
     q: "What factors influence the cost of software development?",
-    a: ["Custom software development may pose several risks and challenges", "— Complexity: Intricate features and functionality can increase development time and cost:",
+    a: ["Custom software development may pose several risks and challenges:", "— Complexity: Intricate features and functionality can increase development time and cost",
     "— Scope: The number of features, user roles, and modules affects workload and expenses.",
     "— Technology: The choice of programming languages, frameworks, and tools can impact costs.",
     "— Design: Elaborate UI/UX design or custom graphics may incur additional expenses.",
