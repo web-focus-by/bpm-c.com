@@ -1411,6 +1411,7 @@
   }
 
   .contacts {
+    width: 100%;
     margin-top: 43px;
     display: flex;
     justify-content: space-between;
@@ -1474,7 +1475,7 @@
       }
     }
     &__contacts_form {
-      width: 57.5%;
+      width: 55%;
       margin-top: -15px;
       .contact_form {
         border-radius: 40px;
@@ -1501,7 +1502,7 @@
               font-size: 12px;
               line-height: 90%;
               margin: 0.4rem 14px 0.4rem 0;
-              padding: 5px 9px;
+              padding: 7px 16px 10px;
             }
           }
           .contact_form_block_title {
@@ -1562,11 +1563,12 @@
               .contact_form_line-wrapper, .contact_form_line-wrapper--one {
                 position: relative;
 
-                input {
+                input, textarea {
                   color: #1a1b1f;
-                  font-weight: 500;
+                  font-style: normal;
+                  font-weight: 400;
                   line-height: 100%;
-                  font-size: 12px;
+                  font-size: 18px;
                   border: 0;
                   outline: none;
                   background-color: transparent;

@@ -1,5 +1,18 @@
 @import url("./stylesheet.scss");
 
+html{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body
+{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Acrom", sans-serif;
   line-height: 150%;
