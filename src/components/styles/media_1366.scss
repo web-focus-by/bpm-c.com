@@ -1014,7 +1014,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 2%;
     &__contact {
       width: 30%;
       margin-top: 15px;
@@ -1078,9 +1077,9 @@
       margin-top: -15px;
       .contact_form {
         border-radius: 40px;
-        padding: 0 0 10px 113px;
+        padding: 0 0 10px 0;
         display: grid;
-        grid-template-columns: 1.03fr 0.97fr;
+        grid-template-columns: 1fr;
         background-position: 110px 165px;
         &__block {
           color: #1a1b1f;
