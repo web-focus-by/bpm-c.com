@@ -50,7 +50,7 @@
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-            column-gap: 40px;
+            column-gap: 89px;
             row-gap: 25px;
 
             .black_item {
@@ -64,16 +64,18 @@
                     font-weight: 400;
                     line-height: 150%;
                     position: relative;
-                    left: 15px
+                    left: 40px
                 }
 
                 .item__info::before {
-                    left: -15px;
-                    content: '—';
-                    height: 100%;
-                    position: absolute;
-                    margin-right: 10px;
-                }
+                    content: '';
+                    left: -40px;
+                    top: 12px;
+                    display: inline-block;
+                    width: 31px;
+                    height: 1px;
+                    border-bottom: 1px solid #fff;
+                    position: absolute;                }
             }
         }
     }
