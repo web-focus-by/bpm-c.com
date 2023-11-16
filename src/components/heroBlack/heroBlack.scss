@@ -51,15 +51,14 @@
 
         .cards-list {
             width: 100%;
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             column-gap: 89px;
             row-gap: 25px;
             position: relative;
             z-index: 2;
 
             .black_item {
-                width: 695px;
 
                 .item__info {
                     color:#fff;
@@ -163,13 +162,12 @@
 
             .cards-list {
                 width: 100%;
-                display: flex;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
                 column-gap: 94px;
                 row-gap: 18px;
 
                 .black_item {
-                    width: 480px;
 
                     .item__info {
                         font-size: 12.806px;
@@ -227,8 +225,8 @@
 
             .cards-list {
                 width: 100%;
-                display: flex;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: 1fr;
                 column-gap: 20px;
                 row-gap: 20px;
 
@@ -290,8 +288,8 @@
 
             .cards-list {
                 width: 100%;
-                display: flex;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: 1fr;
                 row-gap: 15px;
 
                 .black_item {
