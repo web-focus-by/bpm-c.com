@@ -516,7 +516,7 @@ h1, h2, h3, h4 {
     background: #1a1b1f;
     border-radius: 40px;
 
-    .form {
+    .form, .form.modal_form {
       grid-template-columns: 605px 455px;
       padding: 40px 40px 80px 80px;
 
@@ -557,6 +557,11 @@ h1, h2, h3, h4 {
             position: relative;
             top: -15px;
           }
+        }
+
+        input.modal:checked+label::before {
+          background-image: url("../../images/check.svg");
+          filter: invert(1);
         }
 
         &:first-child {
@@ -982,9 +987,8 @@ h1, h2, h3, h4 {
   margin-top: 43px;
   display: flex;
   justify-content: space-between;
-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   flex-wrap: wrap;
-  gap: 2%;
   &__contact {
     width: 30%;
     margin-top: 42px;
@@ -1319,7 +1323,7 @@ transition: all 0.5s ease-in-out;
 }
 
 .form {
-  background: #1a1b1f url(../../images/form_gradient.svg) no-repeat;
+  background: #1a1b1f;
   border-radius: 40px;
   padding: 80px 125px 80px 98px;
   display: grid;
@@ -1564,6 +1568,27 @@ border: 1px solid #e11d48;
       }
     }
   }
+
+  position: relative;
+
+  .violett {
+    display: inline-block;
+    position: absolute;
+    bottom: 25%;
+    left: 12%;
+    width: 268px;
+    height: 268px;
+    border-radius: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(143, 114, 226, 0.60) 0%, rgba(135, 130, 224, 0.60) 0%, rgba(144, 139, 237, 0.60) 0.01%, rgba(143, 114, 226, 0.48) 100%);
+    filter: blur(60px);
+    z-index: 0;
+  }
+}
+
+.modal .form .violett {
+  top: 15%;
+  right: 5%;
+  left: 67%;
 }
 
 .thanks_form {
@@ -3441,7 +3466,7 @@ border: 1px solid #e11d48;
     border-radius: 100%;
     background: radial-gradient(50% 50% at 50% 50%, rgba(255, 215, 113, 0.80) 0%, rgba(255, 215, 113, 0.46) 100%);
     filter: blur(100px);
-    z-index: 2;
+    z-index: -1;
     animation: header_circle_yellow 12s linear infinite,
     header_circle_yellowleft 12s linear infinite alternate;
   }
@@ -3458,7 +3483,7 @@ border: 1px solid #e11d48;
     filter: blur(100px);
     animation: header_circle_pink 8s linear infinite,
     header_circle_pinkleft 8s linear infinite alternate;
-    z-index: 2;
+    z-index: -1;
   }
 }
 

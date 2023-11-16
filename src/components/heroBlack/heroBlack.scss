@@ -11,6 +11,8 @@
 
     .black__title {
         margin-bottom: 60px;
+        position: relative;
+        z-index: 2;
         .title {
             width: 896px;
             color:#fff;
@@ -19,7 +21,6 @@
             font-style: normal;
             font-weight: 500;
             line-height: 105%; /* 65.1px */
-            text-transform: capitalize;
             margin: 0;
             margin-bottom: 40px;
         }
@@ -44,6 +45,8 @@
             font-weight: 500;
             line-height: 115%;
             margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
         }
 
         .cards-list {
@@ -52,9 +55,11 @@
             flex-wrap: wrap;
             column-gap: 89px;
             row-gap: 25px;
+            position: relative;
+            z-index: 2;
 
             .black_item {
-                width: 720px;
+                width: 695px;
 
                 .item__info {
                     color:#fff;
@@ -90,7 +95,7 @@
         border-radius: 100%;
         background: radial-gradient(50% 50% at 50% 50%, rgba(143, 114, 226, 0.60) 0%, rgba(135, 130, 224, 0.60) 0%, rgba(144, 139, 237, 0.60) 0.01%, rgba(143, 114, 226, 0.48) 100%);
         filter: blur(60px);
-        z-index: 2;
+        z-index: 0;
         animation: header_circle_purple 6s linear infinite,
         header_circle_purpleleft 6s linear infinite alternate;
     }
@@ -160,11 +165,11 @@
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
-                column-gap: 14px;
+                column-gap: 94px;
                 row-gap: 18px;
 
                 .black_item {
-                    width: 510px;
+                    width: 480px;
 
                     .item__info {
                         font-size: 12.806px;

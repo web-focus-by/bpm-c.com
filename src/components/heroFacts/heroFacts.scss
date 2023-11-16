@@ -11,7 +11,6 @@
             font-style: normal;
             font-weight: 500;
             line-height: 105%; /* 65.1px */
-            text-transform: capitalize;
             margin: 0;
         }
 
@@ -42,7 +41,6 @@
             font-style: normal;
             font-weight: 500;
             line-height: 105%; /* 65.1px */
-            text-transform: capitalize;
             margin-bottom: 40px;
         }
 
@@ -66,11 +64,10 @@
 
     .facts__cards {
         .cards-list {
-            display: flex;
+            display: grid;
             gap: 20px;
-            flex-wrap: wrap;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             .fact-item {
-                width: 290px;
                 height: 453px;
                 background-color: #1A1B1F;
                 padding: 30px;
@@ -303,10 +300,9 @@
 
         .facts__cards {
             .cards-list {
-                display: flex;
+                display: grid;
                 gap: 14px;
                 .fact-item {
-                    width: 210px;
                     height: 324px;
                     background-color: #1A1B1F;
                     padding: 21px;
@@ -372,11 +368,10 @@
 
         .facts__cards {
             .cards-list {
-                display: flex;
+                display: grid;
                 gap: 20px;
-                flex-wrap: wrap;
+                grid-template-columns: 1fr 1fr;                
                 .fact-item {
-                    width: 274px;
                     height: 360px;
                     background-color: #1A1B1F;
                     padding: 30px;
@@ -422,12 +417,14 @@
     .facts {
         .facts__title {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             margin-bottom: 30px;
 
             .title {
                 width: 507px;
                 font-size: 46px;
+                margin-bottom: 20px;
             }
 
             .description {
@@ -459,11 +456,10 @@
 
         .facts__cards {
             .cards-list {
-                display: flex;
+                display: grid;
                 gap: 20px;
-                flex-wrap: wrap;
+                grid-template-columns: 1fr 1fr; 
                 .fact-item {
-                    width: 274px;
                     height: 360px;
                     background-color: #1A1B1F;
                     padding: 30px;
@@ -548,11 +544,10 @@
 
         .facts__cards {
             .cards-list {
-                display: flex;
+                display: grid;
                 gap: 20px;
-                flex-wrap: wrap;
+                grid-template-columns: 1fr; 
                 .fact-item {
-                    width: 343px;
                     height: 360px;
                     background-color: #1A1B1F;
                     padding: 30px;

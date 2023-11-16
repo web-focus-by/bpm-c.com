@@ -326,6 +326,9 @@
   }
 
   .hero {
+    .hero__butn {
+      margin-bottom: 160px !important;
+    }
     &__portfolio {
         margin-bottom: 40px;
     }
@@ -341,7 +344,7 @@
     }
     margin-top: 0;
     &__subtitle {
-      font-weight: 300;
+      font-weight: 400;
       font-size: 15px;
       line-height: 150%;
     }
@@ -1419,6 +1422,10 @@
     display: inline;
     position: relative;
     top: 0;
+  }
+
+  .hero__butn {
+    margin-bottom: 160px !important;
   }
 
   .contact_title {
