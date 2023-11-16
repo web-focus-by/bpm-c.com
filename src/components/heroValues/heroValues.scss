@@ -12,7 +12,6 @@
 }
 
 .values {
-    margin-top: -39px;
     .values__title {
         margin-bottom: 50px;
         .title {
@@ -23,7 +22,6 @@
             font-style: normal;
             font-weight: 500;
             line-height: 105%; /* 65.1px */
-            text-transform: capitalize;
             margin: 0;
             margin-bottom: 20px;
 
@@ -366,7 +364,6 @@
 
 @media screen and (max-width: 1600px) {
     .values {
-        margin-top: -39px;
         .values__title {
             margin-bottom: 38px;
             .title {
@@ -810,7 +807,6 @@
 
 @media screen and (max-width: 1024px) {
     .values {
-        margin-top: -39px;
         .values__title {
             margin-bottom: 38px;
             .title {
@@ -843,7 +839,6 @@
 
 @media screen and (max-width: 940px) {
     .values {
-        margin-top: -39px;
         .values__title {
             margin-bottom: 38px;
             .title {
@@ -979,7 +974,6 @@
 
 @media screen and (max-width: 768px) {
     .values {
-        margin-top: -39px;
         .values__title {
             margin-bottom: 38px;
             .title {
@@ -1289,7 +1283,6 @@
 
 @media screen and (max-width: 570px) {
     .values {
-        margin-top: -39px;
         .values__title {
             margin-top: 130px;
             margin-bottom: 38px;
@@ -1493,7 +1486,6 @@
 
 @media screen and (max-width: 450px) {
     .values {
-        margin-top: -39px;
         .values__title {
             margin-top: 130px;
             margin-bottom: 38px;

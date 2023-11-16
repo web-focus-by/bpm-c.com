@@ -122,7 +122,7 @@ const InformationAboutCompany = ({ location, data }) => {
           titleLogo="about_company"
         ></HeroWebSiteDesign>
         <HeroFacts
-          title="BPM Cloud in facts"
+          title="BPM Cloud in Facts"
           description="There is a great number of outsourcing companies that are ready to sell their expertise and different IT solutions, but BPM Cloud obtains its unique sides and features that allow it to stand out the competitors. "
           flex="true"
           dataContent={facts}
@@ -130,7 +130,7 @@ const InformationAboutCompany = ({ location, data }) => {
         <div className="container">
           <div className="mission margin_bottom_240">
             <div className="mission__title">
-              <h2 className="title">Our mission</h2>
+              <h2 className="title">Our Mission</h2>
               <div className="mission_description">
                 <p>Our goal has been remaining unchanged since the very first days of our work – high-quality IT services and results within satisfying costs, timelines, and cooperation conditions.</p>
                 <p>We are always ready to negotiate and look for compromises, as we understand market specifics and client company’s possibilities. There are no exceptions, as we have similar attitude regarding all our partners.</p>
@@ -147,7 +147,7 @@ const InformationAboutCompany = ({ location, data }) => {
         <div className="container">
           <div className="prof_path margin_bottom_240">
             <div className="prof_path__wrap">
-              <h2 className="prof_path_title">Our professional path</h2>
+              <h2 className="prof_path_title">Our Professional Path</h2>
               <div className="prof_path_description">
                 Every business has its own unique history of success, and BPM Cloud is not an exception. We’re sure, that we’ll get far more achievement and new stages of our professional growth that we’ll gladly share with our partners and leads.
               </div>
@@ -199,12 +199,12 @@ const InformationAboutCompany = ({ location, data }) => {
           </div>
 
         </div>
-        <HeroValues title="What are the values that drive us to go further?" emoji='true' description={descriptionOfValues} dataContent={values}></HeroValues>
-        <HeroBlack title="Why should specialists work in our team?" description="Besides partnering with businesses, BPM Cloud is always ready to invite professional developers, QA engineers, designers, business analysts, managers and many other specialists ready to use their expertise in a profitable field." undertitle="We offer" dataContent={specialist}></HeroBlack>
+        <HeroValues title="What Are the Values That Drive Us to Go Further?" emoji='true' description={descriptionOfValues} dataContent={values}></HeroValues>
+        <HeroBlack title="Why Should Specialists Work in Our Team?" description="Besides partnering with businesses, BPM Cloud is always ready to invite professional developers, QA engineers, designers, business analysts, managers and many other specialists ready to use their expertise in a profitable field." undertitle="We offer" dataContent={specialist}></HeroBlack>
         <div className="container">
           <div className="profit margin_bottom_240">
             <div className="profit__wrap">
-              <h2 className="profit_title">Who can profit from our services?</h2>
+              <h2 className="profit_title">Who Can Profit From Our Services?</h2>
               <div className="profit_description">
                 Though the range of businesses we work with is literally unlimited, we can highlight the main types of our clients who find our services useful.
               </div>
@@ -227,10 +227,10 @@ const InformationAboutCompany = ({ location, data }) => {
             </div>
           </div>
         </div>
-        <HeroValues title="What is our pricing policy?" emoji='false' description={descriptionOfPricing} dataContent={princip}></HeroValues>
+        <HeroValues title="What Is Our Pricing Policy?" emoji='false' description={descriptionOfPricing} dataContent={princip}></HeroValues>
         <div className="container">
           <div className="partnering margin_bottom_240">
-              <h2 className="partnering_title">What can you get from partnering with us?</h2>
+              <h2 className="partnering_title">What Can You Get From Partnering With Us?</h2>
               <div className="partnering_description">
                 Though you may see many outsourcing IT companies of different size and experience, we at BPM Cloud can offer you several benefits.</div>
               <div className="partnering__cards">

@@ -19,7 +19,7 @@ const CONTACT_MUTATION = gql`
     }
   }
 `
-const ContactForm = props => {
+const ModalForm = props => {
   const [isEmpty, setIsEmpty] = useState({
     name: true,
     email: true,
@@ -148,8 +148,8 @@ const ContactForm = props => {
       </div>
 
       <div className="form_block_send">
-          <input type="checkbox" id="agree" name="agree" value="yes" required/>
-          <label htmlFor="agree">I agree to the<span>&nbsp;</span><Link to="/">Privacy Policy</Link><span> &nbsp;</span>and<span>&nbsp;</span><Link to="/">Terms of Use</Link></label>
+          <input class="modal" type="checkbox" id="agree-modal" name="agree-modal" value="yes" required/>
+          <label htmlFor="agree-modal">I agree to the<span>&nbsp;</span><Link to="/">Privacy Policy</Link><span> &nbsp;</span>and<span>&nbsp;</span><Link to="/">Terms of Use</Link></label>
           <div>
           <button className="button_black" type={ errors.message || errors.company || errors.email || errors.name ? '' : 'submit'}>
   Send<span className="arrow_white"></span>
@@ -160,12 +160,12 @@ const ContactForm = props => {
     </form>
   )
 }
-ContactForm.defaultProps = {
+ModalForm.defaultProps = {
   submitCallback: () => {},
 }
 
-ContactForm.propTypes = {
+ModalForm.propTypes = {
   submitCallback: PropTypes.func,
 }
 
-export default ContactForm
+export default ModalForm

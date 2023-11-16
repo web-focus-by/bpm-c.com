@@ -158,6 +158,7 @@ const Contacts = ({ location }) => {
                   <ul>
                     <li key="phone">Phone</li>
                     <li key="e-mail">E-mail</li>
+                    <li key="adress">Adress</li>
                     <li key="socialMedia">Social media</li>
                   </ul>
                 </div>
@@ -165,6 +166,7 @@ const Contacts = ({ location }) => {
                   <ul>
                     <li key="phoneNumber"><a href="tel:+19295479159">+ 1 929 547 9159 USA</a><a href="tel:+16474939093">+ 1 647 493 9093 Canada</a></li>
                     <li key="mail"><a href="mailto:hello@bpmcloud.com">hello@bpmcloud.com</a></li>
+                    <li key="adress-item">1230 6th Ave, New York, NY 10020</li>
                     <li key="socialMediaLinks">{socialMedia}</li>
                   </ul>
                 </div>
