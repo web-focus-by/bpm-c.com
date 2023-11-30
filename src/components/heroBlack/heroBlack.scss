@@ -69,8 +69,10 @@
 
                 .item__info::before {
                     left: -15px;
-                    content: '—';
-                    height: 100%;
+                    display: inline-block;
+                    height: 1px;
+                    width: 31px;
+                    border-bottom: 1px solid #fff;
                     position: absolute;
                     margin-right: 10px;
                 }
