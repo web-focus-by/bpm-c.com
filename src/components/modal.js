@@ -11,7 +11,7 @@ import "../components/styles/media_375.scss"
 import Uriy from "../images/uriy.mp4"
 import Kanu from "../images/kanu.mp4"
 import Vlada from "../images/vlada.mp4"
-import ContactForm from "./contactForm/ContactForm"
+import ModalForm from "./contactForm/ModalForm"
 
 const Modal = ({ onClickClose, showThankForm }) => {
   const refOutside = useRef()
@@ -33,7 +33,7 @@ const Modal = ({ onClickClose, showThankForm }) => {
     <React.Fragment>
       <div className="modal" onClick={clickOut} ref={refOutside}>
         <div className="modal__content" ref={refInside}>
-          <div className="form">
+          <div className="form modal_form">
             <div className="form__block">
               <h2 className="form_block_title title_62">Want to talk about your project?</h2>
               <div className="form_block_text">
@@ -57,7 +57,7 @@ const Modal = ({ onClickClose, showThankForm }) => {
                 </div>
               </div>
               <div className="form_block_wrapper">
-                <ContactForm submitCallback={showThankForm} />
+                <ModalForm submitCallback={showThankForm} />
               </div>
             </div>
 

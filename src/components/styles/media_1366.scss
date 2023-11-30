@@ -228,7 +228,7 @@
     border-radius: 40px;
     padding: 85px 57px;
     display: grid;
-    grid-template-columns: 1.03fr 0.97fr;
+    grid-template-columns: 1fr;
     background-position: 110px 165px;
 
     &__block {
@@ -2189,7 +2189,6 @@ s
 
   .accor__title {
     max-width: 556px;
-    text-transform: capitalize;
   }
 
   .accor__description {
@@ -2435,11 +2434,12 @@ s
     border-radius: 40px;
     padding: 85px 57px;
     display: grid;
-    grid-template-columns: 1.03fr 0.97fr;
+    grid-template-columns: 1fr 1fr;
     background-position: 110px 165px;
 
     &__block {
       color: #ffffff;
+      width: 80%;
 
       .form_block_title {
         color: #ffffff;
@@ -2447,6 +2447,7 @@ s
         margin-top: 0;
         font-weight: 500;
         width: 440px;
+        font-size: 36px;
       }
 
       .form_block_info {
@@ -2493,24 +2494,24 @@ s
       }
 
       .form_block_wrapper {
-        width: 462px;
+        width: 100%;
         margin: -4px 0 0 -17px;
         form {
           .form_line-double {
             display: flex;
-            gap: 59px;
+            gap: 31px;
             margin-bottom: 3px;
 
             .form_line-wrapper {
               margin-bottom: 10px;
-              min-width: 219px;
+              min-width: 45%;
             }
 
           }
 
           .form_line-wrapper, .form_line-wrapper--one {
             position: relative;
-            width: 499px;
+            width: 100%;
 
             input, textarea {
               color: #fff;
@@ -2724,6 +2725,182 @@ s
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .prof_path {
+    display: flex;
+    flex-direction: column;
+    .prof_path__wrap{
+      max-width: 688px;
+      .prof_path_title {
+        font-size: 42px;
+      }
+      .prof_path_description {
+        width: 688px;
+        font-size: 15px;
+        margin: 20px 0 30px;
+      }
+
+      .prof_path_history {
+        .prof_path_line {
+          display: flex;
+          gap: 0;
+          margin-bottom: 25px;
+
+          .year {
+            font-size: 24px;
+            min-width: 71px;
+          }
+
+          .descr {
+            padding: 0;
+            width: 560px;
+            font-size: 15px;
+          }
+        }
+
+        span.line {
+          height: 524px;
+          left: 11.58%;
+          top: 7px;
+        }
+      }
+    }
+
+    .prof_path__images {
+          width: 430px;
+          margin: 0 auto;
+      .images_table {
+        width: 481px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+
+        img {
+          width: 284px;
+        }
+
+        img:first-child {
+          width: 183px;
+          height: 286px;
+          align-self: end;
+        }
+
+        img:last-child {
+          width: 182px;
+          height: 238px;
+        }
+      }
+
+      .stick_cup {
+        position: absolute;
+        max-width: 28px;
+        max-height: 28px;
+        border-radius: 100%;
+        background-color: #FFD771;
+        padding: 28px;
+        left: -10px;
+      }
+
+      .stick_heart {
+        position: absolute;
+        max-width: 35px;
+        max-height: 35px;
+        border-radius: 100%;
+        background-color: #B1D2E0;
+        padding: 18px;
+        bottom: 8%;
+        right: 16.5%;
+
+      }
+    }
+  }
+  
+  .profit {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .profit__wrap{
+      max-width: 688px;
+      .profit_title {
+        max-width: 487px;
+        font-size: 44px;
+      }
+      .profit_description {
+        font-size: 15px;
+        margin: 20px 0 30px;
+      }
+
+      .profit__companie {
+        .profit_not-it {
+          border-top: 1px solid #E1DAF4;
+          padding: 25px 0;
+          .title {
+            font-size: 24px;
+            margin-bottom: 15px;
+          }
+
+          .descr {
+            font-size: 15px;
+          }
+        }
+
+        .profit_it {
+            border-top: 1px solid #E1DAF4;
+            border-bottom: 1px solid #E1DAF4;
+            padding: 25px 0;
+          .title {
+            font-size: 24px;
+            margin-bottom: 15px;
+          }
+
+          .descr {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .profit__images {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 40px auto 50px;
+      gap: 20px;
+
+      img:first-child {
+        width: 393px;
+        height: 525px;
+      }
+
+      img:nth-child(2) {
+        width: 275px;
+        height: 354px;
+      }
+
+      .stick_computer {
+        position: absolute;
+        max-width: 24px;
+        max-height: 24px;
+        border-radius: 100%;
+        background-color: #FFD771;
+        padding: 24px 30px 27px 23px;
+        bottom: -13px;
+        left: -1px;
+      }
+
+      .stick_light {
+        position: absolute;
+        max-width: 50px;
+        max-height: 50px;
+        border-radius: 100%;
+        background-color: #B1D2E0;
+        padding: 17px 15px 9px 18px;
+        top: -32px;
+        right: 0%;
       }
     }
   }

@@ -28,30 +28,17 @@ const Service = ({ title }) => {
     }
   `)
 
-
-  const block = (e) => {
-    const item = document.querySelector(".vio-item");
-    item.style.position = 'fixed';
-    item.style.opacity = '1';
-    item.style.left = e.clientX + -10 + 'px';
-    item.style.top = e.clientY + -10 + 'px';
-  }
-
-  const opacity = (e) => {
-    const item = document.querySelector(".vio-item");
-    item.style.opacity = '0';
-  }
-
   const dataItems = data ? data.allWpPage.edges : null
   const result = dataItems
     ? dataItems.map(value => {
         return (
           <div className="services_list_item_wrapper" key={value.node.id}>
             <Link style={{ textDecoration: "none" }} to={value.node.uri}>
-              <div className="services_list_item" onMouseMove={(e) => block(e)} onMouseLeave={() => opacity()}>
+              <div className="services_list_item">
                 <span>{value.node.title}</span>
               </div>
             </Link>
+            <span className="vio-item"></span>
           </div>
         )
       })
@@ -61,7 +48,6 @@ const Service = ({ title }) => {
       <div className="services margin_bottom_240">
         <h2 className="services__title title_62">{title}</h2>
         <div className="services__list">{result}</div>
-        <span className="vio-item"></span>
       </div>
     </div>
   )
