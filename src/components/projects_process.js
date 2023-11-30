@@ -150,7 +150,7 @@ const ProjectsProcess = ({ siteTitle }) => {
                           <div className="projects_process_list_item__hover-elem">
                             <span className="ober"></span>
                             <p>Ongoing technical support, bug fixes, and updates as required.</p>
-                            <p>Analyzing industry trends, competition, and user expectations.</p>
+                            <p>Regular maintenance to ensure optimal performance and security.</p>
                           </div>
                         </div>
                       </div>

@@ -12,84 +12,44 @@ import "../../components/styles/media_1024.scss"
 import "../../components/styles/media_768.scss"
 import "../../components/styles/media_375.scss"
 
-const HeroLine = ({}) => {
+const HeroLine = () => {
 
   return (
     <div className="line_wrapper">
-        <marquee class="line" scrolldelay="50" truespeed behavior="scroll"  direction="left" loop="-1" hspace="0">
-            <div className="line_inner">
-                <p>BPM CLOUD</p>
-                <p>BPM CLOUD</p>
-                <div className="clapp">
-                    <span className="clapp-icon"></span>
+        <div class="items-wrap">
+            <div class="items marquee">
+                <div class="item change">BPM Cloud</div>
+                <div class="item change">BPM Cloud</div>
+                <div class="item">
+                    <div className="clapp">
+                        <span className="clapp-icon"></span>
+                    </div>
                 </div>
-                <p>BPM CLOUD</p>
-                <p>BPM CLOUD</p>
-                <div className="power">
-                    <span className="power-icon"></span>
-                </div>
-                <p>BPM CLOUD</p>
-                <p>BPM CLOUD</p>
-                <div className="clapp">
-                    <span className="clapp-icon"></span>
-                </div>
-                <p>BPM CLOUD</p>
-                <p>BPM CLOUD</p>
-                <div className="power">
-                    <span className="power-icon"></span>
-                </div>
-                <p>BPM CLOUD</p>
-                <p>BPM CLOUD</p>
-                <div className="clapp">
-                    <span className="clapp-icon"></span>
-                </div>
-                <p>BPM CLOUD</p>
-                <p>BPM CLOUD</p>
-                <div className="power">
-                    <span className="power-icon"></span>
-                </div>
-                <p>BPM CLOUD</p>
-                <p>BPM CLOUD</p>
-                <div className="clapp">
-                    <span className="clapp-icon"></span>
-                </div>
-                <p>BPM CLOUD</p>
-                <p>BPM CLOUD</p>
-                <div className="power">
-                    <span className="power-icon"></span>
-                </div>
-                <p>BPM CLOUD</p>
-                <p>BPM CLOUD</p>
-                <div className="clapp">
-                    <span className="clapp-icon"></span>
-                </div>
-                <p>BPM CLOUD</p>
-                <p>BPM CLOUD</p>
-                <div className="power">
-                    <span className="power-icon"></span>
-                </div>
-                <p>BPM CLOUD</p>
-                <p>BPM CLOUD</p>
-                <div className="clapp">
-                    <span className="clapp-icon"></span>
-                </div>
-                <p>BPM CLOUD</p>
-                <p>BPM CLOUD</p>
-                <div className="power">
-                    <span className="power-icon"></span>
-                </div>
-                <p>BPM CLOUD</p>
-                <p>BPM CLOUD</p>
-                <div className="clapp">
-                    <span className="clapp-icon"></span>
-                </div>
-                <p>BPM CLOUD</p>
-                <p>BPM CLOUD</p>
-                <div className="power">
-                    <span className="power-icon"></span>
+                <div class="item change">BPM Cloud</div>
+                <div class="item change">BPM Cloud</div>
+                <div class="item item_icon">
+                    <div className="power">
+                        <span className="power-icon"></span>
+                    </div>
                 </div>
             </div>
-          </marquee>
+            <div aria-hidden="true" class="items marquee">
+                <div class="item change">BPM Cloud</div>
+                <div class="item change">BPM Cloud</div>
+                <div class="item item_icon">
+                    <div className="clapp">
+                        <span className="clapp-icon"></span>
+                    </div>
+                </div>
+                <div class="item change">BPM Cloud</div>
+                <div class="item change">BPM Cloud</div>
+                <div class="item">
+                    <div className="power">
+                        <span className="power-icon"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
           <div className="emily">
             <span className="cursor"></span>
             <p className="name">Emily</p>

@@ -108,7 +108,7 @@ const IndexPage = ({ location }) => {
     const commonAccor = [
     {
       q: 'What types of apps can you develop?',
-      a: ['If your business doesn’t have its own IT department and obtaining of the digital product is an inevitable necessity, we can take care of the product development and further maintenance. Our skilled professional teams are ready to take full responsibility for software or application development from the first till the last step.'],
+      a: ['The range of our possibilities is extremely wide, as we develop web applications, desktop and mobile applications, marketplaces, and other platforms for companies working in e-commerce, fintech, health industry and many others. If you have a special request, just contact us and we’ll discuss all the peculiarities.'],
     },
     {
       q: 'How long does it take to build an application?',
@@ -156,9 +156,9 @@ const buisChoose = [
           <ITCompany></ITCompany>
           <Portfolio posts={allPosts}></Portfolio>
           <Form></Form>
-          <HeroAccordion title="What are the services that we provide?" emoji="service" descr={service} dataContent={serviceAccor}></HeroAccordion>
+          <HeroAccordion title="What Are the Services That We Provide?" emoji="service" descr={service} dataContent={serviceAccor}></HeroAccordion>
           <HeroFacts
-            title="What are the benefits of our software development services?"
+            title="What Are the Benefits of Our Software Development Services?"
             description="There are many software development IT companies all around the world, but BPM Cloud has several main advantages that allow it to distinguish from the whole mass."
             flex="false"
             dataContent={facts}
@@ -168,10 +168,10 @@ const buisChoose = [
           <Technologies></Technologies>
           <ProjectsProcess></ProjectsProcess>
           <ServicesIndex title="Industries We Serve"></ServicesIndex>
-          <HeroValues title="Why do businesses choose BPM Cloud?" description={buisness} dataContent={buisChoose}></HeroValues>
+          <HeroValues title="Why Do Businesses Choose BPM Cloud?" description={buisness} dataContent={buisChoose}></HeroValues>
           <Reviews titlePage="Testimonials"></Reviews>
           <Blog titlePage="Blog"></Blog>
-          <HeroAccordion title="Common questions about our work" dataContent={commonAccor}></HeroAccordion>
+          <HeroAccordion title="Common Questions About Our Work" dataContent={commonAccor}></HeroAccordion>
           <WorkTogether></WorkTogether>
         </Layout>
     </>

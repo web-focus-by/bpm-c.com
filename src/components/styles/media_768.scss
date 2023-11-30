@@ -202,7 +202,7 @@
           .contact_form_block_wrapper {
             form {
               max-width: 700px;
-              padding-top: 40px;
+              padding-top: 120px;
 
               .contact_form_line-double {
                 display: flex;
@@ -2857,6 +2857,10 @@
       }
     }
   }
+
+  .contacts__contact .contacts_table .contacts_value ul li {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 530px) {
@@ -3626,15 +3630,15 @@
   }
 }
 
-@media screen and (max-width: 857px) {
+@media screen and (max-width:1000px) {
 
   .breacrumbs-list.contacts {
     position: absolute;
     margin: 0;
-    top: 11%;
+    top: 15%;
   }
   .contact_title {
-    padding-top: 50px;
+    padding-top: 100px;
   }
 
  .contacts {
@@ -3777,7 +3781,7 @@
           .contact_form_block_wrapper {
             form {
               max-width: 700px;
-              padding-top: 40px;
+              padding-top: 120px;
 
               .contact_form_line-double {
                 display: flex;

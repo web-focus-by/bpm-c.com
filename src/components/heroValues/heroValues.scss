@@ -11,6 +11,20 @@
   50% { border-color: orange }
 }
 
+@keyframes cursor {
+    0% {
+      border-color: white;
+    }
+  
+    50% {
+      border-color: transparent;
+    }
+  
+    100% {
+      border-color: white;
+    }
+  }
+
 .values {
     .values__title {
         margin-bottom: 50px;
@@ -183,22 +197,54 @@
             margin-top: 30px;
             padding-right: 10px;
 
-            .gif {
+            .gif:first-child {
                 opacity: 0;
-                width: 600px;
-                height: 100%;
+                display: inline-block;
+                width: 70px;
+                height: 70px;
                 position: absolute;
-                background: url(../../images/gif.gif) no-repeat;
+                background: url(../../images/gif-1.gif) no-repeat;
+                transition: all 0.5s;
+            }
+            .gif:nth-child(2) {
+                opacity: 0;
+                display: inline-block;
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                background: url(../../images/gif-2.gif) no-repeat;
+                transition: all 0.5s;
+            }
+            .gif:nth-child(3) {
+                opacity: 0;
+                display: inline-block;
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                background: url(../../images/gif-3.gif) no-repeat;
+                transition: all 0.5s;
+            }
+            .gif:nth-child(4) {
+                opacity: 0;
+                display: inline-block;
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                background: url(../../images/gif-4.gif) no-repeat;
+                transition: all 0.5s;
+            }
+            .gif:nth-child(5) {
+                opacity: 0;
+                display: inline-block;
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                background: url(../../images/gif-5.gif) no-repeat;
                 transition: all 0.5s;
             }
 
             .gif.vis {
                 opacity: 1;
-                width: 600px;
-                height: 100%;
-                position: absolute;
-                background: url(../../images/gif.gif) no-repeat;
-                transition: all 0.5s;
             }
 
             .values_kanu, .values_vlada {
@@ -256,7 +302,8 @@
                 .code.type {
                     p {
                         animation:
-                        typing 3.5s steps(30, end);
+                        typing 0.5s steps(30, end);
+                        animation: cursor 0.75s step-end infinite;
                         animation-delay: 0s;
                         animation-fill-mode: both;
                     }
@@ -518,24 +565,6 @@
                 .value_item.it_company-item.people {
                     margin-top: 30px;
                     padding-right: 10px;
-
-                    .gif {
-                        opacity: 0;
-                        width: 600px;
-                        height: 100%;
-                        position: absolute;
-                        background: url(../../images/gif.gif) no-repeat;
-                        transition: all 0.5s;
-                    }
-
-                    .gif.vis {
-                        opacity: 1;
-                        width: 600px;
-                        height: 100%;
-                        position: absolute;
-                        background: url(../../images/gif.gif) no-repeat;
-                        transition: all 0.5s;
-                    }
 
                     .values_kanu, .values_vlada {
                         display: flex;

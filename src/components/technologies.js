@@ -13,7 +13,7 @@ import "../components/styles/media_375.scss"
 
 const TechnologiesList = [
   {
-    name: "React.js and\n <br/> React Native",
+    name: "React.js<br/>React Native",
     link: "/technologies/react/",
     icon: "react",
   },

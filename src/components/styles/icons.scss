@@ -603,6 +603,8 @@
   top: 7px;
   display: inline-block;
   margin-left: 10px;
+  width: 30px;
+  height: 30px;
   background: url(../../images/health.svg) no-repeat;
   background-size: 30px 30px;
 }
@@ -675,6 +677,8 @@
   width: 34px;
   height: 34px;
   background: url(../../images/clapp-icon.svg) no-repeat;
+  position: absolute;
+  top: 25%;
 }
 
 .power-icon {
@@ -682,6 +686,8 @@
   width: 34px;
   height: 34px;
   background: url(../../images/power-icon.svg) no-repeat;
+  position: absolute;
+  top: 25%;
 }
 
 @media screen and (max-width: 1920px) {

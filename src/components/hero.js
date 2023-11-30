@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import Breadcrumbs from "../components/breadcrumbs/breadcrumbs"
+
 import "../components/styles/main.scss"
 import "../components/styles/icons.scss"
 import "../components/styles/modules.scss"
@@ -24,7 +24,7 @@ const Hero = ({ location }) => {
           If you’re struggling to find proper software development IT company that will provide you with the high-quality and cost-efficient result, BPM Cloud will put an end to your struggles. Our company is ready to cover your IT needs with years of working experience on different markets along with the large expertise of our specialists.
         </div>
         <div className="hero__butn">
-          <Link className="link_btn" to={"/portfolio/"}>
+          <Link className="link_btn" to={"/about-us/contacts/"}>
             <button className="button_white">
               Let’s work together<span className="arrow_black" itemprop="name"></span>
             </button>
