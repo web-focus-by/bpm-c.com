@@ -1400,6 +1400,10 @@
       }
     }
   }
+
+  .contacts__contact .contacts_table .contacts_value ul li {
+    font-size: 16.5px;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -1460,7 +1464,7 @@
           font-family: "Acrom", sans-serif;
           font-style: normal;
           font-weight: 500;
-          font-size: 20px;
+          font-size: 19px;
           line-height: 100%;
           color: #1a1b1f;
           position: relative;
@@ -1477,6 +1481,7 @@
               display: flex;
               list-style: none;
               margin-bottom: 50px;
+              font-size: 19px;
             }
             li:first-child {
               margin-bottom: 54px;
@@ -2697,6 +2702,7 @@
               list-style: none;
               margin-bottom: 43px;
               margin-right: 20px;
+              font-size: 19px;
               li {
                 a {
                   span{
