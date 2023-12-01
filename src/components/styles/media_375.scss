@@ -655,7 +655,6 @@
 
     .mission__quote {
       margin-top: 30px;
-      max-width: 343px;
       border-radius: 25px;
       padding: 40px 0;
       background-color: #935CFF;
@@ -893,14 +892,6 @@
     .peach_circle {
       display: none;
     }
-  }
-
-  .container {
-    padding: 0 18px;
-  }
-
-  .containerForm {
-    padding: 0;
   }
 
   .title_62 {
@@ -1409,6 +1400,10 @@
       }
     }
   }
+
+  .contacts__contact .contacts_table .contacts_value ul li {
+    font-size: 16.5px;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -1430,13 +1425,13 @@
 
   .contact_title {
     position: relative;
-    top: -49px;
+    top: -23px;
   }
 
   .contacts {
     display: flex;
     flex-direction: column;
-    margin-top: -51px;
+    margin-top: 0;
     &__contact {
       width: 100%;
       .contacts_table {
@@ -1469,7 +1464,7 @@
           font-family: "Acrom", sans-serif;
           font-style: normal;
           font-weight: 500;
-          font-size: 20px;
+          font-size: 19px;
           line-height: 100%;
           color: #1a1b1f;
           position: relative;
@@ -1486,6 +1481,7 @@
               display: flex;
               list-style: none;
               margin-bottom: 50px;
+              font-size: 19px;
             }
             li:first-child {
               margin-bottom: 54px;
@@ -1746,7 +1742,6 @@
 
     .mission__quote {
       margin-top: 30px;
-      max-width: 343px;
       border-radius: 25px;
       padding: 40px 0;
       background-color: #935CFF;
@@ -1926,10 +1921,12 @@
 
       img:first-child {
         width: 196px;
+        height: 263px;
       }
 
       img:nth-child(2) {
         width: 127px;
+        height: 170px;
       }
 
       .stick_computer {
@@ -1948,7 +1945,7 @@
         max-height: 50px;
         border-radius: 100%;
         background-color: #B1D2E0;
-        padding: 12px 4px 0px 14px;
+        padding: 12px 12px 6px 14px;
         right: 0;
       }
     }
@@ -2299,7 +2296,6 @@
       line-height: 130%;
       color: #5c5c5c;
       width: 100%;
-      margin-top: -30px;
     }
   }
 
@@ -2706,6 +2702,7 @@
               list-style: none;
               margin-bottom: 43px;
               margin-right: 20px;
+              font-size: 19px;
               li {
                 a {
                   span{
@@ -2891,11 +2888,7 @@
   }
   .breacrumbs-list {
     position: absolute;
-  }
-
-  .breacrumbs-list.contacts {
-    position: absolute;
-    margin: 0;
+    margin-top: 40px;
   }
 
   .span_breadcrumbs {
@@ -3145,10 +3138,6 @@
 
 
 @media screen and (max-width: 320px){
-
-  .container {
-    padding: 0 20px 0 8px;
-  }
 
   .title_62 {
     font-size: 34px;

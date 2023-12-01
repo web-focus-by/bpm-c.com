@@ -25,11 +25,11 @@ h1, h2, h3, h4 {
 
 .container {
   margin: 0 auto;
-  padding: 0 210px;
+  max-width: 88%;
 }
 .containerForm {
   margin: 0 auto;
-  padding: 0 210px;
+  max-width: 88%;;
 }
 
 .header {
@@ -970,7 +970,6 @@ h1, h2, h3, h4 {
 }
 
 .contacts {
-  margin-top: 43px;
   display: flex;
   justify-content: space-between;
   transition: all 0.5s ease-in-out;
@@ -1293,12 +1292,6 @@ h1, h2, h3, h4 {
         }
       }
     }
-  }
-}
-
-@media screen and (max-width: 1580px) {
-  .contact_title {
-    padding-top: 85px;
   }
 }
 
@@ -3142,9 +3135,10 @@ border: 1px solid #e11d48;
 
   .mission__quote {
     margin-top: 53px;
-    max-width: 1480px;
+    max-width: 100%;
     border-radius: 25px;
     padding: 70px 0;
+    margin: 0 auto;
     background-color: #935CFF;
 
     .quote {
@@ -3160,7 +3154,7 @@ border: 1px solid #e11d48;
     }
 
     .image {
-      width: 120px;
+      width: fit-content;
       margin: 28px auto 0;
 
       img {
@@ -3169,7 +3163,7 @@ border: 1px solid #e11d48;
     }
 
     .name {
-      width: 77px;
+      width: fit-content;
       margin: 13px auto 0;
       color: #fff;
       font-family: 'Acrom';
@@ -3180,7 +3174,7 @@ border: 1px solid #e11d48;
     }
 
     .position {
-      width: 31px;
+      width: fit-content;
       margin: 5px auto 0;
       color: #fff;
       font-family: 'Acrom';
@@ -3399,7 +3393,7 @@ border: 1px solid #e11d48;
       max-height: 40px;
       border-radius: 100%;
       background-color: #FFD771;
-      padding: 23px 24px 21px;
+      padding: 23px 24px 18px;
       bottom: 0;
       left: -35px;
     }
@@ -3410,7 +3404,7 @@ border: 1px solid #e11d48;
       max-height: 50px;
       border-radius: 100%;
       background-color: #B1D2E0;
-      padding: 16px 20px 15px 17px;
+      padding: 16px 21px 17px 17px;
       top: -42px;
       right: 28%;
     }

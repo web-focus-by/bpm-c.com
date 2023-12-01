@@ -1,4 +1,8 @@
 @media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+
   .title_62 {
     line-height: 115%;
   }
@@ -622,7 +626,6 @@
 
     .mission__quote {
       margin-top: 30px;
-      max-width: 688px;
       border-radius: 25px;
       padding: 50px 0;
       background-color: #935CFF;
@@ -635,7 +638,7 @@
       }
 
       .image {
-        width: 87px;
+        width: fit-content;
         margin: 23px auto 0;
 
         img {
@@ -645,13 +648,13 @@
       }
 
       .name {
-        width: 77px;
+        width: fit-content;
         margin: 7px auto 0;
         font-size: 14px;
       }
 
       .position {
-        width: 31px;
+        width: fit-content;
         margin: 5px auto 0;
         font-size: 14px;
       }
@@ -825,7 +828,7 @@
         max-height: 50px;
         border-radius: 100%;
         background-color: #B1D2E0;
-        padding: 17px 15px 9px 18px;
+        padding: 14px 15px 9px 17px;
         top: -32px;
         right: 0%;
       }
@@ -1725,17 +1728,6 @@
   .title_80 {
     font-size: 46px;
     //max-width: 645px;
-  }
-
-  .container {
-    padding-left: calc(16px + (40 - 16) * ((100vw - 375px) / (768 - 375)));
-    padding-right: calc(16px + (40 - 16) * ((100vw - 375px) / (768 - 375)));
-  }
-
-  .containerForm {
-    padding: 0;
-    //padding-left: calc(16px + (40 - 16) * ((100vw - 375px) / (768 - 375)));
-    //padding-right: calc(16px + (40 - 16) * ((100vw - 375px) / (768 - 375)));
   }
 
   .phone_butn {
@@ -3631,19 +3623,8 @@
 }
 
 @media screen and (max-width:1000px) {
-
-  .breacrumbs-list.contacts {
-    position: absolute;
-    margin: 0;
-    top: 15%;
-  }
-  .contact_title {
-    padding-top: 100px;
-  }
-
- .contacts {
+  .contacts {
     max-width: 708px;
-    margin-top: 69px;
     display: flex;
     flex-direction: column !important;
     &__contact {
