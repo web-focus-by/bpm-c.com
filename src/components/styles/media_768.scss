@@ -937,18 +937,6 @@
       justify-content: center;
       z-index: 3;
       margin: 0 auto;
-    &__content {
-
-      width: 100%;
-      .form, .form.modal_form {
-        padding: 0;
-        grid-template-columns: 1fr;
-        .form__block:first-child {
-          max-width: 80%;
-          margin: 60px auto;
-        }
-      }
-    }
   }
 
   .thanks_modal {
@@ -1725,9 +1713,6 @@
   .modal {
     &__content {
       border-radius: calc(0px + (30 - 0) * ((100vw - 375px) / (768 - 375)));
-
-      .form {
-      }
     }
   }
 
