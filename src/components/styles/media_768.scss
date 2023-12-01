@@ -702,7 +702,6 @@
     }
 
     .prof_path__images {
-          width: 430px;
           margin: 0 auto;
       .images_table {
         width: 481px;
@@ -923,9 +922,27 @@
  }
 
   .modal {
+      height: auto;
+      width: 90%;
+      background-color: rgba(26, 27, 31, 0.2);
+      position: fixed;
+      top: 0;
+      left: 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      margin: 0 auto;
     &__content {
-      .form {
-        grid-template-columns: 575px 35px;
+
+      width: 100%;
+      .form, .form.modal_form {
+        padding: 0;
+        grid-template-columns: 1fr;
+        .form__block:first-child {
+          max-width: 80%;
+          margin: 60px auto;
+        }
       }
     }
   }
@@ -933,7 +950,7 @@
   .thanks_modal {
     .thanks_modal_content {
       .form {
-        grid-template-columns: 510px 100px;
+        grid-template-columns: 1fr;
         padding: 30px 30px 230px 60px;
         background: url(../../images/purple_ball.svg) 103% 15% no-repeat,
           url(../../images/yellow_ball.svg) 66% 105% no-repeat;
@@ -1706,13 +1723,6 @@
       border-radius: calc(0px + (30 - 0) * ((100vw - 375px) / (768 - 375)));
 
       .form {
-        padding: calc(18px + (30 - 18) * ((100vw - 375px) / (768 - 375)))
-          calc(18px + (30 - 18) * ((100vw - 375px) / (768 - 375)))
-          calc(100px + (60 - 100) * ((100vw - 375px) / (768 - 375)))
-          calc(16px + (60 - 16) * ((100vw - 375px) / (768 - 375)));
-        grid-template-columns:
-          calc(340px + (575 - 340) * ((100vw - 375px) / (768 - 375)))
-          calc(0px + (35 - 0) * ((100vw - 375px) / (768 - 375)));
       }
     }
   }

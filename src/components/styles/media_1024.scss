@@ -1618,6 +1618,32 @@
       }
     }
   }
+
+  .modal {
+      height: auto;
+      width: 90%;
+      background-color: rgba(26, 27, 31, 0.2);
+      position: fixed;
+      top: 0;
+      left: 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      margin: 0 auto;
+    &__content {
+
+      width: 100%;
+      .form, .form.modal_form {
+        padding: 0;
+        grid-template-columns: 1fr;
+        .form__block:first-child {
+          max-width: 80%;
+          margin: 80px auto;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 857px) and (max-width: 1024px) {

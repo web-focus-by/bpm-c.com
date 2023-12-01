@@ -78,7 +78,7 @@
                 .item__info::before {
                     content: '';
                     left: -40px;
-                    top: 12px;
+                    top: 10px;
                     display: inline-block;
                     width: 4%;
                     height: 1px;
@@ -236,14 +236,17 @@
             .cards-list {
                 width: 100%;
                 display: grid;
-                grid-template-columns: 1fr;
                 row-gap: 20px;
 
                 .black_item {
                     width: 330px;
 
                     .item__info {
+                        margin-left: 20px;
                         font-size: 15px;
+                    }
+                    .item__info::before {
+                        left: -20px;
                     }
                 }
             }

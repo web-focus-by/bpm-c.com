@@ -64,7 +64,12 @@ const Modal = ({ onClickClose, showThankForm }) => {
             <div
               className="form__block"
               onClick={onClickClose}
-              style={{ cursor: "pointer" }}
+              style={{
+                cursor: "pointer",
+                position: "absolute",
+                top: "39px",
+                right: "33px"
+              }}
             >
               <div className="form_block_modal_button"></div>
             </div>
