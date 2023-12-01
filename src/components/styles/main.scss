@@ -499,6 +499,36 @@ h1, h2, h3, h4 {
   }
 }
 
+.modal .form_block_wrapper {
+  margin-left: 0 !important;
+  margin-top: 40px;
+}
+
+.close__block {
+  width: 34px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 100px;
+  transform: rotate(45deg);
+  margin-top: 12px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 34px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 100px;
+    transform: rotate(90deg);
+    position: relative;
+    top: -15px;
+  }
+}
+
 .modal {
   height: 100%;
   width: 100vw;
@@ -516,9 +546,9 @@ h1, h2, h3, h4 {
     background: #1a1b1f;
     border-radius: 40px;
 
-    .form, .form.modal_form {
+    .form .modal_form {
       grid-template-columns: 2fr 1fr;
-      padding: 40px 40px 80px 80px;
+      padding: 60px 40px 80px 80px;
 
       &__block {
         .form_block_text {
@@ -703,31 +733,6 @@ h1, h2, h3, h4 {
                     }
                   }
                 }
-          }
-        }
-
-        .form_block_modal_button {
-          width: 34px;
-          height: 2px;
-          background: #ffffff;
-          border-radius: 100px;
-          transform: rotate(45deg);
-          margin-top: 12px;
-
-          &:hover {
-            cursor: pointer;
-          }
-
-          &::after {
-            content: "";
-            display: inline-block;
-            width: 34px;
-            height: 2px;
-            background: #ffffff;
-            border-radius: 100px;
-            transform: rotate(90deg);
-            position: relative;
-            top: -15px;
           }
         }
 
@@ -1478,11 +1483,12 @@ h1, h2, h3, h4 {
   border-radius: 40px;
   padding: 80px 125px 80px 98px;
   display: grid;
-  grid-template-columns: 1.03fr 0.97fr;
+  grid-template-columns: 1fr 1fr;
   background-position: 110px 165px;
 
   &__block {
     color: #ffffff;
+    display: inline-block;
 
     .form_block_title {
       color: #ffffff;
@@ -1545,7 +1551,7 @@ h1, h2, h3, h4 {
     }
 
     .form_block_wrapper {
-      width: 650px;
+      width: 100%;
       margin-left: -11px;
       form {
 
@@ -1573,14 +1579,14 @@ h1, h2, h3, h4 {
 
           .form_line-wrapper {
             margin-bottom: 24px;
-            width: 300px;
+            width: 100%;
           }
 
         }
 
         .form_line-wrapper, .form_line-wrapper--one {
           position: relative;
-          width: 650px;
+          width: 100%;
 
           input, textarea {
             color: #fff;
