@@ -1002,12 +1002,6 @@
     }
   }
 
-  .breacrumbs-list.contacts {
-    position: absolute;
-    margin: 0;
-    top: 15%;
-  }
-
   .contacts {
     width: 90%;
     margin-top: 43px;
@@ -1251,7 +1245,6 @@
 
     .mission__quote {
       margin-top: 38px;
-      max-width: 1053px;
       border-radius: 18px;
       padding: 50px 0;
       background-color: #935CFF;
@@ -1432,11 +1425,10 @@
 
       .stick_light {
         position: absolute;
-        max-width: 50px;
-        max-height: 50px;
+        max-width: 23px;
+        max-height: 28px;
         border-radius: 100%;
         background-color: #B1D2E0;
-        padding: 12px 3px 0px 17px;
       }
     }
   }
@@ -1516,16 +1508,6 @@
 
   .margin_bottom_60 {
     margin-bottom: calc(40px + (57 - 40) * ((100vw - 1024px) / (1366 - 1024)));
-  }
-
-  .container {
-    padding-left: calc(40px + (157 - 40) * ((100vw - 1024px) / (1366 - 1024)));
-    padding-right: calc(40px + (157 - 40) * ((100vw - 1024px) / (1366 - 1024)));
-  }
-
-  .containerForm {
-    padding-left: calc(40px + (157 - 40) * ((100vw - 1024px) / (1366 - 1024)));
-    padding-right: calc(40px + (157 - 40) * ((100vw - 1024px) / (1366 - 1024)));
   }
 
   .margin_bottom_240 {
@@ -1955,7 +1937,7 @@
   }
 
   .breacrumbs-list {
-    margin-top: 11px;
+    margin-top: 43px;
   }
 
   .reviews {
@@ -2181,12 +2163,6 @@ s
 }
 
 @media screen and (max-width: 1600px) {
-  .breacrumbs-list.contacts {
-    position: absolute;
-    margin: 0;
-    top: 15%;
-  }
-
   .accor__title {
     max-width: 556px;
   }
@@ -2887,18 +2863,17 @@ s
         max-height: 24px;
         border-radius: 100%;
         background-color: #FFD771;
-        padding: 24px 30px 27px 23px;
+        padding: 23px 24px 21px 23px;
         bottom: -13px;
         left: -1px;
       }
 
       .stick_light {
         position: absolute;
-        max-width: 50px;
-        max-height: 50px;
+        max-width: 23px;
+        max-height: 28px;
         border-radius: 100%;
         background-color: #B1D2E0;
-        padding: 17px 15px 9px 18px;
         top: -32px;
         right: 0%;
       }

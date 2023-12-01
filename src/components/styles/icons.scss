@@ -773,18 +773,6 @@
     margin-left: 19px;
   }
 
-  .computer {
-    display: inline-block;
-    background: url(../../images/pc.svg) no-repeat;
-    background-size: 24px 24px;
-  }
-
-  .light {
-    display: inline-block;
-    background: url(../../images/light.svg) no-repeat;
-    background-size: 30px 30px;
-  }
-
   .circle {
     display: inline-block;
     background: url(../../images/circle.svg) no-repeat;
@@ -884,6 +872,24 @@
     background-size: 21px 21px;
   }
 }
+@media screen and (max-width: 1368px) {
+  .computer {
+    display: inline-block;
+    background: url(../../images/pc.svg) no-repeat;
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .light {
+    display: inline-block;
+    background: url(../../images/light.svg) no-repeat;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .notes_of_reviewes {
@@ -921,12 +927,16 @@
     display: inline-block;
     background: url(../../images/pc.svg) no-repeat;
     background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
   }
 
   .light {
     display: inline-block;
     background: url(../../images/light.svg) no-repeat;
     background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
   }
 
   .circle {
@@ -934,6 +944,24 @@
     background: url(../../images/circle.svg) no-repeat;
     background-size: 16px 16px;
     margin: 5px 27px 0 1px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .computer {
+    display: inline-block;
+    background: url(../../images/pc.svg) no-repeat;
+    background-size: 23px 23px;
+    width: 23px;
+    height: 23px;
+  }
+
+  .light {
+    display: inline-block;
+    background: url(../../images/light.svg) no-repeat;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -994,11 +1022,15 @@
     display: inline-block;
     background: url(../../images/pc.svg) no-repeat;
     background-size: 23px 23px;
+    width: 23px;
+    height: 23px;
   }
 
   .light {
     display: inline-block;
     background: url(../../images/light.svg) no-repeat;
     background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
   }
 }
