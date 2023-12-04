@@ -229,6 +229,7 @@
     padding: 85px 57px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 0;
     background-position: 110px 165px;
 
     &__block {
@@ -1238,7 +1239,7 @@
         gap: 14px;
           p {
             color: #5C5C5C;
-            width: 519px;
+            width: 50%;
             font-size: 12.806px;
           }
       }
@@ -1280,12 +1281,12 @@
   .prof_path {
     display: flex;
     .prof_path__wrap{
-      max-width: 519px;
+      max-width: 50%;
       .prof_path_title {
         font-size: 44.11px;
       }
       .prof_path_description {
-        width: 519px;
+        width: 100%;
         font-size: 13px;
         margin: 28px 0 30px;
       }
@@ -1309,7 +1310,7 @@
 
         span.line {
           height: 596px;
-          left: 18.6%;
+          left: 50%;
         }
       }
     }
@@ -1440,7 +1441,7 @@
         font-size: 44.11px;
       }
       .partnering_description {
-        width: 515px;
+        width: 50%;
         font-size: 12.806px;
         margin: 28px 0 50px;
       }
@@ -1456,7 +1457,7 @@
           }
 
           .descr {
-            max-width: 252px;
+            max-width: 99%;
             font-size: 12.806px;
           }
         }
@@ -2468,12 +2469,12 @@ s
   .prof_path {
     display: flex;
     .prof_path__wrap{
-      max-width: 519px;
+      max-width: 50%;
       .prof_path_title {
         font-size: 44.11px;
       }
       .prof_path_description {
-        width: 519px;
+        width: 100%;
         font-size: 13px;
         margin: 28px 0 30px;
       }
@@ -2497,7 +2498,7 @@ s
 
         span.line {
           height: 596px;
-          left: 18.6%;
+          left: 50%;
         }
       }
     }
@@ -2649,12 +2650,12 @@ s
     display: flex;
     flex-direction: column;
     .prof_path__wrap{
-      max-width: 688px;
+      max-width: 100%;
       .prof_path_title {
         font-size: 42px;
       }
       .prof_path_description {
-        width: 688px;
+        width: 100%;
         font-size: 15px;
         margin: 20px 0 30px;
       }
@@ -2672,14 +2673,14 @@ s
 
           .descr {
             padding: 0;
-            width: 560px;
+            width: 100%;
             font-size: 15px;
           }
         }
 
         span.line {
           height: 524px;
-          left: 11.58%;
+          left: 50%;
           top: 7px;
         }
       }
@@ -2826,6 +2827,7 @@ s
   border-radius: 40px;
   padding: 85px 57px;
   display: grid;
+  gap: 0;
   grid-template-columns: 1fr;
   background-position: 110px 165px;
 
@@ -3063,6 +3065,7 @@ s
       padding: 85px 57px;
       display: grid;
       grid-template-columns: 2fr 1fr;
+      gap: 0;
       background-position: 110px 165px;
 
       &__block {

@@ -60,13 +60,13 @@
             line-height: 150%;
 
             p {
-                min-width: 730px;
+                min-width: 50%;
             }
         }
 
         .description.flex {
             display: flex;
-            width: 730px;
+            width: 50%;
             gap: 20px;
         }
     }
@@ -79,7 +79,7 @@
             width: 608px;
         }
         .description {
-            width: 730px;
+            width: 50%;
             margin: -18px 0 0 0;
         }
 
@@ -453,7 +453,7 @@
                 width: 432px;
             }
             .description {
-                width: 519px;
+                width: 50%;
                 margin: -12px 0 0 0;
             }
 
@@ -891,7 +891,7 @@
                 font-size: 15px;
 
                 p {
-                    min-width: 687px;
+                    min-width: 100%;
                     margin: 0;
                 }
             }
@@ -899,7 +899,7 @@
             .description.flex {
                 display: flex;
                 flex-direction: column;
-                width: 678px;
+                width: 100%;
                 gap: 15px;
             }
         }
@@ -913,7 +913,7 @@
                 width: 687px;
             }
             .description {
-                width: 687px;
+                width: 100%;
                 margin: 20px 0 0 0;
             }
 
@@ -1026,7 +1026,7 @@
                 font-size: 15px;
 
                 p {
-                    min-width: 687px;
+                    min-width: 100%;
                     margin: 0;
                 }
             }
@@ -1034,7 +1034,7 @@
             .description.flex {
                 display: flex;
                 flex-direction: column;
-                width: 678px;
+                width: 100%;
                 gap: 15px;
             }
         }
@@ -1048,7 +1048,7 @@
                 width: 687px;
             }
             .description {
-                width: 687px;
+                width: 100%;
                 margin: 20px 0 0 0;
             }
 
@@ -1324,8 +1324,7 @@
                 font-size: 15px;
 
                 p {
-                    min-width: 400px;
-                    max-width: 400px;
+                    min-width: 100%;
                     margin: 0;
                 }
             }
@@ -1513,7 +1512,7 @@
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 765px) {
     .values {
         .values__title {
             margin-top: 130px;
@@ -1539,7 +1538,7 @@
                 font-size: 15px;
 
                 p {
-                    min-width: 343px;
+                    min-width: 100%;
                     margin: 0;
                 }
             }
@@ -1547,7 +1546,7 @@
             .description.flex {
                 display: flex;
                 flex-direction: column;
-                width: 343px;
+                width: 100%;
                 gap: 15px;
             }
         }
@@ -1561,7 +1560,7 @@
                 width: 343px;
             }
             .description {
-                width: 343px;
+                width: 100%;
                 margin: 20px 0 0 0;
             }
 

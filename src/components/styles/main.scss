@@ -1484,6 +1484,7 @@ h1, h2, h3, h4 {
   padding: 80px 125px 80px 98px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 60px;
   background-position: 110px 165px;
 
   &__block {
@@ -3301,7 +3302,7 @@ border: 1px solid #e11d48;
       gap: 20px;
         p {
           color: #5C5C5C;
-          width: 715px;
+          width: 50%;
           font-family: 'Acrom';
           font-size: 18px;
           font-style: normal;
@@ -3369,7 +3370,7 @@ border: 1px solid #e11d48;
   flex-wrap: wrap;
   justify-content: space-between;
   .prof_path__wrap{
-    max-width: 730px;
+    max-width: 50%;
     .prof_path_title {
       color:#1A1B1F;
       font-family: 'Acrom';
@@ -3381,7 +3382,7 @@ border: 1px solid #e11d48;
       margin: 0;
     }
     .prof_path_description {
-      width: 730px;
+      width: 100%;
       color:#5C5C5C;
       font-family: 'Acrom';
       font-size: 18px;
@@ -3418,12 +3419,13 @@ border: 1px solid #e11d48;
           line-height: 150%;
           padding: 0 1px 0 10px;
           overflow: hidden;
+          margin-left: 10px;
         }
       }
 
       span.line {
         position: absolute;
-        left: 19.2%;
+        left: 50%;
         top: 0;
         width: 1px;
         height: 839px;
@@ -3602,7 +3604,7 @@ border: 1px solid #e11d48;
       text-transform: capitalize;
     }
     .partnering_description {
-      width: 725px;
+      width: 50%;
       color:#5C5C5C;
       font-family: 'Acrom';
       font-size: 18px;
@@ -3629,7 +3631,7 @@ border: 1px solid #e11d48;
         }
 
         .descr {
-          max-width: 355px;
+          max-width: 99%;
           color: #5C5C5C;
           font-family: 'Acrom';
           font-size: 18px;

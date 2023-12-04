@@ -29,7 +29,7 @@
         }
 
         .description {
-            width: 750px;
+            width: 50%;
             color:#fff;
             font-family: 'Acrom';
             font-size: 18px;
@@ -154,7 +154,7 @@
             }
 
             .description {
-                width: 533px;
+                width: 50%;
                 font-size: 12.806px;
             }
         }
@@ -216,13 +216,13 @@
         .black__title {
             margin-bottom: 40px;
             .title {
-                width: 569px;
+                width: 100%;
                 font-size: 42px;
                 margin-bottom: 20px;
             }
 
             .description {
-                width: 688px;
+                width: 100%;
                 font-size: 15px;
             }
         }
@@ -267,6 +267,16 @@
     }
 }
 
+@media screen and (max-width: 740px){
+    .container.black .black__cards .cards-list {
+        grid-template-columns: 1fr;
+    }
+
+    .container.black .black__cards .cards-list .black_item {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 450px) {
     .container.black {
         background-color: #1A1B1F;
@@ -287,7 +297,7 @@
             }
 
             .description {
-                width: 343px;
+                width: 100%;
                 font-size: 15px;
             }
         }
