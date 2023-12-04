@@ -29,7 +29,7 @@
         }
 
         .description {
-            width: 750px;
+            width: 50%;
             color:#fff;
             font-family: 'Acrom';
             font-size: 18px;
@@ -78,7 +78,7 @@
                 .item__info::before {
                     content: '';
                     left: -40px;
-                    top: 12px;
+                    top: 10px;
                     display: inline-block;
                     width: 4%;
                     height: 1px;
@@ -154,7 +154,7 @@
             }
 
             .description {
-                width: 533px;
+                width: 50%;
                 font-size: 12.806px;
             }
         }
@@ -216,13 +216,13 @@
         .black__title {
             margin-bottom: 40px;
             .title {
-                width: 569px;
+                width: 100%;
                 font-size: 42px;
                 margin-bottom: 20px;
             }
 
             .description {
-                width: 688px;
+                width: 100%;
                 font-size: 15px;
             }
         }
@@ -236,14 +236,17 @@
             .cards-list {
                 width: 100%;
                 display: grid;
-                grid-template-columns: 1fr;
                 row-gap: 20px;
 
                 .black_item {
                     width: 330px;
 
                     .item__info {
+                        margin-left: 20px;
                         font-size: 15px;
+                    }
+                    .item__info::before {
+                        left: -20px;
                     }
                 }
             }
@@ -261,6 +264,16 @@
             filter: blur(60px);
             z-index: 2;
         }
+    }
+}
+
+@media screen and (max-width: 740px){
+    .container.black .black__cards .cards-list {
+        grid-template-columns: 1fr;
+    }
+
+    .container.black .black__cards .cards-list .black_item {
+        width: 100%;
     }
 }
 
@@ -284,7 +297,7 @@
             }
 
             .description {
-                width: 343px;
+                width: 100%;
                 font-size: 15px;
             }
         }

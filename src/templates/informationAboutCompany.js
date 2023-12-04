@@ -154,7 +154,7 @@ const InformationAboutCompany = ({ location, data }) => {
               <div className="prof_path_history">
                 <div className="prof_path_line">
                   <div className="year">2018</div>
-                  <div className="circle"></div>
+                  <div className="circle"><span className="line"></span></div>
                   <div className="descr">Our company was founded by Yuri Krivko. This is how we started our way from small enterprise with no more than several people responsible for many business aspects simultaneously.</div>
                 </div>
                 <div className="prof_path_line">
@@ -182,8 +182,6 @@ const InformationAboutCompany = ({ location, data }) => {
                   <div className="circle"></div>
                   <div className="descr">More and more people demonstrated their determination and willingness to work with us, and now our company’s team has more than 50 employees. These are professional developers, QA engineers, UX/UI designers and many other specialists who are ready to grow and put their efforts into the outsourcing development and business cooperation.</div>
                 </div>
-
-                <span className="line"></span>
               </div>
             </div>
             <div className="prof_path__images">
