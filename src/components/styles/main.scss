@@ -2734,6 +2734,7 @@ border: 1px solid #e11d48;
   border-top: 1px solid #5c5c5c;
   padding-top: 68px;
   font-size: 18px;
+  position: relative;
 
   ul {
     li {
@@ -2838,6 +2839,20 @@ border: 1px solid #e11d48;
         }
       }
     }
+  }
+}
+
+.container.footer_container {
+  position: relative;
+}
+
+.dmca-badge {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  img {
+    width: 36px;
   }
 }
 
