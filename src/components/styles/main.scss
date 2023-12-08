@@ -2821,13 +2821,15 @@ border: 1px solid #e11d48;
 
   &__social_net {
     display: flex;
-    justify-content: end;
+    flex-direction: column;
 
     ul {
       margin: 0;
       display: flex;
       justify-content: space-between;
       padding-inline-start: 0;
+      width: fit-content;
+      margin-left: auto;
 
       li {
         a {
@@ -2842,17 +2844,14 @@ border: 1px solid #e11d48;
   }
 }
 
-.container.footer_container {
-  position: relative;
-}
-
 .dmca-badge {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  position: relative;
+  width: 110px;
+  margin-left: auto;
+  margin-top: 5px;
 
   img {
-    width: 36px;
+    width: 110px;
   }
 }
 
