@@ -2855,6 +2855,12 @@ border: 1px solid #e11d48;
   }
 }
 
+@media screen and (max-width: 1625px) {
+  .dmca-badge {
+    margin-top: 10px;
+  }
+}
+
 .swiper {
   .swiper-slide {
     width: 346px;
