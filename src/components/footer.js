@@ -47,7 +47,7 @@ const Footer = () => {
   })
 
   return (
-    <div className="container footer_container">
+    <div className="container">
       <div className="footer margin_bottom_60">
         <div className="footer__logo">
           <a href="#">
@@ -84,10 +84,12 @@ const Footer = () => {
         </div>
         <div className="footer__copyright">{/*unp*/}</div>
         <div className="footer__social_net">
-          <ul>{socialMedia}</ul>
+          <ul>
+            {socialMedia}
+          </ul>
+                      <a href="//www.dmca.com/Protection/Status.aspx?ID=38306ddf-a860-49ff-808b-f77ceba4d9d7" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca-badge-w250-5x1-08.png?ID=38306ddf-a860-49ff-808b-f77ceba4d9d7"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
         </div>
       </div>
-      <a href="//www.dmca.com/Protection/Status.aspx?ID=38306ddf-a860-49ff-808b-f77ceba4d9d7" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120y.png?ID=38306ddf-a860-49ff-808b-f77ceba4d9d7"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
     </div>
 
   )
