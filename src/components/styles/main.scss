@@ -3025,6 +3025,10 @@ border: 1px solid #e11d48;
 .breacrumbs-list {
   max-width: 80%;
   margin-top: 40px;
+
+  .breadcrumbs {
+    display: inline-block;
+  }
 }
 
 .reviews {
