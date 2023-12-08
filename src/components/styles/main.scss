@@ -1304,6 +1304,9 @@ h1, h2, h3, h4 {
         p {
           margin: 0;
         }
+        h2.contact_form__title {
+          display: none;
+        }
         .contact_form_block_wrapper {
           form {
             padding-top: 40px;
@@ -3025,6 +3028,10 @@ border: 1px solid #e11d48;
 .breacrumbs-list {
   max-width: 80%;
   margin-top: 40px;
+
+  .breadcrumbs {
+    display: inline-block;
+  }
 }
 
 .reviews {

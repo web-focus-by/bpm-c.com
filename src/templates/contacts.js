@@ -166,7 +166,7 @@ const Contacts = ({ location }) => {
                   <ul>
                     <li key="phoneNumber"><a href="tel:+19295479159">+ 1 929 547 9159 USA</a><a href="tel:+16474939093">+ 1 647 493 9093 Canada</a></li>
                     <li key="mail"><a href="mailto:hello@bpmcloud.com">hello@bpm-c.com</a></li>
-                    <li key="adress-item">1230 6th Ave, New York, NY 10020</li>
+                    <li key="adress-item" className="adress-item">1230 6th Ave, New York, NY 10020</li>
                     <li key="socialMediaLinks">{socialMedia}</li>
                   </ul>
                 </div>
@@ -175,6 +175,7 @@ const Contacts = ({ location }) => {
             <div className="contacts__contacts_form">
               <div className="contact_form">
                 <div className="contact_form__block">
+                  <h2 className="contact_form__title">Tell Us About Your Project</h2>
                   <div className="contact_form_block_wrapper">
                     <form>
                       {/* // id="search-contact_form" action="https://getform.io/f/8b83345e-926d-46a9-b977-4ea1b3c45ae1" method="POST" onSubmit={null} */}

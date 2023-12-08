@@ -145,6 +145,10 @@
         background-position: 110px 165px;
         &__block {
           color: #1a1b1f;
+
+            h2.contact_form__title {
+              font-size: 28px;
+            }
           .contact_form_block_buttons_title {
             width: 100%;
             font-family: "Acrom", sans-serif;
@@ -206,7 +210,7 @@
           .contact_form_block_wrapper {
             form {
               max-width: 700px;
-              padding-top: 120px;
+              padding-top: 160px;
 
               .contact_form_line-double {
                 display: flex;
@@ -2969,6 +2973,11 @@
 }
 
 @media screen and (max-width:650px) {
+
+  .contacts__contact .contacts_table .contacts_value ul li {
+    font-size: 20px;
+  }
+
   .modal {
       height: auto;
       width: 100%;
@@ -3250,10 +3259,6 @@
         margin-bottom: 12px;
       }
     }
-  }
-
-  .contacts__contact .contacts_table .contacts_value ul li {
-    font-size: 20px;
   }
 }
 
@@ -4095,6 +4100,13 @@
     &__contacts_form {
       max-width: 688px;
       width: 100%;
+
+      h2.contact_form__title {
+        display: block !important;
+        position: relative;
+        top: 100px;
+        font-size: 38px;
+      }
       .contact_form {
         width: 100%;
         border-radius: 40px;
@@ -4165,7 +4177,7 @@
           .contact_form_block_wrapper {
             form {
               max-width: 700px;
-              padding-top: 120px;
+              padding-top: 160px;
 
               .contact_form_line-double {
                 display: flex;
