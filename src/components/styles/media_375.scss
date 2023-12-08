@@ -1101,6 +1101,10 @@
       }
     }
   }
+
+  h2.contact_form__title {
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -1937,9 +1941,12 @@
           p {
             margin: 0;
           }
+          h2.contact_form__title {
+            font-size: 24px;
+          }
           .contact_form_block_wrapper {
             form {
-              padding-top: 120px;
+              padding-top: 160px;
               width: 343px;
 
               .contact_form_line-double {
@@ -2541,7 +2548,7 @@
           }
           .contact_form_block_wrapper {
             form {
-              padding-top: 120px;
+              padding-top: 160px;
 
               .contact_form_line-double {
                 display: flex;
