@@ -27,13 +27,11 @@ const ProjectsProcess = ({ siteTitle }) => {
       const clickChild = clickElem.querySelector('.projects_process_list_item__hover-elem');
       const back = document.querySelector('.projects_process__list');
       const nextElem = document.getElementById(next);
-      console.log(back)
 
       clickElem.classList.toggle('click');
       clickChild.classList.toggle('click'); 
       const marginChild = clickElem.querySelector('.projects_process_list_item__hover-elem.click');
       if(clickElem.classList.contains('click')) {
-        console.log(back.getBoundingClientRect().height + marginChild.getBoundingClientRect().height);
         back.style.height = `${back.getBoundingClientRect().height + marginChild.getBoundingClientRect().height}px`;
 
         if(nextElem) {

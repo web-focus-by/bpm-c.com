@@ -2,6 +2,7 @@ import * as React from "react"
 import { useState, useEffect, useRef } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 import Header from "./header"
 import Footer from "./footer"
 import PhoneBtn from "./phone_btn"
@@ -110,6 +111,8 @@ const Layout = ({ children }) => {
     setModalActive(true)
   }
 
+  const tawkMessengerRef = useRef();
+
     return (
       <>
         <div className="header" ref={refMenu}>
@@ -149,6 +152,10 @@ const Layout = ({ children }) => {
         ) : null}
         {children}
         <Footer></Footer>
+        <TawkMessengerReact
+                propertyId="65699f8bff45ca7d4785aa7f"
+                widgetId="1hgi9eev5"
+                ref={tawkMessengerRef}/>
         <ScriptLD/>
       </>
     )
