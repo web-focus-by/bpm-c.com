@@ -105,7 +105,6 @@ const ITCompany = () => (
                   <p style={{marginLeft: 15}}><span className="vio">)</span></p>
                   <p id="code" onAnimationEnd={() => {
                     anim('code', 'vlada', 'gif');
-                    console.log('end');
                   }}><span className="yel">{'}'}</span></p>
                 </div>
               </div>

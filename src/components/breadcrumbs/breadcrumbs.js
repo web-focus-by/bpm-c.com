@@ -12,7 +12,6 @@ const Breadcrumbs = ({ breadcrumbs, title }) => {
     breadcrumbs && breadcrumbs.href
       ? breadcrumbs.href.split("/").slice(1, -1).slice(1)
       : ""
-console.log(filePath)
   if (pathname) {
     breadcrumbItems = filePath
       ? filePath.map((item, index) => {
@@ -24,7 +23,6 @@ console.log(filePath)
           let link = host === item.toLowerCase() ? domain.toLowerCase() : domain.toLowerCase() + "/" + path.toLowerCase()
           if (breadcrumbs.pathname !== "/") {
             let secondItem = item.charAt(0).toUpperCase() + item.slice(1);
-            console.log(secondItem)
             return (
               <span key={index} className="span_breadcrumbs" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
                 <Link className="breadcrumbs" to={`${link}`} itemtype="http://schema.org/Thing" itemprop="item">

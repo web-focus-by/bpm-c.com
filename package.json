@@ -6,6 +6,7 @@
   "author": "Leankov Dzmitry <legankov95@gmail.com>",
   "dependencies": {
     "@apollo/client": "^3.7.2",
+    "@tawk.to/tawk-messenger-react": "^2.0.1",
     "gatsby": "^4.23.0",
     "gatsby-plugin-canonical-urls": "^4.25.0",
     "gatsby-plugin-gatsby-cloud": "^4.18.1",
@@ -21,6 +22,7 @@
     "gatsby-plugin-sass": "^5.18.1",
     "gatsby-plugin-sharp": "^4.18.1",
     "gatsby-plugin-sitemap": "^5.25.0",
+    "gatsby-plugin-tawk.to": "^1.0.8",
     "gatsby-redirect-from": "^1.0.5",
     "gatsby-source-filesystem": "^4.18.1",
     "gatsby-source-wordpress": "^6.25.5",

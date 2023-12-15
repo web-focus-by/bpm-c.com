@@ -47,7 +47,8 @@ const Footer = () => {
   })
 
   return (
-    <div className="container">
+    <>
+      <div className="container">
       <div className="footer margin_bottom_60">
         <div className="footer__logo">
           <a href="#">
@@ -91,7 +92,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-
+    </>
   )
 }
 
