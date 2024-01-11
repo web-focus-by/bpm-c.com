@@ -182,19 +182,20 @@
   .arrow_black,
   .arrow_white {
     display: inline-block;
+    background-size: 12px 6px;
     width: 12px;
     height: 6px;
   }
-  .arrow {
-    &_black {
-      background: url(../../images/arrow_black.svg) no-repeat;
-      background-size: contain;
-    }
-    &_white {
-      background: url(../../images/arrow_white.svg) no-repeat;
-      background-size: contain;
-    }
-  }
+  // .arrow {
+  //   &_black {
+  //     background: url(../../images/arrow_black.svg) no-repeat;
+  //     background-size: contain;
+  //   }
+  //   &_white {
+  //     background: url(../../images/arrow_white.svg) no-repeat;
+  //     background-size: contain;
+  //   }
+  // }
 }
 
 .react {
