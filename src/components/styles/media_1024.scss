@@ -907,7 +907,7 @@
                     margin-left: 10px;
                     background-size: 12px;
                     position: relative;
-                    top: 2px;
+                    top: -1px;
                   }
                   :hover {
                     cursor: pointer;
@@ -1475,16 +1475,17 @@
           ul {
             padding: 0;
             margin: 0;
-            width: max-content;
+            width: 100%;
             li {
               display: flex;
               list-style: none;
-              margin-bottom: 43px;
+              margin-bottom: 35px;
               margin-right: 14px;
             }
             li:first-child {
               row-gap: 8px;
               flex-direction: column;
+               margin-bottom: 25px;
             }
           }
         }

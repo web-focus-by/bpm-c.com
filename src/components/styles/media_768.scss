@@ -4104,7 +4104,7 @@
       h2.contact_form__title {
         display: block !important;
         position: relative;
-        top: 100px;
+        top: 130px;
         font-size: 38px;
       }
       .contact_form {
@@ -4177,7 +4177,7 @@
           .contact_form_block_wrapper {
             form {
               max-width: 700px;
-              padding-top: 160px;
+              padding-top: 230px;
 
               .contact_form_line-double {
                 display: flex;
@@ -4244,7 +4244,7 @@
                   font-size: 16px;
                   span {
                     margin-left: 12px;
-                    background-size: 16px;
+                    top: -1px;
                   }
                   :hover {
                     cursor: pointer;

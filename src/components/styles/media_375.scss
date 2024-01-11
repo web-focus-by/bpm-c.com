@@ -321,7 +321,7 @@
       margin-bottom: 20px;
       color: #1a1b1f;
     }
-    margin-top: 0;
+    margin-top: 43px;
     &__subtitle {
       font-weight: 400;
       font-size: 15px;
@@ -1136,6 +1136,9 @@
   .contacts_value ul {
     top: 525px;
   }
+  .contacts__contact .contacts_table .contacts_value ul li a, .contacts__contact .contacts_table .contacts_value ul li {
+    font-size: 16px !important;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -1824,7 +1827,7 @@
         display: flex;
         gap: 5%;
         justify-content: space-between;
-        width: 290px;
+        width: 100%;
         .contacts_label {
           font-family: "Acrom", sans-serif;
           font-style: normal;
@@ -1877,17 +1880,21 @@
       }
     }
     &__contacts_form {
-      width: 290px;
+      width: 100%;
       margin-top: 40px;
       .contact_form {
         border-radius: 40px;
         display: grid;
-        grid-template-columns: 1.03fr 0.97fr;
+        grid-template-columns: 1fr;
         background-position: 110px 165px;
         padding: 0;
         &__block {
           color: #1a1b1f;
-          width: 95%;
+          width: 100%;
+
+          .contact_form__title {
+            top: 90px;
+          }
           .contact_form_block_buttons_title {
             width: 100%;
             font-family: "Acrom", sans-serif;
@@ -1946,8 +1953,8 @@
           }
           .contact_form_block_wrapper {
             form {
-              padding-top: 160px;
-              width: 343px;
+              padding-top: 170px;
+              width: 100%;
 
               .contact_form_line-double {
                 display: flex;
@@ -1955,7 +1962,7 @@
                 margin-bottom: 41px;
 
                 .contact_form_line-wrapper {
-                  width: 96%;
+                  width: 100%;
                 }
 
               }
@@ -1963,7 +1970,7 @@
               .contact_form_line-wrapper, .contact_form_line-wrapper--one {
                 position: relative;
                 margin-bottom: 39px;
-                width: 96%;
+                width: 100%;
 
                 &:first-child {
                   margin-bottom: 39px;
@@ -2548,7 +2555,7 @@
           }
           .contact_form_block_wrapper {
             form {
-              padding-top: 160px;
+              padding-top: 200px;
 
               .contact_form_line-double {
                 display: flex;
