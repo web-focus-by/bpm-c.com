@@ -37,7 +37,7 @@ const Header = ({
     }*/
   }
   const menuItems = mainItems.map((item, index) => {
-    if (index === 0) {
+    if (index === 0 || index === (mainItems.length - 1)) {
       return (
         <li
           id={item.id}
@@ -72,14 +72,10 @@ const Header = ({
           )[0]
         : null
     if (currentCase && menuItemsRef.current.includes(currentCase)) {
-      if (e.target.innerText !== "Portfolio") {
+      if (e.target.innerText !== "Portfolio" && e.target.innerText !== "Blog") {
         justTurnOnMenu(e.target.innerText)
       } else if (e.target.innerText === "Portfolio") {
         justTurnOffMenu()
-      }
-
-      if (e.target.innerText !== "Blog") {
-        justTurnOnMenu(e.target.innerText)
       } else if (e.target.innerText === "Blog") {
         justTurnOffMenu()
       }
