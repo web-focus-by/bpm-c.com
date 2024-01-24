@@ -42,7 +42,7 @@ h1, h2, h3, h4 {
     padding-bottom: 20px;
   }
   &__nav {
-    padding: 35px 0 0 0;
+    padding: 24px 0 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +54,7 @@ h1, h2, h3, h4 {
 
         li {
           display: inline-block;
-          padding-bottom: 39px;
+          padding-bottom: 20px;
           border-bottom: 4px solid transparent;
           max-width: max-content;
           margin-right: 60px;
@@ -222,9 +222,9 @@ h1, h2, h3, h4 {
   position: relative;
   top: -3px;
 
-  &:hover {
-    cursor: pointer;
-  }
+  // &:hover {
+  //   cursor: pointer;
+  // }
 
   &:after {
     display: inline-block;
@@ -290,7 +290,8 @@ h1, h2, h3, h4 {
   .dropdown_services {
     display: flex;
     position: absolute;
-    left: 16.5%;
+    left: calc((100% - 1280px)/2);;
+    width: 1280px;
     &__title {
       font-family: "Acrom", sans-serif;
       font-weight: 500;
@@ -302,6 +303,7 @@ h1, h2, h3, h4 {
       border-radius: 20px 0 0 20px;
     }
     &__info {
+      width: 100%;
       background: #fff;
       padding: 60px 219px 125px 100px;
       border-radius: 0 20px 20px 0;

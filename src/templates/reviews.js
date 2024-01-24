@@ -35,7 +35,7 @@ const Reviews = ({ location }) => {
               Testimonials<span className="notes_of_reviewes"></span>
             </h1>
           </div>
-          <div className="container" style={{padding: 0}}>
+          <div className="container" style={{padding: 0, margin: 0}}>
             <div className="reviews margin_bottom_240">
               <div className="reviews__list">
                 <div className="list_item">
