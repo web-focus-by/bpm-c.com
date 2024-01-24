@@ -88,7 +88,7 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
             )
           })
         : []
-    if (index === 0) {
+    if (index === 0 || index === (itemsByMainItems.length - 1)) {
       return (
         <li
           key={index}
