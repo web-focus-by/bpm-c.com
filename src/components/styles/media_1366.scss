@@ -6,7 +6,9 @@
       width: 910px;
       &__title {
         font-size: 21px;
-        padding: 42px 120px 0 42px;
+        padding: 42px 0 0 42px;
+        min-width: 256px;
+        max-width: 256px;
       }
       &__info {
         background: #fff;

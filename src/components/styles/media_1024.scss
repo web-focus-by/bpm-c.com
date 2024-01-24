@@ -8,7 +8,9 @@
       left: calc((100% - 682px)/2);
       width: 682px;
       &__title {
-        padding: 32px 51px 0 22px;
+        padding: 32px 0 0 22px;
+        min-width: 192px;
+        max-width: 192px;
       }
       &__info {
         padding: 32px 90px 0 32px;
