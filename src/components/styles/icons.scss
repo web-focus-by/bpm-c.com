@@ -476,13 +476,6 @@
   background: url(../../images/phone_icon.svg) no-repeat;
 }
 
-.not-found {
-  display: inline-block;
-  width: 669px;
-  height: 238px;
-  background: url(../../images/notFound.svg) no-repeat;
-}
-
 .newspaper {
   display: inline-block;
   width: 47px;
@@ -691,6 +684,14 @@
   background: url(../../images/power-icon.svg) no-repeat;
   position: absolute;
   top: 25%;
+}
+
+.eyes {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../../images/eye-icon.svg) no-repeat;
+  margin-left: 15px;
 }
 
 @media screen and (max-width: 1920px) {
