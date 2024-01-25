@@ -2676,15 +2676,15 @@
       width: 252px;
     }
     .reviews__list {
-      max-width: 343px;
+      max-width: 100%;
       .list_item {
-        max-width: 343px;
+        max-width: 100%;
         padding: 30px;
         margin-top: 20px;
 
         .reviews__list_text {
           margin: 25px 0 20px;
-          max-width: 283px;
+          max-width: 100%;
 
           p {
             font-size: 15px;
