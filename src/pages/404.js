@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { Link } from "gatsby"
 import "../components/styles/main.scss"
 import "../components/styles/icons.scss"
 import "../components/styles/modules.scss"
@@ -17,11 +18,14 @@ const NotFoundPage = () => {
     <Layout>
       <Seo title="404: Page does not exist" />
       <div className="container">
-        <div className="hero margin_bottom_240">
+        <div className="hero not-found__hero margin_bottom_240">
           <div className="notFoundPage">
-            <div className="not-found"></div>
+            <div className="not-found__title">404</div>
           </div>
-          <div className="notFoundPage">Page does not exist</div>
+          <div className="notFoundPage not-found__subtitle">Oops.......Seems you got lost!<span className="eyes"></span></div>
+          <button className="button_white not-found__button" onClick={(e) => e.preventDefault()}>
+                            <Link to="/">Home page<span className="arrow_black"></span></Link>
+                          </button>
         </div>
         <div className="header_circle_yellow"></div>
         <div className="header_circle_pink"></div>
