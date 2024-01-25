@@ -5,44 +5,6 @@
 }
 
 @media (min-width: 1366px) and (max-width: 1920px) {
-  .dropdown_services_sticky {
-    top: calc(85px + (100 - 85) * ((100vw - 1366px) / (1920 - 1366)));
-    .dropdown_services {
-      left: 16.5%;
-      &__title {
-        font-size: calc(21px + (30 - 21) * ((100vw - 1366px) / (1920 - 1366)));
-        padding: calc(44px + (60 - 44) * ((100vw - 1366px) / (1920 - 1366)))
-          calc(120px + (170 - 120) * ((100vw - 1366px) / (1920 - 1366))) 0
-          calc(40px + (60 - 40) * ((100vw - 1366px) / (1920 - 1366)));
-      }
-      &__info {
-        background: #fff;
-        padding: calc(40px + (60 - 40) * ((100vw - 1366px) / (1920 - 1366)))
-          calc(156px + (219 - 156) * ((100vw - 1366px) / (1920 - 1366)))
-          calc(83px + (125 - 83) * ((100vw - 1366px) / (1920 - 1366)))
-          calc(72px + (100 - 72) * ((100vw - 1366px) / (1920 - 1366)));
-        ul {
-          grid-column-gap: calc(
-            39px + (57 - 39) * ((100vw - 1366px) / (1920 - 1366))
-          );
-          li {
-            &:not(:last-child) {
-              margin-bottom: calc(
-                7px + (16 - 7) * ((100vw - 1366px) / (1920 - 1366))
-              );
-            }
-
-            a {
-              font-size: calc(
-                13px + (18 - 13) * ((100vw - 1366px) / (1920 - 1366))
-              );
-            }
-          }
-        }
-      }
-    }
-  }
-
   .it_company {
     margin-top: calc(220px + (308 - 220) * ((100vw - 1366px) / (1920 - 1366)));
   }

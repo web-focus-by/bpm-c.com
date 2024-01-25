@@ -33,7 +33,7 @@ h1, h2, h3, h4 {
 }
 
 .header {
-  border-bottom: 1.5px solid #f0eff1;
+  border-bottom: 2px solid #f0eff1;
   position: sticky;
   top: 0;
   background-color: rgb(255 255 255 / 60%);
@@ -42,7 +42,7 @@ h1, h2, h3, h4 {
     padding-bottom: 20px;
   }
   &__nav {
-    padding: 35px 0 0 0;
+    padding: 24px 0 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +54,7 @@ h1, h2, h3, h4 {
 
         li {
           display: inline-block;
-          padding-bottom: 39px;
+          padding-bottom: 42px;
           border-bottom: 4px solid transparent;
           max-width: max-content;
           margin-right: 60px;
@@ -222,9 +222,9 @@ h1, h2, h3, h4 {
   position: relative;
   top: -3px;
 
-  &:hover {
-    cursor: pointer;
-  }
+  // &:hover {
+  //   cursor: pointer;
+  // }
 
   &:after {
     display: inline-block;
@@ -290,7 +290,7 @@ h1, h2, h3, h4 {
   .dropdown_services {
     display: flex;
     position: absolute;
-    left: 16.5%;
+    left: calc((100% - 1280px)/2);;
     width: 1280px;
     &__title {
       font-family: "Acrom", sans-serif;
@@ -299,12 +299,15 @@ h1, h2, h3, h4 {
       line-height: 115%;
       color: #ffffff;
       background: #9c7cf1;
-      padding: 60px 219px 168px 10px;
+      padding: 60px 0 0 60px;
       border-radius: 20px 0 0 20px;
+      min-width: 360px;
+      max-width: 360px;
     }
     &__info {
+      width: 100%;
       background: #fff;
-      padding: 60px 219px 125px 100px;
+      padding: 60px 0 125px 100px;
       border-radius: 0 20px 20px 0;
       ul {
         list-style: none;
@@ -375,7 +378,7 @@ h1, h2, h3, h4 {
     }
     &__info {
       background: #fff;
-      padding: 60px 219px 60px 100px;
+      padding: 60px 0 60px 100px;
       border-radius: 0 20px 20px 0;
       width: 100%;
       ul {
@@ -3047,7 +3050,6 @@ border: 1px solid #e11d48;
       border-radius: 30px;
       padding: 40px;
       margin-top: 30px;
-      background-color: #ffffff;
 
       .reviews__list_text {
         margin: 35px 0 30px;

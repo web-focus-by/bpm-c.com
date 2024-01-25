@@ -61,6 +61,7 @@ const Header = ({
     }
   })
   const movingMouse = useCallback(e => {
+    console.log(e.target.innerText)
     let currentCase =
       menuItemsRef &&
       menuItemsRef.current &&
@@ -75,8 +76,10 @@ const Header = ({
       if (e.target.innerText !== "Portfolio" && e.target.innerText !== "Blog") {
         justTurnOnMenu(e.target.innerText)
       } else if (e.target.innerText === "Portfolio") {
+                console.log('dfff')
         justTurnOffMenu()
       } else if (e.target.innerText === "Blog") {
+        console.log('dd')
         justTurnOffMenu()
       }
     }

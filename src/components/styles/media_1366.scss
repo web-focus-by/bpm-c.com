@@ -2,15 +2,18 @@
   .dropdown_services_sticky {
     top: 85px;
     .dropdown_services {
+      left: calc((100% - 910px)/2);;
       width: 910px;
-      left: 16.5%;
       &__title {
         font-size: 21px;
-        padding: 44px 120px 0 40px;
+        padding: 42px 0 0 42px;
+        min-width: 256px;
+        max-width: 256px;
       }
       &__info {
         background: #fff;
-        padding: 42px 156px 119px 72px;
+        padding: 40px 0 83px 72px;
+        width: 100%;
         ul {
           grid-column-gap: 39px;
           li {
@@ -1486,27 +1489,6 @@
     width: 669px;
     height: 238px;
     background: url(../../images/notFound.svg) no-repeat;
-  }
-  .dropdown_services_sticky {
-    .dropdown_services {
-      left: 12.5%;
-      &__title {
-        padding: calc(32px + (44 - 32) * ((100vw - 768px) / (1366 - 768)))
-          calc(51px + (120 - 51) * ((100vw - 768px) / (1366 - 768))) 0
-          calc(22px + (40 - 22) * ((100vw - 768px) / (1366 - 768)));
-      }
-      &__info {
-        padding: calc(32px + (40 - 42) * ((100vw - 768px) / (1366 - 768)))
-          calc(28px + (156 - 28) * ((100vw - 768px) / (1366 - 768)))
-          calc(29px + (83 - 42) * ((100vw - 768px) / (1366 - 768)))
-          calc(10px + (72 - 10) * ((100vw - 768px) / (1366 - 768)));
-        ul {
-          grid-column-gap: calc(
-            39px + (57 - 39) * ((100vw - 768px) / (1366 - 768))
-          );
-        }
-      }
-    }
   }
 
   .margin_bottom_60 {
