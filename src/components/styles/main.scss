@@ -291,6 +291,7 @@ h1, h2, h3, h4 {
     display: flex;
     position: absolute;
     left: 16.5%;
+    width: 1280px;
     &__title {
       font-family: "Acrom", sans-serif;
       font-weight: 500;
@@ -298,7 +299,7 @@ h1, h2, h3, h4 {
       line-height: 115%;
       color: #ffffff;
       background: #9c7cf1;
-      padding: 60px 170px 0 60px;
+      padding: 60px 219px 168px 10px;
       border-radius: 20px 0 0 20px;
     }
     &__info {

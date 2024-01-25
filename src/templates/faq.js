@@ -152,24 +152,22 @@ const Faq = ({location}) => {
             </h1>
             <p className="hero__description">Below is a compilation of frequently asked questions that we typically encounter. If you haven't come across the query you're seeking, please feel free to <Link class="contact" to="/about-us/contacts/">contact us</Link>!</p>
           </div>
-          <div className="container" style={{padding: 0}}>
-            <div className="fqa margin_bottom_240">
-              <ul className="accordion">
-                {faqList.map((faqItem, id) => {
-                  return (
-                    <AccordionItem
-                      onClick={() => (id === openId ? setId(null) : setId(id))}
-                      onMouseOver={(e) => setHover(id)} 
-                      onMouseLeave={(e) => setHover(null)}
-                      faqItem={faqItem}
-                      isOpen={id === openId}
-                      isHover={id === hoverId}
-                      num={`${id < 9 ? '0' : ''}${id + 1}.`}
-                    />
-                  );
-                })}
-              </ul>
-            </div>
+          <div className="fqa margin_bottom_240">
+            <ul className="accordion">
+              {faqList.map((faqItem, id) => {
+                return (
+                  <AccordionItem
+                    onClick={() => (id === openId ? setId(null) : setId(id))}
+                    onMouseOver={(e) => setHover(id)} 
+                    onMouseLeave={(e) => setHover(null)}
+                    faqItem={faqItem}
+                    isOpen={id === openId}
+                    isHover={id === hoverId}
+                    num={`${id < 9 ? '0' : ''}${id + 1}.`}
+                  />
+                );
+              })}
+            </ul>
           </div>
           <div className="header_circle_yellow"></div>
           <div className="header_circle_pink"></div>

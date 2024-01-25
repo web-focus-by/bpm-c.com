@@ -2,6 +2,7 @@
   .dropdown_services_sticky {
     top: 85px;
     .dropdown_services {
+      width: 910px;
       left: 16.5%;
       &__title {
         font-size: 21px;
@@ -9,7 +10,7 @@
       }
       &__info {
         background: #fff;
-        padding: 40px 156px 83px 72px;
+        padding: 42px 156px 119px 72px;
         ul {
           grid-column-gap: 39px;
           li {
