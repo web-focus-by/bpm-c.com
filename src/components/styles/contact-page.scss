@@ -1357,7 +1357,7 @@
           .contact_form_block_buttons {
             margin-top: 7px;
             margin-bottom: 40px;
-            width: fit-content;
+            width: 90%;
             .button_item_tag {
               margin: 0.4rem 12px 0.4rem 0;
               font-size: 16px;
@@ -1414,14 +1414,14 @@
                 margin-bottom: 44px;
 
                 .contact_form_line-wrapper {
-                  width: 100%;
+                  width: 90%;
                 }
 
               }
 
               .contact_form_line-wrapper, .contact_form_line-wrapper--one  {
                 position: relative;
-                width: 100%;
+                width: 90%;
                 &:first-child {
                   margin-bottom: 44px;
                 }
@@ -1501,12 +1501,12 @@
 }
 
 @media screen and (max-width: 403px) {
-  .contacts__contact .contacts_table .contacts_label ul li:nth-child(3) {
-    margin-bottom: 66px;
+  .contacts__contact .contacts_table .contacts_value ul li, .contacts__contact .contacts_table .contacts_value ul li:first-child {
+    margin-bottom: 45px;
   }
 
-  .contacts__contact .contacts_table .contacts_value ul li, .contacts__contact .contacts_table .contacts_value ul li:first-child {
-    margin-bottom: 40px;
+  .contacts__contact .contacts_table .contacts_value ul li:nth-child(3) {
+    margin-bottom: 50px;
   }
 }
 
