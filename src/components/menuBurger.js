@@ -13,6 +13,7 @@ import "../components/styles/media_375.scss"
 
 const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
   const [activeMenuItems, setActiveMenuItems] = useState(null)
+  const [isOpen, setIsOpen] = useState(false);
   const [actualUsingId, setActualUsingId] = useState()
   const menuItemsRef = useRef([])
   const subsequentsItem = useRef([])
@@ -38,6 +39,11 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
     .slice(5)
     .flat()
     .slice(1)
+
+  const toggleInnerMenu = (index) => {
+    index === activeMenuItems ? setActiveMenuItems(null) : setActiveMenuItems(index);
+    setIsOpen(index === activeMenuItems)
+  }
 
   const showHoverSubsequentItems = useCallback(e => {
     let subItem =
@@ -66,7 +72,7 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
       setActualUsingId(subItem.id)
     }
   }, [])
-  const firstMenuLevel = itemsByMainItems.slice(0, 7)
+  const firstMenuLevel = itemsByMainItems.slice(0, 7) //выводит меню 2 раза, поэтому обрезаем
   const resultData = firstMenuLevel.map((item, index) => {
     let itemId = item.id
     let contentMenu =
@@ -98,8 +104,8 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
         <li
           key={index}
           ref={el => (menuItemsRef.current[index] = el)}
-          onClick={() => (index === activeMenuItems ? setActiveMenuItems(null) : setActiveMenuItems(index))}
-          className={activeMenuItems ? 'active-mobil' : ''}
+          onClick={() => (toggleInnerMenu(index))}
+          className={isOpen ? 'active-mobil' : ''}
         >
           <a id={itemId} itemprop="url">
             <span itemprop="name">{item.primaryItem}</span>
@@ -113,7 +119,7 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
             className="subsequentItem"
             id={itemId}
             ref={el => (subsequentsItem.current[index] = el)}
-            style={{ display: activeMenuItems ? "block" : "none" }}
+            style={{ display: isOpen ? "block" : "none" }}
           >
             <ul>{contentMenu}</ul>
           </div>
