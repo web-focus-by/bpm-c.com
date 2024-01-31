@@ -31,9 +31,9 @@ const Hero = ({ location }) => {
           </Link>
         </div>
       </div>
-      {/* <div className="header_circle_yellow"></div>
+      <div className="header_circle_yellow"></div>
       <div className="header_circle_pink"></div>
-      <div className="header_circle_purple"></div> */}
+      <div className="header_circle_purple"></div>
     </div>
   )
 }
