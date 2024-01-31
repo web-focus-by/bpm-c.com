@@ -5,15 +5,10 @@ import { Link } from "gatsby"
 import "../components/styles/main.scss"
 import "../components/styles/icons.scss"
 import "../components/styles/mixins.scss"
-import "../components/styles/media_1920.scss"
-import "../components/styles/media_1366.scss"
-import "../components/styles/media_1024.scss"
-import "../components/styles/media_768.scss"
-import "../components/styles/media_375.scss"
+import "../components/styles/header.scss"
 
 const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
   const [activeMenuItems, setActiveMenuItems] = useState(null)
-  const [isOpen, setIsOpen] = useState(false);
   const [actualUsingId, setActualUsingId] = useState()
   const menuItemsRef = useRef([])
   const subsequentsItem = useRef([])
@@ -42,7 +37,6 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
 
   const toggleInnerMenu = (index) => {
     index === activeMenuItems ? setActiveMenuItems(null) : setActiveMenuItems(index);
-    setIsOpen(index === activeMenuItems)
   }
 
   const showHoverSubsequentItems = useCallback(e => {
@@ -105,7 +99,7 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
           key={index}
           ref={el => (menuItemsRef.current[index] = el)}
           onClick={() => (toggleInnerMenu(index))}
-          className={isOpen ? 'active-mobil' : ''}
+          className={activeMenuItems === index ? 'active-mobil' : ''}
         >
           <a id={itemId} itemprop="url">
             <span itemprop="name">{item.primaryItem}</span>
@@ -119,7 +113,7 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
             className="subsequentItem"
             id={itemId}
             ref={el => (subsequentsItem.current[index] = el)}
-            style={{ display: isOpen ? "block" : "none" }}
+            style={{ display: activeMenuItems === index ? "block" : "none" }}
           >
             <ul>{contentMenu}</ul>
           </div>
