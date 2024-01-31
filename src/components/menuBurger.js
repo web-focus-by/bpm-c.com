@@ -5,14 +5,10 @@ import { Link } from "gatsby"
 import "../components/styles/main.scss"
 import "../components/styles/icons.scss"
 import "../components/styles/mixins.scss"
-import "../components/styles/media_1920.scss"
-import "../components/styles/media_1366.scss"
-import "../components/styles/media_1024.scss"
-import "../components/styles/media_768.scss"
-import "../components/styles/media_375.scss"
+import "../components/styles/header.scss"
 
 const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
-  const [activeMenuItems, setActiveMenuItems] = useState(false)
+  const [activeMenuItems, setActiveMenuItems] = useState(null)
   const [actualUsingId, setActualUsingId] = useState()
   const menuItemsRef = useRef([])
   const subsequentsItem = useRef([])
@@ -39,9 +35,8 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
     .flat()
     .slice(1)
 
-  const showSubsequentItems = e => {
-    setActiveMenuItems(!activeMenuItems)
-    if (!activeMenuItems) setActualUsingId(e.target.id)
+  const toggleInnerMenu = (index) => {
+    index === activeMenuItems ? setActiveMenuItems(null) : setActiveMenuItems(index);
   }
 
   const showHoverSubsequentItems = useCallback(e => {
@@ -71,12 +66,8 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
       setActualUsingId(subItem.id)
     }
   }, [])
-
-  const isShow = itemId => {
-    return activeMenuItems && actualUsingId && actualUsingId === itemId
-  }
-
-  const resultData = itemsByMainItems.map((item, index) => {
+  const firstMenuLevel = itemsByMainItems.slice(0, 7) //выводит меню 2 раза, поэтому обрезаем
+  const resultData = firstMenuLevel.map((item, index) => {
     let itemId = item.id
     let contentMenu =
       item && item.subsequentItems && item.subsequentItems.length
@@ -88,13 +79,13 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
             )
           })
         : []
-    if (index === 0 || index === (itemsByMainItems.length - 1)) {
+    if (index === 0 || index === (firstMenuLevel.length - 1)) {
       return (
         <li
           key={index}
           ref={el => (menuItemsRef.current[index] = el)}
           onClick={() => {
-            setActiveMenuItems(false)
+            setActiveMenuItems(null)
           }}
         >
           <Link id={itemId} to={"/" + item.primaryItem.toLowerCase() + "/"} itemprop="url">
@@ -107,14 +98,22 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
         <li
           key={index}
           ref={el => (menuItemsRef.current[index] = el)}
-          onClick={showSubsequentItems}
+          onClick={() => (toggleInnerMenu(index))}
+          className={activeMenuItems === index ? 'active-mobil' : ''}
         >
-          <a id={itemId} itemprop="url"><span itemprop="name">{item.primaryItem}</span></a>
+          <a id={itemId} itemprop="url">
+            <span itemprop="name">{item.primaryItem}</span>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 8.46967C4.26256 8.17678 4.73744 8.17678 5.03033 8.46967L12 15.4393L18.9697 8.46967C19.2626 8.17678 19.7374 8.17678 20.0303 8.46967C20.3232 8.76256 20.3232 9.23744 20.0303 9.53033L12.5303 17.0303C12.2374 17.3232 11.7626 17.3232 11.4697 17.0303L3.96967 9.53033C3.67678 9.23744 3.67678 8.76256 3.96967 8.46967Z"/>
+              </svg>
+            </span>
+            </a>
           <div
             className="subsequentItem"
             id={itemId}
             ref={el => (subsequentsItem.current[index] = el)}
-            style={{ display: isShow(itemId) ? "block" : "none" }}
+            style={{ display: activeMenuItems === index ? "block" : "none" }}
           >
             <ul>{contentMenu}</ul>
           </div>

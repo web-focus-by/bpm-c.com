@@ -19,6 +19,7 @@ const Header = ({
   const refHeaderBurger = useRef()
   const menuItemsRef = useRef([])
   const [isTurnOn, setIsTurnOn] = useState(false)
+  const [burgerOpen, setBurgerOpen] = useState(false);
 
   const activeMenu = e => {
     turnOnMenu(e.target.innerText)
@@ -27,10 +28,8 @@ const Header = ({
     }
   }
   const activeMenuBurger = e => {
-    openCloseMenu(e.target.innerText)
-    /*if (!(clickOut && isTurnOn)) {
-      setIsTurnOn(!isTurnOn);
-    }*/
+    openCloseMenu(e.target.innerText);
+    setBurgerOpen(!burgerOpen);
   }
   const menuItems = mainItems.map((item, index) => {
     if (index === 0 || index === (mainItems.length - 1)) {
@@ -103,7 +102,7 @@ const Header = ({
             <ul>{menuItems}</ul>
           </div>
           <div
-            className="burger"
+            className={`burger ${burgerOpen ? 'active' : ''}`}
             ref={refHeaderBurger}
             onClick={activeMenuBurger}
           ></div>
