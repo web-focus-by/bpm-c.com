@@ -50,41 +50,6 @@
     transition: margin-right 1s, margin-left 1s;
   }
 
-  .hero {
-    margin-top: 110px;
-
-    &__subtitle {
-      font-size: calc(14px + (20 - 14) * ((100vw - 1366px) / (1920 - 1366)));
-    }
-
-    &__butn {
-      .button_white {
-        font-size: calc(11px + (16 - 11) * ((100vw - 1366px) / (1920 - 1366)));
-        padding: 22px 23px;
-        -webkit-transition: all 0.3s linear;
-        :hover {
-          -webkit-transition: all 0.3s linear;
-          cursor: pointer;
-        }
-      }
-      :hover {
-        -webkit-transition: all 0.3s linear;
-        cursor: pointer;
-      }
-    }
-
-    &__butntag {
-      .button_item_tag {
-        font-size: calc(11px + (16 - 11) * ((100vw - 1366px) / (1920 - 1366)));
-        &__active {
-          font-size: calc(
-            11px + (16 - 11) * ((100vw - 1366px) / (1920 - 1366))
-          );
-        }
-      }
-    }
-  }
-
   .phone_butn {
     padding-right: calc(42px + (60 - 42) * ((100vw - 1366px) / (1920 - 1366)));
     top: 775px;
@@ -517,46 +482,6 @@
         max-width: calc(
           715px + (1000 - 715) * ((100vw - 1366px) / (1920 - 1366))
         );
-      }
-    }
-  }
-
-  .reviews {
-    &__info {
-      grid-column-gap: calc(
-        19px + (26 - 19) * ((100vw - 1366px) / (1920 - 1366))
-      );
-
-      .reviews_info_block {
-        border-radius: calc(
-          21px + (30 - 21) * ((100vw - 1366px) / (1920 - 1366))
-        );
-        padding: calc(21px + (30 - 21) * ((100vw - 1366px) / (1920 - 1366)))
-          calc(14px + (20 - 14) * ((100vw - 1366px) / (1920 - 1366)));
-
-        .reviews_info_block_text {
-          font-size: calc(
-            13px + (18 - 13) * ((100vw - 1366px) / (1920 - 1366))
-          );
-        }
-
-        .reviews_info_block_name {
-          font-size: calc(
-            13px + (16 - 13) * ((100vw - 1366px) / (1920 - 1366))
-          );
-          margin: calc(20px + (26 - 28) * ((100vw - 1366px) / (1920 - 1366))) 0
-            calc(7px + (10 - 10) * ((100vw - 1366px) / (1920 - 1366))) 0;
-        }
-
-        .reviews_info_block_date {
-          ul {
-            li {
-              font-size: calc(
-                10px + (14 - 10) * ((100vw - 1366px) / (1920 - 1366))
-              );
-            }
-          }
-        }
       }
     }
   }

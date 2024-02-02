@@ -11,11 +11,7 @@ import "../components/styles/main.scss"
 import "../components/styles/icons.scss"
 import "../components/styles/modules.scss"
 import "../components/styles/mixins.scss"
-import "../components/styles/media_1920.scss"
-import "../components/styles/media_1366.scss"
-import "../components/styles/media_1024.scss"
-import "../components/styles/media_768.scss"
-import "../components/styles/media_375.scss"
+import "../components/styles/faq.scss"
 
 const faqList = [
   {
@@ -147,7 +143,7 @@ const Faq = ({location}) => {
             <Breadcrumbs breadcrumbs={location} title="FAQ" />
           </div>
           <div className="hero">
-            <h1 className="hero__title title_62">
+            <h1 className="hero__title">
             Frequently Asked Questions<span className="faq"></span>
             </h1>
             <p className="hero__description">Below is a compilation of frequently asked questions that we typically encounter. If you haven't come across the query you're seeking, please feel free to <Link class="contact" to="/about-us/contacts/">contact us</Link>!</p>
