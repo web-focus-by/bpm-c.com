@@ -87,16 +87,15 @@ const Header = ({
     } else {
       document.removeEventListener("mouseover", movingMouse, true)
     }
+
+    if(burgerOpen)  {
+      document.body.style.overflow = 'hidden';
+      document.body.style.maxHeight = '100vh';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.maxHeight = '';
+    }
   }, [mainItems])
-
-
-  if(burgerOpen)  {
-    document.body.style.overflow = 'hidden';
-    document.body.style.maxHeight = '100vh';
-  } else {
-    document.body.style.overflow = '';
-    document.body.style.maxHeight = '';
-  }
 
   return (
     <header className="header">
