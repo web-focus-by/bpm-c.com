@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useRef, useEffect, useState, useCallback } from "react"
+import { useRef, useEffect, useState, useCallback, componentWillMount, componentWillUnmount} from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import "../components/styles/main.scss"
@@ -88,6 +88,15 @@ const Header = ({
       document.removeEventListener("mouseover", movingMouse, true)
     }
   }, [mainItems])
+
+
+  if(burgerOpen)  {
+    document.body.style.overflow = 'hidden';
+    document.body.style.maxHeight = '100vh';
+  } else {
+    document.body.style.overflow = '';
+    document.body.style.maxHeight = '';
+  }
 
   return (
     <header className="header">
