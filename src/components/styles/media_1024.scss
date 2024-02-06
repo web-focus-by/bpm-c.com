@@ -263,55 +263,9 @@
     margin-bottom: calc(60px + (40 - 60) * ((100vw - 768px) / (1024 - 768)));
   }
 
-  .title_80 {
-    //font-size: calc(68px + (57 - 68) * ((100vw - 768px) / (1024 - 768)));
-    max-width: 560px;
-    max-height: 272px;
-    font-weight: 500;
-    font-size: 68px;
-    line-height: 100%;
-  }
-
-  .hero {
-
-    &__portfolio {
-      margin-bottom: 100px;
-    }
-
-    margin-top: 72px;;
-    &__subtitle {
-      line-height: 130%;
-      margin-bottom: 28px;
-    }
-    &__title {
-      font-size: 57px;
-      max-width: 630px;
-    }
-    &__description {
-      font-size: 13px;
-      line-height: 150%;
-      width: 645px;
-      margin-top: 20px;
-    }
-    &__butn {
-      .button_white {
-        padding: 15px 28px;
-        font-size: 11px;
-        line-height: 100%;
-        span {
-          margin-left: 12px;
-        }
-      }
-    }
-  }
-
   .title_62 {
     font-size: calc(46px + (44 - 46) * ((100vw - 768px) / (1024 - 768)));
     margin-bottom: calc(36px + (40 - 36) * ((100vw - 768px) / (1024 - 768)));
-  }
-
-  .margin_bottom_240 {
-    margin-bottom: 170px;
   }
 
   .margin_240_black {

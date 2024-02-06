@@ -4,6 +4,8 @@
 @import url("./contact-page.scss");
 @import url("./faq.scss");
 @import url("./reviews.scss");
+@import url("./breadcrumbs.scss");
+@import url("./hero.scss");
 
 html{
   width: 100%;
@@ -31,13 +33,80 @@ h1, h2, h3, h4 {
 
 .container {
   margin: 0 auto;
-  max-width: 86%;
-}
-.containerForm {
-  margin: 0 auto;
-  max-width: 86%;;
+  max-width: 1480px;
 }
 
+.containerForm {
+  margin: 0 auto;
+  max-width: 1480px;
+}
+
+.index_title {
+  margin-top: 150px;
+}
+
+.margin_bottom_240 {
+  margin-bottom: 240px;
+}
+
+@media screen and (max-width: 1600px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .containerForm {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1066px;
+  }
+
+  .containerForm {
+    margin: 0 auto;
+    max-width: 1066px;
+  }
+
+  .index_title {
+    margin-top: 100px;
+  }
+
+  .margin_bottom_240 {
+    margin-bottom: 120px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    margin: 0 auto;
+    max-width: 86%;
+  }
+  .containerForm {
+    margin: 0 auto;
+    max-width: 86%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .index_title {
+    margin-top: 120px;
+  }
+
+  .margin_bottom_240 {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .index_title {
+    margin-top: 70px;
+  }
+}
 
 
 .service-item__title {
@@ -626,97 +695,6 @@ h1, h2, h3, h4 {
 
 .vio_title {
   color: #935CFF;
-}
-
-.hero {
-  margin-top: 110px;
-
-  &__portfolio {
-  margin-bottom: 166px;
-  }
-
-  &__title {
-    line-height: 100%;
-    max-width: 75%;
-    font-size: 80px;
-    margin-bottom: 20px;
-    color: #1a1b1f;
-    font-weight: 500;
-  }
-
-  &__subtitle {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 110%;
-    color: #5c5c5c;
-    max-width: 55%;
-    margin-bottom: 48px;
-  }
-
-  &__description {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 27px;
-    color: #5c5c5c;
-    width: 900px;
-    margin-top: 20px;
-
-    a {
-      color:#935CFF;
-      text-decoration: underline;
-      cursor: pointer;
-    }
-  }
-
-  &__butn {
-    .link_btn {
-      border-radius: 80px;
-      -webkit-transition: all 0.3s linear;
-      :hover {
-        -webkit-transition: all 0.3s linear;
-        cursor: pointer;
-      }
-    }
-    .button_white {
-      padding: 22px 40px;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 100%;
-      color: #1a1b1f;
-      font-family: "Acrom", sans-serif;
-      -webkit-transition: all 0.3s linear;
-      span {
-        margin-left: 14px;
-      }
-      :hover {
-        color: #ffffff;
-        background: #1a1b1f;
-        -webkit-transition: all 0.3s linear;
-        cursor: pointer;
-      }
-    }
-
-    &__butntag {
-      .button_item_tag {
-        padding: 12px 30px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 100%;
-        color: #1a1b1f;
-        font-family: "Acrom", sans-serif;
-        margin: 0.4rem 0 ;
-        :hover {
-          cursor: pointer;
-        }
-        span {
-          margin-left: 14px;
-        }
-        .not_visible {
-          visibility: hidden;
-        }
-      }
-    }
-  }
 }
 
 .it_company {
@@ -1991,15 +1969,6 @@ border: 1px solid #e11d48;
   align-items: center;
 }
 
-.breacrumbs-list {
-  max-width: 80%;
-  margin-top: 40px;
-
-  .breadcrumbs {
-    display: inline-block;
-  }
-}
-
 .mission {
   .mission__title {
     .title {
@@ -2388,15 +2357,6 @@ border: 1px solid #e11d48;
     z-index: -1;
   }
 }
-
-
-@media screen and (min-width: 1921px) and (max-width: 3000px) {
-  .margin_bottom_240 {
-    margin-bottom: 270px;
-  }
-}
-
-
 .error_message  {
   display: inline-block;
   opacity: 0;
