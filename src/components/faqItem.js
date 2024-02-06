@@ -18,7 +18,7 @@ export const AccordionItem = ({ faqItem, onClick, onMouseOver, onMouseLeave, isO
       >
         <div className="accordion-body" ref={itemRef}>
           {faqItem.a.map(el => (
-            <p>{el}</p>
+            <p dangerouslySetInnerHTML={{ __html: el }}></p>
           ))}
         </div>
       </div>
