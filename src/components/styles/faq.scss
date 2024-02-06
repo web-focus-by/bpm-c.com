@@ -98,6 +98,18 @@
         padding-top: 20px;
         margin: 0;
         word-wrap: break-word;
+
+        a {
+          color: #935cff;
+        }
+
+        a:visited {
+          color: #935cff;
+        }
+
+        b{
+          color:#1A1B1F;
+        }
       }
   
       p:first-child {
@@ -490,6 +502,14 @@
             padding-top: 20px;
             margin: 0;
             word-wrap: break-word;
+
+            a {
+              color: #935cff;
+            }
+
+            b{
+              color:#1A1B1F;
+            }
           }
     
           p:first-child {
