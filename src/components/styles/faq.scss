@@ -1,6 +1,5 @@
 .fqa {
-    margin: 100px 0 240px;
-  
+    margin-top: 70px;  
     .accordion {
       width: 100%;
       list-style-type: none;
@@ -200,7 +199,7 @@
 
 @media screen and (max-width: 1366px) {
 .fqa {
-    margin: 71px 0 170px;
+    margin-top: 70px;
     .accordion {
         width: 100%;
         list-style-type: none;
@@ -399,7 +398,7 @@
 
 @media screen and (max-width: 768px){
     .fqa {
-        margin: 50px 0 100px;
+        margin-top: 50px;
         .accordion {
           width: 100%;
           list-style-type: none;
@@ -559,7 +558,7 @@
         }
     
         .accordion-arrow.active {
-          padding: 12px 9px 13px 4px;
+          padding: 12px 6px 10px 5px;
           background-color:#935CFF;
         }
     
@@ -581,8 +580,7 @@
 
 @media screen and (max-width: 530px){
     .fqa {
-        margin: 50px 0 80px;
-    
+        margin-top: 50px;    
         .accordion {
           width: 100%;
           list-style-type: none;
