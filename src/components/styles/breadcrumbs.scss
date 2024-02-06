@@ -1,3 +1,9 @@
+.container .breacrumbs-list {
+    max-width: 80%;
+    margin-top: 50px;
+    margin-bottom: 120px;
+}
+
 .span_breadcrumbs {
     margin-left: 15px;
     &:first-child {
@@ -33,9 +39,9 @@
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1366px) {
-    .breadcrumbs-list {
-        margin-top: 35px;
+@media screen and (max-width: 1366px) {
+    .container .breacrumbs-list {
+        margin-bottom: 60px;
     }
 
     .span_breadcrumbs {
@@ -70,11 +76,7 @@
     }
 }
 
-@media (max-width: 768px) {
-    .breadcrumbs-list {
-        margin-top: 44px;
-    }
-
+@media screen and (max-width: 768px) {
     .span_breadcrumbs {
         margin-left: 8px;
         &:first-child {
@@ -88,12 +90,10 @@
     }
 }
 
-@media (max-width: 480px) {
-    .breadcrumbs-list {
-        width: 378px;
-        margin-top: 0;
+@media screen and (max-width: 530px) {
+    .container .breacrumbs-list {
+        margin-top: 30px;
         margin-bottom: 40px;
-        position: fixed;
     }
 
     .breadcrumbs_span {

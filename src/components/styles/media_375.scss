@@ -216,62 +216,6 @@
     margin-bottom: 20px;
   }
 
-  .hero {
-    .hero__butn {
-      margin-bottom: 160px !important;
-    }
-    &__portfolio {
-        margin-bottom: 40px;
-    }
-    &__title {
-      font-family: "Acrom", sans-serif;
-      font-style: normal;
-      height: fit-content;
-      font-weight: 500;
-      line-height: 100%;
-      max-width: 100%;
-      margin-bottom: 20px;
-      color: #1a1b1f;
-      font-size: 46px;
-    }
-    margin-top: 43px;
-    &__subtitle {
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 150%;
-    }
-
-    &__description {
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 130%;
-      color: #5c5c5c;
-      width: 100%;
-      margin-top: 0;
-      margin-top: 20px;
-    }
-    &__butn {
-      .button_white {
-        padding: 22px 28px;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 100%;
-        color: #1a1b1f;
-        font-family: "Acrom", sans-serif;
-        -webkit-transition: all 0.3s linear;
-        span {
-          margin-left: 14px;
-        }
-        :hover {
-          color: #ffffff;
-          background: #1a1b1f;
-          -webkit-transition: all 0.3s linear;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-
   .about_title {
     position: absolute;
     margin-top: -127px;
@@ -552,10 +496,6 @@
     display: inline;
   }
 
-  .margin_bottom_240 {
-    margin-bottom: 80px;
-  }
-
   .margin_240_black {
     margin-bottom: 80px;
     margin-left: 0;
@@ -814,15 +754,6 @@
     padding: 0;
   }
 
-  .title_80 {
-    font-family: "Acrom", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 46px;
-    line-height: 105%;
-    width: 90%;
-  }
-
   .reviews {
     &__info {
       .reviews_info_block {
@@ -1059,10 +990,6 @@
     display: inline;
     position: relative;
     top: 0;
-  }
-
-  .hero__butn {
-    margin-bottom: 160px !important;
   }
 
   .modal {
@@ -1725,18 +1652,6 @@
     }
   }
 
-  .hero{
-    &__title {
-      font-size: 46px;
-    }
-    &__description {
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 130%;
-      color: #5c5c5c;
-      width: 100%;
-    }
-  }
 
   .phone_butn {
     top: 705px;
@@ -1921,21 +1836,6 @@
   .about_list {
     margin-top: -175px;
   }
-
-  .breacrumbs-list {
-    max-width: 100%;
-    margin-top: 40px;
-  }
-
-  .span_breadcrumbs {
-    .breadcrumbs_span {
-      margin-left: 10px !important;
-    }
-  }
-
-  .span_breadcrumbs {
-      margin-left: 10px;
-  }
 }
 
 
@@ -1943,31 +1843,5 @@
 
   .title_62 {
     font-size: 34px;
-  }
-
-  .breacrumbs-list {
-    width: 320px;
-  }
-
-  .span_breadcrumbs {
-
-    .breadcrumbs {
-      font-size: 13px !important;
-    }
-    .breadcrumbs_span {
-      margin-left: 5px !important;
-      font-size: 13px !important;
-    }
-  }
-
-  .reviews {
-    .reviews__list {
-      .list_item {
-        .reviews__list_text {
-          margin: 25px 0 20px;
-          max-width: 234px;
-        }
-      }
-    }
   }
 }

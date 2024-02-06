@@ -1,0 +1,257 @@
+.hero {
+    .hero__portfolio {
+    margin-bottom: 166px;
+    }
+  
+    .hero__title {
+      line-height: 100%;
+      max-width: 75%;
+      font-size: 80px;
+      margin-bottom: 20px;
+      color: #1a1b1f;
+      font-weight: 500;
+    }
+  
+    .hero__subtitle {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 110%;
+      color: #5c5c5c;
+      max-width: 55%;
+      margin-bottom: 48px;
+    }
+  
+    .hero__description {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      color: #5c5c5c;
+      width: 900px;
+      margin-top: 20px;
+  
+      a {
+        color:#935CFF;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  
+    .hero__butn {
+      .link_btn {
+        border-radius: 80px;
+        :hover {
+          cursor: pointer;
+        }
+      }
+      .button_white {
+        padding: 22px 40px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        color: #1a1b1f;
+        font-family: "Acrom", sans-serif;
+        span {
+          margin-left: 14px;
+        }
+        :hover {
+          color: #ffffff;
+          background: #1a1b1f;
+          cursor: pointer;
+        }
+      }
+  
+      .hero__butntag {
+        .button_item_tag {
+          padding: 12px 30px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 100%;
+          color: #1a1b1f;
+          font-family: "Acrom", sans-serif;
+          margin: 0.4rem 0 ;
+          :hover {
+            cursor: pointer;
+          }
+          span {
+            margin-left: 14px;
+          }
+          .not_visible {
+            visibility: hidden;
+          }
+        }
+      }
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .hero {
+        .hero__title {
+          margin-bottom: 14px;
+          font-size: 46px;
+        }
+    
+        .hero__subtitle {
+          margin-top: 31px;
+          font-size: 14px;
+          margin-bottom: 34px;
+          max-width: 560px;
+        }
+        .hero__description {
+          margin-top: 26px;
+        }
+    
+        .hero__butn {
+          .button_white {
+            padding: 16px 13px;
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 100%;
+            color: #1a1b1f;
+            font-family: "Acrom", sans-serif;
+            span {
+              margin-left: 14px;
+            }
+            :hover {
+              color: #ffffff;
+              background: #1a1b1f;
+              cursor: pointer;
+            }
+          }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    
+  .hero {
+
+    .hero__portfolio {
+      margin-bottom: 100px;
+    }
+
+    .hero__subtitle {
+      line-height: 130%;
+      margin-bottom: 28px;
+    }
+    .hero__title {
+      font-size: 46px;
+      max-width: 630px;
+    }
+    .hero__description {
+      font-size: 13px;
+      line-height: 150%;
+      width: 645px;
+      margin-top: 20px;
+    }
+    .hero__butn {
+      .button_white {
+        padding: 15px 28px;
+        font-size: 11px;
+        line-height: 100%;
+        span {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        .hero__portfolio {
+          margin-bottom: 80px;
+        }
+    
+        .hero__subtitle {
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+          margin-bottom: 30px;
+        }
+    
+        .hero__description {
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 130%;
+          color: #5c5c5c;
+          width: 100%;
+          margin-top: 0;
+        }
+    
+        .hero__butn {
+          .button_white {
+            padding: 22px 28px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            color: #1a1b1f;
+            font-family: "Acrom", sans-serif;
+            span {
+              margin-left: 14px;
+            }
+            :hover {
+              color: #ffffff;
+              background: #1a1b1f;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+}
+
+@media screen and (max-width: 530px) {
+    .hero{
+        .hero__butn {
+            margin-bottom: 160px !important;
+          }
+          .hero__portfolio {
+              margin-bottom: 40px;
+          }
+          .hero__title {
+            font-family: "Acrom", sans-serif;
+            font-style: normal;
+            height: fit-content;
+            font-weight: 500;
+            line-height: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+            color: #1a1b1f;
+            font-size: 46px;
+          }
+
+          .hero__subtitle {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 150%;
+          }
+      
+          .hero__description {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 130%;
+            color: #5c5c5c;
+            width: 100%;
+            margin-top: 0;
+            margin-top: 20px;
+          }
+          .hero__butn {
+            .button_white {
+              padding: 22px 28px;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 100%;
+              color: #1a1b1f;
+              font-family: "Acrom", sans-serif;
+              span {
+                margin-left: 14px;
+              }
+              :hover {
+                color: #ffffff;
+                background: #1a1b1f;
+                cursor: pointer;
+              }
+            }
+          }
+      }
+}

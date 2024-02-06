@@ -7,14 +7,6 @@
     line-height: 115%;
   }
 
-  .hero__description {
-    width: 100%;
-  }
-
-  .hero__butn {
-    margin-bottom: 160px !important;
-  }
-
   .active_link {
     font-size: 16px;
   }
@@ -77,55 +69,6 @@
       background-size: cover;
     }
   }
-
-  .title_80 {
-    max-width: 560px;
-  }
-
-  .hero {
-    &__portfolio {
-      margin-bottom: 80px;
-    }
-
-    &__subtitle {
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
-      margin-bottom: 30px;
-    }
-
-    &__description {
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 130%;
-      color: #5c5c5c;
-      width: 100%;
-      margin-top: 0;
-    }
-
-    &__butn {
-      .button_white {
-        padding: 22px 28px;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 100%;
-        color: #1a1b1f;
-        font-family: "Acrom", sans-serif;
-        -webkit-transition: all 0.3s linear;
-        span {
-          margin-left: 14px;
-        }
-        :hover {
-          color: #ffffff;
-          background: #1a1b1f;
-          -webkit-transition: all 0.3s linear;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-
   .form {
     background: #1a1b1f url(../../images/form_gradient.svg) no-repeat;
     border-radius: 40px;
@@ -1226,11 +1169,6 @@
     margin-bottom: calc(20px + (60 - 20) * ((100vw - 375px) / (768 - 375)));
   }
 
-  .title_80 {
-    font-size: 46px;
-    //max-width: 645px;
-  }
-
   .phone_butn {
     padding-right: calc(16px + (40 - 16) * ((100vw - 375px) / (768 - 375)));
     span {
@@ -1238,16 +1176,8 @@
     }
   }
 
-  .hero {
-    margin-top: 43px;
-  }
-
   .title_62 {
     margin-bottom: calc(24px + (36 - 25) * ((100vw - 375px) / (768 - 375)));
-  }
-
-  .margin_bottom_240 {
-    margin-bottom: 80px;
   }
 
   .margin_240_black {
@@ -2490,12 +2420,6 @@
       grid-row-gap: 30px;
       grid-template-columns: repeat(2, 1fr);
     }
-  }
-}
-
-@media (min-width: 580px) and (max-width: 1023px) {
-  .breacrumbs-list {
-    margin-top: 44px;
   }
 }
 }
