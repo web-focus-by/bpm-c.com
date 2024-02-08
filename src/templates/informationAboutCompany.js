@@ -233,18 +233,22 @@ const InformationAboutCompany = ({ location, data }) => {
                 Though you may see many outsourcing IT companies of different size and experience, we at BPM Cloud can offer you several benefits.</div>
               <div className="partnering__cards">
                 <div className="cards_item">
+                  <span className="icon-partnering"><span className="time"></span></span>
                   <h3 className="title">No delays</h3>
                   <div className="descr">Immediately after finalizing the negotiation stage, we initiate work on your project, ensuring a seamless transition from planning to execution.</div>
                 </div>
                 <div className="cards_item">
+                <span className="icon-partnering"><span className="puzzle"></span></span>
                   <h3 className="title">Cost-efficient solutions</h3>
                   <div className="descr">The market statistics and our own practice say that working with us is about 30% cheaper if compared to hiring, training and managing an in-house IT department.</div>
                 </div>
                 <div className="cards_item">
+                <span className="icon-partnering"><span className="folder"></span></span>
                   <h3 className="title">Clear working conditions</h3>
                   <div className="descr">Frankness and corporate sincerity are the main principles of our working policy, so you’ll always be aware of the work in progress. And of course, no pitfalls in contracts and working conditions.</div>
                 </div>
                 <div className="cards_item">
+                <span className="icon-partnering"><span className="comp"></span></span>
                   <h3 className="title">Full dedication</h3>
                   <div className="descr">We’re ready to take full responsibility for the development process, so a minimum of your attention is required. </div>
                 </div>
