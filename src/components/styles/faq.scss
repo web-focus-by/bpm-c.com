@@ -162,13 +162,13 @@
     }
   
     .accordion-arrow {
-      padding: 12px 8px 15px 8.5px;
+      padding: 12px 12px;
       border: 1px solid #935CFF;
       border-radius: 100%;
       margin-left: auto;
       display: block;
-      width: 30px;
-      height: 17px;
+      width: 20px;
+      height: 19px;
       transition: all .5s ease;
       z-index: -1;
     }
@@ -356,20 +356,21 @@
     }
     
     .accordion-arrow {
-        padding: 12px 8px 15px 9px;
+        padding: 10px 10px;
         border: 1px solid #935CFF;
         border-radius: 100%;
         display: block;
-        width: 30px;
-        height: 17px;
+        width: 18px;
+        height: 18px;
         transition: all .5s ease;
     }
     
     .label-icon {
         display: inline-block;
-        width: 21px;
-        height: 21px;
+        width: 18px;
+        height: 18px;
         background: url(../../images/plus-vio.svg) no-repeat;
+        background-size: 18px 18px;
         transform: rotate(0deg);
     }
     
@@ -379,11 +380,21 @@
     
     .label-icon_white{
         transform: rotate(45deg);
+        width: 18px;
+        height: 18px;
         background: url(../../images/plus.png) no-repeat;
+        background-size: 18px 18px;
         transition: all .5s ease;
     }
+
+    .label-icon_hover {
+      width: 18px;
+      height: 18px;
+      background: url(../../images/plus.png) no-repeat;
+      background-size: 18px 18px;
     }
-    }
+  }
+}
       
 
 
@@ -562,29 +573,32 @@
         }
     
         .accordion-arrow {
-          padding: 12px 4px 10px 8px;
+          padding: 9px 9px 10px 10px;
           border: 1px solid #935CFF;
           border-radius: 100%;
           display: block;
-          width: 30px;
-          height: 17px;
+          width: 16px;
+          height: 16px;
           transition: all .5s ease;
         }
     
         .label-icon {
           display: inline-block;
+          width: 16px;
+          height: 16px;
           background: url(../../images/plus-vio.svg) no-repeat;
           background-size: 16px 16px;
           transform: rotate(0deg);
         }
     
         .accordion-arrow.active {
-          padding: 12px 6px 10px 5px;
           background-color:#935CFF;
         }
     
         .label-icon_white {
           transform: rotate(45deg);
+          width: 16px;
+          height: 16px;
           background: url(../../images/plus.png) no-repeat;
           background-size: 16px 16px;
           transition: all .5s ease;
@@ -592,6 +606,8 @@
     
         .label-icon_hover {
           transform: rotate(0deg);
+          width: 16px;
+          height: 16px;
           background: url(../../images/plus.png) no-repeat;
           background-size: 16px 16px;
           transition: all .5s ease;
@@ -741,42 +757,6 @@
           li:first-child {
             margin-top: 0;
           }
-        }
-    
-        .accordion-arrow {
-          padding: 12px 4px 10px 8px;
-          border: 1px solid #935CFF;
-          border-radius: 100%;
-          display: block;
-          width: 30px;
-          height: 17px;
-          transition: all .5s ease;
-        }
-    
-        .label-icon {
-          display: inline-block;
-          background: url(../../images/plus-vio.svg) no-repeat;
-          background-size: 16px 16px;
-          transform: rotate(0deg);
-        }
-    
-        .accordion-arrow.active {
-          padding: 13px 6px 11px 7px;
-          background-color:#935CFF;
-        }
-    
-        .label-icon_white {
-          transform: rotate(45deg);
-          background: url(../../images/plus.png) no-repeat;
-          background-size: 16px 16px;
-          transition: all .5s ease;
-        }
-    
-        .label-icon_hover {
-          transform: rotate(0deg);
-          background: url(../../images/plus.png) no-repeat;
-          background-size: 16px 16px;
-          transition: all .5s ease;
         }
       }
 }
