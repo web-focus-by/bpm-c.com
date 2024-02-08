@@ -113,7 +113,7 @@ const MenuBurger = ({ isOpenBurgerMenu, mainItems, allItems, clickOut }) => {
             className="subsequentItem"
             id={itemId}
             ref={el => (subsequentsItem.current[index] = el)}
-            style={{ display: activeMenuItems === index ? "block" : "none" }}
+            style={{ height: activeMenuItems === index ? "auto" : "0"}}
           >
             <ul>{contentMenu}</ul>
           </div>

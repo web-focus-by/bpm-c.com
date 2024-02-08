@@ -696,6 +696,37 @@
   top: 5px;
 }
 
+.time {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  background: url(../../images/time.svg) no-repeat;
+}
+
+.folder {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  background: url(../../images/folder.svg) no-repeat;
+}
+
+.comp {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  background: url(../../images/comp.svg) no-repeat;
+}
+
+.bomb {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  background: url(../../images/bomb.svg) no-repeat;
+  margin-left: 15px;
+  position: relative;
+  top: 5px;
+}
+
 @media screen and (max-width: 1920px) {
   .phone_icon {
     background-size: 47px 47px;
