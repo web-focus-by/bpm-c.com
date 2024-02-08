@@ -19,15 +19,24 @@ import command_4 from "../images/Command_4.png"
 import profit_1 from "../images/profit_1.png"
 import profit_2 from "../images/profit_2.png"
 
+import Maria from "../images/maria.jpeg"
+import Yurij from "../images/yuriy.jpeg"
+import Andrei from "../images/andrei.jpeg"
+import Vlad from "../images/vlad.jpeg"
+import Diana from "../images/diana.jpeg"
+import AnnaDev from "../images/anna-dev.jpeg"
+import Anna from "../images/anna.jpeg"
+import Margo from "../images/margo.jpeg"
+import Olga from "../images/olga.jpeg"
+import Sergei from "../images/sergej.jpeg"
+import Veronica from "../images/veronica.png"
+import Ilja from "../images/ilya.jpg"
+
+
 import "../components/styles/main.scss"
 import "../components/styles/icons.scss"
 import "../components/styles/modules.scss"
 import "../components/styles/mixins.scss"
-import "../components/styles/media_1920.scss"
-import "../components/styles/media_1366.scss"
-import "../components/styles/media_1024.scss"
-import "../components/styles/media_768.scss"
-import "../components/styles/media_375.scss"
 
 const facts = [
   {
@@ -198,6 +207,80 @@ const InformationAboutCompany = ({ location, data }) => {
 
         </div>
         <HeroValues title="What Are the Values That Drive Us to Go Further?" emoji='true' description={descriptionOfValues} dataContent={values}></HeroValues>
+        <div className="container">
+          <div className="our-command margin_bottom_240">
+            <div className="our-command_title__wrap">
+              <h2 className="our-command_title">Meet Our Team<span className="bomb"></span></h2>
+              <div className="our-command_description">
+                At BPM Cloud, we believe that the strength of our company lies in the passion, expertise, and dedication of our team members. Our diverse and talented team is the driving force behind our success, and we take great pride in introducing them to you.              
+              </div>
+            </div>
+
+            <div className="our-command_images__wrap">
+                <div className="command-card">
+                  <div className="card-image"><img src={Yurij} alt="Yurij" /></div>
+                  <div className="card-title">Yuri Krivko</div>
+                  <div className="card-position">SEO</div>
+                </div>
+                <div className="command-card">
+                  <div className="card-image"><img src={Veronica} alt="Veronica" /></div>
+                  <div className="card-title">Veronika Shaveiko</div>
+                  <div className="card-position">Project Manager</div>
+                </div>
+                <div className="command-card">
+                  <div className="card-image"><img src={Olga} alt="Olga" /></div>
+                  <div className="card-title">Olga Balatsun</div>
+                  <div className="card-position">UX/UI Designer</div>
+                </div>
+                <div className="command-card">
+                  <div className="card-image"><img src={Maria} alt="Maria" /></div>
+                  <div className="card-title">Maria Chernova</div>
+                  <div className="card-position">UX/UI Designer</div>
+                </div>
+                <div className="command-card">
+                  <div className="card-image"><img src={Anna} alt="Anna" /></div>
+                  <div className="card-title">Anya Vershenya</div>
+                  <div className="card-position">Recruiter</div>
+                </div>
+                <div className="command-card">
+                  <div className="card-image"><img src={Andrei} alt="Andrei" /></div>
+                  <div className="card-title">Andrei Burak</div>
+                  <div className="card-position">Frontend Developer</div>
+                </div>
+                <div className="command-card">
+                  <div className="card-image"><img src={Sergei} alt="Sergei" /></div>
+                  <div className="card-title">Sergei Greben</div>
+                  <div className="card-position">Web/Frontend Developer</div>
+                </div>
+                <div className="command-card">
+                  <div className="card-image"><img src={Vlad} alt="Vlad" /></div>
+                  <div className="card-title">Vladislav Volkov</div>
+                  <div className="card-position">Web/Frontend Developer</div>
+                </div>
+                <div className="command-card">
+                  <div className="card-image"><img src={Margo} alt="Margo" /></div>
+                  <div className="card-title">Margarita Sukhonosova</div>
+                  <div className="card-position">SEO Specialist</div>
+                </div>
+                <div className="command-card">
+                  <div className="card-image"><img src={Diana} alt="Diana" /></div>
+                  <div className="card-title">Diana Pitalenko</div>
+                  <div className="card-position">SEO Specialist</div>
+                </div>
+                <div className="command-card">
+                  <div className="card-image"><img src={Ilja} alt="Ilja" /></div>
+                  <div className="card-title">Ilya Stvolov</div>
+                  <div className="card-position">Java Backend Developer</div>
+                </div>
+                <div className="command-card">
+                  <div className="card-image"><img src={AnnaDev} alt="AnnaDev" /></div>
+                  <div className="card-title">Anna Novikova</div>
+                  <div className="card-position">Head of Business Development</div>
+                </div>
+            </div>
+            <div className="our-command__button"><button className="button_black"><span className="plus"></span></button></div>
+          </div>
+        </div>
         <HeroBlack title="Why Should Specialists Work in Our Team?" description="Besides partnering with businesses, BPM Cloud is always ready to invite professional developers, QA engineers, designers, business analysts, managers and many other specialists ready to use their expertise in a profitable field." undertitle="We offer" dataContent={specialist}></HeroBlack>
         <div className="container">
           <div className="profit margin_bottom_240">

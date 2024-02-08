@@ -1,3 +1,87 @@
+.our-command {
+    .our-command_title__wrap {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        .our-command_title {
+            color: #1A1B1F;
+            font-family: 'Acrom';
+            font-size: 62px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 105%; /* 65.1px */
+            text-transform: capitalize;
+            width: 100%;
+        }
+
+        .our-command_description {
+            color: #5C5C5C;
+            width: 100%;
+            font-family: 'Acrom';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+        }
+    }
+
+    .our-command_images__wrap {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        row-gap: 50px;
+
+        .command-card {
+            display: flex;
+            flex-direction: column;
+            padding: 0 42px;
+            align-items: center;
+
+            .card-image {
+                margin-bottom: 25px;
+                width: 270px;
+                height: 270px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                img {
+                    width: 270px;
+                    height: 370px;
+                    object-fit: cover;
+                }
+            }
+
+            .card-title {
+                margin-bottom: 5px;
+            }
+        }
+
+        .command-card:nth-child(2), .command-card:nth-child(1) {
+            .card-image {
+                margin-bottom: 25px;
+                width: 270px;
+                height: 270px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                img {
+                    width: 270px;
+                    height: 270px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .our-command__button {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 80px;
+    }
+}
+
 .mission {
     .mission__title {
       .title {
