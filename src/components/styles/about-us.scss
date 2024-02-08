@@ -27,15 +27,14 @@
 
     .our-command_images__wrap {
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         row-gap: 50px;
 
         .command-card {
             display: flex;
             flex-direction: column;
-            padding: 0 42px;
+            padding: 0 42;
             align-items: center;
 
             .card-image {
@@ -54,6 +53,12 @@
 
             .card-title {
                 margin-bottom: 5px;
+                font-size: 18px;
+            }
+
+            .card-position {
+                font-size: 16px;
+                color:#5C5C5C;
             }
         }
 
@@ -476,6 +481,80 @@
 
 
   @media screen and (max-width: 1366px) {
+
+    .our-command {
+        .our-command_title__wrap {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            .our-command_title {
+                font-size: 44.11px;
+            }
+    
+            .our-command_description {
+                color: #5C5C5C;
+                width: 100%;
+                font-size: 12.806px;
+            }
+        }
+    
+        .our-command_images__wrap {
+            width: 100%;
+            row-gap: 25px;
+    
+            .command-card {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                align-items: center;
+    
+                .card-image {
+                    margin-bottom: 15px;
+                    width: 185px;
+                    height: 185px;
+                    border-radius: 50%;
+                    overflow: hidden;
+    
+                    img {
+                        width: 185px;
+                        height: 285px;
+                        object-fit: cover;
+                    }
+                }
+    
+                .card-title {
+                    margin-bottom: 5px;
+                    font-size: 16px;
+                }
+    
+                .card-position {
+                    font-size: 14px;
+                    color:#5C5C5C;
+                }
+            }
+    
+            .command-card:nth-child(2), .command-card:nth-child(1) {
+                .card-image {
+                    margin-bottom: 15px;
+                    width: 185px;
+                    height: 185px;
+                    border-radius: 50%;
+                    overflow: hidden;
+    
+                    img {
+                        width: 185px;
+                        height: 185px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    
+        .our-command__button {
+            margin-top: 50px;
+        }
+    }
+
     .mission {
         .mission__title {
           .title {
@@ -729,6 +808,82 @@
   }
 
   @media screen and (max-width: 768px) {
+    .our-command {
+        .our-command_title__wrap {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-bottom: 30px;
+            .our-command_title {
+                font-size: 42px;
+                margin-bottom: 20px;
+            }
+    
+            .our-command_description {
+                color: #5C5C5C;
+                width: 100%;
+                font-size: 15px;
+            }
+        }
+    
+        .our-command_images__wrap {
+            width: 100%;
+            row-gap: 45px;
+            grid-template-columns: 1fr 1fr 1fr;
+    
+            .command-card {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                align-items: center;
+    
+                .card-image {
+                    margin-bottom: 15px;
+                    width: 161px;
+                    height: 161px;
+                    border-radius: 50%;
+                    overflow: hidden;
+    
+                    img {
+                        width: 161px;
+                        height: 216px;
+                        object-fit: cover;
+                    }
+                }
+    
+                .card-title {
+                    margin-bottom: 5px;
+                    font-size: 18px;
+                }
+    
+                .card-position {
+                    font-size: 16px;
+                    color:#5C5C5C;
+                }
+            }
+    
+            .command-card:nth-child(2), .command-card:nth-child(1) {
+                .card-image {
+                    margin-bottom: 15px;
+                    width: 161px;
+                    height: 161px;
+                    border-radius: 50%;
+                    overflow: hidden;
+    
+                    img {
+                        width: 161px;
+                        height: 161px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    
+        .our-command__button {
+            margin-top: 50px;
+        }
+    }
+
     .mission {
         .mission__title {
           .title {
@@ -1021,6 +1176,82 @@
       .about_list {
         margin-top: -175px;
       }
+
+      .our-command {
+        .our-command_title__wrap {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-bottom: 30px;
+            .our-command_title {
+                font-size: 42px;
+                margin-bottom: 20px;
+            }
+    
+            .our-command_description {
+                color: #5C5C5C;
+                width: 100%;
+                font-size: 15px;
+            }
+        }
+    
+        .our-command_images__wrap {
+            width: 100%;
+            row-gap: 45px;
+            grid-template-columns: 1fr 1fr;
+    
+            .command-card {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                align-items: center;
+    
+                .card-image {
+                    margin-bottom: 15px;
+                    width: 161px;
+                    height: 161px;
+                    border-radius: 50%;
+                    overflow: hidden;
+    
+                    img {
+                        width: 161px;
+                        height: 216px;
+                        object-fit: cover;
+                    }
+                }
+    
+                .card-title {
+                    margin-bottom: 5px;
+                    font-size: 18px;
+                }
+    
+                .card-position {
+                    font-size: 16px;
+                    color:#5C5C5C;
+                }
+            }
+    
+            .command-card:nth-child(2), .command-card:nth-child(1) {
+                .card-image {
+                    margin-bottom: 15px;
+                    width: 161px;
+                    height: 161px;
+                    border-radius: 50%;
+                    overflow: hidden;
+    
+                    img {
+                        width: 161px;
+                        height: 161px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    
+        .our-command__button {
+            margin-top: 50px;
+        }
+    }
     .mission {
         .mission__title {
           .title {
@@ -1290,4 +1521,12 @@
           display: none;
         }
       }
+  }
+
+  @media screen and (max-width: 350px) {
+    .our-command {
+        .our-command_images__wrap {
+            grid-template-columns: 1fr;
+        }
+    }
   }
