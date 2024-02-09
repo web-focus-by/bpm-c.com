@@ -604,11 +604,11 @@
 
 
 
-  @media screen and (max-width: 1366px) {
+@media screen and (max-width: 1600px) {
     .form {
         background: #1a1b1f url(../../images/form_gradient.svg) no-repeat;
         border-radius: 40px;
-        padding: 85px 57px;
+        padding: 80px 40px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0;
@@ -623,6 +623,7 @@
             margin-top: 0;
             font-weight: 500;
             width: 440px;
+            font-size: 46px;
           }
     
           .form_block_info {
@@ -669,8 +670,8 @@
           }
     
           .form_block_wrapper {
-            width: 462px;
-            margin: -4px 0 0 -17px;
+            width: 100%;
+            margin: 0;
             form {
               margin-top: 0;
               .form_line-double {
@@ -680,7 +681,7 @@
     
                 .form_line-wrapper {
                   margin-bottom: 10px;
-                  width: 195px;
+                  width: 100%;
                 }
     
               }
@@ -804,9 +805,9 @@
             }
           }
         }
-      }
+    }
 
-      .thanks_modal {
+    .thanks_modal {
         .thanks_modal_content {
           .form {
             grid-template-columns: 525px 230px;
@@ -830,15 +831,6 @@
                 }
               }
             }
-          }
-        }
-      }
-    
-      .thanks_form {
-        padding: 86px 89px 87px 70px !important;
-        .thanks_form_block {
-          .form_block_title {
-            margin-bottom: 25px;
           }
         }
       }

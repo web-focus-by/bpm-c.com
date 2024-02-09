@@ -542,50 +542,6 @@
       }
     }
   }
-
-  .leaders_choice_tagline {
-    margin: 271px 0;
-
-    &__block {
-
-      .leaders_choice_tagline_block_title {
-        font-size: 62px;
-        line-height: 105%;
-        font-weight: 500;
-        //font-size: calc(44px + (62 - 44) * ((100vw - 1366px) / (1920 - 1366)));
-      }
-
-      .leaders_choice_tagline_block_gif {
-        img {
-          width: calc(52px + (74 - 52) * ((100vw - 1366px) / (1920 - 1366)));
-          height: calc(52px + (74 - 52) * ((100vw - 1366px) / (1920 - 1366)));
-          margin-left: calc(
-            -10px + (-20 + 10) * ((100vw - 1366px) / (1920 - 1366))
-          );
-
-          &:first-child {
-            margin-left: calc(
-              20px + (26 + 20) * ((100vw - 1366px) / (1920 - 1366))
-            );
-          }
-        }
-      }
-    }
-
-    &__butn {
-      button {
-        padding: calc(16px + (22 - 16) * ((100vw - 1366px) / (1920 - 1366)))
-          calc(29px + (40 - 29) * ((100vw - 1366px) / (1920 - 1366)));
-
-        span {
-          margin-left: calc(
-            9px + (14 + 9) * ((100vw - 1366px) / (1920 - 1366))
-          );
-        }
-      }
-    }
-  }
-
   .footer {
     padding-top: calc(48px + (68 - 48) * ((100vw - 1366px) / (1920 - 1366)));
     font-size: calc(13px + (18 - 13) * ((100vw - 1366px) / (1920 - 1366)));

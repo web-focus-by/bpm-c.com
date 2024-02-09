@@ -503,7 +503,7 @@
   }
 
 
-  @media screen and (max-width: 1366px) {
+  @media screen and (max-width: 1600px) {
 
     .our-command {
         .our-command_title__wrap {
@@ -1379,6 +1379,7 @@
             .our-command_title {
                 font-size: 42px;
                 margin-bottom: 20px;
+                max-width: 80%;
             }
     
             .our-command_description {

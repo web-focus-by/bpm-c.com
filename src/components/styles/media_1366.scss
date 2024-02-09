@@ -540,40 +540,6 @@
     }
   }
 
-  .leaders_choice_tagline {
-    margin: 230px 0;
-
-    &__block {
-
-      .leaders_choice_tagline_block_title {
-        font-size: 44px;
-      }
-
-      .leaders_choice_tagline_block_gif {
-        img {
-          width: 52px;
-          height: 52px;
-          margin-left: -10px;
-
-          &:first-child {
-            margin-left: 20px;
-          }
-        }
-      }
-    }
-
-    &__butn {
-      button {
-        padding: 16px 29px;
-
-        span {
-          margin-left: 9px;
-        }
-      }
-    }
-  }
-
-
   .insta {
     width: 25px;
     height: 25px;
@@ -735,7 +701,39 @@
 }
 
 @media screen and (max-width: 1600px) {
+  .leaders_choice_tagline {
+    margin: 230px 0;
 
+    &__block {
+
+      .leaders_choice_tagline_block_title {
+        font-size: 44px;
+      }
+
+      .leaders_choice_tagline_block_gif {
+        img {
+          width: 52px;
+          height: 52px;
+          margin-left: -10px;
+
+          &:first-child {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+
+    &__butn {
+      button {
+        padding: 16px 29px;
+
+        span {
+          margin-left: 9px;
+        }
+      }
+    }
+  }
+  
   .services {
     &__list {
       grid-column-gap: 20px;
