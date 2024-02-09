@@ -65,6 +65,12 @@
         .cup_icon, .power_icon, .smile_icon, .fire_icon, .star_icon {
             position: relative;
 
+            .power-icon, .cup {
+                width: 47px;
+                height: 47px;
+                background-size: 47px 47px;
+            }
+
             .cup, .firehearth, .power-icon, .smile {
                 position: absolute;
                 top: 0px;
@@ -395,7 +401,7 @@
         border-radius: 100%;
         background-color: #FFD771;
         padding: 23px 24px 18px;
-        bottom: 0;
+        bottom: -5px;
         left: -35px;
       }
   
@@ -549,6 +555,16 @@
                     color:#5C5C5C;
                 }
             }
+
+            .cup_icon, .power_icon, .smile_icon, .fire_icon, .star_icon {
+                position: relative;
+    
+                .power-icon, .cup {
+                    width: 34px;
+                    height: 34px;
+                    background-size: 34px 34px;
+                }
+            }    
     
             .command-card:nth-child(2), .command-card:nth-child(1) {
                 .card-image {
@@ -776,6 +792,7 @@
             max-height: 28px;
             border-radius: 100%;
             background-color: #B1D2E0;
+            top: -30px;
           }
         }
       }
@@ -792,7 +809,8 @@
           }
     
         .partnering__cards {
-          display: flex;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
           gap: 16px;
             .cards_item {
               .title {
@@ -1143,8 +1161,6 @@
           }
     
         .partnering__cards {
-          display: flex;
-          flex-wrap: wrap;
           column-gap: 20px;
           row-gap: 30px;
             .cards_item {

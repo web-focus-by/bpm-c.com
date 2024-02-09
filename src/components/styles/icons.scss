@@ -952,6 +952,32 @@
     height: 30px;
     position: relative;
   }
+
+  .firehearth {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: url(../../images/fireheart.svg) no-repeat;
+    background-size: 34px 34px;
+  }
+  
+  .smile {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: url(../../images/smile.svg) no-repeat;
+    background-size: 34px 34px;
+
+  }
+  
+  .star {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: url(../../images/star-2.svg) no-repeat;
+    background-size: 34px 34px;
+
+  }
 }
 
 @media screen and (max-width: 768px) {
