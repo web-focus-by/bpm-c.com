@@ -54,11 +54,13 @@
             .card-title {
                 margin-bottom: 5px;
                 font-size: 18px;
+                text-align: center;
             }
 
             .card-position {
                 font-size: 16px;
                 color:#5C5C5C;
+                text-align: center;
             }
         }
 
@@ -1598,7 +1600,7 @@
         justify-content: space-between;
         flex-direction: column;
         .profit__wrap{
-          max-width: 343px;
+          max-width: 100%;
           .profit_title {
             max-width: 343px;
             font-size: 42px;
@@ -1639,8 +1641,7 @@
         }
     
         .profit__images {
-          margin-left:0px;
-          margin-top: 40px;
+          margin: 40px auto 0;
           display: flex;
           flex-wrap: wrap;
           width: 343px;

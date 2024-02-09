@@ -934,8 +934,18 @@
     background: url(../../images/edu.svg) no-repeat;
     background-size: 21px 21px;
   }
-}
-@media screen and (max-width: 1368px) {
+
+  .bomb {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: url(../../images/bomb.svg) no-repeat;
+    background-size: 34px 34px;
+    margin-left: 15px;
+    position: relative;
+    top: 5px;
+  }
+
   .computer {
     display: inline-block;
     background: url(../../images/pc.svg) no-repeat;
