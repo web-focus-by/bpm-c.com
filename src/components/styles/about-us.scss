@@ -1426,6 +1426,29 @@
                     color:#5C5C5C;
                 }
             }
+
+            .cup_icon, .power_icon, .smile_icon, .fire_icon, .star_icon {
+                position: relative;
+    
+                .power-icon, .cup {
+                    width: 34px;
+                    height: 34px;
+                    background-size: 34px 34px;
+                }
+    
+                .cup, .firehearth, .power-icon, .smile {
+                    position: absolute;
+                    top: -10px;
+                    right: 20%;
+                }
+    
+                .star {
+                    position: absolute;
+                    bottom: 32%;
+                    left: 15%;
+                }
+    
+            }
     
             .command-card:nth-child(2), .command-card:nth-child(1) {
                 .card-image {
