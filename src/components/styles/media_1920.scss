@@ -137,72 +137,7 @@
     }
   }
 
-  .thanks_modal {
-    .thanks_modal_content {
-      .form {
-        grid-template-columns:
-          calc(525px + (635 - 525) * ((100vw - 1366px) / (1920 - 1366)))
-          calc(230px + (425 - 230) * ((100vw - 1366px) / (1920 - 1366)));
-        padding: calc(28px + (40 - 28) * ((100vw - 1366px) / (1920 - 1366)))
-          calc(28px + (40 - 28) * ((100vw - 1366px) / (1920 - 1366)))
-          calc(218px + (330 - 218) * ((100vw - 1366px) / (1920 - 1366)))
-          calc(56px + (80 - 56) * ((100vw - 1366px) / (1920 - 1366)));
-        background: url(../../images/purple_ball.svg) 90% 15% no-repeat,
-          url(../../images/yellow_ball.svg) 50% 105% no-repeat;
-        background-size: 35%;
-        &__block {
-          .form_block_text {
-            p {
-              font-size: calc(
-                11px + (16 - 11) * ((100vw - 1366px) / (1920 - 1366))
-              );
-            }
 
-            .form_block_gif {
-              margin-left: calc(
-                8px + (12 - 8) * ((100vw - 1366px) / (1920 - 1366))
-              );
-              img {
-                width: calc(
-                  calc(25px + (36 - 25) * ((100vw - 1366px) / (1920 - 1366))) +
-                    (50 - 36) * ((100vw - 1366px) / (1920 - 1366))
-                );
-                height: calc(
-                  calc(25px + (36 - 25) * ((100vw - 1366px) / (1920 - 1366))) +
-                    (50 - 36) * ((100vw - 1366px) / (1920 - 1366))
-                );
-                &:not(:first-child) {
-                  margin-left: -10px;
-                }
-              }
-            }
-          }
-          .form_block_modal_button {
-            width: calc(24px + (34 - 24) * ((100vw - 1366px) / (1920 - 1366)));
-            &::after {
-              width: calc(
-                24px + (34 - 24) * ((100vw - 1366px) / (1920 - 1366))
-              );
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .thanks_form {
-    padding: calc(86px + (100 - 86) * ((100vw - 1366px) / (1920 - 1366)))
-      calc(89px + (125 - 89) * ((100vw - 1366px) / (1920 - 1366)))
-      calc(87px + (129 - 87) * ((100vw - 1366px) / (1920 - 1366)))
-      calc(70px + (90 - 70) * ((100vw - 1366px) / (1920 - 1366))) !important;
-    .thanks_form_block {
-      .form_block_title {
-        margin-bottom: calc(
-          25px + (36 - 25) * ((100vw - 1366px) / (1920 - 1366))
-        );
-      }
-    }
-  }
 
   .button_black {
     border: 1px solid #fff;
@@ -740,31 +675,5 @@
     &:hover {
       background-size: cover;
     }
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1920px) {
-  .modal {
-    &__content {
-      border-radius: calc(30px + (40 - 30) * ((100vw - 768px) / (1920 - 768)));
-
-      .form {
-        padding: calc(30px + (40 - 30) * ((100vw - 768px) / (1920 - 768)))
-          calc(30px + (40 - 30) * ((100vw - 768px) / (1920 - 768)))
-          calc(60px + (100 - 60) * ((100vw - 768px) / (1920 - 768)))
-          calc(60px + (80 - 60) * ((100vw - 768px) / (1920 - 768)));
-        grid-template-columns:
-          calc(575px + (605 - 575) * ((100vw - 768px) / (1920 - 768)))
-          calc(35px + (455 - 35) * ((100vw - 768px) / (1920 - 768)));
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1700px){
-
-  .form {
-    background: #1a1b1f url(../../images/form_gradient.svg) no-repeat;
-    background-position: 330px 165px;
   }
 }

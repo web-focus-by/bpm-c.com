@@ -842,6 +842,180 @@
       }
   }
 
+  @media screen and (max-width: 1185px) {
+    .profit {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        .profit__wrap{
+          max-width: 100%;
+          .profit_title {
+            max-width: 487px;
+            font-size: 44px;
+          }
+          .profit_description {
+            font-size: 15px;
+            margin: 20px 0 30px;
+          }
+    
+          .profit__companie {
+            .profit_not-it {
+              border-top: 1px solid #E1DAF4;
+              padding: 25px 0;
+              .title {
+                font-size: 24px;
+                margin-bottom: 15px;
+              }
+    
+              .descr {
+                font-size: 15px;
+              }
+            }
+    
+            .profit_it {
+                border-top: 1px solid #E1DAF4;
+                border-bottom: 1px solid #E1DAF4;
+                padding: 25px 0;
+              .title {
+                font-size: 24px;
+                margin-bottom: 15px;
+              }
+    
+              .descr {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+    
+        .profit__images {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 40px auto 50px;
+          gap: 20px;
+    
+          img:first-child {
+            width: 393px;
+            height: 525px;
+          }
+    
+          img:nth-child(2) {
+            width: 275px;
+            height: 354px;
+          }
+    
+          .stick_computer {
+            position: absolute;
+            max-width: 24px;
+            max-height: 24px;
+            border-radius: 100%;
+            background-color: #FFD771;
+            padding: 23px 24px 21px 23px;
+            bottom: -13px;
+            left: -1px;
+          }
+    
+          .stick_light {
+            position: absolute;
+            max-width: 23px;
+            max-height: 28px;
+            border-radius: 100%;
+            background-color: #B1D2E0;
+            top: -32px;
+            right: 0%;
+          }
+        }
+      }
+
+      .prof_path {
+        display: flex;
+        flex-direction: column;
+        .prof_path__wrap{
+          max-width: 100%;
+          .prof_path_title {
+            font-size: 42px;
+          }
+          .prof_path_description {
+            width: 100%;
+            font-size: 15px;
+            margin: 20px 0 30px;
+          }
+    
+          .prof_path_history {
+            .prof_path_line {
+              display: flex;
+              gap: 0;
+              margin-bottom: 25px;
+    
+              .year {
+                font-size: 24px;
+                min-width: 71px;
+              }
+    
+              .descr {
+                padding: 0;
+                width: 100%;
+                font-size: 15px;
+              }
+            }
+    
+            span.line {
+              height: 524px;
+              left: 50%;
+              top: 7px;
+            }
+          }
+        }
+    
+        .prof_path__images {
+              margin: 0 auto;
+          .images_table {
+            width: 481px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+    
+            img {
+              width: 284px;
+            }
+    
+            img:first-child {
+              width: 183px;
+              height: 286px;
+              align-self: end;
+            }
+    
+            img:last-child {
+              width: 182px;
+              height: 238px;
+            }
+          }
+    
+          .stick_cup {
+            position: absolute;
+            max-width: 28px;
+            max-height: 28px;
+            border-radius: 100%;
+            background-color: #FFD771;
+            padding: 28px;
+            left: -10px;
+          }
+    
+          .stick_heart {
+            position: absolute;
+            max-width: 35px;
+            max-height: 35px;
+            border-radius: 100%;
+            background-color: #B1D2E0;
+            padding: 18px;
+            bottom: 8%;
+            right: 16.5%;
+    
+          }
+        }
+    }
+  }
+
   @media screen and (max-width: 768px) {
     .our-command {
         .our-command_title__wrap {
