@@ -727,6 +727,27 @@
   top: 5px;
 }
 
+.firehearth {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  background: url(../../images/fireheart.svg) no-repeat;
+}
+
+.smile {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  background: url(../../images/smile.svg) no-repeat;
+}
+
+.star {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  background: url(../../images/star-2.svg) no-repeat;
+}
+
 @media screen and (max-width: 1920px) {
   .phone_icon {
     background-size: 47px 47px;

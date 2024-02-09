@@ -62,6 +62,23 @@
             }
         }
 
+        .cup_icon, .power_icon, .smile_icon, .fire_icon, .star_icon {
+            position: relative;
+
+            .cup, .firehearth, .power-icon, .smile {
+                position: absolute;
+                top: 0px;
+                right: 25%;
+            }
+
+            .star {
+                position: absolute;
+                bottom: 27%;
+                left: 15%;
+            }
+
+        }
+
         .command-card:nth-child(2), .command-card:nth-child(1) {
             .card-image {
                 margin-bottom: 25px;
