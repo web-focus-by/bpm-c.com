@@ -25,6 +25,10 @@
     }
   }
 
+  .value-item.length {
+    display: block !important;
+  }
+
 .values {
     .values__title {
         margin-bottom: 50px;
@@ -60,7 +64,7 @@
             line-height: 150%;
 
             p {
-                min-width: 50%;
+                width: 50%;
             }
         }
 
@@ -88,8 +92,8 @@
 
 .values__cards {
     .cards-list {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
 
         .value-item {
             border-right: 1px solid #E1DAF4;
@@ -373,6 +377,10 @@
         }
     }
 
+    .cards-list.length {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
     .value-lines{
         width: 980px;
         display: flex;
@@ -434,7 +442,7 @@
                 font-size: 12.806px;
 
                 p {
-                    min-width: 100%;
+                    width: 100%;
                 }
             }
 
@@ -461,9 +469,6 @@
 
         .values__cards {
             .cards-list {
-                display: flex;
-                flex-wrap: nowrap;
-
                 .value-item {
                     border-right: 1px solid #E1DAF4;
                     padding-right: 16px;
@@ -481,7 +486,6 @@
                     }
 
                     .item__info-content {
-                        max-width: 332px;
                         font-size: 12.806px;
                     }
                 }
@@ -500,7 +504,6 @@
                     padding-right: 23px;
 
                     .item__info-content {
-                        max-width: 227px;
                         font-size: 12.806px;
                     }
                 }
@@ -921,8 +924,7 @@
 
         .values__cards {
             .cards-list {
-                display: flex;
-                flex-wrap: wrap;
+                grid-template-columns: 1fr;
 
                 .value-item {
                     border-right: none;
@@ -943,7 +945,7 @@
                     }
 
                     .item__info-content {
-                        max-width: 687px;
+                        max-width: 100%;
                         font-size: 15px;
                         padding-bottom: 25px;
                     }
@@ -965,7 +967,6 @@
                     margin-bottom: 0;
 
                     .item__info-content {
-                        max-width: 333px;
                         font-size: 15px;
                         padding-bottom: 0px;
                     }
@@ -973,7 +974,7 @@
 
                 .value-item.length:first-child {
                     padding-left: 0;
-                    padding-right: 10px;
+                    padding-right: 0;
                 }
 
                 .value-item.length:nth-child(2){
@@ -984,8 +985,9 @@
 
                 .value-item.length:nth-child(3){
                     margin-top: 25px;
+                    padding-right: 0;
+                    padding-left: 0;
                      .item__info-content {
-                        max-width: 311px;
                         font-size: 15px;
                     }
                 }
@@ -996,6 +998,10 @@
                     padding: 0;
                     padding-left: 10px;
                 }
+            }
+
+            .cards-list.length {
+                grid-template-columns: 1fr 1fr;
             }
         }
     }
@@ -1055,9 +1061,10 @@
         }
 
         .values__cards {
-            .cards-list {
-                display: flex;
-                flex-wrap: wrap;
+            .cards-list.length {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                width: 100%;
 
                 .value-item {
                     border-right: none;
@@ -1078,7 +1085,7 @@
                     }
 
                     .item__info-content {
-                        max-width: 687px;
+                        max-width: 100%;
                         font-size: 15px;
                         padding-bottom: 25px;
                     }
@@ -1100,7 +1107,7 @@
                     margin-bottom: 0;
 
                     .item__info-content {
-                        max-width: 333px;
+                        max-width: 100%;
                         font-size: 15px;
                         padding-bottom: 0px;
                     }
@@ -1131,6 +1138,10 @@
                     padding: 0;
                     padding-left: 10px;
                 }
+            }
+
+            .cards-list {
+                grid-template-columns: 1fr;
             }
         }
     }
@@ -1316,7 +1327,7 @@
             margin-top: 130px;
             margin-bottom: 38px;
             .title {
-                max-width: 400px;
+                max-width: 90%;
                 font-size: 42px;
                 margin-bottom: 20px;
             }
@@ -1329,6 +1340,76 @@
                 }
             }
         }
+
+        .values__cards {
+            .cards-list.length {
+                display: grid;
+                grid-template-columns: 1fr;
+                width: 100%;
+
+                .value-item {
+                    border-right: none;
+                    border-bottom: 1px solid #E1DAF4;
+                    padding-right: 16px;
+                    padding-left: 7px;
+                    margin-bottom: 25px;
+
+                    .item__info-number {
+                        font-size: 42px;
+                        margin-bottom: 25px;
+                    }
+
+                    .item__info-title {
+                        width: 252px;
+                        font-size: 20px;
+                        margin-bottom: 20px;
+                    }
+
+                    .item__info-content {
+                        max-width: 100%;
+                        font-size: 15px;
+                        padding-bottom: 25px;
+                    }
+                }
+
+                .value-item:first-child {
+                    padding-left: 0;
+                }
+
+                .value-item:last-child {
+                    border-right: none;
+                    padding-right: 0;
+                }
+
+                .value-item.length {
+                    border-right: none;
+                    border-left: none;
+                    padding-left: 0;
+                    margin-bottom: 0;
+
+                    .item__info-content {
+                        max-width: 100%;
+                        font-size: 15px;
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+
+            .cards-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    .values .values__cards .cards-list.length .value-item.length {
+        padding-left: 0 !important;
+        margin-top: 25px !important;
+        padding-bottom: 25px !important;
+        border-bottom: 1px solid #E1DAF4;
+    }
+
+    .values .values__cards .cards-list.length .value-item.length:first-child {
+        margin-top: 0 !important;
     }
 
     .values__cards .cards-list .value-item.it_company-item {
@@ -1509,142 +1590,5 @@
 
     .values__cards .cards-list .value-item .item__info-title {
         font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 765px) {
-    .values {
-        .values__title {
-            margin-top: 130px;
-            margin-bottom: 38px;
-            .title {
-                max-width: 343px;
-                font-size: 42px;
-                margin-bottom: 20px;
-
-                .dev {
-                    display: inline-block;
-                    width: 17px;
-                    height: 17px;
-                    padding: 8.5px;
-                    background-color: #935CFF;
-                    border-radius: 100%;
-                    position: relative;
-                    top: 13px;
-                    left: 10px;
-                }
-            }
-            .description {
-                font-size: 15px;
-
-                p {
-                    min-width: 100%;
-                    margin: 0;
-                }
-            }
-
-            .description.flex {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                gap: 15px;
-            }
-        }
-
-        .values__title.flex {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            margin-top: 141px;
-            .title {
-                width: 343px;
-            }
-            .description {
-                width: 100%;
-                margin: 20px 0 0 0;
-            }
-
-        }
-
-        .values__cards {
-            .cards-list {
-                display: flex;
-                flex-wrap: wrap;
-
-                .value-item {
-                    border-right: none;
-                    border-bottom: 1px solid #E1DAF4;
-                    padding-right: 16px;
-                    padding-left: 7px;
-                    margin-bottom: 25px;
-
-                    .item__info-number {
-                        font-size: 42px;
-                        margin-bottom: 25px;
-                    }
-
-                    .item__info-title {
-                        width: 252px;
-                        font-size: 20px;
-                        margin-bottom: 20px;
-                    }
-
-                    .item__info-content {
-                        max-width: 687px;
-                        font-size: 15px;
-                        padding-bottom: 25px;
-                    }
-                }
-
-                .value-item:first-child {
-                    padding-left: 0;
-                }
-
-                .value-item:last-child {
-                    border-right: none;
-                    padding-right: 0;
-                }
-
-                .value-item.length {
-                    border-right: none;
-                    border-bottom: 1px solid #E1DAF4;
-                    max-width: 330px;
-                    padding-left: 10px;
-                    padding-bottom: 25px;
-                    margin-bottom: 25px;
-
-                    .item__info-content {
-                        font-size: 15px;
-                        padding-bottom: 0px;
-                    }
-                }
-
-                .value-item.length:first-child {
-                    padding-left: 0;
-                    padding-right: 10px;
-                }
-
-                .value-item.length:nth-child(2){
-                    border-right: none;
-                    padding-bottom: 25px;
-                    padding-left: 10px;
-                }
-
-                .value-item.length:nth-child(3){
-                    margin-top: 0;
-                     .item__info-content {
-                        max-width: 313px;
-                        font-size: 15px;
-                    }
-                }
-
-                .value-item.length:nth-child(4){
-                    margin-top: 0;
-                    border-right: none;
-                    padding-left: 10px;
-                    padding-bottom: 25px;
-                }
-            }
-        }
     }
 }

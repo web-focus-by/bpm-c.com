@@ -21,7 +21,7 @@ const Form = ({ showThankForm }) => {
     <div className="containerForm">
       <div className="form margin_bottom_240">
         <div className="form__block">
-          <h2 className="form_block_title title_62">Want to talk about your project?</h2>
+          <h2 className="form_block_title">Want to talk about your project?</h2>
           <div className="form_block_info">
             Please, do not hesitate to share any of your ideas or demands with us.
           </div>

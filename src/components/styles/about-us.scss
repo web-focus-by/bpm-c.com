@@ -54,12 +54,43 @@
             .card-title {
                 margin-bottom: 5px;
                 font-size: 18px;
+                text-align: center;
             }
 
             .card-position {
                 font-size: 16px;
                 color:#5C5C5C;
+                text-align: center;
             }
+        }
+
+        .cup_icon, .power_icon, .smile_icon, .fire_icon, .star_icon, .magic_icon {
+            position: relative;
+
+            .power-icon, .cup {
+                width: 47px;
+                height: 47px;
+                background-size: 47px 47px;
+            }
+
+            .cup, .firehearth, .power-icon, .smile {
+                position: absolute;
+                top: 0px;
+                right: 25%;
+            }
+
+            .star {
+                position: absolute;
+                bottom: 27%;
+                left: 15%;
+            }
+
+            .magic {
+                position: absolute;
+                bottom: 27%;
+                left: 20%;
+            }
+
         }
 
         .command-card:nth-child(2), .command-card:nth-child(1) {
@@ -84,6 +115,38 @@
         width: 100%;
         justify-content: center;
         margin-top: 80px;
+
+        .button_black {
+            .close {
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                margin-left: 8px;
+                background-image: url('../../images/minus-white.svg');
+                position: relative;
+                top: 1px;
+            }
+            .more {
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                margin-left: 8px;
+                background-image: url('../../images/plus-white.svg');
+                position: relative;
+                top: 2px;
+            }
+        }
+        .button_black:hover {
+            border: 1px solid #1A1B1F;
+
+            .close {
+                filter: invert();
+            }
+            .more {
+                filter: invert();
+            }
+        }
+
     }
 }
 
@@ -378,7 +441,7 @@
         border-radius: 100%;
         background-color: #FFD771;
         padding: 23px 24px 18px;
-        bottom: 0;
+        bottom: -5px;
         left: -35px;
       }
   
@@ -480,7 +543,7 @@
   }
 
 
-  @media screen and (max-width: 1366px) {
+  @media screen and (max-width: 1600px) {
 
     .our-command {
         .our-command_title__wrap {
@@ -532,6 +595,16 @@
                     color:#5C5C5C;
                 }
             }
+
+            .cup_icon, .power_icon, .smile_icon, .fire_icon, .star_icon {
+                position: relative;
+    
+                .power-icon, .cup {
+                    width: 34px;
+                    height: 34px;
+                    background-size: 34px 34px;
+                }
+            }    
     
             .command-card:nth-child(2), .command-card:nth-child(1) {
                 .card-image {
@@ -759,6 +832,7 @@
             max-height: 28px;
             border-radius: 100%;
             background-color: #B1D2E0;
+            top: -30px;
           }
         }
       }
@@ -775,7 +849,8 @@
           }
     
         .partnering__cards {
-          display: flex;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
           gap: 16px;
             .cards_item {
               .title {
@@ -805,6 +880,180 @@
           left: 60%;;
         }
       }
+  }
+
+  @media screen and (max-width: 1185px) {
+    .profit {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        .profit__wrap{
+          max-width: 100%;
+          .profit_title {
+            max-width: 487px;
+            font-size: 44px;
+          }
+          .profit_description {
+            font-size: 15px;
+            margin: 20px 0 30px;
+          }
+    
+          .profit__companie {
+            .profit_not-it {
+              border-top: 1px solid #E1DAF4;
+              padding: 25px 0;
+              .title {
+                font-size: 24px;
+                margin-bottom: 15px;
+              }
+    
+              .descr {
+                font-size: 15px;
+              }
+            }
+    
+            .profit_it {
+                border-top: 1px solid #E1DAF4;
+                border-bottom: 1px solid #E1DAF4;
+                padding: 25px 0;
+              .title {
+                font-size: 24px;
+                margin-bottom: 15px;
+              }
+    
+              .descr {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+    
+        .profit__images {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 40px auto 50px;
+          gap: 20px;
+    
+          img:first-child {
+            width: 393px;
+            height: 525px;
+          }
+    
+          img:nth-child(2) {
+            width: 275px;
+            height: 354px;
+          }
+    
+          .stick_computer {
+            position: absolute;
+            max-width: 24px;
+            max-height: 24px;
+            border-radius: 100%;
+            background-color: #FFD771;
+            padding: 23px 24px 21px 23px;
+            bottom: -13px;
+            left: -1px;
+          }
+    
+          .stick_light {
+            position: absolute;
+            max-width: 23px;
+            max-height: 28px;
+            border-radius: 100%;
+            background-color: #B1D2E0;
+            top: -32px;
+            right: 0%;
+          }
+        }
+      }
+
+      .prof_path {
+        display: flex;
+        flex-direction: column;
+        .prof_path__wrap{
+          max-width: 100%;
+          .prof_path_title {
+            font-size: 42px;
+          }
+          .prof_path_description {
+            width: 100%;
+            font-size: 15px;
+            margin: 20px 0 30px;
+          }
+    
+          .prof_path_history {
+            .prof_path_line {
+              display: flex;
+              gap: 0;
+              margin-bottom: 25px;
+    
+              .year {
+                font-size: 24px;
+                min-width: 71px;
+              }
+    
+              .descr {
+                padding: 0;
+                width: 100%;
+                font-size: 15px;
+              }
+            }
+    
+            span.line {
+              height: 524px;
+              left: 50%;
+              top: 7px;
+            }
+          }
+        }
+    
+        .prof_path__images {
+              margin: 0 auto;
+          .images_table {
+            width: 481px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+    
+            img {
+              width: 284px;
+            }
+    
+            img:first-child {
+              width: 183px;
+              height: 286px;
+              align-self: end;
+            }
+    
+            img:last-child {
+              width: 182px;
+              height: 238px;
+            }
+          }
+    
+          .stick_cup {
+            position: absolute;
+            max-width: 28px;
+            max-height: 28px;
+            border-radius: 100%;
+            background-color: #FFD771;
+            padding: 28px;
+            left: -10px;
+          }
+    
+          .stick_heart {
+            position: absolute;
+            max-width: 35px;
+            max-height: 35px;
+            border-radius: 100%;
+            background-color: #B1D2E0;
+            padding: 18px;
+            bottom: 8%;
+            right: 16.5%;
+    
+          }
+        }
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -1126,8 +1375,6 @@
           }
     
         .partnering__cards {
-          display: flex;
-          flex-wrap: wrap;
           column-gap: 20px;
           row-gap: 30px;
             .cards_item {
@@ -1163,21 +1410,7 @@
   }
 
   @media screen and (max-width: 530px) {
-    .about_title {
-        position: absolute;
-        margin-top: -127px;
-        width: 343px;
-      }
-    
-      .about_subtitle {
-        margin-top: 200px;
-      }
-    
-      .about_list {
-        margin-top: -175px;
-      }
-
-      .our-command {
+    .our-command {
         .our-command_title__wrap {
             display: flex;
             justify-content: space-between;
@@ -1186,6 +1419,7 @@
             .our-command_title {
                 font-size: 42px;
                 margin-bottom: 20px;
+                max-width: 80%;
             }
     
             .our-command_description {
@@ -1228,6 +1462,34 @@
                 .card-position {
                     font-size: 16px;
                     color:#5C5C5C;
+                }
+            }
+
+            .cup_icon, .power_icon, .smile_icon, .fire_icon, .star_icon, .magic_icon {
+                position: relative;
+    
+                .power-icon, .cup {
+                    width: 34px;
+                    height: 34px;
+                    background-size: 34px 34px;
+                }
+    
+                .cup, .firehearth, .power-icon, .smile {
+                    position: absolute;
+                    top: -10px;
+                    right: 20%;
+                }
+    
+                .star {
+                    position: absolute;
+                    bottom: 32%;
+                    left: 15%;
+                }
+
+                .magic {
+                    position: absolute;
+                    bottom: 32%;
+                    left: 20%;
                 }
             }
     
@@ -1404,7 +1666,7 @@
         justify-content: space-between;
         flex-direction: column;
         .profit__wrap{
-          max-width: 343px;
+          max-width: 100%;
           .profit_title {
             max-width: 343px;
             font-size: 42px;
@@ -1445,8 +1707,7 @@
         }
     
         .profit__images {
-          margin-left:0px;
-          margin-top: 40px;
+          margin: 40px auto 0;
           display: flex;
           flex-wrap: wrap;
           width: 343px;

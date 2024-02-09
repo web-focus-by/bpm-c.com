@@ -727,6 +727,34 @@
   top: 5px;
 }
 
+.firehearth {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  background: url(../../images/fireheart.svg) no-repeat;
+}
+
+.smile {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  background: url(../../images/smile.svg) no-repeat;
+}
+
+.star {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  background: url(../../images/star-2.svg) no-repeat;
+}
+
+.magic {
+    display: inline-block;
+    width: 47px;
+    height: 47px;
+    background: url(../../images/magic.svg) no-repeat;
+}
+
 @media screen and (max-width: 1920px) {
   .phone_icon {
     background-size: 47px 47px;
@@ -913,8 +941,18 @@
     background: url(../../images/edu.svg) no-repeat;
     background-size: 21px 21px;
   }
-}
-@media screen and (max-width: 1368px) {
+
+  .bomb {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: url(../../images/bomb.svg) no-repeat;
+    background-size: 34px 34px;
+    margin-left: 15px;
+    position: relative;
+    top: 5px;
+  }
+
   .computer {
     display: inline-block;
     background: url(../../images/pc.svg) no-repeat;
@@ -931,6 +969,39 @@
     height: 30px;
     position: relative;
   }
+
+  .firehearth {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: url(../../images/fireheart.svg) no-repeat;
+    background-size: 34px 34px;
+  }
+  
+  .smile {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: url(../../images/smile.svg) no-repeat;
+    background-size: 34px 34px;
+
+  }
+  
+  .star {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: url(../../images/star-2.svg) no-repeat;
+    background-size: 34px 34px;
+  }
+
+  .magic {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: url(../../images/magic.svg) no-repeat;
+    background-size: 34px 34px;
+}
 }
 
 @media screen and (max-width: 768px) {

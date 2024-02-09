@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState } from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { graphql } from "gatsby"
@@ -113,6 +114,10 @@ const specialist = [
   "Efficient communication. We follow the same practice as with our clients. If something is going wrong, we are ready to communicate and come to some agreements. We are also ready to provide you with an objective and useful feedback. "]
 
 const InformationAboutCompany = ({ location, data }) => {
+  const [isShown, setIsShown] = useState(false);
+
+  const toggleFIeldset = () => setIsShown(!isShown);
+
   const contentPage = data ? data.wpPage : {}
   const content = contentPage.content
     ? fractionContent(contentPage.content)
@@ -217,10 +222,11 @@ const InformationAboutCompany = ({ location, data }) => {
             </div>
 
             <div className="our-command_images__wrap">
-                <div className="command-card">
+                <div className="command-card cup_icon">
                   <div className="card-image"><img src={Yurij} alt="Yurij" /></div>
                   <div className="card-title">Yuri Krivko</div>
                   <div className="card-position">SEO</div>
+                  <span className="cup"></span>
                 </div>
                 <div className="command-card">
                   <div className="card-image"><img src={Veronica} alt="Veronica" /></div>
@@ -237,48 +243,59 @@ const InformationAboutCompany = ({ location, data }) => {
                   <div className="card-title">Maria Chernova</div>
                   <div className="card-position">UX/UI Designer</div>
                 </div>
-                <div className="command-card">
+                <div className="command-card magic_icon">
                   <div className="card-image"><img src={Anna} alt="Anna" /></div>
                   <div className="card-title">Anya Vershenya</div>
                   <div className="card-position">Recruiter</div>
+                  <span className="magic"></span>
                 </div>
-                <div className="command-card">
+                <div className="command-card smile_icon">
                   <div className="card-image"><img src={Andrei} alt="Andrei" /></div>
                   <div className="card-title">Andrei Burak</div>
                   <div className="card-position">Frontend Developer</div>
+                  <span className="smile"></span>
                 </div>
                 <div className="command-card">
                   <div className="card-image"><img src={Sergei} alt="Sergei" /></div>
                   <div className="card-title">Sergei Greben</div>
                   <div className="card-position">Web/Frontend Developer</div>
                 </div>
-                <div className="command-card">
+                <div className="command-card star_icon">
                   <div className="card-image"><img src={Vlad} alt="Vlad" /></div>
                   <div className="card-title">Vladislav Volkov</div>
                   <div className="card-position">Web/Frontend Developer</div>
+                  <span className="star"></span>
                 </div>
-                <div className="command-card">
-                  <div className="card-image"><img src={Margo} alt="Margo" /></div>
-                  <div className="card-title">Margarita Sukhonosova</div>
-                  <div className="card-position">SEO Specialist</div>
-                </div>
-                <div className="command-card">
-                  <div className="card-image"><img src={Diana} alt="Diana" /></div>
-                  <div className="card-title">Diana Pitalenko</div>
-                  <div className="card-position">SEO Specialist</div>
-                </div>
-                <div className="command-card">
-                  <div className="card-image"><img src={Ilja} alt="Ilja" /></div>
-                  <div className="card-title">Ilya Stvolov</div>
-                  <div className="card-position">Java Backend Developer</div>
-                </div>
-                <div className="command-card">
-                  <div className="card-image"><img src={AnnaDev} alt="AnnaDev" /></div>
-                  <div className="card-title">Anna Novikova</div>
-                  <div className="card-position">Head of Business Development</div>
-                </div>
+                {isShown ?
+                 (   
+                  <>
+                  <div className="command-card fire_icon">
+                    <div className="card-image"><img src={Margo} alt="Margo" /></div>
+                    <div className="card-title">Margarita Sukhonosova</div>
+                    <div className="card-position">SEO Specialist</div>
+                    <span className="firehearth"></span>
+                  </div>
+                  <div className="command-card">
+                    <div className="card-image"><img src={Diana} alt="Diana" /></div>
+                    <div className="card-title">Diana Pitalenko</div>
+                    <div className="card-position">SEO Specialist</div>
+                  </div>
+                  <div className="command-card">
+                    <div className="card-image"><img src={Ilja} alt="Ilja" /></div>
+                    <div className="card-title">Ilya Stvolov</div>
+                    <div className="card-position">Java Backend Developer</div>
+                  </div>
+                  <div className="command-card power_icon">
+                    <div className="card-image"><img src={AnnaDev} alt="AnnaDev" /></div>
+                    <div className="card-title">Anna Novikova</div>
+                    <div className="card-position">Head of Business Development</div>
+                    <span className="power-icon"></span>
+                  </div>
+                  </>             
+               )
+                 : ''}
             </div>
-            <div className="our-command__button"><button className="button_black"><span className="plus"></span></button></div>
+            <div className="our-command__button"><button className="button_black not-found__button" onClick={toggleFIeldset}>{isShown ? 'Close' : 'See more'}<span class={isShown ? 'close' : 'more'}></span></button></div>
           </div>
         </div>
         <HeroBlack title="Why Should Specialists Work in Our Team?" description="Besides partnering with businesses, BPM Cloud is always ready to invite professional developers, QA engineers, designers, business analysts, managers and many other specialists ready to use their expertise in a profitable field." undertitle="We offer" dataContent={specialist}></HeroBlack>
