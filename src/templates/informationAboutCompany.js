@@ -295,7 +295,7 @@ const InformationAboutCompany = ({ location, data }) => {
                )
                  : ''}
             </div>
-            <div className="our-command__button"><button className="button_black not-found__button" onClick={toggleFIeldset}>{isShown ? 'Close' : 'See more'}<span class="label-icon_white label-icon_hover"></span></button></div>
+            <div className="our-command__button"><button className="button_black not-found__button" onClick={toggleFIeldset}>{isShown ? 'Close' : 'See more'}<span class={isShown ? 'close' : 'more'}></span></button></div>
           </div>
         </div>
         <HeroBlack title="Why Should Specialists Work in Our Team?" description="Besides partnering with businesses, BPM Cloud is always ready to invite professional developers, QA engineers, designers, business analysts, managers and many other specialists ready to use their expertise in a profitable field." undertitle="We offer" dataContent={specialist}></HeroBlack>
