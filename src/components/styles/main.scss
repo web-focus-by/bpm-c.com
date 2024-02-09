@@ -89,13 +89,16 @@ h1, h2, h3, h4 {
     margin: 0 auto;
     max-width: 86%;
   }
-  .containerForm, .black {
+  .containerForm {
     margin: 0 auto;
     max-width: 86%;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .container, .containerForm {
+    max-width: 90%;
+  }
   .index_title {
     margin-top: 120px;
   }

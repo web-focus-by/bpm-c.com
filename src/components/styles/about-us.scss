@@ -1370,21 +1370,7 @@
   }
 
   @media screen and (max-width: 530px) {
-    .about_title {
-        position: absolute;
-        margin-top: -127px;
-        width: 343px;
-      }
-    
-      .about_subtitle {
-        margin-top: 200px;
-      }
-    
-      .about_list {
-        margin-top: -175px;
-      }
-
-      .our-command {
+    .our-command {
         .our-command_title__wrap {
             display: flex;
             justify-content: space-between;
