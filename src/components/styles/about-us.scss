@@ -64,7 +64,7 @@
             }
         }
 
-        .cup_icon, .power_icon, .smile_icon, .fire_icon, .star_icon {
+        .cup_icon, .power_icon, .smile_icon, .fire_icon, .star_icon, .magic_icon {
             position: relative;
 
             .power-icon, .cup {
@@ -83,6 +83,12 @@
                 position: absolute;
                 bottom: 27%;
                 left: 15%;
+            }
+
+            .magic {
+                position: absolute;
+                bottom: 27%;
+                left: 20%;
             }
 
         }
@@ -109,6 +115,19 @@
         width: 100%;
         justify-content: center;
         margin-top: 80px;
+
+        .button_black {
+            .plus {
+
+            }
+        }
+        .button_black:hover {
+            border: 1px solid #1A1B1F;
+            .plus {
+
+            }
+        }
+
     }
 }
 
@@ -1427,7 +1446,7 @@
                 }
             }
 
-            .cup_icon, .power_icon, .smile_icon, .fire_icon, .star_icon {
+            .cup_icon, .power_icon, .smile_icon, .fire_icon, .star_icon, .magic_icon {
                 position: relative;
     
                 .power-icon, .cup {
@@ -1447,7 +1466,12 @@
                     bottom: 32%;
                     left: 15%;
                 }
-    
+
+                .magic {
+                    position: absolute;
+                    bottom: 32%;
+                    left: 20%;
+                }
             }
     
             .command-card:nth-child(2), .command-card:nth-child(1) {

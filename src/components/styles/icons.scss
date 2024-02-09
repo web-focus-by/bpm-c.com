@@ -748,6 +748,13 @@
   background: url(../../images/star-2.svg) no-repeat;
 }
 
+.magic {
+    display: inline-block;
+    width: 47px;
+    height: 47px;
+    background: url(../../images/magic.svg) no-repeat;
+}
+
 @media screen and (max-width: 1920px) {
   .phone_icon {
     background-size: 47px 47px;
@@ -986,8 +993,15 @@
     height: 34px;
     background: url(../../images/star-2.svg) no-repeat;
     background-size: 34px 34px;
-
   }
+
+  .magic {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: url(../../images/magic.svg) no-repeat;
+    background-size: 34px 34px;
+}
 }
 
 @media screen and (max-width: 768px) {
