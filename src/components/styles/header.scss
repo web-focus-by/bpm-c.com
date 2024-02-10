@@ -243,7 +243,7 @@
         .subsequentItem {
           height: 0;
           overflow: hidden;
-          transition: height 1s;
+          transition: height .5s;
           ul {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -687,6 +687,7 @@
               li.active-mobil>a {
                     background-color: #935cff; 
                     color: #fff;
+                    transition: all .4s;
                     span {
                       svg {
                         transform: rotate(180deg);
@@ -700,7 +701,7 @@
             .subsequentItem {
               height: 0;
               overflow: hidden;
-              transition: height 5s;
+              transition: height .5s;
               ul {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -1116,7 +1117,7 @@
         .subsequentItem {
           height: 0;
           overflow: hidden;
-          transition: height 5s;
+          transition: height .5s;
           ul {
             display: grid;
             grid-template-columns: 1fr;
