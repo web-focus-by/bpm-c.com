@@ -1,0 +1,104 @@
+.leaders_choice {
+    &__block_title {
+      color: #5c5c5c;
+      margin-bottom: 16px;
+    }
+  
+    &__block {
+      color: #5c5c5c;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 60px;
+  
+      .leaders_choice_block_list {
+        ul {
+          margin: 0;
+          padding: 0;
+  
+          li {
+            display: flex;
+            list-style: none;
+            margin-bottom: 14px;
+  
+            &:last-child {
+              margin-bottom: 0;
+            }
+  
+            &::before {
+              display: block;
+              content: url("../../images/list_line.svg");
+              position: relative;
+              bottom: 5px;
+              padding-right: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .leaders_choice_tagline {
+    margin: 271px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  
+    &__block {
+      display: flex;
+      margin-bottom: 8px;
+  
+      .leaders_choice_tagline_block_title {
+        font-weight: 500;
+        font-size: 62px;
+        line-height: 105%;
+        color: #1a1b1f;
+      }
+  
+      .leaders_choice_tagline_block_gif {
+        display: flex;
+        .circle-video, video {
+          width: 74px;
+          height: 74px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-left: -20px;
+  
+          &:first-child {
+            margin-left: 26px;
+          }
+        }
+      }
+    }
+  
+    &__butn {
+      margin-right: 20px;
+      button {
+        padding: 22px 40px;
+        font-family: "Acrom", sans-serif;
+        font-weight: 500;
+  
+        span {
+          margin-left: 14px;
+        }
+      }
+      .button_white {
+        padding: 22px 40px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        color: #1a1b1f;
+        font-family: "Acrom", sans-serif;
+        transition: all 0.3s linear;
+        span {
+          margin-left: 14px;
+        }
+        :hover {
+          color: #ffffff;
+          background: #1a1b1f;
+          transition: all 0.3s linear;
+          cursor: pointer;
+        }
+      }
+    }
+}
