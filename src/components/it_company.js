@@ -35,24 +35,28 @@ const values = [
 ]
 
 const anim = (elem, idShow, wrap) => {
-  // const parentElem = document.getElementById(elem);;
-  // const showElem = document.getElementById(idShow);
-  // const wrapper = document.getElementById(wrap);
+  const parentElem = document.getElementById(elem);;
+  const showElem = document.getElementById(idShow);
+  const wrapper = [...document.getElementsByClassName(wrap)];
 
-  // wrapper.classList.add('vis');
+  wrapper.forEach(el => {
+    el.classList.add('vis')
+  })
 
-  // setTimeout(() => {
-  //   showElem.classList.add('show');
-  //   setTimeout(() => {
-  //     parentElem.classList.remove('type');
-  //   }, 4500)
-  // }, 400);
+  setTimeout(() => {
+    showElem.classList.add('show');
+    setTimeout(() => {
+      parentElem.classList.remove('type');
+    }, 4500)
+  }, 400);
 
-  // setTimeout(function () {
-  //   showElem.classList.remove('show');
-  //   wrapper.classList.remove('vis');
-  //   parentElem.classList.add('type');
-  // }, 5000);
+  setTimeout(function () {
+    showElem.classList.remove('show');
+    wrapper.forEach(el => {
+      el.classList.remove('vis')
+    })
+    parentElem.classList.add('type');
+  }, 5000);
 }
 
 const ITCompany = () => (
@@ -77,13 +81,12 @@ const ITCompany = () => (
               <img src={about} alt="about_bpm" />
               <div className="laptop_circle"><span className="laptop"></span></div>
             </div>
-            <div className="value_item it_company-item people" id="people">
+            <div className="value_item it_company-item people" id="people" >
               <span className="gif" id="gif-1"></span>
               <span className="gif" id="gif-2"></span>
               <span className="gif" id="gif-3"></span>
               <span className="gif" id="gif-4"></span>
               <span className="gif" id="gif-5"></span>
-              <span className="gif" id="gif-6"></span>
               <div className="values_kanu">
                 <div className="circle-video">
                   <video src={Kanu} type="video/mp4" id="circle" autoPlay muted loop>

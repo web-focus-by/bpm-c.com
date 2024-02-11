@@ -1,27 +1,20 @@
-@keyframes typing {
-  from { width: 0 }
-  to {
-    width: 100%;
-    border-right: none;
-}
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
-}
-
 @keyframes cursor {
     0% {
-      border-color: white;
-    }
-  
-    50% {
       border-color: transparent;
     }
   
-    100% {
+    50% {
       border-color: white;
+    }
+  
+    100% {
+      border-color: transparent;
+    }
+  }
+  
+  @keyframes printed_text {
+    from {
+      width: 0;
     }
   }
 
@@ -227,47 +220,62 @@
             .gif:first-child {
                 opacity: 0;
                 display: inline-block;
-                width: 70px;
-                height: 70px;
+                width: 120px;
+                height: 120px;
                 position: absolute;
                 background: url(../../images/gif-1.gif) no-repeat;
+                background-size: 120px 120px;
                 transition: all 0.5s;
+                left: 10%;
+                top: 40%;
             }
             .gif:nth-child(2) {
                 opacity: 0;
                 display: inline-block;
-                width: 70px;
-                height: 70px;
+                width: 120px;
+                height: 120px;
                 position: absolute;
                 background: url(../../images/gif-2.gif) no-repeat;
+                background-size: 120px 120px;
                 transition: all 0.5s;
+                left: 25%;
+                top: 28%;
             }
             .gif:nth-child(3) {
                 opacity: 0;
                 display: inline-block;
-                width: 70px;
-                height: 70px;
+                width: 120px;
+                height: 120px;
                 position: absolute;
                 background: url(../../images/gif-3.gif) no-repeat;
+                background-size: 120px 120px;
                 transition: all 0.5s;
+                left: 45%;
+                top: 22%;
             }
             .gif:nth-child(4) {
                 opacity: 0;
                 display: inline-block;
-                width: 70px;
-                height: 70px;
+                width: 120px;
+                height: 120px;
                 position: absolute;
                 background: url(../../images/gif-4.gif) no-repeat;
+                background-size: 120px 120px;
                 transition: all 0.5s;
+                left: 60%;
+                top: 32%;
             }
             .gif:nth-child(5) {
                 opacity: 0;
                 display: inline-block;
-                width: 70px;
-                height: 70px;
+                width: 120px;
+                height: 120px;
                 position: absolute;
                 background: url(../../images/gif-5.gif) no-repeat;
+                background-size: 120px 120px;
                 transition: all 0.5s;
+                left: 70%;
+                top: 42%;
             }
 
             .gif.vis {
@@ -296,10 +304,11 @@
 
 
                     p {
-                        margin: 0;
                         width: 0;
-                        overflow: hidden; /* Ensures the content is not revealed until the animation */
-                        white-space: nowrap; /* Keeps the content on a single line */
+                        margin: 0;
+                        white-space: nowrap; /* не переносить текст на другую строку */
+                        overflow: hidden; /* скрываем переполнение контентом */
+                        border-right: 3px solid transparent; /* рисуем курсор */
                     }
 
                     .vio {
@@ -330,31 +339,30 @@
 
                 .code.type {
                     p {
-                        animation:
-                        typing 0.5s steps(30, end);
-                        animation: cursor 0.75s step-end infinite;
-                        animation-delay: 0s;
+                        width: 29ch;
+                        animation: cursor 0.75s step-end infinite, printed_text 3s steps(29);
                         animation-fill-mode: both;
+                        border-color: transparent;
                     }
 
                     p:nth-child(2) {
-                        animation-delay: 4s;
+                        animation-delay: 2s;
                     }
                     p:nth-child(3) {
-                        animation-delay: 6s;
+                        animation-delay: 4s;
                     }
                     p:nth-child(4) {
-                        animation-delay: 9s;
+                        animation-delay: 6s;
                     }
                     p:nth-child(5) {
-                        animation-delay: 12s;
+                        animation-delay: 8s;
                     }
                     p:nth-child(6) {
-                        animation-delay: 13s;
+                        animation-delay: 10s;
                     }
                     p:nth-child(7) {
                         animation-duration: 1s;
-                        animation-delay: 13.5s;
+                        animation-delay: 12s;
                     }
                 }
 
