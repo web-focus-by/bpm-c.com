@@ -68,30 +68,6 @@
     }
   }
 
-  .portfolio {
-    &__products {
-      .portfolio_products_block {
-        .portfolio_products_block_title {
-          font-size: calc(
-            22px + (30 - 22) * ((100vw - 1366px) / (1920 - 1366))
-          );
-        }
-
-        .portfolio_products_block_pic {
-          margin-bottom: calc(
-            17px + (24 - 17) * ((100vw - 1366px) / (1920 - 1366))
-          );
-        }
-
-        .portfolio_products_block_list {
-          margin-bottom: calc(
-            17px + (24 - 17) * ((100vw - 1366px) / (1920 - 1366))
-          );
-        }
-      }
-    }
-  }
-
   .button_black {
     border: 1px solid #fff;
     border-radius: calc(57px + (80 - 57) * ((100vw - 1366px) / (1920 - 1366)));

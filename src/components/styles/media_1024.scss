@@ -41,28 +41,6 @@
     }
   }
 
-  .portfolio {
-    &__products {
-      grid-column-gap: 2%;
-      grid-row-gap: 30px;
-
-      .portfolio_products_block {
-        .portfolio_products_block_pic {
-          margin-bottom: 11px;
-        }
-
-        .portfolio_products_block_list {
-          margin-bottom: 17px;
-          ul {
-            li {
-              margin-right: 14px;
-            }
-          }
-        }
-      }
-    }
-  }
-
   .technologies {
     &__list {
       margin-left: -33px;
@@ -304,8 +282,8 @@
 
       .projects_process_list_item {
         //left: calc(79.5px + (130.5 - 79.5) * ((100vw - 768px) / (1024 - 768)));
-        left: 91%;
-        margin-top: calc(12px + (0 - 12) * ((100vw - 768px) / (1024 - 768)));
+        left: 82%;
+        margin-top: 5px;
         padding: 0 calc(50px + (36 - 50) * ((100vw - 768px) / (1024 - 768)));
 
         p {
@@ -370,7 +348,7 @@
       height: max-content;
     }
   }
-  
+
   .black_bg {
     .advantages__subtitle {
       margin-bottom: 30px;

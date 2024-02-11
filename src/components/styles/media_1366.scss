@@ -80,36 +80,6 @@
     margin-bottom: 28px;
   }
 
-  .portfolio {
-    &__products {
-      .portfolio_products_block {
-        .portfolio_products_block_title {
-          font-size: calc(
-            22px + (30 - 22) * ((100vw - 1366px) / (1920 - 1366))
-          );
-        }
-
-        .portfolio_products_block_pic {
-          width: 519px;
-          height: 277px;
-          margin-bottom: calc(
-            17px + (24 - 17) * ((100vw - 1366px) / (1920 - 1366))
-          );
-
-          &__content {
-            background-size: 519px 277px;
-          }
-        }
-
-        .portfolio_products_block_list {
-          margin-bottom: calc(
-            17px + (24 - 17) * ((100vw - 1366px) / (1920 - 1366))
-          );
-        }
-      }
-    }
-  }
-
   .swiper {
     .swiper-slide {
       width: 250px;
