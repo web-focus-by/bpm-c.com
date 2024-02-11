@@ -434,6 +434,10 @@
 
   .reviews {
     &__info {
+      margin: 0;
+      .container {
+        margin: 0;
+      }
       .reviews_info_block {
         border-radius: 20px;
         color: #1a1b1f;

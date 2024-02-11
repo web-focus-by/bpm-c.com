@@ -38,12 +38,6 @@
   .margin_bottom_60 {
     margin-bottom: 60px;
   }
-  .container.swiper_container {
-    padding: 0;
-    .view_title {
-      padding: 0 16px;
-    }
-  }
 
   .phone_butn {
     padding-right: 40px;
@@ -630,6 +624,7 @@
 
   .reviews {
     &__info {
+      width: 100%;
       .reviews_info_block {
         border-radius: 20px;
         color: #1a1b1f;
