@@ -417,7 +417,7 @@
     }
 
     .cards-list.it_company-list {
-        column-gap: 20px;
+        column-gap: 1px;
     }
 }
 
@@ -522,9 +522,15 @@
                 }
 
                 .value-item .it_company-item {
-                    margin-top: 23px;
-                    margin-bottom: 23px;
-                    padding-right: 22px;
+                    border-bottom: 1px solid #F0EFF1;
+                    padding-left: 10px;
+                    padding-right: 30px;
+                    padding-bottom: 0;
+        
+                    .item__info-number {
+                        padding-top: 30px;
+                        border-top: 1px solid #F0EFF1;
+                    }
 
                     .item__info-content {
                         max-width: 357px;
@@ -536,17 +542,39 @@
                         line-height: 150%;
                     }
                 }
-
+                .value-item.it_company-item:nth-child(1) {
+                    border-bottom: none;
+                    margin-bottom: 30px;
+                }
+        
+                .value-item.it_company-item:nth-child(2) {
+                    border-bottom: none;
+                    margin-bottom: 30px;
+                }
+        
                 .value-item.it_company-item:nth-child(3) {
                     border-left: 1px solid #F0EFF1;
+                    padding-left: 0;
+                    margin-bottom: 30px;
                 }
-
+        
                 .value-item.it_company-item:nth-child(4) {
-                    border-right: none;
-
                     .item__info-content {
                         max-width: 432px;
                     }
+                }
+        
+                .value-item.it_company-item:nth-child(5) {
+                    border-bottom: none;
+                    .item__info-content {
+                        border-bottom: 1px solid #F0EFF1;
+                        padding-bottom: 19%;
+                    }
+                }
+        
+                .value-item.it_company-item:nth-child(6) {
+                    padding-left: 0;
+                    margin-right: 30px;
                 }
 
                 .value_item.it_company-item.bpm {
@@ -569,8 +597,9 @@
                 }
 
                 .value_item.it_company-item.people {
-                    margin-top: 30px;
-                    padding-right: 10px;
+                    border-right: 1px solid #F0EFF1;
+                    position: relative;
+                    padding-right: 30px;
 
                     .values_kanu, .values_vlada {
                         display: flex;
@@ -683,10 +712,15 @@
     }
 
     .values__cards .cards-list .value-item.it_company-item {
-        height: 230px;
-        margin-top: 23px;
-        margin-bottom: 23px;
-        padding-right: 22px;
+        border-bottom: 1px solid #F0EFF1;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 0;
+
+        .item__info-number {
+            padding-top: 25px;
+            border-top: 1px solid #F0EFF1;
+        }
 
         .item__info-content {
             color:#5C5C5C;
@@ -698,25 +732,29 @@
         }
     }
 
-    .values__cards .cards-list .value_item.it_company-item.people {
-        margin-top: -33px;
+    .values__cards .cards-list .value_item.it_company-item.bpm {
+        max-height: 280px;
     }
 
     .values__cards .cards-list .value_item.it_company-item.bpm img {
             width: 249px;
             height: 249px;
             margin-top: 10px;
-            margin-left: 50px;
+            margin-left: 10px;
     }
 
     .values__cards .cards-list .value_item.it_company-item.bpm .laptop_circle {
         position: relative;
         top: -257px;
-        left: 52px;
+        left: 12px;
         background-color: #FFD771;
         border-radius: 100%;
         width:  64px;
         height: 64px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people {
+        padding-right: 10px;
     }
     .values__cards .cards-list .value_item.it_company-item.people .values_kanu .circle-video {
         width: 28px;
@@ -772,16 +810,43 @@
         color: #fff;
         padding: 14px;
     }
-    .values__cards .cards-list .value-item.it_company-item:nth-child(4) {
-        padding-right: 0;
-        max-width: 327px;
-        font-size: 12px;
-        margin-top: -33px;
-    }
-
+    .values__cards .cards-list .value-item.it_company-item .item__info-number {
+                        padding-top: 25px;
+                        border-top: 1px solid #F0EFF1;
+                    }
+    .values__cards .cards-list .value-item.it_company-item:nth-child(1) {
+                    border-bottom: none;
+                    margin-bottom: 25px;
+                }
+        
+    .values__cards .cards-list .value-item.it_company-item:nth-child(2) {
+                    border-bottom: none;
+                    margin-bottom: 25px;
+                }
+        
     .values__cards .cards-list .value-item.it_company-item:nth-child(3) {
-        margin-top: -33px;
+                    border-left: 1px solid #F0EFF1;
+                    padding-left: 0;
+                    margin-bottom: 25px;
+                }
+        
+    .values__cards .cards-list .value_item.it_company-item.people {
+        max-height: 280px;
     }
+    .values__cards .cards-list .value-item.it_company-item:nth-child(5) {
+                    border-bottom: none;
+                    max-height: 280px;
+                    .item__info-content {
+                        border-bottom: 1px solid #F0EFF1;
+                        padding-bottom: 26%;
+                    }
+                }
+        
+    .values__cards .cards-list  .value-item.it_company-item:nth-child(6) {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    max-height: 280px;
+                }
 
     .values__cards .cards-list .value-item .item__info-number {
         font-size: 21px;
