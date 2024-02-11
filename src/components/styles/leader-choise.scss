@@ -1,10 +1,10 @@
 .leaders_choice {
-    &__block_title {
+    .leaders_choice__block_title {
       color: #5c5c5c;
       margin-bottom: 16px;
     }
   
-    &__block {
+    .leaders_choice__block {
       color: #5c5c5c;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -44,9 +44,9 @@
     align-items: center;
     position: relative;
   
-    &__block {
+    .leaders_choice_tagline__block {
       display: flex;
-      margin-bottom: 8px;
+      margin-bottom: 59px;
   
       .leaders_choice_tagline_block_title {
         font-weight: 500;
@@ -71,7 +71,7 @@
       }
     }
   
-    &__butn {
+    .leaders_choice_tagline__butn {
       margin-right: 20px;
       button {
         padding: 22px 40px;

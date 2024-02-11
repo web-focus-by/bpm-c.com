@@ -96,7 +96,7 @@
         grid-template-columns: 1fr 1fr 1fr;
 
         .value-item {
-            border-right: 1px solid #E1DAF4;
+            border-right: 1px solid #F0EFF1;
             padding-right: 21px;
             padding-left: 10px;
 
@@ -164,7 +164,7 @@
         }
 
         .value-item.it_company-item:nth-child(3) {
-            border-left: 1px solid #E1DAF4;
+            border-left: 1px solid #F0EFF1;
             order: 5;
         }
 
@@ -389,7 +389,7 @@
         .value-line {
             width: 480px;
             height: 1px;
-            background-color: #E1DAF4;
+            background-color: #F0EFF1;
         }
     }
 
@@ -410,7 +410,7 @@
         .value-line {
             min-width: 480px;
             height: 1px;
-            background-color: #E1DAF4;
+            background-color: #F0EFF1;
         }
     }
 }
@@ -470,7 +470,7 @@
         .values__cards {
             .cards-list {
                 .value-item {
-                    border-right: 1px solid #E1DAF4;
+                    border-right: 1px solid #F0EFF1;
                     padding-right: 16px;
                     padding-left: 10px;
 
@@ -533,7 +533,7 @@
                 }
 
                 .value-item.it_company-item:nth-child(3) {
-                    border-left: 1px solid #E1DAF4;
+                    border-left: 1px solid #F0EFF1;
                     order: 5;
                 }
 
@@ -686,7 +686,7 @@
             .value-line {
                 width: 480px;
                 height: 1px;
-                background-color: #E1DAF4;
+                background-color: #F0EFF1;
             }
         }
 
@@ -703,7 +703,7 @@
             .value-line {
                 min-width: 480px;
                 height: 1px;
-                background-color: #E1DAF4;
+                background-color: #F0EFF1;
             }
         }
     }
@@ -928,7 +928,7 @@
 
                 .value-item {
                     border-right: none;
-                    border-bottom: 1px solid #E1DAF4;
+                    border-bottom: 1px solid #F0EFF1;
                     padding-right: 16px;
                     padding-left: 7px;
                     margin-bottom: 25px;
@@ -961,7 +961,7 @@
                 }
 
                 .value-item.length {
-                    border-right: 1px solid #E1DAF4;
+                    border-right: 1px solid #F0EFF1;
                     border-bottom: none;
                     padding-left: 10px;
                     margin-bottom: 0;
@@ -1068,7 +1068,7 @@
 
                 .value-item {
                     border-right: none;
-                    border-bottom: 1px solid #E1DAF4;
+                    border-bottom: 1px solid #F0EFF1;
                     padding-right: 16px;
                     padding-left: 7px;
                     margin-bottom: 25px;
@@ -1101,7 +1101,7 @@
                 }
 
                 .value-item.length {
-                    border-right: 1px solid #E1DAF4;
+                    border-right: 1px solid #F0EFF1;
                     border-bottom: none;
                     padding-left: 10px;
                     margin-bottom: 0;
@@ -1170,7 +1170,7 @@
     }
 
     .values__cards .cards-list .value_item.it_company-item.bpm {
-        border-right: 1px solid #E1DAF4;
+        border-right: 1px solid #F0EFF1;
         margin-top: 25px;
         padding-right: 15px;
         margin-bottom: 50px;
@@ -1349,7 +1349,7 @@
 
                 .value-item {
                     border-right: none;
-                    border-bottom: 1px solid #E1DAF4;
+                    border-bottom: 1px solid #F0EFF1;
                     padding-right: 16px;
                     padding-left: 7px;
                     margin-bottom: 25px;
@@ -1405,7 +1405,7 @@
         padding-left: 0 !important;
         margin-top: 25px !important;
         padding-bottom: 25px !important;
-        border-bottom: 1px solid #E1DAF4;
+        border-bottom: 1px solid #F0EFF1;
     }
 
     .values .values__cards .cards-list.length .value-item.length:first-child {
@@ -1418,7 +1418,7 @@
         margin-bottom: 25px;
         padding-right: 0;
         border-right: none;
-        border-top: 1px solid #E1DAF4;
+        border-top: 1px solid #F0EFF1;
 
         .item__info-content {
             max-width: 331px;
@@ -1439,7 +1439,7 @@
 
     .values__cards .cards-list .value_item.it_company-item.bpm {
         border-right: none;
-        border-top: 1px solid #E1DAF4;
+        border-top: 1px solid #F0EFF1;
         margin-top: 0;
         padding-top: 25px;
         margin-bottom: 25px;
@@ -1579,7 +1579,7 @@
 
         .item__info-content {
             padding-bottom: 25px;
-            border-bottom: 1px solid #E1DAF4;
+            border-bottom: 1px solid #F0EFF1;
         }
     }
 

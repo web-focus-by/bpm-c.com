@@ -110,15 +110,6 @@
     }
   }
 
-  .blogs {
-    .blogs_products_block_title {
-      font-size: 22px;
-    }
-    .blogs_topics_block_title {
-      font-size: 22px;
-    }
-  }
-
   .swiper {
     .swiper-slide {
       width: 250px;
@@ -370,43 +361,6 @@
             content: url("../../images/gradient_blue1366.svg");
             position: relative;
             right: 7%;
-          }
-        }
-      }
-    }
-  }
-
-  .blog {
-    &__products {
-      column-gap: 17px;
-
-      .blog_products_block {
-        .blog_products_block_title {
-          font-size: 17px;
-        }
-
-        .blog_products_block_list {
-          margin: 19px 0 17px 0;
-
-          .blog_products_block_list_date {
-            font-size: 9px;
-          }
-
-          .hash_list_block {
-            &:first-child {
-              margin-right: 7px;
-            }
-          }
-        }
-
-        .hash {
-          &__list {
-            .hash_list_block {
-              a {
-                padding: 6px 10px;
-                font-size: 10px;
-              }
-            }
           }
         }
       }
@@ -733,7 +687,7 @@
       }
     }
   }
-  
+
   .services {
     &__list {
       grid-column-gap: 20px;
@@ -752,80 +706,6 @@
           // background-position: 95% 45px;
           background-size: cover;
           background-position-x: 100%;
-        }
-      }
-    }
-  }
-
-  .blog {
-    &__products {
-      display: flex;
-      justify-content: space-between;
-      column-gap: 14px;
-  
-      .blog_products_block {
-        .blog_products_block_pic {
-          width: 252px;
-          height: 241px;
-          border-radius: 14px;
-          overflow: hidden;
-          img {
-            object-fit: cover;
-            width: 100%;
-            height: 241px;
-            border-radius: 14px;
-          }
-        }
-  
-        .blog_products_block_pic:hover {
-            cursor: url(../../images/cursor-pointer.svg), pointer;
-            img {
-              transition: 1s;
-              transform: scale(1.1);
-            }
-          }
-  
-        .blog_products_block_list {
-          margin: 27px 0 24px 0;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-  
-          .hash_list_block {
-            cursor: pointer;
-            &:first-child {
-              margin-right: 10px;
-            }
-          }
-  
-          .blog_products_block_list_date {
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 100%;
-          }
-        }
-  
-        .blog_products_block_title {
-          a {
-            color: #935CFF;
-          }
-          font-size: 24px;
-          font-weight: 500;
-        }
-      }
-  
-  
-      .blog_products_block:hover {
-        .blog_products_block_list{
-          ul {
-            li {
-              a{
-                background-color:#1A1B1F;
-                color: #ffffff;
-                border-radius: 80px;
-              }
-            }
-          }
         }
       }
     }

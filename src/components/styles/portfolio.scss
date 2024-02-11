@@ -1,6 +1,6 @@
 
 .portfolio {
-    &__products {
+    .portfolio__products {
       display: grid;
       grid-template-columns: 1fr 1fr;
       justify-content: space-between;
@@ -11,7 +11,7 @@
         .portfolio_products_block_pic {
           overflow: hidden;
           border-radius: 25px;
-          &__content {
+          .portfolio_products_block_pic__content {
             width: 100%;
             height: 390px;
             background-repeat: no-repeat;
@@ -20,7 +20,7 @@
             transition: 1s;
           }
   
-          &__content:hover {
+          .portfolio_products_block_pic__content:hover {
             cursor: url(../../images/cursor-pointer.svg), pointer;
             transition: 1s;
             transform: scale(1.1);

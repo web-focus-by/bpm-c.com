@@ -164,7 +164,7 @@ const buisChoose = [
             dataContent={facts}
           ></HeroFacts>
           <HeroLine></HeroLine>
-          <ServicesItem></ServicesItem>
+          {/* <ServicesItem></ServicesItem> */}
           <Technologies></Technologies>
           <ProjectsProcess></ProjectsProcess>
           <ServicesIndex title="Industries We Serve"></ServicesIndex>
