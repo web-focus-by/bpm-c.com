@@ -1,27 +1,20 @@
-@keyframes typing {
-  from { width: 0 }
-  to {
-    width: 100%;
-    border-right: none;
-}
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
-}
-
 @keyframes cursor {
     0% {
-      border-color: white;
-    }
-  
-    50% {
       border-color: transparent;
     }
   
-    100% {
+    50% {
       border-color: white;
+    }
+  
+    100% {
+      border-color: transparent;
+    }
+  }
+  
+  @keyframes printed_text {
+    from {
+      width: 0;
     }
   }
 
@@ -98,6 +91,7 @@
         .value-item {
             border-right: 1px solid #F0EFF1;
             padding-right: 21px;
+            padding-bottom: 30px;
             padding-left: 10px;
 
             .item__info-number {
@@ -142,9 +136,15 @@
         }
 
         .value-item.it_company-item {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            padding-right: 29px;
+            border-bottom: 1px solid #F0EFF1;
+            padding-left: 10px;
+            padding-right: 30px;
+            padding-bottom: 0;
+
+            .item__info-number {
+                padding-top: 30px;
+                border-top: 1px solid #F0EFF1;
+            }
 
              .item__info-content {
                 max-width: 460px;
@@ -157,23 +157,46 @@
             }
         }
 
+        .value-item.it_company-item:nth-child(1) {
+            border-bottom: none;
+            margin-bottom: 30px;
+        }
+
+        .value-item.it_company-item:nth-child(2) {
+            border-bottom: none;
+            margin-bottom: 30px;
+        }
+
         .value-item.it_company-item:nth-child(3) {
             border-left: 1px solid #F0EFF1;
+            padding-left: 0;
+            margin-bottom: 30px;
         }
 
         .value-item.it_company-item:nth-child(4) {
-            border-right: none;
-
             .item__info-content {
                 max-width: 432px;
             }
         }
 
+        .value-item.it_company-item:nth-child(5) {
+            border-bottom: none;
+            .item__info-content {
+                border-bottom: 1px solid #F0EFF1;
+                padding-bottom: 19%;
+            }
+        }
+
+        .value-item.it_company-item:nth-child(6) {
+            margin-right: 30px;
+        }
+
+
         .value_item.it_company-item.bpm {
             img {
                 width: 350px;
                 height: 350px;
-                margin-top: 10px;
+                margin-top: 30px;
                 margin-left: 70px;
             }
 
@@ -189,54 +212,69 @@
         }
 
         .value_item.it_company-item.people {
+            border-right: 1px solid #F0EFF1;
             position: relative;
-            margin-top: 30px;
-            padding-right: 10px;
+            padding-right: 30px;
 
             .gif:first-child {
                 opacity: 0;
                 display: inline-block;
-                width: 70px;
-                height: 70px;
+                width: 120px;
+                height: 120px;
                 position: absolute;
                 background: url(../../images/gif-1.gif) no-repeat;
+                background-size: 120px 120px;
                 transition: all 0.5s;
+                left: 10%;
+                top: 40%;
             }
             .gif:nth-child(2) {
                 opacity: 0;
                 display: inline-block;
-                width: 70px;
-                height: 70px;
+                width: 120px;
+                height: 120px;
                 position: absolute;
                 background: url(../../images/gif-2.gif) no-repeat;
+                background-size: 120px 120px;
                 transition: all 0.5s;
+                left: 25%;
+                top: 28%;
             }
             .gif:nth-child(3) {
                 opacity: 0;
                 display: inline-block;
-                width: 70px;
-                height: 70px;
+                width: 120px;
+                height: 120px;
                 position: absolute;
                 background: url(../../images/gif-3.gif) no-repeat;
+                background-size: 120px 120px;
                 transition: all 0.5s;
+                left: 45%;
+                top: 22%;
             }
             .gif:nth-child(4) {
                 opacity: 0;
                 display: inline-block;
-                width: 70px;
-                height: 70px;
+                width: 120px;
+                height: 120px;
                 position: absolute;
                 background: url(../../images/gif-4.gif) no-repeat;
+                background-size: 120px 120px;
                 transition: all 0.5s;
+                left: 60%;
+                top: 32%;
             }
             .gif:nth-child(5) {
                 opacity: 0;
                 display: inline-block;
-                width: 70px;
-                height: 70px;
+                width: 120px;
+                height: 120px;
                 position: absolute;
                 background: url(../../images/gif-5.gif) no-repeat;
+                background-size: 120px 120px;
                 transition: all 0.5s;
+                left: 70%;
+                top: 42%;
             }
 
             .gif.vis {
@@ -244,9 +282,11 @@
             }
 
             .values_kanu, .values_vlada {
+                border-top: 1px solid #F0EFF1;
+                padding-top: 30px;
                 display: flex;
                 gap: 10px;
-                margin-bottom: 51px;
+                padding-bottom: 51px;
                 .circle-video, img,  video{
                     width: 50px;
                     height: 50px;
@@ -263,10 +303,11 @@
 
 
                     p {
-                        margin: 0;
                         width: 0;
-                        overflow: hidden; /* Ensures the content is not revealed until the animation */
-                        white-space: nowrap; /* Keeps the content on a single line */
+                        margin: 0;
+                        white-space: nowrap; /* не переносить текст на другую строку */
+                        overflow: hidden; /* скрываем переполнение контентом */
+                        border-right: 3px solid transparent; /* рисуем курсор */
                     }
 
                     .vio {
@@ -297,31 +338,30 @@
 
                 .code.type {
                     p {
-                        animation:
-                        typing 0.5s steps(30, end);
-                        animation: cursor 0.75s step-end infinite;
-                        animation-delay: 0s;
+                        width: 29ch;
+                        animation: cursor 0.75s step-end infinite, printed_text 3s steps(29);
                         animation-fill-mode: both;
+                        border-color: transparent;
                     }
 
                     p:nth-child(2) {
-                        animation-delay: 4s;
+                        animation-delay: 2s;
                     }
                     p:nth-child(3) {
-                        animation-delay: 6s;
+                        animation-delay: 4s;
                     }
                     p:nth-child(4) {
-                        animation-delay: 9s;
+                        animation-delay: 6s;
                     }
                     p:nth-child(5) {
-                        animation-delay: 12s;
+                        animation-delay: 8s;
                     }
                     p:nth-child(6) {
-                        animation-delay: 13s;
+                        animation-delay: 10s;
                     }
                     p:nth-child(7) {
                         animation-duration: 1s;
-                        animation-delay: 13.5s;
+                        animation-delay: 12s;
                     }
                 }
 
@@ -338,8 +378,10 @@
                 transition: all 0.5s ease-in-out;
                 position: relative;
                 top: 64px;
-                margin-bottom: 0;
+                padding-bottom: 0;
                 margin-left: 184px;
+                border-top: 0;
+                padding-top: 0;
             }
 
             .values_vlada.show {
@@ -373,37 +415,8 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-    .value-lines{
-        width: 980px;
-        display: flex;
-        gap: 20px;
-
-        .value-line {
-            width: 480px;
-            height: 1px;
-            background-color: #F0EFF1;
-        }
-    }
-
-    .value-lines.under{
-        width: 980px;
-        margin-left: 500px;
-    }
-
-    .value-lines.under.tablet{
-        display: none;
-    }
-
-    .value-lines.length {
-        width: 100%;
-        position: relative;
-        top: -426px;
-
-        .value-line {
-            min-width: 480px;
-            height: 1px;
-            background-color: #F0EFF1;
-        }
+    .cards-list.it_company-list {
+        column-gap: 1px;
     }
 }
 
@@ -508,9 +521,15 @@
                 }
 
                 .value-item .it_company-item {
-                    margin-top: 23px;
-                    margin-bottom: 23px;
-                    padding-right: 22px;
+                    border-bottom: 1px solid #F0EFF1;
+                    padding-left: 10px;
+                    padding-right: 30px;
+                    padding-bottom: 0;
+        
+                    .item__info-number {
+                        padding-top: 30px;
+                        border-top: 1px solid #F0EFF1;
+                    }
 
                     .item__info-content {
                         max-width: 357px;
@@ -522,17 +541,39 @@
                         line-height: 150%;
                     }
                 }
-
+                .value-item.it_company-item:nth-child(1) {
+                    border-bottom: none;
+                    margin-bottom: 30px;
+                }
+        
+                .value-item.it_company-item:nth-child(2) {
+                    border-bottom: none;
+                    margin-bottom: 30px;
+                }
+        
                 .value-item.it_company-item:nth-child(3) {
                     border-left: 1px solid #F0EFF1;
+                    padding-left: 0;
+                    margin-bottom: 30px;
                 }
-
+        
                 .value-item.it_company-item:nth-child(4) {
-                    border-right: none;
-
                     .item__info-content {
                         max-width: 432px;
                     }
+                }
+        
+                .value-item.it_company-item:nth-child(5) {
+                    border-bottom: none;
+                    .item__info-content {
+                        border-bottom: 1px solid #F0EFF1;
+                        padding-bottom: 19%;
+                    }
+                }
+        
+                .value-item.it_company-item:nth-child(6) {
+                    padding-left: 0;
+                    margin-right: 30px;
                 }
 
                 .value_item.it_company-item.bpm {
@@ -555,8 +596,9 @@
                 }
 
                 .value_item.it_company-item.people {
-                    margin-top: 30px;
-                    padding-right: 10px;
+                    border-right: 1px solid #F0EFF1;
+                    position: relative;
+                    padding-right: 30px;
 
                     .values_kanu, .values_vlada {
                         display: flex;
@@ -666,42 +708,18 @@
 
             }
         }
-
-        .value-lines{
-            width: 980px;
-            display: flex;
-            gap: 20px;
-
-            .value-line {
-                width: 480px;
-                height: 1px;
-                background-color: #F0EFF1;
-            }
-        }
-
-        .value-lines.under{
-            width: 980px;
-            margin-left: 500px;
-        }
-
-        .value-lines.length {
-            width: 100%;
-            position: relative;
-            top: -426px;
-
-            .value-line {
-                min-width: 480px;
-                height: 1px;
-                background-color: #F0EFF1;
-            }
-        }
     }
 
     .values__cards .cards-list .value-item.it_company-item {
-        height: 230px;
-        margin-top: 23px;
-        margin-bottom: 23px;
-        padding-right: 22px;
+        border-bottom: 1px solid #F0EFF1;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 0;
+
+        .item__info-number {
+            padding-top: 25px;
+            border-top: 1px solid #F0EFF1;
+        }
 
         .item__info-content {
             color:#5C5C5C;
@@ -713,43 +731,30 @@
         }
     }
 
-    .values__cards .cards-list .value_item.it_company-item.people {
-        margin-top: -33px;
+    .values__cards .cards-list .value_item.it_company-item.bpm {
+        max-height: 280px;
     }
 
     .values__cards .cards-list .value_item.it_company-item.bpm img {
             width: 249px;
             height: 249px;
             margin-top: 10px;
-            margin-left: 50px;
+            margin-left: 10px;
     }
 
     .values__cards .cards-list .value_item.it_company-item.bpm .laptop_circle {
         position: relative;
         top: -257px;
-        left: 52px;
+        left: 12px;
         background-color: #FFD771;
         border-radius: 100%;
         width:  64px;
         height: 64px;
     }
 
-    .values__cards .value-lines .value-line {
-        width: 340px;
+    .values__cards .cards-list .value_item.it_company-item.people {
+        padding-right: 10px;
     }
-
-    .values__cards .value-lines.length .value-line {
-        min-width: 340px;
-    }
-
-    .values__cards .value-lines.length {
-        top: -301px;
-    }
-
-    .values__cards .value-lines.under {
-        margin-left: 360px;
-    }
-
     .values__cards .cards-list .value_item.it_company-item.people .values_kanu .circle-video {
         width: 28px;
         height: 28px;
@@ -804,16 +809,43 @@
         color: #fff;
         padding: 14px;
     }
-    .values__cards .cards-list .value-item.it_company-item:nth-child(4) {
-        padding-right: 0;
-        max-width: 327px;
-        font-size: 12px;
-        margin-top: -33px;
-    }
-
+    .values__cards .cards-list .value-item.it_company-item .item__info-number {
+                        padding-top: 25px;
+                        border-top: 1px solid #F0EFF1;
+                    }
+    .values__cards .cards-list .value-item.it_company-item:nth-child(1) {
+                    border-bottom: none;
+                    margin-bottom: 25px;
+                }
+        
+    .values__cards .cards-list .value-item.it_company-item:nth-child(2) {
+                    border-bottom: none;
+                    margin-bottom: 25px;
+                }
+        
     .values__cards .cards-list .value-item.it_company-item:nth-child(3) {
-        margin-top: -33px;
+                    border-left: 1px solid #F0EFF1;
+                    padding-left: 0;
+                    margin-bottom: 25px;
+                }
+        
+    .values__cards .cards-list .value_item.it_company-item.people {
+        max-height: 280px;
     }
+    .values__cards .cards-list .value-item.it_company-item:nth-child(5) {
+                    border-bottom: none;
+                    max-height: 280px;
+                    .item__info-content {
+                        border-bottom: 1px solid #F0EFF1;
+                        padding-bottom: 26%;
+                    }
+                }
+        
+    .values__cards .cards-list  .value-item.it_company-item:nth-child(6) {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    max-height: 280px;
+                }
 
     .values__cards .cards-list .value-item .item__info-number {
         font-size: 21px;
@@ -850,6 +882,14 @@
                 font-size: 12.806px;
 
             }
+        }
+    }
+.values__cards .cards-list .value-item.it_company-item:nth-child(5) {
+        border-bottom: none;
+        max-height: 280px;
+        .item__info-content {
+            border-bottom: 1px solid #F0EFF1;
+            padding-bottom: 24%;
         }
     }
 }
@@ -994,9 +1034,130 @@
         }
     }
 
+    .values__cards .cards-list .value-item.it_company-item {
+
+        .item__info-content {
+            color:#5C5C5C;
+            font-family: 'Acrom';
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+        }
+    }
+
     .values__cards .cards-list.it_company-list {
         grid-template-columns: 1fr 1fr;
     }
+
+    .values__cards .cards-list .value-item.it_company-item .item__info-content {
+        font-size: 15px;
+    }
+    .values__cards .cards-list .value-item.it_company-item:nth-child(1) {
+        border-bottom: none;
+        margin-bottom: 0;
+        min-height: 349px;
+        max-height: 350px;
+    }
+
+.values__cards .cards-list .value-item.it_company-item:nth-child(2) {
+        border-bottom: none;
+        margin-bottom: 0;
+        border-right: none;
+    }
+
+.values__cards .cards-list .value-item.it_company-item:nth-child(3) {
+        border-left: 1px solid #F0EFF1;
+        padding-left: 0;
+    }
+
+.values__cards .cards-list .value_item.it_company-item.bpm {
+        padding-right: 10px;
+        max-height: 383px;
+        border-right: 1px solid #F0EFF1;
+        margin-top: 10px;
+}
+
+.values__cards .cards-list .value_item.it_company-item.bpm img {
+    width: 323px;
+    height: 323px;
+    border-top: 1px solid #F0EFF1;
+    padding-top: 25px;
+    margin-top: 0;
+}
+.values__cards .cards-list .value_item.it_company-item.people {
+        border-right: none;
+        max-height: 383px;
+        margin-top: 10px;
+        padding-left: 10px;
+}
+.values__cards .cards-list .value-item.it_company-item:nth-child(5) {
+    margin-top: 5px;
+        border-bottom: none;
+        max-height: 383px;
+        .item__info-content {
+            border-bottom: 1px solid #F0EFF1;
+            padding-bottom: 10%;
+        }
+    }
+
+.values__cards .cards-list  .value-item.it_company-item:nth-child(6) {
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-right: 10px;
+        max-height: 383px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_kanu .circle-video {
+        width: 40px;
+        height: 40px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_vlada .circle-video {
+        width: 40px;
+        height: 40px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_kanu video {
+        width: 40px;
+        height: 40px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_vlada video {
+        width: 40px;
+        height: 40px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_kanu .code {
+        width: 229px;
+        padding: 20px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_kanu .code.type p {
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_vlada {
+        top: 0;
+        margin-left: 68px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_vlada.show {
+        top: -67px;
+        margin-left: 68px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_vlada .welcome  {
+        background-color: #1A1B1F;
+        border-radius: 17px;
+        font-size: 15px;
+        line-height: 150%;
+        color: #fff;
+        padding: 14px;
+        white-space: nowrap;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -1136,183 +1297,6 @@
             }
         }
     }
-
-    .values__cards .cards-list.it_company-list {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .values__cards .cards-list .value-item.it_company-item {
-        margin-top: 25px;
-        margin-bottom: 25px;
-        padding-right: 12px;
-
-        .item__info-content {
-            color:#5C5C5C;
-            font-family: 'Acrom';
-            font-size: 15px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 150%;
-        }
-    }
-
-    .values__cards .cards-list .value-item.it_company-item:first-child {
-        height: 285px;
-        margin-top: 25px;
-        margin-bottom: 25px;
-        padding-right: 12px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.bpm {
-        border-right: 1px solid #F0EFF1;
-        margin-top: 25px;
-        padding-right: 15px;
-        margin-bottom: 50px;
-        height: 350px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.bpm img {
-            width: 323px;
-            height: 323px;
-            margin-top: 0;
-            margin-left: 5px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.bpm .laptop_circle {
-        position: relative;
-        top: -324px;
-        left: 29px;
-        background-color: #FFD771;
-        border-radius: 100%;
-        width:  68px;
-        height: 68px;
-    }
-
-    .values__cards .value-lines .value-line {
-        width: 334px;
-    }
-
-    .values__cards .value-lines.length .value-line {
-        min-width: 334px;
-    }
-
-    .values__cards .value-lines.length {
-        top: -325px;
-    }
-
-    .values__cards .value-lines.length .value-line:last-child {
-        display: none;
-    }
-
-    .values__cards .value-lines.under {
-        margin-left: 0;
-    }
-
-    .values__cards .value-lines.under.tablet {
-        display: flex;
-        position: relative;
-        top: -725px;
-        margin-left: 0;
-        height: 1px;
-        gap: 20px;
-    }
-
-    .values__cards .value-lines.under.tablet .value-line {
-        display: inline-block;
-        min-width: 334px;
-        height: 1px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people {
-        padding-left: 10px;
-        margin-top: 25px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_kanu .circle-video {
-        width: 40px;
-        height: 40px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_vlada .circle-video {
-        width: 40px;
-        height: 40px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_kanu video {
-        width: 40px;
-        height: 40px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_vlada video {
-        width: 40px;
-        height: 40px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .gif {
-        width: 350px;
-        height: 50%;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_kanu .code {
-        width: 229px;
-        padding: 20px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_kanu .code.type p {
-        font-size: 14px;
-        line-height: 150%;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_vlada {
-        top: 0;
-        margin-left: 118px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_vlada.show {
-        top: -67px;
-        margin-left: 118px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_vlada .welcome  {
-        background-color: #1A1B1F;
-        border-radius: 17px;
-        font-size: 10px;
-        line-height: 150%;
-        color: #fff;
-        padding: 14px;
-    }
-
-    .values__cards .cards-list .value-item.it_company-item:nth-child(2) {
-        padding-right: 0;
-        max-width: 331px;
-        font-size: 15px;
-        border-right: none;
-    }
-
-    .values__cards .cards-list .value-item.it_company-item:nth-child(3) {
-        margin-top: 0;
-        padding-left: 0;
-        border-left: none;
-        max-width: 331px;
-        font-size: 15px;
-        height: 272px;
-    }
-
-    .values__cards .cards-list .value-item.it_company-item:nth-child(4) {
-        margin-top: 0;
-        padding-right: 0;
-        max-width: 331px;
-        font-size: 15px;
-    }
-
-    .values__cards .cards-list .value-item .item__info-number {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-
-    .values__cards .cards-list .value-item .item__info-title {
-        font-size: 20px;
-    }
 }
 
 @media screen and (max-width: 570px) {
@@ -1413,9 +1397,11 @@
         padding-top: 25px;
         margin-top: 0;
         margin-bottom: 25px;
+        margin-right: 16px;
         padding-right: 0;
         border-right: none;
         border-top: 1px solid #F0EFF1;
+        max-width: 330px !important;
 
         .item__info-content {
             max-width: 331px;
@@ -1430,8 +1416,8 @@
 
     .values__cards .cards-list .value-item.it_company-item:first-child {
         margin-top: 25px;
-        margin-bottom: 25px;
-        padding-right: 12px;
+        margin-bottom: 0;
+        padding-right: 0;
     }
 
     .values__cards .cards-list .value_item.it_company-item.bpm {
@@ -1440,15 +1426,19 @@
         border-bottom: 1px solid #F0EFF1;
         margin-top: 0;
         padding-top: 25px;
-        margin-bottom: 25px;
+        padding-bottom: 25px;
         height: 350px;
+        padding-right: 16px;
+        max-width: 330px !important;
     }
 
     .values__cards .cards-list .value_item.it_company-item.bpm img {
-            width: 323px;
-            height: 323px;
+            width: 343px;
+            height: 343px;
             margin-top: 0;
-            margin-left: 5px;
+            margin-left: 0;
+            border-top: 0;
+            padding-top: 0;
     }
 
     .values__cards .cards-list .value_item.it_company-item.bpm .laptop_circle {
@@ -1461,40 +1451,15 @@
         height: 68px;
     }
 
-    .values__cards .value-lines .value-line {
-        display: none;
-        width: 334px;
-    }
-
-    .values__cards .value-lines.length .value-line {
-        display: none;
-        min-width: 334px;
-    }
-
-    .values__cards .value-lines.length {
-        display: none;
-        top: -325px;
-    }
-
-    .values__cards .value-lines.under {
-        display: none;
-        margin-left: 0;
-    }
-
-    .values__cards .value-lines.under.tablet {
-        display: none;
-    }
-
-    .values__cards .value-lines.under.tablet .value-line {
-        display: inline-block;
-        min-width: 334px;
-        height: 1px;
-    }
-
     .values__cards .cards-list .value_item.it_company-item.people {
         padding-left: 10px;
         margin-top: 0;
         margin-bottom: 0;
+        border-top: none;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_kanu {
+        border-top: none;
     }
 
     .values__cards .cards-list .value_item.it_company-item.people .values_kanu .circle-video {
@@ -1515,13 +1480,6 @@
     .values__cards .cards-list .value_item.it_company-item.people .values_vlada video {
         width: 40px;
         height: 40px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .gif {
-        margin-top: -5px;
-        margin-left: -10px;
-        width: 350px;
-        height: 50%;
     }
 
     .values__cards .cards-list .value_item.it_company-item.people .values_kanu .code {
@@ -1555,7 +1513,7 @@
 
     .values__cards .cards-list .value-item.it_company-item:nth-child(2) {
         padding-right: 0;
-        max-width: 331px;
+        margin-bottom: 25px;
         font-size: 15px;
         border-right: none;
     }
@@ -1569,21 +1527,28 @@
         height: auto;
     }
 
-    .values__cards .cards-list .value-item.it_company-item:nth-child(4) {
+    .values__cards .cards-list .value-item.it_company-item:nth-child(5) {
         margin-top: 0;
         padding-right: 0;
-        max-width: 331px;
         font-size: 15px;
 
         .item__info-content {
-            padding-bottom: 25px;
-            border-bottom: 1px solid #F0EFF1;
+            padding-bottom: 0;
+            border-bottom: none;
         }
+    }
+    .values__cards .cards-list .value-item.it_company-item:nth-child(6) {
+        padding-bottom: 25px;
     }
 
     .values__cards .cards-list .value-item .item__info-number {
         font-size: 24px;
         margin-bottom: 20px;
+    }
+
+    .values__cards .cards-list .value-item.it_company-item .item__info-number {
+        border-top: none;
+        padding-top: 0;
     }
 
     .values__cards .cards-list .value-item .item__info-title {

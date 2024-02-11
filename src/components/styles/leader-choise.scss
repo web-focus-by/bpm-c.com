@@ -102,3 +102,125 @@
       }
     }
 }
+
+@media screen and (max-width: 1600px) {
+    .leaders_choice_tagline {
+        margin: 230px 0;
+    
+        .leaders_choice_tagline__block {
+    
+          .leaders_choice_tagline_block_title {
+            font-size: 44px;
+          }
+    
+          .leaders_choice_tagline_block_gif {
+            img {
+              width: 52px;
+              height: 52px;
+              margin-left: -10px;
+    
+              &:first-child {
+                margin-left: 20px;
+              }
+            }
+          }
+        }
+    
+        .leaders_choice_tagline__butn {
+          button {
+            padding: 16px 29px;
+    
+            span {
+              margin-left: 9px;
+            }
+          }
+        }
+      }
+}
+
+
+@media screen and (max-width: 768px) {
+    .leaders_choice {
+        .leaders_choice__block_title {
+          margin-bottom: 14px;
+        }
+    
+        .leaders_choice__block {
+          grid-template-columns: 1fr;
+          grid-column-gap: 0;
+    
+          .leaders_choice_block_list {
+            ul {
+              li {
+                margin-bottom: 14px;
+              }
+    
+              .font_18 {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    
+      .leaders_choice_tagline {
+        margin: 184px 0 207px 0;
+    
+        .leaders_choice_tagline__block {
+          .leaders_choice_tagline_block_title {
+            font-size: 46px;
+          }
+    
+          .leaders_choice_tagline_block_gif {
+            img {
+              width: 64px;
+              height: 64px;
+              margin-left: -20px;
+    
+              &:first-child {
+                margin-left: 26px;
+              }
+            }
+          }
+        }
+    
+        .leaders_choice_tagline__butn {
+          button {
+            padding: 22px 40px;
+    
+            span {
+              margin-left: 14px;
+            }
+          }
+        }
+    }
+}
+
+@media screen and (max-width: 530px){
+    .leaders_choice_tagline {
+        margin: 80px 0 84px 0;
+    
+        .leaders_choice_tagline__block {
+          flex-direction: column;
+          align-items: center;
+    
+          .leaders_choice_tagline_block_title {
+            font-size: 42px;
+            text-align: center;
+          }
+    
+          .leaders_choice_tagline_block_gif {
+            margin-left: -85px;
+            img {
+              width: 48px;
+              height: 48px;
+              margin-left: -10px;
+    
+              &:first-child {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+    }
+}
