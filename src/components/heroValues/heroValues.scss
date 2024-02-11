@@ -885,6 +885,14 @@
             }
         }
     }
+.values__cards .cards-list .value-item.it_company-item:nth-child(5) {
+        border-bottom: none;
+        max-height: 280px;
+        .item__info-content {
+            border-bottom: 1px solid #F0EFF1;
+            padding-bottom: 24%;
+        }
+    }
 }
 
 @media screen and (max-width: 940px) {
@@ -1027,9 +1035,130 @@
         }
     }
 
+    .values__cards .cards-list .value-item.it_company-item {
+
+        .item__info-content {
+            color:#5C5C5C;
+            font-family: 'Acrom';
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+        }
+    }
+
     .values__cards .cards-list.it_company-list {
         grid-template-columns: 1fr 1fr;
     }
+
+    .values__cards .cards-list .value-item.it_company-item .item__info-content {
+        font-size: 15px;
+    }
+    .values__cards .cards-list .value-item.it_company-item:nth-child(1) {
+        border-bottom: none;
+        margin-bottom: 0;
+        min-height: 349px;
+        max-height: 350px;
+    }
+
+.values__cards .cards-list .value-item.it_company-item:nth-child(2) {
+        border-bottom: none;
+        margin-bottom: 0;
+        border-right: none;
+    }
+
+.values__cards .cards-list .value-item.it_company-item:nth-child(3) {
+        border-left: 1px solid #F0EFF1;
+        padding-left: 0;
+    }
+
+.values__cards .cards-list .value_item.it_company-item.bpm {
+        padding-right: 10px;
+        max-height: 383px;
+        border-right: 1px solid #F0EFF1;
+        margin-top: 10px;
+}
+
+.values__cards .cards-list .value_item.it_company-item.bpm img {
+    width: 323px;
+    height: 323px;
+    border-top: 1px solid #F0EFF1;
+    padding-top: 25px;
+    margin-top: 0;
+}
+.values__cards .cards-list .value_item.it_company-item.people {
+        border-right: none;
+        max-height: 383px;
+        margin-top: 10px;
+        padding-left: 10px;
+}
+.values__cards .cards-list .value-item.it_company-item:nth-child(5) {
+    margin-top: 5px;
+        border-bottom: none;
+        max-height: 383px;
+        .item__info-content {
+            border-bottom: 1px solid #F0EFF1;
+            padding-bottom: 10%;
+        }
+    }
+
+.values__cards .cards-list  .value-item.it_company-item:nth-child(6) {
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-right: 10px;
+        max-height: 383px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_kanu .circle-video {
+        width: 40px;
+        height: 40px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_vlada .circle-video {
+        width: 40px;
+        height: 40px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_kanu video {
+        width: 40px;
+        height: 40px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_vlada video {
+        width: 40px;
+        height: 40px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_kanu .code {
+        width: 229px;
+        padding: 20px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_kanu .code.type p {
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_vlada {
+        top: 0;
+        margin-left: 68px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_vlada.show {
+        top: -67px;
+        margin-left: 68px;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_vlada .welcome  {
+        background-color: #1A1B1F;
+        border-radius: 17px;
+        font-size: 15px;
+        line-height: 150%;
+        color: #fff;
+        padding: 14px;
+        white-space: nowrap;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -1168,148 +1297,6 @@
                 grid-template-columns: 1fr;
             }
         }
-    }
-
-    .values__cards .cards-list.it_company-list {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .values__cards .cards-list .value-item.it_company-item {
-        margin-top: 25px;
-        margin-bottom: 25px;
-        padding-right: 12px;
-
-        .item__info-content {
-            color:#5C5C5C;
-            font-family: 'Acrom';
-            font-size: 15px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 150%;
-        }
-    }
-
-    .values__cards .cards-list .value-item.it_company-item:first-child {
-        height: 285px;
-        margin-top: 25px;
-        margin-bottom: 25px;
-        padding-right: 12px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.bpm {
-        border-right: 1px solid #F0EFF1;
-        margin-top: 25px;
-        padding-right: 15px;
-        margin-bottom: 50px;
-        height: 350px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.bpm img {
-            width: 323px;
-            height: 323px;
-            margin-top: 0;
-            margin-left: 5px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.bpm .laptop_circle {
-        position: relative;
-        top: -324px;
-        left: 29px;
-        background-color: #FFD771;
-        border-radius: 100%;
-        width:  68px;
-        height: 68px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people {
-        padding-left: 10px;
-        margin-top: 25px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_kanu .circle-video {
-        width: 40px;
-        height: 40px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_vlada .circle-video {
-        width: 40px;
-        height: 40px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_kanu video {
-        width: 40px;
-        height: 40px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_vlada video {
-        width: 40px;
-        height: 40px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .gif {
-        width: 350px;
-        height: 50%;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_kanu .code {
-        width: 229px;
-        padding: 20px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_kanu .code.type p {
-        font-size: 14px;
-        line-height: 150%;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_vlada {
-        top: 0;
-        margin-left: 118px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_vlada.show {
-        top: -67px;
-        margin-left: 118px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .values_vlada .welcome  {
-        background-color: #1A1B1F;
-        border-radius: 17px;
-        font-size: 10px;
-        line-height: 150%;
-        color: #fff;
-        padding: 14px;
-    }
-
-    .values__cards .cards-list .value-item.it_company-item:nth-child(2) {
-        padding-right: 0;
-        max-width: 331px;
-        font-size: 15px;
-        border-right: none;
-    }
-
-    .values__cards .cards-list .value-item.it_company-item:nth-child(3) {
-        margin-top: 0;
-        padding-left: 0;
-        border-left: none;
-        max-width: 331px;
-        font-size: 15px;
-        height: 272px;
-    }
-
-    .values__cards .cards-list .value-item.it_company-item:nth-child(4) {
-        margin-top: 0;
-        padding-right: 0;
-        max-width: 331px;
-        font-size: 15px;
-    }
-
-    .values__cards .cards-list .value-item .item__info-number {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-
-    .values__cards .cards-list .value-item .item__info-title {
-        font-size: 20px;
     }
 }
 
