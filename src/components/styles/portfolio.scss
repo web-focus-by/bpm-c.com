@@ -18,6 +18,7 @@
           border-radius: 25px;
           margin-bottom: 0;
           transition: 1s;
+          margin-bottom: 10px;
 
           img {
             object-fit: cover;
@@ -25,10 +26,13 @@
         }
 
         .portfolio_products_block_pic:hover {
-            cursor: url(../../images/cursor-pointer.svg), pointer;
-            transition: 1s;
-            transform: scale(1.1);
+            cursor: url("../../images/cursor-pointer.svg"), default !important;
             width: 100%;
+            img {
+                object-fit: cover;
+                transition: 1s;
+                transform: scale(1.1);
+              }
         }
   
   
