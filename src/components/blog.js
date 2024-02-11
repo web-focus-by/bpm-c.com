@@ -56,7 +56,7 @@ const Blog = ({ titlePage }) => {
   `)
   const allNews = useMemo(() => {
     if (data) {
-      return data.allWpPost.edges
+      return data.allWpPost.edges.slice(0,3)
     }
     return []
   }, [data])
@@ -167,7 +167,7 @@ const Blog = ({ titlePage }) => {
 
   const result = allNews.map((item, index) => {
     return (
-      <SwiperSlide key={item.node.id}>
+      <div className="blog__item" key={item.node.id}>
         <div
           id={item.node.id}
           className="blog_products_block"
@@ -199,7 +199,7 @@ const Blog = ({ titlePage }) => {
             </Link>
           </div>
         </div>
-      </SwiperSlide>
+      </div>
     )
   })
 
@@ -213,48 +213,7 @@ const Blog = ({ titlePage }) => {
           </Link>
         </div>
         <div className="blog__products">
-          <Swiper
-            spaceBetween={widthScreen <= 1366 ? 15 : 20}
-            slidesPerView={"auto"}
-            // onSlideChange={() => console.log("slide change")}
-            // onSwiper={swiper => console.log(swiper)}
-            breakpoints={{
-              1920: {
-                width: 1920,
-                allowTouchMove: true,
-              },
-              1600: {
-                width: 1366,
-                allowTouchMove: true,
-              },
-              1025: {
-                width: 1025,
-                allowTouchMove: true,
-              },
-              1024: {
-                width: 1024,
-                allowTouchMove: true,
-              },
-              768: {
-                width: 768,
-                allowTouchMove: true,
-              },
-              425: {
-                width: 425,
-                allowTouchMove: true,
-              },
-              375: {
-                width: 375,
-                allowTouchMove: true,
-              },
-              320: {
-                width: 320,
-                allowTouchMove: true,
-              },
-            }}
-          >
             {result}
-          </Swiper>
         </div>
       </div>
     </div>

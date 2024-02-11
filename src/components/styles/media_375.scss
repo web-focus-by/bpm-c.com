@@ -17,54 +17,6 @@
     transition: all 0.5s ease-in-out;
   }
 
-  .blog {
-    &__products {
-      display: flex;
-      justify-content: space-between;
-      column-gap: 25px;
-
-      .blog_products_block {
-        .blog_products_block_pic {
-          width: 320px;
-          height: 240px;
-          img {
-            object-fit: cover;
-            width: 320px;
-            height: 240px;
-            border-radius: 14px;
-          }
-        }
-        .blog_products_block_list {
-          margin: 12px 0 14px 0;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-
-          .hash_list_block {
-            a {
-              font-size: 14px;
-            }
-            &:first-child {
-              margin-right: 10px;
-            }
-          }
-
-          .blog_products_block_list_date {
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 130%;
-          }
-        }
-
-        .blog_products_block_title {
-          font-weight: 500;
-          font-size: 24px;
-          line-height: 100%;
-        }
-      }
-    }
-  }
-
   .react {
     width: 72px;
     height: 62px;
@@ -482,6 +434,10 @@
 
   .reviews {
     &__info {
+      margin: 0;
+      .container {
+        margin: 0;
+      }
       .reviews_info_block {
         border-radius: 20px;
         color: #1a1b1f;
@@ -727,37 +683,6 @@
 
   .swiper-backface-hidden .swiper-slide {
     max-width: 320px;
-  }
-
-  .portfolio {
-    &__products {
-      grid-template-columns: 1fr;
-      row-gap: 20px;
-      .portfolio_products_block {
-        .portfolio_products_block_title {
-          margin-top: 12px;
-          font-size: 24px;
-          line-height: 115%;
-        }
-
-        .portfolio_products_block_pic {
-          width: 343px;
-          height: 240px;
-          margin-bottom: 20px;
-
-          &__content {
-            background-size: 343px 240px;
-            object-fit: cover;
-          }
-        }
-
-        .portfolio_products_block_list {
-          margin-bottom: calc(
-            17px + (24 - 17) * ((100vw - 1366px) / (1920 - 1366))
-          );
-        }
-      }
-    }
   }
 
   .accor__title {

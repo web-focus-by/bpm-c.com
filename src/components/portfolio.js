@@ -129,17 +129,15 @@ const Portfolio = ({ posts }) => {
           ref={el => (refCases.current[index] = el)}
           className="portfolio_products_block"
         >
-          <div className="portfolio_products_block_pic">
+          <div className="portfolio_products_block_pic" itemtype="https://schema.org/ImageObject" itemscope="">
             <Link to={post.node.uri}>
               {post.node.featuredImage &&
               post.node.featuredImage.node.mediaItemUrl ? (
-                <div
-                  className="portfolio_products_block_pic__content"
-                  style={{
-                    backgroundImage:
-                      "url(" + post.node.featuredImage.node.mediaItemUrl + ")",
-                  }}
-                />
+                  <img
+                    src={post.node.featuredImage.node.mediaItemUrl}
+                    alt={post.node.featuredImage.node.title}
+                    itemprop="image"
+                  />
               ) : (
                 ""
               )}

@@ -41,28 +41,6 @@
     }
   }
 
-  .portfolio {
-    &__products {
-      grid-column-gap: 2%;
-      grid-row-gap: 30px;
-
-      .portfolio_products_block {
-        .portfolio_products_block_pic {
-          margin-bottom: 11px;
-        }
-
-        .portfolio_products_block_list {
-          margin-bottom: 17px;
-          ul {
-            li {
-              margin-right: 14px;
-            }
-          }
-        }
-      }
-    }
-  }
-
   .technologies {
     &__list {
       margin-left: -33px;
@@ -304,8 +282,8 @@
 
       .projects_process_list_item {
         //left: calc(79.5px + (130.5 - 79.5) * ((100vw - 768px) / (1024 - 768)));
-        left: 91%;
-        margin-top: calc(12px + (0 - 12) * ((100vw - 768px) / (1024 - 768)));
+        left: 82%;
+        margin-top: 5px;
         padding: 0 calc(50px + (36 - 50) * ((100vw - 768px) / (1024 - 768)));
 
         p {
@@ -317,12 +295,6 @@
 
   .padding_50 {
     padding: 0 calc(50px + (33 - 50) * ((100vw - 768px) / (1024 - 768)));
-  }
-
-  .blog {
-    &__products {
-      column-gap: calc(10px + (17 - 10) * ((100vw - 768px) / (1024 - 768)));
-    }
   }
 
   .leaders {
@@ -377,55 +349,6 @@
     }
   }
 
-  .blog {
-    &__products {
-      display: flex;
-      justify-content: space-between;
-      column-gap: 25px;
-
-      .blog_products_block {
-        .blog_products_block_pic {
-          width: 220px;
-          height: 242px;
-          img {
-            object-fit: cover;
-            width: 220px;
-            height: 242px;
-            border-radius: 14px;
-          }
-        }
-        .blog_products_block_list {
-          margin: 16px 0;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-
-          .hash_list_block {
-            a {
-              padding: 4px 10px;
-              font-size: 10px;
-            }
-
-            &:first-child {
-              margin-right: 10px;
-            }
-          }
-
-          .blog_products_block_list_date {
-            font-weight: 400;
-            font-size: 8.54px;
-            line-height: 130%;
-          }
-        }
-
-        .blog_products_block_title {
-          font-size: 17px;
-          font-weight: 500;
-          line-height: 100%;
-        }
-      }
-    }
-  }
   .black_bg {
     .advantages__subtitle {
       margin-bottom: 30px;

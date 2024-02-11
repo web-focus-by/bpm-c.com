@@ -96,7 +96,7 @@
         grid-template-columns: 1fr 1fr 1fr;
 
         .value-item {
-            border-right: 1px solid #E1DAF4;
+            border-right: 1px solid #F0EFF1;
             padding-right: 21px;
             padding-left: 10px;
 
@@ -112,7 +112,6 @@
             }
 
             .item__info-title {
-                width: 299px;
                 color: #1A1B1F;
                 font-family: 'Acrom';
                 font-size: 24px;
@@ -123,7 +122,6 @@
             }
 
             .item__info-content {
-                max-width: 466px;
                 color:#5C5C5C;
                 font-family: 'Acrom';
                 font-size: 18px;
@@ -136,10 +134,6 @@
         .value-item.length {
             padding-right: 10px;
             padding-left: 30px;
-
-            .item__info-content {
-                max-width: 320px;
-            }
         }
 
         .value-item.length:first-child {
@@ -164,13 +158,11 @@
         }
 
         .value-item.it_company-item:nth-child(3) {
-            border-left: 1px solid #E1DAF4;
-            order: 5;
+            border-left: 1px solid #F0EFF1;
         }
 
         .value-item.it_company-item:nth-child(4) {
             border-right: none;
-            order: 6;
 
             .item__info-content {
                 max-width: 432px;
@@ -389,7 +381,7 @@
         .value-line {
             width: 480px;
             height: 1px;
-            background-color: #E1DAF4;
+            background-color: #F0EFF1;
         }
     }
 
@@ -410,7 +402,7 @@
         .value-line {
             min-width: 480px;
             height: 1px;
-            background-color: #E1DAF4;
+            background-color: #F0EFF1;
         }
     }
 }
@@ -470,7 +462,7 @@
         .values__cards {
             .cards-list {
                 .value-item {
-                    border-right: 1px solid #E1DAF4;
+                    border-right: 1px solid #F0EFF1;
                     padding-right: 16px;
                     padding-left: 10px;
 
@@ -480,7 +472,6 @@
                     }
 
                     .item__info-title {
-                        width: 211px;
                         font-size: 17.075px;
                         margin-bottom: 14px;
                     }
@@ -533,13 +524,11 @@
                 }
 
                 .value-item.it_company-item:nth-child(3) {
-                    border-left: 1px solid #E1DAF4;
-                    order: 5;
+                    border-left: 1px solid #F0EFF1;
                 }
 
                 .value-item.it_company-item:nth-child(4) {
                     border-right: none;
-                    order: 6;
 
                     .item__info-content {
                         max-width: 432px;
@@ -686,7 +675,7 @@
             .value-line {
                 width: 480px;
                 height: 1px;
-                background-color: #E1DAF4;
+                background-color: #F0EFF1;
             }
         }
 
@@ -703,7 +692,7 @@
             .value-line {
                 min-width: 480px;
                 height: 1px;
-                background-color: #E1DAF4;
+                background-color: #F0EFF1;
             }
         }
     }
@@ -715,7 +704,6 @@
         padding-right: 22px;
 
         .item__info-content {
-            max-width: 327px;
             color:#5C5C5C;
             font-family: 'Acrom';
             font-size: 12px;
@@ -861,9 +849,6 @@
             .description {
                 font-size: 12.806px;
 
-                p {
-                    min-width: 85%;
-                }
             }
         }
     }
@@ -928,7 +913,7 @@
 
                 .value-item {
                     border-right: none;
-                    border-bottom: 1px solid #E1DAF4;
+                    border-bottom: 1px solid #F0EFF1;
                     padding-right: 16px;
                     padding-left: 7px;
                     margin-bottom: 25px;
@@ -939,7 +924,6 @@
                     }
 
                     .item__info-title {
-                        width: 252px;
                         font-size: 20px;
                         margin-bottom: 20px;
                     }
@@ -961,7 +945,7 @@
                 }
 
                 .value-item.length {
-                    border-right: 1px solid #E1DAF4;
+                    border-right: 1px solid #F0EFF1;
                     border-bottom: none;
                     padding-left: 10px;
                     margin-bottom: 0;
@@ -1000,10 +984,18 @@
                 }
             }
 
+            .cards-list .it_company-list {
+                grid-template-columns: 1fr 1fr;
+            }
+
             .cards-list.length {
                 grid-template-columns: 1fr 1fr;
             }
         }
+    }
+
+    .values__cards .cards-list.it_company-list {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -1068,7 +1060,7 @@
 
                 .value-item {
                     border-right: none;
-                    border-bottom: 1px solid #E1DAF4;
+                    border-bottom: 1px solid #F0EFF1;
                     padding-right: 16px;
                     padding-left: 7px;
                     margin-bottom: 25px;
@@ -1079,7 +1071,6 @@
                     }
 
                     .item__info-title {
-                        width: 252px;
                         font-size: 20px;
                         margin-bottom: 20px;
                     }
@@ -1101,7 +1092,7 @@
                 }
 
                 .value-item.length {
-                    border-right: 1px solid #E1DAF4;
+                    border-right: 1px solid #F0EFF1;
                     border-bottom: none;
                     padding-left: 10px;
                     margin-bottom: 0;
@@ -1146,13 +1137,16 @@
         }
     }
 
+    .values__cards .cards-list.it_company-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .values__cards .cards-list .value-item.it_company-item {
         margin-top: 25px;
         margin-bottom: 25px;
         padding-right: 12px;
 
         .item__info-content {
-            max-width: 331px;
             color:#5C5C5C;
             font-family: 'Acrom';
             font-size: 15px;
@@ -1170,7 +1164,7 @@
     }
 
     .values__cards .cards-list .value_item.it_company-item.bpm {
-        border-right: 1px solid #E1DAF4;
+        border-right: 1px solid #F0EFF1;
         margin-top: 25px;
         padding-right: 15px;
         margin-bottom: 50px;
@@ -1349,7 +1343,7 @@
 
                 .value-item {
                     border-right: none;
-                    border-bottom: 1px solid #E1DAF4;
+                    border-bottom: 1px solid #F0EFF1;
                     padding-right: 16px;
                     padding-left: 7px;
                     margin-bottom: 25px;
@@ -1360,7 +1354,6 @@
                     }
 
                     .item__info-title {
-                        width: 252px;
                         font-size: 20px;
                         margin-bottom: 20px;
                     }
@@ -1401,11 +1394,15 @@
         }
     }
 
+    .values__cards .cards-list.it_company-list {
+        grid-template-columns: 1fr;
+    }
+
     .values .values__cards .cards-list.length .value-item.length {
         padding-left: 0 !important;
         margin-top: 25px !important;
         padding-bottom: 25px !important;
-        border-bottom: 1px solid #E1DAF4;
+        border-bottom: 1px solid #F0EFF1;
     }
 
     .values .values__cards .cards-list.length .value-item.length:first-child {
@@ -1418,7 +1415,7 @@
         margin-bottom: 25px;
         padding-right: 0;
         border-right: none;
-        border-top: 1px solid #E1DAF4;
+        border-top: 1px solid #F0EFF1;
 
         .item__info-content {
             max-width: 331px;
@@ -1439,7 +1436,8 @@
 
     .values__cards .cards-list .value_item.it_company-item.bpm {
         border-right: none;
-        border-top: 1px solid #E1DAF4;
+        border-top: 1px solid #F0EFF1;
+        border-bottom: 1px solid #F0EFF1;
         margin-top: 0;
         padding-top: 25px;
         margin-bottom: 25px;
@@ -1579,7 +1577,7 @@
 
         .item__info-content {
             padding-bottom: 25px;
-            border-bottom: 1px solid #E1DAF4;
+            border-bottom: 1px solid #F0EFF1;
         }
     }
 

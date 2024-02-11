@@ -22,6 +22,11 @@ const ProjectsProcess = ({ siteTitle }) => {
   }
 
   const clickToggle = (target, next) => {
+    const allElems = document.querySelectorAll('.projects_process_list_item');
+    const allChild = document.querySelectorAll('.projects_process_list_item__hover-elem');
+
+    allElems.forEach(el => el.classList.remove('click'));
+    allChild.forEach(el => el.classList.remove('click'));
     if(window.innerWidth <= 1023) {
       const clickElem = document.getElementById(target);
       const clickChild = clickElem.querySelector('.projects_process_list_item__hover-elem');
