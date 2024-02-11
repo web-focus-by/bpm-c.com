@@ -26,14 +26,13 @@
         }
 
         .portfolio_products_block_pic:hover {
-            cursor: url("../../images/cursor-pointer.svg"), default !important;
-            width: 100%;
+            cursor: url(../../images/cursor-pointer.svg), pointer;
             img {
-                object-fit: cover;
-                transition: 1s;
-                transform: scale(1.1);
-              }
-        }
+              transition: 1s;
+              transform: scale(1.1);
+            }
+          }
+
   
   
   
