@@ -69,8 +69,8 @@ const ITCompany = () => (
             <span className="value-line"></span>
             <span className="value-line"></span>
           </div>
-            <div className="cards-list">
-                {values.map((obj, index) => (
+            <div className="cards-list it_company-list">
+                {values.slice(0,2).map((obj, index) => (
                     <div className="value-item it_company-item">
                       <div className="item__info-number it_company-item">0{index + 1}.</div>
                       <div className="item__info-title it_company-item">{obj.title}</div>
@@ -116,6 +116,13 @@ const ITCompany = () => (
                 <div className="welcome">Welcome to BPM Cloud!</div>
               </div>
             </div>
+            {values.slice(2,4).map((obj, index) => (
+                    <div className="value-item it_company-item">
+                      <div className="item__info-number it_company-item">0{index + 3}.</div>
+                      <div className="item__info-title it_company-item">{obj.title}</div>
+                      <div className="item__info-content it_company-item">{obj.content}</div>
+                  </div>
+                ))}
           </div>
           <div className="value-lines under">
             <span className="value-line"></span>

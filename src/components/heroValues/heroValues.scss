@@ -159,12 +159,10 @@
 
         .value-item.it_company-item:nth-child(3) {
             border-left: 1px solid #F0EFF1;
-            order: 5;
         }
 
         .value-item.it_company-item:nth-child(4) {
             border-right: none;
-            order: 6;
 
             .item__info-content {
                 max-width: 432px;
@@ -527,12 +525,10 @@
 
                 .value-item.it_company-item:nth-child(3) {
                     border-left: 1px solid #F0EFF1;
-                    order: 5;
                 }
 
                 .value-item.it_company-item:nth-child(4) {
                     border-right: none;
-                    order: 6;
 
                     .item__info-content {
                         max-width: 432px;
@@ -988,10 +984,18 @@
                 }
             }
 
+            .cards-list .it_company-list {
+                grid-template-columns: 1fr 1fr;
+            }
+
             .cards-list.length {
                 grid-template-columns: 1fr 1fr;
             }
         }
+    }
+
+    .values__cards .cards-list.it_company-list {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -1133,13 +1137,16 @@
         }
     }
 
+    .values__cards .cards-list.it_company-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .values__cards .cards-list .value-item.it_company-item {
         margin-top: 25px;
         margin-bottom: 25px;
         padding-right: 12px;
 
         .item__info-content {
-            max-width: 331px;
             color:#5C5C5C;
             font-family: 'Acrom';
             font-size: 15px;
@@ -1387,6 +1394,10 @@
         }
     }
 
+    .values__cards .cards-list.it_company-list {
+        grid-template-columns: 1fr;
+    }
+
     .values .values__cards .cards-list.length .value-item.length {
         padding-left: 0 !important;
         margin-top: 25px !important;
@@ -1426,6 +1437,7 @@
     .values__cards .cards-list .value_item.it_company-item.bpm {
         border-right: none;
         border-top: 1px solid #F0EFF1;
+        border-bottom: 1px solid #F0EFF1;
         margin-top: 0;
         padding-top: 25px;
         margin-bottom: 25px;
