@@ -300,48 +300,6 @@
   .leaders {
     position: relative;
   }
-
-  .leaders_choice_tagline {
-    margin: calc(184px + (178 - 184) * ((100vw - 768px) / (1024 - 768))) 0
-      calc(207px + (178 - 207) * ((100vw - 768px) / (1024 - 768))) 0;
-
-    &__block {
-      .leaders_choice_tagline_block_title {
-        font-size: calc(46px + (44 - 46) * ((100vw - 768px) / (1024 - 768)));
-      }
-
-      .leaders_choice_tagline_block_gif {
-        img {
-          width: calc(64px + (52 - 64) * ((100vw - 768px) / (1024 - 768)));
-          height: calc(64px + (52 - 64) * ((100vw - 768px) / (1024 - 768)));
-          margin-left: calc(
-            -20px + (-10 + 20) * ((100vw - 768px) / (1024 - 768))
-          );
-
-          &:first-child {
-            margin-left: calc(
-              26px + (20 - 20) * ((100vw - 768px) / (1024 - 768))
-            );
-          }
-        }
-      }
-    }
-
-    &__butn {
-      margin-right: 8px;
-      button.button_white {
-        padding: calc(22px + (16 - 22) * ((100vw - 768px) / (1024 - 768)))
-          calc(40px + (29 - 40) * ((100vw - 768px) / (1024 - 768)));
-        font-size: 11px;
-        span {
-          margin-left: calc(
-            14px + (10 - 14) * ((100vw - 768px) / (1024 - 768))
-          );
-        }
-      }
-    }
-  }
-
   .swiper {
     .swiper-slide {
       width: 220px;

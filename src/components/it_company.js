@@ -65,10 +65,6 @@ const ITCompany = () => (
       </div>
       <div className="it_company__values">
         <div className="values__cards">
-          <div className="value-lines">
-            <span className="value-line"></span>
-            <span className="value-line"></span>
-          </div>
             <div className="cards-list it_company-list">
                 {values.slice(0,2).map((obj, index) => (
                     <div className="value-item it_company-item">
@@ -123,21 +119,6 @@ const ITCompany = () => (
                       <div className="item__info-content it_company-item">{obj.content}</div>
                   </div>
                 ))}
-          </div>
-          <div className="value-lines under">
-            <span className="value-line"></span>
-            <span className="value-line"></span>
-          </div>
-
-          <div className="value-lines under tablet">
-            <span className="value-line"></span>
-            <span className="value-line"></span>
-          </div>
-
-          <div className="value-lines length">
-            <span className="value-line"></span>
-            <span className="value-line"></span>
-            <span className="value-line"></span>
           </div>
         </div>
       </div>
