@@ -1398,9 +1398,11 @@
         padding-top: 25px;
         margin-top: 0;
         margin-bottom: 25px;
+        margin-right: 16px;
         padding-right: 0;
         border-right: none;
         border-top: 1px solid #F0EFF1;
+        max-width: 330px !important;
 
         .item__info-content {
             max-width: 331px;
@@ -1415,8 +1417,8 @@
 
     .values__cards .cards-list .value-item.it_company-item:first-child {
         margin-top: 25px;
-        margin-bottom: 25px;
-        padding-right: 12px;
+        margin-bottom: 0;
+        padding-right: 0;
     }
 
     .values__cards .cards-list .value_item.it_company-item.bpm {
@@ -1425,15 +1427,19 @@
         border-bottom: 1px solid #F0EFF1;
         margin-top: 0;
         padding-top: 25px;
-        margin-bottom: 25px;
+        padding-bottom: 25px;
         height: 350px;
+        padding-right: 16px;
+        max-width: 330px !important;
     }
 
     .values__cards .cards-list .value_item.it_company-item.bpm img {
-            width: 323px;
-            height: 323px;
+            width: 343px;
+            height: 343px;
             margin-top: 0;
-            margin-left: 5px;
+            margin-left: 0;
+            border-top: 0;
+            padding-top: 0;
     }
 
     .values__cards .cards-list .value_item.it_company-item.bpm .laptop_circle {
@@ -1450,6 +1456,11 @@
         padding-left: 10px;
         margin-top: 0;
         margin-bottom: 0;
+        border-top: none;
+    }
+
+    .values__cards .cards-list .value_item.it_company-item.people .values_kanu {
+        border-top: none;
     }
 
     .values__cards .cards-list .value_item.it_company-item.people .values_kanu .circle-video {
@@ -1470,13 +1481,6 @@
     .values__cards .cards-list .value_item.it_company-item.people .values_vlada video {
         width: 40px;
         height: 40px;
-    }
-
-    .values__cards .cards-list .value_item.it_company-item.people .gif {
-        margin-top: -5px;
-        margin-left: -10px;
-        width: 350px;
-        height: 50%;
     }
 
     .values__cards .cards-list .value_item.it_company-item.people .values_kanu .code {
@@ -1510,7 +1514,7 @@
 
     .values__cards .cards-list .value-item.it_company-item:nth-child(2) {
         padding-right: 0;
-        max-width: 331px;
+        margin-bottom: 25px;
         font-size: 15px;
         border-right: none;
     }
@@ -1524,21 +1528,28 @@
         height: auto;
     }
 
-    .values__cards .cards-list .value-item.it_company-item:nth-child(4) {
+    .values__cards .cards-list .value-item.it_company-item:nth-child(5) {
         margin-top: 0;
         padding-right: 0;
-        max-width: 331px;
         font-size: 15px;
 
         .item__info-content {
-            padding-bottom: 25px;
-            border-bottom: 1px solid #F0EFF1;
+            padding-bottom: 0;
+            border-bottom: none;
         }
+    }
+    .values__cards .cards-list .value-item.it_company-item:nth-child(6) {
+        padding-bottom: 25px;
     }
 
     .values__cards .cards-list .value-item .item__info-number {
         font-size: 24px;
         margin-bottom: 20px;
+    }
+
+    .values__cards .cards-list .value-item.it_company-item .item__info-number {
+        border-top: none;
+        padding-top: 0;
     }
 
     .values__cards .cards-list .value-item .item__info-title {
